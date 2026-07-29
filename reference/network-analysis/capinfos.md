@@ -24,14 +24,14 @@ capinfos exercise/sample.pcap
 
 ## Options
 
-All 4 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 4 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-h` | — | display this help and exit | |
-| `--help` | — | display this help and exit | |
-| `-v` | — | display version info and exit | |
-| `--version` | — | display version info and exit | |
+| `-h` | — | display this help and exit |  |
+| `--help` | — | display this help and exit |  |
+| `-v` | — | display version info and exit |  |
+| `--version` | — | display version info and exit |  |
 
 ## Gotchas
 

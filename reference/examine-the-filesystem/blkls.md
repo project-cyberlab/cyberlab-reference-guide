@@ -20,23 +20,23 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 13 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 13 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-e` | — | every block (including file system metadata blocks) | |
-| `-l` | — | print details in time machine list format | |
-| `-a` | — | Display allocated blocks | |
-| `-A` | — | Display unallocated blocks | |
-| `-f` | fstype | File system type (use '-f list' for supported types) | |
-| `-i` | imgtype | The format of the image file (use '-i list' for supported types) | |
-| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
-| `-o` | imgoffset | The offset of the file system in the image (in sectors) | |
-| `-P` | pooltype | Pool container type (use '-P list' for supported types) | |
-| `-B` | pool_volume_block | Starting block (for pool volumes only) | |
-| `-s` | — | print slack space only (other flags are ignored | |
-| `-v` | — | verbose to stderr | |
-| `-V` | — | print version | |
+| `-e` | — | every block (including file system metadata blocks) |  |
+| `-l` | — | print details in time machine list format |  |
+| `-a` | — | Display allocated blocks |  |
+| `-A` | — | Display unallocated blocks |  |
+| `-f` | fstype | File system type (use '-f list' for supported types) |  |
+| `-i` | imgtype | The format of the image file (use '-i list' for supported types) |  |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors |  |
+| `-o` | imgoffset | The offset of the file system in the image (in sectors) |  |
+| `-P` | pooltype | Pool container type (use '-P list' for supported types) |  |
+| `-B` | pool_volume_block | Starting block (for pool volumes only) |  |
+| `-s` | — | print slack space only (other flags are ignored |  |
+| `-v` | — | verbose to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

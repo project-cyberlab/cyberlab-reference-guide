@@ -21,35 +21,35 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 25 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 25 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | arch | set architecture to assemble/disassemble (see -L) | |
-| `-A` | — | show Analysis information from given hexpairs | |
-| `-b` | bits | set cpu register size (8, 16, 32, 64) (RASM2_BITS) | |
-| `-B` | — | binary input/output (-l is mandatory for binary input) | |
-| `-c` | cpu | select specific CPU (depends on arch) | |
-| `-C` | — | output in C format | |
-| `-d` | — | disassemble from hexpair bytes (-D show hexpairs) | |
-| `-D` | — | disassemble from hexpair bytes (-D show hexpairs) | |
-| `-e` | — | use big endian instead of little endian | |
-| `-E` | — | display ESIL expression (same input as in -d) | |
-| `-f` | file | read data from file | |
-| `-F` | parser | specify which parse filter use (see -LL) | |
-| `-i` | len | ignore/skip N bytes of the input buffer | |
-| `-j` | — | output in json format | |
-| `-k` | kernel | select operating system (linux, windows, darwin, android, ios, ..) | |
-| `-l` | len | input/Output length | |
-| `-N` | — | same as r2 -N (or R2_NOPLUGINS) (not load any plugin) | |
-| `-o` | file | output file name (rasm2 -Bf a.asm -o a) | |
-| `-p` | — | run SPP over input for assembly | |
-| `-q` | — | quiet mode | |
-| `-r` | — | output in radare commands | |
-| `-S` | syntax | select syntax (intel, att) | |
-| `-v` | — | show version information | |
-| `-x` | — | use hex dwords instead of hex pairs when assembling. | |
-| `-w` | — | what's this instruction for? describe opcode | |
+| `-a` | arch | set architecture to assemble/disassemble (see -L) |  |
+| `-A` | — | show Analysis information from given hexpairs |  |
+| `-b` | bits | set cpu register size (8, 16, 32, 64) (RASM2_BITS) |  |
+| `-B` | — | binary input/output (-l is mandatory for binary input) |  |
+| `-c` | cpu | select specific CPU (depends on arch) |  |
+| `-C` | — | output in C format |  |
+| `-d` | — | disassemble from hexpair bytes (-D show hexpairs) |  |
+| `-D` | — | disassemble from hexpair bytes (-D show hexpairs) |  |
+| `-e` | — | use big endian instead of little endian |  |
+| `-E` | — | display ESIL expression (same input as in -d) |  |
+| `-f` | file | read data from file |  |
+| `-F` | parser | specify which parse filter use (see -LL) |  |
+| `-i` | len | ignore/skip N bytes of the input buffer |  |
+| `-j` | — | output in json format |  |
+| `-k` | kernel | select operating system (linux, windows, darwin, android, ios, ..) |  |
+| `-l` | len | input/Output length |  |
+| `-N` | — | same as r2 -N (or R2_NOPLUGINS) (not load any plugin) |  |
+| `-o` | file | output file name (rasm2 -Bf a.asm -o a) |  |
+| `-p` | — | run SPP over input for assembly |  |
+| `-q` | — | quiet mode |  |
+| `-r` | — | output in radare commands |  |
+| `-S` | syntax | select syntax (intel, att) |  |
+| `-v` | — | show version information |  |
+| `-x` | — | use hex dwords instead of hex pairs when assembling. |  |
+| `-w` | — | what's this instruction for? describe opcode |  |
 
 ## Gotchas
 

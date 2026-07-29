@@ -6,7 +6,7 @@
 
 ## Purpose
 
-log2timeline is a command line tool to extract events from individual
+Extract timestamped events from evidence into a Plaso storage file, the first half of a super-timeline.
 
 ## Synopsis
 
@@ -33,114 +33,115 @@ log2timeline.py --storage-file timeline.plaso "$IMAGE"
 
 ## Options
 
-All 100 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 100 options parsed from the captured help text; 8 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-h` | — | Show this help message and exit. | |
-| `--help` | — | Show this help message and exit. | |
-| `--troubles` | — | Show troubleshooting information. | |
-| `-V` | — | Show the version information. | |
-| `--version` | — | Show the version information. | |
-| `--artifact_definitions` | PATH | Path to a directory or file containing artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or Windows | |
-| `--artifact-definitions` | PATH | Path to a directory or file containing artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or Windows | |
-| `--custom_artifact_definitions` | PATH | Path to a directory or file containing custom artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or  | |
-| `--custom-artifact-definitions` | PATH | Path to a directory or file containing custom artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or  | |
-| `--data` | PATH | Path to a directory containing the data files. | |
-| `--archives` | TYPES | Define a list of archive and storage media image types for which to process embedded file entries, such as TAR (archive.tar) or ZIP (archive.zip). This is a comma separated list where each entry is th | |
-| `--artifact_filters` | ARTIFACT_FILTERS | Names of forensic artifact definitions, provided on the command command line (comma separated). Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions proj | |
-| `--artifact-filters` | ARTIFACT_FILTERS | Names of forensic artifact definitions, provided on the command command line (comma separated). Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions proj | |
-| `--artifact_filters_file` | PATH | Names of forensic artifact definitions, provided in a file with one artifact name per line. Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions project. | |
-| `--artifact-filters_file` | PATH | Names of forensic artifact definitions, provided in a file with one artifact name per line. Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions project. | |
-| `--extract_winreg_binary` | — | Extract binary Windows Registry values. WARNING: This can make processing significantly slower. | |
-| `--extract-winreg-binary` | — | Extract binary Windows Registry values. WARNING: This can make processing significantly slower. | |
-| `--preferred_year` | YEAR | When a format's timestamp does not include a year, e.g. syslog, use this as the initial year instead of attempting auto-detection. | |
-| `--preferred-year` | YEAR | When a format's timestamp does not include a year, e.g. syslog, use this as the initial year instead of attempting auto-detection. | |
-| `--skip_compressed_streams` | — | Skip processing file content within compressed streams, such as syslog.gz and syslog.bz2. | |
-| `--skip-compressed-streams` | — | Skip processing file content within compressed streams, such as syslog.gz and syslog.bz2. | |
-| `-f` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | |
-| `--filter-file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | |
-| `--filter_file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | |
-| `--file-filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | |
-| `--file_filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | |
-| `--hasher_file_size_limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. | |
-| `--hasher-file-size-limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. | |
-| `--hashers` | HASHER_LIST | Define a list of hashers to use by the tool. This is a comma separated list where each entry is the name of a hasher, such as "md5,sha256". "all" indicates that all hashers should be enabled. "none" d | |
-| `--parsers` | PARSER_FILTER_EXPRESSION | Define which presets, parsers and/or plugins to use, or show possible values. The expression is a comma separated string where each element is a preset, parser or plugin name. Each element can be prep | |
-| `--yara_rules` | PATH | Path to a file containing Yara rules definitions. | |
-| `--yara-rules` | PATH | Path to a file containing Yara rules definitions. | |
-| `--partitions` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb | |
-| `--partition` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb | |
-| `--volumes` | VOLUMES | Define volumes to be processed. A range of volumes can be defined as: "3..5". Multiple volumes can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be combined as:  | |
-| `--volume` | VOLUMES | Define volumes to be processed. A range of volumes can be defined as: "3..5". Multiple volumes can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be combined as:  | |
-| `--codepage` | CODEPAGE | The preferred codepage, which is used for decoding single-byte or multi-byte character extracted strings. | |
-| `--language` | LANGUAGE_TAG | The preferred language, which is used for extracting and formatting Windows EventLog message strings. Use " --language list" to see a list of supported language tags. The en-US (LCID 0x0409) language  | |
-| `--no_extract_winevt_resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. | |
-| `--no-extract-winevt-resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. | |
-| `-z` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | |
-| `--zone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | |
-| `--timezone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | |
-| `--no_vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. | |
-| `--no-vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. | |
-| `--vss_only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. | |
-| `--vss-only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. | |
-| `--vss_stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | |
-| `--vss-stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | |
-| `-d` | — | Enable debug output. | |
-| `--debug` | — | Enable debug output. | |
-| `-q` | — | Disable informational output. | |
-| `--quiet` | — | Disable informational output. | |
-| `-u` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. | |
-| `--unattended` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. | |
-| `--info` | — | Print out information about supported plugins and parsers. | |
-| `--use_markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" | |
-| `--use-markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" | |
-| `--no_dependencies_check` | — | Disable the dependencies check. | |
-| `--no-dependencies-check` | — | Disable the dependencies check. | |
-| `--logfile` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". | |
-| `--log_file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". | |
-| `--log-file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". | |
-| `--status_view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | |
-| `--status-view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | |
-| `--status_view_file` | PATH | The name of the status view file. | |
-| `--status-view-file` | PATH | The name of the status view file. | |
-| `--status_view_interval` | SECONDS | Number of seconds to update the status view. | |
-| `--status-view-interval` | SECONDS | Number of seconds to update the status view. | |
-| `--buffer_size` | BUFFER_SIZE | The buffer size for the output (defaults to 196MiB). | |
-| `--buffer-size` | BUFFER_SIZE | The buffer size for the output (defaults to 196MiB). | |
-| `--bs` | BUFFER_SIZE | The buffer size for the output (defaults to 196MiB). | |
-| `--queue_size` | QUEUE_SIZE | The maximum number of queued items per worker (defaults to 125000) | |
-| `--queue-size` | QUEUE_SIZE | The maximum number of queued items per worker (defaults to 125000) | |
-| `--single_process` | — | Indicate that the tool should run in a single process. | |
-| `--single-process` | — | Indicate that the tool should run in a single process. | |
-| `--process_memory_limit` | SIZE | Maximum amount of memory (data segment) a process is allowed to allocate in bytes, where 0 represents no limit. The default limit is 4294967296 (4 GiB). This applies to both the main (foreman) process | |
-| `--process-memory-limit` | SIZE | Maximum amount of memory (data segment) a process is allowed to allocate in bytes, where 0 represents no limit. The default limit is 4294967296 (4 GiB). This applies to both the main (foreman) process | |
-| `--temporary_directory` | DIRECTORY | Path to the directory that should be used to store temporary files created during processing. | |
-| `--temporary-directory` | DIRECTORY | Path to the directory that should be used to store temporary files created during processing. | |
-| `--vfs_back_end` | TYPE | The preferred dfVFS back-end: "auto", "fsext", "fsfat", "fshfs", "fsntfs", "tsk" or "vsgpt". | |
-| `--vfs-back-end` | TYPE | The preferred dfVFS back-end: "auto", "fsext", "fsfat", "fshfs", "fsntfs", "tsk" or "vsgpt". | |
-| `--worker_memory_limit` | SIZE | Maximum amount of memory (data segment and shared memory) a worker process is allowed to consume in bytes, where 0 represents no limit. The default limit is 2147483648 (2 GiB). If a worker process exc | |
-| `--worker-memory-limit` | SIZE | Maximum amount of memory (data segment and shared memory) a worker process is allowed to consume in bytes, where 0 represents no limit. The default limit is 2147483648 (2 GiB). If a worker process exc | |
-| `--worker_timeout` | MINUTES | Number of minutes before a worker process that is not providing status updates is considered inactive. The default timeout is 15.0 minutes. If a worker process exceeds this timeout it is killed by the | |
-| `--worker-timeout` | MINUTES | Number of minutes before a worker process that is not providing status updates is considered inactive. The default timeout is 15.0 minutes. If a worker process exceeds this timeout it is killed by the | |
-| `--workers` | WORKERS | Number of worker processes. The default is the number of available system CPUs minus one, for the main (foreman) process. | |
-| `--sigsegv_handler` | — | Enables the SIGSEGV handler. WARNING this functionality is experimental and will a deadlock worker process if a real segfault is caught, but not signal SIGSEGV. This functionality is therefore primari | |
-| `--sigsegv-handler` | — | Enables the SIGSEGV handler. WARNING this functionality is experimental and will a deadlock worker process if a real segfault is caught, but not signal SIGSEGV. This functionality is therefore primari | |
-| `--profilers` | PROFILERS_LIST | List of profilers to use by the tool. This is a comma separated list where each entry is the name of a profiler. Use "--profilers list" to list the available profilers. | |
-| `--profiling_directory` | DIRECTORY | Path to the directory that should be used to store the profiling sample files. By default the sample files are stored in the current working directory. | |
-| `--profiling-directory` | DIRECTORY | Path to the directory that should be used to store the profiling sample files. By default the sample files are stored in the current working directory. | |
-| `--profiling_sample_rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). | |
-| `--profiling-sample-rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). | |
-| `--storage_file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | |
-| `--storage-file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | |
-| `--storage_format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite | |
-| `--storage-format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite | |
-| `--task_storage_format` | FORMAT | Format for task storage, the default is: sqlite. Supported options: redis, sqlite | |
-| `--task-storage-format` | FORMAT | Format for task storage, the default is: sqlite. Supported options: redis, sqlite | |
+| `-h` | — | Show this help message and exit. |  |
+| `--help` | — | Show this help message and exit. |  |
+| `--troubles` | — | Show troubleshooting information. |  |
+| `-V` | — | Show the version information. |  |
+| `--version` | — | Show the version information. |  |
+| `--artifact_definitions` | PATH | Path to a directory or file containing artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or Windows |  |
+| `--artifact-definitions` | PATH | Path to a directory or file containing artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or Windows |  |
+| `--custom_artifact_definitions` | PATH | Path to a directory or file containing custom artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or  |  |
+| `--custom-artifact-definitions` | PATH | Path to a directory or file containing custom artifact definitions, which are .yaml files. Artifact definitions can be used to describe and quickly collect data of interest, such as specific files or  |  |
+| `--data` | PATH | Path to a directory containing the data files. |  |
+| `--archives` | TYPES | Define a list of archive and storage media image types for which to process embedded file entries, such as TAR (archive.tar) or ZIP (archive.zip). This is a comma separated list where each entry is th |  |
+| `--artifact_filters` | ARTIFACT_FILTERS | Names of forensic artifact definitions, provided on the command command line (comma separated). Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions proj |  |
+| `--artifact-filters` | ARTIFACT_FILTERS | Names of forensic artifact definitions, provided on the command command line (comma separated). Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions proj |  |
+| `--artifact_filters_file` | PATH | Names of forensic artifact definitions, provided in a file with one artifact name per line. Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions project. |  |
+| `--artifact-filters_file` | PATH | Names of forensic artifact definitions, provided in a file with one artifact name per line. Forensic artifacts are stored in .yaml files that are directly pulled from the artifact definitions project. |  |
+| `--extract_winreg_binary` | — | Extract binary Windows Registry values. WARNING: This can make processing significantly slower. |  |
+| `--extract-winreg-binary` | — | Extract binary Windows Registry values. WARNING: This can make processing significantly slower. |  |
+| `--preferred_year` | YEAR | When a format's timestamp does not include a year, e.g. syslog, use this as the initial year instead of attempting auto-detection. |  |
+| `--preferred-year` | YEAR | When a format's timestamp does not include a year, e.g. syslog, use this as the initial year instead of attempting auto-detection. |  |
+| `--skip_compressed_streams` | — | Skip processing file content within compressed streams, such as syslog.gz and syslog.bz2. |  |
+| `--skip-compressed-streams` | — | Skip processing file content within compressed streams, such as syslog.gz and syslog.bz2. |  |
+| `-f` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
+| `--filter-file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
+| `--filter_file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
+| `--file-filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
+| `--file_filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
+| `--hasher_file_size_limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. |  |
+| `--hasher-file-size-limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. |  |
+| `--hashers` | HASHER_LIST | Define a list of hashers to use by the tool. This is a comma separated list where each entry is the name of a hasher, such as "md5,sha256". "all" indicates that all hashers should be enabled. "none" d | Compute hashes during extraction, saving a second pass. |
+| `--parsers` | PARSER_FILTER_EXPRESSION | Define which presets, parsers and/or plugins to use, or show possible values. The expression is a comma separated string where each element is a preset, parser or plugin name. Each element can be prep | Restrict to specific parsers. A targeted run is minutes instead of hours. |
+| `--yara_rules` | PATH | Path to a file containing Yara rules definitions. |  |
+| `--yara-rules` | PATH | Path to a file containing Yara rules definitions. |  |
+| `--partitions` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb |  |
+| `--partition` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb |  |
+| `--volumes` | VOLUMES | Define volumes to be processed. A range of volumes can be defined as: "3..5". Multiple volumes can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be combined as:  |  |
+| `--volume` | VOLUMES | Define volumes to be processed. A range of volumes can be defined as: "3..5". Multiple volumes can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be combined as:  |  |
+| `--codepage` | CODEPAGE | The preferred codepage, which is used for decoding single-byte or multi-byte character extracted strings. |  |
+| `--language` | LANGUAGE_TAG | The preferred language, which is used for extracting and formatting Windows EventLog message strings. Use " --language list" to see a list of supported language tags. The en-US (LCID 0x0409) language  |  |
+| `--no_extract_winevt_resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. |  |
+| `--no-extract-winevt-resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. |  |
+| `-z` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
+| `--zone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT |  |
+| `--timezone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT |  |
+| `--no_vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. |  |
+| `--no-vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. |  |
+| `--vss_only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. |  |
+| `--vss-only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. |  |
+| `--vss_stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | Also process Volume Shadow Copies — often where the pre-attack state survives. |
+| `--vss-stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val |  |
+| `-d` | — | Enable debug output. |  |
+| `--debug` | — | Enable debug output. |  |
+| `-q` | — | Disable informational output. |  |
+| `--quiet` | — | Disable informational output. |  |
+| `-u` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
+| `--unattended` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
+| `--info` | — | Print out information about supported plugins and parsers. |  |
+| `--use_markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" |  |
+| `--use-markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" |  |
+| `--no_dependencies_check` | — | Disable the dependencies check. |  |
+| `--no-dependencies-check` | — | Disable the dependencies check. |  |
+| `--logfile` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
+| `--log_file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
+| `--log-file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
+| `--status_view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | Change progress display; `none` for clean logs. |
+| `--status-view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". |  |
+| `--status_view_file` | PATH | The name of the status view file. |  |
+| `--status-view-file` | PATH | The name of the status view file. |  |
+| `--status_view_interval` | SECONDS | Number of seconds to update the status view. |  |
+| `--status-view-interval` | SECONDS | Number of seconds to update the status view. |  |
+| `--buffer_size` | BUFFER_SIZE | The buffer size for the output (defaults to 196MiB). |  |
+| `--buffer-size` | BUFFER_SIZE | The buffer size for the output (defaults to 196MiB). |  |
+| `--bs` | BUFFER_SIZE | The buffer size for the output (defaults to 196MiB). |  |
+| `--queue_size` | QUEUE_SIZE | The maximum number of queued items per worker (defaults to 125000) |  |
+| `--queue-size` | QUEUE_SIZE | The maximum number of queued items per worker (defaults to 125000) |  |
+| `--single_process` | — | Indicate that the tool should run in a single process. |  |
+| `--single-process` | — | Indicate that the tool should run in a single process. |  |
+| `--process_memory_limit` | SIZE | Maximum amount of memory (data segment) a process is allowed to allocate in bytes, where 0 represents no limit. The default limit is 4294967296 (4 GiB). This applies to both the main (foreman) process |  |
+| `--process-memory-limit` | SIZE | Maximum amount of memory (data segment) a process is allowed to allocate in bytes, where 0 represents no limit. The default limit is 4294967296 (4 GiB). This applies to both the main (foreman) process |  |
+| `--temporary_directory` | DIRECTORY | Path to the directory that should be used to store temporary files created during processing. |  |
+| `--temporary-directory` | DIRECTORY | Path to the directory that should be used to store temporary files created during processing. |  |
+| `--vfs_back_end` | TYPE | The preferred dfVFS back-end: "auto", "fsext", "fsfat", "fshfs", "fsntfs", "tsk" or "vsgpt". |  |
+| `--vfs-back-end` | TYPE | The preferred dfVFS back-end: "auto", "fsext", "fsfat", "fshfs", "fsntfs", "tsk" or "vsgpt". |  |
+| `--worker_memory_limit` | SIZE | Maximum amount of memory (data segment and shared memory) a worker process is allowed to consume in bytes, where 0 represents no limit. The default limit is 2147483648 (2 GiB). If a worker process exc |  |
+| `--worker-memory-limit` | SIZE | Maximum amount of memory (data segment and shared memory) a worker process is allowed to consume in bytes, where 0 represents no limit. The default limit is 2147483648 (2 GiB). If a worker process exc |  |
+| `--worker_timeout` | MINUTES | Number of minutes before a worker process that is not providing status updates is considered inactive. The default timeout is 15.0 minutes. If a worker process exceeds this timeout it is killed by the |  |
+| `--worker-timeout` | MINUTES | Number of minutes before a worker process that is not providing status updates is considered inactive. The default timeout is 15.0 minutes. If a worker process exceeds this timeout it is killed by the |  |
+| `--workers` | WORKERS | Number of worker processes. The default is the number of available system CPUs minus one, for the main (foreman) process. | Number of worker processes; tune to the host's cores. |
+| `--sigsegv_handler` | — | Enables the SIGSEGV handler. WARNING this functionality is experimental and will a deadlock worker process if a real segfault is caught, but not signal SIGSEGV. This functionality is therefore primari |  |
+| `--sigsegv-handler` | — | Enables the SIGSEGV handler. WARNING this functionality is experimental and will a deadlock worker process if a real segfault is caught, but not signal SIGSEGV. This functionality is therefore primari |  |
+| `--profilers` | PROFILERS_LIST | List of profilers to use by the tool. This is a comma separated list where each entry is the name of a profiler. Use "--profilers list" to list the available profilers. |  |
+| `--profiling_directory` | DIRECTORY | Path to the directory that should be used to store the profiling sample files. By default the sample files are stored in the current working directory. |  |
+| `--profiling-directory` | DIRECTORY | Path to the directory that should be used to store the profiling sample files. By default the sample files are stored in the current working directory. |  |
+| `--profiling_sample_rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). |  |
+| `--profiling-sample-rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). |  |
+| `--storage_file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | Where the .plaso output goes. |
+| `--storage-file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso |  |
+| `--storage_format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite |  |
+| `--storage-format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite |  |
+| `--task_storage_format` | FORMAT | Format for task storage, the default is: sqlite. Supported options: redis, sqlite |  |
+| `--task-storage-format` | FORMAT | Format for task storage, the default is: sqlite. Supported options: redis, sqlite |  |
 
 ## Gotchas
 
-_TODO: operational traps._
+- This produces a .plaso database, **not** a timeline you can read. `psort.py` is the second half; running only this looks like nothing happened.
+- A full run on a disk image can take hours and tens of GB. Scope with `--parsers` unless you genuinely need everything.
 
 ## See also
 

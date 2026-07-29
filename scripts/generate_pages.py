@@ -20,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from taxonomy import TAXONOMY  # noqa: E402
 from helpparse import parse_options, parse_synopsis, parse_purpose  # noqa: E402
+from enrichment import ENRICHMENT  # noqa: E402
 
 ROOT = HERE.parent
 CAP = ROOT / "capture"
@@ -156,7 +157,11 @@ def build_page(cmd: str, meta: dict) -> str:
     vms, kit_purpose, url = kit_homes(cmd)
     if not vms:
         vms = FALLBACK_KIT.get(cmd, [])
-    purpose = kit_purpose or parse_purpose(text, cmd)
+    enr = ENRICHMENT.get(cmd, {})
+    when: dict[str, str] = enr.get("when", {})
+    # Curated purpose wins over the catalogue blurb, which wins over whatever
+    # the help text volunteers.
+    purpose = enr.get("purpose") or kit_purpose or parse_purpose(text, cmd)
     caps = capability_of(cmd)
     version = clean_version(meta.get("version") or "")
 
@@ -196,21 +201,30 @@ def build_page(cmd: str, meta: dict) -> str:
 
     L += ["## Options", ""]
     if opts:
-        L += [f"All {len(opts)} options parsed from the captured help text. "
-              "The final column is the judgement layer and is filled in by review.",
-              "", "| Flag | Argument | What it does | When you would use it |",
+        n_when = sum(1 for o in opts if o["flag"] in when)
+        note = (f"All {len(opts)} options parsed from the captured help text"
+                + (f"; {n_when} reviewed with usage guidance." if n_when
+                   else ". The final column is filled in by review."))
+        L += [note, "",
+              "| Flag | Argument | What it does | When you would use it |",
               "|---|---|---|---|"]
         for o in opts:
             d = re.sub(r"\s+", " ", o["desc"]).replace("|", "\\|").strip() or "—"
             a = (o["arg"] or "—").replace("|", "\\|")
-            L.append(f"| `{o['flag']}` | {a} | {d[:200]} | |")
+            w = when.get(o["flag"], "").replace("|", "\\|")
+            L.append(f"| `{o['flag']}` | {a} | {d[:200]} | {w} |")
         L.append("")
     else:
         L += ["_No option definitions could be parsed from this tool's help "
               "output. It may be subcommand-driven or have no flags; needs "
               "manual review._", ""]
 
-    L += ["## Gotchas", "", "_TODO: operational traps._", ""]
+    gotchas = enr.get("gotchas") or []
+    L += ["## Gotchas", ""]
+    if gotchas:
+        L += [f"- {g}" for g in gotchas] + [""]
+    else:
+        L += ["_TODO: operational traps._", ""]
 
     sib = siblings(cmd)
     if sib:

@@ -20,15 +20,15 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 5 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 5 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-t` | — | display type only | |
-| `-i` | imgtype | The format of the image file (use '-i list' for list of supported types) | |
-| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | Print version | |
+| `-t` | — | display type only |  |
+| `-i` | imgtype | The format of the image file (use '-i list' for list of supported types) |  |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | Print version |  |
 
 ## Gotchas
 

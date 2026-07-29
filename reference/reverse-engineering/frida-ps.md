@@ -20,38 +20,38 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 28 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 28 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-h` | — | show this help message and exit | |
-| `--help` | — | show this help message and exit | |
-| `-D` | ID | connect to device with the given ID | |
-| `--device` | ID | connect to device with the given ID | |
-| `-U` | — | connect to USB device | |
-| `--usb` | — | connect to USB device | |
-| `-R` | — | connect to remote frida-server | |
-| `--remote` | — | connect to remote frida-server | |
-| `-H` | HOST | connect to remote frida-server on HOST | |
-| `--host` | HOST | connect to remote frida-server on HOST | |
-| `--certificate` | CERTIFICATE | speak TLS with HOST, expecting CERTIFICATE | |
-| `--origin` | ORIGIN | connect to remote server with “Origin” header set to ORIGIN | |
-| `--token` | TOKEN | authenticate with HOST using TOKEN | |
-| `--keepalive-interval` | INTERVAL | set keepalive interval in seconds, or 0 to disable (defaults to -1 to auto-select based on transport) | |
-| `--device-option` | option | override a backend-specific option, such as “control- endpoint=(string)localabstract:/my-frida-server” (supported types are: string, bool, int) | |
-| `--p2p` | — | establish a peer-to-peer connection with target | |
-| `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p | |
-| `-O` | FILE | text file containing additional command line options | |
-| `--options-file` | FILE | text file containing additional command line options | |
-| `--version` | — | show program's version number and exit | |
-| `-a` | — | list only applications | |
-| `--applications` | — | list only applications | |
-| `-i` | — | include all installed applications | |
-| `--installed` | — | include all installed applications | |
-| `-j` | — | output results as JSON | |
-| `--json` | — | output results as JSON | |
-| `-e` | — | exclude icons in output | |
-| `--exclude-icons` | — | exclude icons in output | |
+| `-h` | — | show this help message and exit |  |
+| `--help` | — | show this help message and exit |  |
+| `-D` | ID | connect to device with the given ID |  |
+| `--device` | ID | connect to device with the given ID |  |
+| `-U` | — | connect to USB device |  |
+| `--usb` | — | connect to USB device |  |
+| `-R` | — | connect to remote frida-server |  |
+| `--remote` | — | connect to remote frida-server |  |
+| `-H` | HOST | connect to remote frida-server on HOST |  |
+| `--host` | HOST | connect to remote frida-server on HOST |  |
+| `--certificate` | CERTIFICATE | speak TLS with HOST, expecting CERTIFICATE |  |
+| `--origin` | ORIGIN | connect to remote server with “Origin” header set to ORIGIN |  |
+| `--token` | TOKEN | authenticate with HOST using TOKEN |  |
+| `--keepalive-interval` | INTERVAL | set keepalive interval in seconds, or 0 to disable (defaults to -1 to auto-select based on transport) |  |
+| `--device-option` | option | override a backend-specific option, such as “control- endpoint=(string)localabstract:/my-frida-server” (supported types are: string, bool, int) |  |
+| `--p2p` | — | establish a peer-to-peer connection with target |  |
+| `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p |  |
+| `-O` | FILE | text file containing additional command line options |  |
+| `--options-file` | FILE | text file containing additional command line options |  |
+| `--version` | — | show program's version number and exit |  |
+| `-a` | — | list only applications |  |
+| `--applications` | — | list only applications |  |
+| `-i` | — | include all installed applications |  |
+| `--installed` | — | include all installed applications |  |
+| `-j` | — | output results as JSON |  |
+| `--json` | — | output results as JSON |  |
+| `-e` | — | exclude icons in output |  |
+| `--exclude-icons` | — | exclude icons in output |  |
 
 ## Gotchas
 

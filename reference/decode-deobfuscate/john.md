@@ -36,19 +36,19 @@ john --format=raw-md5 --show exercise/hash.txt
 
 ## Options
 
-All 9 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 9 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `--single` | — | "single crack" mode | |
-| `--rules` | — | enable word mangling rules for wordlist mode | |
-| `--external` | MODE | external mode or word filter | |
-| `--session` | NAME | give a new session the NAME | |
-| `--make-charset` | FILE | make a charset, FILE will be overwritten | |
-| `--show` | — | show cracked passwords | |
-| `--save-memory` | LEVEL | enable memory saving, at LEVEL 1..3 | |
-| `--fork` | N | fork N processes | |
-| `--format` | NAME | force hash type NAME: descrypt/bsdicrypt/md5crypt/ bcrypt/LM/AFS/tripcode/dummy/crypt | |
+| `--single` | — | "single crack" mode |  |
+| `--rules` | — | enable word mangling rules for wordlist mode |  |
+| `--external` | MODE | external mode or word filter |  |
+| `--session` | NAME | give a new session the NAME |  |
+| `--make-charset` | FILE | make a charset, FILE will be overwritten |  |
+| `--show` | — | show cracked passwords |  |
+| `--save-memory` | LEVEL | enable memory saving, at LEVEL 1..3 |  |
+| `--fork` | N | fork N processes |  |
+| `--format` | NAME | force hash type NAME: descrypt/bsdicrypt/md5crypt/ bcrypt/LM/AFS/tripcode/dummy/crypt |  |
 
 ## Gotchas
 

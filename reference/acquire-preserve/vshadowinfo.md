@@ -26,15 +26,15 @@ vshadowinfo exercise/volume.raw
 
 ## Options
 
-All 5 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 5 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | — | shows allocation information | |
-| `-h` | — | shows this help | |
-| `-o` | — | specify the volume offset in bytes | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | print version | |
+| `-a` | — | shows allocation information |  |
+| `-h` | — | shows this help |  |
+| `-o` | — | specify the volume offset in bytes |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

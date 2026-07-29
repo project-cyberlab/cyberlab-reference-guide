@@ -32,20 +32,20 @@ fsstat -o 2048 disk.raw
 
 ## Options
 
-All 10 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 10 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-t` | — | display type only | |
-| `-i` | imgtype | The format of the image file (use '-i list' for supported types) | |
-| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
-| `-f` | fstype | File system type (use '-f list' for supported types) | |
-| `-o` | imgoffset | The offset of the file system in the image (in sectors) | |
-| `-P` | pooltype | Pool container type (use '-P list' for supported types) | |
-| `-B` | pool_volume_block | Starting block (for pool volumes only) | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | Print version | |
-| `-k` | password | Decryption password for encrypted volumes | |
+| `-t` | — | display type only |  |
+| `-i` | imgtype | The format of the image file (use '-i list' for supported types) |  |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors |  |
+| `-f` | fstype | File system type (use '-f list' for supported types) |  |
+| `-o` | imgoffset | The offset of the file system in the image (in sectors) |  |
+| `-P` | pooltype | Pool container type (use '-P list' for supported types) |  |
+| `-B` | pool_volume_block | Starting block (for pool volumes only) |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | Print version |  |
+| `-k` | password | Decryption password for encrypted volumes |  |
 
 ## Gotchas
 

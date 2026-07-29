@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Display printable strings in [file(s)] (stdin by default)
+Print sequences of printable characters found in a binary file.
 
 ## Synopsis
 
@@ -20,18 +20,19 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 4 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 4 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-n` | number | Locate & print any sequence of at least <number> | |
-| `--bytes` | number | displayable characters. (The default is 4). | |
-| `-o` | — | An alias for --radix=o | |
-| `-U` | d\|s\|i\|x\|e\|h | Specify how to treat UTF-8 encoded unicode characters | |
+| `-n` | number | Locate & print any sequence of at least <number> | Minimum length. Default 4 is noisy; 8–10 cuts most false hits. |
+| `--bytes` | number | displayable characters. (The default is 4). |  |
+| `-o` | — | An alias for --radix=o | Print the byte offset of each string — lets you seek back to it. |
+| `-U` | d\|s\|i\|x\|e\|h | Specify how to treat UTF-8 encoded unicode characters | Control how unicode is handled; needed for UTF-16 Windows strings. |
 
 ## Gotchas
 
-_TODO: operational traps._
+- GNU `strings` reads only initialised, loaded sections by default. Use `-a` to scan the whole file — malware routinely hides outside them.
+- It finds ASCII by default and will miss UTF-16LE strings that Windows binaries are full of. When a PE looks empty, that is usually why — reach for `floss` instead.
 
 ## See also
 

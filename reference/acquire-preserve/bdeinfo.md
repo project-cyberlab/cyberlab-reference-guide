@@ -27,18 +27,18 @@ bdeinfo exercise/bitlocker.raw
 
 ## Options
 
-All 8 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 8 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-h` | — | shows this help | |
-| `-k` | — | the full volume encryption key and tweak key formatted in base16 and separated by a : character e.g. FVEK:TWEAK | |
-| `-o` | — | specify the volume offset in bytes | |
-| `-p` | — | specify the password/passphrase | |
-| `-r` | — | specify the recovery password | |
-| `-s` | — | specify the file containing the startup key. typically this file has the extension .BEK | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | print version | |
+| `-h` | — | shows this help |  |
+| `-k` | — | the full volume encryption key and tweak key formatted in base16 and separated by a : character e.g. FVEK:TWEAK |  |
+| `-o` | — | specify the volume offset in bytes |  |
+| `-p` | — | specify the password/passphrase |  |
+| `-r` | — | specify the recovery password |  |
+| `-s` | — | specify the file containing the startup key. typically this file has the extension .BEK |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

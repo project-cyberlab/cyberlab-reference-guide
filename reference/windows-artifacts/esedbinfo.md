@@ -20,13 +20,13 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 3 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 3 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-h` | — | shows this help | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | print version | |
+| `-h` | — | shows this help |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

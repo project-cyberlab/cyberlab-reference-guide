@@ -28,16 +28,16 @@ regfinfo /tmp/SYSTEM_recovered.hive
 
 ## Options
 
-All 6 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 6 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-B` | — | output key and value hierarchy as a bodyfile | |
-| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 | |
-| `-h` | — | shows this help | |
-| `-H` | — | shows the key and value hierarchy | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | print version | |
+| `-B` | — | output key and value hierarchy as a bodyfile |  |
+| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 |  |
+| `-h` | — | shows this help |  |
+| `-H` | — | shows the key and value hierarchy |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

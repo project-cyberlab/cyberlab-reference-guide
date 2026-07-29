@@ -20,14 +20,14 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 4 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 4 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 | |
-| `-h` | — | shows this help | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | print version | |
+| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 |  |
+| `-h` | — | shows this help |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

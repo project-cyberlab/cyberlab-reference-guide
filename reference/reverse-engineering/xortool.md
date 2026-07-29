@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Analyze XOR-encoded data.
+Recover the key length and key of an XOR-encrypted file by frequency analysis.
 
 ## Synopsis
 
@@ -30,22 +30,23 @@ xortool -c 20 exercise/encoded_payload.bin
 
 ## Options
 
-All 8 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 8 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-l` | LEN | length of the key | |
-| `--key-length` | LEN | length of the key | |
-| `-m` | MAX-LEN | maximum key length to probe [default: 65] | |
-| `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] | |
-| `-c` | CHAR | most frequent char (one char or hex code) | |
-| `--char` | CHAR | most frequent char (one char or hex code) | |
-| `-r` | PERCENT | threshold validity percentage [default: 95] | |
-| `--threshold` | PERCENT | threshold validity percentage [default: 95] | |
+| `-l` | LEN | length of the key | Fix the key length when you already know it. |
+| `--key-length` | LEN | length of the key |  |
+| `-m` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
+| `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] |  |
+| `-c` | CHAR | most frequent char (one char or hex code) | Give the most frequent character of the plaintext — usually `20` (space) for text, `00` for binaries. This is the flag that makes or breaks the attack. |
+| `--char` | CHAR | most frequent char (one char or hex code) |  |
+| `-r` | PERCENT | threshold validity percentage [default: 95] |  |
+| `--threshold` | PERCENT | threshold validity percentage [default: 95] |  |
 
 ## Gotchas
 
-_TODO: operational traps._
+- Output lands in an `xortool_out/` directory, not stdout. People routinely think it did nothing.
+- `-c 00` is right far more often than the default for packed binaries, because null padding dominates.
 
 ## See also
 

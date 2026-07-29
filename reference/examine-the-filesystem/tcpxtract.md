@@ -28,22 +28,22 @@ tcpxtract -f exercise/sample.pcap -o /tmp/ak_tcp
 
 ## Options
 
-All 12 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 12 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `--file` | FILE | to specify an input capture file instead of a device | |
-| `-f` | FILE | to specify an input capture file instead of a device | |
-| `--device` | DEVICE | to specify an input device (i.e. eth0) | |
-| `-d` | DEVICE | to specify an input device (i.e. eth0) | |
-| `--config` | FILE | use FILE as the config file | |
-| `-c` | FILE | use FILE as the config file | |
-| `--output` | DIRECTORY | dump files to DIRECTORY instead of current directory | |
-| `-o` | DIRECTORY | dump files to DIRECTORY instead of current directory | |
-| `--version` | — | display the version number of this program | |
-| `-v` | — | display the version number of this program | |
-| `--help` | — | display this lovely screen | |
-| `-h` | — | display this lovely screen | |
+| `--file` | FILE | to specify an input capture file instead of a device |  |
+| `-f` | FILE | to specify an input capture file instead of a device |  |
+| `--device` | DEVICE | to specify an input device (i.e. eth0) |  |
+| `-d` | DEVICE | to specify an input device (i.e. eth0) |  |
+| `--config` | FILE | use FILE as the config file |  |
+| `-c` | FILE | use FILE as the config file |  |
+| `--output` | DIRECTORY | dump files to DIRECTORY instead of current directory |  |
+| `-o` | DIRECTORY | dump files to DIRECTORY instead of current directory |  |
+| `--version` | — | display the version number of this program |  |
+| `-v` | — | display the version number of this program |  |
+| `--help` | — | display this lovely screen |  |
+| `-h` | — | display this lovely screen |  |
 
 ## Gotchas
 

@@ -38,91 +38,91 @@ grep "Event Identifier" /tmp/security_events.txt | awk -F: '{print $2}' | sort |
 
 ## Options
 
-All 81 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 81 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-E` | — | PATTERNS are extended regular expressions | |
-| `--extended-regexp` | — | PATTERNS are extended regular expressions | |
-| `-F` | — | PATTERNS are strings | |
-| `--fixed-strings` | — | PATTERNS are strings | |
-| `-G` | — | PATTERNS are basic regular expressions | |
-| `--basic-regexp` | — | PATTERNS are basic regular expressions | |
-| `-P` | — | PATTERNS are Perl regular expressions | |
-| `--perl-regexp` | — | PATTERNS are Perl regular expressions | |
-| `-e` | PATTERNS | use PATTERNS for matching | |
-| `--regexp` | PATTERNS | use PATTERNS for matching | |
-| `-f` | FILE | take PATTERNS from FILE | |
-| `--file` | FILE | take PATTERNS from FILE | |
-| `-i` | — | ignore case distinctions in patterns and data | |
-| `--ignore-case` | — | ignore case distinctions in patterns and data | |
-| `--no-ignore-case` | — | do not ignore case distinctions (default) | |
-| `-w` | — | match only whole words | |
-| `--word-regexp` | — | match only whole words | |
-| `-x` | — | match only whole lines | |
-| `--line-regexp` | — | match only whole lines | |
-| `-z` | — | a data line ends in 0 byte, not newline | |
-| `--null-data` | — | a data line ends in 0 byte, not newline | |
-| `-s` | — | suppress error messages | |
-| `--no-messages` | — | suppress error messages | |
-| `-v` | — | select non-matching lines | |
-| `--invert-match` | — | select non-matching lines | |
-| `-V` | — | display version information and exit | |
-| `--version` | — | display version information and exit | |
-| `--help` | — | display this help text and exit | |
-| `-m` | NUM | stop after NUM selected lines | |
-| `--max-count` | NUM | stop after NUM selected lines | |
-| `-b` | — | print the byte offset with output lines | |
-| `--byte-offset` | — | print the byte offset with output lines | |
-| `-n` | — | print line number with output lines | |
-| `--line-number` | — | print line number with output lines | |
-| `--line-buffered` | — | flush output on every line | |
-| `-H` | — | print file name with output lines | |
-| `--with-filename` | — | print file name with output lines | |
-| `-h` | — | suppress the file name prefix on output | |
-| `--no-filename` | — | suppress the file name prefix on output | |
-| `--label` | LABEL | use LABEL as the standard input file name prefix | |
-| `-o` | — | show only nonempty parts of lines that match | |
-| `--only-matching` | — | show only nonempty parts of lines that match | |
-| `-q` | — | suppress all normal output | |
-| `--quiet` | — | suppress all normal output | |
-| `--silent` | — | suppress all normal output | |
-| `--binary-files` | TYPE | assume that binary files are TYPE; TYPE is 'binary', 'text', or 'without-match' | |
-| `-a` | — | equivalent to --binary-files=text | |
-| `--text` | — | equivalent to --binary-files=text | |
-| `-I` | — | equivalent to --binary-files=without-match | |
-| `-d` | ACTION | how to handle directories; ACTION is 'read', 'recurse', or 'skip' | |
-| `--directories` | ACTION | how to handle directories; ACTION is 'read', 'recurse', or 'skip' | |
-| `-D` | ACTION | how to handle devices, FIFOs and sockets; ACTION is 'read' or 'skip' | |
-| `--devices` | ACTION | how to handle devices, FIFOs and sockets; ACTION is 'read' or 'skip' | |
-| `-r` | — | like --directories=recurse | |
-| `--recursive` | — | like --directories=recurse | |
-| `-R` | — | likewise, but follow all symlinks | |
-| `--dereference-recursive` | — | likewise, but follow all symlinks | |
-| `--include` | GLOB | search only files that match GLOB (a file pattern) | |
-| `--exclude` | GLOB | skip files that match GLOB | |
-| `--exclude-from` | FILE | skip files that match any file pattern from FILE | |
-| `--exclude-dir` | GLOB | skip directories that match GLOB | |
-| `-L` | — | print only names of FILEs with no selected lines | |
-| `--files-without-match` | — | print only names of FILEs with no selected lines | |
-| `-l` | — | print only names of FILEs with selected lines | |
-| `--files-with-matches` | — | print only names of FILEs with selected lines | |
-| `-c` | — | print only a count of selected lines per FILE | |
-| `--count` | — | print only a count of selected lines per FILE | |
-| `-T` | — | make tabs line up (if needed) | |
-| `--initial-tab` | — | make tabs line up (if needed) | |
-| `-Z` | — | print 0 byte after FILE name | |
-| `--null` | — | print 0 byte after FILE name | |
-| `-B` | NUM | print NUM lines of leading context | |
-| `--before-context` | NUM | print NUM lines of leading context | |
-| `-A` | NUM | print NUM lines of trailing context | |
-| `--after-context` | NUM | print NUM lines of trailing context | |
-| `-C` | NUM | print NUM lines of output context | |
-| `--context` | NUM | print NUM lines of output context | |
-| `--group-separator` | SEP | print SEP on line between matches with context | |
-| `--no-group-separator` | — | do not print separator for matches with context | |
-| `-U` | — | do not strip CR characters at EOL (MSDOS/Windows) | |
-| `--binary` | — | do not strip CR characters at EOL (MSDOS/Windows) | |
+| `-E` | — | PATTERNS are extended regular expressions |  |
+| `--extended-regexp` | — | PATTERNS are extended regular expressions |  |
+| `-F` | — | PATTERNS are strings |  |
+| `--fixed-strings` | — | PATTERNS are strings |  |
+| `-G` | — | PATTERNS are basic regular expressions |  |
+| `--basic-regexp` | — | PATTERNS are basic regular expressions |  |
+| `-P` | — | PATTERNS are Perl regular expressions |  |
+| `--perl-regexp` | — | PATTERNS are Perl regular expressions |  |
+| `-e` | PATTERNS | use PATTERNS for matching |  |
+| `--regexp` | PATTERNS | use PATTERNS for matching |  |
+| `-f` | FILE | take PATTERNS from FILE |  |
+| `--file` | FILE | take PATTERNS from FILE |  |
+| `-i` | — | ignore case distinctions in patterns and data |  |
+| `--ignore-case` | — | ignore case distinctions in patterns and data |  |
+| `--no-ignore-case` | — | do not ignore case distinctions (default) |  |
+| `-w` | — | match only whole words |  |
+| `--word-regexp` | — | match only whole words |  |
+| `-x` | — | match only whole lines |  |
+| `--line-regexp` | — | match only whole lines |  |
+| `-z` | — | a data line ends in 0 byte, not newline |  |
+| `--null-data` | — | a data line ends in 0 byte, not newline |  |
+| `-s` | — | suppress error messages |  |
+| `--no-messages` | — | suppress error messages |  |
+| `-v` | — | select non-matching lines |  |
+| `--invert-match` | — | select non-matching lines |  |
+| `-V` | — | display version information and exit |  |
+| `--version` | — | display version information and exit |  |
+| `--help` | — | display this help text and exit |  |
+| `-m` | NUM | stop after NUM selected lines |  |
+| `--max-count` | NUM | stop after NUM selected lines |  |
+| `-b` | — | print the byte offset with output lines |  |
+| `--byte-offset` | — | print the byte offset with output lines |  |
+| `-n` | — | print line number with output lines |  |
+| `--line-number` | — | print line number with output lines |  |
+| `--line-buffered` | — | flush output on every line |  |
+| `-H` | — | print file name with output lines |  |
+| `--with-filename` | — | print file name with output lines |  |
+| `-h` | — | suppress the file name prefix on output |  |
+| `--no-filename` | — | suppress the file name prefix on output |  |
+| `--label` | LABEL | use LABEL as the standard input file name prefix |  |
+| `-o` | — | show only nonempty parts of lines that match |  |
+| `--only-matching` | — | show only nonempty parts of lines that match |  |
+| `-q` | — | suppress all normal output |  |
+| `--quiet` | — | suppress all normal output |  |
+| `--silent` | — | suppress all normal output |  |
+| `--binary-files` | TYPE | assume that binary files are TYPE; TYPE is 'binary', 'text', or 'without-match' |  |
+| `-a` | — | equivalent to --binary-files=text |  |
+| `--text` | — | equivalent to --binary-files=text |  |
+| `-I` | — | equivalent to --binary-files=without-match |  |
+| `-d` | ACTION | how to handle directories; ACTION is 'read', 'recurse', or 'skip' |  |
+| `--directories` | ACTION | how to handle directories; ACTION is 'read', 'recurse', or 'skip' |  |
+| `-D` | ACTION | how to handle devices, FIFOs and sockets; ACTION is 'read' or 'skip' |  |
+| `--devices` | ACTION | how to handle devices, FIFOs and sockets; ACTION is 'read' or 'skip' |  |
+| `-r` | — | like --directories=recurse |  |
+| `--recursive` | — | like --directories=recurse |  |
+| `-R` | — | likewise, but follow all symlinks |  |
+| `--dereference-recursive` | — | likewise, but follow all symlinks |  |
+| `--include` | GLOB | search only files that match GLOB (a file pattern) |  |
+| `--exclude` | GLOB | skip files that match GLOB |  |
+| `--exclude-from` | FILE | skip files that match any file pattern from FILE |  |
+| `--exclude-dir` | GLOB | skip directories that match GLOB |  |
+| `-L` | — | print only names of FILEs with no selected lines |  |
+| `--files-without-match` | — | print only names of FILEs with no selected lines |  |
+| `-l` | — | print only names of FILEs with selected lines |  |
+| `--files-with-matches` | — | print only names of FILEs with selected lines |  |
+| `-c` | — | print only a count of selected lines per FILE |  |
+| `--count` | — | print only a count of selected lines per FILE |  |
+| `-T` | — | make tabs line up (if needed) |  |
+| `--initial-tab` | — | make tabs line up (if needed) |  |
+| `-Z` | — | print 0 byte after FILE name |  |
+| `--null` | — | print 0 byte after FILE name |  |
+| `-B` | NUM | print NUM lines of leading context |  |
+| `--before-context` | NUM | print NUM lines of leading context |  |
+| `-A` | NUM | print NUM lines of trailing context |  |
+| `--after-context` | NUM | print NUM lines of trailing context |  |
+| `-C` | NUM | print NUM lines of output context |  |
+| `--context` | NUM | print NUM lines of output context |  |
+| `--group-separator` | SEP | print SEP on line between matches with context |  |
+| `--no-group-separator` | — | do not print separator for matches with context |  |
+| `-U` | — | do not strip CR characters at EOL (MSDOS/Windows) |  |
+| `--binary` | — | do not strip CR characters at EOL (MSDOS/Windows) |  |
 
 ## Gotchas
 

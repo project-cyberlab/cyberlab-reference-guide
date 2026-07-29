@@ -26,92 +26,92 @@ timeout 8 frida-trace -f ./target -i getenv
 
 ## Options
 
-All 82 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 82 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-h` | — | show this help message and exit | |
-| `--help` | — | show this help message and exit | |
-| `-D` | ID | connect to device with the given ID | |
-| `--device` | ID | connect to device with the given ID | |
-| `-U` | — | connect to USB device | |
-| `--usb` | — | connect to USB device | |
-| `-R` | — | connect to remote frida-server | |
-| `--remote` | — | connect to remote frida-server | |
-| `-H` | HOST | connect to remote frida-server on HOST | |
-| `--host` | HOST | connect to remote frida-server on HOST | |
-| `--certificate` | CERTIFICATE | speak TLS with HOST, expecting CERTIFICATE | |
-| `--origin` | ORIGIN | connect to remote server with “Origin” header set to ORIGIN | |
-| `--token` | TOKEN | authenticate with HOST using TOKEN | |
-| `--keepalive-interval` | INTERVAL | set keepalive interval in seconds, or 0 to disable (defaults to -1 to auto-select based on transport) | |
-| `--device-option` | option | override a backend-specific option, such as “control- endpoint=(string)localabstract:/my-frida-server” (supported types are: string, bool, int) | |
-| `--p2p` | — | establish a peer-to-peer connection with target | |
-| `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p | |
-| `-f` | TARGET | spawn FILE | |
-| `--file` | TARGET | spawn FILE | |
-| `-F` | — | attach to frontmost application | |
-| `--attach-frontmost` | — | attach to frontmost application | |
-| `-n` | NAME | attach to NAME | |
-| `--attach-name` | NAME | attach to NAME | |
-| `-N` | IDENTIFIER | attach to IDENTIFIER | |
-| `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER | |
-| `-p` | PID | attach to PID | |
-| `--attach-pid` | PID | attach to PID | |
-| `-W` | PATTERN | await spawn matching PATTERN | |
-| `--await` | PATTERN | await spawn matching PATTERN | |
-| `--stdio` | inherit | stdio behavior when spawning (defaults to “inherit”) | |
-| `--aux` | option | set aux option when spawning, such as “uid=(int)42” (supported types are: string, bool, int) | |
-| `--realm` | native | realm to attach in | |
-| `--exceptor` | full | configure the exception handling mode | |
-| `--disable-unwind-broker` | — | disable the unwind broker | |
-| `--disable-exit-monitor` | — | disable the exit monitor | |
-| `--disable-thread-suspend-monitor` | — | disable the thread suspend monitor | |
-| `--linker-notifier-offset` | OFFSET | add a linker notifier OFFSET (may be specified multiple times) | |
-| `--runtime` | qjs | script runtime to use | |
-| `--debug` | — | enable the Node.js compatible script debugger | |
-| `--squelch-crash` | — | if enabled, will not dump crash report to console | |
-| `-O` | FILE | text file containing additional command line options | |
-| `--options-file` | FILE | text file containing additional command line options | |
-| `--version` | — | show program's version number and exit | |
-| `-I` | MODULE | include MODULE | |
-| `--include-module` | MODULE | include MODULE | |
-| `-X` | MODULE | exclude MODULE | |
-| `--exclude-module` | MODULE | exclude MODULE | |
-| `-i` | FUNCTION | include [MODULE!]FUNCTION | |
-| `--include` | FUNCTION | include [MODULE!]FUNCTION | |
-| `-x` | FUNCTION | exclude [MODULE!]FUNCTION | |
-| `--exclude` | FUNCTION | exclude [MODULE!]FUNCTION | |
-| `-T` | INCLUDE_IMPORTS | include program's imports | |
-| `--include-imports` | INCLUDE_IMPORTS | include program's imports | |
-| `-t` | MODULE | include MODULE imports | |
-| `--include-module-imports` | MODULE | include MODULE imports | |
-| `-m` | OBJC_METHOD | include OBJC_METHOD | |
-| `--include-objc-method` | OBJC_METHOD | include OBJC_METHOD | |
-| `-M` | OBJC_METHOD | exclude OBJC_METHOD | |
-| `--exclude-objc-method` | OBJC_METHOD | exclude OBJC_METHOD | |
-| `-y` | SWIFT_FUNC | include SWIFT_FUNC | |
-| `--include-swift-func` | SWIFT_FUNC | include SWIFT_FUNC | |
-| `-Y` | SWIFT_FUNC | exclude SWIFT_FUNC | |
-| `--exclude-swift-func` | SWIFT_FUNC | exclude SWIFT_FUNC | |
-| `-j` | JAVA_METHOD | include JAVA_METHOD | |
-| `--include-java-method` | JAVA_METHOD | include JAVA_METHOD | |
-| `-J` | JAVA_METHOD | exclude JAVA_METHOD | |
-| `--exclude-java-method` | JAVA_METHOD | exclude JAVA_METHOD | |
-| `-s` | DEBUG_SYMBOL | include DEBUG_SYMBOL | |
-| `--include-debug-symbol` | DEBUG_SYMBOL | include DEBUG_SYMBOL | |
-| `-q` | — | do not format output messages | |
-| `--quiet` | — | do not format output messages | |
-| `-d` | — | add module name to generated onEnter log statement | |
-| `--decorate` | — | add module name to generated onEnter log statement | |
-| `-S` | PATH | path to JavaScript file used to initialize the session | |
-| `--init-session` | PATH | path to JavaScript file used to initialize the session | |
-| `-P` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' | |
-| `--parameters` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' | |
-| `-o` | OUTPUT | dump messages to file | |
-| `--output` | OUTPUT | dump messages to file | |
-| `--ui-host` | UI_HOST | the host to serve the UI on (default localhost) | |
-| `--ui-port` | UI_PORT | the TCP port to serve the UI on | |
-| `--ui-allow-origin` | ORIGIN | allow browser requests from ORIGIN; may be specified multiple times | |
+| `-h` | — | show this help message and exit |  |
+| `--help` | — | show this help message and exit |  |
+| `-D` | ID | connect to device with the given ID |  |
+| `--device` | ID | connect to device with the given ID |  |
+| `-U` | — | connect to USB device |  |
+| `--usb` | — | connect to USB device |  |
+| `-R` | — | connect to remote frida-server |  |
+| `--remote` | — | connect to remote frida-server |  |
+| `-H` | HOST | connect to remote frida-server on HOST |  |
+| `--host` | HOST | connect to remote frida-server on HOST |  |
+| `--certificate` | CERTIFICATE | speak TLS with HOST, expecting CERTIFICATE |  |
+| `--origin` | ORIGIN | connect to remote server with “Origin” header set to ORIGIN |  |
+| `--token` | TOKEN | authenticate with HOST using TOKEN |  |
+| `--keepalive-interval` | INTERVAL | set keepalive interval in seconds, or 0 to disable (defaults to -1 to auto-select based on transport) |  |
+| `--device-option` | option | override a backend-specific option, such as “control- endpoint=(string)localabstract:/my-frida-server” (supported types are: string, bool, int) |  |
+| `--p2p` | — | establish a peer-to-peer connection with target |  |
+| `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p |  |
+| `-f` | TARGET | spawn FILE |  |
+| `--file` | TARGET | spawn FILE |  |
+| `-F` | — | attach to frontmost application |  |
+| `--attach-frontmost` | — | attach to frontmost application |  |
+| `-n` | NAME | attach to NAME |  |
+| `--attach-name` | NAME | attach to NAME |  |
+| `-N` | IDENTIFIER | attach to IDENTIFIER |  |
+| `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER |  |
+| `-p` | PID | attach to PID |  |
+| `--attach-pid` | PID | attach to PID |  |
+| `-W` | PATTERN | await spawn matching PATTERN |  |
+| `--await` | PATTERN | await spawn matching PATTERN |  |
+| `--stdio` | inherit | stdio behavior when spawning (defaults to “inherit”) |  |
+| `--aux` | option | set aux option when spawning, such as “uid=(int)42” (supported types are: string, bool, int) |  |
+| `--realm` | native | realm to attach in |  |
+| `--exceptor` | full | configure the exception handling mode |  |
+| `--disable-unwind-broker` | — | disable the unwind broker |  |
+| `--disable-exit-monitor` | — | disable the exit monitor |  |
+| `--disable-thread-suspend-monitor` | — | disable the thread suspend monitor |  |
+| `--linker-notifier-offset` | OFFSET | add a linker notifier OFFSET (may be specified multiple times) |  |
+| `--runtime` | qjs | script runtime to use |  |
+| `--debug` | — | enable the Node.js compatible script debugger |  |
+| `--squelch-crash` | — | if enabled, will not dump crash report to console |  |
+| `-O` | FILE | text file containing additional command line options |  |
+| `--options-file` | FILE | text file containing additional command line options |  |
+| `--version` | — | show program's version number and exit |  |
+| `-I` | MODULE | include MODULE |  |
+| `--include-module` | MODULE | include MODULE |  |
+| `-X` | MODULE | exclude MODULE |  |
+| `--exclude-module` | MODULE | exclude MODULE |  |
+| `-i` | FUNCTION | include [MODULE!]FUNCTION |  |
+| `--include` | FUNCTION | include [MODULE!]FUNCTION |  |
+| `-x` | FUNCTION | exclude [MODULE!]FUNCTION |  |
+| `--exclude` | FUNCTION | exclude [MODULE!]FUNCTION |  |
+| `-T` | INCLUDE_IMPORTS | include program's imports |  |
+| `--include-imports` | INCLUDE_IMPORTS | include program's imports |  |
+| `-t` | MODULE | include MODULE imports |  |
+| `--include-module-imports` | MODULE | include MODULE imports |  |
+| `-m` | OBJC_METHOD | include OBJC_METHOD |  |
+| `--include-objc-method` | OBJC_METHOD | include OBJC_METHOD |  |
+| `-M` | OBJC_METHOD | exclude OBJC_METHOD |  |
+| `--exclude-objc-method` | OBJC_METHOD | exclude OBJC_METHOD |  |
+| `-y` | SWIFT_FUNC | include SWIFT_FUNC |  |
+| `--include-swift-func` | SWIFT_FUNC | include SWIFT_FUNC |  |
+| `-Y` | SWIFT_FUNC | exclude SWIFT_FUNC |  |
+| `--exclude-swift-func` | SWIFT_FUNC | exclude SWIFT_FUNC |  |
+| `-j` | JAVA_METHOD | include JAVA_METHOD |  |
+| `--include-java-method` | JAVA_METHOD | include JAVA_METHOD |  |
+| `-J` | JAVA_METHOD | exclude JAVA_METHOD |  |
+| `--exclude-java-method` | JAVA_METHOD | exclude JAVA_METHOD |  |
+| `-s` | DEBUG_SYMBOL | include DEBUG_SYMBOL |  |
+| `--include-debug-symbol` | DEBUG_SYMBOL | include DEBUG_SYMBOL |  |
+| `-q` | — | do not format output messages |  |
+| `--quiet` | — | do not format output messages |  |
+| `-d` | — | add module name to generated onEnter log statement |  |
+| `--decorate` | — | add module name to generated onEnter log statement |  |
+| `-S` | PATH | path to JavaScript file used to initialize the session |  |
+| `--init-session` | PATH | path to JavaScript file used to initialize the session |  |
+| `-P` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' |  |
+| `--parameters` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' |  |
+| `-o` | OUTPUT | dump messages to file |  |
+| `--output` | OUTPUT | dump messages to file |  |
+| `--ui-host` | UI_HOST | the host to serve the UI on (default localhost) |  |
+| `--ui-port` | UI_PORT | the TCP port to serve the UI on |  |
+| `--ui-allow-origin` | ORIGIN | allow browser requests from ORIGIN; may be specified multiple times |  |
 
 ## Gotchas
 

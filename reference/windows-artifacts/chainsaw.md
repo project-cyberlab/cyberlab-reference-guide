@@ -24,16 +24,16 @@ chainsaw hunt Security_sample.evtx -s sigma/ --mapping mapping.yml
 
 ## Options
 
-All 6 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 6 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `--no-banner` | — | Hide Chainsaw's banner | |
-| `--num-threads` | NUM_THREADS | Limit the thread number (default: num of CPUs) | |
-| `-h` | — | Print help | |
-| `--help` | — | Print help | |
-| `-V` | — | Print version | |
-| `--version` | — | Print version | |
+| `--no-banner` | — | Hide Chainsaw's banner |  |
+| `--num-threads` | NUM_THREADS | Limit the thread number (default: num of CPUs) |  |
+| `-h` | — | Print help |  |
+| `--help` | — | Print help |  |
+| `-V` | — | Print version |  |
+| `--version` | — | Print version |  |
 
 ## Gotchas
 

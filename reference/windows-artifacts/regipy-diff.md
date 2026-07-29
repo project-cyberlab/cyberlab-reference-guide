@@ -20,14 +20,14 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 4 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 4 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-o` | FILE | — | |
-| `-v` | — | Verbosity | |
-| `--verbose` | — | Verbosity | |
-| `--help` | — | Show this message and exit. | |
+| `-o` | FILE | — |  |
+| `-v` | — | Verbosity |  |
+| `--verbose` | — | Verbosity |  |
+| `--help` | — | Show this message and exit. |  |
 
 ## Gotchas
 

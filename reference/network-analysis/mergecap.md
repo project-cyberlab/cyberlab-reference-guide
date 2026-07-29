@@ -20,17 +20,17 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 7 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 7 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | — | concatenate rather than merge files. default is to merge based on frame timestamps. | |
-| `-s` | snaplen | truncate packets to <snaplen> bytes of data. | |
-| `-h` | — | display this help and exit. | |
-| `--help` | — | display this help and exit. | |
-| `-V` | — | verbose output. | |
-| `-v` | — | print version information and exit. | |
-| `--version` | — | print version information and exit. | |
+| `-a` | — | concatenate rather than merge files. default is to merge based on frame timestamps. |  |
+| `-s` | snaplen | truncate packets to <snaplen> bytes of data. |  |
+| `-h` | — | display this help and exit. |  |
+| `--help` | — | display this help and exit. |  |
+| `-V` | — | verbose output. |  |
+| `-v` | — | print version information and exit. |  |
+| `--version` | — | print version information and exit. |  |
 
 ## Gotchas
 

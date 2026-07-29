@@ -26,32 +26,32 @@ curl -s "http://$TARGET_DOMAIN/gate.php?id=203.0.113.10" -o /tmp/beacon_reply.bi
 
 ## Options
 
-All 22 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 22 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-d` | data | HTTP POST data | |
-| `--data` | data | HTTP POST data | |
-| `-f` | — | Fail fast with no output on HTTP errors | |
-| `--fail` | — | Fail fast with no output on HTTP errors | |
-| `-h` | category | Get help for commands | |
-| `--help` | category | Get help for commands | |
-| `-i` | — | Include protocol response headers in the output | |
-| `--include` | — | Include protocol response headers in the output | |
-| `-o` | file | Write to file instead of stdout | |
-| `--output` | file | Write to file instead of stdout | |
-| `-O` | — | Write output to a file named as the remote file | |
-| `--remote-name` | — | Write output to a file named as the remote file | |
-| `-s` | — | Silent mode | |
-| `--silent` | — | Silent mode | |
-| `-T` | file | Transfer local FILE to destination | |
-| `--upload-file` | file | Transfer local FILE to destination | |
-| `-A` | name | Send User-Agent <name> to server | |
-| `--user-agent` | name | Send User-Agent <name> to server | |
-| `-v` | — | Make the operation more talkative | |
-| `--verbose` | — | Make the operation more talkative | |
-| `-V` | — | Show version number and quit | |
-| `--version` | — | Show version number and quit | |
+| `-d` | data | HTTP POST data |  |
+| `--data` | data | HTTP POST data |  |
+| `-f` | — | Fail fast with no output on HTTP errors |  |
+| `--fail` | — | Fail fast with no output on HTTP errors |  |
+| `-h` | category | Get help for commands |  |
+| `--help` | category | Get help for commands |  |
+| `-i` | — | Include protocol response headers in the output |  |
+| `--include` | — | Include protocol response headers in the output |  |
+| `-o` | file | Write to file instead of stdout |  |
+| `--output` | file | Write to file instead of stdout |  |
+| `-O` | — | Write output to a file named as the remote file |  |
+| `--remote-name` | — | Write output to a file named as the remote file |  |
+| `-s` | — | Silent mode |  |
+| `--silent` | — | Silent mode |  |
+| `-T` | file | Transfer local FILE to destination |  |
+| `--upload-file` | file | Transfer local FILE to destination |  |
+| `-A` | name | Send User-Agent <name> to server |  |
+| `--user-agent` | name | Send User-Agent <name> to server |  |
+| `-v` | — | Make the operation more talkative |  |
+| `--verbose` | — | Make the operation more talkative |  |
+| `-V` | — | Show version number and quit |  |
+| `--version` | — | Show version number and quit |  |
 
 ## Gotchas
 

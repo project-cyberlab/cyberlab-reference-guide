@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Analyze disk images and recover files from them.
+Bulk-export files from an image to a directory.
 
 ## Synopsis
 
@@ -20,25 +20,26 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 11 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 11 options parsed from the captured help text; 6 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-i` | imgtype | The format of the image file (use '-i list' for supported types) | |
-| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
-| `-f` | fstype | The file system type (use '-f list' for supported types) | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | Print version | |
-| `-a` | — | Recover allocated files only | |
-| `-e` | — | Recover all files (allocated and unallocated) | |
-| `-o` | sector_offset | sector offset for a volume to recover (recovers only that volume) | |
-| `-P` | pooltype | Pool container type (use '-P list' for supported types) | |
-| `-B` | pool_volume_block | Starting block (for pool volumes only) | |
-| `-d` | dir_inum | Directory inum to recover from (must also specify a specific partition using -o or there must not be a volume system) | |
+| `-i` | imgtype | The format of the image file (use '-i list' for supported types) | Image format for non-raw evidence. |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors |  |
+| `-f` | fstype | The file system type (use '-f list' for supported types) | Force the filesystem type. |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | Print version |  |
+| `-a` | — | Recover allocated files only | Recover allocated (live) files only. |
+| `-e` | — | Recover all files (allocated and unallocated) | Recover every file, allocated and deleted — the usual choice. |
+| `-o` | sector_offset | sector offset for a volume to recover (recovers only that volume) | Partition offset in sectors, from `mmls`. |
+| `-P` | pooltype | Pool container type (use '-P list' for supported types) |  |
+| `-B` | pool_volume_block | Starting block (for pool volumes only) |  |
+| `-d` | dir_inum | Directory inum to recover from (must also specify a specific partition using -o or there must not be a volume system) | Recover from a specified directory inode rather than the root. |
 
 ## Gotchas
 
-_TODO: operational traps._
+- Default behaviour recovers only *deleted* files, which surprises people expecting a full export. Use `-e` for everything.
+- This preserves paths and names, unlike carving. Prefer it whenever the filesystem metadata is intact, and carve only what it cannot reach.
 
 ## See also
 

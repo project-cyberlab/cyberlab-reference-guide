@@ -1,7 +1,7 @@
 # fls
 
 **Kit:** SIFT Workstation · REMnux · Kali (`sleuthkit`) **Category:** Filesystem analysis
-**Version:** The Sleuth Kit 4.11.1 **Docs:** <https://wiki.sleuthkit.org/index.php?title=Fls>
+**Version:** The Sleuth Kit 4.11.1 **Docs:** <https://sleuthkit.org/sleuthkit/man/fls.html>
 **Verified:** 2026-07-29 from `cyberlab-aio:v1` — raw output in [`capture/cyberlab-aio/help/fls.help.txt`](../../capture/cyberlab-aio/help/fls.help.txt)
 
 > **Worked example of the format.** Every option below was read off the real

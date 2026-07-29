@@ -32,23 +32,23 @@ evtxexport -f text exercise/Security.evtx > /tmp/security_events.txt
 
 ## Options
 
-All 13 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 13 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 | |
-| `-f` | — | output format, options: xml, text (default) | |
-| `-h` | — | shows this help | |
-| `-l` | — | logs information about the exported items | |
-| `-m` | — | export mode, option: all, items (default), recovered 'all' exports the (allocated) items and recovered items, 'items' exports the (allocated) items and 'recovered' exports the recovered items | |
-| `-p` | — | search PATH for the resource files | |
-| `-r` | — | name of the directory containing the SOFTWARE and SYSTEM (Windows) Registry file | |
-| `-s` | — | filename of the SYSTEM (Windows) Registry file. This option overrides the path provided by -r | |
-| `-S` | — | filename of the SOFTWARE (Windows) Registry file. This option overrides the path provided by -r | |
-| `-t` | — | event log type, options: application, security, system if not specified the event log type is determined based on the filename. | |
-| `-T` | — | use event template definitions to parse the event record data | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | print version | |
+| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 |  |
+| `-f` | — | output format, options: xml, text (default) |  |
+| `-h` | — | shows this help |  |
+| `-l` | — | logs information about the exported items |  |
+| `-m` | — | export mode, option: all, items (default), recovered 'all' exports the (allocated) items and recovered items, 'items' exports the (allocated) items and 'recovered' exports the recovered items |  |
+| `-p` | — | search PATH for the resource files |  |
+| `-r` | — | name of the directory containing the SOFTWARE and SYSTEM (Windows) Registry file |  |
+| `-s` | — | filename of the SYSTEM (Windows) Registry file. This option overrides the path provided by -r |  |
+| `-S` | — | filename of the SOFTWARE (Windows) Registry file. This option overrides the path provided by -r |  |
+| `-t` | — | event log type, options: application, security, system if not specified the event log type is determined based on the filename. |  |
+| `-T` | — | use event template definitions to parse the event record data |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | print version |  |
 
 ## Gotchas
 

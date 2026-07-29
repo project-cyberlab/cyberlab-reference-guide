@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Analyze disk images and recover files from them.
+Turn a TSK body file into a human-readable chronological timeline.
 
 ## Common invocations
 
@@ -32,23 +32,24 @@ mactime -d -b exercise/bodyfile.txt | awk -F',' '$3 ~ /b/' | sort | head -n 1
 
 ## Options
 
-All 9 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 9 options parsed from the captured help text; 8 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-b` | — | Specifies the body file location, else STDIN is used | |
-| `-d` | — | Output in comma delimited format | |
-| `-h` | — | Display a header with session information | |
-| `-y` | — | Dates are displayed in ISO 8601 format | |
-| `-m` | — | Dates have month as number instead of word (does not work with -y) | |
-| `-z` | — | Specify the timezone the data came from (in the local system format) (does not work with -y) | |
-| `-g` | — | Specifies the group file location, else GIDs are used | |
-| `-p` | — | Specifies the password file location, else UIDs are used | |
-| `-V` | — | Prints the version to STDOUT | |
+| `-b` | — | Specifies the body file location, else STDIN is used | Read the body file produced by `fls -m` — the normal input. |
+| `-d` | — | Output in comma delimited format | Emit CSV rather than the default text, for spreadsheets or further tooling. |
+| `-h` | — | Display a header with session information | Produce HTML output for a report. |
+| `-y` | — | Dates are displayed in ISO 8601 format | Print dates ISO-style (year first), which sorts correctly. |
+| `-m` | — | Dates have month as number instead of word (does not work with -y) | Print month numerically instead of by name. |
+| `-z` | — | Specify the timezone the data came from (in the local system format) (does not work with -y) | Time zone of the evidence machine. Getting this wrong shifts the whole timeline. |
+| `-g` | — | Specifies the group file location, else GIDs are used | Map group IDs to names using a supplied group file. |
+| `-p` | — | Specifies the password file location, else UIDs are used | Map user IDs to names using a supplied passwd file. |
+| `-V` | — | Prints the version to STDOUT |  |
 
 ## Gotchas
 
-_TODO: operational traps._
+- `mactime` reports in the time zone you give it, not the one embedded in the evidence. An unstated `-z` silently produces a plausible, wrong timeline — state it explicitly every run.
+- A date range is passed as a trailing argument (`mactime -b body.txt 2026-01-01..2026-02-01`), not as a flag.
 
 ## See also
 

@@ -38,27 +38,27 @@ sha256sum firmware.bin
 
 ## Options
 
-All 17 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 17 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-b` | — | read in binary mode | |
-| `--binary` | — | read in binary mode | |
-| `-c` | — | read checksums from the FILEs and check them | |
-| `--check` | — | read checksums from the FILEs and check them | |
-| `--tag` | — | create a BSD-style checksum | |
-| `-t` | — | read in text mode (default) | |
-| `--text` | — | read in text mode (default) | |
-| `-z` | — | end each output line with NUL, not newline, and disable file name escaping | |
-| `--zero` | — | end each output line with NUL, not newline, and disable file name escaping | |
-| `--ignore-missing` | — | don't fail or report status for missing files | |
-| `--quiet` | — | don't print OK for each successfully verified file | |
-| `--status` | — | don't output anything, status code shows success | |
-| `--strict` | — | exit non-zero for improperly formatted checksum lines | |
-| `-w` | — | warn about improperly formatted checksum lines | |
-| `--warn` | — | warn about improperly formatted checksum lines | |
-| `--help` | — | display this help and exit | |
-| `--version` | — | output version information and exit | |
+| `-b` | — | read in binary mode |  |
+| `--binary` | — | read in binary mode |  |
+| `-c` | — | read checksums from the FILEs and check them |  |
+| `--check` | — | read checksums from the FILEs and check them |  |
+| `--tag` | — | create a BSD-style checksum |  |
+| `-t` | — | read in text mode (default) |  |
+| `--text` | — | read in text mode (default) |  |
+| `-z` | — | end each output line with NUL, not newline, and disable file name escaping |  |
+| `--zero` | — | end each output line with NUL, not newline, and disable file name escaping |  |
+| `--ignore-missing` | — | don't fail or report status for missing files |  |
+| `--quiet` | — | don't print OK for each successfully verified file |  |
+| `--status` | — | don't output anything, status code shows success |  |
+| `--strict` | — | exit non-zero for improperly formatted checksum lines |  |
+| `-w` | — | warn about improperly formatted checksum lines |  |
+| `--warn` | — | warn about improperly formatted checksum lines |  |
+| `--help` | — | display this help and exit |  |
+| `--version` | — | output version information and exit |  |
 
 ## Gotchas
 

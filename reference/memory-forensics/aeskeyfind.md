@@ -26,13 +26,13 @@ aeskeyfind sample.mem
 
 ## Options
 
-All 3 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 3 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-v` | — | verbose output -- prints the extended keys and the constraints on the rows of the key schedule | |
-| `-q` | — | don't display a progress bar | |
-| `-h` | — | displays this help message | |
+| `-v` | — | verbose output -- prints the extended keys and the constraints on the rows of the key schedule |  |
+| `-q` | — | don't display a progress bar |  |
+| `-h` | — | displays this help message |  |
 
 ## Gotchas
 

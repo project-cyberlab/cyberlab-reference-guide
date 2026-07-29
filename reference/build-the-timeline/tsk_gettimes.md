@@ -20,17 +20,17 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 7 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 7 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-i` | imgtype | The format of the image file (use '-i list' for supported types) | |
-| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
-| `-m` | — | Calculate MD5 hash in output (slow) | |
-| `-v` | — | verbose output to stderr | |
-| `-V` | — | Print version | |
-| `-z` | — | Time zone of original machine (i.e. EST5EDT or GMT) (only useful with -l) | |
-| `-s` | seconds | Time skew of original machine (in seconds) (only useful with -l & -m) | |
+| `-i` | imgtype | The format of the image file (use '-i list' for supported types) |  |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors |  |
+| `-m` | — | Calculate MD5 hash in output (slow) |  |
+| `-v` | — | verbose output to stderr |  |
+| `-V` | — | Print version |  |
+| `-z` | — | Time zone of original machine (i.e. EST5EDT or GMT) (only useful with -l) |  |
+| `-s` | seconds | Time skew of original machine (in seconds) (only useful with -l & -m) |  |
 
 ## Gotchas
 

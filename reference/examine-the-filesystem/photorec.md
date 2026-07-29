@@ -27,12 +27,12 @@ photorec /log /d /tmp/carved /cmd exercise/sample.dd partition_none,options,mode
 
 ## Options
 
-All 2 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 2 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `/log` | — | create a photorec.log file | |
-| `/debug` | — | add debug information | |
+| `/log` | — | create a photorec.log file |  |
+| `/debug` | — | add debug information |  |
 
 ## Gotchas
 

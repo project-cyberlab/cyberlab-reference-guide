@@ -27,12 +27,12 @@ dd if=/dev/zero of=triage_sample.raw bs=1M count=8
 
 ## Options
 
-All 2 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+All 2 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `--help` | — | display this help and exit | |
-| `--version` | — | output version information and exit | |
+| `--help` | — | display this help and exit |  |
+| `--version` | — | output version information and exit |  |
 
 ## Gotchas
 
