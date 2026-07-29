@@ -1,0 +1,7 @@
+# command: cyberchef
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+cyberchef is a browser app (REMnux local copy) and has no headless CLI in this container.
+Replicate recipes with: base64dump.py, xortool, XORSearch, openssl, xxd, gunzip, zcat.

@@ -1,0 +1,40 @@
+# command: olebrowse
+# version: 
+# captured-via: --help
+# image: dfir-aio:v4
+#---
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.11/site-packages/easygui/boxes/utils.py", line 29, in <module>
+    import tkinter as tk  # python3
+    ^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'tkinter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.11/site-packages/easygui/boxes/utils.py", line 36, in <module>
+    import Tkinter as tk  # python2
+    ^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Tkinter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.11/site-packages/easygui/boxes/button_box.py", line 15, in <module>
+    from . import utils as ut
+  File "/opt/venv/lib/python3.11/site-packages/easygui/boxes/utils.py", line 43, in <module>
+    raise ImportError("Unable to find tkinter package.")
+ImportError: Unable to find tkinter package.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/bin/olebrowse", line 3, in <module>
+    from oletools.olebrowse import main
+  File "/opt/venv/lib/python3.11/site-packages/oletools/olebrowse.py", line 72, in <module>
+    import easygui
+  File "/opt/venv/lib/python3.11/site-packages/easygui/__init__.py", line 34, in <module>
+    from .boxes.button_box import buttonbox
+  File "/opt/venv/lib/python3.11/site-packages/easygui/boxes/button_box.py", line 18, in <module>
+    import global_state
+ModuleNotFoundError: No module named 'global_state'

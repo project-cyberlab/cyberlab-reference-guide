@@ -1,0 +1,73 @@
+# command: xlmdeobfuscator
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+XLMMacroDeobfuscator: pywin32 is not installed (only is required if you want to use MS Excel)
+
+          _        _______
+|\     /|( \      (       )
+( \   / )| (      | () () |
+ \ (_) / | |      | || || |
+  ) _ (  | |      | |(_)| |
+ / ( ) \ | |      | |   | |
+( /   \ )| (____/\| )   ( |
+|/     \|(_______/|/     \|
+   ______   _______  _______  ______   _______           _______  _______  _______ _________ _______  _______
+  (  __  \ (  ____ \(  ___  )(  ___ \ (  ____ \|\     /|(  ____ \(  ____ \(  ___  )\__   __/(  ___  )(  ____ )
+  | (  \  )| (    \/| (   ) || (   ) )| (    \/| )   ( || (    \/| (    \/| (   ) |   ) (   | (   ) || (    )|
+  | |   ) || (__    | |   | || (__/ / | (__    | |   | || (_____ | |      | (___) |   | |   | |   | || (____)|
+  | |   | ||  __)   | |   | ||  __ (  |  __)   | |   | |(_____  )| |      |  ___  |   | |   | |   | ||     __)
+  | |   ) || (      | |   | || (  \ \ | (      | |   | |      ) || |      | (   ) |   | |   | |   | || (\ (
+  | (__/  )| (____/\| (___) || )___) )| )      | (___) |/\____) || (____/\| )   ( |   | |   | (___) || ) \ \__
+  (______/ (_______/(_______)|/ \___/ |/       (_______)\_______)(_______/|/     \|   )_(   (_______)|/   \__/
+
+    
+XLMMacroDeobfuscator(v0.2.7) - https://github.com/DissectMalware/XLMMacroDeobfuscator
+
+usage: xlmdeobfuscator [-h] [-c FILE_PATH] [-f FILE_PATH] [-n] [-x]
+                       [--sort-formulas] [--defined-names] [-2]
+                       [--with-ms-excel] [-s] [-d DAY]
+                       [--output-formula-format OUTPUT_FORMULA_FORMAT]
+                       [--extract-formula-format EXTRACT_FORMULA_FORMAT]
+                       [--no-indent] [--silent] [--export-json FILE_PATH]
+                       [--start-point CELL_ADDR] [-p PASSWORD]
+                       [-o OUTPUT_LEVEL] [--timeout N]
+
+options:
+  -h, --help            show this help message and exit
+  -c FILE_PATH, --config-file FILE_PATH
+                        Specify a config file (must be a valid JSON file)
+  -f FILE_PATH, --file FILE_PATH
+                        The path of a XLSM file
+  -n, --noninteractive  Disable interactive shell
+  -x, --extract-only    Only extract cells without any emulation
+  --sort-formulas       Sort extracted formulas based on their cell address
+                        (requires -x)
+  --defined-names       Extract all defined names
+  -2, --no-ms-excel     [Deprecated] Do not use MS Excel to process XLS files
+  --with-ms-excel       Use MS Excel to process XLS files
+  -s, --start-with-shell
+                        Open an XLM shell before interpreting the macros in
+                        the input
+  -d DAY, --day DAY     Specify the day of month
+  --output-formula-format OUTPUT_FORMULA_FORMAT
+                        Specify the format for output formulas ([[CELL-ADDR]],
+                        [[INT-FORMULA]], and [[STATUS]]
+  --extract-formula-format EXTRACT_FORMULA_FORMAT
+                        Specify the format for extracted formulas ([[CELL-
+                        ADDR]], [[CELL-FORMULA]], and [[CELL-VALUE]]
+  --no-indent           Do not show indent before formulas
+  --silent              Do not print output
+  --export-json FILE_PATH
+                        Export the output to JSON
+  --start-point CELL_ADDR
+                        Start interpretation from a specific cell address
+  -p PASSWORD, --password PASSWORD
+                        Password to decrypt the protected document
+  -o OUTPUT_LEVEL, --output-level OUTPUT_LEVEL
+                        Set the level of details to be shown (0:all commands,
+                        1: commands no jump 2:important commands 3:strings in
+                        important commands).
+  --timeout N           stop emulation after N seconds (0: not interruption
+                        N>0: stop emulation after N seconds)

@@ -1,0 +1,15 @@
+# command: reordercap
+# version: Reordercap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Reordercap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)
+Reorder timestamps of input file frames into output file.
+See https://www.wireshark.org for more information.
+
+Usage: reordercap [options] <infile> <outfile>
+
+Options:
+  -n        don't write to output file if the input file is ordered.
+  -h        display this help and exit.
+  -v        print version information and exit.

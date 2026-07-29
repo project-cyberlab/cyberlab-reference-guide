@@ -1,0 +1,43 @@
+# command: vivbin
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: vivbin [options] <workspace|binaries...>
+
+positional arguments:
+  file
+
+options:
+  -h, --help            show this help message and exit
+  -M MODNAME, --module MODNAME
+                        run the file listed as an analysis module in non-gui
+                        mode and exit
+  -A, --skip-analysis   Do *not* do an initial auto-analysis pass
+  -B, --bulk            Do *not* start the gui, just load, analyze and save
+  -C, --cprofile        Output vivisect performace profiling (cProfile) info
+  -E ENTRYPOINTS, --entrypoint ENTRYPOINTS
+                        Add Entry Point for bulk analysis (can have multiple
+                        "-E <addr>" args
+  -O OPTION, --option OPTION
+                        <secname>.<optname>=<optval> (optval must be json
+                        syntax)
+  -p PARSEMOD, --parser PARSEMOD
+                        Manually specify the parser module (pe/elf/blob/...)
+  -s STORAGE_NAME, --storage STORAGE_NAME
+                        Specify a storage module by name
+  -S, --server          Run Vivisect Server. Last argument should be the
+                        VivWorkspaces directory.
+  -P SERVER_PORT, --port SERVER_PORT
+                        Port to run Vivisect Server on (only meaningful with
+                        --server)
+  -v, --verbose         Enable verbose mode (multiples matter: -vvvv)
+  -V VERSION, --version VERSION
+                        Add file version (if available) to save file name
+  -c CONFIG, --config CONFIG
+                        Path to a directory to use for config data
+  -a, --autosave        Autosave configuration data
+  -o OUTFILE, --outfile OUTFILE
+                        Name of VivWorkspace file to create (useful for
+                        loading multiple binaries into one workspace)
+  -m, --archmaturity    List Architectures and their version/maturity

@@ -1,0 +1,16 @@
+# command: yarac
+# version: 4.2.3
+# captured-via: --help
+# image: dfir-aio:v4
+#---
+Usage: yarac [OPTION]... [NAMESPACE:]SOURCE_FILE... OUTPUT_FILE
+
+       --atom-quality-table=FILE        path to a file with the atom quality table
+  -d,  --define=VAR=VALUE               define external variable
+       --fail-on-warnings               fail on warnings
+  -h,  --help                           show this help and exit
+       --max-strings-per-rule=NUMBER    set maximum number of strings per rule (default=10000)
+  -w,  --no-warnings                    disable warnings
+  -v,  --version                        show version information
+
+Send bug reports and suggestions to: vmalvarez@virustotal.com

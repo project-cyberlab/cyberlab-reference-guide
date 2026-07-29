@@ -1,0 +1,39 @@
+# command: readelf.py
+# version: readelf.py: based on pyelftools 0.33
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: usage: readelf.py [options] <elf-file>
+
+Display information about the contents of ELF format files
+
+positional arguments:
+  file                  ELF file to parse
+
+options:
+  -v, --version         show program's version number and exit
+  -d, --dynamic         Display the dynamic section
+  -H, --help            Display this information
+  -h, --file-header     Display the ELF file header
+  -l, --program-headers, --segments
+                        Display the program headers
+  -S, --section-headers, --sections
+                        Display the sections' headers
+  -e, --headers         Equivalent to: -h -l -S
+  -s, --symbols, --syms
+                        Display the symbol table
+  -n, --notes           Display the core notes (if present)
+  -r, --relocs          Display the relocations (if present)
+  -au, --arm-unwind     Display the armeabi unwind information (if present)
+  -x <number|name>, --hex-dump <number|name>
+                        Dump the contents of section <number|name> as bytes
+  -p <number|name>, --string-dump <number|name>
+                        Dump the contents of section <number|name> as strings
+  -V, --version-info    Display the version sections (if present)
+  -A, --arch-specific   Display the architecture-specific information (if
+                        present)
+  --debug-dump <what>   Display the contents of DWARF debug sections. <what>
+                        can one of {info,decodedline,frames,frames-
+                        interp,aranges,pubtypes,pubnames,loc,Ranges}
+  --traceback           Dump the Python traceback on ELFError exceptions from
+                        elftools

@@ -1,0 +1,6 @@
+# command: rafind2
+# version: rafind2 6.1.9 +1 abi:124 @ linux-x86_64
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: rafind2 [-mBXnzZhqv] [-a align] [-b sz] [-f/t from/to] [-[e|s|S] str] [-x hex] [-R str] [-I str] [-g] -|file|dir ..

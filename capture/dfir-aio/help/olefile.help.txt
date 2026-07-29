@@ -1,0 +1,16 @@
+# command: olefile
+# version: ERROR    Error while parsing file 'version'
+# captured-via: --help
+# image: dfir-aio:v4
+#---
+Usage: olefile [options] <filename> [filename2 ...]
+
+Options:
+  -h, --help            show this help message and exit
+  -c                    check all streams (for debugging purposes)
+  -p                    extract all user-defined propertires
+  -d                    debug mode, shortcut for -l debug (displays a lot of
+                        debug information, for developers only)
+  -l LOGLEVEL, --loglevel=LOGLEVEL
+                        logging level debug/info/warning/error/critical
+                        (default=warning)

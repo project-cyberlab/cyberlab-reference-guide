@@ -1,0 +1,32 @@
+# command: oleobj
+# version: oleobj 0.60.1 - http://decalage.info/oletools
+# captured-via: --help
+# image: dfir-aio:v4
+#---
+oleobj 0.60.1 - http://decalage.info/oletools
+THIS IS WORK IN PROGRESS - Check updates regularly!
+Please report any issue at https://github.com/decalage2/oletools/issues
+
+usage: usage: oleobj [options] <filename> [filename2 ...]
+
+positional arguments:
+  FILE                  Office files to parse (same as -i)
+
+options:
+  -h, --help            show this help message and exit
+  -r                    find files recursively in subdirectories.
+  -d OUTPUT_DIR         use specified directory to output files.
+  -z ZIP_PASSWORD, --zip ZIP_PASSWORD
+                        if the file is a zip archive, open first file from it,
+                        using the provided password (requires Python 2.6+)
+  -f ZIP_FNAME, --zipfname ZIP_FNAME
+                        if the file is a zip archive, file(s) to be opened
+                        within the zip. Wildcards * and ? are supported.
+                        (default:*)
+  -l LOGLEVEL, --loglevel LOGLEVEL
+                        logging level debug/info/warning/error/critical
+                        (default=warning)
+  -i FILE, --more-input FILE
+                        Additional file to parse (same as positional
+                        arguments)
+  -v, --verbose         verbose mode, set logging to DEBUG (overwrites -l)

@@ -1,0 +1,8 @@
+# command: rsakeyfind
+# version: 
+# captured-via: (no args)
+# image: cyberlab-aio:v1
+#---
+USAGE: rsakeyfind MEMORY-IMAGE [MODULUS-FILE]
+Locates BER-encoded RSA private keys in MEMORY-IMAGE.
+If MODULUS-FILE is specified, it will locate private and public keysmatching the hex-encoded modulus read from this file.

@@ -1,0 +1,49 @@
+# command: olevba
+# version: olevba 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: usage: olevba [options] <filename> [filename2 ...]
+
+positional arguments:
+  filenames             Files to analyze
+
+options:
+  -h, --help            show this help message and exit
+  -r                    find files recursively in subdirectories.
+  -z ZIP_PASSWORD, --zip ZIP_PASSWORD
+                        if the file is a zip archive, open all files from it,
+                        using the provided password.
+  -p PASSWORD, --password PASSWORD
+                        if encrypted office files are encountered, try
+                        decryption with this password. May be repeated.
+  -f ZIP_FNAME, --zipfname ZIP_FNAME
+                        if the file is a zip archive, file(s) to be opened
+                        within the zip. Wildcards * and ? are supported.
+                        (default: *)
+  -a, --analysis        display only analysis results, not the macro source
+                        code
+  -c, --code            display only VBA source code, do not analyze it
+  --decode              display all the obfuscated strings with their decoded
+                        content (Hex, Base64, StrReverse, Dridex, VBA).
+  --attr                display the attribute lines at the beginning of VBA
+                        source code
+  --reveal              display the macro source code after replacing all the
+                        obfuscated strings by their decoded content.
+  -l LOGLEVEL, --loglevel LOGLEVEL
+                        logging level debug/info/warning/error/critical
+                        (default=warning)
+  --deobf               Attempt to deobfuscate VBA expressions (slow)
+  --relaxed             Do not raise errors if opening of substream fails
+                        (this option is now deprecated, enabled by default)
+  --show-pcode          Show disassembled P-code (using pcodedmp)
+  --no-pcode            Disable extraction and analysis of pcode
+  --no-xlm              Do not extract XLM Excel macros. This may speed up
+                        analysis of large files.
+
+Output mode (mutually exclusive):
+  -t, --triage          triage mode, display results as a summary table
+                        (default for multiple files)
+  -d, --detailed        detailed mode, display full results (default for
+                        single file)
+  -j, --json            json mode, detailed in json format (never default)

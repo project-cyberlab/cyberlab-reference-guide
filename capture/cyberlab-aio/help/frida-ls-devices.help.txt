@@ -1,0 +1,12 @@
+# command: frida-ls-devices
+# version: 17.16.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: frida-ls-devices [options]
+
+options:
+  -h, --help            show this help message and exit
+  -O FILE, --options-file FILE
+                        text file containing additional command line options
+  --version             show program's version number and exit

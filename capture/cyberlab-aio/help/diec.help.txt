@@ -1,0 +1,39 @@
+# command: diec
+# version: die 3.10
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: diec [options] target
+Detect It Easy v3.10
+Copyright(C) 2006-2008 Hellsp@wn 2012-2024 hors<horsicq@gmail.com> Web: http://ntinfo.biz
+
+
+Options:
+  -h, --help                   Displays help on commandline options.
+  --help-all                   Displays help including Qt specific options.
+  -v, --version                Displays version information.
+  -r, --recursivescan          Recursive scan.
+  -d, --deepscan               Deep scan.
+  -u, --heuristicscan          Heuristic scan.
+  -b, --verbose                Verbose.
+  -g, --aggressivecscan        Aggressive scan.
+  -a, --alltypes               Scan all types.
+  -l, --profiling              Profiling signatures.
+  -U, --hideunknown            Hide unknown.
+  -e, --entropy                Show entropy.
+  -i, --info                   Show file info.
+  -S, --special <method>       Special file info for <method>. For example -S
+                               "Hash" or -S "Hash#MD5".
+  -x, --xml                    Result as XML.
+  -j, --json                   Result as JSON.
+  -c, --csv                    Result as CSV.
+  -t, --tsv                    Result as TSV.
+  -p, --plaintext              Result as Plain Text.
+  -D, --database <path>        Set database<path>.
+  -E, --extradatabase <path>   Set extra database<path>.
+  -C, --customdatabase <path>  Set custom database<path>.
+  -s, --showdatabase           Show database.
+  -m, --showmethods            Show all special methods for the file.
+
+Arguments:
+  target                       The file or directory to open.

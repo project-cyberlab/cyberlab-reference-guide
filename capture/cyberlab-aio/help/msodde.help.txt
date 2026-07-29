@@ -1,0 +1,33 @@
+# command: msodde
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: msodde [-h] [-j] [--nounquote] [-l LOGLEVEL] [-p PASSWORD] [-d] [-f]
+              [-a]
+              FILE
+
+A python tool to detect and extract DDE links in MS Office files
+
+positional arguments:
+  FILE                  path of the file to be analyzed
+
+options:
+  -h, --help            show this help message and exit
+  -j, --json            Output in json format. Do not use with -ldebug
+  --nounquote           don't unquote values
+  -l LOGLEVEL, --loglevel LOGLEVEL
+                        logging level debug/info/warning/error/critical
+                        (default=warning)
+  -p PASSWORD, --password PASSWORD
+                        if encrypted office files are encountered, try
+                        decryption with this password. May be repeated.
+
+Filter which OpenXML field commands are returned:
+  Only applies to OpenXML (e.g. docx) and rtf, not to OLE (e.g. .doc). These
+  options are mutually exclusive, last option found on command line
+  overwrites earlier ones.
+
+  -d, --dde-only        Return only DDE and DDEAUTO fields
+  -f, --filter          Return all fields except harmless ones
+  -a, --all-fields      Return all fields, irrespective of their contents

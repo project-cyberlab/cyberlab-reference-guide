@@ -1,0 +1,33 @@
+# command: vdbbin
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: vdbbin [options] [platformopt=foo, ...]
+
+positional arguments:
+  platargs
+
+options:
+  -h, --help            show this help message and exit
+  -c COMMAND, --cmd COMMAND
+                        Debug a fired command
+  -p PROCESS, --process PROCESS
+                        Attach to process by name or pid
+  -Q, --qt              Run the QT gui
+  -R REMOTEHOST, --remote REMOTEHOST
+                        Attach to remote VDB server
+  -r, --run             Do not stop on attach
+  -s SNAPSHOT, --snapshot SNAPSHOT
+                        Load a vtrace snapshot file
+  -S, --server
+  -v, --verbose
+  -t TARGET, --target TARGET
+                        Activate special vdb target ( -t ? for list )
+  --android             Debug Android with ADB!
+  -e EVENTID, --eventid EVENTID
+                        Used for Windows JIT
+  -w WAITFOR, --waitfor WAITFOR
+                        Wait for process with name
+  --LI                  Breakpoint on Library initialization
+  --LL                  Breakpoint on Library load time

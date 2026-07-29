@@ -1,0 +1,44 @@
+# command: pdfid.py
+# version: pdfid.py 0.2.10
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: pdfid.py [options] [pdf-file|zip-file|url|@file] ...
+Tool to test a PDF file
+
+Arguments:
+pdf-file and zip-file can be a single file, several files, and/or @file
+@file: run PDFiD on each file listed in the text file specified
+wildcards are supported
+
+Source code put in the public domain by Didier Stevens, no Copyright
+Use at your own risk
+https://DidierStevens.com
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -s, --scan            scan the given directory
+  -a, --all             display all the names
+  -e, --extra           display extra data, like dates
+  -f, --force           force the scan of the file, even without proper %PDF
+                        header
+  -d, --disarm          disable JavaScript and auto launch
+  -p PLUGINS, --plugins=PLUGINS
+                        plugins to load (separate plugins with a comma , ;
+                        @file supported)
+  -c, --csv             output csv data when using plugins
+  -m MINIMUMSCORE, --minimumscore=MINIMUMSCORE
+                        minimum score for plugin results output
+  -v, --verbose         verbose (will also raise catched exceptions)
+  -S SELECT, --select=SELECT
+                        selection expression
+  -n, --nozero          supress output for counts equal to zero
+  -o OUTPUT, --output=OUTPUT
+                        output to log file
+  --pluginoptions=PLUGINOPTIONS
+                        options for the plugin
+  -l, --literalfilenames
+                        take filenames literally, no wildcard matching
+  --recursedir          Recurse directories (wildcards and here files (@...)
+                        allowed)

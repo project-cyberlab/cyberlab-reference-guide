@@ -1,0 +1,52 @@
+# command: pyxswf
+# version: pyxswf 0.54 - http://decalage.info/python/oletools
+# captured-via: --help
+# image: dfir-aio:v4
+#---
+pyxswf 0.54 - http://decalage.info/python/oletools
+Please report any issue at https://github.com/decalage2/oletools/issues
+
+Usage: 
+pyxswf.py
+
+pyxswf is a script to detect, extract and analyze Flash objects (SWF) that may
+be embedded in files such as MS Office documents (e.g. Word, Excel),
+which is especially useful for malware analysis.
+
+pyxswf is an extension to xxxswf.py published by Alexander Hanel on
+http://hooked-on-mnemonics.blogspot.nl/2011/12/xxxswfpy.html
+Compared to xxxswf, it can extract streams from MS Office documents by parsing
+their OLE structure properly (-o option), which is necessary when streams are
+fragmented.
+Stream fragmentation is a known obfuscation technique, as explained on
+http://www.breakingpointsystems.com/resources/blog/evasion-with-ole2-fragmentation/
+
+It can also extract Flash objects from RTF documents, by parsing embedded
+objects encoded in hexadecimal format (-f option).
+
+pyxswf project website: http://www.decalage.info/python/pyxswf
+
+pyxswf is part of the python-oletools package:
+http://www.decalage.info/python/oletools
+
+usage: pyxswf [options] <file.bad>
+
+Options:
+  -h, --help            show this help message and exit
+  -x, --extract         Extracts the embedded SWF(s), names it MD5HASH.swf &
+                        saves it in the working dir. No addition args needed
+  -y, --yara            Scans the SWF(s) with yara. If the SWF(s) is
+                        compressed it will be deflated. No addition args
+                        needed
+  -s, --md5scan         Scans the SWF(s) for MD5 signatures. Please see func
+                        checkMD5 to define hashes. No addition args needed
+  -H, --header          Displays the SWFs file header. No addition args needed
+  -d, --decompress      Deflates compressed SWFS(s)
+  -r PATH, --recdir=PATH
+                        Will recursively scan a directory for files that
+                        contain SWFs. Must provide path in quotes
+  -c, --compress        Compresses the SWF using Zlib
+  -o, --ole             Parse an OLE file (e.g. Word, Excel) to look for SWF
+                        in each stream
+  -f, --rtf             Parse an RTF file to look for SWF in each embedded
+                        object

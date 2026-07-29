@@ -1,0 +1,29 @@
+# command: rtfobj
+# version: rtfobj 0.60.1 on Python 3.11.2 - http://decalage.info/python/oletools
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+rtfobj 0.60.1 on Python 3.11.2 - http://decalage.info/python/oletools
+THIS IS WORK IN PROGRESS - Check updates regularly!
+Please report any issue at https://github.com/decalage2/oletools/issues
+
+Usage: rtfobj [options] <filename> [filename2 ...]
+
+Options:
+  -h, --help            show this help message and exit
+  -r                    find files recursively in subdirectories.
+  -z ZIP_PASSWORD, --zip=ZIP_PASSWORD
+                        if the file is a zip archive, open first file from it,
+                        using the provided password (requires Python 2.6+)
+  -f ZIP_FNAME, --zipfname=ZIP_FNAME
+                        if the file is a zip archive, file(s) to be opened
+                        within the zip. Wildcards * and ? are supported.
+                        (default:*)
+  -l LOGLEVEL, --loglevel=LOGLEVEL
+                        logging level debug/info/warning/error/critical
+                        (default=warning)
+  -s SAVE_OBJECT, --save=SAVE_OBJECT
+                        Save the object corresponding to the provided number
+                        to a file, for example "-s 2". Use "-s all" to save
+                        all objects at once.
+  -d OUTPUT_DIR         use specified directory to save output files.

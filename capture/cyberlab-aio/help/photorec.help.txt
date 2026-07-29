@@ -1,0 +1,17 @@
+# command: photorec
+# version: PhotoRec 7.1, Data Recovery Utility, July 2019
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+PhotoRec 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+
+Usage: photorec [/log] [/debug] [/d recup_dir] [file.dd|file.e01|device]
+       photorec /version
+
+/log          : create a photorec.log file
+/debug        : add debug information
+
+PhotoRec searches for various file formats (JPEG, Office...). It stores files
+in the recup_dir directory.

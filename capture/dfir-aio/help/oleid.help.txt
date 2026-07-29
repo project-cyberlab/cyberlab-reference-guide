@@ -1,0 +1,25 @@
+# command: oleid
+# version: oleid 0.60.1 - http://decalage.info/oletools
+# captured-via: --help
+# image: dfir-aio:v4
+#---
+oleid 0.60.1 - http://decalage.info/oletools
+THIS IS WORK IN PROGRESS - Check updates regularly!
+Please report any issue at https://github.com/decalage2/oletools/issues
+
+usage: oleid [-h] [FILE ...]
+
+oleid.py oleid is a script to analyze OLE files such as MS Office documents
+(e.g. Word, Excel), to detect specific characteristics that could potentially
+indicate that the file is suspicious or malicious, in terms of security (e.g.
+malware). For example it can detect VBA macros, embedded Flash objects,
+fragmentation. The results is displayed as ascii table (but could be returned
+or printed in other formats like CSV, XML or JSON in future). oleid project
+website: http://www.decalage.info/python/oleid oleid is part of the python-
+oletools package: http://www.decalage.info/python/oletools
+
+positional arguments:
+  FILE        Name of files to process
+
+options:
+  -h, --help  show this help message and exit

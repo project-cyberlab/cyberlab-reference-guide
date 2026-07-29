@@ -1,0 +1,13 @@
+# command: img_stat
+# version: The Sleuth Kit ver 4.11.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+img_stat: invalid option -- '-'
+Invalid argument: --help
+usage: img_stat [-tvV] [-i imgtype] [-b dev_sector_size] image
+	-t: display type only
+	-i imgtype: The format of the image file (use '-i list' for list of supported types)
+	-b dev_sector_size: The size (in bytes) of the device sectors
+	-v: verbose output to stderr
+	-V: Print version

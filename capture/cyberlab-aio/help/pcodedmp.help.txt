@@ -1,0 +1,21 @@
+# command: pcodedmp
+# version: pcodedmp version 1.2.6
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: pcodedmp [-h] [-v] [-n] [-d] [-b] [-o OUTPUTFILE]
+                fileOrDir [fileOrDir ...]
+
+Dumps the p-code of VBA-containing documents.
+
+positional arguments:
+  fileOrDir             File or dir
+
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -n, --norecurse       Don't recurse into directories
+  -d, --disasmonly      Only disassemble, no stream dumps
+  -b, --verbose         Dump the stream contents
+  -o OUTPUTFILE, --output OUTPUTFILE
+                        Output file name

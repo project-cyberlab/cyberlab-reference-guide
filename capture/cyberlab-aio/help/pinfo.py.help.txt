@@ -1,0 +1,52 @@
+# command: pinfo.py
+# version: plaso - pinfo version 20260512
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: pinfo.py [-h] [--troubles] [-V] [--logfile FILENAME]
+                [--process_memory_limit SIZE] [--compare STORAGE_FILE]
+                [--output_format FORMAT] [--hash TYPE] [--report TYPE]
+                [--sections SECTIONS_LIST] [-v] [-w OUTPUTFILE]
+                [PATH]
+
+Shows information about a Plaso storage file, for example how it was collected, what information was extracted from a source, etc.
+
+positional arguments:
+  PATH                  Path to a storage file.
+
+options:
+  -h, --help            Show this help message and exit.
+  --troubles            Show troubleshooting information.
+  -V, --version         Show the version information.
+  --logfile FILENAME, --log_file FILENAME, --log-file FILENAME
+                        Path of the file in which to store log messages, by
+                        default this file will be named: "pinfo-
+                        YYYYMMDDThhmmss.log.gz". Note that the file will be
+                        gzip compressed if the extension is ".gz".
+  --process_memory_limit SIZE, --process-memory-limit SIZE
+                        Maximum amount of memory (data segment) a process is
+                        allowed to allocate in bytes, where 0 represents no
+                        limit. The default limit is 4294967296 (4 GiB). This
+                        applies to both the main (foreman) process and the
+                        worker processes. This limit is enforced by the
+                        operating system and will supersede the worker memory
+                        limit (--worker_memory_limit).
+  --compare STORAGE_FILE
+                        The path of the storage file to compare against.
+  --output_format FORMAT, --output-format FORMAT
+                        Format of the output, the default is: text. Supported
+                        options: json, markdown, text.
+  --hash TYPE           Type of hash to output in file_hashes report.
+                        Supported options: md5, sha1, sha256
+  --report TYPE         Report on specific information. Supported options:
+                        browser_search, chrome_extension,
+                        environment_variables, file_hashes, list, none,
+                        windows_services, winevt_providers
+  --sections SECTIONS_LIST
+                        List of sections to output. This is a comma separated
+                        list where each entry is the name of a section. Use "
+                        --sections list" to list the available sections and "
+                        --sections all" to show all available sections.
+  -v, --verbose         Print verbose output.
+  -w OUTPUTFILE, --write OUTPUTFILE
+                        Output filename.

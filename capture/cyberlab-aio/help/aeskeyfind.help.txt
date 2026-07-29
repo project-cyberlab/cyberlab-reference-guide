@@ -1,0 +1,15 @@
+# command: aeskeyfind
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+aeskeyfind: invalid option -- '-'
+Usage: aeskeyfind [OPTION]... MEMORY-IMAGE
+Locates scheduled 128-bit and 256-bit AES keys in MEMORY-IMAGE.
+
+	-v		verbose output -- prints the extended keys and 
+			the constraints on the rows of the key schedule
+	-q		don't display a progress bar
+	-t THRESHOLD	sets the maximum number of bit errors allowed 
+			in a candidate key schedule (default = 10)
+	-h		displays this help message
