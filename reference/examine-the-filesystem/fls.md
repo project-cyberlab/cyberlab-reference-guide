@@ -2,7 +2,7 @@
 
 **Kit:** SIFT Workstation · REMnux · Kali (`sleuthkit`) **Category:** Filesystem analysis
 **Version:** The Sleuth Kit 4.11.1 **Docs:** <https://wiki.sleuthkit.org/index.php?title=Fls>
-**Verified:** 2026-07-29 from `cyberlab-aio:v1` — raw output in [`capture/fls.help.txt`](../../capture/fls.help.txt)
+**Verified:** 2026-07-29 from `cyberlab-aio:v1` — raw output in [`capture/cyberlab-aio/help/fls.help.txt`](../../capture/cyberlab-aio/help/fls.help.txt)
 
 > **Worked example of the format.** Every option below was read off the real
 > binary, not written from memory. See [docs/FORMAT.md](../../docs/FORMAT.md).
@@ -98,3 +98,4 @@ fls -o {{2048}} {{path/to/image.dd}} {{inode}}
 - `istat` — detailed metadata for one inode
 - `mactime` — consumes the `-m` body file to build the timeline
 - `tsk_recover` — bulk export of allocated/deleted files
+

@@ -1,0 +1,39 @@
+<!-- generated-by: scripts/generate_pages.py -->
+# img_stat
+
+**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Inspect or mount a forensic image container; See the partition and volume layout  **Version:** The Sleuth Kit ver 4.11.1
+**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/img_stat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
+
+## Purpose
+
+Analyze disk images and recover files from them.
+
+## Synopsis
+
+```
+img_stat [-tvV] [-i imgtype] [-b dev_sector_size] image
+```
+
+## Common invocations
+
+_TODO: up to 8 task-titled invocations._
+
+## Options
+
+All 5 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+
+| Flag | Argument | What it does | When you would use it |
+|---|---|---|---|
+| `-t` | — | display type only | |
+| `-i` | imgtype | The format of the image file (use '-i list' for list of supported types) | |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
+| `-v` | — | verbose output to stderr | |
+| `-V` | — | Print version | |
+
+## Gotchas
+
+_TODO: operational traps._
+
+## See also
+
+`ntfs-3g`, `vshadowinfo`, `bdeinfo`, `mmls`, `fsstat`, `testdisk`

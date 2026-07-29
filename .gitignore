@@ -8,3 +8,6 @@ build/
 
 __pycache__/
 *.pyc
+
+# read-only working copy of cyberlab, pulled for mining
+.mined/

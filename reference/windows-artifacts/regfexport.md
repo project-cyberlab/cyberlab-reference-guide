@@ -1,0 +1,49 @@
+<!-- generated-by: scripts/generate_pages.py -->
+# regfexport
+
+**Kit:** SIFT Workstation (libyal)  **Capability:** Parse registry hives
+**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/regfexport.help.txt)
+
+## Purpose
+
+Invalid argument: regfexport
+
+## Synopsis
+
+```
+regfexport [ -c codepage ] [ -K key_path ] [ -l logfile ]
+[ -hvV ] source
+```
+
+## Common invocations
+
+<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
+```
+# from cyberlab 04-registry-analysis
+regfexport -V
+# from cyberlab 04-registry-analysis
+regfexport exercise/SYSTEM_sample.hive > /tmp/system_dump.txt
+# from cyberlab 04-registry-analysis
+regfexport exercise/SYSTEM_sample.hive | grep -i "ComputerName"
+```
+
+## Options
+
+All 6 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+
+| Flag | Argument | What it does | When you would use it |
+|---|---|---|---|
+| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 | |
+| `-h` | — | shows this help | |
+| `-K` | — | show information about a specific key path. | |
+| `-l` | — | logs information about the exported items | |
+| `-v` | — | verbose output to stderr | |
+| `-V` | — | print version | |
+
+## Gotchas
+
+_TODO: operational traps._
+
+## See also
+
+`rip.pl`, `regripper`, `hivexsh`, `regfinfo`, `regfmount`, `regipy-dump`, `regipy-parse-header`, `regipy-plugins-run`

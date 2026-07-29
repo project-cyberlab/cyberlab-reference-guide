@@ -1,0 +1,1596 @@
+{
+  "note": "CANDIDATES ONLY \u2014 mined from cyberlab, never authoritative. Every flag must still be verified against capture/.",
+  "source": "cyberlab-training-lab @ audit/content-quality-p0-p1",
+  "tools": {
+    "aeskeyfind": [
+      {
+        "cmd": "aeskeyfind 2>&1 | head -n 1",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "aeskeyfind sample.mem",
+        "module": "02-memory-forensics"
+      }
+    ],
+    "base64dump.py": [
+      {
+        "cmd": "base64dump.py --version 2>&1 | head -n 1",
+        "module": "09-deobfuscation"
+      },
+      {
+        "cmd": "base64dump.py exercise/encoded_payload.bin",
+        "module": "09-deobfuscation"
+      },
+      {
+        "cmd": "base64dump.py -s 1 -d exercise/encoded_payload.bin | head -c 200",
+        "module": "09-deobfuscation"
+      },
+      {
+        "cmd": "base64dump.py --version",
+        "module": "25-cyberchef-recipes"
+      },
+      {
+        "cmd": "base64dump.py encoded_payload.ps1.txt",
+        "module": "25-cyberchef-recipes"
+      },
+      {
+        "cmd": "base64dump.py -s 1 -d encoded_payload.ps1.txt | xxd | head -n 2",
+        "module": "25-cyberchef-recipes"
+      }
+    ],
+    "bdeinfo": [
+      {
+        "cmd": "bdeinfo -V",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "bdeinfo exercise/bitlocker.raw",
+        "module": "06-windows-artifact-libs"
+      }
+    ],
+    "binwalk": [
+      {
+        "cmd": "binwalk --help | head -n 3",
+        "module": "33-binwalk-firmware"
+      },
+      {
+        "cmd": "binwalk firmware.bin",
+        "module": "33-binwalk-firmware"
+      },
+      {
+        "cmd": "binwalk -e firmware.bin",
+        "module": "33-binwalk-firmware"
+      },
+      {
+        "cmd": "binwalk -E firmware.bin",
+        "module": "33-binwalk-firmware"
+      }
+    ],
+    "bulk_extractor": [
+      {
+        "cmd": "bulk_extractor -V",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "bulk_extractor -o be_out sample.mem",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "bulk_extractor -o /tmp/bulk_out exercise/sample.dd",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "bulk_extractor -o /tmp/ak_bulk exercise/sample.dd",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "bulk_extractor -o be_out exercise/memdump.raw",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "bulk_extractor -E aes -E zip -o be_out memory.raw",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "bulk_extractor -E aes -o exercise/be_out exercise/memory.raw",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "bulk_extractor -o be_out disk.raw",
+        "module": "51-linux-triage-workflow"
+      },
+      {
+        "cmd": "bulk_extractor -o exercise/be_out exercise/triage_sample.raw",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "capa": [
+      {
+        "cmd": "capa --version",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "capa exercise/sample.bin | head -n 40",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "capa -q /bin/ls | head -n 30",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "capa exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "capa -v exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "capa .\\exercise\\sample.exe",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "capa -v .\\exercise\\sample.exe | Select-String -Pattern \"XOR|encode|T1027\"",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "capa -v .\\exercise\\sample.exe",
+        "module": "46-cutter-windows"
+      },
+      {
+        "cmd": "capa version",
+        "module": "53-dotnet-malware-case"
+      }
+    ],
+    "capinfos": [
+      {
+        "cmd": "capinfos exercise/sample.pcap",
+        "module": "24-wireshark-deep"
+      }
+    ],
+    "chainsaw": [
+      {
+        "cmd": "chainsaw hunt Security_sample.evtx -s sigma/ --mapping mapping.yml",
+        "module": "58-eventlog-hunting"
+      }
+    ],
+    "clamscan": [
+      {
+        "cmd": "clamscan --version",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "clamscan -r -i /tmp/samples",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "clamscan /tmp/eicar.com",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "clamscan exercise/sample.txt",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "clamscan --database=exercise/lab34.yar exercise/sample.txt",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "clamscan -r --infected --stdout be_out recovered_file.bin",
+        "module": "51-linux-triage-workflow"
+      },
+      {
+        "cmd": "clamscan --infected --stdout exercise/extract/eicar.com",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "curl": [
+      {
+        "cmd": "curl -s http://127.0.0.1/malware.bin -o /tmp/served.bin && file /tmp/served.bin",
+        "module": "38-network-emulation"
+      },
+      {
+        "cmd": "curl -s \"http://$TARGET_DOMAIN/gate.php?id=203.0.113.10\" -o /tmp/beacon_reply.bin",
+        "module": "38-network-emulation"
+      }
+    ],
+    "cutter": [
+      {
+        "cmd": "cutter --version 2>/dev/null || echo \"Cutter present (launch GUI: cutter &)\"",
+        "module": "35-radare2-intro"
+      },
+      {
+        "cmd": "cutter exercise/hello &",
+        "module": "35-radare2-intro"
+      },
+      {
+        "cmd": "cutter --version",
+        "module": "46-cutter-windows"
+      },
+      {
+        "cmd": "cutter .\\exercise\\sample.exe",
+        "module": "46-cutter-windows"
+      }
+    ],
+    "cyberchef": [
+      {
+        "cmd": "cyberchef &",
+        "module": "09-deobfuscation"
+      },
+      {
+        "cmd": "cyberchef --help | head -n 5",
+        "module": "25-cyberchef-recipes"
+      },
+      {
+        "cmd": "cyberchef --recipe \"From Base64\" --input encoded_payload.ps1.txt 2>/dev/null | cyberchef --recipe \"XOR({'option':'Hex','value':'2a'})\" | cyberchef --recipe \"Gunzip\"",
+        "module": "25-cyberchef-recipes"
+      },
+      {
+        "cmd": "cyberchef --recipe \"From Base64\" --input encoded_payload.ps1.txt | cyberchef --recipe \"XOR({'option':'Hex','value':'2a'})\" | cyberchef --recipe \"Gunzip\" | tee /tmp/decoded.txt | sha256sum",
+        "module": "25-cyberchef-recipes"
+      }
+    ],
+    "dc3dd": [
+      {
+        "cmd": "sudo dc3dd if=/dev/sdX of=/evidence/case01.dd hash=sha256 log=/evidence/case01.log",
+        "module": "57-forensic-acquisition"
+      }
+    ],
+    "dd": [
+      {
+        "cmd": "dd if=/dev/zero of=exercise/sample.dd bs=1M count=10",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "dd if=/dev/zero of=triage_sample.raw bs=1M count=8",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "de4dot": [
+      {
+        "cmd": "de4dot (de4dot-cex) prints its banner when run with no target:",
+        "module": "14-dotnet-re"
+      },
+      {
+        "cmd": "de4dot --help | Select-Object -First 5",
+        "module": "45-ilspy-dotnet-deep"
+      },
+      {
+        "cmd": "de4dot --list-obfuscators",
+        "module": "45-ilspy-dotnet-deep"
+      },
+      {
+        "cmd": "de4dot -f .\\exercise\\sample.exe -o .\\exercise\\sample-cleaned.exe",
+        "module": "45-ilspy-dotnet-deep"
+      },
+      {
+        "cmd": "de4dot (de4dot-cex) version banner",
+        "module": "53-dotnet-malware-case"
+      }
+    ],
+    "diec": [
+      {
+        "cmd": "diec --version",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "diec -j exercise/sample.bin | head -n 40",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "diec sample.exe",
+        "module": "32-remnux-static-triage"
+      },
+      {
+        "cmd": "diec exercise/sample.exe | grep -iE \"compiler|packer|linker\"",
+        "module": "32-remnux-static-triage"
+      }
+    ],
+    "esedbexport": [
+      {
+        "cmd": "esedbexport -V",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "esedbexport -t /tmp/edb_out exercise/Current.edb",
+        "module": "06-windows-artifact-libs"
+      }
+    ],
+    "evtxexport": [
+      {
+        "cmd": "evtxexport -V",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "evtxexport -h",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "evtxexport -f text exercise/Security.evtx > /tmp/security_events.txt",
+        "module": "06-windows-artifact-libs"
+      }
+    ],
+    "ewfacquire": [
+      {
+        "cmd": "sudo ewfacquire -t /evidence/case01 -f encase6 -c deflate -S 2G /dev/sdX",
+        "module": "57-forensic-acquisition"
+      }
+    ],
+    "ewfinfo": [
+      {
+        "cmd": "ewfinfo /evidence/case01.E01",
+        "module": "57-forensic-acquisition"
+      }
+    ],
+    "ewfmount": [
+      {
+        "cmd": "sudo ewfmount /evidence/case01.E01 /mnt/ewf",
+        "module": "57-forensic-acquisition"
+      }
+    ],
+    "ewfverify": [
+      {
+        "cmd": "ewfverify /evidence/case01.E01",
+        "module": "57-forensic-acquisition"
+      }
+    ],
+    "fakenet": [
+      {
+        "cmd": "fakenet -h 2>&1 | head -n 5",
+        "module": "38-network-emulation"
+      },
+      {
+        "cmd": "sudo fakenet 2>&1 | head -n 20",
+        "module": "38-network-emulation"
+      }
+    ],
+    "file": [
+      {
+        "cmd": "file foremost_out/jpg/*.jpg 2>/dev/null || file foremost_out/*/*",
+        "module": "33-binwalk-firmware"
+      },
+      {
+        "cmd": "file exercise/hello",
+        "module": "35-radare2-intro"
+      },
+      {
+        "cmd": "file /tmp/beacon_reply.bin # -> data / HTML (INetSim default object)",
+        "module": "38-network-emulation"
+      }
+    ],
+    "floss": [
+      {
+        "cmd": "floss --version",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "floss --no-color exercise/sample.bin | head -n 60",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "floss --no-static exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "floss exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "floss --help",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "floss .\\exercise\\sample.exe",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "floss --json --only decoded stack .\\exercise\\sample.exe > .\\exercise\\floss.json",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "floss --only static .\\exercise\\sample.exe | Select-String \"HELLO\"",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "floss --only stack decoded .\\exercise\\sample.exe",
+        "module": "42-floss-strings"
+      },
+      {
+        "cmd": "floss .\\exercise\\sample_packed.exe > .\\exercise\\floss_packed.txt",
+        "module": "52-unpacking-case"
+      },
+      {
+        "cmd": "floss .\\exercise\\sample_dumped.exe > .\\exercise\\floss_dumped.txt",
+        "module": "52-unpacking-case"
+      },
+      {
+        "cmd": "floss .\\exercise\\sample_packed.exe | Select-String \"BENIGN-UNPACK-LAB-MARKER-52\" # 0 hits",
+        "module": "52-unpacking-case"
+      },
+      {
+        "cmd": "floss -n 4 .\\exercise\\sample_packed.exe | Select-String \"UPX!\" # \u22651 hit (stub artifact)",
+        "module": "52-unpacking-case"
+      },
+      {
+        "cmd": "floss .\\exercise\\sample_dumped.exe | Select-String \"BENIGN-UNPACK-LAB-MARKER-52\" # \u22651 hit",
+        "module": "52-unpacking-case"
+      }
+    ],
+    "fls": [
+      {
+        "cmd": "fls -V",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fls -r -o 2048 exercise/sample.dd",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fls -m / -r -o 2048 exercise/sample.dd > /tmp/bodyfile.txt",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fls -r -o 0 exercise/sample.dd",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fls -r -m / -o 2048 exercise/disk.raw > /tmp/body.txt",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "fls -r -o 2048 exercise/practice.dd",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "fls -r -m / -o 2048 exercise/practice.dd > exercise/bodyfile.txt",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "fls -r -d -o 2048 exercise/practice.dd",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "fls -r -m C: -o 2048 \"$IMAGE\" > bodyfile.txt",
+        "module": "49-intrusion-timeline-case"
+      },
+      {
+        "cmd": "fls -o 2048 -r -p disk.raw",
+        "module": "51-linux-triage-workflow"
+      },
+      {
+        "cmd": "fls -o 2048 -r -m / disk.raw > bodyfile",
+        "module": "51-linux-triage-workflow"
+      },
+      {
+        "cmd": "fls -r -p exercise/triage_sample.raw",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "foremost": [
+      {
+        "cmd": "foremost -V",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "foremost -t jpg,pdf -i exercise/sample.dd -o /tmp/foremost_out",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "foremost -t jpg,pdf -i exercise/sample.dd -o /tmp/ak_foremost",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "foremost -i firmware.bin -o foremost_out",
+        "module": "33-binwalk-firmware"
+      }
+    ],
+    "freshclam": [
+      {
+        "cmd": "freshclam --version",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "sudo freshclam",
+        "module": "34-clamav-scanning"
+      }
+    ],
+    "frida": [
+      {
+        "cmd": "frida --version",
+        "module": "39-frida-tracing"
+      },
+      {
+        "cmd": "frida -f ./target -l /dev/stdin --no-pause <<'EOF'",
+        "module": "39-frida-tracing"
+      }
+    ],
+    "frida-trace": [
+      {
+        "cmd": "frida-trace --version",
+        "module": "39-frida-tracing"
+      },
+      {
+        "cmd": "timeout 8 frida-trace -f ./target -i getenv",
+        "module": "39-frida-tracing"
+      }
+    ],
+    "fsstat": [
+      {
+        "cmd": "fsstat -V",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fsstat -o 2048 exercise/sample.dd",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fsstat -o 0 exercise/sample.dd | grep -Ei \"file system type|sector size|cluster size\"",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "fsstat -o 2048 exercise/practice.dd",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "fsstat -o 2048 disk.raw",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "grep": [
+      {
+        "cmd": "grep -i \"benign.lab.local\" be_out/url.txt",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "grep -i \"analyst@lab.local\" be_out/email.txt",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "grep filestat /tmp/timeline.csv | sort -t',' -k1,2 | head -n 1",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "grep -i \"ComputerName\" /tmp/system_dump.txt | head",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "grep -v '^#' /etc/scalpel/scalpel.conf | grep -qi jpg || printf '\\njpg y 20000000 \\\\xff\\\\xd8\\\\xff \\\\xff\\\\xd9\\n' >> /etc/scalpel/scalpel.conf",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "grep -E 'jpg:|pdf:' /tmp/ak_foremost/audit.txt",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "grep -c \"Record number\" /tmp/security_events.txt",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "grep \"Event Identifier\" /tmp/security_events.txt | awk -F: '{print $2}' | sort | uniq -c | sort -rn | head -1",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "grep -Ei \"c2|http\" be_out/url.txt",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "grep -c \"<host>\" exercise/scan.xml",
+        "module": "26-metasploit-workflow"
+      },
+      {
+        "cmd": "grep -c \"<port \" exercise/scan.xml",
+        "module": "26-metasploit-workflow"
+      },
+      {
+        "cmd": "grep \"portid=\\\"80\\\"\" -A2 exercise/scan.xml",
+        "module": "26-metasploit-workflow"
+      },
+      {
+        "cmd": "grep -Eo 'GET [^ ]+' ~/lab38/log/*.log | head -n 5",
+        "module": "38-network-emulation"
+      },
+      {
+        "cmd": "grep -i \"203.0.113.10\" exercise/be_out/url.txt",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "grep -i \"evilmail@example.com\" exercise/be_out/email.txt",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "grep -i \"ABCDEFGHIJKLMNOP\" exercise/be_out/aes_keys.txt",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "grep -i AutoOpen exercise/invoice_sample.doc",
+        "module": "48-phishing-doc-case"
+      },
+      {
+        "cmd": "grep -i example.com exercise/be_out/email.txt # -> analyst@example.com",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "hashcat": [
+      {
+        "cmd": "hashcat --version",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "hashcat -b -m 0 2>&1 | head -n 8",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "hashcat -m 0 -a 0 exercise/lab_hash.txt /usr/share/wordlists/rockyou.txt",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "hashcat -m 0 --show exercise/lab_hash.txt",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "hashcat prints a version string like \"v6.2.6\".",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "hashcat -m 0 -a 0 exercise/hash.txt exercise/wordlist.txt --potfile-path exercise/hc.pot",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "hashcat -m 0 --show exercise/hash.txt --potfile-path exercise/hc.pot",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "hashcat -m 0 -a 0 -r /usr/share/hashcat/rules/best64.rule exercise/hash.txt exercise/wordlist.txt --potfile-path exercise/hc.pot",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "hashcat -m 13100 kerberoast_hashes.txt /usr/share/wordlists/rockyou.txt --show",
+        "module": "60-ad-attack-paths"
+      }
+    ],
+    "hydra": [
+      {
+        "cmd": "hydra -h 2>&1 | head -n 1",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "hydra -U ssh 2>&1 | head -n 5",
+        "module": "11-offensive-kali"
+      }
+    ],
+    "icat": [
+      {
+        "cmd": "icat -o 2048 exercise/sample.dd 5 > /tmp/recovered_file.bin",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "icat -o 0 exercise/sample.dd 5 > /tmp/recovered.txt",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "icat -o 2048 exercise/practice.dd 4 | head",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "icat -o 2048 exercise/practice.dd 6",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "icat -o 2048 disk.raw 5 > recovered_file.bin",
+        "module": "51-linux-triage-workflow"
+      },
+      {
+        "cmd": "icat exercise/triage_sample.raw $(fls -p exercise/triage_sample.raw | awk '/eicar.com/{gsub(/:/,\"\",$2);print $2}') > exercise/extract/eicar.com",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "inetsim": [
+      {
+        "cmd": "inetsim --version 2>&1 | head -n 3",
+        "module": "38-network-emulation"
+      },
+      {
+        "cmd": "sudo inetsim --config ~/lab38/inetsim.conf --data-dir /var/lib/inetsim --log-dir ~/lab38/log &",
+        "module": "38-network-emulation"
+      }
+    ],
+    "istat": [
+      {
+        "cmd": "istat -o 2048 exercise/practice.dd 4",
+        "module": "22-sleuthkit-mastery"
+      }
+    ],
+    "john": [
+      {
+        "cmd": "john --list=build-info 2>&1 | head -n 1",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt exercise/lab_hash.txt",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "john --show --format=Raw-MD5 exercise/lab_hash.txt",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "john --version 2>&1 | head -n 1",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "john --list=formats | tr ',' '\\n' | grep -i -m 5 md5",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "john --format=raw-md5 --wordlist=exercise/wordlist.txt exercise/hash.txt",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "john --format=raw-md5 --show exercise/hash.txt",
+        "module": "40-password-cracking"
+      }
+    ],
+    "log2timeline.py": [
+      {
+        "cmd": "log2timeline.py --version",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "log2timeline.py --status_view none --storage-file /tmp/case.plaso exercise/sample_fs/",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "log2timeline.py --storage-file timeline.plaso \"$IMAGE\"",
+        "module": "49-intrusion-timeline-case"
+      }
+    ],
+    "mactime": [
+      {
+        "cmd": "mactime -b /tmp/bodyfile.txt -d > /tmp/timeline.csv",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "mactime -V",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "mactime -b /tmp/body.txt -d > /tmp/mactime.csv",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "mactime -b exercise/bodyfile.txt -d > exercise/timeline.csv",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "mactime -b exercise/bodyfile.txt -d | tail",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "mactime -d -b exercise/bodyfile.txt > timeline.csv",
+        "module": "23-plaso-supertimeline"
+      },
+      {
+        "cmd": "mactime -d -b exercise/bodyfile.txt | awk -F',' '$3 ~ /b/' | sort",
+        "module": "23-plaso-supertimeline"
+      },
+      {
+        "cmd": "mactime -d -b exercise/bodyfile.txt | awk -F',' '$3 ~ /b/' | sort | head -n 1",
+        "module": "23-plaso-supertimeline"
+      },
+      {
+        "cmd": "mactime -b bodyfile.txt -d 2024-01-01 > sk_timeline.csv",
+        "module": "49-intrusion-timeline-case"
+      },
+      {
+        "cmd": "mactime -b exercise/intrusion_bodyfile.txt -d 2024-01-01 | head",
+        "module": "49-intrusion-timeline-case"
+      },
+      {
+        "cmd": "mactime -b bodyfile -d > timeline.csv",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "mmls": [
+      {
+        "cmd": "mmls -V",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "mmls exercise/sample.dd",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "mmls exercise/practice.dd",
+        "module": "22-sleuthkit-mastery"
+      },
+      {
+        "cmd": "mmls disk.raw",
+        "module": "51-linux-triage-workflow"
+      },
+      {
+        "cmd": "sudo mmls /mnt/ewf/ewf1",
+        "module": "57-forensic-acquisition"
+      }
+    ],
+    "mraptor": [
+      {
+        "cmd": "mraptor --version",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "mraptor sample_macro.doc",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "mraptor sample_macro.doc # automated verdict",
+        "module": "36-oletools-deep"
+      }
+    ],
+    "ngrep": [
+      {
+        "cmd": "ngrep -V 2>&1 | head -n 1",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "ngrep -I exercise/sample.pcap -q -W byline 'User-Agent'",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "ngrep -I exercise/sample.pcap -q -W byline 'User-Agent' | grep -i 'User-Agent'",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "ngrep -I exercise/sample.pcap -q -W byline \"User-Agent\"",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "ngrep -I exercise/sample.pcap -q -W byline \"User-Agent\" | grep -i \"User-Agent\"",
+        "module": "24-wireshark-deep"
+      }
+    ],
+    "nmap": [
+      {
+        "cmd": "nmap --version",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "nmap -sT -Pn -p 1-1024 127.0.0.1",
+        "module": "11-offensive-kali"
+      },
+      {
+        "cmd": "nmap -sV -Pn -p 1-1000 -oN scan.txt \"$TARGET\"",
+        "module": "26-metasploit-workflow"
+      },
+      {
+        "cmd": "nmap -sV -Pn -oX scan.xml \"$TARGET\"",
+        "module": "26-metasploit-workflow"
+      },
+      {
+        "cmd": "nmap -sV -p 80,443,8080 \"$TARGET\"",
+        "module": "41-web-app-testing"
+      },
+      {
+        "cmd": "nmap -p 80,443 --script http-title,http-headers,http-server-header \"$TARGET\"",
+        "module": "41-web-app-testing"
+      },
+      {
+        "cmd": "nmap -p 8000 --script http-title 127.0.0.1",
+        "module": "41-web-app-testing"
+      }
+    ],
+    "oledump.py": [
+      {
+        "cmd": "oledump.py -h | head -n 1",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "oledump.py exercise/sample.doc",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "oledump.py -s 3 -v exercise/sample.doc",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "oledump.py --help | head -n 3",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oledump.py sample_macro.doc",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oledump.py -s 3 -v sample_macro.doc",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oledump.py sample_macro.doc # locate the 'M' stream (3)",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oledump.py -s 3 -v sample_macro.doc # dump VBA source",
+        "module": "36-oletools-deep"
+      }
+    ],
+    "oleid": [
+      {
+        "cmd": "oleid exercise/sample.doc",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "oleid -h | head -n 3",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oleid gives a quick risk indicator table (VBA macros: Yes/No, encryption, etc.)",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oleid sample_macro.doc",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "oleid --version",
+        "module": "48-phishing-doc-case"
+      },
+      {
+        "cmd": "oleid exercise/invoice_sample.doc",
+        "module": "48-phishing-doc-case"
+      }
+    ],
+    "olevba": [
+      {
+        "cmd": "olevba --version",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "olevba --decode exercise/sample.doc",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "olevba exercise/sample.doc | grep -E \"AutoExec|AutoOpen|Suspicious\"",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "olevba sample_macro.doc",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "olevba sample_macro.doc # keyword analysis table",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "olevba --decode exercise/invoice_sample.doc",
+        "module": "48-phishing-doc-case"
+      }
+    ],
+    "pdf-parser": [
+      {
+        "cmd": "pdf-parser --version",
+        "module": "37-pdf-analysis"
+      },
+      {
+        "cmd": "pdf-parser --search JavaScript exercise/sample.pdf",
+        "module": "37-pdf-analysis"
+      },
+      {
+        "cmd": "pdf-parser --object 4 --filter --raw exercise/sample.pdf",
+        "module": "37-pdf-analysis"
+      }
+    ],
+    "pdf-parser.py": [
+      {
+        "cmd": "pdf-parser.py --version",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "pdf-parser.py --search JavaScript exercise/sample.pdf",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "pdf-parser.py --search OpenAction exercise/resume_sample.pdf",
+        "module": "48-phishing-doc-case"
+      },
+      {
+        "cmd": "pdf-parser.py --type /JavaScript exercise/resume_sample.pdf",
+        "module": "48-phishing-doc-case"
+      }
+    ],
+    "pdfid": [
+      {
+        "cmd": "pdfid --version",
+        "module": "37-pdf-analysis"
+      },
+      {
+        "cmd": "pdfid exercise/sample.pdf",
+        "module": "37-pdf-analysis"
+      }
+    ],
+    "pdfid.py": [
+      {
+        "cmd": "pdfid.py --version",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "pdfid.py exercise/sample.pdf",
+        "module": "10-malicious-documents"
+      }
+    ],
+    "pffexport": [
+      {
+        "cmd": "pffexport -V",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "pffexport -m items -t /tmp/pst_out exercise/sample.pst",
+        "module": "06-windows-artifact-libs"
+      }
+    ],
+    "photorec": [
+      {
+        "cmd": "photorec /version",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "photorec /log /d /tmp/carved /cmd exercise/sample.dd partition_none,options,mode_ext2,fileopt,everything,enable,search",
+        "module": "01-disk-forensics"
+      }
+    ],
+    "psort.py": [
+      {
+        "cmd": "psort.py --version",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "psort.py -o l2tcsv -w /tmp/timeline.csv /tmp/case.plaso",
+        "module": "03-timeline-analysis"
+      },
+      {
+        "cmd": "psort.py -o l2tcsv -w super_timeline.csv timeline.plaso \"date > '2024-01-10 00:00:00' AND date < '2024-01-12 00:00:00'\"",
+        "module": "49-intrusion-timeline-case"
+      }
+    ],
+    "rabin2": [
+      {
+        "cmd": "rabin2 (shipped with radare2) lists strings from data sections; r2 disassembles main",
+        "module": "35-radare2-intro"
+      },
+      {
+        "cmd": "rabin2 -z exercise/hello",
+        "module": "35-radare2-intro"
+      },
+      {
+        "cmd": "rabin2 -z exercise/hello | grep r2rules",
+        "module": "35-radare2-intro"
+      }
+    ],
+    "regfexport": [
+      {
+        "cmd": "regfexport -V",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "regfexport exercise/SYSTEM_sample.hive > /tmp/system_dump.txt",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "regfexport exercise/SYSTEM_sample.hive | grep -i \"ComputerName\"",
+        "module": "04-registry-analysis"
+      }
+    ],
+    "regfinfo": [
+      {
+        "cmd": "regfinfo -V",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "regfinfo exercise/SYSTEM_sample.hive",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "regfinfo /tmp/SYSTEM_recovered.hive",
+        "module": "04-registry-analysis"
+      }
+    ],
+    "rip.pl": [
+      {
+        "cmd": "rip.pl -h",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "rip.pl -r exercise/SYSTEM_sample.hive -p compname",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "rip.pl -h | head -n 3",
+        "module": "49-intrusion-timeline-case"
+      },
+      {
+        "cmd": "rip.pl -r NTUSER.DAT -p run",
+        "module": "49-intrusion-timeline-case"
+      },
+      {
+        "cmd": "rip.pl -r SYSTEM -p usbstor",
+        "module": "49-intrusion-timeline-case"
+      }
+    ],
+    "rizin": [
+      {
+        "cmd": "rizin -version",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "rizin -q -c \"iH; ie; iS\" exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "rizin -q -c \"ii\" exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "rizin -q -c \"iH; ie\" exercise\\sample_static.exe",
+        "module": "12-static-re"
+      },
+      {
+        "cmd": "rizin -q -c \"iI; ie; ii~printf\" .\\exercise\\sample.exe",
+        "module": "46-cutter-windows"
+      }
+    ],
+    "rsakeyfind": [
+      {
+        "cmd": "rsakeyfind 2>&1 | head -n 1",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "rsakeyfind sample.mem",
+        "module": "02-memory-forensics"
+      }
+    ],
+    "scalpel": [
+      {
+        "cmd": "scalpel -V",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "scalpel -c /etc/scalpel/scalpel.conf -o /tmp/scalpel_out exercise/sample.dd",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "scalpel -c /etc/scalpel/scalpel.conf -o /tmp/ak_scalpel exercise/sample.dd",
+        "module": "05-file-carving"
+      }
+    ],
+    "scdbg": [
+      {
+        "cmd": "scdbg prints usage/version when run with no args or /?.",
+        "module": "17-shellcode-analysis"
+      },
+      {
+        "cmd": "scdbg prints its usage/help banner",
+        "module": "31-shellcode-deep"
+      },
+      {
+        "cmd": "scdbg prints its usage/options banner when run with no valid input or /?.",
+        "module": "54-shellcode-case"
+      },
+      {
+        "cmd": "scdbg -f sc.bin -s -1",
+        "module": "61-emulation-analysis"
+      }
+    ],
+    "sha256sum": [
+      {
+        "cmd": "sha256sum /tmp/recovered.txt",
+        "module": "01-disk-forensics"
+      },
+      {
+        "cmd": "sha256sum exercise/SYSTEM_sample.hive",
+        "module": "04-registry-analysis"
+      },
+      {
+        "cmd": "sha256sum /tmp/ak_tcp/*.jpg",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "sha256sum exercise/sample.doc",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "sha256sum exercise/eicar_sample.txt",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "sha256sum exercise/scan.xml",
+        "module": "26-metasploit-workflow"
+      },
+      {
+        "cmd": "sha256sum exercise/sample.exe",
+        "module": "32-remnux-static-triage"
+      },
+      {
+        "cmd": "sha256sum firmware.bin",
+        "module": "33-binwalk-firmware"
+      },
+      {
+        "cmd": "sha256sum exercise/sample.txt",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "sha256sum sample_macro.doc",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "sha256sum sample_macro.doc # record the digest of your generated sample",
+        "module": "36-oletools-deep"
+      },
+      {
+        "cmd": "sha256sum exercise/sample.pdf",
+        "module": "37-pdf-analysis"
+      },
+      {
+        "cmd": "sha256sum exercise/beacon_client.sh",
+        "module": "38-network-emulation"
+      },
+      {
+        "cmd": "sha256sum target.c",
+        "module": "39-frida-tracing"
+      },
+      {
+        "cmd": "sha256sum exercise/hash.txt",
+        "module": "40-password-cracking"
+      },
+      {
+        "cmd": "sha256sum exercise/target.html",
+        "module": "41-web-app-testing"
+      },
+      {
+        "cmd": "sha256sum exercise/memory.raw",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "sha256sum exercise/resume_sample.pdf exercise/invoice_sample.doc",
+        "module": "48-phishing-doc-case"
+      },
+      {
+        "cmd": "sha256sum intrusion_bodyfile.txt",
+        "module": "49-intrusion-timeline-case"
+      },
+      {
+        "cmd": "sha256sum exercise/c2_hunt.pcap",
+        "module": "50-c2-network-hunt"
+      },
+      {
+        "cmd": "sha256sum triage_sample.raw",
+        "module": "51-linux-triage-workflow"
+      }
+    ],
+    "speakeasy": [
+      {
+        "cmd": "speakeasy --version",
+        "module": "61-emulation-analysis"
+      },
+      {
+        "cmd": "speakeasy -t sample.exe -o report.json --json",
+        "module": "61-emulation-analysis"
+      },
+      {
+        "cmd": "speakeasy -t sc.bin -r -a x86 -o sc_report.json --json",
+        "module": "61-emulation-analysis"
+      },
+      {
+        "cmd": "speakeasy -t sample.exe -o exercise_report.json --json",
+        "module": "61-emulation-analysis"
+      }
+    ],
+    "ssdeep": [
+      {
+        "cmd": "ssdeep -V",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "ssdeep exercise/sample.bin",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "ssdeep sample.exe > baseline.txt",
+        "module": "32-remnux-static-triage"
+      },
+      {
+        "cmd": "ssdeep -m baseline.txt sample_mod.exe",
+        "module": "32-remnux-static-triage"
+      },
+      {
+        "cmd": "ssdeep exercise/sample.exe > exercise/baseline.txt",
+        "module": "32-remnux-static-triage"
+      },
+      {
+        "cmd": "ssdeep -m exercise/baseline.txt exercise/sample_mod.exe",
+        "module": "32-remnux-static-triage"
+      }
+    ],
+    "tcpflow": [
+      {
+        "cmd": "tcpflow --version | head -n 1",
+        "module": "07-network-pcap"
+      }
+    ],
+    "tcpxtract": [
+      {
+        "cmd": "tcpxtract --version 2>&1 | head -n 1",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "tcpxtract -f exercise/sample.pcap -o /tmp/tcpxtract_out",
+        "module": "05-file-carving"
+      },
+      {
+        "cmd": "tcpxtract -f exercise/sample.pcap -o /tmp/ak_tcp",
+        "module": "05-file-carving"
+      }
+    ],
+    "testdisk": [
+      {
+        "cmd": "testdisk /version",
+        "module": "01-disk-forensics"
+      }
+    ],
+    "tshark": [
+      {
+        "cmd": "tshark --version | head -n 1",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -q -z io,phs | head -n 30",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y 'http.request' -T fields -e ip.dst -e http.host -e http.request.uri",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y 'dns.flags.response == 0' -T fields -e dns.qry.name | sort -u",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y 'http.request' -T fields -e http.host -e http.request.uri",
+        "module": "07-network-pcap"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -c 20",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y \"dns.flags.response == 0\" -T fields -e dns.qry.name",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y \"http.request\" -T fields -e http.host -e http.request.uri",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y \"tls.handshake.extensions_server_name\" -T fields -e tls.handshake.extensions_server_name",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y \"dns.flags.response == 0\" -T fields -e dns.qry.name | sort | uniq -c | sort -rn",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "tshark -r exercise/sample.pcap -Y \"http.request.method == \\\"GET\\\"\" -T fields -e http.host -e http.request.uri",
+        "module": "24-wireshark-deep"
+      },
+      {
+        "cmd": "tshark -r c2_hunt.pcap -q -z io,phs",
+        "module": "50-c2-network-hunt"
+      },
+      {
+        "cmd": "tshark -r exercise/c2_hunt.pcap -q -z conv,ip",
+        "module": "50-c2-network-hunt"
+      },
+      {
+        "cmd": "tshark -r exercise/c2_hunt.pcap -Y 'http.request' -T fields -e ip.dst -e http.host -e http.request.uri -e http.user_agent",
+        "module": "50-c2-network-hunt"
+      },
+      {
+        "cmd": "tshark -r exercise/c2_hunt.pcap --export-objects http,exercise/objects",
+        "module": "50-c2-network-hunt"
+      },
+      {
+        "cmd": "tshark -r exercise/c2_hunt.pcap -Y 'http.request' -T fields -e http.host -e http.request.uri",
+        "module": "50-c2-network-hunt"
+      }
+    ],
+    "upx": [
+      {
+        "cmd": "upx --best .\\exercise\\packed_hello.exe",
+        "module": "28-x64dbg-workflow"
+      },
+      {
+        "cmd": "upx -d .\\exercise\\packed_hello.exe -o .\\exercise\\unpacked_ref.exe",
+        "module": "28-x64dbg-workflow"
+      },
+      {
+        "cmd": "upx --best -o C:\\work\\pe-lab\\exercise\\packed_hello.exe C:\\work\\pe-lab\\exercise\\hello.exe",
+        "module": "43-pe-bear-deep"
+      },
+      {
+        "cmd": "upx --best .\\exercise\\sample_packed.exe",
+        "module": "52-unpacking-case"
+      }
+    ],
+    "vol": [
+      {
+        "cmd": "vol --help | head -n 3",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "vol -h | grep -i -E \"pslist|netscan|windows.info\" | head -n 10",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "vol -f $IMAGE windows.pslist | head -n 20",
+        "module": "02-memory-forensics"
+      },
+      {
+        "cmd": "vol --version",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.info",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.pslist",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.pstree",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.psscan",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.malfind",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.netscan",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.pstree | grep -i \"svch0st\"",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.psscan | grep -i \"svch0st\"",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol -f exercise/memdump.raw windows.netscan | grep -i \"svch0st\"",
+        "module": "20-volatility-deep"
+      },
+      {
+        "cmd": "vol --info | head -n 3",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.info",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.pslist | grep -i -E \"lock|crypt|ransom|encrypt|vssadmin|wmic|powershell|cmd\"",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.cmdline | grep -i -E \"vssadmin|wmic|shadowcopy|delete|/c|powershell.*-enc\"",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.netscan | grep -E \"ESTABLISHED|CLOSE_WAIT\" | grep -v \"127.0.0.1\"",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.malfind --dump",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.registry.hivelist",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f memory.raw windows.registry.printkey --key \"ControlSet001\\Services\\VSS\"",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "vol -f exercise/memory.raw windows.yarascan -Y \"HAVE BEEN ENCRYPTED\"",
+        "module": "47-ransomware-memory-case"
+      }
+    ],
+    "vshadowinfo": [
+      {
+        "cmd": "vshadowinfo -V",
+        "module": "06-windows-artifact-libs"
+      },
+      {
+        "cmd": "vshadowinfo exercise/volume.raw",
+        "module": "06-windows-artifact-libs"
+      }
+    ],
+    "xlmdeobfuscator": [
+      {
+        "cmd": "xlmdeobfuscator --help | head -n 1",
+        "module": "10-malicious-documents"
+      },
+      {
+        "cmd": "xlmdeobfuscator --file exercise/sample.xls",
+        "module": "10-malicious-documents"
+      }
+    ],
+    "xortool": [
+      {
+        "cmd": "xortool --version",
+        "module": "09-deobfuscation"
+      },
+      {
+        "cmd": "xortool -c 20 exercise/encoded_payload.bin",
+        "module": "09-deobfuscation"
+      }
+    ],
+    "yara": [
+      {
+        "cmd": "yara --version",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "yara -r exercise/triage.yar exercise/sample.bin",
+        "module": "08-malware-static-triage"
+      },
+      {
+        "cmd": "yara --help | head -n 20",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "yara -w /tmp/hunt_eicar.yar /tmp/hunt_eicar.yar",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "yara -r -s /tmp/hunt_eicar.yar /tmp",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "yara -r -s /tmp/hunt_eicar.yar exercise/",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "yara your_rule.yar exercise/eicar_sample.txt",
+        "module": "21-yara-authoring"
+      },
+      {
+        "cmd": "yara -s exercise/lab34.yar exercise/sample.txt",
+        "module": "34-clamav-scanning"
+      },
+      {
+        "cmd": "yara -s crypto.yar memory.raw",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "yara -s exercise/ransom.yar exercise/memory.raw",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "yara exercise/ransom.yar exercise/memory.raw",
+        "module": "47-ransomware-memory-case"
+      },
+      {
+        "cmd": "yara -r exercise/c2_beacon.yar exercise/objects/",
+        "module": "50-c2-network-hunt"
+      },
+      {
+        "cmd": "yara exercise/c2_beacon.yar exercise/c2_hunt.pcap",
+        "module": "50-c2-network-hunt"
+      }
+    ]
+  }
+}

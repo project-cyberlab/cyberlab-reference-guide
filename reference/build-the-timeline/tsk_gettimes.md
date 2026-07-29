@@ -1,0 +1,41 @@
+<!-- generated-by: scripts/generate_pages.py -->
+# tsk_gettimes
+
+**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Build a filesystem MAC-time timeline  **Version:** The Sleuth Kit ver 4.11.1
+**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tsk_gettimes.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
+
+## Purpose
+
+Analyze disk images and recover files from them.
+
+## Synopsis
+
+```
+tsk_gettimes [-vVm] [-i imgtype] [-b dev_sector_size] [-z zone] [-s seconds] image [image]
+```
+
+## Common invocations
+
+_TODO: up to 8 task-titled invocations._
+
+## Options
+
+All 7 options parsed from the captured help text. The final column is the judgement layer and is filled in by review.
+
+| Flag | Argument | What it does | When you would use it |
+|---|---|---|---|
+| `-i` | imgtype | The format of the image file (use '-i list' for supported types) | |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors | |
+| `-m` | — | Calculate MD5 hash in output (slow) | |
+| `-v` | — | verbose output to stderr | |
+| `-V` | — | Print version | |
+| `-z` | — | Time zone of original machine (i.e. EST5EDT or GMT) (only useful with -l) | |
+| `-s` | seconds | Time skew of original machine (in seconds) (only useful with -l & -m) | |
+
+## Gotchas
+
+_TODO: operational traps._
+
+## See also
+
+`fls`, `mactime`
