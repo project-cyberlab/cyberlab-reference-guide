@@ -1,0 +1,7868 @@
+{
+  "sources": {
+    "remnux_docs": "https://raw.githubusercontent.com/REMnux/docs/master/discover-the-tools",
+    "kali_control": "https://gitlab.com/kalilinux/packages/kali-meta/-/raw/kali/master/debian/control",
+    "flare_config": "https://raw.githubusercontent.com/mandiant/flare-vm/main/config.xml"
+  },
+  "kit": {
+    "REMnux": {
+      "Analyze Documents / Email Messages": [
+        {
+          "tool": "msg-extractor",
+          "purpose": "Extract emails and attachments from MSG files.",
+          "binaries": [
+            "extract_msg"
+          ],
+          "url": "https://github.com/TeamMsgExtractor/msg-extractor"
+        },
+        {
+          "tool": "msgconvert",
+          "purpose": "Convert MSG files to MBOX files.",
+          "binaries": [],
+          "url": "https://www.matijs.net/software/msgconv/"
+        },
+        {
+          "tool": "mail-parser",
+          "purpose": "Parse raw SMTP and .MSG email messages and generate a parsed object from them.",
+          "binaries": [],
+          "url": "https://github.com/SpamScope/mail-parser"
+        },
+        {
+          "tool": "emldump.py",
+          "purpose": "Parse and analyze EML files.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/11/29/update-emldump-py-version-0-0-11/"
+        }
+      ],
+      "Analyze Documents / General": [
+        {
+          "tool": "Tesseract OCR",
+          "purpose": "Examine images to identify and extract text using optical character recognition \\(OCR\\).",
+          "binaries": [
+            "tesseract"
+          ],
+          "url": "https://github.com/tesseract-ocr/tesseract"
+        },
+        {
+          "tool": "base64dump.py",
+          "purpose": "Locate and decode strings encoded in Base64 and other common encodings.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/07/03/update-base64dump-py-version-0-0-12/"
+        }
+      ],
+      "Analyze Documents / Microsoft Office": [
+        {
+          "tool": "SSView",
+          "purpose": "Analyze OLE2 Structured Storage files.",
+          "binaries": [
+            "ssview"
+          ],
+          "url": "https://www.mitec.cz/ssv.html"
+        },
+        {
+          "tool": "msoffcrypto-tool",
+          "purpose": "Decrypt a Microsoft Office file with password, intermediate key, or private key which generated its escrow key.",
+          "binaries": [],
+          "url": "https://github.com/nolze/msoffcrypto-tool"
+        },
+        {
+          "tool": "pcodedmp",
+          "purpose": "Disassemble VBA p-code.",
+          "binaries": [],
+          "url": "https://github.com/bontchev/pcodedmp"
+        },
+        {
+          "tool": "pcode2code",
+          "purpose": "Decompile VBA macro p-code from Microsoft Office documents.",
+          "binaries": [],
+          "url": "https://github.com/Big5-sec/pcode2code"
+        },
+        {
+          "tool": "oletools",
+          "purpose": "Microsoft Office OLE2 compound documents.",
+          "binaries": [
+            "mraptor",
+            "msodde",
+            "olebrowse",
+            "oledir",
+            "oleid",
+            "olemap",
+            "olemeta",
+            "oleobj",
+            "oletimes",
+            "olevba",
+            "pyxswf",
+            "rtfobj",
+            "ezhexviewer"
+          ],
+          "url": "https://www.decalage.info/python/oletools"
+        },
+        {
+          "tool": "EvilClippy",
+          "purpose": "Modify aspects of Microsoft Office documents.",
+          "binaries": [],
+          "url": "https://github.com/outflanknl/EvilClippy"
+        },
+        {
+          "tool": "XLMMacroDeobfuscator",
+          "purpose": "Deobfuscate XLM macros (also known as Excel 4.0 macros) from Microsoft Office files.",
+          "binaries": [
+            "xlmdeobfuscator",
+            "runxlrd2.py"
+          ],
+          "url": "https://github.com/DissectMalware/XLMMacroDeobfuscator"
+        },
+        {
+          "tool": "libolecf",
+          "purpose": "Microsoft Office OLE2 compound documents.",
+          "binaries": [
+            "olecfexport",
+            "olecfinfo",
+            "olecfmount",
+            "etc"
+          ],
+          "url": "https://github.com/libyal/libolecf"
+        },
+        {
+          "tool": "msoffice-crypt",
+          "purpose": "Encrypt and decrypt OOXML Microsoft Office documents.",
+          "binaries": [],
+          "url": "https://github.com/herumi/msoffice"
+        },
+        {
+          "tool": "Hachoir",
+          "purpose": "View, edit, and carve contents of various binary file types.",
+          "binaries": [
+            "hachoir-grep",
+            "hachoir-metadata",
+            "hachoir-strip",
+            "hachoir-wx"
+          ],
+          "url": "https://github.com/vstinner/hachoir"
+        },
+        {
+          "tool": "olefile",
+          "purpose": "Python package to parse, read and write MS OLE2 files.",
+          "binaries": [],
+          "url": "https://github.com/decalage2/olefile"
+        },
+        {
+          "tool": "msoffcrypto-crack.py",
+          "purpose": "Recover the password of an encrypted Microsoft Office document.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2018/12/31/new-tool-msoffcrypto-crack-py/"
+        },
+        {
+          "tool": "oledump.py",
+          "purpose": "Analyze OLE2 Structured Storage files.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/programs/oledump-py/"
+        },
+        {
+          "tool": "rtfdump.py",
+          "purpose": "Analyze a suspicious RTF file.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2018/12/10/update-rtfdump-py-version-0-0-9/"
+        },
+        {
+          "tool": "zipdump.py",
+          "purpose": "Analyze zip-compressed files.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/07/27/update-zipdump-py-version-0-0-20/"
+        },
+        {
+          "tool": "xmldump.py",
+          "purpose": "Extract contents of XML files, in particular OOXML-formatted Microsoft Office documents.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2017/12/18/new-tool-xmldump-py/"
+        },
+        {
+          "tool": "onedump.py",
+          "purpose": "Extract and analyze embedded files from OneNote documents.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2023/01/22/new-tool-onedump-py/"
+        }
+      ],
+      "Analyze Documents / Pdf": [
+        {
+          "tool": "pdftk-java",
+          "purpose": "Edit, create, and examine PDF files.",
+          "binaries": [
+            "pdftk"
+          ],
+          "url": "https://gitlab.com/pdftk-java/pdftk"
+        },
+        {
+          "tool": "pdfresurrect",
+          "purpose": "Extract previous versions of content from PDF files.",
+          "binaries": [],
+          "url": "https://github.com/enferex/pdfresurrect"
+        },
+        {
+          "tool": "qpdf",
+          "purpose": "Manipulate \\(merge, convert, transform\\) PDF files.",
+          "binaries": [],
+          "url": "http://qpdf.sourceforge.net/"
+        },
+        {
+          "tool": "peepdf-3",
+          "purpose": "Examine elements of the PDF file.",
+          "binaries": [],
+          "url": "https://github.com/digitalsleuth/peepdf-3"
+        },
+        {
+          "tool": "pdftool.py",
+          "purpose": "Analyze PDF files to identify incremental updates to the document.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/01/31/new-tool-pdftool-py/"
+        },
+        {
+          "tool": "pdfid.py",
+          "purpose": "Identify suspicious elements of the PDF file.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/programs/pdf-tools/"
+        },
+        {
+          "tool": "pdf-parser.py",
+          "purpose": "Examine elements of the PDF file.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/programs/pdf-tools/"
+        },
+        {
+          "tool": "Origamindee",
+          "purpose": "Parse, modify, generate PDF files.",
+          "binaries": [
+            "pdfcop",
+            "pdfdecompress",
+            "pdfdecrypt",
+            "pdfextract",
+            "etc"
+          ],
+          "url": "https://github.com/mindee/origamindee"
+        }
+      ],
+      "Dynamically Reverse-Engineer Code / Elf Files": [
+        {
+          "tool": "GNU Project Debugger",
+          "purpose": "Multi-language debugger.",
+          "binaries": [],
+          "url": "https://www.sourceware.org/gdb/"
+        },
+        {
+          "tool": "edb",
+          "purpose": "An AArch32/x86/x86-64 debugger, well suited for debugging ELF files.",
+          "binaries": [],
+          "url": "https://github.com/eteran/edb-debugger"
+        },
+        {
+          "tool": "ltrace",
+          "purpose": "Trace library calls and signals.",
+          "binaries": [],
+          "url": "https://ltrace.org"
+        },
+        {
+          "tool": "strace",
+          "purpose": "Trace process' system calls and signals.",
+          "binaries": [],
+          "url": "https://strace.io"
+        }
+      ],
+      "Dynamically Reverse-Engineer Code / General": [
+        {
+          "tool": "Frida",
+          "purpose": "Trace the execution of a process to analyze its behavior.",
+          "binaries": [
+            "frida",
+            "frida-ps",
+            "frida-trace",
+            "frida-discover",
+            "frida-ls-devices",
+            "frida-kill"
+          ],
+          "url": "https://frida.re"
+        },
+        {
+          "tool": "Wine",
+          "purpose": "Run Windows applications.",
+          "binaries": [
+            "wine"
+          ],
+          "url": "https://www.winehq.org"
+        },
+        {
+          "tool": "radare2",
+          "purpose": "Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.",
+          "binaries": [
+            "r2",
+            "rasm2",
+            "rabin2",
+            "rahash2",
+            "rafind2",
+            "r2ai",
+            "decai",
+            "pdg"
+          ],
+          "url": "https://www.radare.org/n/radare2.html"
+        },
+        {
+          "tool": "r2pipe",
+          "purpose": "Examine binary files, including disassembling and debugging.",
+          "binaries": [],
+          "url": "https://rada.re/n/r2pipe.html"
+        },
+        {
+          "tool": "x64dbg Automate MCP (OpenCode skills)",
+          "purpose": "Drive x64dbg on a remote Windows VM from OpenCode on REMnux, with eight AI commands for tracing, unpacking, state snapshots, decompiling, YARA scanning, and vulnerability hunting.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/x64dbg-skills-opencode"
+        }
+      ],
+      "Dynamically Reverse-Engineer Code / Scripts": [
+        {
+          "tool": "objects.js",
+          "purpose": "Emulate common browser and PDF viewer objects, methods, and properties when deobfuscating JavaScript.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/salt-states/blob/master/remnux/config/objects/objects.js"
+        },
+        {
+          "tool": "STPyV8",
+          "purpose": "Python3 and JavaScript interop engine, fork of the original PyV8 project.",
+          "binaries": [],
+          "url": "https://github.com/cloudflare/stpyv8"
+        },
+        {
+          "tool": "JStillery",
+          "purpose": "Deobfuscate JavaScript scripts using AST and Partial Evaluation techniques.",
+          "binaries": [
+            "jstillery"
+          ],
+          "url": "https://github.com/mindedsecurity/jstillery"
+        },
+        {
+          "tool": "box-js",
+          "purpose": "Analyze suspicious JavaScript scripts.",
+          "binaries": [
+            "box-js",
+            "box-export"
+          ],
+          "url": "https://github.com/CapacitorSet/box-js"
+        },
+        {
+          "tool": "SpiderMonkey",
+          "purpose": "Execute and deobfuscate JavaScript using Mozilla's standalone JavaScript engine.",
+          "binaries": [
+            "js"
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
+        },
+        {
+          "tool": "Rhino Debugger",
+          "purpose": "GUI JavaScript debugger.",
+          "binaries": [
+            "rhino-debugger"
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Debugger"
+        },
+        {
+          "tool": "PowerShell Core",
+          "purpose": "Run PowerShell scripts and commands.",
+          "binaries": [
+            "pwsh"
+          ],
+          "url": "https://github.com/powershell/powershell"
+        },
+        {
+          "tool": "SpiderMonkey (Patched)",
+          "purpose": "Execute and deobfuscate JavaScript using a patched version of Mozilla's standalone JavaScript engine.",
+          "binaries": [
+            "js-ascii",
+            "js-file"
+          ],
+          "url": "https://blog.didierstevens.com/2018/04/19/update-patched-spidermonkey/"
+        },
+        {
+          "tool": "JavaScript Deobfuscator",
+          "purpose": "Deobfuscate JavaScript by removing common obfuscation techniques such as string arrays and proxy functions.",
+          "binaries": [],
+          "url": "https://github.com/ben-sb/javascript-deobfuscator"
+        },
+        {
+          "tool": "Webcrack",
+          "purpose": "Deobfuscate, unminify, and unpack bundled JavaScript, including scripts protected with obfuscator.io.",
+          "binaries": [],
+          "url": "https://github.com/j4k0xb/webcrack"
+        },
+        {
+          "tool": "js_unshroud",
+          "purpose": "Monitor and deobfuscate JavaScript behavior in a headless browser to analyze malicious web pages.",
+          "binaries": [],
+          "url": "https://github.com/edygert/js_unshroud"
+        }
+      ],
+      "Dynamically Reverse-Engineer Code / Shellcode": [
+        {
+          "tool": "shcode2exe",
+          "purpose": "Convert 32 and 64-bit shellcode to a Windows executable file.",
+          "binaries": [],
+          "url": "https://github.com/accidentalrebel/shcode2exe"
+        },
+        {
+          "tool": "shellcode2exe.bat",
+          "purpose": "Convert 32 and 64-bit shellcode to a Windows executable file.",
+          "binaries": [],
+          "url": "https://github.com/repnz/shellcode2exe"
+        },
+        {
+          "tool": "scdbg",
+          "purpose": "Analyze shellcode by emulating its execution.",
+          "binaries": [],
+          "url": "http://sandsprite.com/blogs/index.php?uid=7\\&pid=152"
+        },
+        {
+          "tool": "runsc",
+          "purpose": "Run shellcode to trace and analyze its execution.",
+          "binaries": [],
+          "url": "https://github.com/edygert/runsc"
+        },
+        {
+          "tool": "Speakeasy",
+          "purpose": "Emulate code execution, including shellcode, Windows drivers, and Windows PE files.",
+          "binaries": [],
+          "url": "https://github.com/mandiant/speakeasy"
+        },
+        {
+          "tool": "Qiling",
+          "purpose": "Emulate code execution of PE files, shellcode, etc. for a variety of OS and hardware platforms.",
+          "binaries": [],
+          "url": "https://www.qiling.io"
+        },
+        {
+          "tool": "libemu",
+          "purpose": "A library for x86 code emulation and shellcode detection.",
+          "binaries": [],
+          "url": "https://github.com/buffer/libemu"
+        },
+        {
+          "tool": "XORSearch",
+          "purpose": "Locate and decode strings obfuscated using common techniques.",
+          "binaries": [
+            "xorsearch"
+          ],
+          "url": "https://blog.didierstevens.com/programs/xorsearch/"
+        }
+      ],
+      "Examine Static Properties / .Net": [
+        {
+          "tool": "dnfile",
+          "purpose": "Analyze static properties of .NET files.",
+          "binaries": [],
+          "url": "https://github.com/malwarefrank/dnfile"
+        },
+        {
+          "tool": "dotnetfile",
+          "purpose": "Analyze static properties of .NET files.",
+          "binaries": [],
+          "url": "https://github.com/pan-unit42/dotnetfile"
+        },
+        {
+          "tool": "monodis",
+          "purpose": "Disassemble and extract resources from .NET assemblies.",
+          "binaries": [],
+          "url": "https://www.mono-project.com/docs/tools+libraries/tools/monodis/"
+        }
+      ],
+      "Examine Static Properties / Deobfuscation": [
+        {
+          "tool": "CyberChef",
+          "purpose": "Decode and otherwise analyze data using this browser app.",
+          "binaries": [
+            "cyberchef"
+          ],
+          "url": "https://github.com/gchq/CyberChef/"
+        },
+        {
+          "tool": "Malchive",
+          "purpose": "Perform static analysis of various aspects of malicious code.",
+          "binaries": [],
+          "url": "https://github.com/MITRECND/malchive"
+        },
+        {
+          "tool": "Cobalt Strike Configuration Extractor (CSCE) and Parser <a href=\"#csce\" id=\"csce\"></a>",
+          "purpose": "Analyze Cobalt Strike beacons.",
+          "binaries": [
+            "csce",
+            "list-cs-settings"
+          ],
+          "url": "https://github.com/strozfriedberg/cobaltstrike-config-extractor"
+        },
+        {
+          "tool": "xortool",
+          "purpose": "Analyze XOR-encoded data.",
+          "binaries": [],
+          "url": "https://github.com/hellman/xortool"
+        },
+        {
+          "tool": "DC3-MWCP",
+          "purpose": "Parsing configuration information from malware.",
+          "binaries": [
+            "mwcp"
+          ],
+          "url": "https://github.com/Defense-Cyber-Crime-Center/DC3-mwcp"
+        },
+        {
+          "tool": "unicode",
+          "purpose": "Display Unicode character properties.",
+          "binaries": [],
+          "url": "https://github.com/garabik/unicode"
+        },
+        {
+          "tool": "Chepy",
+          "purpose": "Decode and otherwise analyze data using this command-line tool and Python library.",
+          "binaries": [
+            "chepy"
+          ],
+          "url": "https://github.com/securisec/chepy"
+        },
+        {
+          "tool": "Balbuzard",
+          "purpose": "Extract and deobfuscate patterns from suspicious files.",
+          "binaries": [
+            "balbuzard",
+            "bbcrack",
+            "bbharvest",
+            "bbtrans"
+          ],
+          "url": "https://github.com/digitalsleuth/balbuzard"
+        },
+        {
+          "tool": "NoMoreXOR.py",
+          "purpose": "Help guess a file's 256-byte XOR by using frequency analysis.",
+          "binaries": [],
+          "url": "https://github.com/digitalsleuth/NoMoreXOR"
+        },
+        {
+          "tool": "unXOR",
+          "purpose": "Deobfuscate XOR'ed files.",
+          "binaries": [],
+          "url": "https://github.com/tomchop/unxor/"
+        },
+        {
+          "tool": "brxor.py",
+          "purpose": "Bruteforce XOR'ed strings to find those that are English words.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/brxor.py"
+        },
+        {
+          "tool": "xorBruteForcer.py",
+          "purpose": "Bruteforce an XOR-encoded file.",
+          "binaries": [],
+          "url": "https://eternal-todo.com/category/bruteforcer"
+        },
+        {
+          "tool": "strdeob.pl",
+          "purpose": "Locate and decode stack strings in executable files.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/strdeob.pl"
+        },
+        {
+          "tool": "XORStrings",
+          "purpose": "Search for XOR encoded strings in a file.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2013/04/15/new-tool-xorstrings/"
+        },
+        {
+          "tool": "XORSearch",
+          "purpose": "Locate and decode strings obfuscated using common techniques.",
+          "binaries": [
+            "xorsearch"
+          ],
+          "url": "https://blog.didierstevens.com/programs/xorsearch/"
+        },
+        {
+          "tool": "FLOSS",
+          "purpose": "Extract and deobfuscate strings from PE executables.",
+          "binaries": [
+            "floss"
+          ],
+          "url": "https://github.com/mandiant/flare-floss"
+        },
+        {
+          "tool": "ex_pe_xor.py",
+          "purpose": "Search an XOR'ed file for indications of executable binaries.",
+          "binaries": [],
+          "url": "https://hooked-on-mnemonics.blogspot.com/2014/04/expexorpy.html"
+        },
+        {
+          "tool": "cs-decrypt-metadata.py",
+          "purpose": "Decrypt Cobalt Strike metadata.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/11/12/update-cs-decrypt-metadata-py-version-0-0-2/"
+        },
+        {
+          "tool": "base64dump.py",
+          "purpose": "Locate and decode strings encoded in Base64 and other common encodings.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/07/03/update-base64dump-py-version-0-0-12/"
+        },
+        {
+          "tool": "xor-kpa.py",
+          "purpose": "Implement a XOR known plaintext attack.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2017/06/06/update-xor-kpa-py-version-0-0-5/"
+        },
+        {
+          "tool": "cut-bytes.py",
+          "purpose": "Cut out a part of a data stream.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2015/10/14/cut-bytes-py/"
+        },
+        {
+          "tool": "format-bytes.py",
+          "purpose": "Decompose structured binary data with format strings.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/02/17/update-format-bytes-py-version-0-0-13/"
+        },
+        {
+          "tool": "translate.py",
+          "purpose": "Translate bytes according to a Python expression.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/programs/translate/"
+        },
+        {
+          "tool": "sets.py",
+          "purpose": "Perform set operations on lines or bytes in text files.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2017/03/05/new-tool-sets-py/"
+        },
+        {
+          "tool": "1768.py",
+          "purpose": "Analyze Cobalt Strike beacons.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/05/22/update-1768-py-version-0-0-6/"
+        },
+        {
+          "tool": "xorsearch.py",
+          "purpose": "Search for XOR, ROL, ROT, and SHIFT encoded strings with YARA and regex support.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/08/23/new-tool-xorsearch-py/"
+        },
+        {
+          "tool": "re-search.py",
+          "purpose": "Search files using regular expressions from a built-in library or custom patterns.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2023/04/03/update-re-search-py-version-0-0-22/"
+        },
+        {
+          "tool": "hex-to-bin.py",
+          "purpose": "Convert hexadecimal text dumps to binary data.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/04/19/update-hex-to-bin-py-version-0-0-5/"
+        },
+        {
+          "tool": "numbers-to-string.py",
+          "purpose": "Translate number sequences into ASCII characters.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/12/12/update-numbers-to-string-py-version-0-0-11/"
+        },
+        {
+          "tool": "cs-analyze-processdump.py",
+          "purpose": "Analyze Cobalt Strike beacon process dumps to detect sleep mask encoding.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/11/25/new-tool-cs-analyze-processdump-py/"
+        },
+        {
+          "tool": "cs-extract-key.py",
+          "purpose": "Extract AES and HMAC keys from Cobalt Strike beacon process memory.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/11/03/new-tool-cs-extract-key-py/"
+        }
+      ],
+      "Examine Static Properties / Elf Files": [
+        {
+          "tool": "pyelftools",
+          "purpose": "Python library for parsing and analyzing ELF files and DWARF debugging information.",
+          "binaries": [
+            "readelf.py"
+          ],
+          "url": "https://github.com/eliben/pyelftools"
+        }
+      ],
+      "Examine Static Properties / General": [
+        {
+          "tool": "TrID",
+          "purpose": "Identify file type using signatures.",
+          "binaries": [
+            "trid",
+            "tridupdate"
+          ],
+          "url": "https://mark0.net/soft-trid-e.html"
+        },
+        {
+          "tool": "Magika",
+          "purpose": "Identify file type using signatures.",
+          "binaries": [],
+          "url": "https://google.github.io/magika"
+        },
+        {
+          "tool": "Yara Rules",
+          "purpose": "Scan a file with YARA rules to identify capabilities and behaviors (packer detection, anti-debug, networking).",
+          "binaries": [],
+          "url": "https://github.com/Yara-Rules/rules"
+        },
+        {
+          "tool": "Detect-It-Easy",
+          "purpose": "Determine types of files and examine file properties.",
+          "binaries": [],
+          "url": "https://github.com/horsicq/Detect-It-Easy"
+        },
+        {
+          "tool": "ExifTool",
+          "purpose": "Tool to read from, write to, and edit EXIF metadata of various file types.",
+          "binaries": [
+            "exiftool"
+          ],
+          "url": "https://exiftool.org/"
+        },
+        {
+          "tool": "DroidLysis",
+          "purpose": "Perform static analysis of Android applications.",
+          "binaries": [
+            "droidlysis"
+          ],
+          "url": "https://github.com/cryptax/droidlysis"
+        },
+        {
+          "tool": "msitools <a href=\"#msitools\" id=\"msitools\"></a>",
+          "purpose": "Create, inspect and extract Windows Installer (.msi) files.",
+          "binaries": [],
+          "url": "https://wiki.gnome.org/msitools"
+        },
+        {
+          "tool": "numbers-to-string.py <a href=\"#numbers-to-string\" id=\"numbers-to-string\"></a>",
+          "purpose": "Convert decimal numbers to strings.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/12/12/update-numbers-to-string-py-version-0-0-11/"
+        },
+        {
+          "tool": "re-search.py",
+          "purpose": "Search the file for built-in regular expressions of common suspicious artifacts.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/05/23/update-re-search-py-version-0-0-17/"
+        },
+        {
+          "tool": "disitool",
+          "purpose": "Manipulate embedded digital signatures.",
+          "binaries": [
+            "disitool.py"
+          ],
+          "url": "https://blog.didierstevens.com/programs/disitool/"
+        },
+        {
+          "tool": "Name-That-Hash",
+          "purpose": "Identify dfferent types of hashes.",
+          "binaries": [
+            "nth"
+          ],
+          "url": "https://github.com/HashPals/Name-That-Hash"
+        },
+        {
+          "tool": "Hash ID",
+          "purpose": "Identify different types of hashes.",
+          "binaries": [
+            "hash-id.py"
+          ],
+          "url": "https://github.com/blackploit/hash-identifier"
+        },
+        {
+          "tool": "signsrch",
+          "purpose": "Find patterns of common encryption, compression, or encoding algorithms.",
+          "binaries": [],
+          "url": "http://aluigi.altervista.org/mytoolz.htm"
+        },
+        {
+          "tool": "ssdeep",
+          "purpose": "Compute Context Triggered Piecewise Hashes (CTPH), also known as fuzzy hashes.",
+          "binaries": [],
+          "url": "https://ssdeep-project.github.io/ssdeep/index.html"
+        },
+        {
+          "tool": "7-Zip",
+          "purpose": "Compress and decompress files using a variety of algorithms.",
+          "binaries": [
+            "7za"
+          ],
+          "url": "https://www.7-zip.org"
+        },
+        {
+          "tool": "wxHexEditor",
+          "purpose": "Hex editor.",
+          "binaries": [],
+          "url": "https://sourceforge.net/projects/wxhexeditor/"
+        },
+        {
+          "tool": "ClamAV",
+          "purpose": "Scan files for malware signatures.",
+          "binaries": [
+            "clamscan",
+            "freshclam"
+          ],
+          "url": "https://www.clamav.net"
+        },
+        {
+          "tool": "Hachoir",
+          "purpose": "View, edit, and carve contents of various binary file types.",
+          "binaries": [
+            "hachoir-grep",
+            "hachoir-metadata",
+            "hachoir-strip",
+            "hachoir-wx"
+          ],
+          "url": "https://github.com/vstinner/hachoir"
+        },
+        {
+          "tool": "Sleuth Kit",
+          "purpose": "Analyze disk images and recover files from them.",
+          "binaries": [],
+          "url": "https://www.sleuthkit.org/sleuthkit"
+        },
+        {
+          "tool": "binwalk",
+          "purpose": "Extract and analyze firmware images.",
+          "binaries": [],
+          "url": "https://github.com/ReFirmLabs/binwalk"
+        },
+        {
+          "tool": "file",
+          "purpose": "Identify file type using \"magic\" numbers.",
+          "binaries": [],
+          "url": "https://github.com/file/file"
+        },
+        {
+          "tool": "bulk_extractor",
+          "purpose": "Extract interesting strings from binary files.",
+          "binaries": [],
+          "url": "https://github.com/simsong/bulk_extractor/"
+        },
+        {
+          "tool": "thefuzz",
+          "purpose": "Fuzzy String Matching in Python.",
+          "binaries": [],
+          "url": "https://github.com/seatgeek/thefuzz"
+        },
+        {
+          "tool": "strings.py",
+          "purpose": "Extract ASCII and Unicode strings from binary files with length sorting and filtering.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/12/19/update-strings-py-version-0-0-6/"
+        },
+        {
+          "tool": "file-magic.py",
+          "purpose": "Identify file types using the Python magic module.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2018/07/11/new-tool-file-magic-py/"
+        },
+        {
+          "tool": "YARA-Forge Rules",
+          "purpose": "Scan files with curated YARA rules from 45+ sources for malware family identification.",
+          "binaries": [],
+          "url": "https://yarahq.github.io/"
+        },
+        {
+          "tool": "LIEF",
+          "purpose": "Parse and analyze PE, ELF, MachO, DEX, OAT, VDEX, ART, and DWARF executable formats.",
+          "binaries": [],
+          "url": "https://lief.re"
+        },
+        {
+          "tool": "Malcat Lite",
+          "purpose": "Analyze binary files using a hex editor, disassembler, and file dissector.",
+          "binaries": [],
+          "url": "https://malcat.fr"
+        }
+      ],
+      "Examine Static Properties / Go": [
+        {
+          "tool": "GoReSym",
+          "purpose": "Extract metadata and symbols from Go binaries, including stripped ones.",
+          "binaries": [
+            "GoReSym"
+          ],
+          "url": "https://github.com/mandiant/GoReSym"
+        },
+        {
+          "tool": "Redress",
+          "purpose": "Analyze stripped Go binaries to recover symbols, types, source structure, and integrate with Radare2.",
+          "binaries": [
+            "redress"
+          ],
+          "url": "https://github.com/goretk/redress"
+        }
+      ],
+      "Examine Static Properties / Pe Files": [
+        {
+          "tool": "Manalyze",
+          "purpose": "Perform static analysis of suspicious PE files.",
+          "binaries": [],
+          "url": "https://github.com/JusticeRage/Manalyze"
+        },
+        {
+          "tool": "PEframe",
+          "purpose": "Statically analyze PE and Microsoft Office files.",
+          "binaries": [
+            "peframe"
+          ],
+          "url": "https://github.com/digitalsleuth/peframe"
+        },
+        {
+          "tool": "dllcharacteristics.py",
+          "purpose": "Read and set DLL characteristics of a PE file.",
+          "binaries": [],
+          "url": "https://github.com/accidentalrebel/dllcharacteristics.py"
+        },
+        {
+          "tool": "pefile",
+          "purpose": "Python library for analyzing static properties of PE files.",
+          "binaries": [],
+          "url": "https://github.com/erocarrera/pefile"
+        },
+        {
+          "tool": "PE Tree",
+          "purpose": "Examine contents and structure of PE files.",
+          "binaries": [
+            "pe-tree"
+          ],
+          "url": "https://github.com/blackberry/pe_tree"
+        },
+        {
+          "tool": "pedump",
+          "purpose": "Statically analyze PE files and extract their components (e.g., resources).",
+          "binaries": [],
+          "url": "https://github.com/zed-0xff/pedump"
+        },
+        {
+          "tool": "pev",
+          "purpose": "Analyze PE files and extract strings from them.",
+          "binaries": [
+            "pestr",
+            "readpe",
+            "pedis",
+            "pehash",
+            "pescan",
+            "peldd",
+            "peres"
+          ],
+          "url": "https://github.com/mentebinaria/readpe"
+        },
+        {
+          "tool": "PortEx",
+          "purpose": "Statically analyze PE files.",
+          "binaries": [
+            "portex"
+          ],
+          "url": "https://github.com/katjahahn/PortEx"
+        },
+        {
+          "tool": "bearparser",
+          "purpose": "Parse PE file contents.",
+          "binaries": [
+            "bearcommander"
+          ],
+          "url": "https://github.com/hasherezade/bearparser/wiki"
+        },
+        {
+          "tool": "debloat",
+          "purpose": "Remove junk contents from bloated Windows executables.",
+          "binaries": [],
+          "url": "https://github.com/Squiblydoo/debloat"
+        },
+        {
+          "tool": "readpe (formerly pev)",
+          "purpose": "Analyze PE files and extract strings from them.",
+          "binaries": [
+            "readpe",
+            "pestr",
+            "pedis",
+            "pehash",
+            "pescan",
+            "pesec",
+            "peldd",
+            "pepack",
+            "peres",
+            "ofs2rva",
+            "rva2ofs"
+          ],
+          "url": "https://github.com/mentebinaria/readpe"
+        },
+        {
+          "tool": "pecheck.py",
+          "purpose": "Analyze static properties of PE files.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2020/03/15/pecheck-py-version-0-7-10/"
+        },
+        {
+          "tool": "disitool.py",
+          "purpose": "Extract, delete, copy, and inject digital signatures in PE files.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/programs/disitool/"
+        }
+      ],
+      "Explore Network Interactions / Connecting": [
+        {
+          "tool": "Unfurl",
+          "purpose": "Deconstruct and decode data from a URL.",
+          "binaries": [],
+          "url": "https://github.com/obsidianforensics/unfurl"
+        },
+        {
+          "tool": "thug",
+          "purpose": "Examine suspicious website using this low-interaction honeyclient.",
+          "binaries": [],
+          "url": "https://github.com/buffer/thug"
+        },
+        {
+          "tool": "netcat",
+          "purpose": "Read and write data across network connections.",
+          "binaries": [
+            "nc"
+          ],
+          "url": "https://nc110.sourceforge.io/"
+        },
+        {
+          "tool": "tor",
+          "purpose": "Obfuscate your origins by routing traffic through a network of anonymizing nodes.",
+          "binaries": [],
+          "url": "https://www.torproject.org"
+        },
+        {
+          "tool": "Anomy",
+          "purpose": "A wrapper around wget, ssh, sftp, ftp, and telnet to route these connections through Tor to anonymize your traffic.",
+          "binaries": [
+            "anomy"
+          ],
+          "url": "https://github.com/izm1chael/Anomy"
+        },
+        {
+          "tool": "EPIC IRC Client",
+          "purpose": "Examine IRC activities with this IRC client.",
+          "binaries": [
+            "epic5"
+          ],
+          "url": "https://www.epicsol.org/"
+        },
+        {
+          "tool": "GNU Wget",
+          "purpose": "Interact with servers via HTTP, HTTPS, FTP, and FTPS using this command-line tool.",
+          "binaries": [
+            "wget"
+          ],
+          "url": "https://www.gnu.org/software/wget/"
+        },
+        {
+          "tool": "cURL",
+          "purpose": "Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool.",
+          "binaries": [
+            "curl"
+          ],
+          "url": "https://curl.se"
+        },
+        {
+          "tool": "zbarimg",
+          "purpose": "Decode QR codes and barcodes from image files.",
+          "binaries": [
+            "zbarimg"
+          ],
+          "url": "https://github.com/mchehab/zbar"
+        }
+      ],
+      "Explore Network Interactions / Monitoring": [
+        {
+          "tool": "Burp Suite Community Edition",
+          "purpose": "Investigate website interactions using this web proxy.",
+          "binaries": [
+            "burpsuite"
+          ],
+          "url": "https://portswigger.net"
+        },
+        {
+          "tool": "Network Miner Free Edition",
+          "purpose": "Examine network traffic and carve PCAP capture files.",
+          "binaries": [
+            "networkminer"
+          ],
+          "url": "https://www.netresec.com/"
+        },
+        {
+          "tool": "PolarProxy",
+          "purpose": "Intercept and decrypt TLS traffic.",
+          "binaries": [
+            "polarproxy"
+          ],
+          "url": "https://www.netresec.com/"
+        },
+        {
+          "tool": "mitmproxy",
+          "purpose": "Investigate website interactions using this web proxy.",
+          "binaries": [
+            "mitmproxy",
+            "mitmdump",
+            "mitmweb"
+          ],
+          "url": "https://mitmproxy.org/"
+        },
+        {
+          "tool": "tshark",
+          "purpose": "Capture and analyze network traffic with this console-based sniffer.",
+          "binaries": [],
+          "url": "https://www.wireshark.org"
+        },
+        {
+          "tool": "wireshark",
+          "purpose": "Capture and analyze network traffic with this sniffer.",
+          "binaries": [],
+          "url": "https://www.wireshark.org"
+        },
+        {
+          "tool": "tcpdump",
+          "purpose": "Capture and analyze network traffic with this command-line sniffer.",
+          "binaries": [],
+          "url": "https://www.tcpdump.org/"
+        },
+        {
+          "tool": "ngrep",
+          "purpose": "Look for patterns in network traffic.",
+          "binaries": [],
+          "url": "https://github.com/jpr5/ngrep/"
+        },
+        {
+          "tool": "tcpxtract",
+          "purpose": "Extract files from network traffic.",
+          "binaries": [],
+          "url": "http://tcpxtract.sourceforge.net/"
+        },
+        {
+          "tool": "tcpflow",
+          "purpose": "Analyze the flow of network traffic.",
+          "binaries": [],
+          "url": "https://downloads.digitalcorpora.org/downloads/tcpflow/"
+        },
+        {
+          "tool": "tcpick",
+          "purpose": "Capture and analyze network traffic with this command-line sniffer.",
+          "binaries": [],
+          "url": "http://tcpick.sourceforge.net"
+        },
+        {
+          "tool": "cs-parse-traffic.py",
+          "purpose": "Decrypt and parse Cobalt Strike beacon network traffic.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/11/29/new-tool-cs-parse-traffic-py/"
+        },
+        {
+          "tool": "monitor-network",
+          "purpose": "Monitor traffic on the first active network interface using tshark, printing a live summary to the screen or saving it to a pcapng file.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/monitor-network"
+        }
+      ],
+      "Explore Network Interactions / Services": [
+        {
+          "tool": "fakedns",
+          "purpose": "Respond to DNS queries with the specified IP address.",
+          "binaries": [],
+          "url": "https://github.com/SocialExploits/fakedns/blob/main/fakedns.py"
+        },
+        {
+          "tool": "dnsresolver.py",
+          "purpose": "DNS resolver tool for dynamic analysis with wildcard and tracking support.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/07/15/new-tool-dnsresolver-py/"
+        },
+        {
+          "tool": "fakemail",
+          "purpose": "Intercept and examine SMTP email activity with this fake SMTP server.",
+          "binaries": [],
+          "url": "https://hg.sr.ht/\\~olly/fakemail"
+        },
+        {
+          "tool": "accept-all-ips",
+          "purpose": "Accept connections to all IPv4 and IPv6 addresses and redirect it to the corresponding local port.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/accept-all-ips"
+        },
+        {
+          "tool": "netcat",
+          "purpose": "Read and write data across network connections.",
+          "binaries": [
+            "nc"
+          ],
+          "url": "https://nc110.sourceforge.io/"
+        },
+        {
+          "tool": "Nginx",
+          "purpose": "Web server.",
+          "binaries": [],
+          "url": "https://nginx.org"
+        },
+        {
+          "tool": "inspircd 3",
+          "purpose": "Examine IRC activity with this IRC server.",
+          "binaries": [],
+          "url": "https://www.inspircd.org/"
+        },
+        {
+          "tool": "INetSim",
+          "purpose": "Emulate common network services and interact with malware.",
+          "binaries": [
+            "inetsim"
+          ],
+          "url": "https://www.inetsim.org/"
+        },
+        {
+          "tool": "FakeNet-NG",
+          "purpose": "Emulate common network services and interact with malware.",
+          "binaries": [],
+          "url": "https://github.com/mandiant/flare-fakenet-ng"
+        }
+      ],
+      "Gather And Analyze Data / General": [
+        {
+          "tool": "dissect",
+          "purpose": "Perform a variety of forensics and incident response tasks using this DFIR framework and toolset.",
+          "binaries": [],
+          "url": "https://github.com/fox-it/dissect"
+        },
+        {
+          "tool": "time-decode",
+          "purpose": "Decode and encode date and timestamps.",
+          "binaries": [],
+          "url": "https://github.com/digitalsleuth/time\\_decode"
+        },
+        {
+          "tool": "malwoverview",
+          "purpose": "Query public repositories of malware data (e.g., VirusTotal, HybridAnalysis).",
+          "binaries": [
+            "malwoverview"
+          ],
+          "url": "https://github.com/alexandreborges/malwoverview"
+        },
+        {
+          "tool": "ipwhois",
+          "purpose": "Retrieve and parse whois data for IP addresses.",
+          "binaries": [],
+          "url": "https://github.com/secynic/ipwhois"
+        },
+        {
+          "tool": "pdnstool",
+          "purpose": "Query passive DNS databases for DNS data.",
+          "binaries": [],
+          "url": "https://github.com/chrislee35/passivedns-client"
+        },
+        {
+          "tool": "DeXRAY",
+          "purpose": "Extract and decode data from antivirus quarantine files.",
+          "binaries": [
+            "dexray"
+          ],
+          "url": "https://www.hexacorn.com/blog/category/software-releases/dexray/"
+        },
+        {
+          "tool": "virustotal-submit",
+          "purpose": "Submit files to VirusTotal.",
+          "binaries": [
+            "virustotal-submit.py"
+          ],
+          "url": "https://blog.didierstevens.com/programs/virustotal-tools/"
+        },
+        {
+          "tool": "virustotal-search",
+          "purpose": "Search VirusTotal for file hashes.",
+          "binaries": [
+            "virustotal-search.py"
+          ],
+          "url": "https://blog.didierstevens.com/programs/virustotal-tools/"
+        },
+        {
+          "tool": "Scalpel",
+          "purpose": "Carve contents out of binary files, such as partitions.",
+          "binaries": [],
+          "url": "https://github.com/sleuthkit/scalpel"
+        },
+        {
+          "tool": "nsrllookup",
+          "purpose": "Look up MD5 file hashes in the NIST National Software Reference Library (NSRL).",
+          "binaries": [],
+          "url": "https://github.com/rjhansen/nsrllookup"
+        },
+        {
+          "tool": "Yara",
+          "purpose": "Identify and classify malware samples using Yara rules.",
+          "binaries": [
+            "yara"
+          ],
+          "url": "https://virustotal.github.io/yara/"
+        },
+        {
+          "tool": "ioc\\_parser",
+          "purpose": "Extract IOCs from security report PDFs.",
+          "binaries": [],
+          "url": "https://github.com/buffer/ioc\\_parser"
+        },
+        {
+          "tool": "dnslib",
+          "purpose": "Python library to encode/decode DNS wire-format packets.",
+          "binaries": [],
+          "url": "https://github.com/paulc/dnslib"
+        },
+        {
+          "tool": "YARA-X",
+          "purpose": "Scan files using YARA rules, the next generation of YARA written in Rust.",
+          "binaries": [],
+          "url": "https://github.com/VirusTotal/yara-x"
+        }
+      ],
+      "General Utilities / General": [
+        {
+          "tool": "REMnux Installer",
+          "purpose": "Install and update the REMnux distro.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/remnux-installer.sh"
+        },
+        {
+          "tool": "myip",
+          "purpose": "Determine the IP address of the default network interface.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/myip"
+        },
+        {
+          "tool": "texteditor.py",
+          "purpose": "Edit text files from the command line using search-and-replace commands.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2021/07/05/new-tool-texteditor-py/"
+        },
+        {
+          "tool": "sortcanon.py",
+          "purpose": "Sort text files using canonicalization functions built into this tool.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2022/06/18/new-tool-sortcanon-py/"
+        },
+        {
+          "tool": "OpenSSH",
+          "purpose": "Initiate and receive SSH and SFTP connections.",
+          "binaries": [
+            "sftp",
+            "ssh",
+            "etc"
+          ],
+          "url": "https://www.openssh.com"
+        },
+        {
+          "tool": "7-Zip",
+          "purpose": "Compress and decompress files using a variety of algorithms.",
+          "binaries": [
+            "7za"
+          ],
+          "url": "https://www.7-zip.org"
+        },
+        {
+          "tool": "Firefox",
+          "purpose": "Web browser.",
+          "binaries": [
+            "firefox"
+          ],
+          "url": "https://www.mozilla.org/firefox/"
+        },
+        {
+          "tool": "Info-ZIP",
+          "purpose": "Compress and decompress files using the zip algorithm.",
+          "binaries": [
+            "zip",
+            "unzip"
+          ],
+          "url": "http://infozip.sourceforge.net"
+        },
+        {
+          "tool": "cabextract",
+          "purpose": "Extract Microsoft cabinet (cab) files.",
+          "binaries": [],
+          "url": "https://www.cabextract.org.uk"
+        },
+        {
+          "tool": "nasm",
+          "purpose": "An x86-64 assembler.",
+          "binaries": [],
+          "url": "https://www.nasm.us"
+        },
+        {
+          "tool": "SQLite",
+          "purpose": "Manage and interact with SQL database files.",
+          "binaries": [
+            "sqlite3"
+          ],
+          "url": "http://www.sqlite.org"
+        },
+        {
+          "tool": "unrar-free",
+          "purpose": "Decompress files using a variety of algorithms.",
+          "binaries": [
+            "unrar"
+          ],
+          "url": "https://www.rarlab.com"
+        },
+        {
+          "tool": "RAR",
+          "purpose": "Compress and decompress files using a variety of algorithms.",
+          "binaries": [
+            "rar"
+          ],
+          "url": "https://www.rarlab.com"
+        },
+        {
+          "tool": "Docker",
+          "purpose": "Run and manage containers.",
+          "binaries": [],
+          "url": "https://www.docker.com"
+        },
+        {
+          "tool": "Nautilus",
+          "purpose": "Graphical file manager.",
+          "binaries": [],
+          "url": "https://gitlab.gnome.org/GNOME/nautilus"
+        },
+        {
+          "tool": "Wine",
+          "purpose": "Run Windows applications.",
+          "binaries": [
+            "wine"
+          ],
+          "url": "https://www.winehq.org"
+        },
+        {
+          "tool": "cURL",
+          "purpose": "Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool.",
+          "binaries": [
+            "curl"
+          ],
+          "url": "https://curl.se"
+        },
+        {
+          "tool": "IBus",
+          "purpose": "Adjust input methods for the GUI.",
+          "binaries": [
+            "ibus-setup"
+          ],
+          "url": "https://github.com/ibus/ibus"
+        },
+        {
+          "tool": "GNOME Calculator",
+          "purpose": "Calculator.",
+          "binaries": [
+            "galculator"
+          ],
+          "url": "https://wiki.gnome.org/Apps/Calculator"
+        },
+        {
+          "tool": "myjson-filter.py",
+          "purpose": "Filter data formatted using the JSON format used by Didier Stevens' tools.",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2022/04/09/new-tool-myjson-filter-py/"
+        },
+        {
+          "tool": "PowerShell Core",
+          "purpose": "Run PowerShell scripts and commands.",
+          "binaries": [
+            "pwsh"
+          ],
+          "url": "https://github.com/powershell/powershell"
+        },
+        {
+          "tool": "sshpass",
+          "purpose": "Supply a password to SSH non-interactively for automated logins.",
+          "binaries": [
+            "sshpass"
+          ],
+          "url": "https://sourceforge.net/projects/sshpass/"
+        },
+        {
+          "tool": "restrict-egress",
+          "purpose": "Restrict outbound network access to an allowlist of domains and CIDRs using an nftables default-deny egress policy. It installs a persistent, self-refreshing lockdown on a VM or host, or enforces a one-shot lockdown inside a container with the apply command.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/distro/blob/master/files/restrict-egress"
+        }
+      ],
+      "Investigate System Interactions / General": [
+        {
+          "tool": "ProcDOT",
+          "purpose": "Visualize and examine the output of Process Monitor.",
+          "binaries": [
+            "procdot"
+          ],
+          "url": "https://www.procdot.com"
+        },
+        {
+          "tool": "sandfly-processdecloak",
+          "purpose": "Find hidden processes on the local Linux system.",
+          "binaries": [],
+          "url": "https://github.com/sandflysecurity/sandfly-processdecloak"
+        },
+        {
+          "tool": "Unhide",
+          "purpose": "Find hidden processes or connections on the local Linux system.",
+          "binaries": [],
+          "url": "http://www.unhide-forensics.info"
+        },
+        {
+          "tool": "ProcmonMCP",
+          "purpose": "MCP server that lets AI assistants analyze Process Monitor (Procmon) XML captures.",
+          "binaries": [],
+          "url": "https://github.com/JameZUK/ProcmonMCP"
+        }
+      ],
+      "Perform Memory Forensics / General": [
+        {
+          "tool": "Volatility Framework",
+          "purpose": "Memory forensics tool and framework.",
+          "binaries": [],
+          "url": "https://github.com/volatilityfoundation/volatility3"
+        },
+        {
+          "tool": "AESKeyFinder",
+          "purpose": "Find 128-bit and 256-bit AES keys in a memory image.",
+          "binaries": [
+            "aeskeyfind"
+          ],
+          "url": "https://citp.princeton.edu/our-work/memory/"
+        },
+        {
+          "tool": "RSAKeyFinder",
+          "purpose": "Find BER-encoded RSA private keys in a memory image.",
+          "binaries": [
+            "rsakeyfind"
+          ],
+          "url": "https://citp.princeton.edu/our-work/memory/"
+        },
+        {
+          "tool": "bulk_extractor",
+          "purpose": "Extract interesting strings from binary files.",
+          "binaries": [],
+          "url": "https://github.com/simsong/bulk_extractor/"
+        }
+      ],
+      "Statically Analyze Code / .Net": [
+        {
+          "tool": "de4dot",
+          "purpose": "Deobfuscate and unpack .NET programs.",
+          "binaries": [],
+          "url": "https://github.com/0xd4d/de4dot"
+        },
+        {
+          "tool": "ILSpy",
+          "purpose": "Examine and decompile .NET programs.",
+          "binaries": [],
+          "url": "https://github.com/icsharpcode/ILSpy"
+        }
+      ],
+      "Statically Analyze Code / Android": [
+        {
+          "tool": "JADX",
+          "purpose": "Generate Java source code from Dalvik Executable (dex) and Android APK files.",
+          "binaries": [
+            "jadx",
+            "jadx-gui"
+          ],
+          "url": "https://github.com/skylot/jadx"
+        },
+        {
+          "tool": "apktool",
+          "purpose": "Reverse-engineer Android APK files.",
+          "binaries": [],
+          "url": "https://ibotpeaches.github.io/Apktool/"
+        },
+        {
+          "tool": "DroidLysis",
+          "purpose": "Perform static analysis of Android applications.",
+          "binaries": [
+            "droidlysis"
+          ],
+          "url": "https://github.com/cryptax/droidlysis"
+        },
+        {
+          "tool": "androguard",
+          "purpose": "Examine Android files.",
+          "binaries": [],
+          "url": "https://github.com/androguard/androguard"
+        },
+        {
+          "tool": "AndroidProjectCreator",
+          "purpose": "Convert an Android APK application file into an Android Studio project for easier analysis.",
+          "binaries": [],
+          "url": "https://maxkersten.nl/projects/androidprojectcreator"
+        },
+        {
+          "tool": "baksmali",
+          "purpose": "Disassembler for the dex format used by Dalvik, Android's Java VM implementation.",
+          "binaries": [],
+          "url": "https://bitbucket.org/JesusFreke/smali"
+        },
+        {
+          "tool": "dex2jar",
+          "purpose": "Examine Dalvik Executable (dex) files.",
+          "binaries": [
+            "dex-tools",
+            "d2j-dex2jar"
+          ],
+          "url": "https://github.com/pxb1988/dex2jar"
+        },
+        {
+          "tool": "APKiD",
+          "purpose": "Identify compilers, packers, and obfuscators used to protect Android APK and DEX files.",
+          "binaries": [
+            "apkid"
+          ],
+          "url": "https://github.com/rednaga/APKiD"
+        }
+      ],
+      "Statically Analyze Code / General": [
+        {
+          "tool": "Ghidra",
+          "purpose": "Software reverse engineering tool suite.",
+          "binaries": [],
+          "url": "https://ghidra-sre.org"
+        },
+        {
+          "tool": "Cutter",
+          "purpose": "Reverse engineering platform powered by Rizin.",
+          "binaries": [],
+          "url": "https://cutter.re"
+        },
+        {
+          "tool": "Detect-It-Easy <a id=\"detect-it-easy\"></a>",
+          "purpose": "Determine types of files and examine file properties.",
+          "binaries": [],
+          "url": "https://github.com/horsicq/Detect-It-Easy"
+        },
+        {
+          "tool": "Qiling",
+          "purpose": "Emulate code execution of PE files, shellcode, etc. for a variety of OS and hardware platforms.",
+          "binaries": [],
+          "url": "https://www.qiling.io"
+        },
+        {
+          "tool": "Vivisect",
+          "purpose": "Statically examine and emulate binary files.",
+          "binaries": [
+            "vivbin",
+            "vdbbin"
+          ],
+          "url": "https://github.com/vivisect/vivisect"
+        },
+        {
+          "tool": "objdump",
+          "purpose": "Disassemble binary files.",
+          "binaries": [],
+          "url": "https://en.wikipedia.org/wiki/Objdump"
+        },
+        {
+          "tool": "radare2",
+          "purpose": "Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.",
+          "binaries": [
+            "r2",
+            "rasm2",
+            "rabin2",
+            "rahash2",
+            "rafind2",
+            "r2ai",
+            "decai",
+            "pdg"
+          ],
+          "url": "https://www.radare.org/n/radare2.html"
+        }
+      ],
+      "Statically Analyze Code / Java": [
+        {
+          "tool": "cfr",
+          "purpose": "Java decompiler.",
+          "binaries": [],
+          "url": "https://www.benf.org/other/cfr/"
+        },
+        {
+          "tool": "JD-GUI Java Decompiler",
+          "purpose": "Java decompiler with GUI.",
+          "binaries": [
+            "jd-gui"
+          ],
+          "url": "https://java-decompiler.github.io/"
+        },
+        {
+          "tool": "Java IDX Parser",
+          "purpose": "Analyze Java IDX files.",
+          "binaries": [
+            "idx_parser.py"
+          ],
+          "url": "https://github.com/digitalsleuth/Java_IDX_Parser"
+        },
+        {
+          "tool": "Javassist",
+          "purpose": "Java bytecode engineering toolkit/library.",
+          "binaries": [],
+          "url": "https://www.javassist.org/"
+        },
+        {
+          "tool": "Procyon",
+          "purpose": "Java decompiler.",
+          "binaries": [
+            "procyon"
+          ],
+          "url": "https://github.com/mstrobel/procyon"
+        }
+      ],
+      "Statically Analyze Code / Pe-Files": [
+        {
+          "tool": "Malchive",
+          "purpose": "Perform static analysis of various aspects of malicious code.",
+          "binaries": [],
+          "url": "https://github.com/MITRECND/malchive"
+        },
+        {
+          "tool": "Speakeasy",
+          "purpose": "Emulate code execution, including shellcode, Windows drivers, and Windows PE files.",
+          "binaries": [],
+          "url": "https://github.com/mandiant/speakeasy"
+        },
+        {
+          "tool": "binee (Binary Emulation Environment)",
+          "purpose": "Analyze I/O operations of a suspicious PE file by emulating its execution.",
+          "binaries": [],
+          "url": "https://github.com/carbonblack/binee"
+        },
+        {
+          "tool": "mbcscan",
+          "purpose": "Scan a PE file to list the associated Malware Behavior Catalog (MBC) details.",
+          "binaries": [
+            "mbcscan.py"
+          ],
+          "url": "https://github.com/accidentalrebel/mbcscan"
+        },
+        {
+          "tool": "capa",
+          "purpose": "Detect suspicious capabilities in PE files.",
+          "binaries": [],
+          "url": "https://github.com/mandiant/capa"
+        }
+      ],
+      "Statically Analyze Code / Python": [
+        {
+          "tool": "PyInstaller Extractor",
+          "purpose": "Extract contents of a PyInstaller-generated PE files.",
+          "binaries": [
+            "pyinstxtractor.py"
+          ],
+          "url": "https://github.com/extremecoders-re/pyinstxtractor"
+        },
+        {
+          "tool": "Decompyle++",
+          "purpose": "Python bytecode disassembler and decompiler.",
+          "binaries": [
+            "pycdas",
+            "pycdc"
+          ],
+          "url": "https://github.com/zrax/pycdc"
+        },
+        {
+          "tool": "pyinstxtractor-ng",
+          "purpose": "Extract contents of PyInstaller-generated executables without requiring a matching Python version.",
+          "binaries": [
+            "pyinstxtractor-ng"
+          ],
+          "url": "https://github.com/pyinstxtractor/pyinstxtractor-ng"
+        },
+        {
+          "tool": "uncompyle6",
+          "purpose": "Python cross-version bytecode decompiler for Python 1.0 through 3.8.",
+          "binaries": [
+            "uncompyle6"
+          ],
+          "url": "https://github.com/rocky/python-uncompyle6"
+        }
+      ],
+      "Statically Analyze Code / Scripts": [
+        {
+          "tool": "JS Beautifier",
+          "purpose": "Reformat JavaScript scripts for easier analysis.",
+          "binaries": [
+            "js-beautify"
+          ],
+          "url": "https://beautifier.io/"
+        },
+        {
+          "tool": "decode-vbe.py",
+          "purpose": "Decode encoded VBS scripts (VBE).",
+          "binaries": [],
+          "url": "https://blog.didierstevens.com/2016/03/29/decoding-vbe/"
+        },
+        {
+          "tool": "AutoIt-Ripper",
+          "purpose": "Extract AutoIt scripts embedded in PE binaries.",
+          "binaries": [
+            "autoit-ripper"
+          ],
+          "url": "https://github.com/nazywam/AutoIt-Ripper"
+        },
+        {
+          "tool": "GootLoaderAutoJsDecode.py",
+          "purpose": "Statically deobfuscate GootLoader (GOOTLOADER) malicious JScript to recover the payload and extract C2 domains.",
+          "binaries": [],
+          "url": "https://github.com/mandiant/gootloader"
+        }
+      ],
+      "Statically Analyze Code / Unpacking": [
+        {
+          "tool": "TrID",
+          "purpose": "Identify file type using signatures.",
+          "binaries": [
+            "trid",
+            "tridupdate"
+          ],
+          "url": "https://mark0.net/soft-trid-e.html"
+        },
+        {
+          "tool": "Bytehist",
+          "purpose": "Generate byte-usage-histograms for all types of files with a focus on PE files.",
+          "binaries": [
+            "bytehist"
+          ],
+          "url": "https://www.cert.at/downloads/software/bytehist_en.html"
+        },
+        {
+          "tool": "ClamAV",
+          "purpose": "Scan files for malware signatures.",
+          "binaries": [
+            "clamscan",
+            "freshclam"
+          ],
+          "url": "https://www.clamav.net"
+        },
+        {
+          "tool": "binwalk",
+          "purpose": "Extract and analyze firmware images.",
+          "binaries": [],
+          "url": "https://github.com/ReFirmLabs/binwalk"
+        },
+        {
+          "tool": "UPX",
+          "purpose": "Pack and unpack PE files.",
+          "binaries": [
+            "upx"
+          ],
+          "url": "https://upx.github.io"
+        }
+      ],
+      "Use Artificial Intelligence / General": [
+        {
+          "tool": "OpenCode",
+          "purpose": "Open-source AI coding agent for the terminal.",
+          "binaries": [],
+          "url": "https://opencode.ai"
+        },
+        {
+          "tool": "REMnux MCP Server",
+          "purpose": "MCP server for using the REMnux malware analysis toolkit via AI assistants.",
+          "binaries": [
+            "remnux-mcp-server"
+          ],
+          "url": "https://github.com/REMnux/remnux-mcp-server"
+        },
+        {
+          "tool": "GhidrAssistMCP",
+          "purpose": "MCP server for AI-assisted reverse engineering in Ghidra.",
+          "binaries": [],
+          "url": "https://github.com/jtang613/GhidrAssistMCP"
+        },
+        {
+          "tool": "radare2",
+          "purpose": "Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.",
+          "binaries": [
+            "r2",
+            "rasm2",
+            "rabin2",
+            "rahash2",
+            "rafind2",
+            "r2ai",
+            "decai",
+            "pdg"
+          ],
+          "url": "https://www.radare.org/n/radare2.html"
+        },
+        {
+          "tool": "ProcmonMCP",
+          "purpose": "MCP server that lets AI assistants analyze Process Monitor (Procmon) XML captures.",
+          "binaries": [],
+          "url": "https://github.com/JameZUK/ProcmonMCP"
+        },
+        {
+          "tool": "x64dbg Automate MCP (OpenCode skills)",
+          "purpose": "Drive x64dbg on a remote Windows VM from OpenCode on REMnux, with eight AI commands for tracing, unpacking, state snapshots, decompiling, YARA scanning, and vulnerability hunting.",
+          "binaries": [],
+          "url": "https://github.com/REMnux/x64dbg-skills-opencode"
+        }
+      ],
+      "View Or Edit Files / General": [
+        {
+          "tool": "feh",
+          "purpose": "View images.",
+          "binaries": [],
+          "url": "https://feh.finalrewind.org"
+        },
+        {
+          "tool": "Evince",
+          "purpose": "View documents in a variety of formats, including PDF.",
+          "binaries": [
+            "evince"
+          ],
+          "url": "https://wiki.gnome.org/Apps/Evince"
+        },
+        {
+          "tool": "dos2unix",
+          "purpose": "Convert text files with Windows or macOS line breaks to Unix line breaks and vice versa.",
+          "binaries": [
+            "dos2unix",
+            "mac2unix",
+            "unix2dos",
+            "unix2mac"
+          ],
+          "url": "https://waterlan.home.xs4all.nl/dos2unix.html"
+        },
+        {
+          "tool": "VBinDiff",
+          "purpose": "Compare binary files.",
+          "binaries": [
+            "vbindiff"
+          ],
+          "url": "https://www.cjmweb.net/vbindiff/"
+        },
+        {
+          "tool": "wxHexEditor",
+          "purpose": "Hex editor.",
+          "binaries": [],
+          "url": "https://sourceforge.net/projects/wxhexeditor/"
+        },
+        {
+          "tool": "SciTE",
+          "purpose": "Edit text files.",
+          "binaries": [],
+          "url": "https://www.scintilla.org/SciTE.html"
+        },
+        {
+          "tool": "ImageMagick",
+          "purpose": "View and manipulate image and related files.",
+          "binaries": [
+            "display",
+            "convert",
+            "mogrify",
+            "etc"
+          ],
+          "url": "https://imagemagick.org/"
+        },
+        {
+          "tool": "Visual Studio Code",
+          "purpose": "Powerful source code editor.",
+          "binaries": [
+            "code"
+          ],
+          "url": "https://code.visualstudio.com/"
+        },
+        {
+          "tool": "Mermaid Viewer",
+          "purpose": "View Mermaid diagrams, such as AI-generated code-analysis workflow diagrams, in a local browser.",
+          "binaries": [],
+          "url": "https://mermaid.js.org/"
+        }
+      ]
+    },
+    "Kali Linux": {
+      "Information Gathering": [
+        {
+          "tool": "0trace",
+          "purpose": "",
+          "binaries": [
+            "0trace"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "arping",
+          "purpose": "",
+          "binaries": [
+            "arping"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "braa",
+          "purpose": "",
+          "binaries": [
+            "braa"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dmitry",
+          "purpose": "",
+          "binaries": [
+            "dmitry"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnsenum",
+          "purpose": "",
+          "binaries": [
+            "dnsenum"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnsmap",
+          "purpose": "",
+          "binaries": [
+            "dnsmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnsrecon",
+          "purpose": "",
+          "binaries": [
+            "dnsrecon"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnstracer",
+          "purpose": "",
+          "binaries": [
+            "dnstracer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnswalk",
+          "purpose": "",
+          "binaries": [
+            "dnswalk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "enum4linux",
+          "purpose": "",
+          "binaries": [
+            "enum4linux"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fierce",
+          "purpose": "",
+          "binaries": [
+            "fierce"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "firewalk",
+          "purpose": "",
+          "binaries": [
+            "firewalk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fping",
+          "purpose": "",
+          "binaries": [
+            "fping"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fragrouter",
+          "purpose": "",
+          "binaries": [
+            "fragrouter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ftester",
+          "purpose": "",
+          "binaries": [
+            "ftester"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hping3",
+          "purpose": "",
+          "binaries": [
+            "hping3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ike-scan",
+          "purpose": "",
+          "binaries": [
+            "ike-scan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "intrace",
+          "purpose": "",
+          "binaries": [
+            "intrace"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "irpas",
+          "purpose": "",
+          "binaries": [
+            "irpas"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lbd",
+          "purpose": "",
+          "binaries": [
+            "lbd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "legion",
+          "purpose": "",
+          "binaries": [
+            "legion"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "maltego",
+          "purpose": "",
+          "binaries": [
+            "maltego"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "masscan",
+          "purpose": "",
+          "binaries": [
+            "masscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "metagoofil",
+          "purpose": "",
+          "binaries": [
+            "metagoofil"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nbtscan",
+          "purpose": "",
+          "binaries": [
+            "nbtscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ncat",
+          "purpose": "",
+          "binaries": [
+            "ncat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netdiscover",
+          "purpose": "",
+          "binaries": [
+            "netdiscover"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netmask",
+          "purpose": "",
+          "binaries": [
+            "netmask"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nmap",
+          "purpose": "",
+          "binaries": [
+            "nmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "onesixtyone",
+          "purpose": "",
+          "binaries": [
+            "onesixtyone"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "p0f",
+          "purpose": "",
+          "binaries": [
+            "p0f"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "qsslcaudit",
+          "purpose": "",
+          "binaries": [
+            "qsslcaudit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "recon-ng",
+          "purpose": "",
+          "binaries": [
+            "recon-ng"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "smbmap",
+          "purpose": "",
+          "binaries": [
+            "smbmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "smtp-user-enum",
+          "purpose": "",
+          "binaries": [
+            "smtp-user-enum"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "snmpcheck",
+          "purpose": "",
+          "binaries": [
+            "snmpcheck"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ssldump",
+          "purpose": "",
+          "binaries": [
+            "ssldump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslh",
+          "purpose": "",
+          "binaries": [
+            "sslh"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslscan",
+          "purpose": "",
+          "binaries": [
+            "sslscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslyze",
+          "purpose": "",
+          "binaries": [
+            "sslyze"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "swaks",
+          "purpose": "",
+          "binaries": [
+            "swaks"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "thc-ipv6",
+          "purpose": "",
+          "binaries": [
+            "thc-ipv6"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "theharvester",
+          "purpose": "",
+          "binaries": [
+            "theharvester"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tlssled",
+          "purpose": "",
+          "binaries": [
+            "tlssled"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "twofi",
+          "purpose": "",
+          "binaries": [
+            "twofi"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unicornscan",
+          "purpose": "",
+          "binaries": [
+            "unicornscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "urlcrazy",
+          "purpose": "",
+          "binaries": [
+            "urlcrazy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wafw00f",
+          "purpose": "",
+          "binaries": [
+            "wafw00f"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "zenmap",
+          "purpose": "",
+          "binaries": [
+            "zenmap"
+          ],
+          "url": ""
+        }
+      ],
+      "Vulnerability": [
+        {
+          "tool": "afl++",
+          "purpose": "",
+          "binaries": [
+            "afl++"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bed",
+          "purpose": "",
+          "binaries": [
+            "bed"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cisco-auditing-tool",
+          "purpose": "",
+          "binaries": [
+            "cisco-auditing-tool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cisco-global-exploiter",
+          "purpose": "",
+          "binaries": [
+            "cisco-global-exploiter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cisco-ocs",
+          "purpose": "",
+          "binaries": [
+            "cisco-ocs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cisco-torch",
+          "purpose": "",
+          "binaries": [
+            "cisco-torch"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "copy-router-config",
+          "purpose": "",
+          "binaries": [
+            "copy-router-config"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dhcpig",
+          "purpose": "",
+          "binaries": [
+            "dhcpig"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "enumiax",
+          "purpose": "",
+          "binaries": [
+            "enumiax"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gvm",
+          "purpose": "",
+          "binaries": [
+            "gvm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "iaxflood",
+          "purpose": "",
+          "binaries": [
+            "iaxflood"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "inviteflood",
+          "purpose": "",
+          "binaries": [
+            "inviteflood"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "legion",
+          "purpose": "",
+          "binaries": [
+            "legion"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lynis",
+          "purpose": "",
+          "binaries": [
+            "lynis"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nikto",
+          "purpose": "",
+          "binaries": [
+            "nikto"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nmap",
+          "purpose": "",
+          "binaries": [
+            "nmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ohrwurm",
+          "purpose": "",
+          "binaries": [
+            "ohrwurm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "peass",
+          "purpose": "",
+          "binaries": [
+            "peass"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "protos-sip",
+          "purpose": "",
+          "binaries": [
+            "protos-sip"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rtpbreak",
+          "purpose": "",
+          "binaries": [
+            "rtpbreak"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rtpflood",
+          "purpose": "",
+          "binaries": [
+            "rtpflood"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rtpinsertsound",
+          "purpose": "",
+          "binaries": [
+            "rtpinsertsound"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rtpmixsound",
+          "purpose": "",
+          "binaries": [
+            "rtpmixsound"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sctpscan",
+          "purpose": "",
+          "binaries": [
+            "sctpscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sfuzz",
+          "purpose": "",
+          "binaries": [
+            "sfuzz"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "siege",
+          "purpose": "",
+          "binaries": [
+            "siege"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "siparmyknife",
+          "purpose": "",
+          "binaries": [
+            "siparmyknife"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sipp",
+          "purpose": "",
+          "binaries": [
+            "sipp"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sipsak",
+          "purpose": "",
+          "binaries": [
+            "sipsak"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sipvicious",
+          "purpose": "",
+          "binaries": [
+            "sipvicious"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "slowhttptest",
+          "purpose": "",
+          "binaries": [
+            "slowhttptest"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "spike",
+          "purpose": "",
+          "binaries": [
+            "spike"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "t50",
+          "purpose": "",
+          "binaries": [
+            "t50"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "thc-ssl-dos",
+          "purpose": "",
+          "binaries": [
+            "thc-ssl-dos"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unix-privesc-check",
+          "purpose": "",
+          "binaries": [
+            "unix-privesc-check"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "voiphopper",
+          "purpose": "",
+          "binaries": [
+            "voiphopper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "yersinia",
+          "purpose": "",
+          "binaries": [
+            "yersinia"
+          ],
+          "url": ""
+        }
+      ],
+      "Web": [
+        {
+          "tool": "apache-users",
+          "purpose": "",
+          "binaries": [
+            "apache-users"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "apache2",
+          "purpose": "",
+          "binaries": [
+            "apache2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "beef-xss",
+          "purpose": "",
+          "binaries": [
+            "beef-xss"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "burpsuite",
+          "purpose": "",
+          "binaries": [
+            "burpsuite"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cadaver",
+          "purpose": "",
+          "binaries": [
+            "cadaver"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "commix",
+          "purpose": "",
+          "binaries": [
+            "commix"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cutycapt",
+          "purpose": "",
+          "binaries": [
+            "cutycapt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "davtest",
+          "purpose": "",
+          "binaries": [
+            "davtest"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "default-mysql-server",
+          "purpose": "",
+          "binaries": [
+            "default-mysql-server"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dirb",
+          "purpose": "",
+          "binaries": [
+            "dirb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dirbuster",
+          "purpose": "",
+          "binaries": [
+            "dirbuster"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dotdotpwn",
+          "purpose": "",
+          "binaries": [
+            "dotdotpwn"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "eyewitness",
+          "purpose": "",
+          "binaries": [
+            "eyewitness"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ferret-sidejack",
+          "purpose": "",
+          "binaries": [
+            "ferret-sidejack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ftester",
+          "purpose": "",
+          "binaries": [
+            "ftester"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hakrawler",
+          "purpose": "",
+          "binaries": [
+            "hakrawler"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hamster-sidejack",
+          "purpose": "",
+          "binaries": [
+            "hamster-sidejack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "heartleech",
+          "purpose": "",
+          "binaries": [
+            "heartleech"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "httprint",
+          "purpose": "",
+          "binaries": [
+            "httprint"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "httrack",
+          "purpose": "",
+          "binaries": [
+            "httrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hydra",
+          "purpose": "",
+          "binaries": [
+            "hydra"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hydra-gtk",
+          "purpose": "",
+          "binaries": [
+            "hydra-gtk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "jboss-autopwn",
+          "purpose": "",
+          "binaries": [
+            "jboss-autopwn"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "joomscan",
+          "purpose": "",
+          "binaries": [
+            "joomscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "jsql-injection",
+          "purpose": "",
+          "binaries": [
+            "jsql-injection"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "laudanum",
+          "purpose": "",
+          "binaries": [
+            "laudanum"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lbd",
+          "purpose": "",
+          "binaries": [
+            "lbd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "maltego",
+          "purpose": "",
+          "binaries": [
+            "maltego"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "medusa",
+          "purpose": "",
+          "binaries": [
+            "medusa"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mitmproxy",
+          "purpose": "",
+          "binaries": [
+            "mitmproxy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ncrack",
+          "purpose": "",
+          "binaries": [
+            "ncrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nikto",
+          "purpose": "",
+          "binaries": [
+            "nikto"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nishang",
+          "purpose": "",
+          "binaries": [
+            "nishang"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nmap",
+          "purpose": "",
+          "binaries": [
+            "nmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "oscanner",
+          "purpose": "",
+          "binaries": [
+            "oscanner"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "owasp-mantra-ff",
+          "purpose": "",
+          "binaries": [
+            "owasp-mantra-ff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "padbuster",
+          "purpose": "",
+          "binaries": [
+            "padbuster"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "paros",
+          "purpose": "",
+          "binaries": [
+            "paros"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "patator",
+          "purpose": "",
+          "binaries": [
+            "patator"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "php",
+          "purpose": "",
+          "binaries": [
+            "php"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "php-mysql",
+          "purpose": "",
+          "binaries": [
+            "php-mysql"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "proxychains4",
+          "purpose": "",
+          "binaries": [
+            "proxychains4"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "proxytunnel",
+          "purpose": "",
+          "binaries": [
+            "proxytunnel"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "qsslcaudit",
+          "purpose": "",
+          "binaries": [
+            "qsslcaudit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "redsocks",
+          "purpose": "",
+          "binaries": [
+            "redsocks"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sidguesser",
+          "purpose": "",
+          "binaries": [
+            "sidguesser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "siege",
+          "purpose": "",
+          "binaries": [
+            "siege"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "skipfish",
+          "purpose": "",
+          "binaries": [
+            "skipfish"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "slowhttptest",
+          "purpose": "",
+          "binaries": [
+            "slowhttptest"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqldict",
+          "purpose": "",
+          "binaries": [
+            "sqldict"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlitebrowser",
+          "purpose": "",
+          "binaries": [
+            "sqlitebrowser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlmap",
+          "purpose": "",
+          "binaries": [
+            "sqlmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlninja",
+          "purpose": "",
+          "binaries": [
+            "sqlninja"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlsus",
+          "purpose": "",
+          "binaries": [
+            "sqlsus"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ssldump",
+          "purpose": "",
+          "binaries": [
+            "ssldump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslh",
+          "purpose": "",
+          "binaries": [
+            "sslh"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslscan",
+          "purpose": "",
+          "binaries": [
+            "sslscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslsniff",
+          "purpose": "",
+          "binaries": [
+            "sslsniff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslsplit",
+          "purpose": "",
+          "binaries": [
+            "sslsplit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslyze",
+          "purpose": "",
+          "binaries": [
+            "sslyze"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "stunnel4",
+          "purpose": "",
+          "binaries": [
+            "stunnel4"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "thc-ssl-dos",
+          "purpose": "",
+          "binaries": [
+            "thc-ssl-dos"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tlssled",
+          "purpose": "",
+          "binaries": [
+            "tlssled"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tnscmd10g",
+          "purpose": "",
+          "binaries": [
+            "tnscmd10g"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "uniscan",
+          "purpose": "",
+          "binaries": [
+            "uniscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wafw00f",
+          "purpose": "",
+          "binaries": [
+            "wafw00f"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wapiti",
+          "purpose": "",
+          "binaries": [
+            "wapiti"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "watobo",
+          "purpose": "",
+          "binaries": [
+            "watobo"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "webacoo",
+          "purpose": "",
+          "binaries": [
+            "webacoo"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "webscarab",
+          "purpose": "",
+          "binaries": [
+            "webscarab"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "webshells",
+          "purpose": "",
+          "binaries": [
+            "webshells"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "weevely",
+          "purpose": "",
+          "binaries": [
+            "weevely"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wfuzz",
+          "purpose": "",
+          "binaries": [
+            "wfuzz"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "whatweb",
+          "purpose": "",
+          "binaries": [
+            "whatweb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wireshark",
+          "purpose": "",
+          "binaries": [
+            "wireshark"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wpscan",
+          "purpose": "",
+          "binaries": [
+            "wpscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "xsser",
+          "purpose": "",
+          "binaries": [
+            "xsser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "zaproxy",
+          "purpose": "",
+          "binaries": [
+            "zaproxy"
+          ],
+          "url": ""
+        }
+      ],
+      "Database": [
+        {
+          "tool": "jsql-injection",
+          "purpose": "",
+          "binaries": [
+            "jsql-injection"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mdbtools",
+          "purpose": "",
+          "binaries": [
+            "mdbtools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "oscanner",
+          "purpose": "",
+          "binaries": [
+            "oscanner"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sidguesser",
+          "purpose": "",
+          "binaries": [
+            "sidguesser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqldict",
+          "purpose": "",
+          "binaries": [
+            "sqldict"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlitebrowser",
+          "purpose": "",
+          "binaries": [
+            "sqlitebrowser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlmap",
+          "purpose": "",
+          "binaries": [
+            "sqlmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlninja",
+          "purpose": "",
+          "binaries": [
+            "sqlninja"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlsus",
+          "purpose": "",
+          "binaries": [
+            "sqlsus"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tnscmd10g",
+          "purpose": "",
+          "binaries": [
+            "tnscmd10g"
+          ],
+          "url": ""
+        }
+      ],
+      "Passwords": [
+        {
+          "tool": "cewl",
+          "purpose": "",
+          "binaries": [
+            "cewl"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "chntpw",
+          "purpose": "",
+          "binaries": [
+            "chntpw"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cisco-auditing-tool",
+          "purpose": "",
+          "binaries": [
+            "cisco-auditing-tool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cmospwd",
+          "purpose": "",
+          "binaries": [
+            "cmospwd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "crackle",
+          "purpose": "",
+          "binaries": [
+            "crackle"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "creddump7",
+          "purpose": "",
+          "binaries": [
+            "creddump7"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "crunch",
+          "purpose": "",
+          "binaries": [
+            "crunch"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fcrackzip",
+          "purpose": "",
+          "binaries": [
+            "fcrackzip"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "freerdp3-x11",
+          "purpose": "",
+          "binaries": [
+            "freerdp3-x11"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gpp-decrypt",
+          "purpose": "",
+          "binaries": [
+            "gpp-decrypt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hash-identifier",
+          "purpose": "",
+          "binaries": [
+            "hash-identifier"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hashcat",
+          "purpose": "",
+          "binaries": [
+            "hashcat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hashcat-utils",
+          "purpose": "",
+          "binaries": [
+            "hashcat-utils"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hashid",
+          "purpose": "",
+          "binaries": [
+            "hashid"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hydra",
+          "purpose": "",
+          "binaries": [
+            "hydra"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hydra-gtk",
+          "purpose": "",
+          "binaries": [
+            "hydra-gtk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "john",
+          "purpose": "",
+          "binaries": [
+            "john"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "johnny",
+          "purpose": "",
+          "binaries": [
+            "johnny"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "maskprocessor",
+          "purpose": "",
+          "binaries": [
+            "maskprocessor"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "medusa",
+          "purpose": "",
+          "binaries": [
+            "medusa"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mimikatz",
+          "purpose": "",
+          "binaries": [
+            "mimikatz"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ncrack",
+          "purpose": "",
+          "binaries": [
+            "ncrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "onesixtyone",
+          "purpose": "",
+          "binaries": [
+            "onesixtyone"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ophcrack",
+          "purpose": "",
+          "binaries": [
+            "ophcrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ophcrack-cli",
+          "purpose": "",
+          "binaries": [
+            "ophcrack-cli"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pack",
+          "purpose": "",
+          "binaries": [
+            "pack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pack2",
+          "purpose": "",
+          "binaries": [
+            "pack2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "passing-the-hash",
+          "purpose": "",
+          "binaries": [
+            "passing-the-hash"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "patator",
+          "purpose": "",
+          "binaries": [
+            "patator"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pdfcrack",
+          "purpose": "",
+          "binaries": [
+            "pdfcrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pipal",
+          "purpose": "",
+          "binaries": [
+            "pipal"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "polenum",
+          "purpose": "",
+          "binaries": [
+            "polenum"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rainbowcrack",
+          "purpose": "",
+          "binaries": [
+            "rainbowcrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rarcrack",
+          "purpose": "",
+          "binaries": [
+            "rarcrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rcracki-mt",
+          "purpose": "",
+          "binaries": [
+            "rcracki-mt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rsmangler",
+          "purpose": "",
+          "binaries": [
+            "rsmangler"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "samdump2",
+          "purpose": "",
+          "binaries": [
+            "samdump2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "seclists",
+          "purpose": "",
+          "binaries": [
+            "seclists"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sipcrack",
+          "purpose": "",
+          "binaries": [
+            "sipcrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sipvicious",
+          "purpose": "",
+          "binaries": [
+            "sipvicious"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "smbmap",
+          "purpose": "",
+          "binaries": [
+            "smbmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqldict",
+          "purpose": "",
+          "binaries": [
+            "sqldict"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "statsprocessor",
+          "purpose": "",
+          "binaries": [
+            "statsprocessor"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sucrack",
+          "purpose": "",
+          "binaries": [
+            "sucrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "thc-pptp-bruter",
+          "purpose": "",
+          "binaries": [
+            "thc-pptp-bruter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "truecrack",
+          "purpose": "",
+          "binaries": [
+            "truecrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "twofi",
+          "purpose": "",
+          "binaries": [
+            "twofi"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wordlists",
+          "purpose": "",
+          "binaries": [
+            "wordlists"
+          ],
+          "url": ""
+        }
+      ],
+      "Reverse Engineering": [
+        {
+          "tool": "apktool",
+          "purpose": "",
+          "binaries": [
+            "apktool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bytecode-viewer",
+          "purpose": "",
+          "binaries": [
+            "bytecode-viewer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "clang",
+          "purpose": "",
+          "binaries": [
+            "clang"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dex2jar",
+          "purpose": "",
+          "binaries": [
+            "dex2jar"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "edb-debugger",
+          "purpose": "",
+          "binaries": [
+            "edb-debugger"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "jadx",
+          "purpose": "",
+          "binaries": [
+            "jadx"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "javasnoop",
+          "purpose": "",
+          "binaries": [
+            "javasnoop"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "jd-gui",
+          "purpose": "",
+          "binaries": [
+            "jd-gui"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "metasploit-framework",
+          "purpose": "",
+          "binaries": [
+            "metasploit-framework"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ollydbg",
+          "purpose": "",
+          "binaries": [
+            "ollydbg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "radare2",
+          "purpose": "",
+          "binaries": [
+            "radare2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "recstudio",
+          "purpose": "",
+          "binaries": [
+            "recstudio"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rizin",
+          "purpose": "",
+          "binaries": [
+            "rizin"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rizin-cutter",
+          "purpose": "",
+          "binaries": [
+            "rizin-cutter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rz-ghidra",
+          "purpose": "",
+          "binaries": [
+            "rz-ghidra"
+          ],
+          "url": ""
+        }
+      ],
+      "Exploitation": [
+        {
+          "tool": "armitage",
+          "purpose": "",
+          "binaries": [
+            "armitage"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "beef-xss",
+          "purpose": "",
+          "binaries": [
+            "beef-xss"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exploitdb",
+          "purpose": "",
+          "binaries": [
+            "exploitdb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "metasploit-framework",
+          "purpose": "",
+          "binaries": [
+            "metasploit-framework"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "msfpc",
+          "purpose": "",
+          "binaries": [
+            "msfpc"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "set",
+          "purpose": "",
+          "binaries": [
+            "set"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "shellnoob",
+          "purpose": "",
+          "binaries": [
+            "shellnoob"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlmap",
+          "purpose": "",
+          "binaries": [
+            "sqlmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "termineter",
+          "purpose": "",
+          "binaries": [
+            "termineter"
+          ],
+          "url": ""
+        }
+      ],
+      "Sniffing Spoofing": [
+        {
+          "tool": "above",
+          "purpose": "",
+          "binaries": [
+            "above"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bettercap",
+          "purpose": "",
+          "binaries": [
+            "bettercap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "darkstat",
+          "purpose": "",
+          "binaries": [
+            "darkstat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnschef",
+          "purpose": "",
+          "binaries": [
+            "dnschef"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "driftnet",
+          "purpose": "",
+          "binaries": [
+            "driftnet"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dsniff",
+          "purpose": "",
+          "binaries": [
+            "dsniff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ettercap-graphical",
+          "purpose": "",
+          "binaries": [
+            "ettercap-graphical"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ferret-sidejack",
+          "purpose": "",
+          "binaries": [
+            "ferret-sidejack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fiked",
+          "purpose": "",
+          "binaries": [
+            "fiked"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hamster-sidejack",
+          "purpose": "",
+          "binaries": [
+            "hamster-sidejack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hexinject",
+          "purpose": "",
+          "binaries": [
+            "hexinject"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "isr-evilgrade",
+          "purpose": "",
+          "binaries": [
+            "isr-evilgrade"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "macchanger",
+          "purpose": "",
+          "binaries": [
+            "macchanger"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mitmproxy",
+          "purpose": "",
+          "binaries": [
+            "mitmproxy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netsniff-ng",
+          "purpose": "",
+          "binaries": [
+            "netsniff-ng"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rebind",
+          "purpose": "",
+          "binaries": [
+            "rebind"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "responder",
+          "purpose": "",
+          "binaries": [
+            "responder"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sniffjoke",
+          "purpose": "",
+          "binaries": [
+            "sniffjoke"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslsniff",
+          "purpose": "",
+          "binaries": [
+            "sslsniff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslsplit",
+          "purpose": "",
+          "binaries": [
+            "sslsplit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpflow",
+          "purpose": "",
+          "binaries": [
+            "tcpflow"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpreplay",
+          "purpose": "",
+          "binaries": [
+            "tcpreplay"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wifi-honey",
+          "purpose": "",
+          "binaries": [
+            "wifi-honey"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wireshark",
+          "purpose": "",
+          "binaries": [
+            "wireshark"
+          ],
+          "url": ""
+        }
+      ],
+      "Post Exploitation": [
+        {
+          "tool": "cymothoa",
+          "purpose": "",
+          "binaries": [
+            "cymothoa"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dbd",
+          "purpose": "",
+          "binaries": [
+            "dbd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dns2tcp",
+          "purpose": "",
+          "binaries": [
+            "dns2tcp"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exe2hexbat",
+          "purpose": "",
+          "binaries": [
+            "exe2hexbat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "iodine",
+          "purpose": "",
+          "binaries": [
+            "iodine"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "laudanum",
+          "purpose": "",
+          "binaries": [
+            "laudanum"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mimikatz",
+          "purpose": "",
+          "binaries": [
+            "mimikatz"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "miredo",
+          "purpose": "",
+          "binaries": [
+            "miredo"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nishang",
+          "purpose": "",
+          "binaries": [
+            "nishang"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "powersploit",
+          "purpose": "",
+          "binaries": [
+            "powersploit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "proxychains4",
+          "purpose": "",
+          "binaries": [
+            "proxychains4"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "proxytunnel",
+          "purpose": "",
+          "binaries": [
+            "proxytunnel"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ptunnel",
+          "purpose": "",
+          "binaries": [
+            "ptunnel"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pwnat",
+          "purpose": "",
+          "binaries": [
+            "pwnat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sbd",
+          "purpose": "",
+          "binaries": [
+            "sbd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "shellter",
+          "purpose": "",
+          "binaries": [
+            "shellter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslh",
+          "purpose": "",
+          "binaries": [
+            "sslh"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "stunnel4",
+          "purpose": "",
+          "binaries": [
+            "stunnel4"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "udptunnel",
+          "purpose": "",
+          "binaries": [
+            "udptunnel"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "veil",
+          "purpose": "",
+          "binaries": [
+            "veil"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "webacoo",
+          "purpose": "",
+          "binaries": [
+            "webacoo"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "weevely",
+          "purpose": "",
+          "binaries": [
+            "weevely"
+          ],
+          "url": ""
+        }
+      ],
+      "Forensics": [
+        {
+          "tool": "7zip",
+          "purpose": "",
+          "binaries": [
+            "7zip"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "afflib-tools",
+          "purpose": "",
+          "binaries": [
+            "afflib-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "apktool",
+          "purpose": "",
+          "binaries": [
+            "apktool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "autopsy",
+          "purpose": "",
+          "binaries": [
+            "autopsy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "binwalk",
+          "purpose": "",
+          "binaries": [
+            "binwalk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "binwalk3",
+          "purpose": "",
+          "binaries": [
+            "binwalk3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bulk-extractor",
+          "purpose": "",
+          "binaries": [
+            "bulk-extractor"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bytecode-viewer",
+          "purpose": "",
+          "binaries": [
+            "bytecode-viewer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cabextract",
+          "purpose": "",
+          "binaries": [
+            "cabextract"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "chkrootkit",
+          "purpose": "",
+          "binaries": [
+            "chkrootkit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "creddump7",
+          "purpose": "",
+          "binaries": [
+            "creddump7"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dc3dd",
+          "purpose": "",
+          "binaries": [
+            "dc3dd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dcfldd",
+          "purpose": "",
+          "binaries": [
+            "dcfldd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ddrescue",
+          "purpose": "",
+          "binaries": [
+            "ddrescue"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dumpzilla",
+          "purpose": "",
+          "binaries": [
+            "dumpzilla"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "edb-debugger",
+          "purpose": "",
+          "binaries": [
+            "edb-debugger"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ewf-tools",
+          "purpose": "",
+          "binaries": [
+            "ewf-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exifprobe",
+          "purpose": "",
+          "binaries": [
+            "exifprobe"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exiv2",
+          "purpose": "",
+          "binaries": [
+            "exiv2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ext3grep",
+          "purpose": "",
+          "binaries": [
+            "ext3grep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ext4magic",
+          "purpose": "",
+          "binaries": [
+            "ext4magic"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "extundelete",
+          "purpose": "",
+          "binaries": [
+            "extundelete"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fcrackzip",
+          "purpose": "",
+          "binaries": [
+            "fcrackzip"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "firmware-mod-kit",
+          "purpose": "",
+          "binaries": [
+            "firmware-mod-kit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "foremost",
+          "purpose": "",
+          "binaries": [
+            "foremost"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "forensic-artifacts",
+          "purpose": "",
+          "binaries": [
+            "forensic-artifacts"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "forensics-colorize",
+          "purpose": "",
+          "binaries": [
+            "forensics-colorize"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "galleta",
+          "purpose": "",
+          "binaries": [
+            "galleta"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gdb",
+          "purpose": "",
+          "binaries": [
+            "gdb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gpart",
+          "purpose": "",
+          "binaries": [
+            "gpart"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gparted",
+          "purpose": "",
+          "binaries": [
+            "gparted"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "grokevt",
+          "purpose": "",
+          "binaries": [
+            "grokevt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "guymager",
+          "purpose": "",
+          "binaries": [
+            "guymager"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hashdeep",
+          "purpose": "",
+          "binaries": [
+            "hashdeep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "inetsim",
+          "purpose": "",
+          "binaries": [
+            "inetsim"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "jadx",
+          "purpose": "",
+          "binaries": [
+            "jadx"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "javasnoop",
+          "purpose": "",
+          "binaries": [
+            "javasnoop"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "libhivex-bin",
+          "purpose": "",
+          "binaries": [
+            "libhivex-bin"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "libsmali-java",
+          "purpose": "",
+          "binaries": [
+            "libsmali-java"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lvm2",
+          "purpose": "",
+          "binaries": [
+            "lvm2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lynis",
+          "purpose": "",
+          "binaries": [
+            "lynis"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mac-robber",
+          "purpose": "",
+          "binaries": [
+            "mac-robber"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "magicrescue",
+          "purpose": "",
+          "binaries": [
+            "magicrescue"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "md5deep",
+          "purpose": "",
+          "binaries": [
+            "md5deep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mdbtools",
+          "purpose": "",
+          "binaries": [
+            "mdbtools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "memdump",
+          "purpose": "",
+          "binaries": [
+            "memdump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "metacam",
+          "purpose": "",
+          "binaries": [
+            "metacam"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "missidentify",
+          "purpose": "",
+          "binaries": [
+            "missidentify"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "myrescue",
+          "purpose": "",
+          "binaries": [
+            "myrescue"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nasm",
+          "purpose": "",
+          "binaries": [
+            "nasm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nasty",
+          "purpose": "",
+          "binaries": [
+            "nasty"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ollydbg",
+          "purpose": "",
+          "binaries": [
+            "ollydbg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "parted",
+          "purpose": "",
+          "binaries": [
+            "parted"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pasco",
+          "purpose": "",
+          "binaries": [
+            "pasco"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pdf-parser",
+          "purpose": "",
+          "binaries": [
+            "pdf-parser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pdfid",
+          "purpose": "",
+          "binaries": [
+            "pdfid"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "plaso",
+          "purpose": "",
+          "binaries": [
+            "plaso"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "polenum",
+          "purpose": "",
+          "binaries": [
+            "polenum"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pst-utils",
+          "purpose": "",
+          "binaries": [
+            "pst-utils"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-capstone",
+          "purpose": "",
+          "binaries": [
+            "python3-capstone"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-dfdatetime",
+          "purpose": "",
+          "binaries": [
+            "python3-dfdatetime"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-dfvfs",
+          "purpose": "",
+          "binaries": [
+            "python3-dfvfs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-dfwinreg",
+          "purpose": "",
+          "binaries": [
+            "python3-dfwinreg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-distorm3",
+          "purpose": "",
+          "binaries": [
+            "python3-distorm3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "radare2",
+          "purpose": "",
+          "binaries": [
+            "radare2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "readpe",
+          "purpose": "",
+          "binaries": [
+            "readpe"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "recoverdm",
+          "purpose": "",
+          "binaries": [
+            "recoverdm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "recoverjpeg",
+          "purpose": "",
+          "binaries": [
+            "recoverjpeg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "recstudio",
+          "purpose": "",
+          "binaries": [
+            "recstudio"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "reglookup",
+          "purpose": "",
+          "binaries": [
+            "reglookup"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "regripper",
+          "purpose": "",
+          "binaries": [
+            "regripper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rephrase",
+          "purpose": "",
+          "binaries": [
+            "rephrase"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rifiuti",
+          "purpose": "",
+          "binaries": [
+            "rifiuti"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rifiuti2",
+          "purpose": "",
+          "binaries": [
+            "rifiuti2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rizin-cutter",
+          "purpose": "",
+          "binaries": [
+            "rizin-cutter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rkhunter",
+          "purpose": "",
+          "binaries": [
+            "rkhunter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rsakeyfind",
+          "purpose": "",
+          "binaries": [
+            "rsakeyfind"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rz-ghidra",
+          "purpose": "",
+          "binaries": [
+            "rz-ghidra"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "safecopy",
+          "purpose": "",
+          "binaries": [
+            "safecopy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "samdump2",
+          "purpose": "",
+          "binaries": [
+            "samdump2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "scalpel",
+          "purpose": "",
+          "binaries": [
+            "scalpel"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "scrounge-ntfs",
+          "purpose": "",
+          "binaries": [
+            "scrounge-ntfs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sleuthkit",
+          "purpose": "",
+          "binaries": [
+            "sleuthkit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sqlitebrowser",
+          "purpose": "",
+          "binaries": [
+            "sqlitebrowser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ssdeep",
+          "purpose": "",
+          "binaries": [
+            "ssdeep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpdump",
+          "purpose": "",
+          "binaries": [
+            "tcpdump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpflow",
+          "purpose": "",
+          "binaries": [
+            "tcpflow"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpick",
+          "purpose": "",
+          "binaries": [
+            "tcpick"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpreplay",
+          "purpose": "",
+          "binaries": [
+            "tcpreplay"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "truecrack",
+          "purpose": "",
+          "binaries": [
+            "truecrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "undbx",
+          "purpose": "",
+          "binaries": [
+            "undbx"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unhide",
+          "purpose": "",
+          "binaries": [
+            "unhide"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unrar",
+          "purpose": "",
+          "binaries": [
+            "unrar"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "upx-ucl",
+          "purpose": "",
+          "binaries": [
+            "upx-ucl"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vinetto",
+          "purpose": "",
+          "binaries": [
+            "vinetto"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wce",
+          "purpose": "",
+          "binaries": [
+            "wce"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "winregfs",
+          "purpose": "",
+          "binaries": [
+            "winregfs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wireshark",
+          "purpose": "",
+          "binaries": [
+            "wireshark"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "xmount",
+          "purpose": "",
+          "binaries": [
+            "xmount"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "xplico",
+          "purpose": "",
+          "binaries": [
+            "xplico"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "yara",
+          "purpose": "",
+          "binaries": [
+            "yara"
+          ],
+          "url": ""
+        }
+      ],
+      "Crypto Stego": [
+        {
+          "tool": "aesfix",
+          "purpose": "",
+          "binaries": [
+            "aesfix"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "aeskeyfind",
+          "purpose": "",
+          "binaries": [
+            "aeskeyfind"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ccrypt",
+          "purpose": "",
+          "binaries": [
+            "ccrypt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "steghide",
+          "purpose": "",
+          "binaries": [
+            "steghide"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "stegosuite",
+          "purpose": "",
+          "binaries": [
+            "stegosuite"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "stegsnow",
+          "purpose": "",
+          "binaries": [
+            "stegsnow"
+          ],
+          "url": ""
+        }
+      ],
+      "Fuzzing": [
+        {
+          "tool": "afl++",
+          "purpose": "",
+          "binaries": [
+            "afl++"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sfuzz",
+          "purpose": "",
+          "binaries": [
+            "sfuzz"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "spike",
+          "purpose": "",
+          "binaries": [
+            "spike"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wfuzz",
+          "purpose": "",
+          "binaries": [
+            "wfuzz"
+          ],
+          "url": ""
+        }
+      ]
+    },
+    "FLARE-VM": {
+      "All Packages (choco)": [
+        {
+          "tool": "010editor",
+          "purpose": "",
+          "binaries": [
+            "010editor"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "7zip",
+          "purpose": "",
+          "binaries": [
+            "7zip"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "advanced-installer",
+          "purpose": "",
+          "binaries": [
+            "advanced-installer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "angr",
+          "purpose": "",
+          "binaries": [
+            "angr"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "apimonitor",
+          "purpose": "",
+          "binaries": [
+            "apimonitor"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "apktool",
+          "purpose": "",
+          "binaries": [
+            "apktool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "asar",
+          "purpose": "",
+          "binaries": [
+            "asar"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "autoit-ripper",
+          "purpose": "",
+          "binaries": [
+            "autoit-ripper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "binaryninja",
+          "purpose": "",
+          "binaries": [
+            "binaryninja"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bindiff",
+          "purpose": "",
+          "binaries": [
+            "bindiff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "blobrunner",
+          "purpose": "",
+          "binaries": [
+            "blobrunner"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "blobrunner64",
+          "purpose": "",
+          "binaries": [
+            "blobrunner64"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bytecodeviewer",
+          "purpose": "",
+          "binaries": [
+            "bytecodeviewer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "capa",
+          "purpose": "",
+          "binaries": [
+            "capa"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "capa-explorer-web",
+          "purpose": "",
+          "binaries": [
+            "capa-explorer-web"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "chrome.extensions",
+          "purpose": "",
+          "binaries": [
+            "chrome.extensions"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cmder",
+          "purpose": "",
+          "binaries": [
+            "cmder"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "codetrack",
+          "purpose": "",
+          "binaries": [
+            "codetrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cryptotester",
+          "purpose": "",
+          "binaries": [
+            "cryptotester"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cutter",
+          "purpose": "",
+          "binaries": [
+            "cutter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cyberchef",
+          "purpose": "",
+          "binaries": [
+            "cyberchef"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cygwin",
+          "purpose": "",
+          "binaries": [
+            "cygwin"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "de4dot-cex",
+          "purpose": "",
+          "binaries": [
+            "de4dot-cex"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dependencywalker",
+          "purpose": "",
+          "binaries": [
+            "dependencywalker"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dex2jar",
+          "purpose": "",
+          "binaries": [
+            "dex2jar"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "didier-stevens-beta",
+          "purpose": "",
+          "binaries": [
+            "didier-stevens-beta"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "didier-stevens-suite",
+          "purpose": "",
+          "binaries": [
+            "didier-stevens-suite"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "die",
+          "purpose": "",
+          "binaries": [
+            "die"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dll-to-exe",
+          "purpose": "",
+          "binaries": [
+            "dll-to-exe"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnlib",
+          "purpose": "",
+          "binaries": [
+            "dnlib"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dnspyex",
+          "purpose": "",
+          "binaries": [
+            "dnspyex"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dotdumper",
+          "purpose": "",
+          "binaries": [
+            "dotdumper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dotnet3.5",
+          "purpose": "",
+          "binaries": [
+            "dotnet3.5"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exeinfope",
+          "purpose": "",
+          "binaries": [
+            "exeinfope"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "explorersuite",
+          "purpose": "",
+          "binaries": [
+            "explorersuite"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "extreme_dumper",
+          "purpose": "",
+          "binaries": [
+            "extreme_dumper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ezviewer",
+          "purpose": "",
+          "binaries": [
+            "ezviewer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fakenet-ng",
+          "purpose": "",
+          "binaries": [
+            "fakenet-ng"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fiddler",
+          "purpose": "",
+          "binaries": [
+            "fiddler"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "file",
+          "purpose": "",
+          "binaries": [
+            "file"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "floss",
+          "purpose": "",
+          "binaries": [
+            "floss"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "garbageman",
+          "purpose": "",
+          "binaries": [
+            "garbageman"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ghidra",
+          "purpose": "",
+          "binaries": [
+            "ghidra"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "goresym",
+          "purpose": "",
+          "binaries": [
+            "goresym"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gostringungarbler",
+          "purpose": "",
+          "binaries": [
+            "gostringungarbler"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hashmyfiles",
+          "purpose": "",
+          "binaries": [
+            "hashmyfiles"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hollowshunter",
+          "purpose": "",
+          "binaries": [
+            "hollowshunter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hxd",
+          "purpose": "",
+          "binaries": [
+            "hxd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.capa",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.capa"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.comida",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.comida"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.delphihelper",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.delphihelper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.dereferencing",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.dereferencing"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.diaphora",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.diaphora"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.flare",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.flare"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.flare-emu",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.flare-emu"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.hashdb",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.hashdb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.hrtng",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.hrtng"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.ifl",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.ifl"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.xray",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.xray"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ida.plugin.xrefer",
+          "purpose": "",
+          "binaries": [
+            "ida.plugin.xrefer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "idafree",
+          "purpose": "",
+          "binaries": [
+            "idafree"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "idr",
+          "purpose": "",
+          "binaries": [
+            "idr"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ifpstools",
+          "purpose": "",
+          "binaries": [
+            "ifpstools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ilspy",
+          "purpose": "",
+          "binaries": [
+            "ilspy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "innoextract",
+          "purpose": "",
+          "binaries": [
+            "innoextract"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "innounp",
+          "purpose": "",
+          "binaries": [
+            "innounp"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "internet_detector",
+          "purpose": "",
+          "binaries": [
+            "internet_detector"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ipython",
+          "purpose": "",
+          "binaries": [
+            "ipython"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "isd",
+          "purpose": "",
+          "binaries": [
+            "isd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "js-beautify",
+          "purpose": "",
+          "binaries": [
+            "js-beautify"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "js-deobfuscator",
+          "purpose": "",
+          "binaries": [
+            "js-deobfuscator"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "keystone",
+          "purpose": "",
+          "binaries": [
+            "keystone"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "libraries.python3",
+          "purpose": "",
+          "binaries": [
+            "libraries.python3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "magika",
+          "purpose": "",
+          "binaries": [
+            "magika"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "malware-jail",
+          "purpose": "",
+          "binaries": [
+            "malware-jail"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "map",
+          "purpose": "",
+          "binaries": [
+            "map"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "microsoft-office",
+          "purpose": "",
+          "binaries": [
+            "microsoft-office"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nasm",
+          "purpose": "",
+          "binaries": [
+            "nasm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "net-reactor-slayer",
+          "purpose": "",
+          "binaries": [
+            "net-reactor-slayer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nmap",
+          "purpose": "",
+          "binaries": [
+            "nmap"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "notepadplusplus",
+          "purpose": "",
+          "binaries": [
+            "notepadplusplus"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "notepadpp.plugin.compare",
+          "purpose": "",
+          "binaries": [
+            "notepadpp.plugin.compare"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "notepadpp.plugin.jstool",
+          "purpose": "",
+          "binaries": [
+            "notepadpp.plugin.jstool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "notepadpp.plugin.xmltools",
+          "purpose": "",
+          "binaries": [
+            "notepadpp.plugin.xmltools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "obfuscator-io-deobfuscator",
+          "purpose": "",
+          "binaries": [
+            "obfuscator-io-deobfuscator"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "offvis",
+          "purpose": "",
+          "binaries": [
+            "offvis"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "onenoteanalyzer",
+          "purpose": "",
+          "binaries": [
+            "onenoteanalyzer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pdbresym",
+          "purpose": "",
+          "binaries": [
+            "pdbresym"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pdfstreamdumper",
+          "purpose": "",
+          "binaries": [
+            "pdfstreamdumper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pe_unmapper",
+          "purpose": "",
+          "binaries": [
+            "pe_unmapper"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pebear",
+          "purpose": "",
+          "binaries": [
+            "pebear"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "peid",
+          "purpose": "",
+          "binaries": [
+            "peid"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pesieve",
+          "purpose": "",
+          "binaries": [
+            "pesieve"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pestudio",
+          "purpose": "",
+          "binaries": [
+            "pestudio"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pkg-unpacker",
+          "purpose": "",
+          "binaries": [
+            "pkg-unpacker"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pma-labs",
+          "purpose": "",
+          "binaries": [
+            "pma-labs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "procdot",
+          "purpose": "",
+          "binaries": [
+            "procdot"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "processdump",
+          "purpose": "",
+          "binaries": [
+            "processdump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "psnotify",
+          "purpose": "",
+          "binaries": [
+            "psnotify"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pycdas",
+          "purpose": "",
+          "binaries": [
+            "pycdas"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pycdc",
+          "purpose": "",
+          "binaries": [
+            "pycdc"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pylingual",
+          "purpose": "",
+          "binaries": [
+            "pylingual"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rat-king-parser",
+          "purpose": "",
+          "binaries": [
+            "rat-king-parser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "recaf",
+          "purpose": "",
+          "binaries": [
+            "recaf"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "reg_export",
+          "purpose": "",
+          "binaries": [
+            "reg_export"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "regcool",
+          "purpose": "",
+          "binaries": [
+            "regcool"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "regshot",
+          "purpose": "",
+          "binaries": [
+            "regshot"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "resourcehacker",
+          "purpose": "",
+          "binaries": [
+            "resourcehacker"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rundotnetdll",
+          "purpose": "",
+          "binaries": [
+            "rundotnetdll"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "scdbg",
+          "purpose": "",
+          "binaries": [
+            "scdbg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sclauncher",
+          "purpose": "",
+          "binaries": [
+            "sclauncher"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sclauncher64",
+          "purpose": "",
+          "binaries": [
+            "sclauncher64"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sfextract",
+          "purpose": "",
+          "binaries": [
+            "sfextract"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "shellcode_launcher",
+          "purpose": "",
+          "binaries": [
+            "shellcode_launcher"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sysinternals",
+          "purpose": "",
+          "binaries": [
+            "sysinternals"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "systeminformer",
+          "purpose": "",
+          "binaries": [
+            "systeminformer"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ttd",
+          "purpose": "",
+          "binaries": [
+            "ttd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "uncompyle6",
+          "purpose": "",
+          "binaries": [
+            "uncompyle6"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "uniextract2",
+          "purpose": "",
+          "binaries": [
+            "uniextract2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unpyc3",
+          "purpose": "",
+          "binaries": [
+            "unpyc3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "upx",
+          "purpose": "",
+          "binaries": [
+            "upx"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vb-decompiler-lite",
+          "purpose": "",
+          "binaries": [
+            "vb-decompiler-lite"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vbdec",
+          "purpose": "",
+          "binaries": [
+            "vbdec"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vcbuildtools",
+          "purpose": "",
+          "binaries": [
+            "vcbuildtools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vcredist-all",
+          "purpose": "",
+          "binaries": [
+            "vcredist-all"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vscode",
+          "purpose": "",
+          "binaries": [
+            "vscode"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vscode.extension.jupyter",
+          "purpose": "",
+          "binaries": [
+            "vscode.extension.jupyter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vscode.extension.python",
+          "purpose": "",
+          "binaries": [
+            "vscode.extension.python"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "windbg",
+          "purpose": "",
+          "binaries": [
+            "windbg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "windows-terminal",
+          "purpose": "",
+          "binaries": [
+            "windows-terminal"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wireshark",
+          "purpose": "",
+          "binaries": [
+            "wireshark"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "x64dbg",
+          "purpose": "",
+          "binaries": [
+            "x64dbg"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "x64dbg.plugin.dbgchild",
+          "purpose": "",
+          "binaries": [
+            "x64dbg.plugin.dbgchild"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "x64dbg.plugin.ollydumpex",
+          "purpose": "",
+          "binaries": [
+            "x64dbg.plugin.ollydumpex"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "x64dbg.plugin.scyllahide",
+          "purpose": "",
+          "binaries": [
+            "x64dbg.plugin.scyllahide"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "x64dbg.plugin.x64dbgpy",
+          "purpose": "",
+          "binaries": [
+            "x64dbg.plugin.x64dbgpy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "yara",
+          "purpose": "",
+          "binaries": [
+            "yara"
+          ],
+          "url": ""
+        }
+      ]
+    },
+    "SIFT Workstation": {
+      "Forensic Packages": [
+        {
+          "tool": "absent",
+          "purpose": "",
+          "binaries": [
+            "absent"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "aeskeyfind",
+          "purpose": "",
+          "binaries": [
+            "aeskeyfind"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "afflib-tools",
+          "purpose": "",
+          "binaries": [
+            "afflib-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "aircrack-ng",
+          "purpose": "",
+          "binaries": [
+            "aircrack-ng"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "android-sdk-platform-tools",
+          "purpose": "",
+          "binaries": [
+            "android-sdk-platform-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "arp-scan",
+          "purpose": "",
+          "binaries": [
+            "arp-scan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "autopsy",
+          "purpose": "",
+          "binaries": [
+            "autopsy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "avfs",
+          "purpose": "",
+          "binaries": [
+            "avfs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "aws-cli",
+          "purpose": "",
+          "binaries": [
+            "aws-cli"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bless",
+          "purpose": "",
+          "binaries": [
+            "bless"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "blt",
+          "purpose": "",
+          "binaries": [
+            "blt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "bulk-extractor",
+          "purpose": "",
+          "binaries": [
+            "bulk-extractor"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cabextract",
+          "purpose": "",
+          "binaries": [
+            "cabextract"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ccrypt",
+          "purpose": "",
+          "binaries": [
+            "ccrypt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "chromium-browser",
+          "purpose": "",
+          "binaries": [
+            "chromium-browser"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "clamav",
+          "purpose": "",
+          "binaries": [
+            "clamav"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "claude-code",
+          "purpose": "",
+          "binaries": [
+            "claude-code"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cmospwd",
+          "purpose": "",
+          "binaries": [
+            "cmospwd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cryptcat",
+          "purpose": "",
+          "binaries": [
+            "cryptcat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "cryptsetup",
+          "purpose": "",
+          "binaries": [
+            "cryptsetup"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dc3dd",
+          "purpose": "",
+          "binaries": [
+            "dc3dd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dcfldd",
+          "purpose": "",
+          "binaries": [
+            "dcfldd"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "default-jre",
+          "purpose": "",
+          "binaries": [
+            "default-jre"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "disktype",
+          "purpose": "",
+          "binaries": [
+            "disktype"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dislocker",
+          "purpose": "",
+          "binaries": [
+            "dislocker"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "docker",
+          "purpose": "",
+          "binaries": [
+            "docker"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dos2unix",
+          "purpose": "",
+          "binaries": [
+            "dos2unix"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dotnet",
+          "purpose": "",
+          "binaries": [
+            "dotnet"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "driftnet",
+          "purpose": "",
+          "binaries": [
+            "driftnet"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "dsniff",
+          "purpose": "",
+          "binaries": [
+            "dsniff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "e2fsprogs",
+          "purpose": "",
+          "binaries": [
+            "e2fsprogs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ent",
+          "purpose": "",
+          "binaries": [
+            "ent"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "epic5",
+          "purpose": "",
+          "binaries": [
+            "epic5"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "etherape",
+          "purpose": "",
+          "binaries": [
+            "etherape"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ettercap-graphical",
+          "purpose": "",
+          "binaries": [
+            "ettercap-graphical"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ewf-tools",
+          "purpose": "",
+          "binaries": [
+            "ewf-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exfat-extras",
+          "purpose": "",
+          "binaries": [
+            "exfat-extras"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exfat-fuse",
+          "purpose": "",
+          "binaries": [
+            "exfat-fuse"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "exif",
+          "purpose": "",
+          "binaries": [
+            "exif"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "extundelete",
+          "purpose": "",
+          "binaries": [
+            "extundelete"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "fdupes",
+          "purpose": "",
+          "binaries": [
+            "fdupes"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "feh",
+          "purpose": "",
+          "binaries": [
+            "feh"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "file",
+          "purpose": "",
+          "binaries": [
+            "file"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "flex",
+          "purpose": "",
+          "binaries": [
+            "flex"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "foremost",
+          "purpose": "",
+          "binaries": [
+            "foremost"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gawk",
+          "purpose": "",
+          "binaries": [
+            "gawk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gdb",
+          "purpose": "",
+          "binaries": [
+            "gdb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gddrescue",
+          "purpose": "",
+          "binaries": [
+            "gddrescue"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ghex",
+          "purpose": "",
+          "binaries": [
+            "ghex"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "graphviz",
+          "purpose": "",
+          "binaries": [
+            "graphviz"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "grepcidr",
+          "purpose": "",
+          "binaries": [
+            "grepcidr"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gthumb",
+          "purpose": "",
+          "binaries": [
+            "gthumb"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "gzrt",
+          "purpose": "",
+          "binaries": [
+            "gzrt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hashdeep",
+          "purpose": "",
+          "binaries": [
+            "hashdeep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hexedit",
+          "purpose": "",
+          "binaries": [
+            "hexedit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hydra",
+          "purpose": "",
+          "binaries": [
+            "hydra"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "hydra-gtk",
+          "purpose": "",
+          "binaries": [
+            "hydra-gtk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "init",
+          "purpose": "",
+          "binaries": [
+            "init"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ipython3",
+          "purpose": "",
+          "binaries": [
+            "ipython3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "jq",
+          "purpose": "",
+          "binaries": [
+            "jq"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "kdiff3",
+          "purpose": "",
+          "binaries": [
+            "kdiff3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "kpartx",
+          "purpose": "",
+          "binaries": [
+            "kpartx"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lft",
+          "purpose": "",
+          "binaries": [
+            "lft"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "lvm2",
+          "purpose": "",
+          "binaries": [
+            "lvm2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "magnus",
+          "purpose": "",
+          "binaries": [
+            "magnus"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mdadm",
+          "purpose": "",
+          "binaries": [
+            "mdadm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "mtd-utils",
+          "purpose": "",
+          "binaries": [
+            "mtd-utils"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nbd-client",
+          "purpose": "",
+          "binaries": [
+            "nbd-client"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nbtscan",
+          "purpose": "",
+          "binaries": [
+            "nbtscan"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netcat",
+          "purpose": "",
+          "binaries": [
+            "netcat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netpbm",
+          "purpose": "",
+          "binaries": [
+            "netpbm"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netsed",
+          "purpose": "",
+          "binaries": [
+            "netsed"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "netwox",
+          "purpose": "",
+          "binaries": [
+            "netwox"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nfdump",
+          "purpose": "",
+          "binaries": [
+            "nfdump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ngrep",
+          "purpose": "",
+          "binaries": [
+            "ngrep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "nikto",
+          "purpose": "",
+          "binaries": [
+            "nikto"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ntfs-3g",
+          "purpose": "",
+          "binaries": [
+            "ntfs-3g"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "okular",
+          "purpose": "",
+          "binaries": [
+            "okular"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "onboard",
+          "purpose": "",
+          "binaries": [
+            "onboard"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "open-iscsi",
+          "purpose": "",
+          "binaries": [
+            "open-iscsi"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "openjdk",
+          "purpose": "",
+          "binaries": [
+            "openjdk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ophcrack",
+          "purpose": "",
+          "binaries": [
+            "ophcrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ophcrack-cli",
+          "purpose": "",
+          "binaries": [
+            "ophcrack-cli"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "orca",
+          "purpose": "",
+          "binaries": [
+            "orca"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "outguess",
+          "purpose": "",
+          "binaries": [
+            "outguess"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "p0f",
+          "purpose": "",
+          "binaries": [
+            "p0f"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "p7zip-full",
+          "purpose": "",
+          "binaries": [
+            "p7zip-full"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "patch",
+          "purpose": "",
+          "binaries": [
+            "patch"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pdftk-java",
+          "purpose": "",
+          "binaries": [
+            "pdftk-java"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "perl",
+          "purpose": "",
+          "binaries": [
+            "perl"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pev",
+          "purpose": "",
+          "binaries": [
+            "pev"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pff-tools",
+          "purpose": "",
+          "binaries": [
+            "pff-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "phonon",
+          "purpose": "",
+          "binaries": [
+            "phonon"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pkg-config",
+          "purpose": "",
+          "binaries": [
+            "pkg-config"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "plaso-tools",
+          "purpose": "",
+          "binaries": [
+            "plaso-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "powershell",
+          "purpose": "",
+          "binaries": [
+            "powershell"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pst-utils",
+          "purpose": "",
+          "binaries": [
+            "pst-utils"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "pv",
+          "purpose": "",
+          "binaries": [
+            "pv"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python-flowgrep",
+          "purpose": "",
+          "binaries": [
+            "python-flowgrep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-debian",
+          "purpose": "",
+          "binaries": [
+            "python3-debian"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-dfvfs",
+          "purpose": "",
+          "binaries": [
+            "python3-dfvfs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-fuse",
+          "purpose": "",
+          "binaries": [
+            "python3-fuse"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-keyrings-alt",
+          "purpose": "",
+          "binaries": [
+            "python3-keyrings-alt"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-m2crypto",
+          "purpose": "",
+          "binaries": [
+            "python3-m2crypto"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-magic",
+          "purpose": "",
+          "binaries": [
+            "python3-magic"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-pefile",
+          "purpose": "",
+          "binaries": [
+            "python3-pefile"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-plaso",
+          "purpose": "",
+          "binaries": [
+            "python3-plaso"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-pypff",
+          "purpose": "",
+          "binaries": [
+            "python3-pypff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-pyqt5",
+          "purpose": "",
+          "binaries": [
+            "python3-pyqt5"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-pytsk3",
+          "purpose": "",
+          "binaries": [
+            "python3-pytsk3"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-redis",
+          "purpose": "",
+          "binaries": [
+            "python3-redis"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-setuptools-rust",
+          "purpose": "",
+          "binaries": [
+            "python3-setuptools-rust"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-tk",
+          "purpose": "",
+          "binaries": [
+            "python3-tk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-tsk",
+          "purpose": "",
+          "binaries": [
+            "python3-tsk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-virtualenv",
+          "purpose": "",
+          "binaries": [
+            "python3-virtualenv"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-wxgtk4",
+          "purpose": "",
+          "binaries": [
+            "python3-wxgtk4"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-xlsxwriter",
+          "purpose": "",
+          "binaries": [
+            "python3-xlsxwriter"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "python3-yara",
+          "purpose": "",
+          "binaries": [
+            "python3-yara"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "qemu",
+          "purpose": "",
+          "binaries": [
+            "qemu"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "qemu-utils",
+          "purpose": "",
+          "binaries": [
+            "qemu-utils"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "radare2",
+          "purpose": "",
+          "binaries": [
+            "radare2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rar",
+          "purpose": "",
+          "binaries": [
+            "rar"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "rsakeyfind",
+          "purpose": "",
+          "binaries": [
+            "rsakeyfind"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "safecopy",
+          "purpose": "",
+          "binaries": [
+            "safecopy"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "samdump2",
+          "purpose": "",
+          "binaries": [
+            "samdump2"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "scalpel",
+          "purpose": "",
+          "binaries": [
+            "scalpel"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "silversearcher-ag",
+          "purpose": "",
+          "binaries": [
+            "silversearcher-ag"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sleuthkit",
+          "purpose": "",
+          "binaries": [
+            "sleuthkit"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "socat",
+          "purpose": "",
+          "binaries": [
+            "socat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "squashfs-tools",
+          "purpose": "",
+          "binaries": [
+            "squashfs-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ssdeep",
+          "purpose": "",
+          "binaries": [
+            "ssdeep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ssldump",
+          "purpose": "",
+          "binaries": [
+            "ssldump"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "sslsniff",
+          "purpose": "",
+          "binaries": [
+            "sslsniff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "stunnel4",
+          "purpose": "",
+          "binaries": [
+            "stunnel4"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "swig",
+          "purpose": "",
+          "binaries": [
+            "swig"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcl",
+          "purpose": "",
+          "binaries": [
+            "tcl"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpflow",
+          "purpose": "",
+          "binaries": [
+            "tcpflow"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpick",
+          "purpose": "",
+          "binaries": [
+            "tcpick"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpreplay",
+          "purpose": "",
+          "binaries": [
+            "tcpreplay"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpslice",
+          "purpose": "",
+          "binaries": [
+            "tcpslice"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpstat",
+          "purpose": "",
+          "binaries": [
+            "tcpstat"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcptrace",
+          "purpose": "",
+          "binaries": [
+            "tcptrace"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcptrack",
+          "purpose": "",
+          "binaries": [
+            "tcptrack"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tcpxtract",
+          "purpose": "",
+          "binaries": [
+            "tcpxtract"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "testdisk",
+          "purpose": "",
+          "binaries": [
+            "testdisk"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "tofrodos",
+          "purpose": "",
+          "binaries": [
+            "tofrodos"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "transmission",
+          "purpose": "",
+          "binaries": [
+            "transmission"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "ugrep",
+          "purpose": "",
+          "binaries": [
+            "ugrep"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unity-control-center",
+          "purpose": "",
+          "binaries": [
+            "unity-control-center"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "unrar",
+          "purpose": "",
+          "binaries": [
+            "unrar"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "upx-ucl",
+          "purpose": "",
+          "binaries": [
+            "upx-ucl"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vbindiff",
+          "purpose": "",
+          "binaries": [
+            "vbindiff"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "virtuoso-minimal",
+          "purpose": "",
+          "binaries": [
+            "virtuoso-minimal"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "vmfs-tools",
+          "purpose": "",
+          "binaries": [
+            "vmfs-tools"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "winbind",
+          "purpose": "",
+          "binaries": [
+            "winbind"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wine",
+          "purpose": "",
+          "binaries": [
+            "wine"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "wireshark",
+          "purpose": "",
+          "binaries": [
+            "wireshark"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "xdot",
+          "purpose": "",
+          "binaries": [
+            "xdot"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "xfsprogs",
+          "purpose": "",
+          "binaries": [
+            "xfsprogs"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "xmount",
+          "purpose": "",
+          "binaries": [
+            "xmount"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "zenity",
+          "purpose": "",
+          "binaries": [
+            "zenity"
+          ],
+          "url": ""
+        },
+        {
+          "tool": "zlib1g-dev",
+          "purpose": "",
+          "binaries": [
+            "zlib1g-dev"
+          ],
+          "url": ""
+        }
+      ]
+    },
+    "Security Onion": {
+      "Network Visibility": [
+        {
+          "tool": "Zeek",
+          "purpose": "Network traffic analyzer & protocol metadata logging",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Suricata",
+          "purpose": "Signature-based IDS/IPS & packet capture",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Stenographer",
+          "purpose": "High-speed raw full packet capture daemon",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Sensoroni",
+          "purpose": "Backend API agent retrieving/extracting PCAPs",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "File Analysis": [
+        {
+          "tool": "Strelka",
+          "purpose": "Real-time file extraction & YARA/file carving",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "FreqServer",
+          "purpose": "Entropy analysis to detect DGAs",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "DomainStats",
+          "purpose": "Domain-age checks to flag malicious sites",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "Host/EDR": [
+        {
+          "tool": "Elastic Agent",
+          "purpose": "Host log/metric/audit collector",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Elastic Fleet",
+          "purpose": "Central agent config & deployment",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Osquery",
+          "purpose": "Live endpoint queries via SQL",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Wazuh",
+          "purpose": "HIDS - File Integrity Monitoring & rootkit checks",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "OpenCanary",
+          "purpose": "Network honeypot / decoy services",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "Log Routing": [
+        {
+          "tool": "Redis",
+          "purpose": "Log ingestion queue/broker",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Logstash",
+          "purpose": "Data pipeline - ECS normalize & enrich",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Filebeat",
+          "purpose": "Lightweight log shipper",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Rsyslog / Syslog-ng",
+          "purpose": "Ingest traditional syslog from appliances",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "DB/Search": [
+        {
+          "tool": "Elasticsearch",
+          "purpose": "NoSQL index for logs/metadata/alerts",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Kibana",
+          "purpose": "Search analytics & dashboards",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "ILM",
+          "purpose": "Index Lifecycle Management (aging/rolling/deletion)",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "IR/AI": [
+        {
+          "tool": "Security Onion Console (SOC)",
+          "purpose": "Web UI for threat hunting & grid management",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Onion AI Assistant",
+          "purpose": "AI triage assistance for analysts",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "TheHive",
+          "purpose": "Collaborative IR & case management",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "CyberChef",
+          "purpose": "Visual data decode/parse/analysis",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "Detection": [
+        {
+          "tool": "ElastAlert 2",
+          "purpose": "Continuous alert-indicator scanner",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Playbook",
+          "purpose": "Custom detections mapped to MITRE ATT&CK",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "ATT&CK Navigator",
+          "purpose": "Visual defensive-coverage matrix",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Sigma / Sigma-CLI",
+          "purpose": "Translate YAML detection rules to Elastic queries",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "so-idstools",
+          "purpose": "Manage/update Suricata ET rules",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "Diagnostics": [
+        {
+          "tool": "InfluxDB",
+          "purpose": "Time-series store for hardware metrics",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Telegraf",
+          "purpose": "Hardware health/CPU/mem/disk agent",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Grafana",
+          "purpose": "Infra/node-health dashboards",
+          "binaries": [],
+          "url": ""
+        }
+      ],
+      "Identity/Infra": [
+        {
+          "tool": "Nginx (so-nginx)",
+          "purpose": "Reverse proxy for internal web traffic",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "Ory Kratos & Dex",
+          "purpose": "IAM - SSO/auth/sessions",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "so-firewall",
+          "purpose": "iptables/nftables wrapper for inter-node comms",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "so-apt-cacher-ng",
+          "purpose": "Local package caching proxy",
+          "binaries": [],
+          "url": ""
+        },
+        {
+          "tool": "ManagerHype",
+          "purpose": "Hypervisor integration for VM mapping",
+          "binaries": [],
+          "url": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# fetch cache for upstream manifests (regenerate with scripts/build_kit_list.py)
+.cache/
+
+# print artifacts are built, not committed as source
+build/
+*.aux
+*.log
+
+__pycache__/
+*.pyc
