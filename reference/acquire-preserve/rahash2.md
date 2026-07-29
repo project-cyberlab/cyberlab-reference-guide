@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Verify evidence integrity with hashes  **Version:** rahash2 6.1.9
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/rahash2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
@@ -54,4 +56,4 @@ _TODO: operational traps._
 
 ## See also
 
-`ssdeep`, `sha256sum`, `md5sum`, `sigtool`
+[`ssdeep`](../acquire-preserve/ssdeep.md), [`sha256sum`](../acquire-preserve/sha256sum.md), [`md5sum`](../acquire-preserve/md5sum.md), [`sigtool`](../acquire-preserve/sigtool.md)

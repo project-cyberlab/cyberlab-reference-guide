@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Disassemble and explore a binary; Analyse shellcode  **Version:** rasm2 6.1.9
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/rasm2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
@@ -57,4 +59,4 @@ _TODO: operational traps._
 
 ## See also
 
-`r2`, `rabin2`, `objdump`, `vivbin`, `vdbbin`, `xortool`
+[`r2`](../reverse-engineering/r2.md), [`rabin2`](../malware-triage-static/rabin2.md), [`objdump`](../malware-triage-static/objdump.md), [`vivbin`](../reverse-engineering/vivbin.md), [`vdbbin`](../reverse-engineering/vdbbin.md), [`xortool`](../reverse-engineering/xortool.md)

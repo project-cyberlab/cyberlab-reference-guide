@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** List files and directories, including deleted ones; Recover deleted or lost files  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tsk_recover.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Bulk-export files from an image to a directory.
@@ -43,4 +45,4 @@ All 11 options parsed from the captured help text; 6 reviewed with usage guidanc
 
 ## See also
 
-`fls`, `ffind`, `ils`, `icat`, `photorec`, `testdisk`, `blkls`
+[`fls`](../examine-the-filesystem/fls.md), [`ffind`](../examine-the-filesystem/ffind.md), [`ils`](../examine-the-filesystem/ils.md), [`icat`](../examine-the-filesystem/icat.md), [`photorec`](../examine-the-filesystem/photorec.md), [`testdisk`](../examine-the-filesystem/testdisk.md), [`blkls`](../examine-the-filesystem/blkls.md)

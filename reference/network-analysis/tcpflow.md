@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Read and filter packet captures; Extract files and payloads from traffic  **Version:** TCPFLOW 1.6.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tcpflow.help.txt)  **Docs:** <https://downloads.digitalcorpora.org/downloads/tcpflow/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Analyze the flow of network traffic.
@@ -72,4 +74,4 @@ _TODO: operational traps._
 
 ## See also
 
-`tshark`, `capinfos`, `ngrep`, `tcpxtract`, `foremost`
+[`tshark`](../acquire-preserve/tshark.md), [`capinfos`](../network-analysis/capinfos.md), [`ngrep`](../network-analysis/ngrep.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`foremost`](../examine-the-filesystem/foremost.md)

@@ -4,6 +4,8 @@
 **Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse execution and persistence artifacts  **Version:** 2026.5.0+0cf059f40c2f7b31acdccb142461945402217398
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/AppCompatCacheParser.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Description:
@@ -44,4 +46,4 @@ _TODO: operational traps._
 
 ## See also
 
-`PECmd`, `MFTECmd`, `AmcacheParser`
+[`PECmd`](../windows-artifacts/PECmd.md), [`MFTECmd`](../windows-artifacts/MFTECmd.md), [`AmcacheParser`](../windows-artifacts/AmcacheParser.md)

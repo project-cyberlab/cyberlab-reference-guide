@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation (libyal)  **Capability:** Parse ESE / SRUM / Amcache databases
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/esedbinfo.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Invalid argument: esedbinfo
@@ -34,4 +36,4 @@ _TODO: operational traps._
 
 ## See also
 
-`esedbexport`, `SrumECmd`, `AmcacheParser`
+[`esedbexport`](../windows-artifacts/esedbexport.md), [`SrumECmd`](../windows-artifacts/SrumECmd.md), [`AmcacheParser`](../windows-artifacts/AmcacheParser.md)

@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Capture live network traffic; Read and filter packet captures
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tshark.help.txt)  **Docs:** <https://www.wireshark.org>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Read, filter and dissect network captures from the command line.
@@ -122,4 +124,4 @@ All 71 options parsed from the captured help text; 12 reviewed with usage guidan
 
 ## See also
 
-`dumpcap`, `capinfos`, `ngrep`, `tcpflow`
+[`dumpcap`](../acquire-preserve/dumpcap.md), [`capinfos`](../network-analysis/capinfos.md), [`ngrep`](../network-analysis/ngrep.md), [`tcpflow`](../network-analysis/tcpflow.md)

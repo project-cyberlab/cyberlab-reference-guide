@@ -182,6 +182,11 @@ def build_page(cmd: str, meta: dict) -> str:
         ln.append(f"**Docs:** <{url}>")
     L += ["  ".join(ln), ""]
 
+    # Navigation back to the two entry points: you should never be stranded on
+    # a tool page without a route back to "what else does this job?".
+    L += [f"[← Capability index](../INDEX.md) · [Kit tool list]({rel_root}/catalog/KIT-TOOLS.md)",
+          ""]
+
     L += ["## Purpose", "", purpose or "_TODO: one-line imperative purpose._", ""]
 
     if syn:
@@ -228,7 +233,25 @@ def build_page(cmd: str, meta: dict) -> str:
 
     sib = siblings(cmd)
     if sib:
-        L += ["## See also", "", ", ".join(f"`{s}`" for s in sib), ""]
+        # Link siblings, so a dead end reroutes instead of stalling mid-task.
+        links = []
+        for s in sib:
+            sp = None
+            for ph, caps2 in TAXONOMY.items():
+                for c2, cmds2 in caps2:
+                    if s in cmds2:
+                        cand = REF / slug(ph) / f"{s}.md"
+                        if cand.exists():
+                            sp = cand
+                            break
+                if sp:
+                    break
+            if sp:
+                rp = ("../" + sp.relative_to(REF).as_posix())
+                links.append(f"[`{s}`]({rp})")
+            else:
+                links.append(f"`{s}`")
+        L += ["## See also", "", ", ".join(links), ""]
     return "\n".join(L)
 
 

@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation  **Capability:** Recover deleted or lost files  **Version:** PhotoRec 7.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/photorec.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 PhotoRec 7.1, Data Recovery Utility, July 2019
@@ -40,4 +42,4 @@ _TODO: operational traps._
 
 ## See also
 
-`tsk_recover`, `icat`, `testdisk`, `blkls`
+[`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`icat`](../examine-the-filesystem/icat.md), [`testdisk`](../examine-the-filesystem/testdisk.md), [`blkls`](../examine-the-filesystem/blkls.md)

@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · SIFT Workstation  **Capability:** Build a super-timeline from many artifact sources  **Version:** plaso - pinfo version 20260512
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/pinfo.py.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Shows information about a Plaso storage file, for example how it was collected, what information was extracted from a source, etc.
@@ -55,4 +57,4 @@ _TODO: operational traps._
 
 ## See also
 
-`log2timeline.py`, `psort.py`
+[`log2timeline.py`](../build-the-timeline/log2timeline.py.md), [`psort.py`](../build-the-timeline/psort.py.md)

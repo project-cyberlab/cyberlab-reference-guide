@@ -4,6 +4,8 @@
 **Kit:** SIFT / Security Onion (Sigma-based log hunting)  **Capability:** Parse Windows event logs  **Version:** error: unexpected argument '--version' found
 **Captured:** `cyberlab-aio` via `help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/hayabusa.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Hayabusa v3.9.0 - Showa Day Release
@@ -29,4 +31,4 @@ _TODO: operational traps._
 
 ## See also
 
-`evtxexport`, `evtxinfo`, `EvtxECmd`, `chainsaw`
+[`evtxexport`](../windows-artifacts/evtxexport.md), [`evtxinfo`](../windows-artifacts/evtxinfo.md), [`EvtxECmd`](../windows-artifacts/EvtxECmd.md), [`chainsaw`](../windows-artifacts/chainsaw.md)

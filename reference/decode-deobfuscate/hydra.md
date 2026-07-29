@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · SIFT Workstation  **Capability:** Crack passwords and hashes  **Version:** Hydra v9.4
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/hydra.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 _TODO: one-line imperative purpose._
@@ -28,4 +30,4 @@ _TODO: operational traps._
 
 ## See also
 
-`hashcat`, `john`
+[`hashcat`](../decode-deobfuscate/hashcat.md), [`john`](../decode-deobfuscate/john.md)

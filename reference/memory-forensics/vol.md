@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation (Volatility 3)  **Capability:** Analyse a memory image
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/vol.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Extract and analyse artifacts from a memory image using Volatility 3 plugins.
@@ -91,4 +93,4 @@ All 35 options parsed from the captured help text; 9 reviewed with usage guidanc
 
 ## See also
 
-`volatility3`, `volshell`
+[`volatility3`](../memory-forensics/volatility3.md), [`volshell`](../memory-forensics/volshell.md)

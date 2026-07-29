@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation  **Capability:** See the partition and volume layout; Recover deleted or lost files  **Version:** TestDisk 7.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/testdisk.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 TestDisk 7.1, Data Recovery Utility, July 2019
@@ -40,4 +42,4 @@ _TODO: operational traps._
 
 ## See also
 
-`mmls`, `fsstat`, `img_stat`, `tsk_recover`, `icat`, `photorec`, `blkls`
+[`mmls`](../examine-the-filesystem/mmls.md), [`fsstat`](../examine-the-filesystem/fsstat.md), [`img_stat`](../acquire-preserve/img_stat.md), [`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`icat`](../examine-the-filesystem/icat.md), [`photorec`](../examine-the-filesystem/photorec.md), [`blkls`](../examine-the-filesystem/blkls.md)

@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · SIFT Workstation  **Capability:** Carve files out of unstructured data; Extract files and payloads from traffic  **Version:** 1.5.7
 **Captured:** `cyberlab-aio` via `-h` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/foremost.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Carve files out of an image or raw data by header and footer signatures.
@@ -47,4 +49,4 @@ All 11 options parsed from the captured help text; 8 reviewed with usage guidanc
 
 ## See also
 
-`scalpel`, `binwalk`, `tcpxtract`, `tcpflow`
+[`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`tcpflow`](../network-analysis/tcpflow.md)

@@ -4,6 +4,8 @@
 **Kit:** REMnux · SIFT Workstation  **Capability:** Carve files out of unstructured data; Extract files and payloads from traffic  **Version:** tcpxtract v1.0.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tcpxtract.help.txt)  **Docs:** <http://tcpxtract.sourceforge.net/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Extract files from network traffic.
@@ -51,4 +53,4 @@ _TODO: operational traps._
 
 ## See also
 
-`foremost`, `scalpel`, `binwalk`, `tcpflow`
+[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpflow`](../network-analysis/tcpflow.md)

@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Search raw data for a pattern  **Version:** rafind2 6.1.9
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/rafind2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
@@ -28,4 +30,4 @@ _TODO: operational traps._
 
 ## See also
 
-`strings`, `grep`, `xxd`
+[`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md)

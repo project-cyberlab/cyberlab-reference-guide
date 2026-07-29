@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Decode, decrypt or transform encoded data  **Version:** rax2 6.1.9
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/rax2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
@@ -66,4 +68,4 @@ _TODO: operational traps._
 
 ## See also
 
-`cyberchef`, `base64dump.py`, `xxd`, `openssl`, `numbers-to-string.py`
+[`cyberchef`](../decode-deobfuscate/cyberchef.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`xxd`](../examine-the-filesystem/xxd.md), [`openssl`](../decode-deobfuscate/openssl.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)

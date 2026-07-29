@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Capture live network traffic
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/dumpcap.help.txt)  **Docs:** <https://www.wireshark.org>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Capture and analyze network traffic with this sniffer.
@@ -75,4 +77,4 @@ _TODO: operational traps._
 
 ## See also
 
-`tshark`
+[`tshark`](../acquire-preserve/tshark.md)

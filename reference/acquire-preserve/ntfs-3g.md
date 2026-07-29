@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation  **Capability:** Inspect or mount a forensic image container  **Version:** ntfs-3g 2022.10.3
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/ntfs-3g.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 ntfs-3g 2022.10.3 integrated FUSE 28 - Third Generation NTFS Driver
@@ -28,4 +30,4 @@ _TODO: operational traps._
 
 ## See also
 
-`img_stat`, `vshadowinfo`, `bdeinfo`
+[`img_stat`](../acquire-preserve/img_stat.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md), [`bdeinfo`](../acquire-preserve/bdeinfo.md)

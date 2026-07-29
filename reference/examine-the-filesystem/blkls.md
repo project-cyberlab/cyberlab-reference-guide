@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Recover deleted or lost files  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/blkls.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Analyze disk images and recover files from them.
@@ -44,4 +46,4 @@ _TODO: operational traps._
 
 ## See also
 
-`tsk_recover`, `icat`, `photorec`, `testdisk`
+[`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`icat`](../examine-the-filesystem/icat.md), [`photorec`](../examine-the-filesystem/photorec.md), [`testdisk`](../examine-the-filesystem/testdisk.md)

@@ -4,6 +4,8 @@
 **Kit:** Kali Linux  **Capability:** Crack passwords and hashes  **Version:** v6.2.6
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/hashcat.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 hashcat (v6.2.6) starting in help mode
@@ -192,4 +194,4 @@ _TODO: operational traps._
 
 ## See also
 
-`john`, `hydra`
+[`john`](../decode-deobfuscate/john.md), [`hydra`](../decode-deobfuscate/hydra.md)

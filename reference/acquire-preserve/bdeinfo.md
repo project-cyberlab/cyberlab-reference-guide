@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation (libyal)  **Capability:** Inspect or mount a forensic image container
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/bdeinfo.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Invalid argument: bdeinfo
@@ -46,4 +48,4 @@ _TODO: operational traps._
 
 ## See also
 
-`img_stat`, `ntfs-3g`, `vshadowinfo`
+[`img_stat`](../acquire-preserve/img_stat.md), [`ntfs-3g`](../acquire-preserve/ntfs-3g.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md)

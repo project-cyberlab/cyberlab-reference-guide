@@ -4,6 +4,8 @@
 **Kit:** REMnux · FLARE-VM · Security Onion  **Capability:** Decode, decrypt or transform encoded data
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/cyberchef.help.txt)  **Docs:** <https://github.com/gchq/CyberChef/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Decode and otherwise analyze data using this browser app.
@@ -32,4 +34,4 @@ _TODO: operational traps._
 
 ## See also
 
-`base64dump.py`, `rax2`, `xxd`, `openssl`, `numbers-to-string.py`
+[`base64dump.py`](../malware-triage-static/base64dump.py.md), [`rax2`](../decode-deobfuscate/rax2.md), [`xxd`](../examine-the-filesystem/xxd.md), [`openssl`](../decode-deobfuscate/openssl.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)

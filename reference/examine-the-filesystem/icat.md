@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Recover deleted or lost files  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/icat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Extract the contents of a file by inode, including deleted files.
@@ -60,4 +62,4 @@ All 14 options parsed from the captured help text; 8 reviewed with usage guidanc
 
 ## See also
 
-`tsk_recover`, `photorec`, `testdisk`, `blkls`
+[`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`photorec`](../examine-the-filesystem/photorec.md), [`testdisk`](../examine-the-filesystem/testdisk.md), [`blkls`](../examine-the-filesystem/blkls.md)

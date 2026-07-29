@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation (Volatility 3)  **Capability:** Analyse a memory image
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/volshell.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Volshell (Volatility 3 Framework) 2.28.0
@@ -74,4 +76,4 @@ _TODO: operational traps._
 
 ## See also
 
-`vol`, `volatility3`
+[`vol`](../memory-forensics/vol.md), [`volatility3`](../memory-forensics/volatility3.md)

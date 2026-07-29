@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation (libyal)  **Capability:** Parse registry hives
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/regfinfo.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Invalid argument: regfinfo
@@ -45,4 +47,4 @@ _TODO: operational traps._
 
 ## See also
 
-`rip.pl`, `regripper`, `hivexsh`, `regfexport`, `regfmount`, `regipy-dump`, `regipy-parse-header`, `regipy-plugins-run`
+[`rip.pl`](../windows-artifacts/rip.pl.md), [`regripper`](../windows-artifacts/regripper.md), [`hivexsh`](../windows-artifacts/hivexsh.md), [`regfexport`](../windows-artifacts/regfexport.md), [`regfmount`](../windows-artifacts/regfmount.md), [`regipy-dump`](../windows-artifacts/regipy-dump.md), [`regipy-parse-header`](../windows-artifacts/regipy-parse-header.md), [`regipy-plugins-run`](../windows-artifacts/regipy-plugins-run.md)

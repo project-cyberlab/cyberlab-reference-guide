@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Fetch and verify external references  **Version:** curl 7.88.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/curl.help.txt)  **Docs:** <https://curl.se>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool.
@@ -59,4 +61,4 @@ _TODO: operational traps._
 
 ## See also
 
-`wget`
+[`wget`](../report-support/wget.md)

@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Inspect or mount a forensic image container; See the partition and volume layout  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/img_stat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Analyze disk images and recover files from them.
@@ -36,4 +38,4 @@ _TODO: operational traps._
 
 ## See also
 
-`ntfs-3g`, `vshadowinfo`, `bdeinfo`, `mmls`, `fsstat`, `testdisk`
+[`ntfs-3g`](../acquire-preserve/ntfs-3g.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md), [`bdeinfo`](../acquire-preserve/bdeinfo.md), [`mmls`](../examine-the-filesystem/mmls.md), [`fsstat`](../examine-the-filesystem/fsstat.md), [`testdisk`](../examine-the-filesystem/testdisk.md)

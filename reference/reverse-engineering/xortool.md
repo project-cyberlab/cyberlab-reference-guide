@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Analyse shellcode; Break simple obfuscation  **Version:** 1.1.0
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/xortool.help.txt)  **Docs:** <https://github.com/hellman/xortool>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Recover the key length and key of an XOR-encrypted file by frequency analysis.
@@ -50,4 +52,4 @@ All 8 options parsed from the captured help text; 3 reviewed with usage guidance
 
 ## See also
 
-`rasm2`, `floss`, `xlmdeobfuscator`
+[`rasm2`](../reverse-engineering/rasm2.md), [`floss`](../malware-triage-static/floss.md), [`xlmdeobfuscator`](../malware-triage-documents/xlmdeobfuscator.md)

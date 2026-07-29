@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Decode, decrypt or transform encoded data  **Version:** Invalid command '--version'; type "help" for a list.
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/openssl.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Standard commands
@@ -22,4 +24,4 @@ _TODO: operational traps._
 
 ## See also
 
-`cyberchef`, `base64dump.py`, `rax2`, `xxd`, `numbers-to-string.py`
+[`cyberchef`](../decode-deobfuscate/cyberchef.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`rax2`](../decode-deobfuscate/rax2.md), [`xxd`](../examine-the-filesystem/xxd.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)

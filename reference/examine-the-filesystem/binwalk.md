@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux  **Capability:** Carve files out of unstructured data; Detect and reverse packing; Find hidden data
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/binwalk.help.txt)  **Docs:** <https://github.com/ReFirmLabs/binwalk>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Find and extract embedded files and filesystems inside a binary blob or firmware image.
@@ -145,4 +147,4 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 
 ## See also
 
-`foremost`, `scalpel`, `tcpxtract`, `upx`, `die`, `diec`, `7za`, `unzip`
+[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`upx`](../malware-triage-static/upx.md), [`die`](../malware-triage-static/die.md), [`diec`](../malware-triage-static/diec.md), [`7za`](../malware-triage-static/7za.md), [`unzip`](../malware-triage-static/unzip.md)

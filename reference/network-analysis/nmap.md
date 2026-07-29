@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · FLARE-VM  **Capability:** Probe or scan hosts and services  **Version:** Nmap version 7.93
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/nmap.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Nmap 7.93 ( https://nmap.org )
@@ -107,4 +109,4 @@ _TODO: operational traps._
 
 ## See also
 
-`nping`
+[`nping`](../network-analysis/nping.md)

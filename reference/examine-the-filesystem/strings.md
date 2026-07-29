@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Search raw data for a pattern; Extract strings, including obfuscated ones  **Version:** GNU strings (GNU Binutils for Debian) 2.40
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/strings.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Print sequences of printable characters found in a binary file.
@@ -36,4 +38,4 @@ All 4 options parsed from the captured help text; 3 reviewed with usage guidance
 
 ## See also
 
-`rafind2`, `grep`, `xxd`, `floss`, `base64dump.py`, `numbers-to-string.py`
+[`rafind2`](../examine-the-filesystem/rafind2.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md), [`floss`](../malware-triage-static/floss.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)

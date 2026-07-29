@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Verify evidence integrity with hashes  **Version:** md5sum (GNU coreutils) 9.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/md5sum.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Print or check MD5 (128-bit) checksums.
@@ -48,4 +50,4 @@ _TODO: operational traps._
 
 ## See also
 
-`rahash2`, `ssdeep`, `sha256sum`, `sigtool`
+[`rahash2`](../acquire-preserve/rahash2.md), [`ssdeep`](../acquire-preserve/ssdeep.md), [`sha256sum`](../acquire-preserve/sha256sum.md), [`sigtool`](../acquire-preserve/sigtool.md)

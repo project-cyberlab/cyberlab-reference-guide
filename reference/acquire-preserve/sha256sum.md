@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Verify evidence integrity with hashes  **Version:** sha256sum (GNU coreutils) 9.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/sha256sum.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Print or check SHA256 (256-bit) checksums.
@@ -66,4 +68,4 @@ _TODO: operational traps._
 
 ## See also
 
-`rahash2`, `ssdeep`, `md5sum`, `sigtool`
+[`rahash2`](../acquire-preserve/rahash2.md), [`ssdeep`](../acquire-preserve/ssdeep.md), [`md5sum`](../acquire-preserve/md5sum.md), [`sigtool`](../acquire-preserve/sigtool.md)

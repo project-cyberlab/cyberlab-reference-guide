@@ -4,6 +4,8 @@
 **Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse registry hives  **Version:** 2026.5.0+bcd0ac33ed98de61ea6de551eef96052bddbbd49
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/RECmd.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Description:
@@ -64,4 +66,4 @@ _TODO: operational traps._
 
 ## See also
 
-`rip.pl`, `regripper`, `hivexsh`, `regfexport`, `regfinfo`, `regfmount`, `regipy-dump`, `regipy-parse-header`
+[`rip.pl`](../windows-artifacts/rip.pl.md), [`regripper`](../windows-artifacts/regripper.md), [`hivexsh`](../windows-artifacts/hivexsh.md), [`regfexport`](../windows-artifacts/regfexport.md), [`regfinfo`](../windows-artifacts/regfinfo.md), [`regfmount`](../windows-artifacts/regfmount.md), [`regipy-dump`](../windows-artifacts/regipy-dump.md), [`regipy-parse-header`](../windows-artifacts/regipy-parse-header.md)

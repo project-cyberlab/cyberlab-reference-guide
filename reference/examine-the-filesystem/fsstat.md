@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** See the partition and volume layout  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/fsstat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Analyze disk images and recover files from them.
@@ -53,4 +55,4 @@ _TODO: operational traps._
 
 ## See also
 
-`mmls`, `img_stat`, `testdisk`
+[`mmls`](../examine-the-filesystem/mmls.md), [`img_stat`](../acquire-preserve/img_stat.md), [`testdisk`](../examine-the-filesystem/testdisk.md)

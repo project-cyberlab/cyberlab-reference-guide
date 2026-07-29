@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · SIFT Workstation  **Capability:** Build a super-timeline from many artifact sources  **Version:** plaso - log2timeline version 20260512
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/log2timeline.py.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Extract timestamped events from evidence into a Plaso storage file, the first half of a super-timeline.
@@ -145,4 +147,4 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 
 ## See also
 
-`psort.py`, `pinfo.py`
+[`psort.py`](../build-the-timeline/psort.py.md), [`pinfo.py`](../build-the-timeline/pinfo.py.md)

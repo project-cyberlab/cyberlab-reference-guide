@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Search raw data for a pattern; Decode, decrypt or transform encoded data; Inspect files by hand
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/xxd.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 xxd [options] [infile [outfile]]
@@ -49,4 +51,4 @@ _TODO: operational traps._
 
 ## See also
 
-`rafind2`, `strings`, `grep`, `cyberchef`, `base64dump.py`, `rax2`, `openssl`, `numbers-to-string.py`
+[`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`cyberchef`](../decode-deobfuscate/cyberchef.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`rax2`](../decode-deobfuscate/rax2.md), [`openssl`](../decode-deobfuscate/openssl.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)

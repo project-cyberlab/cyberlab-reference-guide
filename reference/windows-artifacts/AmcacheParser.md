@@ -4,6 +4,8 @@
 **Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse ESE / SRUM / Amcache databases; Parse execution and persistence artifacts  **Version:** 2026.5.0+76dc8354aa98ce1e1c6f942abcfb09f583f411dd
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/AmcacheParser.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Description:
@@ -46,4 +48,4 @@ _TODO: operational traps._
 
 ## See also
 
-`esedbexport`, `esedbinfo`, `SrumECmd`, `PECmd`, `AppCompatCacheParser`, `MFTECmd`
+[`esedbexport`](../windows-artifacts/esedbexport.md), [`esedbinfo`](../windows-artifacts/esedbinfo.md), [`SrumECmd`](../windows-artifacts/SrumECmd.md), [`PECmd`](../windows-artifacts/PECmd.md), [`AppCompatCacheParser`](../windows-artifacts/AppCompatCacheParser.md), [`MFTECmd`](../windows-artifacts/MFTECmd.md)

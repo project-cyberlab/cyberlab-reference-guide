@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux  **Capability:** Simulate network services for detonation  **Version:** INetSim 1.3.2
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/inetsim.help.txt)  **Docs:** <https://www.inetsim.org/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Emulate common network services and interact with malware.

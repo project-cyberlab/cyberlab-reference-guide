@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** List files and directories, including deleted ones; Inspect metadata for one file or inode  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/ils.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Analyze disk images and recover files from them.
@@ -50,4 +52,4 @@ _TODO: operational traps._
 
 ## See also
 
-`fls`, `ffind`, `tsk_recover`, `istat`, `file`, `stat`
+[`fls`](../examine-the-filesystem/fls.md), [`ffind`](../examine-the-filesystem/ffind.md), [`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`istat`](../examine-the-filesystem/istat.md), [`file`](../examine-the-filesystem/file.md), [`stat`](../examine-the-filesystem/stat.md)

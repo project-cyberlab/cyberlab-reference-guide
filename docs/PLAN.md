@@ -15,10 +15,10 @@ Status legend: ✅ done · ▶ next · ○ pending
 - ✅ **Format designed** from six reference works — `docs/FORMAT.md`.
 - ✅ **Verification proven.** `cyberlab-aio:v1` on rick has `fls`, `clamscan`,
   `binwalk`, `yara`, `vol`, `tshark`, `exiftool`, `log2timeline.py`.
-- ✅ **Worked example** — `reference/filesystem-analysis/fls.md`, 22 options
+- ✅ **Worked example** — `reference/examine-the-filesystem/fls.md`, 22 options
   from a real capture.
 
-## Phase 1 — Capability taxonomy ▶
+## Phase 1 — Capability taxonomy ✅
 
 The primary index. Draft ~40–60 capabilities phrased as **problems**, not tool
 names, e.g. *"Recover deleted files from an image"*, *"Find what persisted on a
@@ -38,7 +38,7 @@ kit-native one tuned to what we actually carry? Recommendation: kit-native
 primary, with ATT&CK IDs as secondary tags where they genuinely apply — forcing
 forensic tools into attacker tactics distorts both.
 
-## Phase 1b — Mine cyberlab as a source ▶
+## Phase 1b — Mine cyberlab as a source ✅
 
 The cyberlab training lab already contains a large body of commands and prior
 exhaustive research. It is **read-only input** here — cyberlab is on hold and
@@ -65,7 +65,7 @@ Phase 3 linter against a real capture. Mining saves the *thinking*, not the
 *verification* — a mined command with an invented flag must fail exactly as
 loudly as one written from scratch.
 
-## Phase 2 — Capture pipeline ○
+## Phase 2 — Capture pipeline ✅
 
 `scripts/capture_help.py`: for each in-scope tool, run `--help`/`-h`/`man` in
 the right container, store raw output under `capture/<tool>.help.txt`.
@@ -83,7 +83,7 @@ meaningful command surface. Expect the genuinely CLI-documentable set to be
 substantially smaller. Phase 2's report turns that from a guess into a number
 before any page is written.
 
-## Phase 3 — Page generation + linter ○
+## Phase 3 — Page generation + linter ✅
 
 - Generate a page skeleton per tool from its capture: header, synopsis, complete
   options table. Mechanical, deterministic — no model invention.
@@ -95,12 +95,12 @@ before any page is written.
   - every tool is in `kit-tools.json`;
   - format rules hold (imperative mood, ≤8 examples, placeholder syntax).
 
-## Phase 4 — Print render ○
+## Phase 4 — Print render ✅
 
 Markdown → PDF for field carry. Build artifact only, never hand-edited.
 Per-capability booklets rather than one 1,000-page brick.
 
-## Phase 5 — Prioritised content ○
+## Phase 5 — Prioritised content ▶ (20 of 135 tools reviewed)
 
 Do not attempt all tools at once. Order by field value:
 

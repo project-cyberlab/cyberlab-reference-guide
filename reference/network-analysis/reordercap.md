@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Split, merge or repair capture files  **Version:** Git v4.0.17
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/reordercap.help.txt)  **Docs:** <https://www.wireshark.org>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Capture and analyze network traffic with this sniffer.
@@ -34,4 +36,4 @@ _TODO: operational traps._
 
 ## See also
 
-`editcap`, `mergecap`
+[`editcap`](../network-analysis/editcap.md), [`mergecap`](../network-analysis/mergecap.md)

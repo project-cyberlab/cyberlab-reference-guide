@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Emulate or instrument execution  **Version:** 17.16.3
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/frida-ls-devices.help.txt)  **Docs:** <https://frida.re>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Trace the execution of a process to analyze its behavior.
@@ -36,4 +38,4 @@ _TODO: operational traps._
 
 ## See also
 
-`frida`, `frida-trace`, `frida-ps`, `frida-discover`, `frida-kill`
+[`frida`](../reverse-engineering/frida.md), [`frida-trace`](../reverse-engineering/frida-trace.md), [`frida-ps`](../reverse-engineering/frida-ps.md), [`frida-discover`](../reverse-engineering/frida-discover.md), [`frida-kill`](../reverse-engineering/frida-kill.md)

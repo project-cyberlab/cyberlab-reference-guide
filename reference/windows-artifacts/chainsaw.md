@@ -4,6 +4,8 @@
 **Kit:** SIFT / Security Onion (Sigma-based log hunting)  **Capability:** Parse Windows event logs  **Version:** chainsaw 2.16.0
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/chainsaw.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Rapidly work with Forensic Artefacts
@@ -41,4 +43,4 @@ _TODO: operational traps._
 
 ## See also
 
-`evtxexport`, `evtxinfo`, `EvtxECmd`, `hayabusa`
+[`evtxexport`](../windows-artifacts/evtxexport.md), [`evtxinfo`](../windows-artifacts/evtxinfo.md), [`EvtxECmd`](../windows-artifacts/EvtxECmd.md), [`hayabusa`](../windows-artifacts/hayabusa.md)

@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Inspect metadata for one file or inode  **Version:** stat (GNU coreutils) 9.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/stat.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Display file or file system status.
@@ -42,4 +44,4 @@ _TODO: operational traps._
 
 ## See also
 
-`istat`, `ils`, `file`
+[`istat`](../examine-the-filesystem/istat.md), [`ils`](../examine-the-filesystem/ils.md), [`file`](../examine-the-filesystem/file.md)

@@ -4,6 +4,8 @@
 **Kit:** Base OS — present on every Linux image  **Capability:** Inspect files by hand  **Version:** version: No such file or directory
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/less.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 SSUUMMMMAARRYY OOFF LLEESSSS CCOOMMMMAANNDDSS
@@ -83,4 +85,4 @@ _TODO: operational traps._
 
 ## See also
 
-`xxd`, `ezhexviewer`
+[`xxd`](../examine-the-filesystem/xxd.md), [`ezhexviewer`](../report-support/ezhexviewer.md)

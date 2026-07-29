@@ -29,6 +29,9 @@ BROWSERS = [
 # Order matters: this is the reading order of the printed booklet.
 SECTIONS = [
     ("Overview", ROOT / "README.md"),
+    # The capability index is the primary entry point, so it comes before the
+    # rationale -- in the field you want the lookup, not the design notes.
+    ("Capability Index", ROOT / "reference" / "INDEX.md"),
     ("The Format", ROOT / "docs" / "FORMAT.md"),
     ("Roadmap", ROOT / "docs" / "PLAN.md"),
     # The kit index: VM -> category -> tool. Long, but it is the "what do I
@@ -91,7 +94,7 @@ def convert(md_text: str) -> str:
 
 def main() -> int:
     # Tool pages, grouped by their capability directory.
-    tool_pages = sorted((ROOT / "reference").rglob("*.md"))
+    tool_pages = sorted(p for p in (ROOT / "reference").rglob("*.md") if p.name != "INDEX.md")
 
     parts: list[str] = []
     toc: list[str] = []

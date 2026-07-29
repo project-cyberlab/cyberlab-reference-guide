@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Inspect metadata for one file or inode  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/istat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Show the full metadata for one inode: times, size, and the blocks it occupies.
@@ -49,4 +51,4 @@ All 14 options parsed from the captured help text; 5 reviewed with usage guidanc
 
 ## See also
 
-`ils`, `file`, `stat`
+[`ils`](../examine-the-filesystem/ils.md), [`file`](../examine-the-filesystem/file.md), [`stat`](../examine-the-filesystem/stat.md)

@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** See the partition and volume layout  **Version:** The Sleuth Kit ver 4.11.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/mmls.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Display the partition layout of a disk image, including unallocated gaps.
@@ -50,4 +52,4 @@ All 12 options parsed from the captured help text; 9 reviewed with usage guidanc
 
 ## See also
 
-`fsstat`, `img_stat`, `testdisk`
+[`fsstat`](../examine-the-filesystem/fsstat.md), [`img_stat`](../acquire-preserve/img_stat.md), [`testdisk`](../examine-the-filesystem/testdisk.md)

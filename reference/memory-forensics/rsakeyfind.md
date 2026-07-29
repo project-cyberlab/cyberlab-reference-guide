@@ -4,6 +4,8 @@
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Recover encryption keys from memory
 **Captured:** `cyberlab-aio` via `(no args)` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/rsakeyfind.help.txt)  **Docs:** <https://citp.princeton.edu/our-work/memory/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Find BER-encoded RSA private keys in a memory image.
@@ -34,4 +36,4 @@ _TODO: operational traps._
 
 ## See also
 
-`aeskeyfind`
+[`aeskeyfind`](../memory-forensics/aeskeyfind.md)

@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Fetch and verify external references  **Version:** GNU Wget 1.21.3
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/wget.help.txt)  **Docs:** <https://www.gnu.org/software/wget/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Interact with servers via HTTP, HTTPS, FTP, and FTPS using this command-line tool.
@@ -215,4 +217,4 @@ _TODO: operational traps._
 
 ## See also
 
-`curl`
+[`curl`](../report-support/curl.md)

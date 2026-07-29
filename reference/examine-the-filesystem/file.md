@@ -4,6 +4,8 @@
 **Kit:** REMnux · FLARE-VM · SIFT Workstation  **Capability:** Inspect metadata for one file or inode; Identify what a file actually is  **Version:** file-5.44
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/file.help.txt)  **Docs:** <https://github.com/file/file>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Identify file type using "magic" numbers.
@@ -93,4 +95,4 @@ _TODO: operational traps._
 
 ## See also
 
-`istat`, `ils`, `stat`, `die`, `diec`
+[`istat`](../examine-the-filesystem/istat.md), [`ils`](../examine-the-filesystem/ils.md), [`stat`](../examine-the-filesystem/stat.md), [`die`](../malware-triage-static/die.md), [`diec`](../malware-triage-static/diec.md)

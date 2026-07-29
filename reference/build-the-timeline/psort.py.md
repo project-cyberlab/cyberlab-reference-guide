@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · SIFT Workstation  **Capability:** Build a super-timeline from many artifact sources  **Version:** plaso - psort version 20260512
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/psort.py.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Filter, sort and output the events in a Plaso storage file.
@@ -104,4 +106,4 @@ All 59 options parsed from the captured help text; 4 reviewed with usage guidanc
 
 ## See also
 
-`log2timeline.py`, `pinfo.py`
+[`log2timeline.py`](../build-the-timeline/log2timeline.py.md), [`pinfo.py`](../build-the-timeline/pinfo.py.md)

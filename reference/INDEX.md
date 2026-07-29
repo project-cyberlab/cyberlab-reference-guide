@@ -25,76 +25,76 @@ Legend: **bold** = captured from a real binary, page can be written · plain = i
 
 ### Image a disk, volume or device
 
-**dd**, `dc3dd`, `dcfldd`, `ewfacquire`, `guymager`, `affconvert`
+[**dd**](acquire-preserve/dd.md), `dc3dd`, `dcfldd`, `ewfacquire`, `guymager`, `affconvert`
 
 ### Verify evidence integrity with hashes
 
-**rahash2**, **ssdeep**, **sha256sum**, **md5sum**, **sigtool**, `hashdeep`, `md5deep`, `sha256deep`
+[**rahash2**](acquire-preserve/rahash2.md), [**ssdeep**](acquire-preserve/ssdeep.md), [**sha256sum**](acquire-preserve/sha256sum.md), [**md5sum**](acquire-preserve/md5sum.md), [**sigtool**](acquire-preserve/sigtool.md), `hashdeep`, `md5deep`, `sha256deep`
 
 ### Inspect or mount a forensic image container
 
-**img_stat**, **ntfs-3g**, **vshadowinfo**, **bdeinfo**, `ewfinfo`, `ewfmount`, `ewfverify`, `ewfexport`, `affinfo`, `affcat`
+[**img_stat**](acquire-preserve/img_stat.md), [**ntfs-3g**](acquire-preserve/ntfs-3g.md), [**vshadowinfo**](acquire-preserve/vshadowinfo.md), [**bdeinfo**](acquire-preserve/bdeinfo.md), `ewfinfo`, `ewfmount`, `ewfverify`, `ewfexport`, `affinfo`, `affcat`
 
 ### Capture live network traffic
 
-**dumpcap**, **tshark**, `tcpdump`
+[**dumpcap**](acquire-preserve/dumpcap.md), [**tshark**](acquire-preserve/tshark.md), `tcpdump`
 
 
 ## Examine the filesystem
 
 ### See the partition and volume layout
 
-**mmls**, **fsstat**, **img_stat**, **testdisk**
+[**mmls**](examine-the-filesystem/mmls.md), [**fsstat**](examine-the-filesystem/fsstat.md), [**img_stat**](acquire-preserve/img_stat.md), [**testdisk**](examine-the-filesystem/testdisk.md)
 
 ### List files and directories, including deleted ones
 
-[**fls**](filesystem-analysis/fls.md), **ffind**, **ils**, **tsk_recover**
+[**fls**](examine-the-filesystem/fls.md), [**ffind**](examine-the-filesystem/ffind.md), [**ils**](examine-the-filesystem/ils.md), [**tsk_recover**](examine-the-filesystem/tsk_recover.md)
 
 ### Recover deleted or lost files
 
-**tsk_recover**, **icat**, **photorec**, **testdisk**, **blkls**, `ext4magic`, `extundelete`, `ext3grep`
+[**tsk_recover**](examine-the-filesystem/tsk_recover.md), [**icat**](examine-the-filesystem/icat.md), [**photorec**](examine-the-filesystem/photorec.md), [**testdisk**](examine-the-filesystem/testdisk.md), [**blkls**](examine-the-filesystem/blkls.md), `ext4magic`, `extundelete`, `ext3grep`
 
 ### Carve files out of unstructured data
 
-**foremost**, **scalpel**, **binwalk**, **tcpxtract**, `bulk_extractor`, `magicrescue`
+[**foremost**](examine-the-filesystem/foremost.md), [**scalpel**](examine-the-filesystem/scalpel.md), [**binwalk**](examine-the-filesystem/binwalk.md), [**tcpxtract**](examine-the-filesystem/tcpxtract.md), `bulk_extractor`, `magicrescue`
 
 ### Inspect metadata for one file or inode
 
-**istat**, **ils**, **file**, **stat**, `exiftool`, `trid`, `magika`
+[**istat**](examine-the-filesystem/istat.md), [**ils**](examine-the-filesystem/ils.md), [**file**](examine-the-filesystem/file.md), [**stat**](examine-the-filesystem/stat.md), `exiftool`, `trid`, `magika`
 
 ### Search raw data for a pattern
 
-**rafind2**, **strings**, **grep**, **xxd**, `lightgrep`, `bulk_extractor`
+[**rafind2**](examine-the-filesystem/rafind2.md), [**strings**](examine-the-filesystem/strings.md), [**grep**](examine-the-filesystem/grep.md), [**xxd**](examine-the-filesystem/xxd.md), `lightgrep`, `bulk_extractor`
 
 
 ## Build the timeline
 
 ### Build a super-timeline from many artifact sources
 
-**log2timeline.py**, **psort.py**, **pinfo.py**, `psteal.py`
+[**log2timeline.py**](build-the-timeline/log2timeline.py.md), [**psort.py**](build-the-timeline/psort.py.md), [**pinfo.py**](build-the-timeline/pinfo.py.md), `psteal.py`
 
 ### Build a filesystem MAC-time timeline
 
-[**fls**](filesystem-analysis/fls.md), **mactime**, **tsk_gettimes**
+[**fls**](examine-the-filesystem/fls.md), [**mactime**](build-the-timeline/mactime.md), [**tsk_gettimes**](build-the-timeline/tsk_gettimes.md)
 
 
 ## Windows artifacts
 
 ### Parse registry hives
 
-**rip.pl**, **regripper**, **hivexsh**, **regfexport**, **regfinfo**, **regfmount**, **regipy-dump**, **regipy-parse-header**, **regipy-plugins-run**, **regipy-diff**, **RECmd**, `hivexget`, `hivexml`
+[**rip.pl**](windows-artifacts/rip.pl.md), [**regripper**](windows-artifacts/regripper.md), [**hivexsh**](windows-artifacts/hivexsh.md), [**regfexport**](windows-artifacts/regfexport.md), [**regfinfo**](windows-artifacts/regfinfo.md), [**regfmount**](windows-artifacts/regfmount.md), [**regipy-dump**](windows-artifacts/regipy-dump.md), [**regipy-parse-header**](windows-artifacts/regipy-parse-header.md), [**regipy-plugins-run**](windows-artifacts/regipy-plugins-run.md), [**regipy-diff**](windows-artifacts/regipy-diff.md), [**RECmd**](windows-artifacts/RECmd.md), `hivexget`, `hivexml`
 
 ### Parse Windows event logs
 
-**evtxexport**, **evtxinfo**, **EvtxECmd**, **chainsaw**, **hayabusa**, `evtx_dump`
+[**evtxexport**](windows-artifacts/evtxexport.md), [**evtxinfo**](windows-artifacts/evtxinfo.md), [**EvtxECmd**](windows-artifacts/EvtxECmd.md), [**chainsaw**](windows-artifacts/chainsaw.md), [**hayabusa**](windows-artifacts/hayabusa.md), `evtx_dump`
 
 ### Parse ESE / SRUM / Amcache databases
 
-**esedbexport**, **esedbinfo**, **SrumECmd**, **AmcacheParser**
+[**esedbexport**](windows-artifacts/esedbexport.md), [**esedbinfo**](windows-artifacts/esedbinfo.md), [**SrumECmd**](windows-artifacts/SrumECmd.md), [**AmcacheParser**](windows-artifacts/AmcacheParser.md)
 
 ### Parse execution and persistence artifacts
 
-**PECmd**, **AppCompatCacheParser**, **MFTECmd**, **AmcacheParser**, `analyzeMFT`
+[**PECmd**](windows-artifacts/PECmd.md), [**AppCompatCacheParser**](windows-artifacts/AppCompatCacheParser.md), [**MFTECmd**](windows-artifacts/MFTECmd.md), [**AmcacheParser**](windows-artifacts/AmcacheParser.md), `analyzeMFT`
 
 ### Parse mail stores
 
@@ -105,26 +105,26 @@ Legend: **bold** = captured from a real binary, page can be written · plain = i
 
 ### Analyse a memory image
 
-**vol**, **volatility3**, **volshell**, `vol.py`, `rekall`
+[**vol**](memory-forensics/vol.md), [**volatility3**](memory-forensics/volatility3.md), [**volshell**](memory-forensics/volshell.md), `vol.py`, `rekall`
 
 ### Recover encryption keys from memory
 
-**aeskeyfind**, **rsakeyfind**, `bulk_extractor`
+[**aeskeyfind**](memory-forensics/aeskeyfind.md), [**rsakeyfind**](memory-forensics/rsakeyfind.md), `bulk_extractor`
 
 
 ## Network analysis
 
 ### Read and filter packet captures
 
-**tshark**, **capinfos**, **ngrep**, **tcpflow**
+[**tshark**](acquire-preserve/tshark.md), [**capinfos**](network-analysis/capinfos.md), [**ngrep**](network-analysis/ngrep.md), [**tcpflow**](network-analysis/tcpflow.md)
 
 ### Split, merge or repair capture files
 
-**editcap**, **mergecap**, **reordercap**
+[**editcap**](network-analysis/editcap.md), [**mergecap**](network-analysis/mergecap.md), [**reordercap**](network-analysis/reordercap.md)
 
 ### Extract files and payloads from traffic
 
-**tcpxtract**, **tcpflow**, **foremost**
+[**tcpxtract**](examine-the-filesystem/tcpxtract.md), [**tcpflow**](network-analysis/tcpflow.md), [**foremost**](examine-the-filesystem/foremost.md)
 
 ### Detect intrusions in traffic
 
@@ -132,110 +132,110 @@ Legend: **bold** = captured from a real binary, page can be written · plain = i
 
 ### Probe or scan hosts and services
 
-**nmap**, **nping**, `ncat`, `arp-scan`, `netdiscover`
+[**nmap**](network-analysis/nmap.md), [**nping**](network-analysis/nping.md), `ncat`, `arp-scan`, `netdiscover`
 
 ### Simulate network services for detonation
 
-**inetsim**, `fakedns`, `fakenet`
+[**inetsim**](network-analysis/inetsim.md), `fakedns`, `fakenet`
 
 
 ## Malware triage — static
 
 ### Identify what a file actually is
 
-**file**, **die**, **diec**, `trid`, `magika`, `exiftool`
+[**file**](examine-the-filesystem/file.md), [**die**](malware-triage-static/die.md), [**diec**](malware-triage-static/diec.md), `trid`, `magika`, `exiftool`
 
 ### Scan with signatures for known-bad
 
-**yara**, **yarac**, **clamscan**, **freshclam**, **sigtool**, `clamdscan`
+[**yara**](malware-triage-static/yara.md), [**yarac**](malware-triage-static/yarac.md), [**clamscan**](malware-triage-static/clamscan.md), [**freshclam**](malware-triage-static/freshclam.md), [**sigtool**](acquire-preserve/sigtool.md), `clamdscan`
 
 ### Identify capabilities in a binary
 
-**capa**, **floss**
+[**capa**](malware-triage-static/capa.md), [**floss**](malware-triage-static/floss.md)
 
 ### Extract strings, including obfuscated ones
 
-**floss**, **strings**, **base64dump.py**, **numbers-to-string.py**
+[**floss**](malware-triage-static/floss.md), [**strings**](examine-the-filesystem/strings.md), [**base64dump.py**](malware-triage-static/base64dump.py.md), [**numbers-to-string.py**](malware-triage-static/numbers-to-string.py.md)
 
 ### Inspect PE / ELF structure
 
-**rabin2**, **readelf**, **readelf.py**, **objdump**, `pescan`, `pecheck.py`, `peframe`
+[**rabin2**](malware-triage-static/rabin2.md), [**readelf**](malware-triage-static/readelf.md), [**readelf.py**](malware-triage-static/readelf.py.md), [**objdump**](malware-triage-static/objdump.md), `pescan`, `pecheck.py`, `peframe`
 
 ### Detect and reverse packing
 
-**upx**, **die**, **diec**, **binwalk**, **7za**, **unzip**
+[**upx**](malware-triage-static/upx.md), [**die**](malware-triage-static/die.md), [**diec**](malware-triage-static/diec.md), [**binwalk**](examine-the-filesystem/binwalk.md), [**7za**](malware-triage-static/7za.md), [**unzip**](malware-triage-static/unzip.md)
 
 ### Compare or cluster samples
 
-**ssdeep**, **radiff2**, `bytehist`
+[**ssdeep**](acquire-preserve/ssdeep.md), [**radiff2**](malware-triage-static/radiff2.md), `bytehist`
 
 
 ## Malware triage — documents
 
 ### Analyse Office documents and macros
 
-**olevba**, **oleid**, **oledump.py**, **olemeta**, **oletimes**, **olemap**, **oledir**, **olebrowse**, **olefile**, **oleobj**, **mraptor**, **msodde**, **pcodedmp**, **pyxswf**, **xlmdeobfuscator**, `runxlrd2.py`, `vipermonkey`
+[**olevba**](malware-triage-documents/olevba.md), [**oleid**](malware-triage-documents/oleid.md), [**oledump.py**](malware-triage-documents/oledump.py.md), [**olemeta**](malware-triage-documents/olemeta.md), [**oletimes**](malware-triage-documents/oletimes.md), [**olemap**](malware-triage-documents/olemap.md), [**oledir**](malware-triage-documents/oledir.md), [**olebrowse**](malware-triage-documents/olebrowse.md), [**olefile**](malware-triage-documents/olefile.md), [**oleobj**](malware-triage-documents/oleobj.md), [**mraptor**](malware-triage-documents/mraptor.md), [**msodde**](malware-triage-documents/msodde.md), [**pcodedmp**](malware-triage-documents/pcodedmp.md), [**pyxswf**](malware-triage-documents/pyxswf.md), [**xlmdeobfuscator**](malware-triage-documents/xlmdeobfuscator.md), `runxlrd2.py`, `vipermonkey`
 
 ### Analyse RTF documents and embedded objects
 
-**rtfobj**, **oleobj**, `rtfdump.py`
+[**rtfobj**](malware-triage-documents/rtfobj.md), [**oleobj**](malware-triage-documents/oleobj.md), `rtfdump.py`
 
 ### Analyse PDFs
 
-**pdfid**, **pdfid.py**, **pdf-parser**, **pdf-parser.py**, `peepdf`, `qpdf`
+[**pdfid**](malware-triage-documents/pdfid.md), [**pdfid.py**](malware-triage-documents/pdfid.py.md), [**pdf-parser**](malware-triage-documents/pdf-parser.md), [**pdf-parser.py**](malware-triage-documents/pdf-parser.py.md), `peepdf`, `qpdf`
 
 ### Analyse other container formats
 
-**7za**, **unzip**, **msoffcrypto-tool**, `onenoteanalyzer`
+[**7za**](malware-triage-static/7za.md), [**unzip**](malware-triage-static/unzip.md), [**msoffcrypto-tool**](malware-triage-documents/msoffcrypto-tool.md), `onenoteanalyzer`
 
 
 ## Reverse engineering
 
 ### Disassemble and explore a binary
 
-**r2**, **rabin2**, **rasm2**, **objdump**, **vivbin**, **vdbbin**, `rizin`, `ghidra`, `cutter`
+[**r2**](reverse-engineering/r2.md), [**rabin2**](malware-triage-static/rabin2.md), [**rasm2**](reverse-engineering/rasm2.md), [**objdump**](malware-triage-static/objdump.md), [**vivbin**](reverse-engineering/vivbin.md), [**vdbbin**](reverse-engineering/vdbbin.md), `rizin`, `ghidra`, `cutter`
 
 ### Diff two binaries
 
-**radiff2**, `bindiff`
+[**radiff2**](malware-triage-static/radiff2.md), `bindiff`
 
 ### Emulate or instrument execution
 
-**frida**, **frida-trace**, **frida-ps**, **frida-discover**, **frida-kill**, **frida-ls-devices**, `speakeasy`, `qiling`, `scdbg`, `unicorn`
+[**frida**](reverse-engineering/frida.md), [**frida-trace**](reverse-engineering/frida-trace.md), [**frida-ps**](reverse-engineering/frida-ps.md), [**frida-discover**](reverse-engineering/frida-discover.md), [**frida-kill**](reverse-engineering/frida-kill.md), [**frida-ls-devices**](reverse-engineering/frida-ls-devices.md), `speakeasy`, `qiling`, `scdbg`, `unicorn`
 
 ### Analyse shellcode
 
-**rasm2**, **xortool**, `scdbg`, `shellcode2exe`
+[**rasm2**](reverse-engineering/rasm2.md), [**xortool**](reverse-engineering/xortool.md), `scdbg`, `shellcode2exe`
 
 
 ## Decode & deobfuscate
 
 ### Decode, decrypt or transform encoded data
 
-**cyberchef**, **base64dump.py**, **rax2**, **xxd**, **openssl**, **numbers-to-string.py**
+[**cyberchef**](decode-deobfuscate/cyberchef.md), [**base64dump.py**](malware-triage-static/base64dump.py.md), [**rax2**](decode-deobfuscate/rax2.md), [**xxd**](examine-the-filesystem/xxd.md), [**openssl**](decode-deobfuscate/openssl.md), [**numbers-to-string.py**](malware-triage-static/numbers-to-string.py.md)
 
 ### Break simple obfuscation
 
-**xortool**, **floss**, **xlmdeobfuscator**, `de4dot`
+[**xortool**](reverse-engineering/xortool.md), [**floss**](malware-triage-static/floss.md), [**xlmdeobfuscator**](malware-triage-documents/xlmdeobfuscator.md), `de4dot`
 
 ### Crack passwords and hashes
 
-**hashcat**, **john**, **hydra**, `unshadow`, `zip2john`, `rar2john`, `fcrackzip`, `hashid`
+[**hashcat**](decode-deobfuscate/hashcat.md), [**john**](decode-deobfuscate/john.md), [**hydra**](decode-deobfuscate/hydra.md), `unshadow`, `zip2john`, `rar2john`, `fcrackzip`, `hashid`
 
 ### Find hidden data
 
-**binwalk**, **ssdeep**, `steghide`, `stegosuite`
+[**binwalk**](examine-the-filesystem/binwalk.md), [**ssdeep**](acquire-preserve/ssdeep.md), `steghide`, `stegosuite`
 
 
 ## Report & support
 
 ### Fetch and verify external references
 
-**curl**, **wget**
+[**curl**](report-support/curl.md), [**wget**](report-support/wget.md)
 
 ### Inspect files by hand
 
-**xxd**, **ezhexviewer**, **less**, `hexdump`
+[**xxd**](examine-the-filesystem/xxd.md), [**ezhexviewer**](report-support/ezhexviewer.md), [**less**](report-support/less.md), `hexdump`
 
 
 ---

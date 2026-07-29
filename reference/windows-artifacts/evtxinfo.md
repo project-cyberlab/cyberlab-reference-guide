@@ -4,6 +4,8 @@
 **Kit:** SIFT Workstation (libyal)  **Capability:** Parse Windows event logs
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/evtxinfo.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Invalid argument: evtxinfo
@@ -35,4 +37,4 @@ _TODO: operational traps._
 
 ## See also
 
-`evtxexport`, `EvtxECmd`, `chainsaw`, `hayabusa`
+[`evtxexport`](../windows-artifacts/evtxexport.md), [`EvtxECmd`](../windows-artifacts/EvtxECmd.md), [`chainsaw`](../windows-artifacts/chainsaw.md), [`hayabusa`](../windows-artifacts/hayabusa.md)

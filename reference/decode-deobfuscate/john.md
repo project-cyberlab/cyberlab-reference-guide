@@ -4,6 +4,8 @@
 **Kit:** Kali Linux  **Capability:** Crack passwords and hashes  **Version:** stat: version: No such file or directory
 **Captured:** `cyberlab-aio` via `(no args)` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/john.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 John the Ripper password cracker, version 1.9.0
@@ -56,4 +58,4 @@ _TODO: operational traps._
 
 ## See also
 
-`hashcat`, `hydra`
+[`hashcat`](../decode-deobfuscate/hashcat.md), [`hydra`](../decode-deobfuscate/hydra.md)

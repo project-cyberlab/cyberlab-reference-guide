@@ -4,6 +4,8 @@
 **Kit:** Kali Linux  **Capability:** Parse registry hives
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/rip.pl.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Rip v.3.0 - CLI RegRipper tool
@@ -34,4 +36,4 @@ _TODO: operational traps._
 
 ## See also
 
-`regripper`, `hivexsh`, `regfexport`, `regfinfo`, `regfmount`, `regipy-dump`, `regipy-parse-header`, `regipy-plugins-run`
+[`regripper`](../windows-artifacts/regripper.md), [`hivexsh`](../windows-artifacts/hivexsh.md), [`regfexport`](../windows-artifacts/regfexport.md), [`regfinfo`](../windows-artifacts/regfinfo.md), [`regfmount`](../windows-artifacts/regfmount.md), [`regipy-dump`](../windows-artifacts/regipy-dump.md), [`regipy-parse-header`](../windows-artifacts/regipy-parse-header.md), [`regipy-plugins-run`](../windows-artifacts/regipy-plugins-run.md)

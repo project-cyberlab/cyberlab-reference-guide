@@ -4,6 +4,8 @@
 **Kit:** Kali Linux · FLARE-VM  **Capability:** Probe or scan hosts and services
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/nping.help.txt)
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Nping 0.7.93 ( https://nmap.org/nping )
@@ -116,4 +118,4 @@ _TODO: operational traps._
 
 ## See also
 
-`nmap`
+[`nmap`](../network-analysis/nmap.md)

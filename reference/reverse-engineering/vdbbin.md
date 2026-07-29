@@ -4,6 +4,8 @@
 **Kit:** REMnux  **Capability:** Disassemble and explore a binary
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/vdbbin.help.txt)  **Docs:** <https://github.com/vivisect/vivisect>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Statically examine and emulate binary files.
@@ -58,4 +60,4 @@ _TODO: operational traps._
 
 ## See also
 
-`r2`, `rabin2`, `rasm2`, `objdump`, `vivbin`
+[`r2`](../reverse-engineering/r2.md), [`rabin2`](../malware-triage-static/rabin2.md), [`rasm2`](../reverse-engineering/rasm2.md), [`objdump`](../malware-triage-static/objdump.md), [`vivbin`](../reverse-engineering/vivbin.md)

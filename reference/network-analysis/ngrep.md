@@ -4,6 +4,8 @@
 **Kit:** REMnux · SIFT Workstation  **Capability:** Read and filter packet captures  **Version:** V1.47.1
 **Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/ngrep.help.txt)  **Docs:** <https://github.com/jpr5/ngrep/>
 
+[← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
+
 ## Purpose
 
 Look for patterns in network traffic.
@@ -75,4 +77,4 @@ _TODO: operational traps._
 
 ## See also
 
-`tshark`, `capinfos`, `tcpflow`
+[`tshark`](../acquire-preserve/tshark.md), [`capinfos`](../network-analysis/capinfos.md), [`tcpflow`](../network-analysis/tcpflow.md)
