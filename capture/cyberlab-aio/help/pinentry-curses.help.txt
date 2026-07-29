@@ -1,0 +1,27 @@
+# command: pinentry-curses
+# version: pinentry-curses (pinentry) 1.2.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pinentry-curses (pinentry) 1.2.1
+Copyright (C) 2016 g10 Code GmbH
+License GPLv2+: GNU GPL version 2 or later <https://www.gnu.org/licenses/>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Usage: pinentry-curses [options] (-h for help)
+
+Ask securely for a secret and print it to stdout.
+Options:
+ -d, --debug                Turn on debugging output
+ -D, --display DISPLAY      Set the X display
+ -T, --ttyname FILE         Set the tty terminal node name
+ -N, --ttytype NAME         Set the tty terminal type
+ -C, --lc-ctype STRING      Set the tty LC_CTYPE value
+ -M, --lc-messages STRING   Set the tty LC_MESSAGES value
+ -o, --timeout SECS         Timeout waiting for input after this many seconds
+ -g, --no-global-grab       Grab keyboard only while window is focused
+ -W, --parent-wid           Parent window ID (for positioning)
+ -c, --colors STRING        Set custom colors for ncurses
+ -a, --ttyalert STRING      Set the alert mode (none, beep or flash)
+
+Please report bugs to <https://bugs.gnupg.org>.

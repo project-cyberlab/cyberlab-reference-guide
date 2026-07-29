@@ -1,0 +1,8 @@
+# command: debugfs
+# version: debugfs 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+debugfs 1.47.0 (5-Feb-2023)
+debugfs: invalid option -- '-'
+debugfs: Usage: debugfs [-b blocksize] [-s superblock] [-f cmd_file] [-R request] [-d data_source_device] [-i] [-n] [-D] [-V] [[-w] [-z undo_file] [-c]] [device]

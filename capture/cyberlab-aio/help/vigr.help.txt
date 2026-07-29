@@ -1,0 +1,14 @@
+# command: vigr
+# version: vigr: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: vigr [options]
+
+Options:
+  -g, --group                   edit group database
+  -h, --help                    display this help message and exit
+  -p, --passwd                  edit passwd database
+  -q, --quiet                   quiet mode
+  -R, --root CHROOT_DIR         directory to chroot into
+  -s, --shadow                  edit shadow or gshadow database

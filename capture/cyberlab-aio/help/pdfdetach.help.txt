@@ -1,0 +1,22 @@
+# command: pdfdetach
+# version: pdfdetach version 22.12.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pdfdetach version 22.12.0
+Copyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+Usage: pdfdetach [options] <PDF-file>
+  -list             : list all embedded files
+  -save <int>       : save the specified embedded file (file number)
+  -savefile <string>: save the specified embedded file (file name)
+  -saveall          : save all embedded files
+  -o <string>       : file name for the saved embedded file
+  -enc <string>     : output text encoding name
+  -opw <string>     : owner password (for encrypted files)
+  -upw <string>     : user password (for encrypted files)
+  -v                : print copyright and version info
+  -h                : print usage information
+  -help             : print usage information
+  --help            : print usage information
+  -?                : print usage information

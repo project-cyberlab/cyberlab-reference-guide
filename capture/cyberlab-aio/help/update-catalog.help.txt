@@ -1,0 +1,17 @@
+# command: update-catalog
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage:
+    update-catalog <options> --add --super <centralized_catalog>
+    update-catalog <options> --add <centralized_catalog> <ordinary_catalog>
+or
+    update-catalog <options> --remove --super <centralized_catalog>
+    update-catalog <options> --remove <centralized_catalog> <ordinary_catalog>
+
+Options:
+    --quiet         be quiet
+    --test          do not modify any files, enables debugging mode
+    --version       display version number
+    --help          display this text

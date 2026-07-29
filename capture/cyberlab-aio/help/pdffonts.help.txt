@@ -1,0 +1,19 @@
+# command: pdffonts
+# version: I/O Error: Couldn't open file '--version': No such file or directory.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pdffonts version 22.12.0
+Copyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+Usage: pdffonts [options] <PDF-file>
+  -f <int>       : first page to examine
+  -l <int>       : last page to examine
+  -subst         : show font substitutions
+  -opw <string>  : owner password (for encrypted files)
+  -upw <string>  : user password (for encrypted files)
+  -v             : print copyright and version info
+  -h             : print usage information
+  -help          : print usage information
+  --help         : print usage information
+  -?             : print usage information

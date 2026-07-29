@@ -1,0 +1,9 @@
+# command: update-ca-certificates
+# version: 
+# captured-via: (no args)
+# image: cyberlab-aio:v1
+#---
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.

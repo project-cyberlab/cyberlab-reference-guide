@@ -1,0 +1,17 @@
+# command: tload
+# version: tload from procps-ng 4.0.2
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ tload [options] [tty]
+
+Options:
+ -d, --delay <secs>  update delay in seconds
+ -s, --scale <num>   vertical scale
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see tload(1).

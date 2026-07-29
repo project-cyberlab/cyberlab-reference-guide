@@ -1,0 +1,32 @@
+# command: kbxutil
+# version: kbxutil (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+kbxutil (GnuPG) 2.2.40
+Copyright (C) YEAR NAME
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: kbxutil [options] [files]
+List, export, import Keybox data
+
+Commands:
+ 
+     --stats            show key statistics
+     --import-openpgp   import OpenPGP keyblocks
+     --find-dups        find duplicates
+     --cut              export records
+
+Options:
+ 
+     --from N           first record to export
+     --to N             last record to export
+ -v, --verbose          verbose
+ -q, --quiet            be somewhat more quiet
+ -n, --dry-run          do not make any changes
+     --debug            set debugging flags
+     --debug-all        enable full debugging
+
+Please report bugs to <https://bugs.gnupg.org>.

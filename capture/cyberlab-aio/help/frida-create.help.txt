@@ -1,0 +1,18 @@
+# command: frida-create
+# version: 17.16.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: frida-create [options] -t agent|cmodule
+
+options:
+  -h, --help            show this help message and exit
+  -O FILE, --options-file FILE
+                        text file containing additional command line options
+  --version             show program's version number and exit
+  -n PROJECT_NAME, --project-name PROJECT_NAME
+                        project name
+  -o OUTDIR, --output-directory OUTDIR
+                        output directory
+  -t TEMPLATE, --template TEMPLATE
+                        template file: cmodule|agent

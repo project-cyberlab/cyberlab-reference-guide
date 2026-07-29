@@ -1,0 +1,39 @@
+# command: smtpd.py
+# version: Python SMTP proxy version 0.2
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+An RFC 2821 smtp proxy.
+
+Usage: /usr/local/bin/smtpd.py [options] [localhost:localport [remotehost:remoteport]]
+
+Options:
+
+    --nosetuid
+    -n
+        This program generally tries to setuid `nobody', unless this flag is
+        set.  The setuid call will fail if this program is not run as root (in
+        which case, use this flag).
+
+    --version
+    -V
+        Print the version number and exit.
+
+    --class classname
+    -c classname
+        Use `classname' as the concrete SMTP proxy class.  Uses `PureProxy' by
+        default.
+
+    --debug
+    -d
+        Turn on debugging prints.
+
+    --help
+    -h
+        Print this message and exit.
+
+Version: Python SMTP proxy version 0.2
+
+If localhost is not given then `localhost' is used, and if localport is not
+given then 8025 is used.  If remotehost is not given then `localhost' is used,
+and if remoteport is not given, then 25 is used.

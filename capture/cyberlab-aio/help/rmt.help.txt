@@ -1,0 +1,18 @@
+# command: rmt
+# version: rmt (GNU tar) 1.34
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: rmt [OPTION...]
+Manipulate a tape drive, accepting commands from a remote process
+
+      --debug-file=FILE      set debug output file name
+  -d, --debug=NUMBER         set debug level
+  -?, --help                 give this help list
+      --usage                give a short usage message
+  -V, --version              print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+Report bugs to <bug-tar@gnu.org>.

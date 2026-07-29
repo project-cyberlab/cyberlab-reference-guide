@@ -1,10 +1,148 @@
 {
   "documented": {
+    "2to3": {
+      "image": "cyberlab-aio",
+      "bytes": 1301,
+      "via": "--help",
+      "version": ""
+    },
+    "7z": {
+      "image": "cyberlab-aio",
+      "bytes": 3140,
+      "via": "--help",
+      "version": ""
+    },
     "7za": {
       "image": "cyberlab-aio",
       "bytes": 3146,
       "via": "--help",
       "version": ""
+    },
+    "7zr": {
+      "image": "cyberlab-aio",
+      "bytes": 3127,
+      "via": "--help",
+      "version": ""
+    },
+    "AmcacheParser": {
+      "image": "cyberlab-aio",
+      "bytes": 1710,
+      "via": "--help",
+      "version": "2026.5.0+76dc8354aa98ce1e1c6f942abcfb09f583f411dd"
+    },
+    "AppCompatCacheParser": {
+      "image": "cyberlab-aio",
+      "bytes": 1395,
+      "via": "--help",
+      "version": "2026.5.0+0cf059f40c2f7b31acdccb142461945402217398"
+    },
+    "EvtxECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 2865,
+      "via": "--help",
+      "version": "2026.5.0+bfc7f47ccbf65ffc9a3777cde5498db2fdd94664"
+    },
+    "JLECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 2802,
+      "via": "--help",
+      "version": "2026.5.0+15d8f46f083d04c9a5cbb1f0fad37c1225da43f6"
+    },
+    "LECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 2317,
+      "via": "--help",
+      "version": "2026.5.0+def1fc2686af4684d06a889b1315f225187ac8f7"
+    },
+    "MFTECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 4203,
+      "via": "--help",
+      "version": "2026.5.0+4fd94a6bd12237e8501baff5fc9e5b1b01c53862"
+    },
+    "PECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 2313,
+      "via": "--help",
+      "version": "2026.5.0+bde430c69ba4d97fea8b71fdddb6df7849419c10"
+    },
+    "RBCmd": {
+      "image": "cyberlab-aio",
+      "bytes": 1328,
+      "via": "--help",
+      "version": "2026.5.0+72d305ee2aa7e5bf4e5e1e01576b34ab402038a6"
+    },
+    "RECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 2802,
+      "via": "--help",
+      "version": "2026.5.0+bcd0ac33ed98de61ea6de551eef96052bddbbd49"
+    },
+    "RecentFileCacheParser": {
+      "image": "cyberlab-aio",
+      "bytes": 1177,
+      "via": "--help",
+      "version": "2026.5.0+722ea4c06bcb9150cdadbe96a650f525578dbd6d"
+    },
+    "SBECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 1718,
+      "via": "--help",
+      "version": "2026.5.0+5d73145683f1bfaeb4aec4d080badcb7b7cadb93"
+    },
+    "SrumECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 1290,
+      "via": "--help",
+      "version": "2026.5.0+880ad26bcb011976a8fc521eea63fc5e6e65ba02"
+    },
+    "SumECmd": {
+      "image": "cyberlab-aio",
+      "bytes": 1003,
+      "via": "--help",
+      "version": "2026.5.0+8227da19559d4d4f9f45aefabbae7a37fd4f6384"
+    },
+    "WxTCmd": {
+      "image": "cyberlab-aio",
+      "bytes": 1063,
+      "via": "--help",
+      "version": "2026.5.0+adbf96ed9c73dc6806d97b96160bb96bccd48f7a"
+    },
+    "XORSearch": {
+      "image": "cyberlab-aio",
+      "bytes": 2704,
+      "via": "--help",
+      "version": "xorsearch.py 0.0.5"
+    },
+    "add-shell": {
+      "image": "cyberlab-aio",
+      "bytes": 151,
+      "via": "-h",
+      "version": ""
+    },
+    "addgroup": {
+      "image": "cyberlab-aio",
+      "bytes": 1123,
+      "via": "--help",
+      "version": "adduser version 3.134"
+    },
+    "addpart": {
+      "image": "cyberlab-aio",
+      "bytes": 239,
+      "via": "--help",
+      "version": "addpart from util-linux 2.38.1"
+    },
+    "addr2line": {
+      "image": "cyberlab-aio",
+      "bytes": 1279,
+      "via": "--help",
+      "version": "GNU addr2line (GNU Binutils for Debian) 2.40"
+    },
+    "adduser": {
+      "image": "cyberlab-aio",
+      "bytes": 1123,
+      "via": "--help",
+      "version": "adduser version 3.134"
     },
     "aeskeyfind": {
       "image": "cyberlab-aio",
@@ -12,11 +150,167 @@
       "via": "--help",
       "version": ""
     },
+    "agetty": {
+      "image": "cyberlab-aio",
+      "bytes": 2196,
+      "via": "--help",
+      "version": "agetty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)"
+    },
+    "appcompat": {
+      "image": "cyberlab-aio",
+      "bytes": 2435,
+      "via": "--help",
+      "version": "Version: 0.9.1"
+    },
+    "apt": {
+      "image": "cyberlab-aio",
+      "bytes": 1289,
+      "via": "--help",
+      "version": "apt 2.6.1 (amd64)"
+    },
+    "apt-cache": {
+      "image": "cyberlab-aio",
+      "bytes": 1189,
+      "via": "--help",
+      "version": "apt 2.6.1 (amd64)"
+    },
+    "apt-cdrom": {
+      "image": "cyberlab-aio",
+      "bytes": 656,
+      "via": "--help",
+      "version": "apt 2.6.1 (amd64)"
+    },
+    "apt-config": {
+      "image": "cyberlab-aio",
+      "bytes": 634,
+      "via": "--help",
+      "version": "apt 2.6.1 (amd64)"
+    },
+    "apt-get": {
+      "image": "cyberlab-aio",
+      "bytes": 1618,
+      "via": "--help",
+      "version": "apt 2.6.1 (amd64)"
+    },
+    "apt-key": {
+      "image": "cyberlab-aio",
+      "bytes": 738,
+      "via": "--help",
+      "version": "Unknown option: --version"
+    },
+    "apt-mark": {
+      "image": "cyberlab-aio",
+      "bytes": 1117,
+      "via": "--help",
+      "version": "apt 2.6.1 (amd64)"
+    },
+    "ar": {
+      "image": "cyberlab-aio",
+      "bytes": 2178,
+      "via": "--help",
+      "version": "GNU ar (GNU Binutils for Debian) 2.40"
+    },
+    "arch": {
+      "image": "cyberlab-aio",
+      "bytes": 351,
+      "via": "--help",
+      "version": "arch (GNU coreutils) 9.1"
+    },
+    "arpd": {
+      "image": "cyberlab-aio",
+      "bytes": 151,
+      "via": "--help",
+      "version": ""
+    },
+    "as": {
+      "image": "cyberlab-aio",
+      "bytes": 10853,
+      "via": "--help",
+      "version": "GNU assembler (GNU Binutils for Debian) 2.40"
+    },
+    "asan_symbolize-15": {
+      "image": "cyberlab-aio",
+      "bytes": 1914,
+      "via": "--help",
+      "version": ""
+    },
+    "awk": {
+      "image": "cyberlab-aio",
+      "bytes": 1154,
+      "via": "(no args)",
+      "version": "awk: not an option: --version"
+    },
+    "b2sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1819,
+      "via": "--help",
+      "version": "b2sum (GNU coreutils) 9.1"
+    },
+    "badblocks": {
+      "image": "cyberlab-aio",
+      "bytes": 294,
+      "via": "--help",
+      "version": ""
+    },
+    "base32": {
+      "image": "cyberlab-aio",
+      "bytes": 1049,
+      "via": "--help",
+      "version": "base32 (GNU coreutils) 9.1"
+    },
+    "base64": {
+      "image": "cyberlab-aio",
+      "bytes": 1049,
+      "via": "--help",
+      "version": "base64 (GNU coreutils) 9.1"
+    },
+    "base64dump": {
+      "image": "cyberlab-aio",
+      "bytes": 3352,
+      "via": "--help",
+      "version": "base64dump.py 0.0.30"
+    },
     "base64dump.py": {
       "image": "cyberlab-aio",
       "bytes": 3352,
       "via": "--help",
       "version": "base64dump.py 0.0.30"
+    },
+    "basename": {
+      "image": "cyberlab-aio",
+      "bytes": 956,
+      "via": "--help",
+      "version": "basename (GNU coreutils) 9.1"
+    },
+    "basenc": {
+      "image": "cyberlab-aio",
+      "bytes": 1677,
+      "via": "--help",
+      "version": "basenc (GNU coreutils) 9.1"
+    },
+    "bash": {
+      "image": "cyberlab-aio",
+      "bytes": 764,
+      "via": "--help",
+      "version": "GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)"
+    },
+    "bashbug": {
+      "image": "cyberlab-aio",
+      "bytes": 598,
+      "via": "--help",
+      "version": "GNU bashbug, version 5.2.15-release"
+    },
+    "bdeinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 768,
+      "via": "--help",
+      "version": ""
+    },
+    "bdemount": {
+      "image": "cyberlab-aio",
+      "bytes": 1078,
+      "via": "--help",
+      "version": ""
     },
     "binwalk": {
       "image": "cyberlab-aio",
@@ -24,13 +318,151 @@
       "via": "--help",
       "version": ""
     },
+    "blkcalc": {
+      "image": "cyberlab-aio",
+      "bytes": 919,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "blkcat": {
+      "image": "cyberlab-aio",
+      "bytes": 978,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "blkdiscard": {
+      "image": "cyberlab-aio",
+      "bytes": 708,
+      "via": "--help",
+      "version": "blkdiscard from util-linux 2.38.1"
+    },
+    "blkid": {
+      "image": "cyberlab-aio",
+      "bytes": 2033,
+      "via": "--help",
+      "version": "blkid from util-linux 2.38.1  (libblkid 2.38.1, 04-Aug-2022)"
+    },
     "blkls": {
       "image": "cyberlab-aio",
       "bytes": 872,
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
+    "blkstat": {
+      "image": "cyberlab-aio",
+      "bytes": 652,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "blkzone": {
+      "image": "cyberlab-aio",
+      "bytes": 956,
+      "via": "--help",
+      "version": "blkzone from util-linux 2.38.1"
+    },
+    "blockdev": {
+      "image": "cyberlab-aio",
+      "bytes": 1478,
+      "via": "--help",
+      "version": "blockdev from util-linux 2.38.1"
+    },
+    "bridge": {
+      "image": "cyberlab-aio",
+      "bytes": 337,
+      "via": "--help",
+      "version": "Option \"-version\" is unknown, try \"bridge help\"."
+    },
+    "bstrings": {
+      "image": "cyberlab-aio",
+      "bytes": 3307,
+      "via": "--help",
+      "version": "2026.5+6cca053120b10a1c5cb563e3574ec7b2e0e894e3"
+    },
+    "bunzip2": {
+      "image": "cyberlab-aio",
+      "bytes": 1248,
+      "via": "--help",
+      "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+    },
+    "bzcat": {
+      "image": "cyberlab-aio",
+      "bytes": 1246,
+      "via": "--help",
+      "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+    },
+    "bzip2": {
+      "image": "cyberlab-aio",
+      "bytes": 1246,
+      "via": "--help",
+      "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+    },
+    "bzip2recover": {
+      "image": "cyberlab-aio",
+      "bytes": 163,
+      "via": "(no args)",
+      "version": "bzip2recover 1.0.8: extracts blocks from damaged .bz2 files."
+    },
+    "bzless": {
+      "image": "cyberlab-aio",
+      "bytes": 1269,
+      "via": "--help",
+      "version": "------> --version <------"
+    },
+    "bzmore": {
+      "image": "cyberlab-aio",
+      "bytes": 1269,
+      "via": "--help",
+      "version": "------> --version <------"
+    },
+    "c++": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "c++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "c++filt": {
+      "image": "cyberlab-aio",
+      "bytes": 1006,
+      "via": "--help",
+      "version": "GNU c++filt (GNU Binutils for Debian) 2.40"
+    },
+    "c89": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "c89-gcc": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "c99": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "c99-gcc": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "c_rehash": {
+      "image": "cyberlab-aio",
+      "bytes": 152,
+      "via": "-h",
+      "version": ""
+    },
     "capa": {
+      "image": "cyberlab-aio",
+      "bytes": 4392,
+      "via": "--help",
+      "version": "capa 9.4.0"
+    },
+    "capa-offline": {
       "image": "cyberlab-aio",
       "bytes": 4392,
       "via": "--help",
@@ -42,11 +474,275 @@
       "via": "--help",
       "version": "Capinfos (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
     },
+    "capsh": {
+      "image": "cyberlab-aio",
+      "bytes": 2425,
+      "via": "--help",
+      "version": ""
+    },
+    "captoinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 1749,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "captype": {
+      "image": "cyberlab-aio",
+      "bytes": 326,
+      "via": "--help",
+      "version": "Captype (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
+    },
+    "cat": {
+      "image": "cyberlab-aio",
+      "bytes": 1107,
+      "via": "--help",
+      "version": "cat (GNU coreutils) 9.1"
+    },
+    "cc": {
+      "image": "cyberlab-aio",
+      "bytes": 4088,
+      "via": "--help",
+      "version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "cffi-gen-src": {
+      "image": "cyberlab-aio",
+      "bytes": 406,
+      "via": "--help",
+      "version": ""
+    },
+    "chage": {
+      "image": "cyberlab-aio",
+      "bytes": 884,
+      "via": "--help",
+      "version": "chage: unrecognized option '--version'"
+    },
+    "chainsaw": {
+      "image": "cyberlab-aio",
+      "bytes": 1336,
+      "via": "--help",
+      "version": "chainsaw 2.16.0"
+    },
+    "chcon": {
+      "image": "cyberlab-aio",
+      "bytes": 2039,
+      "via": "--help",
+      "version": "chcon (GNU coreutils) 9.1"
+    },
+    "chcpu": {
+      "image": "cyberlab-aio",
+      "bytes": 494,
+      "via": "--help",
+      "version": "chcpu from util-linux 2.38.1"
+    },
+    "chfn": {
+      "image": "cyberlab-aio",
+      "bytes": 477,
+      "via": "--help",
+      "version": "chfn: unrecognized option '--version'"
+    },
+    "chgpasswd": {
+      "image": "cyberlab-aio",
+      "bytes": 569,
+      "via": "--help",
+      "version": "chgpasswd: unrecognized option '--version'"
+    },
+    "chgrp": {
+      "image": "cyberlab-aio",
+      "bytes": 1949,
+      "via": "--help",
+      "version": "chgrp (GNU coreutils) 9.1"
+    },
+    "chmem": {
+      "image": "cyberlab-aio",
+      "bytes": 482,
+      "via": "--help",
+      "version": "chmem from util-linux 2.38.1"
+    },
+    "chmod": {
+      "image": "cyberlab-aio",
+      "bytes": 1079,
+      "via": "--help",
+      "version": "chmod (GNU coreutils) 9.1"
+    },
+    "choom": {
+      "image": "cyberlab-aio",
+      "bytes": 369,
+      "via": "--help",
+      "version": "choom from util-linux 2.38.1"
+    },
+    "chown": {
+      "image": "cyberlab-aio",
+      "bytes": 2614,
+      "via": "--help",
+      "version": "chown (GNU coreutils) 9.1"
+    },
+    "chpasswd": {
+      "image": "cyberlab-aio",
+      "bytes": 568,
+      "via": "--help",
+      "version": "chpasswd: unrecognized option '--version'"
+    },
+    "chroot": {
+      "image": "cyberlab-aio",
+      "bytes": 703,
+      "via": "--help",
+      "version": "chroot (GNU coreutils) 9.1"
+    },
+    "chrt": {
+      "image": "cyberlab-aio",
+      "bytes": 1116,
+      "via": "--help",
+      "version": "chrt from util-linux 2.38.1"
+    },
+    "chsh": {
+      "image": "cyberlab-aio",
+      "bytes": 232,
+      "via": "--help",
+      "version": "chsh: unrecognized option '--version'"
+    },
+    "cksum": {
+      "image": "cyberlab-aio",
+      "bytes": 2165,
+      "via": "--help",
+      "version": "cksum (GNU coreutils) 9.1"
+    },
+    "clambc": {
+      "image": "cyberlab-aio",
+      "bytes": 1229,
+      "via": "--help",
+      "version": "Clam AntiVirus Bytecode Testing Tool 1.4.3"
+    },
     "clamscan": {
       "image": "cyberlab-aio",
       "bytes": 8404,
       "via": "--help",
       "version": "ClamAV 1.4.3"
+    },
+    "clamsubmit": {
+      "image": "cyberlab-aio",
+      "bytes": 819,
+      "via": "--help",
+      "version": "ClamAV 1.4.3"
+    },
+    "clang++-15": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "Debian clang version 15.0.6"
+    },
+    "clang-15": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "Debian clang version 15.0.6"
+    },
+    "clang-cpp-15": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "Debian clang version 15.0.6"
+    },
+    "clang-format-radare2": {
+      "image": "cyberlab-aio",
+      "bytes": 1139,
+      "via": "--help",
+      "version": "clang-format-radare2 1.0"
+    },
+    "clear": {
+      "image": "cyberlab-aio",
+      "bytes": 181,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "clear_console": {
+      "image": "cyberlab-aio",
+      "bytes": 192,
+      "via": "--help",
+      "version": "clear_console: Version 0.1"
+    },
+    "cmp": {
+      "image": "cyberlab-aio",
+      "bytes": 1314,
+      "via": "--help",
+      "version": "cmp (GNU diffutils) 3.8"
+    },
+    "comm": {
+      "image": "cyberlab-aio",
+      "bytes": 1436,
+      "via": "--help",
+      "version": "comm (GNU coreutils) 9.1"
+    },
+    "corelist": {
+      "image": "cyberlab-aio",
+      "bytes": 3964,
+      "via": "--help",
+      "version": ""
+    },
+    "cp": {
+      "image": "cyberlab-aio",
+      "bytes": 4822,
+      "via": "--help",
+      "version": "cp (GNU coreutils) 9.1"
+    },
+    "cpan": {
+      "image": "cyberlab-aio",
+      "bytes": 780,
+      "via": "--help",
+      "version": "/usr/bin/cpan version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "cpan5.36-x86_64-linux-gnu": {
+      "image": "cyberlab-aio",
+      "bytes": 843,
+      "via": "--help",
+      "version": "/usr/bin/cpan5.36-x86_64-linux-gnu version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "cpgr": {
+      "image": "cyberlab-aio",
+      "bytes": 193,
+      "via": "--help",
+      "version": "cpgr: version: No such file or directory"
+    },
+    "cpp": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "cpp (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "cpp-12": {
+      "image": "cyberlab-aio",
+      "bytes": 4096,
+      "via": "--help",
+      "version": "cpp-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "cppw": {
+      "image": "cyberlab-aio",
+      "bytes": 193,
+      "via": "--help",
+      "version": "cppw: version: No such file or directory"
+    },
+    "crontab": {
+      "image": "cyberlab-aio",
+      "bytes": 463,
+      "via": "--help",
+      "version": "version: No such file or directory"
+    },
+    "csplit": {
+      "image": "cyberlab-aio",
+      "bytes": 1472,
+      "via": "--help",
+      "version": "csplit (GNU coreutils) 9.1"
+    },
+    "ctrlaltdel": {
+      "image": "cyberlab-aio",
+      "bytes": 193,
+      "via": "--help",
+      "version": "ctrlaltdel from util-linux 2.38.1"
+    },
+    "ctstat": {
+      "image": "cyberlab-aio",
+      "bytes": 672,
+      "via": "--help",
+      "version": "ctstat Version 6.1.0"
     },
     "curl": {
       "image": "cyberlab-aio",
@@ -54,11 +750,137 @@
       "via": "--help",
       "version": "curl 7.88.1 (x86_64-pc-linux-gnu) libcurl/7.88.1 OpenSSL/3.0.20 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3 OpenLDAP/2.5.13"
     },
+    "cut": {
+      "image": "cyberlab-aio",
+      "bytes": 1782,
+      "via": "--help",
+      "version": "cut (GNU coreutils) 9.1"
+    },
+    "cvtsudoers": {
+      "image": "cyberlab-aio",
+      "bytes": 1329,
+      "via": "--help",
+      "version": "cvtsudoers version 1.9.13p3"
+    },
     "cyberchef": {
       "image": "cyberlab-aio",
       "bytes": 176,
       "via": "--help",
       "version": ""
+    },
+    "date": {
+      "image": "cyberlab-aio",
+      "bytes": 4875,
+      "via": "--help",
+      "version": "date (GNU coreutils) 9.1"
+    },
+    "dcb": {
+      "image": "cyberlab-aio",
+      "bytes": 361,
+      "via": "--help",
+      "version": "dcb: unrecognized option '--version'"
+    },
+    "dd": {
+      "image": "cyberlab-aio",
+      "bytes": 3296,
+      "via": "--help",
+      "version": "dd (coreutils) 9.1"
+    },
+    "deb-systemd-helper": {
+      "image": "cyberlab-aio",
+      "bytes": 197,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debconf": {
+      "image": "cyberlab-aio",
+      "bytes": 252,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debconf-communicate": {
+      "image": "cyberlab-aio",
+      "bytes": 196,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debconf-copydb": {
+      "image": "cyberlab-aio",
+      "bytes": 123,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debconf-escape": {
+      "image": "cyberlab-aio",
+      "bytes": 168,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debconf-set-selections": {
+      "image": "cyberlab-aio",
+      "bytes": 222,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debconf-show": {
+      "image": "cyberlab-aio",
+      "bytes": 148,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "debugfs": {
+      "image": "cyberlab-aio",
+      "bytes": 220,
+      "via": "--help",
+      "version": "debugfs 1.47.0 (5-Feb-2023)"
+    },
+    "delgroup": {
+      "image": "cyberlab-aio",
+      "bytes": 548,
+      "via": "--help",
+      "version": "deluser version 3.134"
+    },
+    "delpart": {
+      "image": "cyberlab-aio",
+      "bytes": 215,
+      "via": "--help",
+      "version": "delpart from util-linux 2.38.1"
+    },
+    "deluser": {
+      "image": "cyberlab-aio",
+      "bytes": 548,
+      "via": "--help",
+      "version": "deluser version 3.134"
+    },
+    "delv": {
+      "image": "cyberlab-aio",
+      "bytes": 2650,
+      "via": "--help",
+      "version": "Invalid option: --version"
+    },
+    "devlink": {
+      "image": "cyberlab-aio",
+      "bytes": 375,
+      "via": "--help",
+      "version": "devlink: unrecognized option '--version'"
+    },
+    "df": {
+      "image": "cyberlab-aio",
+      "bytes": 2430,
+      "via": "--help",
+      "version": "df (GNU coreutils) 9.1"
+    },
+    "dfir": {
+      "image": "cyberlab-aio",
+      "bytes": 1713,
+      "via": "--help",
+      "version": ""
+    },
+    "dh_perl_openssl": {
+      "image": "cyberlab-aio",
+      "bytes": 488,
+      "via": "--help",
+      "version": "Can't locate Debian/Debhelper/Dh_Lib.pm in @INC (you may need to install the Debian::Debhelper::Dh_Lib module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/bin/dh_perl_openssl line 6."
     },
     "die": {
       "image": "cyberlab-aio",
@@ -72,11 +894,269 @@
       "via": "--help",
       "version": "die 3.10"
     },
+    "diel": {
+      "image": "cyberlab-aio",
+      "bytes": 403,
+      "via": "--help",
+      "version": "Detect It Easy Lite v3.10"
+    },
+    "diff": {
+      "image": "cyberlab-aio",
+      "bytes": 5387,
+      "via": "--help",
+      "version": "diff (GNU diffutils) 3.8"
+    },
+    "diff3": {
+      "image": "cyberlab-aio",
+      "bytes": 1996,
+      "via": "--help",
+      "version": "diff3 (GNU diffutils) 3.8"
+    },
+    "dig": {
+      "image": "cyberlab-aio",
+      "bytes": 269,
+      "via": "--help",
+      "version": "Invalid option: --version"
+    },
+    "dir": {
+      "image": "cyberlab-aio",
+      "bytes": 7732,
+      "via": "--help",
+      "version": "dir (GNU coreutils) 9.1"
+    },
+    "dircolors": {
+      "image": "cyberlab-aio",
+      "bytes": 908,
+      "via": "--help",
+      "version": "dircolors (GNU coreutils) 9.1"
+    },
+    "dirmngr": {
+      "image": "cyberlab-aio",
+      "bytes": 3211,
+      "via": "--help",
+      "version": "dirmngr (GnuPG) 2.2.40"
+    },
+    "dirmngr-client": {
+      "image": "cyberlab-aio",
+      "bytes": 1333,
+      "via": "--help",
+      "version": "dirmngr-client (GnuPG) 2.2.40"
+    },
+    "dirname": {
+      "image": "cyberlab-aio",
+      "bytes": 691,
+      "via": "--help",
+      "version": "dirname (GNU coreutils) 9.1"
+    },
+    "dmesg": {
+      "image": "cyberlab-aio",
+      "bytes": 2915,
+      "via": "--help",
+      "version": "dmesg from util-linux 2.38.1"
+    },
+    "dnsdomainname": {
+      "image": "cyberlab-aio",
+      "bytes": 1487,
+      "via": "--help",
+      "version": "hostname 3.23"
+    },
+    "dnstap-read": {
+      "image": "cyberlab-aio",
+      "bytes": 198,
+      "via": "--help",
+      "version": ""
+    },
+    "domainname": {
+      "image": "cyberlab-aio",
+      "bytes": 1487,
+      "via": "--help",
+      "version": "hostname 3.23"
+    },
     "dotnet": {
       "image": "cyberlab-aio",
       "bytes": 950,
       "via": "--help",
       "version": ""
+    },
+    "dpkg": {
+      "image": "cyberlab-aio",
+      "bytes": 4837,
+      "via": "--help",
+      "version": "Debian 'dpkg' package management program version 1.21.23 (amd64)."
+    },
+    "dpkg-architecture": {
+      "image": "cyberlab-aio",
+      "bytes": 1544,
+      "via": "--help",
+      "version": "Debian dpkg-architecture version 1.21.23."
+    },
+    "dpkg-buildflags": {
+      "image": "cyberlab-aio",
+      "bytes": 960,
+      "via": "--help",
+      "version": "Debian dpkg-buildflags version 1.21.23."
+    },
+    "dpkg-buildpackage": {
+      "image": "cyberlab-aio",
+      "bytes": 5368,
+      "via": "--help",
+      "version": "Debian dpkg-buildpackage version 1.21.23."
+    },
+    "dpkg-checkbuilddeps": {
+      "image": "cyberlab-aio",
+      "bytes": 853,
+      "via": "--help",
+      "version": "Debian dpkg-checkbuilddeps version 1.21.23."
+    },
+    "dpkg-deb": {
+      "image": "cyberlab-aio",
+      "bytes": 2762,
+      "via": "--help",
+      "version": "Debian 'dpkg-deb' package archive backend version 1.21.23 (amd64)."
+    },
+    "dpkg-distaddfile": {
+      "image": "cyberlab-aio",
+      "bytes": 244,
+      "via": "--help",
+      "version": "Debian dpkg-distaddfile version 1.21.23."
+    },
+    "dpkg-divert": {
+      "image": "cyberlab-aio",
+      "bytes": 1367,
+      "via": "--help",
+      "version": "Debian dpkg-divert version 1.21.23 (amd64)."
+    },
+    "dpkg-genbuildinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 831,
+      "via": "--help",
+      "version": "Debian dpkg-genbuildinfo version 1.21.23."
+    },
+    "dpkg-genchanges": {
+      "image": "cyberlab-aio",
+      "bytes": 1763,
+      "via": "--help",
+      "version": "Debian dpkg-genchanges version 1.21.23."
+    },
+    "dpkg-gencontrol": {
+      "image": "cyberlab-aio",
+      "bytes": 1031,
+      "via": "--help",
+      "version": "Debian dpkg-gencontrol version 1.21.23."
+    },
+    "dpkg-gensymbols": {
+      "image": "cyberlab-aio",
+      "bytes": 1742,
+      "via": "--help",
+      "version": "Debian dpkg-gensymbols version 1.21.23."
+    },
+    "dpkg-maintscript-helper": {
+      "image": "cyberlab-aio",
+      "bytes": 933,
+      "via": "--help",
+      "version": "Debian dpkg-maintscript-helper version 1.21.23."
+    },
+    "dpkg-mergechangelogs": {
+      "image": "cyberlab-aio",
+      "bytes": 439,
+      "via": "--help",
+      "version": "Debian dpkg-mergechangelogs version 1.21.23."
+    },
+    "dpkg-name": {
+      "image": "cyberlab-aio",
+      "bytes": 594,
+      "via": "--help",
+      "version": "Debian dpkg-name version 1.21.23."
+    },
+    "dpkg-parsechangelog": {
+      "image": "cyberlab-aio",
+      "bytes": 1223,
+      "via": "--help",
+      "version": "Debian dpkg-parsechangelog version 1.21.23."
+    },
+    "dpkg-preconfigure": {
+      "image": "cyberlab-aio",
+      "bytes": 216,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "dpkg-query": {
+      "image": "cyberlab-aio",
+      "bytes": 1638,
+      "via": "--help",
+      "version": "Debian dpkg-query package management program query tool version 1.21.23 (amd64)."
+    },
+    "dpkg-realpath": {
+      "image": "cyberlab-aio",
+      "bytes": 339,
+      "via": "--help",
+      "version": "Debian dpkg-realpath version 1.21.23."
+    },
+    "dpkg-reconfigure": {
+      "image": "cyberlab-aio",
+      "bytes": 435,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "dpkg-scanpackages": {
+      "image": "cyberlab-aio",
+      "bytes": 632,
+      "via": "--help",
+      "version": "Debian dpkg-scanpackages version 1.21.23."
+    },
+    "dpkg-scansources": {
+      "image": "cyberlab-aio",
+      "bytes": 623,
+      "via": "--help",
+      "version": "Debian dpkg-scansources version 1.21.23."
+    },
+    "dpkg-shlibdeps": {
+      "image": "cyberlab-aio",
+      "bytes": 1581,
+      "via": "--help",
+      "version": "Debian dpkg-shlibdeps version 1.21.23."
+    },
+    "dpkg-source": {
+      "image": "cyberlab-aio",
+      "bytes": 4152,
+      "via": "--help",
+      "version": "Debian dpkg-source version 1.21.23."
+    },
+    "dpkg-split": {
+      "image": "cyberlab-aio",
+      "bytes": 1152,
+      "via": "--help",
+      "version": "Debian 'dpkg-split' package split/join tool; version 1.21.23 (amd64)."
+    },
+    "dpkg-statoverride": {
+      "image": "cyberlab-aio",
+      "bytes": 961,
+      "via": "--help",
+      "version": "Debian dpkg-statoverride version 1.21.23 (amd64)."
+    },
+    "dpkg-trigger": {
+      "image": "cyberlab-aio",
+      "bytes": 799,
+      "via": "--help",
+      "version": "Debian dpkg-trigger package trigger utility version 1.21.23 (amd64)."
+    },
+    "dpkg-vendor": {
+      "image": "cyberlab-aio",
+      "bytes": 448,
+      "via": "--help",
+      "version": "Debian dpkg-vendor version 1.21.23."
+    },
+    "dpl4hydra": {
+      "image": "cyberlab-aio",
+      "bytes": 1087,
+      "via": "--help",
+      "version": ""
+    },
+    "du": {
+      "image": "cyberlab-aio",
+      "bytes": 3797,
+      "via": "--help",
+      "version": "du (GNU coreutils) 9.1"
     },
     "dumpcap": {
       "image": "cyberlab-aio",
@@ -84,11 +1164,167 @@
       "via": "--help",
       "version": ""
     },
+    "dumpe2fs": {
+      "image": "cyberlab-aio",
+      "bytes": 138,
+      "via": "--help",
+      "version": "dumpe2fs 1.47.0 (5-Feb-2023)"
+    },
+    "dwp": {
+      "image": "cyberlab-aio",
+      "bytes": 425,
+      "via": "--help",
+      "version": "GNU dwp (GNU Binutils for Debian) 2.40"
+    },
+    "e2fsck": {
+      "image": "cyberlab-aio",
+      "bytes": 856,
+      "via": "--help",
+      "version": "e2fsck 1.47.0 (5-Feb-2023)"
+    },
+    "e2image": {
+      "image": "cyberlab-aio",
+      "bytes": 264,
+      "via": "--help",
+      "version": "e2image 1.47.0 (5-Feb-2023)"
+    },
+    "e2scrub": {
+      "image": "cyberlab-aio",
+      "bytes": 321,
+      "via": "--help",
+      "version": "e2scrub 1.47.0 (5-Feb-2023)"
+    },
+    "e2scrub_all": {
+      "image": "cyberlab-aio",
+      "bytes": 261,
+      "via": "--help",
+      "version": "e2scrub_all 1.47.0 (5-Feb-2023)"
+    },
+    "e2undo": {
+      "image": "cyberlab-aio",
+      "bytes": 122,
+      "via": "--help",
+      "version": ""
+    },
+    "e4crypt": {
+      "image": "cyberlab-aio",
+      "bytes": 345,
+      "via": "--help",
+      "version": "Unknown command: --version"
+    },
+    "e4defrag": {
+      "image": "cyberlab-aio",
+      "bytes": 165,
+      "via": "--help",
+      "version": "e4defrag 1.47.0 (5-Feb-2023)"
+    },
+    "easy_install-2.7": {
+      "image": "cyberlab-aio",
+      "bytes": 2101,
+      "via": "--help",
+      "version": "setuptools 41.2.0 from /usr/local/lib/python2.7/site-packages (Python 2.7)"
+    },
+    "echo": {
+      "image": "cyberlab-aio",
+      "bytes": 1282,
+      "via": "--help",
+      "version": "echo (GNU coreutils) 9.1"
+    },
     "editcap": {
       "image": "cyberlab-aio",
       "bytes": 7040,
       "via": "--help",
       "version": "Editcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
+    },
+    "editor": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "egrep": {
+      "image": "cyberlab-aio",
+      "bytes": 4041,
+      "via": "--help",
+      "version": "grep (GNU grep) 3.8"
+    },
+    "elfedit": {
+      "image": "cyberlab-aio",
+      "bytes": 1277,
+      "via": "--help",
+      "version": "GNU elfedit (GNU Binutils for Debian) 2.40"
+    },
+    "emldump": {
+      "image": "cyberlab-aio",
+      "bytes": 1292,
+      "via": "--help",
+      "version": "emldump.py 0.0.16"
+    },
+    "enc2xs": {
+      "image": "cyberlab-aio",
+      "bytes": 975,
+      "via": "--help",
+      "version": "/usr/bin/enc2xs version 2.24 calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "encguess": {
+      "image": "cyberlab-aio",
+      "bytes": 994,
+      "via": "--help",
+      "version": "/usr/bin/encguess version [unknown] calling Getopt::Std::getopts (version 1.13),"
+    },
+    "env": {
+      "image": "cyberlab-aio",
+      "bytes": 1472,
+      "via": "--help",
+      "version": "env (GNU coreutils) 9.1"
+    },
+    "esedbexport": {
+      "image": "cyberlab-aio",
+      "bytes": 1141,
+      "via": "--help",
+      "version": ""
+    },
+    "esedbinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 324,
+      "via": "--help",
+      "version": ""
+    },
+    "evtxexport": {
+      "image": "cyberlab-aio",
+      "bytes": 1774,
+      "via": "--help",
+      "version": ""
+    },
+    "evtxinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 611,
+      "via": "--help",
+      "version": ""
+    },
+    "ex": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "expand": {
+      "image": "cyberlab-aio",
+      "bytes": 1069,
+      "via": "--help",
+      "version": "expand (GNU coreutils) 9.1"
+    },
+    "expiry": {
+      "image": "cyberlab-aio",
+      "bytes": 289,
+      "via": "--help",
+      "version": "expiry: unrecognized option '--version'"
+    },
+    "expr": {
+      "image": "cyberlab-aio",
+      "bytes": 2156,
+      "via": "--help",
+      "version": "expr (GNU coreutils) 9.1"
     },
     "ezhexviewer": {
       "image": "cyberlab-aio",
@@ -96,17 +1332,149 @@
       "via": "--help",
       "version": ""
     },
+    "factor": {
+      "image": "cyberlab-aio",
+      "bytes": 483,
+      "via": "--help",
+      "version": "factor (GNU coreutils) 9.1"
+    },
+    "faillog": {
+      "image": "cyberlab-aio",
+      "bytes": 749,
+      "via": "--help",
+      "version": "faillog: unrecognized option '--version'"
+    },
+    "fallocate": {
+      "image": "cyberlab-aio",
+      "bytes": 931,
+      "via": "--help",
+      "version": "fallocate from util-linux 2.38.1"
+    },
+    "false": {
+      "image": "cyberlab-aio",
+      "bytes": 604,
+      "via": "--help",
+      "version": "false (GNU coreutils) 9.1"
+    },
+    "fc-cache": {
+      "image": "cyberlab-aio",
+      "bytes": 776,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-cat": {
+      "image": "cyberlab-aio",
+      "bytes": 424,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-conflist": {
+      "image": "cyberlab-aio",
+      "bytes": 205,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-list": {
+      "image": "cyberlab-aio",
+      "bytes": 521,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-match": {
+      "image": "cyberlab-aio",
+      "bytes": 571,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-pattern": {
+      "image": "cyberlab-aio",
+      "bytes": 455,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-query": {
+      "image": "cyberlab-aio",
+      "bytes": 454,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-scan": {
+      "image": "cyberlab-aio",
+      "bytes": 462,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fc-validate": {
+      "image": "cyberlab-aio",
+      "bytes": 451,
+      "via": "--help",
+      "version": "fontconfig version 2.14.1"
+    },
+    "fcat": {
+      "image": "cyberlab-aio",
+      "bytes": 759,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
     "ffind": {
       "image": "cyberlab-aio",
       "bytes": 748,
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
+    "fgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 4041,
+      "via": "--help",
+      "version": "grep (GNU grep) 3.8"
+    },
+    "fidentify": {
+      "image": "cyberlab-aio",
+      "bytes": 264,
+      "via": "--help",
+      "version": "fidentify 7.1, Data Recovery Utility, July 2019"
+    },
     "file": {
       "image": "cyberlab-aio",
       "bytes": 3189,
       "via": "--help",
       "version": "file-5.44"
+    },
+    "fincore": {
+      "image": "cyberlab-aio",
+      "bytes": 599,
+      "via": "--help",
+      "version": "fincore from util-linux 2.38.1"
+    },
+    "find": {
+      "image": "cyberlab-aio",
+      "bytes": 2110,
+      "via": "--help",
+      "version": "find (GNU findutils) 4.9.0"
+    },
+    "findfs": {
+      "image": "cyberlab-aio",
+      "bytes": 211,
+      "via": "--help",
+      "version": "findfs from util-linux 2.38.1"
+    },
+    "findmnt": {
+      "image": "cyberlab-aio",
+      "bytes": 4081,
+      "via": "--help",
+      "version": "findmnt from util-linux 2.38.1"
+    },
+    "fiwalk": {
+      "image": "cyberlab-aio",
+      "bytes": 1711,
+      "via": "--help",
+      "version": "SleuthKit Version: 4.11.1"
+    },
+    "flock": {
+      "image": "cyberlab-aio",
+      "bytes": 896,
+      "via": "--help",
+      "version": "flock from util-linux 2.38.1"
     },
     "floss": {
       "image": "cyberlab-aio",
@@ -120,11 +1488,29 @@
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
+    "fmt": {
+      "image": "cyberlab-aio",
+      "bytes": 1157,
+      "via": "--help",
+      "version": "fmt (GNU coreutils) 9.1"
+    },
+    "fold": {
+      "image": "cyberlab-aio",
+      "bytes": 666,
+      "via": "--help",
+      "version": "fold (GNU coreutils) 9.1"
+    },
     "foremost": {
       "image": "cyberlab-aio",
       "bytes": 830,
       "via": "-h",
       "version": "1.5.7"
+    },
+    "free": {
+      "image": "cyberlab-aio",
+      "bytes": 1074,
+      "via": "--help",
+      "version": "free from procps-ng 4.0.2"
     },
     "freshclam": {
       "image": "cyberlab-aio",
@@ -138,9 +1524,39 @@
       "via": "--help",
       "version": "17.16.3"
     },
+    "frida-apk": {
+      "image": "cyberlab-aio",
+      "bytes": 606,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-compile": {
+      "image": "cyberlab-aio",
+      "bytes": 1171,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-create": {
+      "image": "cyberlab-aio",
+      "bytes": 535,
+      "via": "--help",
+      "version": "17.16.3"
+    },
     "frida-discover": {
       "image": "cyberlab-aio",
       "bytes": 2991,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-itrace": {
+      "image": "cyberlab-aio",
+      "bytes": 3421,
+      "via": "--help",
+      "version": ""
+    },
+    "frida-join": {
+      "image": "cyberlab-aio",
+      "bytes": 3379,
       "via": "--help",
       "version": "17.16.3"
     },
@@ -150,9 +1566,21 @@
       "via": "--help",
       "version": "17.16.3"
     },
+    "frida-ls": {
+      "image": "cyberlab-aio",
+      "bytes": 1537,
+      "via": "--help",
+      "version": "17.16.3"
+    },
     "frida-ls-devices": {
       "image": "cyberlab-aio",
       "bytes": 270,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-pm": {
+      "image": "cyberlab-aio",
+      "bytes": 488,
       "via": "--help",
       "version": "17.16.3"
     },
@@ -162,11 +1590,77 @@
       "via": "--help",
       "version": "17.16.3"
     },
+    "frida-pull": {
+      "image": "cyberlab-aio",
+      "bytes": 1534,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-push": {
+      "image": "cyberlab-aio",
+      "bytes": 1533,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-rm": {
+      "image": "cyberlab-aio",
+      "bytes": 1642,
+      "via": "--help",
+      "version": "17.16.3"
+    },
+    "frida-strace": {
+      "image": "cyberlab-aio",
+      "bytes": 2134,
+      "via": "--help",
+      "version": "17.16.3"
+    },
     "frida-trace": {
       "image": "cyberlab-aio",
       "bytes": 4999,
       "via": "--help",
       "version": "17.16.3"
+    },
+    "fsck": {
+      "image": "cyberlab-aio",
+      "bytes": 969,
+      "via": "--help",
+      "version": "fsck from util-linux 2.38.1"
+    },
+    "fsck.cramfs": {
+      "image": "cyberlab-aio",
+      "bytes": 521,
+      "via": "--help",
+      "version": "fsck.cramfs from util-linux 2.38.1"
+    },
+    "fsck.ext2": {
+      "image": "cyberlab-aio",
+      "bytes": 862,
+      "via": "--help",
+      "version": "e2fsck 1.47.0 (5-Feb-2023)"
+    },
+    "fsck.ext3": {
+      "image": "cyberlab-aio",
+      "bytes": 862,
+      "via": "--help",
+      "version": "e2fsck 1.47.0 (5-Feb-2023)"
+    },
+    "fsck.ext4": {
+      "image": "cyberlab-aio",
+      "bytes": 862,
+      "via": "--help",
+      "version": "e2fsck 1.47.0 (5-Feb-2023)"
+    },
+    "fsck.minix": {
+      "image": "cyberlab-aio",
+      "bytes": 472,
+      "via": "--help",
+      "version": "fsck.minix from util-linux 2.38.1"
+    },
+    "fsfreeze": {
+      "image": "cyberlab-aio",
+      "bytes": 275,
+      "via": "--help",
+      "version": "fsfreeze from util-linux 2.38.1"
     },
     "fsstat": {
       "image": "cyberlab-aio",
@@ -174,11 +1668,449 @@
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
+    "fstrim": {
+      "image": "cyberlab-aio",
+      "bytes": 881,
+      "via": "--help",
+      "version": "fstrim from util-linux 2.38.1"
+    },
+    "ftguess": {
+      "image": "cyberlab-aio",
+      "bytes": 918,
+      "via": "--help",
+      "version": "ftguess 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools"
+    },
+    "fusermount": {
+      "image": "cyberlab-aio",
+      "bytes": 172,
+      "via": "--help",
+      "version": "fusermount3 version: 3.14.0"
+    },
+    "fusermount3": {
+      "image": "cyberlab-aio",
+      "bytes": 173,
+      "via": "--help",
+      "version": "fusermount3 version: 3.14.0"
+    },
+    "g++": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "g++-12": {
+      "image": "cyberlab-aio",
+      "bytes": 4096,
+      "via": "--help",
+      "version": "g++-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcc": {
+      "image": "cyberlab-aio",
+      "bytes": 4090,
+      "via": "--help",
+      "version": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcc-12": {
+      "image": "cyberlab-aio",
+      "bytes": 4096,
+      "via": "--help",
+      "version": "gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcc-ar": {
+      "image": "cyberlab-aio",
+      "bytes": 2205,
+      "via": "--help",
+      "version": "GNU ar (GNU Binutils for Debian) 2.40"
+    },
+    "gcc-ar-12": {
+      "image": "cyberlab-aio",
+      "bytes": 2205,
+      "via": "--help",
+      "version": "GNU ar (GNU Binutils for Debian) 2.40"
+    },
+    "gcc-nm": {
+      "image": "cyberlab-aio",
+      "bytes": 2911,
+      "via": "--help",
+      "version": "GNU nm (GNU Binutils for Debian) 2.40"
+    },
+    "gcc-nm-12": {
+      "image": "cyberlab-aio",
+      "bytes": 2911,
+      "via": "--help",
+      "version": "GNU nm (GNU Binutils for Debian) 2.40"
+    },
+    "gcc-ranlib": {
+      "image": "cyberlab-aio",
+      "bytes": 834,
+      "via": "--help",
+      "version": "GNU ranlib (GNU Binutils for Debian) 2.40"
+    },
+    "gcc-ranlib-12": {
+      "image": "cyberlab-aio",
+      "bytes": 834,
+      "via": "--help",
+      "version": "GNU ranlib (GNU Binutils for Debian) 2.40"
+    },
+    "gcov": {
+      "image": "cyberlab-aio",
+      "bytes": 1993,
+      "via": "--help",
+      "version": "gcov (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcov-12": {
+      "image": "cyberlab-aio",
+      "bytes": 1993,
+      "via": "--help",
+      "version": "gcov (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcov-dump": {
+      "image": "cyberlab-aio",
+      "bytes": 392,
+      "via": "--help",
+      "version": "gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcov-dump-12": {
+      "image": "cyberlab-aio",
+      "bytes": 392,
+      "via": "--help",
+      "version": "gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcov-tool": {
+      "image": "cyberlab-aio",
+      "bytes": 1350,
+      "via": "--help",
+      "version": "gcov-tool (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gcov-tool-12": {
+      "image": "cyberlab-aio",
+      "bytes": 1353,
+      "via": "--help",
+      "version": "gcov-tool-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "gencat": {
+      "image": "cyberlab-aio",
+      "bytes": 882,
+      "via": "--help",
+      "version": "gencat (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "genl": {
+      "image": "cyberlab-aio",
+      "bytes": 150,
+      "via": "-h",
+      "version": "Option \"--version\" is unknown, try \"genl -help\"."
+    },
+    "getcap": {
+      "image": "cyberlab-aio",
+      "bytes": 148,
+      "via": "--help",
+      "version": "version (No such file or directory)"
+    },
+    "getconf": {
+      "image": "cyberlab-aio",
+      "bytes": 295,
+      "via": "--help",
+      "version": "getconf (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "getent": {
+      "image": "cyberlab-aio",
+      "bytes": 819,
+      "via": "--help",
+      "version": "getent (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "getopt": {
+      "image": "cyberlab-aio",
+      "bytes": 903,
+      "via": "--help",
+      "version": "getopt from util-linux 2.38.1"
+    },
+    "getpcaps": {
+      "image": "cyberlab-aio",
+      "bytes": 472,
+      "via": "--help",
+      "version": "Cannot parse pid --version: (Invalid argument)"
+    },
+    "getty": {
+      "image": "cyberlab-aio",
+      "bytes": 2194,
+      "via": "--help",
+      "version": "getty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)"
+    },
+    "git": {
+      "image": "cyberlab-aio",
+      "bytes": 2160,
+      "via": "--help",
+      "version": "git version 2.39.5"
+    },
+    "git-receive-pack": {
+      "image": "cyberlab-aio",
+      "bytes": 163,
+      "via": "(no args)",
+      "version": "error: unknown option `version'"
+    },
+    "git-upload-archive": {
+      "image": "cyberlab-aio",
+      "bytes": 197,
+      "via": "-help",
+      "version": ""
+    },
+    "git-upload-pack": {
+      "image": "cyberlab-aio",
+      "bytes": 366,
+      "via": "-h",
+      "version": "error: unknown option `version'"
+    },
+    "gmake": {
+      "image": "cyberlab-aio",
+      "bytes": 2714,
+      "via": "--help",
+      "version": "GNU Make 4.3"
+    },
+    "gold": {
+      "image": "cyberlab-aio",
+      "bytes": 22864,
+      "via": "--help",
+      "version": "GNU gold (GNU Binutils for Debian 2.40) 1.16"
+    },
+    "gp-archive": {
+      "image": "cyberlab-aio",
+      "bytes": 2397,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-archive binutils version 2.40.00"
+    },
+    "gp-collect-app": {
+      "image": "cyberlab-aio",
+      "bytes": 4392,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-collect-app binutils version 2.40.00"
+    },
+    "gp-display-html": {
+      "image": "cyberlab-aio",
+      "bytes": 2761,
+      "via": "--help",
+      "version": "gp-display-html GNU binutils version 2.40.00"
+    },
+    "gp-display-src": {
+      "image": "cyberlab-aio",
+      "bytes": 1571,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-display-src binutils version 2.40.00"
+    },
+    "gp-display-text": {
+      "image": "cyberlab-aio",
+      "bytes": 1554,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-display-text binutils version 2.40.00"
+    },
+    "gpasswd": {
+      "image": "cyberlab-aio",
+      "bytes": 637,
+      "via": "--help",
+      "version": "gpasswd: unrecognized option '--version'"
+    },
+    "gpg": {
+      "image": "cyberlab-aio",
+      "bytes": 5008,
+      "via": "--help",
+      "version": "gpg (GnuPG) 2.2.40"
+    },
+    "gpg-agent": {
+      "image": "cyberlab-aio",
+      "bytes": 3366,
+      "via": "--help",
+      "version": "gpg-agent (GnuPG) 2.2.40"
+    },
+    "gpg-connect-agent": {
+      "image": "cyberlab-aio",
+      "bytes": 981,
+      "via": "--help",
+      "version": "gpg-connect-agent (GnuPG) 2.2.40"
+    },
+    "gpg-wks-server": {
+      "image": "cyberlab-aio",
+      "bytes": 1151,
+      "via": "--help",
+      "version": "gpg-wks-server (GnuPG) 2.2.40"
+    },
+    "gpg-zip": {
+      "image": "cyberlab-aio",
+      "bytes": 347,
+      "via": "--help",
+      "version": ""
+    },
+    "gpgcompose": {
+      "image": "cyberlab-aio",
+      "bytes": 1149,
+      "via": "--help",
+      "version": "Fatal: Unknown option: version"
+    },
+    "gpgconf": {
+      "image": "cyberlab-aio",
+      "bytes": 1650,
+      "via": "--help",
+      "version": "gpgconf (GnuPG) 2.2.40"
+    },
+    "gpgparsemail": {
+      "image": "cyberlab-aio",
+      "bytes": 485,
+      "via": "--help",
+      "version": "gpgparsemail: can't open '--version': No such file or directory"
+    },
+    "gpgsm": {
+      "image": "cyberlab-aio",
+      "bytes": 4606,
+      "via": "--help",
+      "version": "gpgsm (GnuPG) 2.2.40"
+    },
+    "gpgsplit": {
+      "image": "cyberlab-aio",
+      "bytes": 628,
+      "via": "--help",
+      "version": "gpgsplit (@GNUPG@) 2.2.40"
+    },
+    "gpgtar": {
+      "image": "cyberlab-aio",
+      "bytes": 1309,
+      "via": "--help",
+      "version": "gpgtar (GnuPG) 2.2.40"
+    },
+    "gpgv": {
+      "image": "cyberlab-aio",
+      "bytes": 793,
+      "via": "--help",
+      "version": "gpgv (GnuPG) 2.2.40"
+    },
+    "gprof": {
+      "image": "cyberlab-aio",
+      "bytes": 821,
+      "via": "--help",
+      "version": "GNU gprof (GNU Binutils for Debian) 2.40"
+    },
+    "gprofng": {
+      "image": "cyberlab-aio",
+      "bytes": 3287,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gprofng binutils version 2.40.00"
+    },
+    "grep": {
+      "image": "cyberlab-aio",
+      "bytes": 4041,
+      "via": "--help",
+      "version": "grep (GNU grep) 3.8"
+    },
+    "groupadd": {
+      "image": "cyberlab-aio",
+      "bytes": 810,
+      "via": "--help",
+      "version": "groupadd: unrecognized option '--version'"
+    },
+    "groupdel": {
+      "image": "cyberlab-aio",
+      "bytes": 336,
+      "via": "--help",
+      "version": "groupdel: unrecognized option '--version'"
+    },
+    "groupmems": {
+      "image": "cyberlab-aio",
+      "bytes": 578,
+      "via": "--help",
+      "version": "groupmems: unrecognized option '--version'"
+    },
+    "groupmod": {
+      "image": "cyberlab-aio",
+      "bytes": 780,
+      "via": "--help",
+      "version": "groupmod: unrecognized option '--version'"
+    },
+    "groups": {
+      "image": "cyberlab-aio",
+      "bytes": 496,
+      "via": "--help",
+      "version": "groups (GNU coreutils) 9.1"
+    },
+    "grpck": {
+      "image": "cyberlab-aio",
+      "bytes": 414,
+      "via": "--help",
+      "version": "grpck: unrecognized option '--version'"
+    },
+    "grpconv": {
+      "image": "cyberlab-aio",
+      "bytes": 158,
+      "via": "--help",
+      "version": "grpconv: unrecognized option '--version'"
+    },
+    "grpunconv": {
+      "image": "cyberlab-aio",
+      "bytes": 160,
+      "via": "--help",
+      "version": "grpunconv: unrecognized option '--version'"
+    },
+    "gunzip": {
+      "image": "cyberlab-aio",
+      "bytes": 1059,
+      "via": "--help",
+      "version": "gunzip (gzip) 1.12"
+    },
+    "gzexe": {
+      "image": "cyberlab-aio",
+      "bytes": 351,
+      "via": "--help",
+      "version": "gzexe (gzip) 1.12"
+    },
+    "gzip": {
+      "image": "cyberlab-aio",
+      "bytes": 1245,
+      "via": "--help",
+      "version": "gzip 1.12"
+    },
+    "h2ph": {
+      "image": "cyberlab-aio",
+      "bytes": 730,
+      "via": "--help",
+      "version": "/usr/bin/h2ph version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "h2xs": {
+      "image": "cyberlab-aio",
+      "bytes": 3037,
+      "via": "--help",
+      "version": "Defaulting to backwards compatibility with perl 5.36.0"
+    },
+    "hardlink": {
+      "image": "cyberlab-aio",
+      "bytes": 1718,
+      "via": "--help",
+      "version": "hardlink from util-linux 2.38.1"
+    },
     "hashcat": {
       "image": "cyberlab-aio",
       "bytes": 58909,
       "via": "--help",
       "version": "v6.2.6"
+    },
+    "hayabusa": {
+      "image": "cyberlab-aio",
+      "bytes": 1490,
+      "via": "help",
+      "version": "error: unexpected argument '--version' found"
+    },
+    "hcli": {
+      "image": "cyberlab-aio",
+      "bytes": 3022,
+      "via": "--help",
+      "version": "hcli, version 0.18.3"
+    },
+    "head": {
+      "image": "cyberlab-aio",
+      "bytes": 1394,
+      "via": "--help",
+      "version": "head (GNU coreutils) 9.1"
+    },
+    "hfind": {
+      "image": "cyberlab-aio",
+      "bytes": 672,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
     },
     "hivexsh": {
       "image": "cyberlab-aio",
@@ -186,11 +2118,47 @@
       "via": "help",
       "version": "hivexsh: failed to open hive file: version: No such file or directory"
     },
+    "host": {
+      "image": "cyberlab-aio",
+      "bytes": 1095,
+      "via": "--help",
+      "version": "host 9.18.49-1~deb12u1-Debian"
+    },
+    "hostid": {
+      "image": "cyberlab-aio",
+      "bytes": 394,
+      "via": "--help",
+      "version": "hostid (GNU coreutils) 9.1"
+    },
+    "hostname": {
+      "image": "cyberlab-aio",
+      "bytes": 1487,
+      "via": "--help",
+      "version": "hostname 3.23"
+    },
+    "httpx": {
+      "image": "cyberlab-aio",
+      "bytes": 4378,
+      "via": "--help",
+      "version": ""
+    },
+    "hwclock": {
+      "image": "cyberlab-aio",
+      "bytes": 1949,
+      "via": "--help",
+      "version": "hwclock from util-linux 2.38.1"
+    },
     "hydra": {
       "image": "cyberlab-aio",
       "bytes": 237,
       "via": "--help",
       "version": "Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway)."
+    },
+    "i386": {
+      "image": "cyberlab-aio",
+      "bytes": 1017,
+      "via": "--help",
+      "version": "i386 from util-linux 2.38.1"
     },
     "icat": {
       "image": "cyberlab-aio",
@@ -198,9 +2166,51 @@
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
+    "iconv": {
+      "image": "cyberlab-aio",
+      "bytes": 894,
+      "via": "--help",
+      "version": "iconv (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "iconvconfig": {
+      "image": "cyberlab-aio",
+      "bytes": 770,
+      "via": "--help",
+      "version": "iconvconfig (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "id": {
+      "image": "cyberlab-aio",
+      "bytes": 1023,
+      "via": "--help",
+      "version": "id (GNU coreutils) 9.1"
+    },
+    "ida-hcli": {
+      "image": "cyberlab-aio",
+      "bytes": 3022,
+      "via": "--help",
+      "version": "ida-hcli, version 0.18.3"
+    },
+    "idna": {
+      "image": "cyberlab-aio",
+      "bytes": 980,
+      "via": "--help",
+      "version": "idna 3.18"
+    },
+    "ifind": {
+      "image": "cyberlab-aio",
+      "bytes": 987,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
     "ils": {
       "image": "cyberlab-aio",
       "bytes": 1068,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "img_cat": {
+      "image": "cyberlab-aio",
+      "bytes": 435,
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
@@ -216,9 +2226,93 @@
       "via": "--help",
       "version": "INetSim 1.3.2 (2020-05-19) by Matthias Eckert & Thomas Hungenberg"
     },
+    "infocmp": {
+      "image": "cyberlab-aio",
+      "bytes": 1433,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "infotocap": {
+      "image": "cyberlab-aio",
+      "bytes": 1749,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "install": {
+      "image": "cyberlab-aio",
+      "bytes": 3240,
+      "via": "--help",
+      "version": "install (GNU coreutils) 9.1"
+    },
+    "instmodsh": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": ""
+    },
+    "invoke-rc.d": {
+      "image": "cyberlab-aio",
+      "bytes": 1574,
+      "via": "--help",
+      "version": "invoke-rc.d: syntax error: unknown option \"--version\""
+    },
+    "ionice": {
+      "image": "cyberlab-aio",
+      "bytes": 853,
+      "via": "--help",
+      "version": "ionice from util-linux 2.38.1"
+    },
+    "ip": {
+      "image": "cyberlab-aio",
+      "bytes": 971,
+      "via": "--help",
+      "version": "Option \"-version\" is unknown, try \"ip -help\"."
+    },
+    "ipcmk": {
+      "image": "cyberlab-aio",
+      "bytes": 570,
+      "via": "--help",
+      "version": "ipcmk from util-linux 2.38.1"
+    },
+    "ipcrm": {
+      "image": "cyberlab-aio",
+      "bytes": 678,
+      "via": "--help",
+      "version": "ipcrm from util-linux 2.38.1"
+    },
+    "ipcs": {
+      "image": "cyberlab-aio",
+      "bytes": 782,
+      "via": "--help",
+      "version": "ipcs from util-linux 2.38.1"
+    },
+    "ischroot": {
+      "image": "cyberlab-aio",
+      "bytes": 240,
+      "via": "--help",
+      "version": "Debian ischroot, version 5.7Copyright (C) 2011 Aurelien Jarno"
+    },
+    "isosize": {
+      "image": "cyberlab-aio",
+      "bytes": 339,
+      "via": "--help",
+      "version": "isosize from util-linux 2.38.1"
+    },
     "istat": {
       "image": "cyberlab-aio",
       "bytes": 1004,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "jcat": {
+      "image": "cyberlab-aio",
+      "bytes": 575,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "jls": {
+      "image": "cyberlab-aio",
+      "bytes": 469,
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
@@ -228,11 +2322,341 @@
       "via": "(no args)",
       "version": "stat: version: No such file or directory"
     },
+    "join": {
+      "image": "cyberlab-aio",
+      "bytes": 2531,
+      "via": "--help",
+      "version": "join (GNU coreutils) 9.1"
+    },
+    "json_pp": {
+      "image": "cyberlab-aio",
+      "bytes": 135,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "kbxutil": {
+      "image": "cyberlab-aio",
+      "bytes": 856,
+      "via": "--help",
+      "version": "kbxutil (GnuPG) 2.2.40"
+    },
+    "kill": {
+      "image": "cyberlab-aio",
+      "bytes": 519,
+      "via": "--help",
+      "version": "kill from procps-ng 4.0.2"
+    },
+    "last": {
+      "image": "cyberlab-aio",
+      "bytes": 1142,
+      "via": "--help",
+      "version": "last from util-linux 2.38.1"
+    },
+    "lastb": {
+      "image": "cyberlab-aio",
+      "bytes": 1143,
+      "via": "--help",
+      "version": "lastb from util-linux 2.38.1"
+    },
+    "lastlog": {
+      "image": "cyberlab-aio",
+      "bytes": 565,
+      "via": "--help",
+      "version": "lastlog: unrecognized option '--version'"
+    },
+    "lcf": {
+      "image": "cyberlab-aio",
+      "bytes": 668,
+      "via": "--help",
+      "version": "lcf: unrecognized option '--version'"
+    },
+    "ld": {
+      "image": "cyberlab-aio",
+      "bytes": 32569,
+      "via": "--help",
+      "version": "GNU ld (GNU Binutils for Debian) 2.40"
+    },
+    "ld.bfd": {
+      "image": "cyberlab-aio",
+      "bytes": 32585,
+      "via": "--help",
+      "version": "GNU ld (GNU Binutils for Debian) 2.40"
+    },
+    "ld.gold": {
+      "image": "cyberlab-aio",
+      "bytes": 22873,
+      "via": "--help",
+      "version": "GNU gold (GNU Binutils for Debian 2.40) 1.16"
+    },
+    "ld.so": {
+      "image": "cyberlab-aio",
+      "bytes": 2477,
+      "via": "--help",
+      "version": "ld.so (Debian GLIBC 2.36-9+deb12u14) stable release version 2.36."
+    },
+    "ldattach": {
+      "image": "cyberlab-aio",
+      "bytes": 1341,
+      "via": "--help",
+      "version": "ldattach from util-linux 2.38.1"
+    },
+    "ldconfig": {
+      "image": "cyberlab-aio",
+      "bytes": 1134,
+      "via": "--help",
+      "version": "ldconfig (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "ldd": {
+      "image": "cyberlab-aio",
+      "bytes": 440,
+      "via": "--help",
+      "version": "ldd (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "less": {
+      "image": "cyberlab-aio",
+      "bytes": 13066,
+      "via": "--help",
+      "version": "version: No such file or directory"
+    },
+    "libnetcfg": {
+      "image": "cyberlab-aio",
+      "bytes": 1002,
+      "via": "--help",
+      "version": "/usr/bin/libnetcfg version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "link": {
+      "image": "cyberlab-aio",
+      "bytes": 416,
+      "via": "--help",
+      "version": "link (GNU coreutils) 9.1"
+    },
+    "linux32": {
+      "image": "cyberlab-aio",
+      "bytes": 1020,
+      "via": "--help",
+      "version": "linux32 from util-linux 2.38.1"
+    },
+    "linux64": {
+      "image": "cyberlab-aio",
+      "bytes": 1020,
+      "via": "--help",
+      "version": "linux64 from util-linux 2.38.1"
+    },
+    "ln": {
+      "image": "cyberlab-aio",
+      "bytes": 2880,
+      "via": "--help",
+      "version": "ln (GNU coreutils) 9.1"
+    },
+    "lnstat": {
+      "image": "cyberlab-aio",
+      "bytes": 672,
+      "via": "--help",
+      "version": "lnstat Version 6.1.0"
+    },
+    "locale": {
+      "image": "cyberlab-aio",
+      "bytes": 679,
+      "via": "--help",
+      "version": "locale (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "localedef": {
+      "image": "cyberlab-aio",
+      "bytes": 2284,
+      "via": "--help",
+      "version": "localedef (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "log2timeline": {
+      "image": "cyberlab-aio",
+      "bytes": 18612,
+      "via": "--help",
+      "version": "plaso - log2timeline version 20260512"
+    },
     "log2timeline.py": {
       "image": "cyberlab-aio",
       "bytes": 18762,
       "via": "--help",
       "version": "plaso - log2timeline version 20260512"
+    },
+    "logger": {
+      "image": "cyberlab-aio",
+      "bytes": 1688,
+      "via": "--help",
+      "version": "logger from util-linux 2.38.1"
+    },
+    "logname": {
+      "image": "cyberlab-aio",
+      "bytes": 358,
+      "via": "--help",
+      "version": "logname (GNU coreutils) 9.1"
+    },
+    "logrotate": {
+      "image": "cyberlab-aio",
+      "bytes": 824,
+      "via": "--help",
+      "version": "logrotate 3.21.0"
+    },
+    "logsave": {
+      "image": "cyberlab-aio",
+      "bytes": 192,
+      "via": "--help",
+      "version": ""
+    },
+    "losetup": {
+      "image": "cyberlab-aio",
+      "bytes": 2079,
+      "via": "--help",
+      "version": "losetup from util-linux 2.38.1"
+    },
+    "lowntfs-3g": {
+      "image": "cyberlab-aio",
+      "bytes": 707,
+      "via": "--help",
+      "version": "lowntfs-3g 2022.10.3 integrated FUSE 28"
+    },
+    "ls": {
+      "image": "cyberlab-aio",
+      "bytes": 7729,
+      "via": "--help",
+      "version": "ls (GNU coreutils) 9.1"
+    },
+    "lsattr": {
+      "image": "cyberlab-aio",
+      "bytes": 159,
+      "via": "(no args)",
+      "version": "lsattr 1.47.0 (5-Feb-2023)"
+    },
+    "lsblk": {
+      "image": "cyberlab-aio",
+      "bytes": 4109,
+      "via": "--help",
+      "version": "lsblk from util-linux 2.38.1"
+    },
+    "lscpu": {
+      "image": "cyberlab-aio",
+      "bytes": 2352,
+      "via": "--help",
+      "version": "lscpu from util-linux 2.38.1"
+    },
+    "lsfd": {
+      "image": "cyberlab-aio",
+      "bytes": 2524,
+      "via": "--help",
+      "version": "lsfd from util-linux 2.38.1"
+    },
+    "lsipc": {
+      "image": "cyberlab-aio",
+      "bytes": 2650,
+      "via": "--help",
+      "version": "lsipc from util-linux 2.38.1"
+    },
+    "lsirq": {
+      "image": "cyberlab-aio",
+      "bytes": 574,
+      "via": "--help",
+      "version": "lsirq from util-linux 2.38.1"
+    },
+    "lslocks": {
+      "image": "cyberlab-aio",
+      "bytes": 1209,
+      "via": "--help",
+      "version": "lslocks from util-linux 2.38.1"
+    },
+    "lslogins": {
+      "image": "cyberlab-aio",
+      "bytes": 2883,
+      "via": "--help",
+      "version": "lslogins from util-linux 2.38.1"
+    },
+    "lsmem": {
+      "image": "cyberlab-aio",
+      "bytes": 1125,
+      "via": "--help",
+      "version": "lsmem from util-linux 2.38.1"
+    },
+    "lsns": {
+      "image": "cyberlab-aio",
+      "bytes": 1395,
+      "via": "--help",
+      "version": "lsns from util-linux 2.38.1"
+    },
+    "lspgpot": {
+      "image": "cyberlab-aio",
+      "bytes": 205,
+      "via": "help",
+      "version": ""
+    },
+    "lto-dump": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "lto-dump: fatal error: open version failed: No such file or directory"
+    },
+    "lto-dump-12": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "lto-dump-12: fatal error: open version failed: No such file or directory"
+    },
+    "lzcat": {
+      "image": "cyberlab-aio",
+      "bytes": 1432,
+      "via": "--help",
+      "version": "xz (XZ Utils) 5.4.1"
+    },
+    "lzcmp": {
+      "image": "cyberlab-aio",
+      "bytes": 349,
+      "via": "--help",
+      "version": "xzcmp (XZ Utils) 5.4.1"
+    },
+    "lzdiff": {
+      "image": "cyberlab-aio",
+      "bytes": 352,
+      "via": "--help",
+      "version": "xzdiff (XZ Utils) 5.4.1"
+    },
+    "lzegrep": {
+      "image": "cyberlab-aio",
+      "bytes": 231,
+      "via": "--help",
+      "version": "xzegrep (XZ Utils) 5.4.1"
+    },
+    "lzfgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 231,
+      "via": "--help",
+      "version": "xzfgrep (XZ Utils) 5.4.1"
+    },
+    "lzgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 227,
+      "via": "--help",
+      "version": "xzgrep (XZ Utils) 5.4.1"
+    },
+    "lzless": {
+      "image": "cyberlab-aio",
+      "bytes": 184,
+      "via": "--help",
+      "version": "xzless (XZ Utils) 5.4.1"
+    },
+    "lzma": {
+      "image": "cyberlab-aio",
+      "bytes": 1431,
+      "via": "--help",
+      "version": "xz (XZ Utils) 5.4.1"
+    },
+    "lzmainfo": {
+      "image": "cyberlab-aio",
+      "bytes": 253,
+      "via": "--help",
+      "version": "lzmainfo (XZ Utils) 5.4.1"
+    },
+    "lzmore": {
+      "image": "cyberlab-aio",
+      "bytes": 147,
+      "via": "--help",
+      "version": "xzmore (XZ Utils) 5.4.1"
     },
     "mactime": {
       "image": "cyberlab-aio",
@@ -240,17 +2664,209 @@
       "via": "--help",
       "version": "Unknown option: --version"
     },
+    "make": {
+      "image": "cyberlab-aio",
+      "bytes": 2713,
+      "via": "--help",
+      "version": "GNU Make 4.3"
+    },
+    "markdown-it": {
+      "image": "cyberlab-aio",
+      "bytes": 707,
+      "via": "--help",
+      "version": "markdown-it-py [version 4.2.0]"
+    },
+    "mawk": {
+      "image": "cyberlab-aio",
+      "bytes": 1154,
+      "via": "(no args)",
+      "version": "mawk: not an option: --version"
+    },
+    "mcookie": {
+      "image": "cyberlab-aio",
+      "bytes": 471,
+      "via": "--help",
+      "version": "mcookie from util-linux 2.38.1"
+    },
+    "md5sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1594,
+      "via": "--help",
+      "version": "md5sum (GNU coreutils) 9.1"
+    },
+    "md5sum.textutils": {
+      "image": "cyberlab-aio",
+      "bytes": 1604,
+      "via": "--help",
+      "version": "md5sum (GNU coreutils) 9.1"
+    },
+    "mdig": {
+      "image": "cyberlab-aio",
+      "bytes": 175,
+      "via": "--help",
+      "version": "Invalid option: --version"
+    },
     "mergecap": {
       "image": "cyberlab-aio",
       "bytes": 953,
       "via": "--help",
       "version": "Mergecap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
     },
+    "mesg": {
+      "image": "cyberlab-aio",
+      "bytes": 236,
+      "via": "--help",
+      "version": "mesg from util-linux 2.38.1"
+    },
+    "migrate-pubring-from-classic-gpg": {
+      "image": "cyberlab-aio",
+      "bytes": 230,
+      "via": "--help",
+      "version": "There is no --version/pubring.gpg, no need to migrate"
+    },
+    "mkdir": {
+      "image": "cyberlab-aio",
+      "bytes": 1004,
+      "via": "--help",
+      "version": "mkdir (GNU coreutils) 9.1"
+    },
+    "mke2fs": {
+      "image": "cyberlab-aio",
+      "bytes": 510,
+      "via": "--help",
+      "version": "mke2fs 1.47.0 (5-Feb-2023)"
+    },
+    "mkfifo": {
+      "image": "cyberlab-aio",
+      "bytes": 737,
+      "via": "--help",
+      "version": "mkfifo (GNU coreutils) 9.1"
+    },
+    "mkfs": {
+      "image": "cyberlab-aio",
+      "bytes": 570,
+      "via": "--help",
+      "version": "mkfs from util-linux 2.38.1"
+    },
+    "mkfs.bfs": {
+      "image": "cyberlab-aio",
+      "bytes": 491,
+      "via": "--help",
+      "version": "mkfs.bfs from util-linux 2.38.1"
+    },
+    "mkfs.cramfs": {
+      "image": "cyberlab-aio",
+      "bytes": 851,
+      "via": "--help",
+      "version": "mkfs.cramfs from util-linux 2.38.1"
+    },
+    "mkfs.ext2": {
+      "image": "cyberlab-aio",
+      "bytes": 516,
+      "via": "--help",
+      "version": "mke2fs 1.47.0 (5-Feb-2023)"
+    },
+    "mkfs.ext3": {
+      "image": "cyberlab-aio",
+      "bytes": 516,
+      "via": "--help",
+      "version": "mke2fs 1.47.0 (5-Feb-2023)"
+    },
+    "mkfs.ext4": {
+      "image": "cyberlab-aio",
+      "bytes": 516,
+      "via": "--help",
+      "version": "mke2fs 1.47.0 (5-Feb-2023)"
+    },
+    "mkfs.minix": {
+      "image": "cyberlab-aio",
+      "bytes": 613,
+      "via": "--help",
+      "version": "mkfs.minix from util-linux 2.38.1"
+    },
+    "mkfs.ntfs": {
+      "image": "cyberlab-aio",
+      "bytes": 1517,
+      "via": "--help",
+      "version": "Failed to access 'version': No such file or directory"
+    },
+    "mknod": {
+      "image": "cyberlab-aio",
+      "bytes": 1328,
+      "via": "--help",
+      "version": "mknod (GNU coreutils) 9.1"
+    },
+    "mkntfs": {
+      "image": "cyberlab-aio",
+      "bytes": 1517,
+      "via": "--help",
+      "version": "Failed to access 'version': No such file or directory"
+    },
+    "mkswap": {
+      "image": "cyberlab-aio",
+      "bytes": 729,
+      "via": "--help",
+      "version": "mkswap from util-linux 2.38.1"
+    },
+    "mktemp": {
+      "image": "cyberlab-aio",
+      "bytes": 1567,
+      "via": "--help",
+      "version": "mktemp (GNU coreutils) 9.1"
+    },
+    "mmcat": {
+      "image": "cyberlab-aio",
+      "bytes": 516,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
     "mmls": {
       "image": "cyberlab-aio",
       "bytes": 796,
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "mmstat": {
+      "image": "cyberlab-aio",
+      "bytes": 503,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "more": {
+      "image": "cyberlab-aio",
+      "bytes": 891,
+      "via": "--help",
+      "version": "more from util-linux 2.38.1"
+    },
+    "mount": {
+      "image": "cyberlab-aio",
+      "bytes": 3068,
+      "via": "--help",
+      "version": "mount from util-linux 2.38.1 (libmount 2.38.1: selinux, smack, btrfs, verity, namespaces, assert, debug)"
+    },
+    "mount.lowntfs-3g": {
+      "image": "cyberlab-aio",
+      "bytes": 707,
+      "via": "--help",
+      "version": "lowntfs-3g 2022.10.3 integrated FUSE 28"
+    },
+    "mount.ntfs": {
+      "image": "cyberlab-aio",
+      "bytes": 698,
+      "via": "--help",
+      "version": "ntfs-3g 2022.10.3 integrated FUSE 28"
+    },
+    "mount.ntfs-3g": {
+      "image": "cyberlab-aio",
+      "bytes": 698,
+      "via": "--help",
+      "version": "ntfs-3g 2022.10.3 integrated FUSE 28"
+    },
+    "mountpoint": {
+      "image": "cyberlab-aio",
+      "bytes": 475,
+      "via": "--help",
+      "version": "mountpoint from util-linux 2.38.1"
     },
     "mraptor": {
       "image": "cyberlab-aio",
@@ -264,11 +2880,95 @@
       "via": "--help",
       "version": ""
     },
+    "msoffcrypto-tool": {
+      "image": "cyberlab-aio",
+      "bytes": 505,
+      "via": "--help",
+      "version": ""
+    },
+    "mv": {
+      "image": "cyberlab-aio",
+      "bytes": 2116,
+      "via": "--help",
+      "version": "mv (GNU coreutils) 9.1"
+    },
+    "namei": {
+      "image": "cyberlab-aio",
+      "bytes": 540,
+      "via": "--help",
+      "version": "namei from util-linux 2.38.1"
+    },
+    "nawk": {
+      "image": "cyberlab-aio",
+      "bytes": 1154,
+      "via": "(no args)",
+      "version": "nawk: not an option: --version"
+    },
+    "ncurses5-config": {
+      "image": "cyberlab-aio",
+      "bytes": 1265,
+      "via": "--help",
+      "version": "6.4.20221231"
+    },
+    "ncurses6-config": {
+      "image": "cyberlab-aio",
+      "bytes": 1265,
+      "via": "--help",
+      "version": "6.4.20221231"
+    },
+    "ncursesw5-config": {
+      "image": "cyberlab-aio",
+      "bytes": 1280,
+      "via": "--help",
+      "version": "6.4.20221231"
+    },
+    "ncursesw6-config": {
+      "image": "cyberlab-aio",
+      "bytes": 1280,
+      "via": "--help",
+      "version": "6.4.20221231"
+    },
+    "net-server": {
+      "image": "cyberlab-aio",
+      "bytes": 2246,
+      "via": "--help",
+      "version": ""
+    },
+    "newusers": {
+      "image": "cyberlab-aio",
+      "bytes": 262,
+      "via": "--help",
+      "version": "newusers: unrecognized option '--version'"
+    },
     "ngrep": {
       "image": "cyberlab-aio",
       "bytes": 1702,
       "via": "--help",
       "version": "ngrep: V1.47.1-git, libpcap version 1.10.3 (with TPACKET_V3)"
+    },
+    "nice": {
+      "image": "cyberlab-aio",
+      "bytes": 892,
+      "via": "--help",
+      "version": "nice (GNU coreutils) 9.1"
+    },
+    "nisdomainname": {
+      "image": "cyberlab-aio",
+      "bytes": 1487,
+      "via": "--help",
+      "version": "hostname 3.23"
+    },
+    "nl": {
+      "image": "cyberlab-aio",
+      "bytes": 1978,
+      "via": "--help",
+      "version": "nl (GNU coreutils) 9.1"
+    },
+    "nm": {
+      "image": "cyberlab-aio",
+      "bytes": 2893,
+      "via": "--help",
+      "version": "GNU nm (GNU Binutils for Debian) 2.40"
     },
     "nmap": {
       "image": "cyberlab-aio",
@@ -276,11 +2976,47 @@
       "via": "--help",
       "version": "Nmap version 7.93 ( https://nmap.org )"
     },
+    "nohup": {
+      "image": "cyberlab-aio",
+      "bytes": 875,
+      "via": "--help",
+      "version": "nohup (GNU coreutils) 9.1"
+    },
     "nping": {
       "image": "cyberlab-aio",
       "bytes": 6787,
       "via": "--help",
       "version": "Failed to resolve given hostname/IP: version.  Note that you can't use '/mask' AND '1-4,7,100-' style IP ranges"
+    },
+    "nproc": {
+      "image": "cyberlab-aio",
+      "bytes": 568,
+      "via": "--help",
+      "version": "nproc (GNU coreutils) 9.1"
+    },
+    "nsenter": {
+      "image": "cyberlab-aio",
+      "bytes": 1178,
+      "via": "--help",
+      "version": "nsenter from util-linux 2.38.1"
+    },
+    "nslookup": {
+      "image": "cyberlab-aio",
+      "bytes": 332,
+      "via": "help",
+      "version": "*** Invalid option: -version"
+    },
+    "nstat": {
+      "image": "cyberlab-aio",
+      "bytes": 540,
+      "via": "--help",
+      "version": "nstat utility, iproute2-6.1.0"
+    },
+    "nsupdate": {
+      "image": "cyberlab-aio",
+      "bytes": 193,
+      "via": "--help",
+      "version": "nsupdate 9.18.49-1~deb12u1-Debian"
     },
     "ntfs-3g": {
       "image": "cyberlab-aio",
@@ -288,17 +3024,161 @@
       "via": "--help",
       "version": "ntfs-3g 2022.10.3 integrated FUSE 28"
     },
+    "ntfs-3g.probe": {
+      "image": "cyberlab-aio",
+      "bytes": 282,
+      "via": "--help",
+      "version": "ntfs-3g.probe: Unknown option '--version'."
+    },
+    "ntfscat": {
+      "image": "cyberlab-aio",
+      "bytes": 563,
+      "via": "--help",
+      "version": ""
+    },
+    "ntfsclone": {
+      "image": "cyberlab-aio",
+      "bytes": 1401,
+      "via": "--help",
+      "version": "ntfsclone v2022.10.3 (libntfs-3g)"
+    },
+    "ntfscluster": {
+      "image": "cyberlab-aio",
+      "bytes": 684,
+      "via": "--help",
+      "version": "The device version doesn't exist"
+    },
+    "ntfscmp": {
+      "image": "cyberlab-aio",
+      "bytes": 386,
+      "via": "--help",
+      "version": "ntfscmp: unrecognized option '--version'"
+    },
+    "ntfscp": {
+      "image": "cyberlab-aio",
+      "bytes": 699,
+      "via": "--help",
+      "version": ""
+    },
+    "ntfsdecrypt": {
+      "image": "cyberlab-aio",
+      "bytes": 570,
+      "via": "--help",
+      "version": ""
+    },
+    "ntfsfallocate": {
+      "image": "cyberlab-aio",
+      "bytes": 801,
+      "via": "--help",
+      "version": "ntfsfallocate v2022.10.3 (libntfs-3g)"
+    },
+    "ntfsfix": {
+      "image": "cyberlab-aio",
+      "bytes": 519,
+      "via": "--help",
+      "version": "ntfsfix v2022.10.3"
+    },
+    "ntfsinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 579,
+      "via": "--help",
+      "version": ""
+    },
+    "ntfslabel": {
+      "image": "cyberlab-aio",
+      "bytes": 515,
+      "via": "--help",
+      "version": "The device version doesn't exist"
+    },
+    "ntfsls": {
+      "image": "cyberlab-aio",
+      "bytes": 829,
+      "via": "--help",
+      "version": "The device version doesn't exist"
+    },
+    "ntfsmove": {
+      "image": "cyberlab-aio",
+      "bytes": 726,
+      "via": "--help",
+      "version": ""
+    },
+    "ntfsrecover": {
+      "image": "cyberlab-aio",
+      "bytes": 846,
+      "via": "--help",
+      "version": "Failed to access 'version': No such file or directory"
+    },
+    "ntfsresize": {
+      "image": "cyberlab-aio",
+      "bytes": 1336,
+      "via": "--help",
+      "version": "ntfsresize v2022.10.3 (libntfs-3g)"
+    },
+    "ntfssecaudit": {
+      "image": "cyberlab-aio",
+      "bytes": 1257,
+      "via": "--help",
+      "version": "ntfssecaudit 1.5.0 : NTFS security data auditing"
+    },
+    "ntfstruncate": {
+      "image": "cyberlab-aio",
+      "bytes": 799,
+      "via": "--help",
+      "version": "ntfstruncate v2022.10.3 (libntfs-3g)"
+    },
+    "ntfsundelete": {
+      "image": "cyberlab-aio",
+      "bytes": 1220,
+      "via": "--help",
+      "version": "The device version doesn't exist"
+    },
+    "ntfsusermap": {
+      "image": "cyberlab-aio",
+      "bytes": 203,
+      "via": "(no args)",
+      "version": "Could not open \"--version\""
+    },
+    "ntfswipe": {
+      "image": "cyberlab-aio",
+      "bytes": 1050,
+      "via": "--help",
+      "version": "The device version doesn't exist"
+    },
+    "numbers-to-hex.py": {
+      "image": "cyberlab-aio",
+      "bytes": 881,
+      "via": "--help",
+      "version": "numbers-to-hex.py 0.0.4"
+    },
     "numbers-to-string.py": {
       "image": "cyberlab-aio",
       "bytes": 1331,
       "via": "--help",
       "version": "numbers-to-string.py 0.0.11"
     },
+    "numfmt": {
+      "image": "cyberlab-aio",
+      "bytes": 4444,
+      "via": "--help",
+      "version": "numfmt (GNU coreutils) 9.1"
+    },
+    "objcopy": {
+      "image": "cyberlab-aio",
+      "bytes": 8429,
+      "via": "--help",
+      "version": "GNU objcopy (GNU Binutils for Debian) 2.40"
+    },
     "objdump": {
       "image": "cyberlab-aio",
       "bytes": 7394,
       "via": "--help",
       "version": "GNU objdump (GNU Binutils for Debian) 2.40"
+    },
+    "od": {
+      "image": "cyberlab-aio",
+      "bytes": 3560,
+      "via": "--help",
+      "version": "od (GNU coreutils) 9.1"
     },
     "olebrowse": {
       "image": "cyberlab-aio",
@@ -311,6 +3191,12 @@
       "bytes": 594,
       "via": "--help",
       "version": "oledir 0.54 - http://decalage.info/python/oletools"
+    },
+    "oledump": {
+      "image": "cyberlab-aio",
+      "bytes": 2814,
+      "via": "--help",
+      "version": "oledump.py 0.0.85"
     },
     "oledump.py": {
       "image": "cyberlab-aio",
@@ -360,17 +3246,71 @@
       "via": "--help",
       "version": "olevba 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools"
     },
+    "openssl": {
+      "image": "cyberlab-aio",
+      "bytes": 2906,
+      "via": "--help",
+      "version": "Invalid command '--version'; type \"help\" for a list."
+    },
+    "p7zip": {
+      "image": "cyberlab-aio",
+      "bytes": 457,
+      "via": "--help",
+      "version": "/usr/bin/p7zip: ignoring unknown option --version"
+    },
+    "pager": {
+      "image": "cyberlab-aio",
+      "bytes": 13066,
+      "via": "--help",
+      "version": "version: No such file or directory"
+    },
+    "partx": {
+      "image": "cyberlab-aio",
+      "bytes": 1473,
+      "via": "--help",
+      "version": "partx from util-linux 2.38.1"
+    },
+    "passwd": {
+      "image": "cyberlab-aio",
+      "bytes": 1230,
+      "via": "--help",
+      "version": "passwd: unrecognized option '--version'"
+    },
+    "paste": {
+      "image": "cyberlab-aio",
+      "bytes": 787,
+      "via": "--help",
+      "version": "paste (GNU coreutils) 9.1"
+    },
     "patch": {
       "image": "cyberlab-aio",
       "bytes": 2955,
       "via": "--help",
       "version": "GNU patch 2.7.6"
     },
+    "pathchk": {
+      "image": "cyberlab-aio",
+      "bytes": 566,
+      "via": "--help",
+      "version": "pathchk (GNU coreutils) 9.1"
+    },
     "pcodedmp": {
       "image": "cyberlab-aio",
       "bytes": 573,
       "via": "--help",
       "version": "pcodedmp version 1.2.6"
+    },
+    "pdb3": {
+      "image": "cyberlab-aio",
+      "bytes": 539,
+      "via": "--help",
+      "version": "Error: version does not exist"
+    },
+    "pdb3.11": {
+      "image": "cyberlab-aio",
+      "bytes": 539,
+      "via": "--help",
+      "version": "Error: version does not exist"
     },
     "pdf-parser": {
       "image": "cyberlab-aio",
@@ -384,6 +3324,24 @@
       "via": "--help",
       "version": "pdf-parser.py 0.7.14"
     },
+    "pdfattach": {
+      "image": "cyberlab-aio",
+      "bytes": 530,
+      "via": "--help",
+      "version": "pdfattach version 22.12.0"
+    },
+    "pdfdetach": {
+      "image": "cyberlab-aio",
+      "bytes": 874,
+      "via": "--help",
+      "version": "pdfdetach version 22.12.0"
+    },
+    "pdffonts": {
+      "image": "cyberlab-aio",
+      "bytes": 639,
+      "via": "--help",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
     "pdfid": {
       "image": "cyberlab-aio",
       "bytes": 1700,
@@ -396,11 +3354,107 @@
       "via": "--help",
       "version": "pdfid.py 0.2.10"
     },
+    "pdfimages": {
+      "image": "cyberlab-aio",
+      "bytes": 1180,
+      "via": "--help",
+      "version": "pdfimages version 22.12.0"
+    },
+    "pdfinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 1458,
+      "via": "--help",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
+    "pdfseparate": {
+      "image": "cyberlab-aio",
+      "bytes": 520,
+      "via": "--help",
+      "version": "pdfseparate version 22.12.0"
+    },
+    "pdfsig": {
+      "image": "cyberlab-aio",
+      "bytes": 2001,
+      "via": "-h",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
+    "pdftocairo": {
+      "image": "cyberlab-aio",
+      "bytes": 3461,
+      "via": "--help",
+      "version": "pdftocairo version 22.12.0"
+    },
+    "pdftohtml": {
+      "image": "cyberlab-aio",
+      "bytes": 1782,
+      "via": "--help",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
+    "pdftoppm": {
+      "image": "cyberlab-aio",
+      "bytes": 4109,
+      "via": "--help",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
+    "pdftops": {
+      "image": "cyberlab-aio",
+      "bytes": 3513,
+      "via": "--help",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
+    "pdftotext": {
+      "image": "cyberlab-aio",
+      "bytes": 2176,
+      "via": "--help",
+      "version": "I/O Error: Couldn't open file '--version': No such file or directory."
+    },
+    "pdfunite": {
+      "image": "cyberlab-aio",
+      "bytes": 447,
+      "via": "--help",
+      "version": "pdfunite version 22.12.0"
+    },
     "perl": {
       "image": "cyberlab-aio",
       "bytes": 2023,
       "via": "--help",
       "version": "Summary of my perl5 (revision 5 version 36 subversion 0) configuration:"
+    },
+    "perl5.36-x86_64-linux-gnu": {
+      "image": "cyberlab-aio",
+      "bytes": 2044,
+      "via": "--help",
+      "version": "Summary of my perl5 (revision 5 version 36 subversion 0) configuration:"
+    },
+    "perl5.36.0": {
+      "image": "cyberlab-aio",
+      "bytes": 2029,
+      "via": "--help",
+      "version": "Summary of my perl5 (revision 5 version 36 subversion 0) configuration:"
+    },
+    "perlbug": {
+      "image": "cyberlab-aio",
+      "bytes": 2315,
+      "via": "--help",
+      "version": "perlbug version 1.42"
+    },
+    "perlivp": {
+      "image": "cyberlab-aio",
+      "bytes": 360,
+      "via": "--help",
+      "version": ""
+    },
+    "perlthanks": {
+      "image": "cyberlab-aio",
+      "bytes": 2327,
+      "via": "--help",
+      "version": "perlbug version 1.42"
+    },
+    "pgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 1786,
+      "via": "--help",
+      "version": "pgrep from procps-ng 4.0.2"
     },
     "photorec": {
       "image": "cyberlab-aio",
@@ -408,11 +3462,83 @@
       "via": "--help",
       "version": "PhotoRec 7.1, Data Recovery Utility, July 2019"
     },
+    "piconv": {
+      "image": "cyberlab-aio",
+      "bytes": 1276,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "pidof": {
+      "image": "cyberlab-aio",
+      "bytes": 533,
+      "via": "-h",
+      "version": ""
+    },
+    "pidwait": {
+      "image": "cyberlab-aio",
+      "bytes": 1592,
+      "via": "--help",
+      "version": "pidwait from procps-ng 4.0.2"
+    },
+    "pinentry": {
+      "image": "cyberlab-aio",
+      "bytes": 1081,
+      "via": "--help",
+      "version": "pinentry-curses (pinentry) 1.2.1"
+    },
+    "pinentry-curses": {
+      "image": "cyberlab-aio",
+      "bytes": 1081,
+      "via": "--help",
+      "version": "pinentry-curses (pinentry) 1.2.1"
+    },
+    "pinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 2702,
+      "via": "--help",
+      "version": "plaso - pinfo version 20260512"
+    },
     "pinfo.py": {
       "image": "cyberlab-aio",
       "bytes": 2717,
       "via": "--help",
       "version": "plaso - pinfo version 20260512"
+    },
+    "pinky": {
+      "image": "cyberlab-aio",
+      "bytes": 1065,
+      "via": "--help",
+      "version": "pinky (GNU coreutils) 9.1"
+    },
+    "pip": {
+      "image": "cyberlab-aio",
+      "bytes": 4639,
+      "via": "--help",
+      "version": "pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)"
+    },
+    "pip2.7": {
+      "image": "cyberlab-aio",
+      "bytes": 2901,
+      "via": "--help",
+      "version": "pip 19.2.3 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)"
+    },
+    "pip3": {
+      "image": "cyberlab-aio",
+      "bytes": 4640,
+      "via": "--help",
+      "version": "pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)"
+    },
+    "pip3.11": {
+      "image": "cyberlab-aio",
+      "bytes": 4643,
+      "via": "--help",
+      "version": "pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)"
+    },
+    "pivot_root": {
+      "image": "cyberlab-aio",
+      "bytes": 188,
+      "via": "--help",
+      "version": "pivot_root from util-linux 2.38.1"
     },
     "pkg-config": {
       "image": "cyberlab-aio",
@@ -420,11 +3546,275 @@
       "via": "--help",
       "version": "1.8.1"
     },
+    "pkgconf": {
+      "image": "cyberlab-aio",
+      "bytes": 5357,
+      "via": "--help",
+      "version": "1.8.1"
+    },
+    "pkill": {
+      "image": "cyberlab-aio",
+      "bytes": 1719,
+      "via": "--help",
+      "version": "pkill from procps-ng 4.0.2"
+    },
+    "pldd": {
+      "image": "cyberlab-aio",
+      "bytes": 309,
+      "via": "--help",
+      "version": "pldd (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "pmap": {
+      "image": "cyberlab-aio",
+      "bytes": 890,
+      "via": "--help",
+      "version": "pmap from procps-ng 4.0.2"
+    },
+    "pod2html": {
+      "image": "cyberlab-aio",
+      "bytes": 2048,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "pod2man": {
+      "image": "cyberlab-aio",
+      "bytes": 8667,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "pod2text": {
+      "image": "cyberlab-aio",
+      "bytes": 5309,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "pod2usage": {
+      "image": "cyberlab-aio",
+      "bytes": 1776,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "podchecker": {
+      "image": "cyberlab-aio",
+      "bytes": 550,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "pr": {
+      "image": "cyberlab-aio",
+      "bytes": 4162,
+      "via": "--help",
+      "version": "pr (GNU coreutils) 9.1"
+    },
+    "prefetch": {
+      "image": "cyberlab-aio",
+      "bytes": 293,
+      "via": "--help",
+      "version": ""
+    },
+    "printenv": {
+      "image": "cyberlab-aio",
+      "bytes": 734,
+      "via": "--help",
+      "version": "printenv (GNU coreutils) 9.1"
+    },
+    "printf": {
+      "image": "cyberlab-aio",
+      "bytes": 1646,
+      "via": "--help",
+      "version": "printf (GNU coreutils) 9.1"
+    },
+    "prlimit": {
+      "image": "cyberlab-aio",
+      "bytes": 1817,
+      "via": "--help",
+      "version": "prlimit from util-linux 2.38.1"
+    },
+    "prove": {
+      "image": "cyberlab-aio",
+      "bytes": 3059,
+      "via": "--help",
+      "version": "TAP::Harness v3.44 and Perl v5.36.0"
+    },
+    "ps": {
+      "image": "cyberlab-aio",
+      "bytes": 164,
+      "via": "--help",
+      "version": "ps from procps-ng 4.0.2"
+    },
+    "psort": {
+      "image": "cyberlab-aio",
+      "bytes": 9968,
+      "via": "--help",
+      "version": "plaso - psort version 20260512"
+    },
     "psort.py": {
       "image": "cyberlab-aio",
       "bytes": 10029,
       "via": "--help",
       "version": "plaso - psort version 20260512"
+    },
+    "pstat": {
+      "image": "cyberlab-aio",
+      "bytes": 496,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "ptar": {
+      "image": "cyberlab-aio",
+      "bytes": 1639,
+      "via": "--help",
+      "version": "/usr/bin/ptar version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "ptardiff": {
+      "image": "cyberlab-aio",
+      "bytes": 652,
+      "via": "--help",
+      "version": "/usr/bin/ptardiff version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "ptargrep": {
+      "image": "cyberlab-aio",
+      "bytes": 4453,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "ptx": {
+      "image": "cyberlab-aio",
+      "bytes": 1831,
+      "via": "--help",
+      "version": "ptx (GNU coreutils) 9.1"
+    },
+    "pw-inspector": {
+      "image": "cyberlab-aio",
+      "bytes": 1173,
+      "via": "--help",
+      "version": ""
+    },
+    "pwck": {
+      "image": "cyberlab-aio",
+      "bytes": 440,
+      "via": "--help",
+      "version": "pwck: unrecognized option '--version'"
+    },
+    "pwconv": {
+      "image": "cyberlab-aio",
+      "bytes": 157,
+      "via": "--help",
+      "version": "pwconv: unrecognized option '--version'"
+    },
+    "pwd": {
+      "image": "cyberlab-aio",
+      "bytes": 722,
+      "via": "--help",
+      "version": "pwd (GNU coreutils) 9.1"
+    },
+    "pwdx": {
+      "image": "cyberlab-aio",
+      "bytes": 166,
+      "via": "--help",
+      "version": "pwdx from procps-ng 4.0.2"
+    },
+    "pwunconv": {
+      "image": "cyberlab-aio",
+      "bytes": 159,
+      "via": "--help",
+      "version": "pwunconv: unrecognized option '--version'"
+    },
+    "py3clean": {
+      "image": "cyberlab-aio",
+      "bytes": 411,
+      "via": "--help",
+      "version": "py3clean 3.11.2-1+b1"
+    },
+    "py3compile": {
+      "image": "cyberlab-aio",
+      "bytes": 1381,
+      "via": "--help",
+      "version": "py3compile 3.11.2-1+b1"
+    },
+    "py3versions": {
+      "image": "cyberlab-aio",
+      "bytes": 684,
+      "via": "--help",
+      "version": "usage: py3versions [-v] [-h] [-d|--default] [-s|--supported] [-i|--installed]"
+    },
+    "pydoc": {
+      "image": "cyberlab-aio",
+      "bytes": 1022,
+      "via": "--help",
+      "version": "no Python documentation found for 'version'"
+    },
+    "pydoc3": {
+      "image": "cyberlab-aio",
+      "bytes": 1230,
+      "via": "--help",
+      "version": "No Python documentation found for 'version'."
+    },
+    "pydoc3.11": {
+      "image": "cyberlab-aio",
+      "bytes": 1230,
+      "via": "--help",
+      "version": "No Python documentation found for 'version'."
+    },
+    "pygettext3": {
+      "image": "cyberlab-aio",
+      "bytes": 4592,
+      "via": "--help",
+      "version": "pygettext.py (xgettext for Python) 1.5"
+    },
+    "pygettext3.11": {
+      "image": "cyberlab-aio",
+      "bytes": 4592,
+      "via": "--help",
+      "version": "pygettext.py (xgettext for Python) 1.5"
+    },
+    "pygmentize": {
+      "image": "cyberlab-aio",
+      "bytes": 4048,
+      "via": "--help",
+      "version": "Pygments version 2.20.0, (c) 2006-present by Georg Brandl, Matth\u00e4us Chajdas and contributors."
+    },
+    "python": {
+      "image": "cyberlab-aio",
+      "bytes": 2515,
+      "via": "--help",
+      "version": "Python 3.11.2"
+    },
+    "python2": {
+      "image": "cyberlab-aio",
+      "bytes": 2913,
+      "via": "--help",
+      "version": "Python 2.7.18"
+    },
+    "python2.7": {
+      "image": "cyberlab-aio",
+      "bytes": 2915,
+      "via": "--help",
+      "version": "Python 2.7.18"
+    },
+    "python3": {
+      "image": "cyberlab-aio",
+      "bytes": 2516,
+      "via": "--help",
+      "version": "Python 3.11.2"
+    },
+    "python3-config": {
+      "image": "cyberlab-aio",
+      "bytes": 147,
+      "via": "--help",
+      "version": ""
+    },
+    "python3.11": {
+      "image": "cyberlab-aio",
+      "bytes": 2519,
+      "via": "--help",
+      "version": "Python 3.11.2"
+    },
+    "python3.11-config": {
+      "image": "cyberlab-aio",
+      "bytes": 150,
+      "via": "--help",
+      "version": "Usage: /usr/bin/python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed"
     },
     "pyxswf": {
       "image": "cyberlab-aio",
@@ -438,11 +3828,41 @@
       "via": "-h",
       "version": "6.1.9-124  r2"
     },
+    "r2agent": {
+      "image": "cyberlab-aio",
+      "bytes": 498,
+      "via": "--help",
+      "version": "r2agent 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "r2pm": {
+      "image": "cyberlab-aio",
+      "bytes": 1518,
+      "via": "--help",
+      "version": "r2pm 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "r2r": {
+      "image": "cyberlab-aio",
+      "bytes": 123,
+      "via": "--help",
+      "version": "r2r 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "r2sdb": {
+      "image": "cyberlab-aio",
+      "bytes": 712,
+      "via": "-h",
+      "version": "sdb 2.4.8"
+    },
     "rabin2": {
       "image": "cyberlab-aio",
       "bytes": 3071,
       "via": "--help",
       "version": "rabin2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "radare2": {
+      "image": "cyberlab-aio",
+      "bytes": 2598,
+      "via": "-h",
+      "version": "6.1.9-124  r2"
     },
     "radiff2": {
       "image": "cyberlab-aio",
@@ -456,11 +3876,53 @@
       "via": "--help",
       "version": "rafind2 6.1.9 +1 abi:124 @ linux-x86_64"
     },
+    "rafs2": {
+      "image": "cyberlab-aio",
+      "bytes": 914,
+      "via": "--help",
+      "version": "rafs2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "ragg2": {
+      "image": "cyberlab-aio",
+      "bytes": 1927,
+      "via": "-h",
+      "version": "ragg2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
     "rahash2": {
       "image": "cyberlab-aio",
       "bytes": 1382,
       "via": "--help",
       "version": "rahash2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "randpkt": {
+      "image": "cyberlab-aio",
+      "bytes": 1166,
+      "via": "--help",
+      "version": "randpkt: unrecognized option: version"
+    },
+    "ranlib": {
+      "image": "cyberlab-aio",
+      "bytes": 816,
+      "via": "--help",
+      "version": "GNU ranlib (GNU Binutils for Debian) 2.40"
+    },
+    "rapatch2": {
+      "image": "cyberlab-aio",
+      "bytes": 248,
+      "via": "-h",
+      "version": "rapatch2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "rarun2": {
+      "image": "cyberlab-aio",
+      "bytes": 962,
+      "via": "-h",
+      "version": "rarun2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "rasign2": {
+      "image": "cyberlab-aio",
+      "bytes": 882,
+      "via": "--help",
+      "version": "rasign2 6.1.9 +1 abi:124 @ linux-x86_64"
     },
     "rasm2": {
       "image": "cyberlab-aio",
@@ -468,11 +3930,41 @@
       "via": "--help",
       "version": "rasm2 6.1.9 +1 abi:124 @ linux-x86_64"
     },
+    "ravc2": {
+      "image": "cyberlab-aio",
+      "bytes": 739,
+      "via": "-h",
+      "version": "ravc2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "rawshark": {
+      "image": "cyberlab-aio",
+      "bytes": 1827,
+      "via": "--help",
+      "version": "Rawshark (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
+    },
     "rax2": {
       "image": "cyberlab-aio",
       "bytes": 2927,
       "via": "--help",
       "version": "rax2 6.1.9 +1 abi:124 @ linux-x86_64"
+    },
+    "rbash": {
+      "image": "cyberlab-aio",
+      "bytes": 768,
+      "via": "--help",
+      "version": "GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)"
+    },
+    "rdma": {
+      "image": "cyberlab-aio",
+      "bytes": 237,
+      "via": "--help",
+      "version": "rdma utility, iproute2-6.1.0"
+    },
+    "readelf": {
+      "image": "cyberlab-aio",
+      "bytes": 4681,
+      "via": "--help",
+      "version": "GNU readelf (GNU Binutils for Debian) 2.40"
     },
     "readelf.py": {
       "image": "cyberlab-aio",
@@ -480,11 +3972,143 @@
       "via": "--help",
       "version": "readelf.py: based on pyelftools 0.33"
     },
+    "readlink": {
+      "image": "cyberlab-aio",
+      "bytes": 1353,
+      "via": "--help",
+      "version": "readlink (GNU coreutils) 9.1"
+    },
+    "readprofile": {
+      "image": "cyberlab-aio",
+      "bytes": 900,
+      "via": "--help",
+      "version": "readprofile from util-linux 2.38.1"
+    },
+    "realpath": {
+      "image": "cyberlab-aio",
+      "bytes": 1045,
+      "via": "--help",
+      "version": "realpath (GNU coreutils) 9.1"
+    },
+    "regfexport": {
+      "image": "cyberlab-aio",
+      "bytes": 762,
+      "via": "--help",
+      "version": ""
+    },
+    "regfinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 717,
+      "via": "--help",
+      "version": ""
+    },
+    "regfmount": {
+      "image": "cyberlab-aio",
+      "bytes": 861,
+      "via": "--help",
+      "version": ""
+    },
+    "regipy-diff": {
+      "image": "cyberlab-aio",
+      "bytes": 153,
+      "via": "--help",
+      "version": ""
+    },
+    "regipy-dump": {
+      "image": "cyberlab-aio",
+      "bytes": 1223,
+      "via": "--help",
+      "version": ""
+    },
+    "regipy-parse-header": {
+      "image": "cyberlab-aio",
+      "bytes": 128,
+      "via": "--help",
+      "version": ""
+    },
+    "regipy-plugins-list": {
+      "image": "cyberlab-aio",
+      "bytes": 124,
+      "via": "help",
+      "version": ""
+    },
+    "regipy-plugins-run": {
+      "image": "cyberlab-aio",
+      "bytes": 1034,
+      "via": "--help",
+      "version": ""
+    },
+    "regipy-process-transaction-logs": {
+      "image": "cyberlab-aio",
+      "bytes": 188,
+      "via": "--help",
+      "version": ""
+    },
+    "regripper": {
+      "image": "cyberlab-aio",
+      "bytes": 1417,
+      "via": "--help",
+      "version": "Unknown option: -version"
+    },
+    "remove-shell": {
+      "image": "cyberlab-aio",
+      "bytes": 151,
+      "via": "-h",
+      "version": ""
+    },
+    "rename.ul": {
+      "image": "cyberlab-aio",
+      "bytes": 540,
+      "via": "--help",
+      "version": "rename.ul from util-linux 2.38.1"
+    },
+    "renice": {
+      "image": "cyberlab-aio",
+      "bytes": 555,
+      "via": "--help",
+      "version": "renice from util-linux 2.38.1"
+    },
     "reordercap": {
       "image": "cyberlab-aio",
       "bytes": 397,
       "via": "--help",
       "version": "Reordercap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
+    },
+    "reset": {
+      "image": "cyberlab-aio",
+      "bytes": 562,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "resize2fs": {
+      "image": "cyberlab-aio",
+      "bytes": 177,
+      "via": "--help",
+      "version": "resize2fs 1.47.0 (5-Feb-2023)"
+    },
+    "resizepart": {
+      "image": "cyberlab-aio",
+      "bytes": 226,
+      "via": "--help",
+      "version": "resizepart from util-linux 2.38.1"
+    },
+    "rev": {
+      "image": "cyberlab-aio",
+      "bytes": 167,
+      "via": "--help",
+      "version": "rev from util-linux 2.38.1"
+    },
+    "rgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 4041,
+      "via": "--help",
+      "version": "grep (GNU grep) 3.8"
+    },
+    "rich-click": {
+      "image": "cyberlab-aio",
+      "bytes": 5138,
+      "via": "--help",
+      "version": "rich-click, version 1.9.8"
     },
     "rip.pl": {
       "image": "cyberlab-aio",
@@ -492,11 +4116,59 @@
       "via": "--help",
       "version": "Unknown option: -version"
     },
+    "rm": {
+      "image": "cyberlab-aio",
+      "bytes": 2013,
+      "via": "--help",
+      "version": "rm (GNU coreutils) 9.1"
+    },
+    "rmdir": {
+      "image": "cyberlab-aio",
+      "bytes": 731,
+      "via": "--help",
+      "version": "rmdir (GNU coreutils) 9.1"
+    },
+    "rmt": {
+      "image": "cyberlab-aio",
+      "bytes": 498,
+      "via": "--help",
+      "version": "rmt (GNU tar) 1.34"
+    },
+    "rmt-tar": {
+      "image": "cyberlab-aio",
+      "bytes": 502,
+      "via": "--help",
+      "version": "rmt (GNU tar) 1.34"
+    },
+    "roman": {
+      "image": "cyberlab-aio",
+      "bytes": 270,
+      "via": "--help",
+      "version": ""
+    },
+    "routel": {
+      "image": "cyberlab-aio",
+      "bytes": 3782,
+      "via": "help",
+      "version": "option --version not recognized"
+    },
+    "rpcgen": {
+      "image": "cyberlab-aio",
+      "bytes": 1377,
+      "via": "--help",
+      "version": "rpcgen (rpcsvc-proto) 1.4.3"
+    },
     "rsakeyfind": {
       "image": "cyberlab-aio",
       "bytes": 221,
       "via": "(no args)",
       "version": ""
+    },
+    "rtcwake": {
+      "image": "cyberlab-aio",
+      "bytes": 896,
+      "via": "--help",
+      "version": "rtcwake from util-linux 2.38.1"
     },
     "rtfobj": {
       "image": "cyberlab-aio",
@@ -504,11 +4176,203 @@
       "via": "--help",
       "version": "rtfobj 0.60.1 on Python 3.11.2 - http://decalage.info/python/oletools"
     },
+    "rtmon": {
+      "image": "cyberlab-aio",
+      "bytes": 203,
+      "via": "help",
+      "version": "Argument \"--version\" is unknown, try \"rtmon help\"."
+    },
+    "rtstat": {
+      "image": "cyberlab-aio",
+      "bytes": 672,
+      "via": "--help",
+      "version": "rtstat Version 6.1.0"
+    },
+    "run-parts": {
+      "image": "cyberlab-aio",
+      "bytes": 1119,
+      "via": "--help",
+      "version": "Debian run-parts program, version 5.7"
+    },
+    "runcon": {
+      "image": "cyberlab-aio",
+      "bytes": 880,
+      "via": "--help",
+      "version": "runcon (GNU coreutils) 9.1"
+    },
+    "runuser": {
+      "image": "cyberlab-aio",
+      "bytes": 1256,
+      "via": "--help",
+      "version": "runuser from util-linux 2.38.1"
+    },
+    "rview": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "savelog": {
+      "image": "cyberlab-aio",
+      "bytes": 953,
+      "via": "--help",
+      "version": "Rotated `version' at Wed Jul 29 08:22:16 AM UTC 2026."
+    },
+    "scalar": {
+      "image": "cyberlab-aio",
+      "bytes": 168,
+      "via": "--help",
+      "version": "git version 2.39.5"
+    },
     "scalpel": {
       "image": "cyberlab-aio",
       "bytes": 1993,
       "via": "-h",
       "version": "Scalpel version 1.60"
+    },
+    "sccainfo": {
+      "image": "cyberlab-aio",
+      "bytes": 293,
+      "via": "--help",
+      "version": ""
+    },
+    "script": {
+      "image": "cyberlab-aio",
+      "bytes": 1107,
+      "via": "--help",
+      "version": "script from util-linux 2.38.1"
+    },
+    "scriptlive": {
+      "image": "cyberlab-aio",
+      "bytes": 642,
+      "via": "--help",
+      "version": "scriptlive from util-linux 2.38.1"
+    },
+    "scriptreplay": {
+      "image": "cyberlab-aio",
+      "bytes": 918,
+      "via": "--help",
+      "version": "scriptreplay from util-linux 2.38.1"
+    },
+    "sdiff": {
+      "image": "cyberlab-aio",
+      "bytes": 1831,
+      "via": "--help",
+      "version": "sdiff (GNU diffutils) 3.8"
+    },
+    "sed": {
+      "image": "cyberlab-aio",
+      "bytes": 1837,
+      "via": "--help",
+      "version": "sed (GNU sed) 4.9"
+    },
+    "sensible-editor": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "sensible-pager": {
+      "image": "cyberlab-aio",
+      "bytes": 13066,
+      "via": "--help",
+      "version": "version: No such file or directory"
+    },
+    "seq": {
+      "image": "cyberlab-aio",
+      "bytes": 1463,
+      "via": "--help",
+      "version": "seq (GNU coreutils) 9.1"
+    },
+    "setarch": {
+      "image": "cyberlab-aio",
+      "bytes": 1093,
+      "via": "--help",
+      "version": "setarch from util-linux 2.38.1"
+    },
+    "setcap": {
+      "image": "cyberlab-aio",
+      "bytes": 613,
+      "via": "--help",
+      "version": ""
+    },
+    "setpriv": {
+      "image": "cyberlab-aio",
+      "bytes": 1502,
+      "via": "--help",
+      "version": "setpriv from util-linux 2.38.1"
+    },
+    "setsid": {
+      "image": "cyberlab-aio",
+      "bytes": 347,
+      "via": "--help",
+      "version": "setsid from util-linux 2.38.1"
+    },
+    "setterm": {
+      "image": "cyberlab-aio",
+      "bytes": 2371,
+      "via": "--help",
+      "version": "setterm from util-linux 2.38.1"
+    },
+    "sha1sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1600,
+      "via": "--help",
+      "version": "sha1sum (GNU coreutils) 9.1"
+    },
+    "sha224sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1600,
+      "via": "--help",
+      "version": "sha224sum (GNU coreutils) 9.1"
+    },
+    "sha256sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1602,
+      "via": "--help",
+      "version": "sha256sum (GNU coreutils) 9.1"
+    },
+    "sha384sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1602,
+      "via": "--help",
+      "version": "sha384sum (GNU coreutils) 9.1"
+    },
+    "sha512sum": {
+      "image": "cyberlab-aio",
+      "bytes": 1602,
+      "via": "--help",
+      "version": "sha512sum (GNU coreutils) 9.1"
+    },
+    "sharkd": {
+      "image": "cyberlab-aio",
+      "bytes": 723,
+      "via": "--help",
+      "version": ""
+    },
+    "shasum": {
+      "image": "cyberlab-aio",
+      "bytes": 1911,
+      "via": "--help",
+      "version": "6.02"
+    },
+    "shred": {
+      "image": "cyberlab-aio",
+      "bytes": 1971,
+      "via": "--help",
+      "version": "shred (GNU coreutils) 9.1"
+    },
+    "shuf": {
+      "image": "cyberlab-aio",
+      "bytes": 1036,
+      "via": "--help",
+      "version": "shuf (GNU coreutils) 9.1"
+    },
+    "sigfind": {
+      "image": "cyberlab-aio",
+      "bytes": 393,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
     },
     "sigtool": {
       "image": "cyberlab-aio",
@@ -516,11 +4380,257 @@
       "via": "--help",
       "version": "ClamAV 1.4.3"
     },
+    "size": {
+      "image": "cyberlab-aio",
+      "bytes": 1055,
+      "via": "--help",
+      "version": "GNU size (GNU Binutils for Debian) 2.40"
+    },
+    "skill": {
+      "image": "cyberlab-aio",
+      "bytes": 1432,
+      "via": "--help",
+      "version": "skill from procps-ng 4.0.2"
+    },
+    "slabtop": {
+      "image": "cyberlab-aio",
+      "bytes": 681,
+      "via": "--help",
+      "version": "slabtop from procps-ng 4.0.2"
+    },
+    "sleep": {
+      "image": "cyberlab-aio",
+      "bytes": 601,
+      "via": "--help",
+      "version": "sleep (GNU coreutils) 9.1"
+    },
+    "smtpd.py": {
+      "image": "cyberlab-aio",
+      "bytes": 892,
+      "via": "--help",
+      "version": "Python SMTP proxy version 0.2"
+    },
+    "snice": {
+      "image": "cyberlab-aio",
+      "bytes": 1400,
+      "via": "--help",
+      "version": "snice from procps-ng 4.0.2"
+    },
+    "sort": {
+      "image": "cyberlab-aio",
+      "bytes": 4082,
+      "via": "--help",
+      "version": "sort (GNU coreutils) 9.1"
+    },
+    "sorter": {
+      "image": "cyberlab-aio",
+      "bytes": 1491,
+      "via": "--help",
+      "version": "Unknown option: --version"
+    },
+    "splain": {
+      "image": "cyberlab-aio",
+      "bytes": 618,
+      "via": "--help",
+      "version": "/usr/bin/splain version 1.39 calling Getopt::Std::getopts (version 1.13 [paranoid]),"
+    },
+    "split": {
+      "image": "cyberlab-aio",
+      "bytes": 2325,
+      "via": "--help",
+      "version": "split (GNU coreutils) 9.1"
+    },
+    "srch_strings": {
+      "image": "cyberlab-aio",
+      "bytes": 779,
+      "via": "--help",
+      "version": "'version': No such file"
+    },
+    "ss": {
+      "image": "cyberlab-aio",
+      "bytes": 3143,
+      "via": "--help",
+      "version": "ss utility, iproute2-6.1.0"
+    },
     "ssdeep": {
       "image": "cyberlab-aio",
       "bytes": 915,
       "via": "-h",
       "version": "2.14.1"
+    },
+    "start-stop-daemon": {
+      "image": "cyberlab-aio",
+      "bytes": 3162,
+      "via": "--help",
+      "version": "start-stop-daemon 1.21.23 for Debian"
+    },
+    "stat": {
+      "image": "cyberlab-aio",
+      "bytes": 3862,
+      "via": "--help",
+      "version": "stat (GNU coreutils) 9.1"
+    },
+    "stdbuf": {
+      "image": "cyberlab-aio",
+      "bytes": 1409,
+      "via": "--help",
+      "version": "stdbuf (GNU coreutils) 9.1"
+    },
+    "streamzip": {
+      "image": "cyberlab-aio",
+      "bytes": 1503,
+      "via": "--help",
+      "version": "1.002"
+    },
+    "strings": {
+      "image": "cyberlab-aio",
+      "bytes": 1577,
+      "via": "--help",
+      "version": "GNU strings (GNU Binutils for Debian) 2.40"
+    },
+    "strip": {
+      "image": "cyberlab-aio",
+      "bytes": 2471,
+      "via": "--help",
+      "version": "GNU strip (GNU Binutils for Debian) 2.40"
+    },
+    "stty": {
+      "image": "cyberlab-aio",
+      "bytes": 7998,
+      "via": "--help",
+      "version": "stty (GNU coreutils) 9.1"
+    },
+    "su": {
+      "image": "cyberlab-aio",
+      "bytes": 1064,
+      "via": "--help",
+      "version": "su from util-linux 2.38.1"
+    },
+    "sudo": {
+      "image": "cyberlab-aio",
+      "bytes": 3210,
+      "via": "--help",
+      "version": ""
+    },
+    "sudo_logsrvd": {
+      "image": "cyberlab-aio",
+      "bytes": 383,
+      "via": "--help",
+      "version": "sudo_logsrvd version 1.9.13p3"
+    },
+    "sudo_sendlog": {
+      "image": "cyberlab-aio",
+      "bytes": 818,
+      "via": "--help",
+      "version": "sudo_sendlog version 1.9.13p3"
+    },
+    "sudoedit": {
+      "image": "cyberlab-aio",
+      "bytes": 1704,
+      "via": "--help",
+      "version": ""
+    },
+    "sudoreplay": {
+      "image": "cyberlab-aio",
+      "bytes": 802,
+      "via": "--help",
+      "version": "sudoreplay version 1.9.13p3"
+    },
+    "sulogin": {
+      "image": "cyberlab-aio",
+      "bytes": 393,
+      "via": "--help",
+      "version": "sulogin from util-linux 2.38.1"
+    },
+    "sum": {
+      "image": "cyberlab-aio",
+      "bytes": 560,
+      "via": "--help",
+      "version": "sum (GNU coreutils) 9.1"
+    },
+    "swaplabel": {
+      "image": "cyberlab-aio",
+      "bytes": 294,
+      "via": "--help",
+      "version": "swaplabel from util-linux 2.38.1"
+    },
+    "swapoff": {
+      "image": "cyberlab-aio",
+      "bytes": 633,
+      "via": "--help",
+      "version": "swapoff from util-linux 2.38.1"
+    },
+    "swapon": {
+      "image": "cyberlab-aio",
+      "bytes": 1877,
+      "via": "--help",
+      "version": "swapon from util-linux 2.38.1"
+    },
+    "switch_root": {
+      "image": "cyberlab-aio",
+      "bytes": 240,
+      "via": "--help",
+      "version": "switch_root from util-linux 2.38.1"
+    },
+    "sync": {
+      "image": "cyberlab-aio",
+      "bytes": 602,
+      "via": "--help",
+      "version": "sync (GNU coreutils) 9.1"
+    },
+    "sysctl": {
+      "image": "cyberlab-aio",
+      "bytes": 1108,
+      "via": "--help",
+      "version": "sysctl from procps-ng 4.0.2"
+    },
+    "tabs": {
+      "image": "cyberlab-aio",
+      "bytes": 670,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "tabulate": {
+      "image": "cyberlab-aio",
+      "bytes": 971,
+      "via": "--help",
+      "version": "option --version not recognized"
+    },
+    "tac": {
+      "image": "cyberlab-aio",
+      "bytes": 732,
+      "via": "--help",
+      "version": "tac (GNU coreutils) 9.1"
+    },
+    "tail": {
+      "image": "cyberlab-aio",
+      "bytes": 2776,
+      "via": "--help",
+      "version": "tail (GNU coreutils) 9.1"
+    },
+    "tar": {
+      "image": "cyberlab-aio",
+      "bytes": 16662,
+      "via": "--help",
+      "version": "tar (GNU tar) 1.34"
+    },
+    "tarcat": {
+      "image": "cyberlab-aio",
+      "bytes": 1107,
+      "via": "--help",
+      "version": "cat (GNU coreutils) 9.1"
+    },
+    "taskset": {
+      "image": "cyberlab-aio",
+      "bytes": 795,
+      "via": "--help",
+      "version": "taskset from util-linux 2.38.1"
+    },
+    "tc": {
+      "image": "cyberlab-aio",
+      "bytes": 401,
+      "via": "-h",
+      "version": "Option \"--version\" is unknown, try \"tc -help\"."
     },
     "tcpflow": {
       "image": "cyberlab-aio",
@@ -534,11 +4644,95 @@
       "via": "--help",
       "version": "tcpxtract v1.0.1"
     },
+    "tee": {
+      "image": "cyberlab-aio",
+      "bytes": 1169,
+      "via": "--help",
+      "version": "tee (GNU coreutils) 9.1"
+    },
+    "tempfile": {
+      "image": "cyberlab-aio",
+      "bytes": 508,
+      "via": "--help",
+      "version": ""
+    },
     "testdisk": {
       "image": "cyberlab-aio",
       "bytes": 1154,
       "via": "--help",
       "version": "TestDisk 7.1, Data Recovery Utility, July 2019"
+    },
+    "text2pcap": {
+      "image": "cyberlab-aio",
+      "bytes": 6450,
+      "via": "--help",
+      "version": "Text2pcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)."
+    },
+    "tic": {
+      "image": "cyberlab-aio",
+      "bytes": 1737,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "timeout": {
+      "image": "cyberlab-aio",
+      "bytes": 2057,
+      "via": "--help",
+      "version": "timeout (GNU coreutils) 9.1"
+    },
+    "tload": {
+      "image": "cyberlab-aio",
+      "bytes": 249,
+      "via": "--help",
+      "version": "tload from procps-ng 4.0.2"
+    },
+    "top": {
+      "image": "cyberlab-aio",
+      "bytes": 1336,
+      "via": "--help",
+      "version": "top from procps-ng 4.0.2"
+    },
+    "touch": {
+      "image": "cyberlab-aio",
+      "bytes": 1579,
+      "via": "--help",
+      "version": "touch (GNU coreutils) 9.1"
+    },
+    "tput": {
+      "image": "cyberlab-aio",
+      "bytes": 433,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
+    },
+    "tqdm": {
+      "image": "cyberlab-aio",
+      "bytes": 6818,
+      "via": "--help",
+      "version": "4.68.3"
+    },
+    "tr": {
+      "image": "cyberlab-aio",
+      "bytes": 2575,
+      "via": "--help",
+      "version": "tr (GNU coreutils) 9.1"
+    },
+    "true": {
+      "image": "cyberlab-aio",
+      "bytes": 599,
+      "via": "--help",
+      "version": "true (GNU coreutils) 9.1"
+    },
+    "truncate": {
+      "image": "cyberlab-aio",
+      "bytes": 1325,
+      "via": "--help",
+      "version": "truncate (GNU coreutils) 9.1"
+    },
+    "tset": {
+      "image": "cyberlab-aio",
+      "bytes": 560,
+      "via": "--help",
+      "version": "ncurses 6.4.20221231"
     },
     "tshark": {
       "image": "cyberlab-aio",
@@ -546,9 +4740,27 @@
       "via": "--help",
       "version": ""
     },
+    "tsk_comparedir": {
+      "image": "cyberlab-aio",
+      "bytes": 763,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
     "tsk_gettimes": {
       "image": "cyberlab-aio",
       "bytes": 551,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "tsk_imageinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 318,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "tsk_loaddb": {
+      "image": "cyberlab-aio",
+      "bytes": 697,
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
@@ -558,11 +4770,167 @@
       "via": "--help",
       "version": "The Sleuth Kit ver 4.11.1"
     },
+    "tsort": {
+      "image": "cyberlab-aio",
+      "bytes": 458,
+      "via": "--help",
+      "version": "tsort (GNU coreutils) 9.1"
+    },
+    "tty": {
+      "image": "cyberlab-aio",
+      "bytes": 453,
+      "via": "--help",
+      "version": "tty (GNU coreutils) 9.1"
+    },
+    "tune2fs": {
+      "image": "cyberlab-aio",
+      "bytes": 483,
+      "via": "--help",
+      "version": ""
+    },
+    "tzselect": {
+      "image": "cyberlab-aio",
+      "bytes": 704,
+      "via": "--help",
+      "version": "tzselect (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "ucf": {
+      "image": "cyberlab-aio",
+      "bytes": 1854,
+      "via": "--help",
+      "version": "ucf: unrecognized option '--version'"
+    },
+    "ucfq": {
+      "image": "cyberlab-aio",
+      "bytes": 417,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "ucfr": {
+      "image": "cyberlab-aio",
+      "bytes": 912,
+      "via": "--help",
+      "version": "ucfr: unrecognized option '--version'"
+    },
+    "uclampset": {
+      "image": "cyberlab-aio",
+      "bytes": 706,
+      "via": "--help",
+      "version": "uclampset from util-linux 2.38.1"
+    },
+    "umount": {
+      "image": "cyberlab-aio",
+      "bytes": 1306,
+      "via": "--help",
+      "version": "umount from util-linux 2.38.1 (libmount 2.38.1: selinux, smack, btrfs, verity, namespaces, assert, debug)"
+    },
+    "uname": {
+      "image": "cyberlab-aio",
+      "bytes": 988,
+      "via": "--help",
+      "version": "uname (GNU coreutils) 9.1"
+    },
+    "uncompress": {
+      "image": "cyberlab-aio",
+      "bytes": 1063,
+      "via": "--help",
+      "version": "gunzip (gzip) 1.12"
+    },
+    "unexpand": {
+      "image": "cyberlab-aio",
+      "bytes": 1184,
+      "via": "--help",
+      "version": "unexpand (GNU coreutils) 9.1"
+    },
+    "uniq": {
+      "image": "cyberlab-aio",
+      "bytes": 1744,
+      "via": "--help",
+      "version": "uniq (GNU coreutils) 9.1"
+    },
+    "unlink": {
+      "image": "cyberlab-aio",
+      "bytes": 398,
+      "via": "--help",
+      "version": "unlink (GNU coreutils) 9.1"
+    },
+    "unlzma": {
+      "image": "cyberlab-aio",
+      "bytes": 1433,
+      "via": "--help",
+      "version": "xz (XZ Utils) 5.4.1"
+    },
+    "unshare": {
+      "image": "cyberlab-aio",
+      "bytes": 2236,
+      "via": "--help",
+      "version": "unshare from util-linux 2.38.1"
+    },
+    "unxz": {
+      "image": "cyberlab-aio",
+      "bytes": 1431,
+      "via": "--help",
+      "version": "xz (XZ Utils) 5.4.1"
+    },
     "unzip": {
       "image": "cyberlab-aio",
       "bytes": 1509,
       "via": "--help",
       "version": "UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP."
+    },
+    "unzipsfx": {
+      "image": "cyberlab-aio",
+      "bytes": 141,
+      "via": "--help",
+      "version": "UnZipSFX 6.00 of 20 April 2009, by Info-ZIP (http://www.info-zip.org)."
+    },
+    "update-alternatives": {
+      "image": "cyberlab-aio",
+      "bytes": 2335,
+      "via": "--help",
+      "version": "Debian update-alternatives version 1.21.23."
+    },
+    "update-ca-certificates": {
+      "image": "cyberlab-aio",
+      "bytes": 124,
+      "via": "(no args)",
+      "version": ""
+    },
+    "update-catalog": {
+      "image": "cyberlab-aio",
+      "bytes": 485,
+      "via": "--help",
+      "version": ""
+    },
+    "update-locale": {
+      "image": "cyberlab-aio",
+      "bytes": 379,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "update-passwd": {
+      "image": "cyberlab-aio",
+      "bytes": 1013,
+      "via": "--help",
+      "version": "update-passwd 3.6.1"
+    },
+    "update-rc.d": {
+      "image": "cyberlab-aio",
+      "bytes": 277,
+      "via": "--help",
+      "version": ""
+    },
+    "update-shells": {
+      "image": "cyberlab-aio",
+      "bytes": 180,
+      "via": "--help",
+      "version": "unrecognized option --version"
+    },
+    "uptime": {
+      "image": "cyberlab-aio",
+      "bytes": 240,
+      "via": "--help",
+      "version": "uptime from procps-ng 4.0.2"
     },
     "upx": {
       "image": "cyberlab-aio",
@@ -570,11 +4938,95 @@
       "via": "--help",
       "version": "upx 4.2.4"
     },
+    "useradd": {
+      "image": "cyberlab-aio",
+      "bytes": 2252,
+      "via": "--help",
+      "version": "useradd: unrecognized option '--version'"
+    },
+    "userdel": {
+      "image": "cyberlab-aio",
+      "bytes": 612,
+      "via": "--help",
+      "version": "userdel: unrecognized option '--version'"
+    },
+    "usermod": {
+      "image": "cyberlab-aio",
+      "bytes": 2098,
+      "via": "--help",
+      "version": "usermod: unrecognized option '--version'"
+    },
+    "users": {
+      "image": "cyberlab-aio",
+      "bytes": 465,
+      "via": "--help",
+      "version": "users (GNU coreutils) 9.1"
+    },
+    "usnjls": {
+      "image": "cyberlab-aio",
+      "bytes": 559,
+      "via": "--help",
+      "version": "The Sleuth Kit ver 4.11.1"
+    },
+    "utmpdump": {
+      "image": "cyberlab-aio",
+      "bytes": 386,
+      "via": "--help",
+      "version": "utmpdump from util-linux 2.38.1"
+    },
     "vdbbin": {
       "image": "cyberlab-aio",
       "bytes": 1025,
       "via": "--help",
       "version": ""
+    },
+    "vdir": {
+      "image": "cyberlab-aio",
+      "bytes": 7735,
+      "via": "--help",
+      "version": "vdir (GNU coreutils) 9.1"
+    },
+    "vdpa": {
+      "image": "cyberlab-aio",
+      "bytes": 158,
+      "via": "--help",
+      "version": "vdpa: unrecognized option '--version'"
+    },
+    "vi": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "view": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "vigr": {
+      "image": "cyberlab-aio",
+      "bytes": 367,
+      "via": "--help",
+      "version": "vigr: unrecognized option '--version'"
+    },
+    "vim.tiny": {
+      "image": "cyberlab-aio",
+      "bytes": 1995,
+      "via": "--help",
+      "version": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)"
+    },
+    "vipw": {
+      "image": "cyberlab-aio",
+      "bytes": 367,
+      "via": "--help",
+      "version": "vipw: unrecognized option '--version'"
+    },
+    "visudo": {
+      "image": "cyberlab-aio",
+      "bytes": 481,
+      "via": "--help",
+      "version": "visudo version 1.9.13p3"
     },
     "vivbin": {
       "image": "cyberlab-aio",
@@ -582,11 +5034,431 @@
       "via": "--help",
       "version": ""
     },
+    "vivserver": {
+      "image": "cyberlab-aio",
+      "bytes": 300,
+      "via": "--help",
+      "version": "/data/version is not a valid directory!"
+    },
+    "vmstat": {
+      "image": "cyberlab-aio",
+      "bytes": 722,
+      "via": "--help",
+      "version": "vmstat from procps-ng 4.0.2"
+    },
+    "vol": {
+      "image": "cyberlab-aio",
+      "bytes": 26683,
+      "via": "--help",
+      "version": "INFO     volatility3.cli: Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']"
+    },
+    "volatility3": {
+      "image": "cyberlab-aio",
+      "bytes": 26790,
+      "via": "--help",
+      "version": "INFO     volatility3.cli: Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']"
+    },
+    "volshell": {
+      "image": "cyberlab-aio",
+      "bytes": 3215,
+      "via": "--help",
+      "version": "INFO     root        : Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']"
+    },
+    "vshadowdebug": {
+      "image": "cyberlab-aio",
+      "bytes": 359,
+      "via": "--help",
+      "version": ""
+    },
+    "vshadowinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 434,
+      "via": "--help",
+      "version": ""
+    },
+    "vshadowmount": {
+      "image": "cyberlab-aio",
+      "bytes": 640,
+      "via": "--help",
+      "version": ""
+    },
+    "w": {
+      "image": "cyberlab-aio",
+      "bytes": 449,
+      "via": "--help",
+      "version": "w from procps-ng 4.0.2"
+    },
+    "wall": {
+      "image": "cyberlab-aio",
+      "bytes": 369,
+      "via": "--help",
+      "version": "wall from util-linux 2.38.1"
+    },
+    "watch": {
+      "image": "cyberlab-aio",
+      "bytes": 887,
+      "via": "--help",
+      "version": "watch from procps-ng 4.0.2"
+    },
+    "watchgnupg": {
+      "image": "cyberlab-aio",
+      "bytes": 798,
+      "via": "--help",
+      "version": "watchgnupg (GnuPG) 2.2.40"
+    },
+    "wc": {
+      "image": "cyberlab-aio",
+      "bytes": 1212,
+      "via": "--help",
+      "version": "wc (GNU coreutils) 9.1"
+    },
+    "wdctl": {
+      "image": "cyberlab-aio",
+      "bytes": 1101,
+      "via": "--help",
+      "version": "wdctl from util-linux 2.38.1"
+    },
     "wget": {
       "image": "cyberlab-aio",
       "bytes": 13243,
       "via": "--help",
       "version": "GNU Wget 1.21.3 built on linux-gnu."
+    },
+    "wheel": {
+      "image": "cyberlab-aio",
+      "bytes": 570,
+      "via": "--help",
+      "version": "usage: wheel [-h] {unpack,pack,convert,tags,info,version,help} ..."
+    },
+    "whereis": {
+      "image": "cyberlab-aio",
+      "bytes": 594,
+      "via": "--help",
+      "version": "whereis from util-linux 2.38.1"
+    },
+    "who": {
+      "image": "cyberlab-aio",
+      "bytes": 1541,
+      "via": "--help",
+      "version": "who (GNU coreutils) 9.1"
+    },
+    "whoami": {
+      "image": "cyberlab-aio",
+      "bytes": 412,
+      "via": "--help",
+      "version": "whoami (GNU coreutils) 9.1"
+    },
+    "wipefs": {
+      "image": "cyberlab-aio",
+      "bytes": 1208,
+      "via": "--help",
+      "version": "wipefs from util-linux 2.38.1"
+    },
+    "x86_64": {
+      "image": "cyberlab-aio",
+      "bytes": 1019,
+      "via": "--help",
+      "version": "x86_64 from util-linux 2.38.1"
+    },
+    "x86_64-linux-gnu-addr2line": {
+      "image": "cyberlab-aio",
+      "bytes": 1313,
+      "via": "--help",
+      "version": "GNU addr2line (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-ar": {
+      "image": "cyberlab-aio",
+      "bytes": 2229,
+      "via": "--help",
+      "version": "GNU ar (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-as": {
+      "image": "cyberlab-aio",
+      "bytes": 10870,
+      "via": "--help",
+      "version": "GNU assembler (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-c++filt": {
+      "image": "cyberlab-aio",
+      "bytes": 1023,
+      "via": "--help",
+      "version": "GNU c++filt (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-cpp": {
+      "image": "cyberlab-aio",
+      "bytes": 4124,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-cpp (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-cpp-12": {
+      "image": "cyberlab-aio",
+      "bytes": 4130,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-cpp-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-dwp": {
+      "image": "cyberlab-aio",
+      "bytes": 442,
+      "via": "--help",
+      "version": "GNU dwp (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-elfedit": {
+      "image": "cyberlab-aio",
+      "bytes": 1277,
+      "via": "--help",
+      "version": "GNU elfedit (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-g++": {
+      "image": "cyberlab-aio",
+      "bytes": 4124,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-g++-12": {
+      "image": "cyberlab-aio",
+      "bytes": 4130,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-g++-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcc": {
+      "image": "cyberlab-aio",
+      "bytes": 4124,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-gcc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcc-12": {
+      "image": "cyberlab-aio",
+      "bytes": 4130,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcc-ar": {
+      "image": "cyberlab-aio",
+      "bytes": 2205,
+      "via": "--help",
+      "version": "GNU ar (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gcc-ar-12": {
+      "image": "cyberlab-aio",
+      "bytes": 2205,
+      "via": "--help",
+      "version": "GNU ar (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gcc-nm": {
+      "image": "cyberlab-aio",
+      "bytes": 2911,
+      "via": "--help",
+      "version": "GNU nm (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gcc-nm-12": {
+      "image": "cyberlab-aio",
+      "bytes": 2911,
+      "via": "--help",
+      "version": "GNU nm (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gcc-ranlib": {
+      "image": "cyberlab-aio",
+      "bytes": 834,
+      "via": "--help",
+      "version": "GNU ranlib (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gcc-ranlib-12": {
+      "image": "cyberlab-aio",
+      "bytes": 834,
+      "via": "--help",
+      "version": "GNU ranlib (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gcov": {
+      "image": "cyberlab-aio",
+      "bytes": 1993,
+      "via": "--help",
+      "version": "gcov (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcov-12": {
+      "image": "cyberlab-aio",
+      "bytes": 1993,
+      "via": "--help",
+      "version": "gcov (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcov-dump": {
+      "image": "cyberlab-aio",
+      "bytes": 392,
+      "via": "--help",
+      "version": "gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcov-dump-12": {
+      "image": "cyberlab-aio",
+      "bytes": 392,
+      "via": "--help",
+      "version": "gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcov-tool": {
+      "image": "cyberlab-aio",
+      "bytes": 1367,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-gcov-tool (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gcov-tool-12": {
+      "image": "cyberlab-aio",
+      "bytes": 1370,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-gcov-tool-12 (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "x86_64-linux-gnu-gold": {
+      "image": "cyberlab-aio",
+      "bytes": 22915,
+      "via": "--help",
+      "version": "GNU gold (GNU Binutils for Debian 2.40) 1.16"
+    },
+    "x86_64-linux-gnu-gp-archive": {
+      "image": "cyberlab-aio",
+      "bytes": 2397,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-archive binutils version 2.40.00"
+    },
+    "x86_64-linux-gnu-gp-collect-app": {
+      "image": "cyberlab-aio",
+      "bytes": 4392,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-collect-app binutils version 2.40.00"
+    },
+    "x86_64-linux-gnu-gp-display-html": {
+      "image": "cyberlab-aio",
+      "bytes": 2761,
+      "via": "--help",
+      "version": "gp-display-html GNU binutils version 2.40.00"
+    },
+    "x86_64-linux-gnu-gp-display-src": {
+      "image": "cyberlab-aio",
+      "bytes": 1571,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-display-src binutils version 2.40.00"
+    },
+    "x86_64-linux-gnu-gp-display-text": {
+      "image": "cyberlab-aio",
+      "bytes": 1554,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gp-display-text binutils version 2.40.00"
+    },
+    "x86_64-linux-gnu-gprof": {
+      "image": "cyberlab-aio",
+      "bytes": 838,
+      "via": "--help",
+      "version": "GNU gprof (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-gprofng": {
+      "image": "cyberlab-aio",
+      "bytes": 3287,
+      "via": "--help",
+      "version": "GNU x86_64-linux-gnu-gprofng binutils version 2.40.00"
+    },
+    "x86_64-linux-gnu-ld": {
+      "image": "cyberlab-aio",
+      "bytes": 32637,
+      "via": "--help",
+      "version": "GNU ld (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-ld.bfd": {
+      "image": "cyberlab-aio",
+      "bytes": 32653,
+      "via": "--help",
+      "version": "GNU ld (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-ld.gold": {
+      "image": "cyberlab-aio",
+      "bytes": 22924,
+      "via": "--help",
+      "version": "GNU gold (GNU Binutils for Debian 2.40) 1.16"
+    },
+    "x86_64-linux-gnu-lto-dump": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-lto-dump: error: version: file too short"
+    },
+    "x86_64-linux-gnu-lto-dump-12": {
+      "image": "cyberlab-aio",
+      "bytes": 65536,
+      "via": "--help",
+      "version": "x86_64-linux-gnu-lto-dump-12: error: version: file too short"
+    },
+    "x86_64-linux-gnu-nm": {
+      "image": "cyberlab-aio",
+      "bytes": 2927,
+      "via": "--help",
+      "version": "GNU nm (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-objcopy": {
+      "image": "cyberlab-aio",
+      "bytes": 8463,
+      "via": "--help",
+      "version": "GNU objcopy (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-objdump": {
+      "image": "cyberlab-aio",
+      "bytes": 7445,
+      "via": "--help",
+      "version": "GNU objdump (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-pkg-config": {
+      "image": "cyberlab-aio",
+      "bytes": 5357,
+      "via": "--help",
+      "version": "1.8.1"
+    },
+    "x86_64-linux-gnu-pkgconf": {
+      "image": "cyberlab-aio",
+      "bytes": 5357,
+      "via": "--help",
+      "version": "1.8.1"
+    },
+    "x86_64-linux-gnu-python3-config": {
+      "image": "cyberlab-aio",
+      "bytes": 164,
+      "via": "--help",
+      "version": ""
+    },
+    "x86_64-linux-gnu-python3.11-config": {
+      "image": "cyberlab-aio",
+      "bytes": 167,
+      "via": "--help",
+      "version": "Usage: /usr/bin/x86_64-linux-gnu-python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed"
+    },
+    "x86_64-linux-gnu-ranlib": {
+      "image": "cyberlab-aio",
+      "bytes": 850,
+      "via": "--help",
+      "version": "GNU ranlib (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-readelf": {
+      "image": "cyberlab-aio",
+      "bytes": 4681,
+      "via": "--help",
+      "version": "GNU readelf (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-size": {
+      "image": "cyberlab-aio",
+      "bytes": 1089,
+      "via": "--help",
+      "version": "GNU size (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-strings": {
+      "image": "cyberlab-aio",
+      "bytes": 1611,
+      "via": "--help",
+      "version": "GNU strings (GNU Binutils for Debian) 2.40"
+    },
+    "x86_64-linux-gnu-strip": {
+      "image": "cyberlab-aio",
+      "bytes": 2505,
+      "via": "--help",
+      "version": "GNU strip (GNU Binutils for Debian) 2.40"
+    },
+    "xargs": {
+      "image": "cyberlab-aio",
+      "bytes": 3120,
+      "via": "--help",
+      "version": "xargs (GNU findutils) 4.9.0"
     },
     "xlmdeobfuscator": {
       "image": "cyberlab-aio",
@@ -600,6 +5472,78 @@
       "via": "--help",
       "version": "1.1.0"
     },
+    "xortool-xor": {
+      "image": "cyberlab-aio",
+      "bytes": 481,
+      "via": "--help",
+      "version": "error: option --version not recognized"
+    },
+    "xsubpp": {
+      "image": "cyberlab-aio",
+      "bytes": 205,
+      "via": "--help",
+      "version": "Unknown option: version"
+    },
+    "xxd": {
+      "image": "cyberlab-aio",
+      "bytes": 1344,
+      "via": "--help",
+      "version": ""
+    },
+    "xz": {
+      "image": "cyberlab-aio",
+      "bytes": 1429,
+      "via": "--help",
+      "version": "xz (XZ Utils) 5.4.1"
+    },
+    "xzcat": {
+      "image": "cyberlab-aio",
+      "bytes": 1432,
+      "via": "--help",
+      "version": "xz (XZ Utils) 5.4.1"
+    },
+    "xzcmp": {
+      "image": "cyberlab-aio",
+      "bytes": 349,
+      "via": "--help",
+      "version": "xzcmp (XZ Utils) 5.4.1"
+    },
+    "xzdiff": {
+      "image": "cyberlab-aio",
+      "bytes": 352,
+      "via": "--help",
+      "version": "xzdiff (XZ Utils) 5.4.1"
+    },
+    "xzegrep": {
+      "image": "cyberlab-aio",
+      "bytes": 231,
+      "via": "--help",
+      "version": "xzegrep (XZ Utils) 5.4.1"
+    },
+    "xzfgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 231,
+      "via": "--help",
+      "version": "xzfgrep (XZ Utils) 5.4.1"
+    },
+    "xzgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 227,
+      "via": "--help",
+      "version": "xzgrep (XZ Utils) 5.4.1"
+    },
+    "xzless": {
+      "image": "cyberlab-aio",
+      "bytes": 184,
+      "via": "--help",
+      "version": "xzless (XZ Utils) 5.4.1"
+    },
+    "xzmore": {
+      "image": "cyberlab-aio",
+      "bytes": 147,
+      "via": "--help",
+      "version": "xzmore (XZ Utils) 5.4.1"
+    },
     "yara": {
       "image": "cyberlab-aio",
       "bytes": 2552,
@@ -611,14 +5555,206 @@
       "bytes": 613,
       "via": "--help",
       "version": "4.2.3"
+    },
+    "yes": {
+      "image": "cyberlab-aio",
+      "bytes": 401,
+      "via": "--help",
+      "version": "yes (GNU coreutils) 9.1"
+    },
+    "ypdomainname": {
+      "image": "cyberlab-aio",
+      "bytes": 1487,
+      "via": "--help",
+      "version": "hostname 3.23"
+    },
+    "zcat": {
+      "image": "cyberlab-aio",
+      "bytes": 707,
+      "via": "--help",
+      "version": "zcat (gzip) 1.12"
+    },
+    "zcmp": {
+      "image": "cyberlab-aio",
+      "bytes": 375,
+      "via": "--help",
+      "version": "zcmp (gzip) 1.12"
+    },
+    "zdiff": {
+      "image": "cyberlab-aio",
+      "bytes": 314,
+      "via": "--help",
+      "version": "zdiff (gzip) 1.12"
+    },
+    "zdump": {
+      "image": "cyberlab-aio",
+      "bytes": 471,
+      "via": "--help",
+      "version": "zdump (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "zegrep": {
+      "image": "cyberlab-aio",
+      "bytes": 453,
+      "via": "--help",
+      "version": "zgrep (gzip) 1.12"
+    },
+    "zfgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 453,
+      "via": "--help",
+      "version": "zgrep (gzip) 1.12"
+    },
+    "zforce": {
+      "image": "cyberlab-aio",
+      "bytes": 157,
+      "via": "--help",
+      "version": "zforce (gzip) 1.12"
+    },
+    "zgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 453,
+      "via": "--help",
+      "version": "zgrep (gzip) 1.12"
+    },
+    "zic": {
+      "image": "cyberlab-aio",
+      "bytes": 254,
+      "via": "--help",
+      "version": "zic (Debian GLIBC 2.36-9+deb12u14) 2.36"
+    },
+    "zipdetails": {
+      "image": "cyberlab-aio",
+      "bytes": 685,
+      "via": "--help",
+      "version": "2.104"
+    },
+    "zipdump": {
+      "image": "cyberlab-aio",
+      "bytes": 2830,
+      "via": "--help",
+      "version": "zipdump.py 0.0.35"
+    },
+    "zipgrep": {
+      "image": "cyberlab-aio",
+      "bytes": 131,
+      "via": "--help",
+      "version": ""
+    },
+    "zipinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 1035,
+      "via": "--help",
+      "version": "ZipInfo 3.00 of 20 April 2009, by Greg Roelofs and the Info-ZIP group."
+    },
+    "zless": {
+      "image": "cyberlab-aio",
+      "bytes": 195,
+      "via": "--help",
+      "version": "zless (gzip) 1.12"
+    },
+    "zmore": {
+      "image": "cyberlab-aio",
+      "bytes": 158,
+      "via": "--help",
+      "version": "zmore (gzip) 1.12"
+    },
+    "znew": {
+      "image": "cyberlab-aio",
+      "bytes": 649,
+      "via": "--help",
+      "version": "znew (gzip) 1.12"
+    },
+    "zramctl": {
+      "image": "cyberlab-aio",
+      "bytes": 1693,
+      "via": "--help",
+      "version": "zramctl from util-linux 2.38.1"
     }
   },
   "present_no_help": [
+    "Activate.ps1",
+    "VSCMount",
+    "activate",
+    "activate.csh",
+    "activate.fish",
+    "addgnupghome",
+    "applygnupgdefaults",
+    "bzcmp",
+    "bzdiff",
+    "bzegrep",
+    "bzexe",
+    "bzfgrep",
+    "bzgrep",
+    "chattr",
+    "cron",
+    "dash",
+    "deb-systemd-invoke",
+    "debconf-apt-progress",
+    "dpkg-fsys-usrunmess",
+    "e2freefrag",
+    "e2label",
+    "e2mmpstatus",
     "exiftool",
+    "faillock",
+    "filefrag",
+    "fstab-decode",
+    "funzip",
+    "git-shell",
+    "helpztags",
     "hivexget",
+    "hivexml",
+    "hydra-wizard",
+    "idle",
+    "install-sgmlcatalog",
+    "installkernel",
+    "jpeg_extract",
+    "killall5",
+    "lessecho",
+    "lessfile",
+    "lesskey",
+    "lesspipe",
+    "locale-gen",
+    "login",
+    "mailer",
+    "make-first-existing-target",
+    "mkhomedir_helper",
+    "mklost+found",
+    "mmdbresolve",
+    "mount.fuse",
+    "mount.fuse3",
+    "newgrp",
+    "nologin",
+    "pam-auth-update",
+    "pam_getenv",
+    "pam_namespace_helper",
+    "pam_timestamp_check",
+    "perldoc",
+    "pl2pm",
+    "policy-rc.d",
+    "pwhistory_helper",
+    "python2.7-config",
+    "r2p",
+    "rtacct",
     "runxlrd2.py",
+    "select-editor",
+    "sensible-browser",
+    "service",
     "set",
-    "unshadow"
+    "sg",
+    "sh",
+    "shadowconfig",
+    "test",
+    "tipc",
+    "toe",
+    "unafs",
+    "unique",
+    "unix_chkpwd",
+    "unix_update",
+    "unshadow",
+    "update-mime-database",
+    "validlocale",
+    "which",
+    "which.debianutils"
   ],
   "absent": [
     "010editor",
@@ -626,6 +5762,7 @@
     "1768.py",
     "7-zip",
     "7zip",
+    "X11",
     "above",
     "absent",
     "accept-all-ips",
@@ -1178,6 +6315,7 @@
     "redsocks",
     "reg_export",
     "regcool",
+    "registry-diff",
     "reglookup",
     "regshot",
     "remnux-installer",

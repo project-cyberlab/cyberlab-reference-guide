@@ -1,0 +1,22 @@
+# command: mountpoint
+# version: mountpoint from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ mountpoint [-qd] /path/to/directory
+ mountpoint -x /dev/device
+
+Check whether a directory or file is a mountpoint.
+
+Options:
+ -q, --quiet        quiet mode - don't print anything
+     --nofollow     do not follow symlink
+ -d, --fs-devno     print maj:min device number of the filesystem
+ -x, --devno        print maj:min device number of the block device
+
+ -h, --help         display this help
+ -V, --version      display version
+
+For more details see mountpoint(1).

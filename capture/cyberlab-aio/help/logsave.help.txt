@@ -1,0 +1,11 @@
+# command: logsave
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+logsave: invalid option -- '-'
+logsave: invalid option -- 'h'
+logsave: invalid option -- 'e'
+logsave: invalid option -- 'l'
+logsave: invalid option -- 'p'
+Usage: logsave [-asv] logfile program

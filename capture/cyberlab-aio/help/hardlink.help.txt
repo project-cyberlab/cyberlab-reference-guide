@@ -1,0 +1,40 @@
+# command: hardlink
+# version: hardlink from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ hardlink [options] <directory>|<file> ...
+
+Consolidate duplicate files using hardlinks.
+
+Options:
+ -v, --verbose              verbose output (repeat for more verbosity)
+ -q, --quiet                quiet mode - don't print anything
+ -n, --dry-run              don't actually link anything
+ -y, --method <name>        file content comparison method
+ -f, --respect-name         filenames have to be identical
+ -p, --ignore-mode          ignore changes of file mode
+ -o, --ignore-owner         ignore owner changes
+ -t, --ignore-time          ignore timestamps (when testing for equality)
+ -c, --content              compare only file contents, same as -pot
+ -X, --respect-xattrs       respect extended attributes
+     --reflink[=<when>]     create clone/CoW copies (auto, always, never)
+     --skip-reflinks        skip already cloned files (enabled on --reflink)
+ -m, --maximize             maximize the hardlink count, remove the file with
+                              lowest hardlink count
+ -M, --minimize             reverse the meaning of -m
+ -O, --keep-oldest          keep the oldest file of multiple equal files
+                              (lower precedence than minimize/maximize)
+ -x, --exclude <regex>      regular expression to exclude files
+ -i, --include <regex>      regular expression to include files/dirs
+ -s, --minimum-size <size>  minimum size for files.
+ -S, --maximum-size <size>  maximum size for files.
+ -b, --io-size <size>       I/O buffer size for file reading (speedup, using more RAM)
+ -r, --cache-size <size>    memory limit for cached file content data
+
+ -h, --help                 display this help
+ -V, --version              display version
+
+For more details see hardlink(1).

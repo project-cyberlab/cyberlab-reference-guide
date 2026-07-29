@@ -1,0 +1,16 @@
+# command: zdump
+# version: zdump (Debian GLIBC 2.36-9+deb12u14) 2.36
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+zdump: usage: zdump OPTIONS TIMEZONE ...
+Options include:
+  -c [L,]U   Start at year L (default -500), end before year U (default 2500)
+  -t [L,]U   Start at time L, end before time U (in seconds since 1970)
+  -i         List transitions briefly (format is experimental)
+  -v         List transitions verbosely
+  -V         List transitions a bit less verbosely
+  --help     Output this help
+  --version  Output version info
+
+Report bugs to <http://www.debian.org/Bugs/>.

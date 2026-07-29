@@ -1,0 +1,11 @@
+# command: fidentify
+# version: fidentify 7.1, Data Recovery Utility, July 2019
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage: fidentify [--check] [+file_format] [directory|file]
+       fidentify --version
+
+fidentify determines the file type, the 'extension', by using the same database as PhotoRec.
+By default, all known file formats are searched unless one is specifically enabled.

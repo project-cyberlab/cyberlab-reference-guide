@@ -1,0 +1,10 @@
+# command: zforce
+# version: zforce (gzip) 1.12
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/zforce [FILE]...
+Force a .gz extension on all compressed FILEs so that gzip will
+not compress them twice.
+
+Report bugs to <bug-gzip@gnu.org>.

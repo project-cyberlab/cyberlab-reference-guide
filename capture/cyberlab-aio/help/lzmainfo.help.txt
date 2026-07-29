@@ -1,0 +1,11 @@
+# command: lzmainfo
+# version: lzmainfo (XZ Utils) 5.4.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: lzmainfo [--help] [--version] [FILE]...
+Show information stored in the .lzma file header
+With no FILE, or when FILE is -, read standard input.
+
+Report bugs to <xz@tukaani.org> (in English or Finnish).
+XZ Utils home page: <https://tukaani.org/xz/>

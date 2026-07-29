@@ -1,0 +1,8 @@
+# command: vdpa
+# version: vdpa: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: vdpa [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { mgmtdev | dev }
+       OPTIONS := { -V[ersion] | -n[o-nice-names] | -j[son] | -p[retty] }

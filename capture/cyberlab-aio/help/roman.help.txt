@@ -1,0 +1,15 @@
+# command: roman
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: roman [-h] [-r] number
+
+convert between roman and arabic numerals
+
+positional arguments:
+  number         the value to convert
+
+options:
+  -h, --help     show this help message and exit
+  -r, --reverse  convert roman to numeral (case insensitive) [default: False]

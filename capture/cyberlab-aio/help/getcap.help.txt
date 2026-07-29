@@ -1,0 +1,9 @@
+# command: getcap
+# version: version (No such file or directory)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+getcap: invalid option -- '-'
+usage: getcap [-h] [-l] [-n] [-r] [-v] <filename> [<filename> ...]
+
+	displays the capabilities on the queried file(s).

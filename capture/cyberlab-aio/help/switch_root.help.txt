@@ -1,0 +1,16 @@
+# command: switch_root
+# version: switch_root from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ switch_root [options] <newrootdir> <init> <args to init>
+
+Switch to another filesystem as the root of the mount tree.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see switch_root(8).

@@ -1,0 +1,15 @@
+# command: p7zip
+# version: /usr/bin/p7zip: ignoring unknown option --version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/p7zip [options] [--] [ name ... ]
+
+Options:
+    -c --stdout --to-stdout      output data to stdout
+    -d --decompress --uncompress decompress file
+    -f --force                   do not ask questions
+    -k --keep                    keep original file
+    -h --help                    print this help
+    --                           treat subsequent arguments as file
+                                 names, even if they start with a dash

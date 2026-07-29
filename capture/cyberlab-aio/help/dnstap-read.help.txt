@@ -1,0 +1,11 @@
+# command: dnstap-read
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+dnstap-read: illegal option -- -
+dnstap-read [-mpxy] [filename]
+	-m	trace memory allocations
+	-p	print the full DNS message
+	-x	use hex format to print DNS message
+	-y	print YAML format (implies -p)

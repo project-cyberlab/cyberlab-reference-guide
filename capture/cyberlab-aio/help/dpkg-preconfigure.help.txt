@@ -1,0 +1,10 @@
+# command: dpkg-preconfigure
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-preconfigure [options] [debs]
+       --apt			Apt mode.
+  -f,  --frontend		Specify debconf frontend to use.
+  -p,  --priority		Specify minimum priority question to show.
+       --terse			Enable terse mode.

@@ -1,0 +1,19 @@
+# command: false
+# version: false (GNU coreutils) 9.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: false [ignored command line arguments]
+  or:  false OPTION
+Exit with a status code indicating failure.
+
+      --help        display this help and exit
+      --version     output version information and exit
+
+NOTE: your shell may have its own version of false, which usually supersedes
+the version described here.  Please refer to your shell's documentation
+for details about the options it supports.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/false>
+or available locally via: info '(coreutils) false invocation'

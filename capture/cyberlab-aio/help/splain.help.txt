@@ -1,0 +1,21 @@
+# command: splain
+# version: /usr/bin/splain version 1.39 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/bin/splain version 1.39 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+running under Perl version 5.36.0.
+
+Usage: splain [-OPTIONS [-MORE_OPTIONS]] [--] [PROGRAM_ARG1 ...]
+
+The following single-character options are accepted:
+	With arguments: -f
+	Boolean (without arguments): -p -d -v
+
+Options may be merged together.  -- stops processing of options.
+Space is not required between options and their arguments.
+
+For more details run
+	perldoc -F /usr/bin/splain
+  [Now continuing due to backward compatibility and excessive paranoia.
+   See 'perldoc Getopt::Std' about $Getopt::Std::STANDARD_HELP_VERSION.]

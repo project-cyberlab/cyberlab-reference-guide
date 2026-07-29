@@ -1,0 +1,73 @@
+# command: start-stop-daemon
+# version: start-stop-daemon 1.21.23 for Debian
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: start-stop-daemon [<option>...] <command>
+
+Commands:
+  -S, --start -- <argument>...  start a program and pass <arguments> to it
+  -K, --stop                    stop a program
+  -T, --status                  get the program status
+  -H, --help                    print help information
+  -V, --version                 print version
+
+Matching options (at least one is required):
+      --pid <pid>               pid to check
+      --ppid <ppid>             parent pid to check
+  -p, --pidfile <pid-file>      pid file to check
+  -x, --exec <executable>       program to start/check if it is running
+  -n, --name <process-name>     process name to check
+  -u, --user <username|uid>     process owner to check
+
+Options:
+  -g, --group <group|gid>       run process as this group
+  -c, --chuid <name|uid[:group|gid]>
+                                change to this user/group before starting
+                                  process
+  -s, --signal <signal>         signal to send (default TERM)
+  -a, --startas <pathname>      program to start (default is <executable>)
+  -r, --chroot <directory>      chroot to <directory> before starting
+  -d, --chdir <directory>       change to <directory> (default is /)
+  -N, --nicelevel <incr>        add incr to the process' nice level
+  -P, --procsched <policy[:prio]>
+                                use <policy> with <prio> for the kernel
+                                  process scheduler (default prio is 0)
+  -I, --iosched <class[:prio]>  use <class> with <prio> to set the IO
+                                  scheduler (default prio is 4)
+  -k, --umask <mask>            change the umask to <mask> before starting
+  -b, --background              force the process to detach
+      --notify-await            wait for a readiness notification
+      --notify-timeout <int>    timeout after <int> seconds of notify wait
+  -C, --no-close                do not close any file descriptor
+  -O, --output <filename>       send stdout and stderr to <filename>
+  -m, --make-pidfile            create the pidfile before starting
+      --remove-pidfile          delete the pidfile after stopping
+  -R, --retry <schedule>        check whether processes die, and retry
+  -t, --test                    test mode, don't do anything
+  -o, --oknodo                  exit status 0 (not 1) if nothing done
+  -q, --quiet                   be more quiet
+  -v, --verbose                 be more verbose
+
+Retry <schedule> is <item>|/<item>/... where <item> is one of
+ -<signal-num>|[-]<signal-name>  send that signal
+ <timeout>                       wait that many seconds
+ forever                         repeat remainder forever
+or <schedule> may be just <timeout>, meaning <signal>/<timeout>/KILL/<timeout>
+
+The process scheduler <policy> can be one of:
+  other, fifo or rr
+
+The IO scheduler <class> can be one of:
+  real-time, best-effort or idle
+
+Exit status:
+  0 = done
+  1 = nothing done (=> 0 if --oknodo)
+  2 = with --retry, processes would not die
+  3 = trouble
+Exit status with --status:
+  0 = program is running
+  1 = program is not running and the pid file exists
+  3 = program is not running
+  4 = unable to determine status

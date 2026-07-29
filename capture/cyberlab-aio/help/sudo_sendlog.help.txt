@@ -1,0 +1,20 @@
+# command: sudo_sendlog
+# version: sudo_sendlog version 1.9.13p3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: sudo_sendlog [-AnV] [-h host] [-i iolog-id] [-p port] [-r restart-point] [-R reject-reason] [-s stop-point] [-t number] /path/to/iolog
+sudo_sendlog - send sudo I/O log to remote server
+
+
+Options:
+      --help            display help message and exit
+  -A, --accept          only send an accept event (no I/O)
+  -h, --host            host to send logs to
+  -i, --iolog_id        remote ID of I/O log to be resumed
+  -p, --port            port to use when connecting to host
+  -r, --restart         restart previous I/O log transfer
+  -R, --reject          reject the command with the given reason
+  -s, --stop-after        stop transfer after reaching this time
+  -t, --test            test audit server by sending selected I/O log n times in parallel
+  -V, --version         display version information and exit

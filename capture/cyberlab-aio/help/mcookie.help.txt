@@ -1,0 +1,24 @@
+# command: mcookie
+# version: mcookie from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ mcookie [options]
+
+Generate magic cookies for xauth.
+
+Options:
+ -f, --file <file>     use file as a cookie seed
+ -m, --max-size <num>  limit how much is read from seed files
+ -v, --verbose         explain what is being done
+
+ -h, --help            display this help
+ -V, --version         display version
+
+Arguments:
+ <num> arguments may be followed by the suffixes for
+   GiB, TiB, PiB, EiB, ZiB, and YiB (the "iB" is optional)
+
+For more details see mcookie(1).

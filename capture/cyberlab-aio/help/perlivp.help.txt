@@ -1,0 +1,15 @@
+# command: perlivp
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+unknown flag: '-'
+Usage:
+
+    /usr/bin/perlivp [-p] [-v] | [-h]
+
+    -p Print a preface before each test telling what it will test.
+    -v Verbose mode in which extra information about test results
+       is printed.  Test failures always print out some extra information
+       regardless of whether or not this switch is set.
+    -h Prints this help message.

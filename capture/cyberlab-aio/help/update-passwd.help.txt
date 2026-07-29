@@ -1,0 +1,27 @@
+# command: update-passwd
+# version: update-passwd 3.6.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: update-passwd [OPTION]...
+
+  -p, --passwd-master=file  Use file as the master account list
+  -g, --group-master=file   Use file as the master group list
+  -P, --passwd=file         Use file as the system passwd file
+  -S, --shadow=file         Use file as the system shadow file
+  -G, --group=file          Use file as the system group file
+  -s, --sanity-check        Only perform sanity-checks
+  -v, --verbose             Show details about what we are doing (recommended)
+  -n, --dry-run             Just say what we would do but do nothing
+  -L, --no-locking          Don't try to lock files
+  -h, --help                Display this information and exit
+  -V, --version             Show version number and exit
+
+ File locations used:
+   master passwd: /usr/share/base-passwd/passwd.master
+   master group : /usr/share/base-passwd/group.master
+   system passwd: /etc/passwd
+   system shadow: /etc/shadow
+   system group : /etc/group
+
+Report bugs to the Debian bug tracking system, package "base-passwd".

@@ -1,0 +1,13 @@
+# command: dpkg-realpath
+# version: Debian dpkg-realpath version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-realpath [<option>...] <pathname>
+
+Options:
+  -z, --zero                   end output line with NUL, not newline.
+      --instdir <directory>    set the root directory.
+      --root <directory>       set the root directory.
+      --version                show the version.
+  -?, --help                   show this help message.

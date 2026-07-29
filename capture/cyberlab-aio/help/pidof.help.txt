@@ -1,0 +1,16 @@
+# command: pidof
+# version: 
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+pidof usage: [options] <program-name>
+
+ -c           Return PIDs with the same root directory
+ -d <sep>     Use the provided character as output separator
+ -h           Display this help text
+ -n           Avoid using stat system function on network shares
+ -o <pid>     Omit results with a given PID
+ -q           Quiet mode. Do not display output
+ -s           Only return one PID
+ -x           Return PIDs of shells running scripts with a matching name
+ -z           List zombie and I/O waiting processes. May cause pidof to hang.

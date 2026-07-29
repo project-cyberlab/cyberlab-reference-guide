@@ -1,0 +1,13 @@
+# command: lzdiff
+# version: xzdiff (XZ Utils) 5.4.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: lzdiff [OPTION]... FILE1 [FILE2]
+Compare FILE1 to FILE2, using their uncompressed contents if they are
+compressed.  If FILE2 is omitted, then the files compared are FILE1 and
+FILE1 from which the compression format suffix has been stripped.
+
+Do comparisons like 'diff' does.  OPTIONs are the same as for 'diff'.
+
+Report bugs to <xz@tukaani.org>.

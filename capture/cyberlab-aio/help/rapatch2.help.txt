@@ -1,0 +1,11 @@
+# command: rapatch2
+# version: rapatch2 6.1.9 +1 abi:124 @ linux-x86_64
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+Usage: rapatch2 [-p N] [-sv] [-R] [patchfile] ([targetfile])
+  -p N       patch level, skip N directories
+  -R         reverse patch
+  -s         sandbox mode, disable scripts and r2 command execution
+  -q         be quiet
+  -v         show version

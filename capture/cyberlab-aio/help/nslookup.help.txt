@@ -1,0 +1,11 @@
+# command: nslookup
+# version: *** Invalid option: -version
+# captured-via: help
+# image: cyberlab-aio:v1
+#---
+;; UDP setup with 10.20.0.1#53(10.20.0.1) for help failed: network unreachable.
+;; no servers could be reached
+;; UDP setup with 10.20.0.1#53(10.20.0.1) for help failed: network unreachable.
+;; no servers could be reached
+;; UDP setup with 10.20.0.1#53(10.20.0.1) for help failed: network unreachable.
+;; no servers could be reached

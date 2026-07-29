@@ -1,0 +1,61 @@
+# command: lsfd
+# version: lsfd from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ lsfd [options]
+
+Options:
+ -l, --threads         list in threads level
+ -J, --json            use JSON output format
+ -n, --noheadings      don't print headings
+ -o, --output <list>   output columns
+ -r, --raw             use raw output format
+ -u, --notruncate      don't truncate text in columns
+ -p, --pid  <pid(s)>   collect information only specified processes
+ -Q, --filter <expr>   apply display filter
+     --debug-filter    dump the internal data structure of filter and exit
+ -C, --counter <name>:<expr>
+                       define custom counter for --summary output
+     --dump-counters   dump counter definitions
+     --summary[=when]  print summary information (only, append, or never)
+
+ -h, --help            display this help
+ -V, --version         display version
+
+Available output columns:
+       ASSOC  <string>  association between file and process
+      BLKDRV  <string>  block device driver name resolved by /proc/devices
+      CHRDRV  <string>  character device driver name resolved by /proc/devices
+     COMMAND  <string>  command of the process opening the file
+     DELETED  <boolean> reachability from the file system
+         DEV  <string>  ID of device containing file
+     DEVTYPE  <string>  device type (blk, char, or nodev)
+          FD  <number>  file descriptor for the file
+       FLAGS  <string>  flags specified when opening the file
+       INODE  <number>  inode number
+     KTHREAD  <boolean> opened by a kernel thread
+     MAJ:MIN  <string>  device ID for special, or ID of device containing file
+      MAPLEN  <number>  length of file mapping (in page)
+     MISCDEV  <string>  misc character device name resolved by /proc/misc
+       MNTID  <number>  mount id
+        MODE  <string>  access mode (rwx)
+        NAME  <string>  name of the file
+       NLINK  <number>  link count
+   PARTITION  <string>  block device name resolved by /proc/partition
+         PID  <number>  PID of the process opening the file
+         POS  <number>  file position
+   PROTONAME  <string>  protocol name
+        RDEV  <string>  device ID (if special file)
+        SIZE  <number>  file size
+      SOURCE  <string>  file system, partition, or device containing file
+         TID  <number>  thread ID of the process opening the file
+        TYPE  <string>  file type
+         UID  <number>  user ID number of the process
+        USER  <string>  user of the process
+        FUID  <number>  user ID number of the file's owner
+       OWNER  <string>  owner of the file
+
+For more details see lsfd(1).

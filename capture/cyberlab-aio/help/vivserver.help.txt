@@ -1,0 +1,13 @@
+# command: vivserver
+# version: /data/version is not a valid directory!
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: Start a vivisect server to share workspaces [-h] [--port PORT] dirn
+
+positional arguments:
+  dirn                  A directory full of *.viv files to share
+
+options:
+  -h, --help            show this help message and exit
+  --port PORT, -p PORT  The port to start server on (defaults to 16500)

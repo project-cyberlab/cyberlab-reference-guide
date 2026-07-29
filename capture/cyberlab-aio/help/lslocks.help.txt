@@ -1,0 +1,40 @@
+# command: lslocks
+# version: lslocks from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ lslocks [options]
+
+List local system locks.
+
+Options:
+ -b, --bytes            print SIZE in bytes rather than in human readable format
+ -J, --json             use JSON output format
+ -i, --noinaccessible   ignore locks without read permissions
+ -n, --noheadings       don't print headings
+ -o, --output <list>    define which output columns to use
+     --output-all       output all columns
+ -p, --pid <pid>        display only locks held by this process
+ -r, --raw              use the raw output format
+ -u, --notruncate       don't truncate text in columns
+
+ -h, --help             display this help
+ -V, --version          display version
+
+Available output columns:
+     COMMAND  command of the process holding the lock
+         PID  PID of the process holding the lock
+        TYPE  kind of lock
+        SIZE  size of the lock
+       INODE  inode number
+     MAJ:MIN  major:minor device number
+        MODE  lock access mode
+           M  mandatory state of the lock: 0 (none), 1 (set)
+       START  relative byte offset of the lock
+         END  ending offset of the lock
+        PATH  path of the locked file
+     BLOCKER  PID of the process blocking the lock
+
+For more details see lslocks(8).

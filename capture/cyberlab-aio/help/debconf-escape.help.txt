@@ -1,0 +1,11 @@
+# command: debconf-escape
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown option: help
+Usage: debconf-unescape -e|-u < input-text
+  -e, --escape      escape text
+  -u, --unescape    unescape text
+
+Exactly one of -e or -u must be used.

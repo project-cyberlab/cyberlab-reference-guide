@@ -1,0 +1,13 @@
+# command: e2scrub
+# version: e2scrub 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/sbin/e2scrub: illegal option -- -
+Usage: /usr/sbin/e2scrub [OPTIONS] mountpoint | device
+
+mountpoint must be on an LVM-managed block device
+-n: Show what commands e2scrub would execute.
+-r: Remove e2scrub snapshot and exit, do not check anything.
+-t: Run fstrim if successful.
+-V: Print version information and exit.

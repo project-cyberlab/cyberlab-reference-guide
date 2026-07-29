@@ -1,0 +1,18 @@
+# command: scalar
+# version: git version 2.39.5
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]
+
+Commands:
+	clone
+	list
+	register
+	unregister
+	run
+	reconfigure
+	delete
+	help
+	version
+	diagnose

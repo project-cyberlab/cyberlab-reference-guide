@@ -1,0 +1,10 @@
+# command: debconf-set-selections
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown option: help
+Usage: debconf-set-selections [-vcu] [file]
+  -v, --verbose     verbose output
+  -c, --checkonly   only check the input file format
+  -u, --unseen      do not set the 'seen' flag when preseeding values

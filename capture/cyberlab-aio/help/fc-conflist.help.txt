@@ -1,0 +1,10 @@
+# command: fc-conflist
+# version: fontconfig version 2.14.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: fc-conflist [-Vh] [--version] [--help]
+Show the ruleset files information on the system
+
+  -V, --version        display font config version and exit
+  -h, --help           display this help and exit

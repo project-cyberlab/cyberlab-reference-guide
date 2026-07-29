@@ -1,0 +1,41 @@
+# command: encguess
+# version: /usr/bin/encguess version [unknown] calling Getopt::Std::getopts (version 1.13),
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/bin/encguess version [unknown] calling Getopt::Std::getopts (version 1.13),
+running under Perl version 5.36.0.
+Usage:
+      encguess [switches] filename...
+
+  Switches:
+    -h
+      show this message and exit.
+
+    -s
+      specify a list of "suspect encoding types" to test, separated by
+      either ":" or ","
+
+    -S
+      output a list of all acceptable encoding types that can be used with
+      the -s param
+
+    -u
+      suppress display of unidentified types
+
+  Examples:
+    * Guess encoding of a file named "test.txt", using only the default
+      suspect types.
+
+         encguess test.txt
+
+    * Guess the encoding type of a file named "test.txt", using the suspect
+      types "euc-jp,shiftjis,7bit-jis".
+
+         encguess -s euc-jp,shiftjis,7bit-jis test.txt
+         encguess -s euc-jp:shiftjis:7bit-jis test.txt
+
+    * Guess the encoding type of several files, do not display results for
+      unidentified files.
+
+         encguess -us euc-jp,shiftjis,7bit-jis test*.txt

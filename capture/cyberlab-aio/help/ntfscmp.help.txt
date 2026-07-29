@@ -1,0 +1,16 @@
+# command: ntfscmp
+# version: ntfscmp: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+ntfscmp v2022.10.3 (libntfs-3g)
+
+Usage: ntfscmp [OPTIONS] DEVICE1 DEVICE2
+    Compare two NTFS volumes and tell the differences.
+
+    -P, --no-progress-bar  Don't show progress bar
+    -v, --verbose          More output
+    -h, --help             Display this help
+
+Developers' email address: ntfs-3g-devel@lists.sf.net
+News, support and information:  https://github.com/tuxera/ntfs-3g/

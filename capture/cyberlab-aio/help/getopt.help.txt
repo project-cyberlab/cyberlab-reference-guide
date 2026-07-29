@@ -1,0 +1,28 @@
+# command: getopt
+# version: getopt from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ getopt <optstring> <parameters>
+ getopt [options] [--] <optstring> <parameters>
+ getopt [options] -o|--options <optstring> [options] [--] <parameters>
+
+Parse command options.
+
+Options:
+ -a, --alternative             allow long options starting with single -
+ -l, --longoptions <longopts>  the long options to be recognized
+ -n, --name <progname>         the name under which errors are reported
+ -o, --options <optstring>     the short options to be recognized
+ -q, --quiet                   disable error reporting by getopt(3)
+ -Q, --quiet-output            no normal output
+ -s, --shell <shell>           set quoting conventions to those of <shell>
+ -T, --test                    test for getopt(1) version
+ -u, --unquoted                do not quote the output
+
+ -h, --help                    display this help
+ -V, --version                 display version
+
+For more details see getopt(1).

@@ -1,0 +1,21 @@
+# command: blkcalc
+# version: The Sleuth Kit ver 4.11.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+blkcalc: invalid option -- '-'
+Invalid argument: --help
+usage: blkcalc [-dsu unit_addr] [-vV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] image [images]
+Slowly calculates the opposite block number
+	One of the following must be given:
+	  -d: The given address is from a 'dd' image 
+	  -s: The given address is from a 'blkls -s' (slack) image
+	  -u: The given address is from a 'blkls' (unallocated) image
+	-f fstype: The file system type (use '-f list' for supported types)
+	-i imgtype: The format of the image file (use '-i list' for supported types)
+	-b dev_sector_size: The size (in bytes) of the device sectors
+	-o imgoffset: The offset of the file system in the image (in sectors)
+	-P pooltype: Pool container type (use '-P list' for supported types)
+	-B pool_volume_block: Starting block (for pool volumes only)
+	-v: verbose output to stderr
+	-V: Print version

@@ -1,0 +1,16 @@
+# command: dpkg-vendor
+# version: Debian dpkg-vendor version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-vendor [<option>...] [<command>]
+
+Commands:
+  --is <vendor>           returns true if current vendor is <vendor>.
+  --derives-from <vendor> returns true if current vendor derives from <vendor>.
+  --query <field>         print the content of the vendor-specific field.
+  --help                  show this help message.
+  --version               show the version.
+
+Options:
+  --vendor <vendor>       assume <vendor> is the current vendor.

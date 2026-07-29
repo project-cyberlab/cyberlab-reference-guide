@@ -1,0 +1,26 @@
+# command: fincore
+# version: fincore from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ fincore [options] file...
+
+Options:
+ -J, --json            use JSON output format
+ -b, --bytes           print sizes in bytes rather than in human readable format
+ -n, --noheadings      don't print headings
+ -o, --output <list>   output columns
+ -r, --raw             use raw output format
+
+ -h, --help            display this help
+ -V, --version         display version
+
+Available output columns:
+       PAGES  file data resident in memory in pages
+        SIZE  size of the file
+        FILE  file name
+         RES  file data resident in memory in bytes
+
+For more details see fincore(1).

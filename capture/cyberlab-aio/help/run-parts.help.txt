@@ -1,0 +1,23 @@
+# command: run-parts
+# version: Debian run-parts program, version 5.7
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: run-parts [OPTION]... DIRECTORY
+      --test          print script names which would run, but don't run them.
+      --list          print names of all valid files (can not be used with
+                      --test)
+  -v, --verbose       print script names before running them.
+  -d, --debug         print script names while checking them.
+      --report        print script names if they produce output.
+      --reverse       reverse execution order of scripts.
+      --exit-on-error exit as soon as a script returns with a non-zero exit
+                      code.
+      --stdin         multiplex stdin to scripts being run, using temporary file
+      --lsbsysinit    validate filenames based on LSB sysinit specs.
+      --new-session   run each script in a separate process session
+      --regex=PATTERN validate filenames based on POSIX ERE pattern PATTERN.
+  -u, --umask=UMASK   sets umask to UMASK (octal), default is 022.
+  -a, --arg=ARGUMENT  pass ARGUMENT to scripts, use once for each argument.
+  -V, --version       output version information and exit.
+  -h, --help          display this help and exit.

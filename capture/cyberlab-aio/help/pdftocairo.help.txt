@@ -1,0 +1,59 @@
+# command: pdftocairo
+# version: pdftocairo version 22.12.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pdftocairo version 22.12.0
+Copyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+Usage: pdftocairo [options] <PDF-file> [<output-file>]
+  -png                     : generate a PNG file
+  -jpeg                    : generate a JPEG file
+  -jpegopt <string>        : jpeg options, with format <opt1>=<val1>[,<optN>=<valN>]*
+  -tiff                    : generate a TIFF file
+  -tiffcompression <string>: set TIFF compression: none, packbits, jpeg, lzw, deflate
+  -ps                      : generate PostScript file
+  -eps                     : generate Encapsulated PostScript (EPS)
+  -pdf                     : generate a PDF file
+  -svg                     : generate a Scalable Vector Graphics (SVG) file
+  -f <int>                 : first page to print
+  -l <int>                 : last page to print
+  -o                       : print only odd pages
+  -e                       : print only even pages
+  -singlefile              : write only the first page and do not add digits
+  -r <fp>                  : resolution, in PPI (default is 150)
+  -rx <fp>                 : X resolution, in PPI (default is 150)
+  -ry <fp>                 : Y resolution, in PPI (default is 150)
+  -scale-to <int>          : scales each page to fit within scale-to*scale-to pixel box
+  -scale-to-x <int>        : scales each page horizontally to fit in scale-to-x pixels
+  -scale-to-y <int>        : scales each page vertically to fit in scale-to-y pixels
+  -x <int>                 : x-coordinate of the crop area top left corner
+  -y <int>                 : y-coordinate of the crop area top left corner
+  -W <int>                 : width of crop area in pixels (default is 0)
+  -H <int>                 : height of crop area in pixels (default is 0)
+  -sz <int>                : size of crop square in pixels (sets W and H)
+  -cropbox                 : use the crop box rather than media box
+  -mono                    : generate a monochrome image file (PNG, JPEG)
+  -gray                    : generate a grayscale image file (PNG, JPEG)
+  -transp                  : use a transparent background instead of white (PNG)
+  -antialias <string>      : set cairo antialias option
+  -icc <string>            : ICC color profile to use
+  -level2                  : generate Level 2 PostScript (PS, EPS)
+  -level3                  : generate Level 3 PostScript (PS, EPS)
+  -origpagesizes           : conserve original page sizes (PS, PDF, SVG)
+  -paper <string>          : paper size (letter, legal, A4, A3, match)
+  -paperw <int>            : paper width, in points
+  -paperh <int>            : paper height, in points
+  -nocrop                  : don't crop pages to CropBox
+  -expand                  : expand pages smaller than the paper size
+  -noshrink                : don't shrink pages larger than the paper size
+  -nocenter                : don't center pages smaller than the paper size
+  -duplex                  : enable duplex printing
+  -opw <string>            : owner password (for encrypted files)
+  -upw <string>            : user password (for encrypted files)
+  -q                       : don't print any messages or errors
+  -v                       : print copyright and version info
+  -h                       : print usage information
+  -help                    : print usage information
+  --help                   : print usage information
+  -?                       : print usage information

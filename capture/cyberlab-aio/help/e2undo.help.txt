@@ -1,0 +1,7 @@
+# command: e2undo
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+e2undo: invalid option -- '-'
+Usage: e2undo [-f] [-h] [-n] [-o offset] [-v] [-z undo_file] <transaction file> <filesystem>

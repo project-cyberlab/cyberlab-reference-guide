@@ -1,0 +1,35 @@
+# command: sudoedit
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+sudoedit - edit files as another user
+
+usage: sudoedit -h | -V
+usage: sudoedit [-ABkNnS] [-r role] [-t type] [-C num] [-D directory] [-g
+                group] [-h host] [-p prompt] [-R directory] [-T timeout] [-u
+                user] file ...
+
+Options:
+  -A, --askpass                 use a helper program for password prompting
+  -B, --bell                    ring bell when prompting
+  -C, --close-from=num          close all file descriptors >= num
+  -D, --chdir=directory         change the working directory before running
+                                command
+  -g, --group=group             run command as the specified group name or ID
+  -h, --help                    display help message and exit
+  -h, --host=host               run command on host (if supported by plugin)
+  -k, --reset-timestamp         invalidate timestamp file
+  -n, --non-interactive         non-interactive mode, no prompts are used
+  -p, --prompt=prompt           use the specified password prompt
+  -R, --chroot=directory        change the root directory before running command
+  -r, --role=role               create SELinux security context with specified
+                                role
+  -S, --stdin                   read password from standard input
+  -t, --type=type               create SELinux security context with specified
+                                type
+  -T, --command-timeout=timeout terminate command after the specified time limit
+  -u, --user=user               run command (or edit file) as specified user
+                                name or ID
+  -V, --version                 display version information and exit
+  --                            stop processing command line arguments

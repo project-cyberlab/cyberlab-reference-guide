@@ -1,0 +1,32 @@
+# command: ncursesw5-config
+# version: 6.4.20221231
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: ncursesw5-config [options]
+
+Options:
+  --prefix           echos the package-prefix of ncursesw
+  --exec-prefix      echos the executable-prefix of ncursesw
+
+  --cflags           echos the C compiler flags needed to compile with ncursesw
+  --libs             echos the libraries needed to link with ncursesw
+
+  --libs-only-L      echos -L linker options (search path) for ncursesw
+  --libs-only-l      echos -l linker options (libraries) for ncursesw
+  --libs-only-other  echos linker options other than -L/-l
+
+  --version          echos the release+patchdate version of ncursesw
+  --abi-version      echos the ABI version of ncursesw
+  --mouse-version    echos the mouse-interface version of ncursesw
+
+  --bindir           echos the directory containing ncursesw programs
+  --datadir          echos the directory containing ncursesw data
+  --includedir       echos the directory containing ncursesw header files
+  --libdir           echos the directory containing ncursesw libraries
+  --mandir           echos the directory containing ncursesw manpages
+  --terminfo         echos the $TERMINFO terminfo database path
+  --terminfo-dirs    echos the $TERMINFO_DIRS directory list
+  --termpath         echos the $TERMPATH termcap list
+
+  --help             prints this message

@@ -1,0 +1,25 @@
+# command: ipcmk
+# version: ipcmk from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ ipcmk [options]
+
+Create various IPC resources.
+
+Options:
+ -M, --shmem <size>       create shared memory segment of size <size>
+ -S, --semaphore <number> create semaphore array with <number> elements
+ -Q, --queue              create message queue
+ -p, --mode <mode>        permission for the resource (default is 0644)
+
+ -h, --help               display this help
+ -V, --version            display version
+
+Arguments:
+ <size> arguments may be followed by the suffixes for
+   GiB, TiB, PiB, EiB, ZiB, and YiB (the "iB" is optional)
+
+For more details see ipcmk(1).

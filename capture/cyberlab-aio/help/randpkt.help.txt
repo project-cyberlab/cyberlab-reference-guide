@@ -1,0 +1,36 @@
+# command: randpkt
+# version: randpkt: unrecognized option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: randpkt [-b maxbytes] [-c count] [-t type] [-r] filename
+Default max bytes (per packet) is 5000
+Default count is 1000.
+-r: random packet type selection
+
+Types:
+	arp             Address Resolution Protocol
+	bgp             Border Gateway Protocol
+	bvlc            BACnet Virtual Link Control
+	dns             Domain Name Service
+	eth             Ethernet
+	fddi            Fiber Distributed Data Interface
+	giop            General Inter-ORB Protocol
+	icmp            Internet Control Message Protocol
+	ieee802.15.4    IEEE 802.15.4
+	ip              Internet Protocol
+	ipv6            Internet Protocol Version 6
+	llc             Logical Link Control
+	m2m             WiMAX M2M Encapsulation Protocol
+	megaco          MEGACO
+	nbns            NetBIOS-over-TCP Name Service
+	ncp2222         NetWare Core Protocol
+	sctp            Stream Control Transmission Protocol
+	syslog          Syslog message
+	tds             TDS NetLib
+	tcp             Transmission Control Protocol
+	tr              Token-Ring
+	udp             User Datagram Protocol
+	usb-linux       Universal Serial Bus with Linux specific header
+
+If type is not specified, a random packet will be chosen

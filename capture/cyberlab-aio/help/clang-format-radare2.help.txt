@@ -1,0 +1,28 @@
+# command: clang-format-radare2
+# version: clang-format-radare2 1.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: clang-format-radare2 [-h] [-i] [-n] [-v] [-a]
+                            [--clang-format CLANG_FORMAT] [--print-config]
+                            [files ...]
+
+Format files using clang-format followed by radare2 indentation rules.
+
+positional arguments:
+  files                 Files or directories to format in place.
+
+options:
+  -h, --help            show this help message and exit
+  -i, --in-place        Do nothing, because that's the default behaviour, for
+                        muscle memory compatibility reasons with clang-format
+  -n, --no-update       Do not modify files; report differences and exit with
+                        error if formatting is needed.
+  -v, --version         Show the clang-format-radare2 version and exit.
+  -a, --auto            Auto mode: ignore provided paths and use the
+                        indentation whitelist.
+  --clang-format CLANG_FORMAT
+                        clang-format executable to use (default: env
+                        CLANG_FORMAT or clang-format).
+  --print-config        Print the embedded .clang-format configuration to
+                        stdout and exit.

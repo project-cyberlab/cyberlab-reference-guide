@@ -1,0 +1,19 @@
+# command: fsfreeze
+# version: fsfreeze from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ fsfreeze [options] <mountpoint>
+
+Suspend access to a filesystem.
+
+Options:
+ -f, --freeze      freeze the filesystem
+ -u, --unfreeze    unfreeze the filesystem
+
+ -h, --help        display this help
+ -V, --version     display version
+
+For more details see fsfreeze(8).

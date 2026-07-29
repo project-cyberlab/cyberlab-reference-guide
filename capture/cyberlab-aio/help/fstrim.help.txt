@@ -1,0 +1,30 @@
+# command: fstrim
+# version: fstrim from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ fstrim [options] <mount point>
+
+Discard unused blocks on a mounted filesystem.
+
+Options:
+ -a, --all                trim mounted filesystems
+ -A, --fstab              trim filesystems from /etc/fstab
+ -I, --listed-in <list>   trim filesystems listed in specified files
+ -o, --offset <num>       the offset in bytes to start discarding from
+ -l, --length <num>       the number of bytes to discard
+ -m, --minimum <num>      the minimum extent length to discard
+ -v, --verbose            print number of discarded bytes
+     --quiet-unsupported  suppress error messages if trim unsupported
+ -n, --dry-run            does everything, but trim
+
+ -h, --help          display this help
+ -V, --version       display version
+
+Arguments:
+ <num> arguments may be followed by the suffixes for
+   GiB, TiB, PiB, EiB, ZiB, and YiB (the "iB" is optional)
+
+For more details see fstrim(8).

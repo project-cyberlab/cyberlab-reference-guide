@@ -1,0 +1,22 @@
+# command: rasign2
+# version: rasign2 6.1.9 +1 abi:124 @ linux-x86_64
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: rasign2 [options] [file]
+ -a               make signatures from all .o files in the provided .a file
+ -A[AAA]          same as r2 -A, the more 'A's the more analysis is performed
+ -f               interpret the file as a FLIRT .sig file and dump signatures
+ -h               help menu
+ -j               show signatures in json
+ -i script.r2     execute this script in the 
+ -o sigs.sdb      add signatures to file, create if it does not exist
+ -q               quiet mode
+ -r               show output in radare commands
+ -S               perform operation on sdb signature file ('-o -' to save to same file)
+ -s signspace     save all signatures under this signspace
+ -c               add collision signatures before writing file
+ -v               show version information
+ -m               merge/overwrite signatures with same name
+Examples:
+  rasign2 -o libc.sdb libc.so.6

@@ -1,0 +1,21 @@
+# command: dpkg-genbuildinfo
+# version: Debian dpkg-genbuildinfo version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-genbuildinfo [<option>...]
+
+Options:
+  --build=<type>[,...]     specify the build <type>: full, source, binary,
+                             any, all (default is 'full').
+  -c<control-file>         get control info from this file.
+  -l<changelog-file>       get per-version info from this file.
+  -f<files-list-file>      get .deb files list from this file.
+  -F<changelog-format>     force changelog format.
+  -O[<buildinfo-file>]     write to stdout (or <buildinfo-file>).
+  -u<upload-files-dir>     directory with files (default is '..').
+  --always-include-kernel  always include Build-Kernel-Version.
+  --always-include-path    always include Build-Path.
+  --admindir=<directory>   change the administrative directory.
+  -?, --help               show this help message.
+      --version            show the version.

@@ -1,0 +1,11 @@
+# command: dpkg-distaddfile
+# version: Debian dpkg-distaddfile version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-distaddfile [<option>...] <filename> <section> <priority>
+
+Options:
+  -f<files-list-file>      write files here instead of debian/files.
+  -?, --help               show this help message.
+      --version            show the version.

@@ -1,0 +1,10 @@
+# command: migrate-pubring-from-classic-gpg
+# version: There is no --version/pubring.gpg, no need to migrate
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/migrate-pubring-from-classic-gpg [GPGHOMEDIR|--default]
+	Migrate public keyring in GPGHOMEDIR from "classic" to "modern" GnuPG
+	using gpg version 2.2.
+
+	--default migrates the GnuPG home directory at "/root/.gnupg"

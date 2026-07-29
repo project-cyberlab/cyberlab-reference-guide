@@ -1,0 +1,40 @@
+# command: echo
+# version: echo (GNU coreutils) 9.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: echo [SHORT-OPTION]... [STRING]...
+  or:  echo LONG-OPTION
+Echo the STRING(s) to standard output.
+
+  -n             do not output the trailing newline
+  -e             enable interpretation of backslash escapes
+  -E             disable interpretation of backslash escapes (default)
+      --help        display this help and exit
+      --version     output version information and exit
+
+If -e is in effect, the following sequences are recognized:
+
+  \\      backslash
+  \a      alert (BEL)
+  \b      backspace
+  \c      produce no further output
+  \e      escape
+  \f      form feed
+  \n      new line
+  \r      carriage return
+  \t      horizontal tab
+  \v      vertical tab
+  \0NNN   byte with octal value NNN (1 to 3 digits)
+  \xHH    byte with hexadecimal value HH (1 to 2 digits)
+
+NOTE: your shell may have its own version of echo, which usually supersedes
+the version described here.  Please refer to your shell's documentation
+for details about the options it supports.
+
+NOTE: printf(1) is a preferred alternative,
+which does not have issues outputting option-like strings.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/echo>
+or available locally via: info '(coreutils) echo invocation'

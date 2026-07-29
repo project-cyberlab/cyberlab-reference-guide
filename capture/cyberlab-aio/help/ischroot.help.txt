@@ -1,0 +1,10 @@
+# command: ischroot
+# version: Debian ischroot, version 5.7Copyright (C) 2011 Aurelien Jarno
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: ischroot [OPTION]
+  -f, --default-false return false if detection fails
+  -t, --default-true  return true if detection fails
+  -V, --version       output version information and exit.
+  -h, --help          display this help and exit.

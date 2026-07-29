@@ -1,0 +1,7 @@
+# command: unzipsfx
+# version: UnZipSFX 6.00 of 20 April 2009, by Info-ZIP (http://www.info-zip.org).
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+UnZipSFX 6.00 of 20 April 2009, by Info-ZIP (http://www.info-zip.org).
+Valid options are -tfupcz and -d <exdir>; modifiers are -abjnoqCLDMVX.

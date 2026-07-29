@@ -1,0 +1,14 @@
+# command: pwdx
+# version: pwdx from procps-ng 4.0.2
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ pwdx [options] pid...
+
+Options:
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pwdx(1).

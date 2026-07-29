@@ -1,0 +1,29 @@
+# command: chmem
+# version: chmem from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ chmem [options] [SIZE|RANGE|BLOCKRANGE]
+
+Set a particular size or range of memory online or offline.
+
+Options:
+ -e, --enable       enable memory
+ -d, --disable      disable memory
+ -b, --blocks       use memory blocks
+ -z, --zone <name>  select memory zone (see below)
+ -v, --verbose      verbose output
+ -h, --help         display this help
+ -V, --version      display version
+
+Supported zones:
+ DMA
+ DMA32
+ Normal
+ Highmem
+ Movable
+ Device
+
+For more details see chmem(8).

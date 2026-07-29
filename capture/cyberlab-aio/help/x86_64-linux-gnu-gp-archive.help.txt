@@ -1,0 +1,55 @@
+# command: x86_64-linux-gnu-gp-archive
+# version: GNU x86_64-linux-gnu-gp-archive binutils version 2.40.00
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: gprofng archive [OPTION(S)] EXPERIMENT
+
+Archive the associated application binaries and source files in a gprofng
+experiment to make it self contained and portable.
+
+Options:
+
+ --version           print the version number and exit.
+ --help              print usage information and exit.
+ --verbose {on|off}  enable (on) or disable (off) verbose mode; the default is "off".
+
+ -a {off|on|ldobjects|src|usedldobjects|usedsrc}  specify archiving of binaries and other files;
+                    in addition to disable this feature (off), or enable archiving off all
+                    loadobjects and sources (on), the other options support a more
+                    refined selection. All of these options enable archiving, but the
+                    keyword controls what exactly is selected: all load objects (ldobjects),
+                    all source files (src), the loadobjects asscoiated with a program counter
+                    (usedldobjects), or the source files associated with a program counter
+                    (usedsrc); the default is "-a ldobjects".
+
+ -n                 archive the named experiment only, not any of its descendants.
+
+ -q                 do not write any warnings to stderr; messages are archived and
+                    can be retrieved later.
+
+ -F                 force writing or rewriting of the archive; ignored with the -n
+                    or -m options, or if this is a subexperiment.
+
+ -d <path>          specifies the location of a common archive; this is a directory that
+                    contains archived files.
+
+ -m <regex>         archive only those source, object, and debug info files whose full
+                    path name matches the given POSIX compliant regular expression.
+
+Limitations:
+
+Default archiving does not occur in case the application profiled terminates prematurely,
+or if archiving is disabled when collecting the performance data. In such cases, this
+tool can be used to afterwards archive the information, but it has to run on the same 
+system where the profiling data was recorded.
+
+Documentation:
+
+A getting started guide for gprofng is maintained as a Texinfo manual. If the info and
+gprofng programs are properly installed at your site, the command "info gprofng"
+should give you access to this document.
+
+See also:
+
+gprofng(1), gp-collect-app(1), gp-display-html(1), gp-display-src(1), gp-display-text(1)

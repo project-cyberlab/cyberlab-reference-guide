@@ -1,0 +1,16 @@
+# command: findfs
+# version: findfs from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ findfs [options] {LABEL,UUID,PARTUUID,PARTLABEL}=<value>
+
+Find a filesystem by label or UUID.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see findfs(8).

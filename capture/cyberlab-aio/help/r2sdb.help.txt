@@ -1,0 +1,22 @@
+# command: r2sdb
+# version: sdb 2.4.8
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+usage: sdb [-0cCdDehjJrtv|-D A B] [-|db] [.file]|[-=]|==||[-+][(idx)key[:json|=value] ..]
+  -0      terminate results with \x00
+  -c      count the number of keys database
+  -C      create foo.{c,h} for embedding (uses gperf)
+  -d      decode base64 from stdin
+  -D      diff two databases
+  -e      encode stdin as base64
+  -g [..] grep expression
+  -G      print database in gperf format
+  -h      show this help
+  -j      output in json
+  -o [f]  output file name for -C -t
+  -J      enable journaling
+  -r      process .sdb.txt files in the given path
+  -t      use textmode (for -C)
+  -v      show version information
+usage: sdb [-0cCdDehjJrtv|-D A B] [-|db] [.file]|[-=]|==||[-+][(idx)key[:json|=value] ..]

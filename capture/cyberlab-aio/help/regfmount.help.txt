@@ -1,0 +1,27 @@
+# command: regfmount
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+regfmount 20260526
+
+regfmount: invalid option -- '-'
+Invalid argument: regfmount
+Use regfmount to mount a Windows NT Registry File (REGF)
+
+Usage: regfmount [ -c codepage ] [ -X extended_options ] [ -hvV ] file
+                 mount_point
+
+	file:        a Windows NT Registry File (REGF)
+
+	mount_point: the directory to serve as mount point
+
+	-c:          codepage of ASCII strings, options: ascii, windows-874, windows-932,
+	             windows-936, windows-949, windows-950, windows-1250, windows-1251,
+	             windows-1252 (default), windows-1253, windows-1254, windows-1255,
+	             windows-1256, windows-1257 or windows-1258
+	-h:          shows this help
+	-v:          verbose output to stderr, while regfmount will remain running in the
+	             foreground
+	-V:          print version
+	-X:          extended options to pass to sub system

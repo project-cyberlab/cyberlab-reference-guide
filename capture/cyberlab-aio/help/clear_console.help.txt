@@ -1,0 +1,10 @@
+# command: clear_console
+# version: clear_console: Version 0.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: clear_console [option]
+valid options are:
+	-q  --quiet    don't print error messages
+	-h --help      display this help text and exit
+	-V --version   display version information and exit

@@ -1,0 +1,65 @@
+# command: XORSearch
+# version: xorsearch.py 0.0.5
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: xorsearch.py [options] [[@]file|cut-expression|flag-expression ...]
+XORsearch in Python
+
+Source code put in the public domain by Didier Stevens, no Copyright
+Use at your own risk
+https://DidierStevens.com
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -m, --man             Print manual
+  -o OUTPUT, --output=OUTPUT
+                        Output to file (# supported)
+  -j, --jsoninput       Consume JSON from stdin
+  -J, --jsonoutput      Produce JSON output
+  -y YARA, --yara=YARA  YARA rule file (or directory or @file or adhoc file)
+                        to check files
+  --yarastrings         Print YARA strings
+  --yarastringsraw      Print only YARA strings
+  -P PYTHON, --python=PYTHON
+                        Python function to check results
+  -s SCRIPT, --script=SCRIPT
+                        Script with definitions to include
+  -p PASSWORD, --password=PASSWORD
+                        The ZIP password to be used (default infected)
+  -n, --noextraction    Do not extract from archive file
+  -l, --literalfilenames
+                        Do not interpret filenames
+  -r, --recursedir      Recurse directories (wildcards and here files (@...)
+                        allowed)
+  --checkfilenames      Perform check if files exist prior to file processing
+  --logfile=LOGFILE     Create logfile with given keyword
+  --logcomment=LOGCOMMENT
+                        A string with comments to be included in the log file
+  --ignoreprocessingerrors
+                        Ignore errors during file processing
+  --filenamedatabase=FILENAMEDATABASE
+                        Use this to skip files that have been processed in
+                        prior runs
+  --excludefilenames=EXCLUDEFILENAMES
+                        Filenames to exclude (comma separated, @file
+                        supported)
+  --writemode=WRITEMODE
+                        Define writemode
+  --writesource=WRITESOURCE
+                        Part of the sourcepath to replace
+  --writedestination=WRITEDESTINATION
+                        Replacement for part of the sourcepath (--writesource)
+  -V, --verbose         verbose output with YARA rules
+  -d, --dump            perform dump
+  -D, --dumpnl          perform dump and end with newline
+  -x, --hexdump         perform hex dump
+  -X, --hexdumpnows     perform hex dump without whitespace
+  -a, --asciidump       perform ascii dump
+  -A, --asciidumprle    perform ascii dump with RLE
+  -b, --base64          perform BASE64 dump
+  -B, --base64nows      perform BASE64 dump without whitespace
+
+This tool also accepts flag arguments (#f#), read the man page (-m) for more
+info.

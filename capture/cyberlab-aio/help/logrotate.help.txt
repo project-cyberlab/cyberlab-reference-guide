@@ -1,0 +1,21 @@
+# command: logrotate
+# version: logrotate 3.21.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: logrotate [OPTION...] <configfile>
+  -d, --debug                   Don't do anything, just test and print debug
+                                messages
+  -f, --force                   Force file rotation
+  -m, --mail=command            Command to send mail (instead of
+                                `/usr/bin/mail')
+  -s, --state=statefile         Path of state file
+      --skip-state-lock         Do not lock the state file
+      --wait-for-state-lock     Wait for lock on the state file
+  -v, --verbose                 Display messages during rotation
+  -l, --log=logfile             Log file or 'syslog' to log to syslog
+      --version                 Display version information
+
+Help options:
+  -?, --help                    Show this help message
+      --usage                   Display brief usage message

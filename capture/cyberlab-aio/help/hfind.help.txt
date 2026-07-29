@@ -1,0 +1,18 @@
+# command: hfind
+# version: The Sleuth Kit ver 4.11.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+hfind: invalid option -- '-'
+usage: hfind [-eqVa] [-c] [-f lookup_file] [-i db_type] db_file [hashes]
+	-e: Extended mode - where values other than just the name are printed
+	-q: Quick mode - where a 1 is printed if it is found, else 0
+	-V: Print version to STDOUT
+	-c db_name: Create new database with the given name.
+	-a: Add given hashes to the database.
+	-f lookup_file: File with one hash per line to lookup
+	-i db_type: Create index file for a given hash database type
+	db_file: The path of the hash database, must have .kdb extension for -c option
+	[hashes]: hashes to lookup (STDIN is used otherwise)
+
+	Supported index types: nsrl-md5, nsrl-sha1, md5sum, encase, hk

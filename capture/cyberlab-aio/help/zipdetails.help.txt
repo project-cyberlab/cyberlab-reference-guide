@@ -1,0 +1,29 @@
+# command: zipdetails
+# version: 2.104
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown option: help
+Invalid command line option
+
+
+zipdetails [OPTIONS] file
+
+Display details about the internal structure of a Zip file.
+
+This is zipdetails version 2.104
+
+OPTIONS
+     -h        display help
+     --redact  Hide filenames in the output
+     --scan    enable scannng mode.
+               Blindly scan the file looking for zip headers
+               Expect false-positives.
+     --utc     Display date/time fields in UTC
+     -v        Verbose - output more stuff
+     --version Print version number
+
+Copyright (c) 2011-2022 Paul Marquess. All rights reserved.
+
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.

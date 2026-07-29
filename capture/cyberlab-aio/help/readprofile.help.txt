@@ -1,0 +1,28 @@
+# command: readprofile
+# version: readprofile from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ readprofile [options]
+
+Display kernel profiling information.
+
+Options:
+ -m, --mapfile <mapfile>   (defaults: "/boot/System.map" and
+                                      "/boot/System.map-6.8.0-136-generic")
+ -p, --profile <pro-file>  (default:  "/proc/profile")
+ -M, --multiplier <mult>   set the profiling multiplier to <mult>
+ -i, --info                print only info about the sampling step
+ -v, --verbose             print verbose data
+ -a, --all                 print all symbols, even if count is 0
+ -b, --histbin             print individual histogram-bin counts
+ -s, --counters            print individual counters within functions
+ -r, --reset               reset all the counters (root only)
+ -n, --no-auto             disable byte order auto-detection
+
+ -h, --help                display this help
+ -V, --version             display version
+
+For more details see readprofile(8).

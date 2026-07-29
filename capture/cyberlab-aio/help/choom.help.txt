@@ -1,0 +1,21 @@
+# command: choom
+# version: choom from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ choom [options] -p pid
+ choom [options] -n number -p pid
+ choom [options] -n number [--] command [args...]]
+
+Display and adjust OOM-killer score.
+
+Options:
+ -n, --adjust <num>     specify the adjust score value
+ -p, --pid <num>        process ID
+
+ -h, --help             display this help
+ -V, --version          display version
+
+For more details see choom(1).

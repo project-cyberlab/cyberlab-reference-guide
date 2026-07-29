@@ -1,0 +1,26 @@
+# command: tabs
+# version: ncurses 6.4.20221231
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: tabs [options] [tabstop-list]
+
+Options:
+  -0       reset tabs
+  -8       set tabs to standard interval
+  -a       Assembler, IBM S/370, first format
+  -a2      Assembler, IBM S/370, second format
+  -c       COBOL, normal format
+  -c2      COBOL compact format
+  -c3      COBOL compact format extended
+  -d       debug (show ruler with expected/actual tab positions)
+  -f       FORTRAN
+  -n       no-op (do not modify terminal settings)
+  -p       PL/I
+  -s       SNOBOL
+  -u       UNIVAC 1100 Assembler
+  -T name  use terminal type 'name'
+  -V       print version
+
+A tabstop-list is an ordered list of column numbers, e.g., 1,11,21
+or 1,+10,+10 which is the same.

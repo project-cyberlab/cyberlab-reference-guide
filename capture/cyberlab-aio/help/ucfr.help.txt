@@ -1,0 +1,22 @@
+# command: ucfr
+# version: ucfr: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Debian GNU/Linux ucfr Revision 3.00.
+           Copyright (C) 2002-2006 Manoj Srivastava.
+This is free software; see the GNU General Public Licence for copying
+conditions.  There is NO warranty.
+
+Usage: ucfr  [options] package_name path_for_configuration_file
+Options:
+     -h,     --help          print this message
+     -f      --force         Force the association, even if another package
+                             used to own the configuration file.
+     -d [n], --debug    [n]  Set the Debug level to N
+     -n,     --no-action     Dry run. No action is actually taken.
+     -v,     --verbose       Make the script verbose
+     -p,     --purge         Remove any reference to the package/file association
+                             from the records
+             --state-dir bar Set the state directory to bar instead of the
+                             default '/var/lib/ucf'. Used mostly for testing.

@@ -1,0 +1,8 @@
+# command: dumpe2fs
+# version: dumpe2fs 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+dumpe2fs 1.47.0 (5-Feb-2023)
+dumpe2fs: invalid option -- '-'
+Usage: dumpe2fs [-bfghimxV] [-o superblock=<num>] [-o blocksize=<num>] device

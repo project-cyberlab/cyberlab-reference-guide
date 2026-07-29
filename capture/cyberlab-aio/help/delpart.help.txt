@@ -1,0 +1,16 @@
+# command: delpart
+# version: delpart from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ delpart <disk device> <partition number>
+
+Tell the kernel to forget about a specified partition.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see delpart(8).

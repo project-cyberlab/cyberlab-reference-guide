@@ -1,0 +1,28 @@
+# command: blkdiscard
+# version: blkdiscard from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ blkdiscard [options] <device>
+
+Discard the content of sectors on a device.
+
+Options:
+ -f, --force         disable all checking
+ -o, --offset <num>  offset in bytes to discard from
+ -l, --length <num>  length of bytes to discard from the offset
+ -p, --step <num>    size of the discard iterations within the offset
+ -s, --secure        perform secure discard
+ -z, --zeroout       zero-fill rather than discard
+ -v, --verbose       print aligned length and offset
+
+ -h, --help          display this help
+ -V, --version       display version
+
+Arguments:
+ <num> arguments may be followed by the suffixes for
+   GiB, TiB, PiB, EiB, ZiB, and YiB (the "iB" is optional)
+
+For more details see blkdiscard(8).

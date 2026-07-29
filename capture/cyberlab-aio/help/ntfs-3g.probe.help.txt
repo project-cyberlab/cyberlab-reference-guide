@@ -1,0 +1,15 @@
+# command: ntfs-3g.probe
+# version: ntfs-3g.probe: Unknown option '--version'.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+ntfs-3g.probe 2022.10.3 - Probe NTFS volume mountability
+
+Copyright (C) 2007 Szabolcs Szakacsits
+
+Usage:    ntfs-3g.probe <--readonly|--readwrite> <device|image_file>
+
+Example:  ntfs-3g.probe --readwrite /dev/sda1
+
+News, support and information:  https://github.com/tuxera/ntfs-3g/

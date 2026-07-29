@@ -1,0 +1,13 @@
+# command: sigfind
+# version: The Sleuth Kit ver 4.11.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+sigfind: invalid option -- '-'
+sigfind [-b bsize] [-o offset] [-t template] [-lV] [hex_signature] file
+	-b bsize: Give block size (default 512)
+	-o offset: Give offset into block where signature should exist (default 0)
+	-l: Signature will be little endian in image
+	-V: Version
+	-t template: The name of a data structure template:
+		dospart, ext2, ext3, ext4, fat, hfs, hfs+, ntfs, ufs1, ufs2

@@ -1,0 +1,10 @@
+# command: e2image
+# version: e2image 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+e2image 1.47.0 (5-Feb-2023)
+e2image: invalid option -- '-'
+Usage: e2image [ -r|-Q ] [ -f ] [ -b superblock ] [ -B blocksize ] device image-file
+       e2image -I device image-file
+       e2image -ra [ -cfnp ] [ -o src_offset ] [ -O dest_offset ] src_fs [ dest_fs ]

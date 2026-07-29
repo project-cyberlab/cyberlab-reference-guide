@@ -1,0 +1,41 @@
+# command: gpgtar
+# version: gpgtar (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+gpgtar (GnuPG) 2.2.40
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: gpgtar [options] [files] [directories]
+Encrypt or sign files into an archive
+
+Commands:
+ 
+     --create                create an archive
+     --extract               extract an archive
+ -e, --encrypt               create an encrypted archive
+ -d, --decrypt               extract an encrypted archive
+ -s, --sign                  create a signed archive
+ -t, --list-archive          list an archive
+
+Options:
+ 
+ -c, --symmetric             use symmetric encryption
+ -r, --recipient USER-ID     encrypt for USER-ID
+ -u, --local-user USER-ID    use USER-ID to sign or decrypt
+ -o, --output FILE           write output to FILE
+ -v, --verbose               verbose
+ -q, --quiet                 be somewhat more quiet
+     --skip-crypto           skip the crypto processing
+     --dry-run               do not make any changes
+
+Tar options:
+ 
+ -C, --directory DIRECTORY   change to DIRECTORY first
+ -T, --files-from FILE       get names to create from FILE
+     --null                  -T reads null-terminated names
+
+Please report bugs to <https://bugs.gnupg.org>.

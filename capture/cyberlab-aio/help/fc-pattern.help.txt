@@ -1,0 +1,13 @@
+# command: fc-pattern
+# version: fontconfig version 2.14.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: fc-pattern [-cdVh] [-f FORMAT] [--config] [--default] [--verbose] [--format=FORMAT] [--version] [--help] [pattern] {element...}
+List best font matching [pattern]
+
+  -c, --config         perform config substitution on pattern
+  -d, --default        perform default substitution on pattern
+  -f, --format=FORMAT  use the given output format
+  -V, --version        display font config version and exit
+  -h, --help           display this help and exit

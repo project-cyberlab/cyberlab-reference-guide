@@ -1,0 +1,12 @@
+# command: update-locale
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: update-locale [OPTIONS] [LANG=locale] [LC_NUMERIC=locale] ...
+Options:
+   --help              display this message and exit
+   --reset             ignore variables defined in the locale file
+   --locale-file=FILE  file containing locale variables
+                       (Default: /etc/default/locale)
+   --no-checks         do not perform sanity checks on locale variables

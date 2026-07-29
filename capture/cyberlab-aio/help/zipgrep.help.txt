@@ -1,0 +1,7 @@
+# command: zipgrep
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: zipgrep [egrep_options] pattern zipfile [members...]
+Uses unzip and egrep to search the zip members for a string or pattern.

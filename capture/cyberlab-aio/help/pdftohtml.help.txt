@@ -1,0 +1,38 @@
+# command: pdftohtml
+# version: I/O Error: Couldn't open file '--version': No such file or directory.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pdftohtml version 22.12.0
+Copyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1999-2003 Gueorgui Ovtcharov and Rainer Dorsch
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+
+Usage: pdftohtml [options] <PDF-file> [<html-file> <xml-file>]
+  -f <int>              : first page to convert
+  -l <int>              : last page to convert
+  -q                    : don't print any messages or errors
+  -h                    : print usage information
+  -?                    : print usage information
+  -help                 : print usage information
+  --help                : print usage information
+  -p                    : exchange .pdf links by .html
+  -c                    : generate complex document
+  -s                    : generate single document that includes all pages
+  -dataurls             : use data URLs instead of external images in HTML
+  -i                    : ignore images
+  -noframes             : generate no frames
+  -stdout               : use standard output
+  -zoom <fp>            : zoom the pdf document (default 1.5)
+  -xml                  : output for XML post-processing
+  -noroundcoord         : do not round coordinates (with XML output only)
+  -hidden               : output hidden text
+  -nomerge              : do not merge paragraphs
+  -enc <string>         : output text encoding name
+  -fmt <string>         : image file format for Splash output (png or jpg)
+  -v                    : print copyright and version info
+  -opw <string>         : owner password (for encrypted files)
+  -upw <string>         : user password (for encrypted files)
+  -nodrm                : override document DRM settings
+  -wbt <fp>             : word break threshold (default 10 percent)
+  -fontfullname         : outputs font full name

@@ -1,0 +1,14 @@
+# command: ucfq
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: ucfq [options]
+Author: Manoj Srivastava <srivasta@debian.org>
+  where options are:
+ --help                This message.
+ --debug               Turn on debugging mode.
+ --verbose             Make the script more verbose.
+ --with-colons         A compact, machine readable version of the output.
+ --state-dir </path/>  Set the state directory to /path/ instead of the
+                       default /var/lib/ucf.

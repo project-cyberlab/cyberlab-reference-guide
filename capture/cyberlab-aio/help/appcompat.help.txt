@@ -1,0 +1,45 @@
+# command: appcompat
+# version: Version: 0.9.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Python psutil module required for memory governor (we can live without it unless we run out of memory)
+Missing tests folder or python faker module (won't be able to run unit tests)
+(Missing Levenshtein python module, access to Leven module disabled)
+usage: AppCompatProcessor.py [-h] [--maxCores MAXCORES] [-o OUTPUTFILE] [-r]
+                             [-v] [--version]
+                             database_file
+                             {load,status,list,dump,search,fsearch,filehitcount,tcorr,ptcorr,tstomp,tstack,stack,leven,reconscan,precon,fevil,hashsearch,testset}
+                             ...
+
+AppCompatProcessor (Beta 0.9.1 [2020-05-11T10:41:00])
+
+positional arguments:
+  database_file         The database to create or work with
+  {load,status,list,dump,search,fsearch,filehitcount,tcorr,ptcorr,tstomp,tstack,stack,leven,reconscan,precon,fevil,hashsearch,testset}
+    load                Load (or add new) AppCompat / AmCache data
+    status              Print status of database
+    list                List hosts in database
+    dump                Recreate AppCompat/AmCache dump for a given host
+    search              Search module
+    fsearch             Field search module
+    filehitcount        Count # of FileName hits from a user supplied file
+    tcorr               Perform temporal execution correlation on a user supplied filename
+    ptcorr              Print temporal correlation context for the previously calculated tcorr
+    tstomp              Attempt to detect modified last modification timestamps (experimental)
+    tstack              Time stacking module (experimental)
+    stack               Good old stacking with a sql twist
+    leven               Find file name anomalies based on Levenshtein distance
+    reconscan           Calculate recon activity in the database
+    precon              Print contextual activity to recon commands identified on a host
+    fevil               Use temporal correlation on recon sessions to find potential evil (experimental)
+    hashsearch          hashsearch module
+    testset             Build fake testset database
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --maxCores MAXCORES   set maximum number of cores to use
+  -o OUTPUTFILE         custom output file
+  -r                    remove termcolor use
+  -v                    verbose logging
+  --version             show program's version number and exit

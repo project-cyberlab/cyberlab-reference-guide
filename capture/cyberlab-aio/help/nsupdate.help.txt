@@ -1,0 +1,8 @@
+# command: nsupdate
+# version: nsupdate 9.18.49-1~deb12u1-Debian
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+nsupdate: illegal option -- -
+nsupdate: invalid argument --
+usage: nsupdate [-CdDi] [-L level] [-l] [-g | -o | -y keyname:secret | -k keyfile] [-p port] [-v] [-V] [-P] [-T] [-4 | -6] [filename]

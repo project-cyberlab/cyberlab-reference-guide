@@ -1,0 +1,21 @@
+# command: w
+# version: w from procps-ng 4.0.2
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ w [options] [user]
+
+Options:
+ -h, --no-header     do not print header
+ -u, --no-current    ignore current process username
+ -s, --short         short format
+ -f, --from          show remote hostname field
+ -o, --old-style     old style output
+ -i, --ip-addr       display IP address instead of hostname (if possible)
+
+     --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see w(1).

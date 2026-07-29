@@ -1,0 +1,20 @@
+# command: xortool-xor
+# version: error: option --version not recognized
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+error: option --help not recognized
+
+xortool-xor 1.1.0
+xor strings
+options:
+    -s  -  string with \xAF escapes
+    -r  -  raw string
+    -h  -  hex-encoded string (non-letterdigit chars are stripped)
+    -f  -  read data from file (- for stdin)
+
+    --newline -  newline at the end (default)
+    -n / --no-newline -  no newline at the end
+    --cycle - do not pad (default)
+    --no-cycle / --nc  -  pad smaller strings with null bytes
+example: xor -s lol -h 414243 -f /etc/passwd

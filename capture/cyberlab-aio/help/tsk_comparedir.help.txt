@@ -1,0 +1,17 @@
+# command: tsk_comparedir
+# version: The Sleuth Kit ver 4.11.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+tsk_comparedir: invalid option -- '-'
+Invalid argument: --help
+usage: tsk_comparedir [-f fstype] [-i imgtype] [-b dev_sector_size] [-o sector_offset] [-P pooltype] [-B pool_volume_block] [-n start_inum] [-vV] image [image] comparison_directory
+	-i imgtype: The format of the image file (use '-i list' for supported types)
+	-b dev_sector_size: The size (in bytes) of the device sectors
+	-f fstype: The file system type (use '-f list' for supported types)
+	-o sector_offset: sector offset for file system to compare
+	-P pooltype: Pool container type (use '-P list' for supported types)
+	-B pool_volume_block: Starting block (for pool volumes only)
+	-n start_inum: inum for directory in image file to start compare at
+	-v: verbose output to stderr
+	-V: Print version

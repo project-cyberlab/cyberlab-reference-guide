@@ -1,0 +1,74 @@
+# command: volshell
+# version: INFO     root        : Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Volshell (Volatility 3 Framework) 2.28.0
+usage: volshell [-h] [-c CONFIG] [-e EXTEND] [-p PLUGIN_DIRS] [-s SYMBOL_DIRS]
+                [-v] [-o OUTPUT_DIR] [-q] [--log LOG] [-f FILE]
+                [--write-config] [--save-config SAVE_CONFIG] [--clear-cache]
+                [--cache-path CACHE_PATH] [--offline | -u URL] [-w | -l | -m]
+                [--single-location SINGLE_LOCATION]
+                [--stackers [STACKERS ...]]
+                [--single-swap-locations [SINGLE_SWAP_LOCATIONS ...]]
+                [--script SCRIPT] [--script-only] [--pid PID]
+
+A tool for interactivate forensic analysis of memory images
+
+options:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Load the configuration from a json file
+  -e EXTEND, --extend EXTEND
+                        Extend the configuration with a new (or changed)
+                        setting
+  -p PLUGIN_DIRS, --plugin-dirs PLUGIN_DIRS
+                        Semi-colon separated list of paths to find plugins
+  -s SYMBOL_DIRS, --symbol-dirs SYMBOL_DIRS
+                        Semi-colon separated list of paths to find symbols
+  -v, --verbosity       Increase output verbosity
+  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                        Directory in which to output any generated files
+  -q, --quiet           Remove progress feedback
+  --log LOG             Log output to a file as well as the console
+  -f FILE, --file FILE  Shorthand for --single-location=file:// if single-
+                        location is not defined
+  --write-config        Write configuration JSON file out to config.json
+  --save-config SAVE_CONFIG
+                        Save configuration JSON file to a file
+  --clear-cache         Clears out all short-term cached items
+  --cache-path CACHE_PATH
+                        Change the default path (/root/.cache/volatility3)
+                        used to store the cache
+  --offline             Do not search online for additional JSON files
+  -u URL, --remote-isf-url URL
+                        Search online for ISF json files
+  -w, --windows         Run a Windows volshell
+  -l, --linux           Run a Linux volshell
+  -m, --mac             Run a Mac volshell
+  --single-location SINGLE_LOCATION
+                        Specifies a base location on which to stack
+  --stackers [STACKERS ...]
+                        List of stackers
+  --single-swap-locations [SINGLE_SWAP_LOCATIONS ...]
+                        Specifies a list of swap layer URIs for use with
+                        single-location
+
+Generic:
+  Configuration options based on Generic options
+
+  --script SCRIPT       File to load and execute at start
+  --script-only         Exit volshell after the script specified in --script
+                        completes
+
+Windows:
+  Configuration options based on Windows options
+
+  --pid PID             Process ID
+
+The following plugins could not be loaded (use -vv to see why):
+volatility3.plugins.windows.cachedump, volatility3.plugins.windows.hashdump,
+volatility3.plugins.windows.lsadump,
+volatility3.plugins.windows.registry.cachedump,
+volatility3.plugins.windows.registry.hashdump,
+volatility3.plugins.windows.registry.lsadump

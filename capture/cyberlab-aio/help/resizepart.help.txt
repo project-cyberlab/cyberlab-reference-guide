@@ -1,0 +1,16 @@
+# command: resizepart
+# version: resizepart from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ resizepart <disk device> <partition number> <length>
+
+Tell the kernel about the new size of a partition.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see resizepart(8).

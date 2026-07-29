@@ -1,0 +1,32 @@
+# command: frida-compile
+# version: 17.16.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: frida-compile [options] <module>
+
+positional arguments:
+  module                TypeScript/JavaScript module to compile
+
+options:
+  -h, --help            show this help message and exit
+  -O FILE, --options-file FILE
+                        text file containing additional command line options
+  --version             show program's version number and exit
+  -o OUTPUT, --output OUTPUT
+                        write output to <file>
+  -w, --watch           watch for changes and recompile
+  -S, --no-source-maps  omit source-maps
+  -c, --compress        minify code
+  -v, --verbose         be verbose
+  -F {unescaped,hex-bytes,c-string}, --output-format {unescaped,hex-bytes,c-string}
+                        desired output format
+  -B {esm,iife}, --bundle-format {esm,iife}
+                        desired bundle format
+  -T {full,none}, --type-check {full,none}
+                        desired type-checking mode
+  -P {gum,browser,neutral}, --platform {gum,browser,neutral}
+                        JavaScript runtime platform
+  -E MODULE, --external MODULE
+                        mark MODULE as external (may be specified multiple
+                        times)

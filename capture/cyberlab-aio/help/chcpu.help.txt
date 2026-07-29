@@ -1,0 +1,22 @@
+# command: chcpu
+# version: chcpu from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ chcpu [options]
+
+Configure CPUs in a multi-processor system.
+
+Options:
+ -e, --enable <cpu-list>       enable cpus
+ -d, --disable <cpu-list>      disable cpus
+ -c, --configure <cpu-list>    configure cpus
+ -g, --deconfigure <cpu-list>  deconfigure cpus
+ -p, --dispatch <mode>         set dispatching mode
+ -r, --rescan                  trigger rescan of cpus
+ -h, --help                    display this help
+ -V, --version                 display version
+
+For more details see chcpu(8).

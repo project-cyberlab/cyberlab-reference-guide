@@ -1,0 +1,10 @@
+# command: grpunconv
+# version: grpunconv: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: grpunconv [options]
+
+Options:
+  -h, --help                    display this help message and exit
+  -R, --root CHROOT_DIR         directory to chroot into

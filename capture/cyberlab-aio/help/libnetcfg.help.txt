@@ -1,0 +1,37 @@
+# command: libnetcfg
+# version: /usr/bin/libnetcfg version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/bin/libnetcfg version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+running under Perl version 5.36.0.
+
+Usage: libnetcfg [-OPTIONS [-MORE_OPTIONS]] [--] [PROGRAM_ARG1 ...]
+
+The following single-character options are accepted:
+	With arguments: -o -i
+	Boolean (without arguments): -d -c -h
+
+Options may be merged together.  -- stops processing of options.
+Space is not required between options and their arguments.
+
+For more details run
+	perldoc -F /usr/bin/libnetcfg
+  [Now continuing due to backward compatibility and excessive paranoia.
+   See 'perldoc Getopt::Std' about $Getopt::Std::STANDARD_HELP_VERSION.]
+daytime_hosts        
+ftp_ext_passive      0
+ftp_firewall         
+ftp_firewall_type    
+ftp_int_passive      0
+inet_domain          
+local_netmask        
+nntp_hosts           
+ph_hosts             
+pop3_hosts           
+smtp_hosts           
+snpp_hosts           
+test_exist           1
+test_hosts           1
+time_hosts           
+# /usr/bin/libnetcfg -h for help

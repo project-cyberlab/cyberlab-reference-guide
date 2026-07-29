@@ -1,0 +1,62 @@
+# command: httpx
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+                                    HTTPX 🦋                                    
+
+                         A next generation HTTP client.                         
+
+Usage: httpx <URL> [OPTIONS]                                                    
+
+                                                                                
+ -m, --method METHOD             Request method, such as GET, POST, PUT, PATCH, 
+                                 DELETE, OPTIONS, HEAD.                         
+                                 [Default: GET, or POST if a request body is    
+                                 included]                                      
+                                                                                
+ -p, --params <NAME VALUE> ...   Query parameters to include in the request     
+                                 URL.                                           
+                                                                                
+ -c, --content TEXT              Byte content to include in the request body.   
+                                                                                
+ -d, --data <NAME VALUE> ...     Form data to include in the request body.      
+                                                                                
+ -f, --files <NAME FILENAME> ... Form files to include in the request body.     
+                                                                                
+ -j, --json TEXT                 JSON data to include in the request body.      
+                                                                                
+ -h, --headers <NAME VALUE> ...  Include additional HTTP headers in the         
+                                 request.                                       
+                                                                                
+ --cookies <NAME VALUE> ...      Cookies to include in the request.             
+                                                                                
+ --auth <USER PASS>              Username and password to include in the        
+                                 request. Specify '-' for the password to use a 
+                                 password prompt. Note that using --verbose/-v  
+                                 will expose the Authorization header,          
+                                 including the password encoding in a trivially 
+                                 reversible format.                             
+                                                                                
+ --proxy URL                     Send the request via a proxy. Should be the    
+                                 URL giving the proxy address.                  
+                                                                                
+ --timeout FLOAT                 Timeout value to use for network operations,   
+                                 such as establishing the connection, reading   
+                                 some data, etc... [Default: 5.0]               
+                                                                                
+ --follow-redirects              Automatically follow redirects.                
+                                                                                
+ --no-verify                     Disable SSL verification.                      
+                                                                                
+ --http2                         Send the request using HTTP/2, if the remote   
+                                 server supports it.                            
+                                                                                
+ --download FILE                 Save the response content as a file, rather    
+                                 than displaying it.                            
+                                                                                
+ -v, --verbose                   Verbose output. Show request as well as        
+                                 response.                                      
+                                                                                
+ --help                          Show this message and exit.                    
+                                                                                

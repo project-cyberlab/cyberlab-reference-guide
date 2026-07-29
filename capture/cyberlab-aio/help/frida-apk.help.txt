@@ -1,0 +1,21 @@
+# command: frida-apk
+# version: 17.16.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: frida-apk [options] path.apk
+
+positional arguments:
+  apk                   apk file
+
+options:
+  -h, --help            show this help message and exit
+  -O FILE, --options-file FILE
+                        text file containing additional command line options
+  --version             show program's version number and exit
+  -o OUTPUT, --output OUTPUT
+                        output path
+  -g GADGET, --gadget GADGET
+                        inject the specified gadget library
+  -c GADGET_CONFIG, --gadget-config GADGET_CONFIG
+                        set the given key=value gadget interaction config

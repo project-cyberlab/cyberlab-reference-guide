@@ -1,0 +1,28 @@
+# command: lsirq
+# version: lsirq from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ lsirq [options]
+
+Utility to display kernel interrupt information.
+
+Options:
+ -J, --json           use JSON output format
+ -P, --pairs          use key="value" output format
+ -n, --noheadings     don't print headings
+ -o, --output <list>  define which output columns to use
+ -s, --sort <column>  specify sort column
+ -S, --softirq        show softirqs instead of interrupts
+
+ -h, --help           display this help
+ -V, --version        display version
+
+Available output columns:
+  IRQ    interrupts
+  TOTAL  total count
+  NAME   name
+
+For more details see lsirq(1).

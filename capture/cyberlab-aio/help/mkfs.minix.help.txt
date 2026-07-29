@@ -1,0 +1,23 @@
+# command: mkfs.minix
+# version: mkfs.minix from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ mkfs.minix [options] /dev/name [blocks]
+
+Options:
+ -1                      use Minix version 1
+ -2, -v                  use Minix version 2
+ -3                      use Minix version 3
+ -n, --namelength <num>  maximum length of filenames
+ -i, --inodes <num>      number of inodes for the filesystem
+ -c, --check             check the device for bad blocks
+ -l, --badblocks <file>  list of bad blocks from file
+     --lock[=<mode>]     use exclusive device lock (yes, no or nonblock)
+
+ -h, --help              display this help
+ -V, --version           display version
+
+For more details see mkfs.minix(8).

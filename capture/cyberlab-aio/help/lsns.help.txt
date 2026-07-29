@@ -1,0 +1,43 @@
+# command: lsns
+# version: lsns from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ lsns [options] [<namespace>]
+
+List system namespaces.
+
+Options:
+ -J, --json             use JSON output format
+ -l, --list             use list format output
+ -n, --noheadings       don't print headings
+ -o, --output <list>    define which output columns to use
+     --output-all       output all columns
+ -p, --task <pid>       print process namespaces
+ -r, --raw              use the raw output format
+ -u, --notruncate       don't truncate text in columns
+ -W, --nowrap           don't use multi-line representation
+ -t, --type <name>      namespace type (mnt, net, ipc, user, pid, uts, cgroup, time)
+ -T, --tree <rel>       use tree format (parent, owner, or process)
+
+ -h, --help             display this help
+ -V, --version          display version
+
+Available output columns:
+          NS  namespace identifier (inode number)
+        TYPE  kind of namespace
+        PATH  path to the namespace
+      NPROCS  number of processes in the namespace
+         PID  lowest PID in the namespace
+        PPID  PPID of the PID
+     COMMAND  command line of the PID
+         UID  UID of the PID
+        USER  username of the PID
+     NETNSID  namespace ID as used by network subsystem
+        NSFS  nsfs mountpoint (usually used network subsystem)
+         PNS  parent namespace identifier (inode number)
+         ONS  owner namespace identifier (inode number)
+
+For more details see lsns(8).

@@ -1,0 +1,21 @@
+# command: sudoreplay
+# version: sudoreplay version 1.9.13p3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+sudoreplay - replay sudo session logs
+
+usage: sudoreplay [-hnRS] [-d dir] [-m num] [-s num] ID
+usage: sudoreplay [-h] [-d dir] -l [search expression]
+
+Options:
+  -d, --directory=dir    specify directory for session logs
+  -f, --filter=filter    specify which I/O type(s) to display
+  -h, --help             display help message and exit
+  -l, --list             list available session IDs, with optional expression
+  -m, --max-wait=num     max number of seconds to wait between events
+  -n, --non-interactive  no prompts, session is sent to the standard output
+  -R, --no-resize        do not attempt to re-size the terminal
+  -S, --suspend-wait     wait while the command was suspended
+  -s, --speed=num        speed up or slow down output
+  -V, --version          display version information and exit

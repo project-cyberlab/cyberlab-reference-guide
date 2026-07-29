@@ -1,0 +1,11 @@
+# command: git-upload-pack
+# version: error: unknown option `version'
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+usage: git-upload-pack [--[no-]strict] [--timeout=<n>] [--stateless-rpc]
+                       [--advertise-refs] <directory>
+
+    --stateless-rpc       quit after a single request/response exchange
+    --strict              do not try <directory>/.git/ if <directory> is no Git directory
+    --timeout <n>         interrupt transfer after <n> seconds of inactivity

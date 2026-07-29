@@ -1,0 +1,8 @@
+# command: bzip2recover
+# version: bzip2recover 1.0.8: extracts blocks from damaged .bz2 files.
+# captured-via: (no args)
+# image: cyberlab-aio:v1
+#---
+bzip2recover 1.0.8: extracts blocks from damaged .bz2 files.
+bzip2recover: usage is `bzip2recover damaged_file_name'.
+	restrictions on size of recovered file: None

@@ -1,0 +1,73 @@
+# command: base64dump
+# version: base64dump.py 0.0.30
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: base64dump.py [options] [file]
+Extract base64 strings from file
+Available encodings (use "all" to try all encodings):
+ b64 -> BASE64, example: TVqQAAMAAAAEAAAA...
+ bu -> \u UNICODE, example: \u9090\ueb77...
+ pu -> % UNICODE, example: %u9090%ueb77...
+ hex -> hexadecimal, example: 6D6573736167652C...
+ bx -> \x hexadecimal, example: \x90\x90...
+ ah -> &H hexadecimal, example: &H90&H90...
+ zxle -> 0x hexadecimal little-endian, example: 0x909090900xeb77...
+ zxbe -> 0x hexadecimal big-endian, example: 0x909090900x77eb...
+ zxc -> 0x hexadecimal 2 digits, comma-separated, example: 0x90,0x90,0x90,0x90...
+ zxcn -> 0x hexadecimal 1 or 2 digits, comma-separated, example: 0x90,0xA,0x2A,0x90...
+ dec -> decimal numbers, separated by an arbitrary separator, example: 80;75;3;4...
+ nb -> NETBIOS, uppercase letters from A to P, example: ENFKOIAA
+ nbl -> NETBIOS, lowercase letters from a to p, example: enfkoiaa
+ b85 -> BASE85 RFC 1924, example: X>D+Ca&#bLba`-Pb31o...
+ a85 -> ASCII85, example: BOu!rD]...
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -m, --man             Print manual
+  -e ENCODING, --encoding=ENCODING
+                        select encoding to use, use "all" to try all encodings
+                        (default base64)
+  -s SELECT, --select=SELECT
+                        select item nr for dumping (a for all, L for largest)
+  -d, --dump            perform dump
+  -x, --hexdump         perform hex dump
+  -a, --asciidump       perform ascii dump
+  -A, --asciidumprle    perform ascii dump with RLE
+  -S, --strings         perform strings dump
+  -t TRANSLATE, --translate=TRANSLATE
+                        string translation, like utf16 or .decode("utf8")
+  -n NUMBER, --number=NUMBER
+                        minimum number of bytes in decoded data
+  -c CUT, --cut=CUT     cut data
+  -w, --ignorewhitespace
+                        ignore whitespace
+  -u, --unique          do not repeat identical decoded data
+  -z, --ignorenullbytes
+                        ignore null (zero) bytes
+  -i IGNORE, --ignore=IGNORE
+                        characters to ignore
+  -I IGNOREHEX, --ignorehex=IGNOREHEX
+                        characters to ignore (hexadecimal)
+  -y YARA, --yara=YARA  YARA rule-file, @file, directory or #rule to check
+                        data (YARA search doesn't work with -s option)
+  -D DECODERS, --decoders=DECODERS
+                        decoders to load (separate decoders with a comma , ;
+                        @file supported)
+  --decoderoptions=DECODEROPTIONS
+                        options for the decoder
+  --decoderdir=DECODERDIR
+                        directory for the decoder
+  --yarastrings         Print YARA strings
+  -V, --verbose         verbose output with decoder errors and YARA rules
+  --jsonoutput          produce json output
+  --jsoninput           consume json input
+  -T, --headtail        do head & tail
+  -p PREPROCESS, --preprocess=PREPROCESS
+                        Python function to process encodings prior to decoding
+                        (like L4, lambda bytes: bytes[:-1], ...)
+  -P POSTPROCESS, --postprocess=POSTPROCESS
+                        Python function to post-process decodings
+  --sort=SORT           Sort output
+  --stats               provide statistics for encoded data

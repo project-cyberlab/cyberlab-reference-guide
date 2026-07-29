@@ -1,0 +1,19 @@
+# command: vshadowdebug
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+vshadowdebug 20190323
+
+vshadowdebug: invalid option -- '-'
+Invalid argument: vshadowdebug
+Use vshadowdebug to troubleshoot issues with libvshadow
+
+Usage: vshadowdebug [ -o offset ] [ -hvV ] source
+
+	source: the source file or device
+
+	-h:     shows this help
+	-o:     specify the volume offset in bytes
+	-v:     verbose output to stderr
+	-V:     print version

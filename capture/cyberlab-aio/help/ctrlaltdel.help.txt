@@ -1,0 +1,16 @@
+# command: ctrlaltdel
+# version: ctrlaltdel from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ ctrlaltdel hard|soft
+
+Set the function of the Ctrl-Alt-Del combination.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see ctrlaltdel(8).

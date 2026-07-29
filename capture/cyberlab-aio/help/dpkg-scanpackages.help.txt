@@ -1,0 +1,17 @@
+# command: dpkg-scanpackages
+# version: Debian dpkg-scanpackages version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-scanpackages [<option>...] <binary-path> [<override-file> [<path-prefix>]] > Packages
+
+Options:
+  -t, --type <type>        scan for <type> packages (default is 'deb').
+  -a, --arch <arch>        architecture to scan for.
+  -h, --hash <hash-list>   only generate hashes for the specified list.
+  -m, --multiversion       allow multiple versions of a single package.
+  -e, --extra-override <file>
+                           use extra override file.
+  -M, --medium <medium>    add X-Medium field for dselect media access method
+  -?, --help               show this help message.
+      --version            show the version.

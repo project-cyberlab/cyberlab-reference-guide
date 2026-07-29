@@ -1,0 +1,9 @@
+# command: rtmon
+# version: Argument "--version" is unknown, try "rtmon help".
+# captured-via: help
+# image: cyberlab-aio:v1
+#---
+Usage: rtmon [ OPTIONS ] file FILE [ all | LISTofOBJECTS ]
+OPTIONS := { -f[amily] { inet | inet6 | link | help } |
+             -4 | -6 | -0 | -V[ersion] }
+LISTofOBJECTS := [ link ] [ address ] [ route ]

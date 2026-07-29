@@ -1,0 +1,18 @@
+# command: isosize
+# version: isosize from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ isosize [options] <iso9660_image_file> ...
+
+Show the length of an ISO-9660 filesystem.
+
+Options:
+ -d, --divisor=<number>  divide the amount of bytes by <number>
+ -x, --sectors           show sector count and size
+ -h, --help              display this help
+ -V, --version           display version
+
+For more details see isosize(8).

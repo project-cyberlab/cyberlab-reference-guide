@@ -1,0 +1,7 @@
+# command: json_pp
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown option: help
+Usage: /usr/bin/json_pp [-V] [-f from_format] [-t to_format] [-json_opt options_to_json1[,options_to_json2[,...]]]

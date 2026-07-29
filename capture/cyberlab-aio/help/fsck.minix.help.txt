@@ -1,0 +1,24 @@
+# command: fsck.minix
+# version: fsck.minix from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ fsck.minix [options] <device>
+
+Check the consistency of a Minix filesystem.
+
+Options:
+ -l, --list       list all filenames
+ -a, --auto       automatic repair
+ -r, --repair     interactive repair
+ -v, --verbose    be verbose
+ -s, --super      output super-block information
+ -m, --uncleared  activate mode not cleared warnings
+ -f, --force      force check
+
+ -h, --help       display this help
+ -V, --version    display version
+
+For more details see fsck.minix(8).

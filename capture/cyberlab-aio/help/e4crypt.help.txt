@@ -1,0 +1,14 @@
+# command: e4crypt
+# version: Unknown command: --version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown command: --help
+
+Available commands:
+  add_key              adds a key to the user's keyring
+  get_policy           get the encryption for directories
+  new_session          give the invoking process a new session keyring
+  set_policy           sets a policy for directories
+
+To get more information on a command, type 'e4crypt help cmd'

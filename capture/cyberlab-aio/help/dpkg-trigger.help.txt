@@ -1,0 +1,22 @@
+# command: dpkg-trigger
+# version: Debian dpkg-trigger package trigger utility version 1.21.23 (amd64).
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-trigger [<option>...] <trigger-name>
+       dpkg-trigger [<option>...] <command>
+
+Commands:
+  --check-supported                Check if the running dpkg supports triggers.
+
+  -?, --help                       Show this help message.
+      --version                    Show the version.
+
+Options:
+  --admindir=<directory>           Use <directory> instead of /var/lib/dpkg.
+  --root=<directory>               Use <directory> instead of /.
+  --by-package=<package>           Override trigger awaiter (normally set
+                                     by dpkg).
+  --await                          Package needs to await the processing.
+  --no-await                       No package needs to await the processing.
+  --no-act                         Just test - don't actually change anything.

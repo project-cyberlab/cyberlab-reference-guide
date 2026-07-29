@@ -1,0 +1,11 @@
+# command: regipy-diff
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: regipy-diff [OPTIONS] FIRST_HIVE_PATH SECOND_HIVE_PATH
+
+Options:
+  -o FILE
+  -v, --verbose  Verbosity
+  --help         Show this message and exit.

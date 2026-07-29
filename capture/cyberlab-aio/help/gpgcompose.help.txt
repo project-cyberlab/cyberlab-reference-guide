@@ -1,0 +1,27 @@
+# command: gpgcompose
+# version: Fatal: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+--user-id         Create a user id packet.
+--public-key      Create a public key packet.
+--private-key     Create a private key packet. [1m(Unimplemented.)[0m
+--public-subkey   Create a subkey packet.
+--private-subkey  Create a private subkey packet. [1m(Unimplemented.)[0m
+--sk-esk          Create a symmetric-key encrypted session key packet.
+--pk-esk          Create a public-key encrypted session key packet.
+--encrypted       Create a symmetrically encrypted data packet.
+--encrypted-mdc   Create a symmetrically encrypted and integrity protected
+                  data packet.
+--encrypted-pop   Pop the most recent encryption container started by
+                  either --encrypted or --encrypted-mdc.
+--compressed      Create a compressed data packet. [1m(Unimplemented.)[0m
+--literal         Create a literal (plaintext) data packet.
+--signature       Create a signature packet.
+--onepass-sig     Create a one-pass signature packet.
+                  [1m(Unimplemented.)[0m
+--copy            Copy the specified file.
+
+To get more information about a given command, use:
+
+  $ gpgcompose --command --help to list a command's options.

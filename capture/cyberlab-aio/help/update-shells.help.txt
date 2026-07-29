@@ -1,0 +1,10 @@
+# command: update-shells
+# version: unrecognized option --version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: /usr/sbin/update-shells [options]
+
+ --no-act    Do not move the actual update into place
+ --verbose   Be more verbose
+ --root DIR  Operate on the given chroot, defaults to /

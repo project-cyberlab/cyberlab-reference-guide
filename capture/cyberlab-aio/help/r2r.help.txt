@@ -1,0 +1,6 @@
+# command: r2r
+# version: r2r 6.1.9 +1 abi:124 @ linux-x86_64
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: r2r [-qvVnLi] [-C dir] [-F dir] [-f file] [-o file] [-s test] [-t seconds] [-j threads] [test file/dir | @test-type]

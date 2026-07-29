@@ -1,0 +1,30 @@
+# command: rtcwake
+# version: rtcwake from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ rtcwake [options]
+
+Enter a system sleep state until a specified wakeup time.
+
+Options:
+ -a, --auto               reads the clock mode from adjust file (default)
+ -A, --adjfile <file>     specifies the path to the adjust file
+                            the default is /etc/adjtime
+     --date <timestamp>   date time of timestamp to wake
+ -d, --device <device>    select rtc device (rtc0|rtc1|...)
+ -n, --dry-run            does everything, but suspend
+ -l, --local              RTC uses local timezone
+     --list-modes         list available modes
+ -m, --mode <mode>        standby|mem|... sleep mode
+ -s, --seconds <seconds>  seconds to sleep
+ -t, --time <time_t>      time to wake
+ -u, --utc                RTC uses UTC
+ -v, --verbose            verbose messages
+
+ -h, --help               display this help
+ -V, --version            display version
+
+For more details see rtcwake(8).

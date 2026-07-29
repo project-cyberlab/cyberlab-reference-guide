@@ -1,0 +1,66 @@
+# command: gpg-agent
+# version: gpg-agent (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+gpg-agent (GnuPG) 2.2.40
+libgcrypt 1.10.1
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: gpg-agent [options] [command [args]]
+Secret key management for GnuPG
+
+
+Options used for startup:
+     --daemon                           run in daemon mode (background)
+     --server                           run in server mode (foreground)
+     --supervised                       run in supervised mode
+     --no-detach                        do not detach from the console
+ -s, --sh                               sh-style command output
+ -c, --csh                              csh-style command output
+     --options FILE                     read options from FILE
+
+Options controlling the diagnostic output:
+ -v, --verbose                          verbose
+ -q, --quiet                            be somewhat more quiet
+     --log-file FILE                    write server mode logs to FILE
+
+Options controlling the configuration:
+     --disable-scdaemon                 do not use the SCdaemon
+     --scdaemon-program PGM             use PGM as the SCdaemon program
+     --extra-socket NAME                accept some commands via NAME
+     --keep-tty                         ignore requests to change the TTY
+     --keep-display                     ignore requests to change the X display
+     --enable-ssh-support               enable ssh support
+     --ssh-fingerprint-digest ALGO      use ALGO to show ssh fingerprints
+
+Options controlling the security:
+     --default-cache-ttl N              expire cached PINs after N seconds
+     --default-cache-ttl-ssh N          expire SSH keys after N seconds
+     --max-cache-ttl N                  set maximum PIN cache lifetime to N seconds
+     --max-cache-ttl-ssh N              set maximum SSH key lifetime to N seconds
+     --ignore-cache-for-signing         do not use the PIN cache when signing
+     --no-allow-external-cache          disallow the use of an external password cache
+     --no-allow-mark-trusted            disallow clients to mark keys as "trusted"
+     --allow-preset-passphrase          allow presetting passphrase
+
+Options enforcing a passphrase policy:
+     --enforce-passphrase-constraints   do not allow bypassing the passphrase policy
+     --min-passphrase-len N             set minimal required length for new passphrases to N
+     --min-passphrase-nonalpha N        require at least N non-alpha characters for a new passphrase
+     --check-passphrase-pattern FILE    check new passphrases against pattern in FILE
+     --max-passphrase-days N            expire the passphrase after N days
+     --enable-passphrase-history        do not allow the reuse of old passphrases
+
+Options controlling the PIN-Entry:
+     --batch                            never use the PIN-entry
+     --no-allow-loopback-pinentry       disallow caller to override the pinentry
+     --grab                             let PIN-Entry grab keyboard and mouse
+     --pinentry-program PGM             use PGM as the PIN-Entry program
+     --pinentry-timeout N               set the Pinentry timeout to N seconds
+     --allow-emacs-pinentry             allow passphrase to be prompted through Emacs
+
+Please report bugs to <https://bugs.gnupg.org>.

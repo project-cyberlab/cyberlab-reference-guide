@@ -895,3 +895,926 @@ zenmap	absent		0
 zip	absent		0	
 zip2john	absent		0	
 zipdump.py	absent		0	
+2to3	present	--help	1301	
+7z	present	--help	3140	
+7zr	present	--help	3127	
+Activate.ps1	present		0	
+AmcacheParser	present	--help	1710	2026.5.0+76dc8354aa98ce1e1c6f942abcfb09f583f411dd
+AppCompatCacheParser	present	--help	1395	2026.5.0+0cf059f40c2f7b31acdccb142461945402217398
+EvtxECmd	present	--help	2865	2026.5.0+bfc7f47ccbf65ffc9a3777cde5498db2fdd94664
+JLECmd	present	--help	2802	2026.5.0+15d8f46f083d04c9a5cbb1f0fad37c1225da43f6
+LECmd	present	--help	2317	2026.5.0+def1fc2686af4684d06a889b1315f225187ac8f7
+MFTECmd	present	--help	4203	2026.5.0+4fd94a6bd12237e8501baff5fc9e5b1b01c53862
+PECmd	present	--help	2313	2026.5.0+bde430c69ba4d97fea8b71fdddb6df7849419c10
+RBCmd	present	--help	1328	2026.5.0+72d305ee2aa7e5bf4e5e1e01576b34ab402038a6
+RECmd	present	--help	2802	2026.5.0+bcd0ac33ed98de61ea6de551eef96052bddbbd49
+RecentFileCacheParser	present	--help	1177	2026.5.0+722ea4c06bcb9150cdadbe96a650f525578dbd6d
+SBECmd	present	--help	1718	2026.5.0+5d73145683f1bfaeb4aec4d080badcb7b7cadb93
+SrumECmd	present	--help	1290	2026.5.0+880ad26bcb011976a8fc521eea63fc5e6e65ba02
+SumECmd	present	--help	1003	2026.5.0+8227da19559d4d4f9f45aefabbae7a37fd4f6384
+VSCMount	present		0	
+WxTCmd	present	--help	1063	2026.5.0+adbf96ed9c73dc6806d97b96160bb96bccd48f7a
+X11	absent		0	
+XORSearch	present	--help	2704	xorsearch.py 0.0.5
+activate	present		0	
+activate.csh	present		0	
+activate.fish	present		0	
+add-shell	present	-h	151	
+addgnupghome	present		0	
+addgroup	present	--help	1123	adduser version 3.134
+addpart	present	--help	239	addpart from util-linux 2.38.1
+addr2line	present	--help	1279	GNU addr2line (GNU Binutils for Debian) 2.40
+adduser	present	--help	1123	adduser version 3.134
+agetty	present	--help	2196	agetty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)
+appcompat	present	--help	2435	Version: 0.9.1
+applygnupgdefaults	present		0	
+apt	present	--help	1289	apt 2.6.1 (amd64)
+apt-cache	present	--help	1189	apt 2.6.1 (amd64)
+apt-cdrom	present	--help	656	apt 2.6.1 (amd64)
+apt-config	present	--help	634	apt 2.6.1 (amd64)
+apt-get	present	--help	1618	apt 2.6.1 (amd64)
+apt-key	present	--help	738	Unknown option: --version
+apt-mark	present	--help	1117	apt 2.6.1 (amd64)
+ar	present	--help	2178	GNU ar (GNU Binutils for Debian) 2.40
+arch	present	--help	351	arch (GNU coreutils) 9.1
+arpd	present	--help	151	
+as	present	--help	10853	GNU assembler (GNU Binutils for Debian) 2.40
+asan_symbolize-15	present	--help	1914	
+awk	present	(no args)	1154	awk: not an option: --version
+b2sum	present	--help	1819	b2sum (GNU coreutils) 9.1
+badblocks	present	--help	294	
+base32	present	--help	1049	base32 (GNU coreutils) 9.1
+base64	present	--help	1049	base64 (GNU coreutils) 9.1
+base64dump	present	--help	3352	base64dump.py 0.0.30
+basename	present	--help	956	basename (GNU coreutils) 9.1
+basenc	present	--help	1677	basenc (GNU coreutils) 9.1
+bash	present	--help	764	GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)
+bashbug	present	--help	598	GNU bashbug, version 5.2.15-release
+bdeinfo	present	--help	768	
+bdemount	present	--help	1078	
+blkcalc	present	--help	919	The Sleuth Kit ver 4.11.1
+blkcat	present	--help	978	The Sleuth Kit ver 4.11.1
+blkdiscard	present	--help	708	blkdiscard from util-linux 2.38.1
+blkid	present	--help	2033	blkid from util-linux 2.38.1  (libblkid 2.38.1, 04-Aug-2022)
+blkstat	present	--help	652	The Sleuth Kit ver 4.11.1
+blkzone	present	--help	956	blkzone from util-linux 2.38.1
+blockdev	present	--help	1478	blockdev from util-linux 2.38.1
+bridge	present	--help	337	Option "-version" is unknown, try "bridge help".
+bstrings	present	--help	3307	2026.5+6cca053120b10a1c5cb563e3574ec7b2e0e894e3
+bunzip2	present	--help	1248	bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
+bzcat	present	--help	1246	bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
+bzcmp	present		0	bzcmp: version not found or not a regular file
+bzdiff	present		0	bzdiff: version not found or not a regular file
+bzegrep	present		0	
+bzexe	present		0	bzexe: --version not a file
+bzfgrep	present		0	
+bzgrep	present		0	
+bzip2	present	--help	1246	bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
+bzip2recover	present	(no args)	163	bzip2recover 1.0.8: extracts blocks from damaged .bz2 files.
+bzless	present	--help	1269	------> --version <------
+bzmore	present	--help	1269	------> --version <------
+c++	present	--help	4090	c++ (Debian 12.2.0-14+deb12u1) 12.2.0
+c++filt	present	--help	1006	GNU c++filt (GNU Binutils for Debian) 2.40
+c89	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+c89-gcc	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+c99	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+c99-gcc	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+c_rehash	present	-h	152	
+capa-offline	present	--help	4392	capa 9.4.0
+capsh	present	--help	2425	
+captoinfo	present	--help	1749	ncurses 6.4.20221231
+captype	present	--help	326	Captype (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+cat	present	--help	1107	cat (GNU coreutils) 9.1
+cc	present	--help	4088	cc (Debian 12.2.0-14+deb12u1) 12.2.0
+cffi-gen-src	present	--help	406	
+chage	present	--help	884	chage: unrecognized option '--version'
+chainsaw	present	--help	1336	chainsaw 2.16.0
+chattr	present		0	Usage: chattr [-RVf] [-+=aAcCdDeijPsStTuFx] [-p project] [-v version] files...
+chcon	present	--help	2039	chcon (GNU coreutils) 9.1
+chcpu	present	--help	494	chcpu from util-linux 2.38.1
+chfn	present	--help	477	chfn: unrecognized option '--version'
+chgpasswd	present	--help	569	chgpasswd: unrecognized option '--version'
+chgrp	present	--help	1949	chgrp (GNU coreutils) 9.1
+chmem	present	--help	482	chmem from util-linux 2.38.1
+chmod	present	--help	1079	chmod (GNU coreutils) 9.1
+choom	present	--help	369	choom from util-linux 2.38.1
+chown	present	--help	2614	chown (GNU coreutils) 9.1
+chpasswd	present	--help	568	chpasswd: unrecognized option '--version'
+chroot	present	--help	703	chroot (GNU coreutils) 9.1
+chrt	present	--help	1116	chrt from util-linux 2.38.1
+chsh	present	--help	232	chsh: unrecognized option '--version'
+cksum	present	--help	2165	cksum (GNU coreutils) 9.1
+clambc	present	--help	1229	Clam AntiVirus Bytecode Testing Tool 1.4.3
+clamsubmit	present	--help	819	ClamAV 1.4.3
+clang++-15	present	--help	65536	Debian clang version 15.0.6
+clang-15	present	--help	65536	Debian clang version 15.0.6
+clang-cpp-15	present	--help	65536	Debian clang version 15.0.6
+clang-format-radare2	present	--help	1139	clang-format-radare2 1.0
+clear	present	--help	181	ncurses 6.4.20221231
+clear_console	present	--help	192	clear_console: Version 0.1
+cmp	present	--help	1314	cmp (GNU diffutils) 3.8
+comm	present	--help	1436	comm (GNU coreutils) 9.1
+corelist	present	--help	3964	
+cp	present	--help	4822	cp (GNU coreutils) 9.1
+cpan	present	--help	780	/usr/bin/cpan version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+cpan5.36-x86_64-linux-gnu	present	--help	843	/usr/bin/cpan5.36-x86_64-linux-gnu version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+cpgr	present	--help	193	cpgr: version: No such file or directory
+cpp	present	--help	4090	cpp (Debian 12.2.0-14+deb12u1) 12.2.0
+cpp-12	present	--help	4096	cpp-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+cppw	present	--help	193	cppw: version: No such file or directory
+cron	present		0	
+crontab	present	--help	463	version: No such file or directory
+csplit	present	--help	1472	csplit (GNU coreutils) 9.1
+ctrlaltdel	present	--help	193	ctrlaltdel from util-linux 2.38.1
+ctstat	present	--help	672	ctstat Version 6.1.0
+cut	present	--help	1782	cut (GNU coreutils) 9.1
+cvtsudoers	present	--help	1329	cvtsudoers version 1.9.13p3
+dash	present		0	dash: 0: cannot open version: No such file
+date	present	--help	4875	date (GNU coreutils) 9.1
+dcb	present	--help	361	dcb: unrecognized option '--version'
+dd	present	--help	3296	dd (coreutils) 9.1
+deb-systemd-helper	present	--help	197	Unknown option: version
+deb-systemd-invoke	present		0	
+debconf	present	--help	252	Unknown option: version
+debconf-apt-progress	present		0	Unknown option: version
+debconf-communicate	present	--help	196	Unknown option: version
+debconf-copydb	present	--help	123	Unknown option: version
+debconf-escape	present	--help	168	Unknown option: version
+debconf-set-selections	present	--help	222	Unknown option: version
+debconf-show	present	--help	148	Unknown option: version
+debugfs	present	--help	220	debugfs 1.47.0 (5-Feb-2023)
+delgroup	present	--help	548	deluser version 3.134
+delpart	present	--help	215	delpart from util-linux 2.38.1
+deluser	present	--help	548	deluser version 3.134
+delv	present	--help	2650	Invalid option: --version
+devlink	present	--help	375	devlink: unrecognized option '--version'
+df	present	--help	2430	df (GNU coreutils) 9.1
+dfir	present	--help	1713	
+dh_perl_openssl	present	--help	488	Can't locate Debian/Debhelper/Dh_Lib.pm in @INC (you may need to install the Debian::Debhelper::Dh_Lib module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/bin/dh_perl_openssl line 6.
+diel	present	--help	403	Detect It Easy Lite v3.10
+diff	present	--help	5387	diff (GNU diffutils) 3.8
+diff3	present	--help	1996	diff3 (GNU diffutils) 3.8
+dig	present	--help	269	Invalid option: --version
+dir	present	--help	7732	dir (GNU coreutils) 9.1
+dircolors	present	--help	908	dircolors (GNU coreutils) 9.1
+dirmngr	present	--help	3211	dirmngr (GnuPG) 2.2.40
+dirmngr-client	present	--help	1333	dirmngr-client (GnuPG) 2.2.40
+dirname	present	--help	691	dirname (GNU coreutils) 9.1
+dmesg	present	--help	2915	dmesg from util-linux 2.38.1
+dnsdomainname	present	--help	1487	hostname 3.23
+dnstap-read	present	--help	198	
+domainname	present	--help	1487	hostname 3.23
+dpkg	present	--help	4837	Debian 'dpkg' package management program version 1.21.23 (amd64).
+dpkg-architecture	present	--help	1544	Debian dpkg-architecture version 1.21.23.
+dpkg-buildflags	present	--help	960	Debian dpkg-buildflags version 1.21.23.
+dpkg-buildpackage	present	--help	5368	Debian dpkg-buildpackage version 1.21.23.
+dpkg-checkbuilddeps	present	--help	853	Debian dpkg-checkbuilddeps version 1.21.23.
+dpkg-deb	present	--help	2762	Debian 'dpkg-deb' package archive backend version 1.21.23 (amd64).
+dpkg-distaddfile	present	--help	244	Debian dpkg-distaddfile version 1.21.23.
+dpkg-divert	present	--help	1367	Debian dpkg-divert version 1.21.23 (amd64).
+dpkg-fsys-usrunmess	present		0	
+dpkg-genbuildinfo	present	--help	831	Debian dpkg-genbuildinfo version 1.21.23.
+dpkg-genchanges	present	--help	1763	Debian dpkg-genchanges version 1.21.23.
+dpkg-gencontrol	present	--help	1031	Debian dpkg-gencontrol version 1.21.23.
+dpkg-gensymbols	present	--help	1742	Debian dpkg-gensymbols version 1.21.23.
+dpkg-maintscript-helper	present	--help	933	Debian dpkg-maintscript-helper version 1.21.23.
+dpkg-mergechangelogs	present	--help	439	Debian dpkg-mergechangelogs version 1.21.23.
+dpkg-name	present	--help	594	Debian dpkg-name version 1.21.23.
+dpkg-parsechangelog	present	--help	1223	Debian dpkg-parsechangelog version 1.21.23.
+dpkg-preconfigure	present	--help	216	Unknown option: version
+dpkg-query	present	--help	1638	Debian dpkg-query package management program query tool version 1.21.23 (amd64).
+dpkg-realpath	present	--help	339	Debian dpkg-realpath version 1.21.23.
+dpkg-reconfigure	present	--help	435	Unknown option: version
+dpkg-scanpackages	present	--help	632	Debian dpkg-scanpackages version 1.21.23.
+dpkg-scansources	present	--help	623	Debian dpkg-scansources version 1.21.23.
+dpkg-shlibdeps	present	--help	1581	Debian dpkg-shlibdeps version 1.21.23.
+dpkg-source	present	--help	4152	Debian dpkg-source version 1.21.23.
+dpkg-split	present	--help	1152	Debian 'dpkg-split' package split/join tool; version 1.21.23 (amd64).
+dpkg-statoverride	present	--help	961	Debian dpkg-statoverride version 1.21.23 (amd64).
+dpkg-trigger	present	--help	799	Debian dpkg-trigger package trigger utility version 1.21.23 (amd64).
+dpkg-vendor	present	--help	448	Debian dpkg-vendor version 1.21.23.
+dpl4hydra	present	--help	1087	
+du	present	--help	3797	du (GNU coreutils) 9.1
+dumpe2fs	present	--help	138	dumpe2fs 1.47.0 (5-Feb-2023)
+dwp	present	--help	425	GNU dwp (GNU Binutils for Debian) 2.40
+e2freefrag	present		0	version: No such file or directory while opening filesystem
+e2fsck	present	--help	856	e2fsck 1.47.0 (5-Feb-2023)
+e2image	present	--help	264	e2image 1.47.0 (5-Feb-2023)
+e2label	present		0	e2label: No such file or directory while trying to open --version
+e2mmpstatus	present		0	Using EXT2FS Library version 1.47.0
+e2scrub	present	--help	321	e2scrub 1.47.0 (5-Feb-2023)
+e2scrub_all	present	--help	261	e2scrub_all 1.47.0 (5-Feb-2023)
+e2undo	present	--help	122	
+e4crypt	present	--help	345	Unknown command: --version
+e4defrag	present	--help	165	e4defrag 1.47.0 (5-Feb-2023)
+easy_install-2.7	present	--help	2101	setuptools 41.2.0 from /usr/local/lib/python2.7/site-packages (Python 2.7)
+echo	present	--help	1282	echo (GNU coreutils) 9.1
+editor	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+egrep	present	--help	4041	grep (GNU grep) 3.8
+elfedit	present	--help	1277	GNU elfedit (GNU Binutils for Debian) 2.40
+emldump	present	--help	1292	emldump.py 0.0.16
+enc2xs	present	--help	975	/usr/bin/enc2xs version 2.24 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+encguess	present	--help	994	/usr/bin/encguess version [unknown] calling Getopt::Std::getopts (version 1.13),
+env	present	--help	1472	env (GNU coreutils) 9.1
+esedbexport	present	--help	1141	
+esedbinfo	present	--help	324	
+evtxexport	present	--help	1774	
+evtxinfo	present	--help	611	
+ex	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+expand	present	--help	1069	expand (GNU coreutils) 9.1
+expiry	present	--help	289	expiry: unrecognized option '--version'
+expr	present	--help	2156	expr (GNU coreutils) 9.1
+factor	present	--help	483	factor (GNU coreutils) 9.1
+faillock	present		0	faillock: Unknown option: --version
+faillog	present	--help	749	faillog: unrecognized option '--version'
+fallocate	present	--help	931	fallocate from util-linux 2.38.1
+false	present	--help	604	false (GNU coreutils) 9.1
+fc-cache	present	--help	776	fontconfig version 2.14.1
+fc-cat	present	--help	424	fontconfig version 2.14.1
+fc-conflist	present	--help	205	fontconfig version 2.14.1
+fc-list	present	--help	521	fontconfig version 2.14.1
+fc-match	present	--help	571	fontconfig version 2.14.1
+fc-pattern	present	--help	455	fontconfig version 2.14.1
+fc-query	present	--help	454	fontconfig version 2.14.1
+fc-scan	present	--help	462	fontconfig version 2.14.1
+fc-validate	present	--help	451	fontconfig version 2.14.1
+fcat	present	--help	759	The Sleuth Kit ver 4.11.1
+fgrep	present	--help	4041	grep (GNU grep) 3.8
+fidentify	present	--help	264	fidentify 7.1, Data Recovery Utility, July 2019
+filefrag	present		0	filefrag 1.47.0 (5-Feb-2023)
+fincore	present	--help	599	fincore from util-linux 2.38.1
+find	present	--help	2110	find (GNU findutils) 4.9.0
+findfs	present	--help	211	findfs from util-linux 2.38.1
+findmnt	present	--help	4081	findmnt from util-linux 2.38.1
+fiwalk	present	--help	1711	SleuthKit Version: 4.11.1
+flock	present	--help	896	flock from util-linux 2.38.1
+fmt	present	--help	1157	fmt (GNU coreutils) 9.1
+fold	present	--help	666	fold (GNU coreutils) 9.1
+free	present	--help	1074	free from procps-ng 4.0.2
+frida-apk	present	--help	606	17.16.3
+frida-compile	present	--help	1171	17.16.3
+frida-create	present	--help	535	17.16.3
+frida-itrace	present	--help	3421	
+frida-join	present	--help	3379	17.16.3
+frida-ls	present	--help	1537	17.16.3
+frida-pm	present	--help	488	17.16.3
+frida-pull	present	--help	1534	17.16.3
+frida-push	present	--help	1533	17.16.3
+frida-rm	present	--help	1642	17.16.3
+frida-strace	present	--help	2134	17.16.3
+fsck	present	--help	969	fsck from util-linux 2.38.1
+fsck.cramfs	present	--help	521	fsck.cramfs from util-linux 2.38.1
+fsck.ext2	present	--help	862	e2fsck 1.47.0 (5-Feb-2023)
+fsck.ext3	present	--help	862	e2fsck 1.47.0 (5-Feb-2023)
+fsck.ext4	present	--help	862	e2fsck 1.47.0 (5-Feb-2023)
+fsck.minix	present	--help	472	fsck.minix from util-linux 2.38.1
+fsfreeze	present	--help	275	fsfreeze from util-linux 2.38.1
+fstab-decode	present		0	fstab-decode: --version: No such file or directory
+fstrim	present	--help	881	fstrim from util-linux 2.38.1
+ftguess	present	--help	918	ftguess 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools
+funzip	present		0	
+fusermount	present	--help	172	fusermount3 version: 3.14.0
+fusermount3	present	--help	173	fusermount3 version: 3.14.0
+g++	present	--help	4090	g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+g++-12	present	--help	4096	g++-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+gcc	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+gcc-12	present	--help	4096	gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+gcc-ar	present	--help	2205	GNU ar (GNU Binutils for Debian) 2.40
+gcc-ar-12	present	--help	2205	GNU ar (GNU Binutils for Debian) 2.40
+gcc-nm	present	--help	2911	GNU nm (GNU Binutils for Debian) 2.40
+gcc-nm-12	present	--help	2911	GNU nm (GNU Binutils for Debian) 2.40
+gcc-ranlib	present	--help	834	GNU ranlib (GNU Binutils for Debian) 2.40
+gcc-ranlib-12	present	--help	834	GNU ranlib (GNU Binutils for Debian) 2.40
+gcov	present	--help	1993	gcov (Debian 12.2.0-14+deb12u1) 12.2.0
+gcov-12	present	--help	1993	gcov (Debian 12.2.0-14+deb12u1) 12.2.0
+gcov-dump	present	--help	392	gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0
+gcov-dump-12	present	--help	392	gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0
+gcov-tool	present	--help	1350	gcov-tool (Debian 12.2.0-14+deb12u1) 12.2.0
+gcov-tool-12	present	--help	1353	gcov-tool-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+gencat	present	--help	882	gencat (Debian GLIBC 2.36-9+deb12u14) 2.36
+genl	present	-h	150	Option "--version" is unknown, try "genl -help".
+getcap	present	--help	148	version (No such file or directory)
+getconf	present	--help	295	getconf (Debian GLIBC 2.36-9+deb12u14) 2.36
+getent	present	--help	819	getent (Debian GLIBC 2.36-9+deb12u14) 2.36
+getopt	present	--help	903	getopt from util-linux 2.38.1
+getpcaps	present	--help	472	Cannot parse pid --version: (Invalid argument)
+getty	present	--help	2194	getty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)
+git	present	--help	2160	git version 2.39.5
+git-receive-pack	present	(no args)	163	error: unknown option `version'
+git-shell	present		0	
+git-upload-archive	present	-help	197	
+git-upload-pack	present	-h	366	error: unknown option `version'
+gmake	present	--help	2714	GNU Make 4.3
+gold	present	--help	22864	GNU gold (GNU Binutils for Debian 2.40) 1.16
+gp-archive	present	--help	2397	GNU x86_64-linux-gnu-gp-archive binutils version 2.40.00
+gp-collect-app	present	--help	4392	GNU x86_64-linux-gnu-gp-collect-app binutils version 2.40.00
+gp-display-html	present	--help	2761	gp-display-html GNU binutils version 2.40.00
+gp-display-src	present	--help	1571	GNU x86_64-linux-gnu-gp-display-src binutils version 2.40.00
+gp-display-text	present	--help	1554	GNU x86_64-linux-gnu-gp-display-text binutils version 2.40.00
+gpasswd	present	--help	637	gpasswd: unrecognized option '--version'
+gpg	present	--help	5008	gpg (GnuPG) 2.2.40
+gpg-agent	present	--help	3366	gpg-agent (GnuPG) 2.2.40
+gpg-connect-agent	present	--help	981	gpg-connect-agent (GnuPG) 2.2.40
+gpg-wks-server	present	--help	1151	gpg-wks-server (GnuPG) 2.2.40
+gpg-zip	present	--help	347	
+gpgcompose	present	--help	1149	Fatal: Unknown option: version
+gpgconf	present	--help	1650	gpgconf (GnuPG) 2.2.40
+gpgparsemail	present	--help	485	gpgparsemail: can't open '--version': No such file or directory
+gpgsm	present	--help	4606	gpgsm (GnuPG) 2.2.40
+gpgsplit	present	--help	628	gpgsplit (@GNUPG@) 2.2.40
+gpgtar	present	--help	1309	gpgtar (GnuPG) 2.2.40
+gpgv	present	--help	793	gpgv (GnuPG) 2.2.40
+gprof	present	--help	821	GNU gprof (GNU Binutils for Debian) 2.40
+gprofng	present	--help	3287	GNU x86_64-linux-gnu-gprofng binutils version 2.40.00
+grep	present	--help	4041	grep (GNU grep) 3.8
+groupadd	present	--help	810	groupadd: unrecognized option '--version'
+groupdel	present	--help	336	groupdel: unrecognized option '--version'
+groupmems	present	--help	578	groupmems: unrecognized option '--version'
+groupmod	present	--help	780	groupmod: unrecognized option '--version'
+groups	present	--help	496	groups (GNU coreutils) 9.1
+grpck	present	--help	414	grpck: unrecognized option '--version'
+grpconv	present	--help	158	grpconv: unrecognized option '--version'
+grpunconv	present	--help	160	grpunconv: unrecognized option '--version'
+gunzip	present	--help	1059	gunzip (gzip) 1.12
+gzexe	present	--help	351	gzexe (gzip) 1.12
+gzip	present	--help	1245	gzip 1.12
+h2ph	present	--help	730	/usr/bin/h2ph version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+h2xs	present	--help	3037	Defaulting to backwards compatibility with perl 5.36.0
+hardlink	present	--help	1718	hardlink from util-linux 2.38.1
+hayabusa	present	help	1490	error: unexpected argument '--version' found
+hcli	present	--help	3022	hcli, version 0.18.3
+head	present	--help	1394	head (GNU coreutils) 9.1
+helpztags	present		0	
+hfind	present	--help	672	The Sleuth Kit ver 4.11.1
+hivexml	present		0	hivex_open: version: No such file or directory
+host	present	--help	1095	host 9.18.49-1~deb12u1-Debian
+hostid	present	--help	394	hostid (GNU coreutils) 9.1
+hostname	present	--help	1487	hostname 3.23
+httpx	present	--help	4378	
+hwclock	present	--help	1949	hwclock from util-linux 2.38.1
+hydra-wizard	present		0	
+i386	present	--help	1017	i386 from util-linux 2.38.1
+iconv	present	--help	894	iconv (Debian GLIBC 2.36-9+deb12u14) 2.36
+iconvconfig	present	--help	770	iconvconfig (Debian GLIBC 2.36-9+deb12u14) 2.36
+id	present	--help	1023	id (GNU coreutils) 9.1
+ida-hcli	present	--help	3022	ida-hcli, version 0.18.3
+idle	present		0	
+idna	present	--help	980	idna 3.18
+ifind	present	--help	987	The Sleuth Kit ver 4.11.1
+img_cat	present	--help	435	The Sleuth Kit ver 4.11.1
+infocmp	present	--help	1433	ncurses 6.4.20221231
+infotocap	present	--help	1749	ncurses 6.4.20221231
+install	present	--help	3240	install (GNU coreutils) 9.1
+install-sgmlcatalog	present		0	Unknown option: version
+installkernel	present		0	Usage: installkernel <version> <image> <System.map> <directory>
+instmodsh	present	--help	65536	
+invoke-rc.d	present	--help	1574	invoke-rc.d: syntax error: unknown option "--version"
+ionice	present	--help	853	ionice from util-linux 2.38.1
+ip	present	--help	971	Option "-version" is unknown, try "ip -help".
+ipcmk	present	--help	570	ipcmk from util-linux 2.38.1
+ipcrm	present	--help	678	ipcrm from util-linux 2.38.1
+ipcs	present	--help	782	ipcs from util-linux 2.38.1
+ischroot	present	--help	240	Debian ischroot, version 5.7Copyright (C) 2011 Aurelien Jarno
+isosize	present	--help	339	isosize from util-linux 2.38.1
+jcat	present	--help	575	The Sleuth Kit ver 4.11.1
+jls	present	--help	469	The Sleuth Kit ver 4.11.1
+join	present	--help	2531	join (GNU coreutils) 9.1
+jpeg_extract	present		0	
+json_pp	present	--help	135	Unknown option: version
+kbxutil	present	--help	856	kbxutil (GnuPG) 2.2.40
+kill	present	--help	519	kill from procps-ng 4.0.2
+killall5	present		0	
+last	present	--help	1142	last from util-linux 2.38.1
+lastb	present	--help	1143	lastb from util-linux 2.38.1
+lastlog	present	--help	565	lastlog: unrecognized option '--version'
+lcf	present	--help	668	lcf: unrecognized option '--version'
+ld	present	--help	32569	GNU ld (GNU Binutils for Debian) 2.40
+ld.bfd	present	--help	32585	GNU ld (GNU Binutils for Debian) 2.40
+ld.gold	present	--help	22873	GNU gold (GNU Binutils for Debian 2.40) 1.16
+ld.so	present	--help	2477	ld.so (Debian GLIBC 2.36-9+deb12u14) stable release version 2.36.
+ldattach	present	--help	1341	ldattach from util-linux 2.38.1
+ldconfig	present	--help	1134	ldconfig (Debian GLIBC 2.36-9+deb12u14) 2.36
+ldd	present	--help	440	ldd (Debian GLIBC 2.36-9+deb12u14) 2.36
+less	present	--help	13066	version: No such file or directory
+lessecho	present		0	1.15
+lessfile	present		0	
+lesskey	present		0	lesskey  version 590
+lesspipe	present		0	
+libnetcfg	present	--help	1002	/usr/bin/libnetcfg version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+link	present	--help	416	link (GNU coreutils) 9.1
+linux32	present	--help	1020	linux32 from util-linux 2.38.1
+linux64	present	--help	1020	linux64 from util-linux 2.38.1
+ln	present	--help	2880	ln (GNU coreutils) 9.1
+lnstat	present	--help	672	lnstat Version 6.1.0
+locale	present	--help	679	locale (Debian GLIBC 2.36-9+deb12u14) 2.36
+locale-gen	present		0	
+localedef	present	--help	2284	localedef (Debian GLIBC 2.36-9+deb12u14) 2.36
+log2timeline	present	--help	18612	plaso - log2timeline version 20260512
+logger	present	--help	1688	logger from util-linux 2.38.1
+login	present		0	
+logname	present	--help	358	logname (GNU coreutils) 9.1
+logrotate	present	--help	824	logrotate 3.21.0
+logsave	present	--help	192	
+losetup	present	--help	2079	losetup from util-linux 2.38.1
+lowntfs-3g	present	--help	707	lowntfs-3g 2022.10.3 integrated FUSE 28
+ls	present	--help	7729	ls (GNU coreutils) 9.1
+lsattr	present	(no args)	159	lsattr 1.47.0 (5-Feb-2023)
+lsblk	present	--help	4109	lsblk from util-linux 2.38.1
+lscpu	present	--help	2352	lscpu from util-linux 2.38.1
+lsfd	present	--help	2524	lsfd from util-linux 2.38.1
+lsipc	present	--help	2650	lsipc from util-linux 2.38.1
+lsirq	present	--help	574	lsirq from util-linux 2.38.1
+lslocks	present	--help	1209	lslocks from util-linux 2.38.1
+lslogins	present	--help	2883	lslogins from util-linux 2.38.1
+lsmem	present	--help	1125	lsmem from util-linux 2.38.1
+lsns	present	--help	1395	lsns from util-linux 2.38.1
+lspgpot	present	help	205	
+lto-dump	present	--help	65536	lto-dump: fatal error: open version failed: No such file or directory
+lto-dump-12	present	--help	65536	lto-dump-12: fatal error: open version failed: No such file or directory
+lzcat	present	--help	1432	xz (XZ Utils) 5.4.1
+lzcmp	present	--help	349	xzcmp (XZ Utils) 5.4.1
+lzdiff	present	--help	352	xzdiff (XZ Utils) 5.4.1
+lzegrep	present	--help	231	xzegrep (XZ Utils) 5.4.1
+lzfgrep	present	--help	231	xzfgrep (XZ Utils) 5.4.1
+lzgrep	present	--help	227	xzgrep (XZ Utils) 5.4.1
+lzless	present	--help	184	xzless (XZ Utils) 5.4.1
+lzma	present	--help	1431	xz (XZ Utils) 5.4.1
+lzmainfo	present	--help	253	lzmainfo (XZ Utils) 5.4.1
+lzmore	present	--help	147	xzmore (XZ Utils) 5.4.1
+mailer	present		0	stat: version: No such file or directory
+make	present	--help	2713	GNU Make 4.3
+make-first-existing-target	present		0	Unknown option: version
+markdown-it	present	--help	707	markdown-it-py [version 4.2.0]
+mawk	present	(no args)	1154	mawk: not an option: --version
+mcookie	present	--help	471	mcookie from util-linux 2.38.1
+md5sum	present	--help	1594	md5sum (GNU coreutils) 9.1
+md5sum.textutils	present	--help	1604	md5sum (GNU coreutils) 9.1
+mdig	present	--help	175	Invalid option: --version
+mesg	present	--help	236	mesg from util-linux 2.38.1
+migrate-pubring-from-classic-gpg	present	--help	230	There is no --version/pubring.gpg, no need to migrate
+mkdir	present	--help	1004	mkdir (GNU coreutils) 9.1
+mke2fs	present	--help	510	mke2fs 1.47.0 (5-Feb-2023)
+mkfifo	present	--help	737	mkfifo (GNU coreutils) 9.1
+mkfs	present	--help	570	mkfs from util-linux 2.38.1
+mkfs.bfs	present	--help	491	mkfs.bfs from util-linux 2.38.1
+mkfs.cramfs	present	--help	851	mkfs.cramfs from util-linux 2.38.1
+mkfs.ext2	present	--help	516	mke2fs 1.47.0 (5-Feb-2023)
+mkfs.ext3	present	--help	516	mke2fs 1.47.0 (5-Feb-2023)
+mkfs.ext4	present	--help	516	mke2fs 1.47.0 (5-Feb-2023)
+mkfs.minix	present	--help	613	mkfs.minix from util-linux 2.38.1
+mkfs.ntfs	present	--help	1517	Failed to access 'version': No such file or directory
+mkhomedir_helper	present		0	
+mklost+found	present		0	mklost+found 1.47.0 (5-Feb-2023)
+mknod	present	--help	1328	mknod (GNU coreutils) 9.1
+mkntfs	present	--help	1517	Failed to access 'version': No such file or directory
+mkswap	present	--help	729	mkswap from util-linux 2.38.1
+mktemp	present	--help	1567	mktemp (GNU coreutils) 9.1
+mmcat	present	--help	516	The Sleuth Kit ver 4.11.1
+mmdbresolve	present		0	
+mmstat	present	--help	503	The Sleuth Kit ver 4.11.1
+more	present	--help	891	more from util-linux 2.38.1
+mount	present	--help	3068	mount from util-linux 2.38.1 (libmount 2.38.1: selinux, smack, btrfs, verity, namespaces, assert, debug)
+mount.fuse	present		0	
+mount.fuse3	present		0	
+mount.lowntfs-3g	present	--help	707	lowntfs-3g 2022.10.3 integrated FUSE 28
+mount.ntfs	present	--help	698	ntfs-3g 2022.10.3 integrated FUSE 28
+mount.ntfs-3g	present	--help	698	ntfs-3g 2022.10.3 integrated FUSE 28
+mountpoint	present	--help	475	mountpoint from util-linux 2.38.1
+msoffcrypto-tool	present	--help	505	
+mv	present	--help	2116	mv (GNU coreutils) 9.1
+namei	present	--help	540	namei from util-linux 2.38.1
+nawk	present	(no args)	1154	nawk: not an option: --version
+ncurses5-config	present	--help	1265	6.4.20221231
+ncurses6-config	present	--help	1265	6.4.20221231
+ncursesw5-config	present	--help	1280	6.4.20221231
+ncursesw6-config	present	--help	1280	6.4.20221231
+net-server	present	--help	2246	
+newgrp	present		0	newgrp: group 'version' does not exist
+newusers	present	--help	262	newusers: unrecognized option '--version'
+nice	present	--help	892	nice (GNU coreutils) 9.1
+nisdomainname	present	--help	1487	hostname 3.23
+nl	present	--help	1978	nl (GNU coreutils) 9.1
+nm	present	--help	2893	GNU nm (GNU Binutils for Debian) 2.40
+nohup	present	--help	875	nohup (GNU coreutils) 9.1
+nologin	present		0	
+nproc	present	--help	568	nproc (GNU coreutils) 9.1
+nsenter	present	--help	1178	nsenter from util-linux 2.38.1
+nslookup	present	help	332	*** Invalid option: -version
+nstat	present	--help	540	nstat utility, iproute2-6.1.0
+nsupdate	present	--help	193	nsupdate 9.18.49-1~deb12u1-Debian
+ntfs-3g.probe	present	--help	282	ntfs-3g.probe: Unknown option '--version'.
+ntfscat	present	--help	563	
+ntfsclone	present	--help	1401	ntfsclone v2022.10.3 (libntfs-3g)
+ntfscluster	present	--help	684	The device version doesn't exist
+ntfscmp	present	--help	386	ntfscmp: unrecognized option '--version'
+ntfscp	present	--help	699	
+ntfsdecrypt	present	--help	570	
+ntfsfallocate	present	--help	801	ntfsfallocate v2022.10.3 (libntfs-3g)
+ntfsfix	present	--help	519	ntfsfix v2022.10.3
+ntfsinfo	present	--help	579	
+ntfslabel	present	--help	515	The device version doesn't exist
+ntfsls	present	--help	829	The device version doesn't exist
+ntfsmove	present	--help	726	
+ntfsrecover	present	--help	846	Failed to access 'version': No such file or directory
+ntfsresize	present	--help	1336	ntfsresize v2022.10.3 (libntfs-3g)
+ntfssecaudit	present	--help	1257	ntfssecaudit 1.5.0 : NTFS security data auditing
+ntfstruncate	present	--help	799	ntfstruncate v2022.10.3 (libntfs-3g)
+ntfsundelete	present	--help	1220	The device version doesn't exist
+ntfsusermap	present	(no args)	203	Could not open "--version"
+ntfswipe	present	--help	1050	The device version doesn't exist
+numbers-to-hex.py	present	--help	881	numbers-to-hex.py 0.0.4
+numfmt	present	--help	4444	numfmt (GNU coreutils) 9.1
+objcopy	present	--help	8429	GNU objcopy (GNU Binutils for Debian) 2.40
+od	present	--help	3560	od (GNU coreutils) 9.1
+oledump	present	--help	2814	oledump.py 0.0.85
+openssl	present	--help	2906	Invalid command '--version'; type "help" for a list.
+p7zip	present	--help	457	/usr/bin/p7zip: ignoring unknown option --version
+pager	present	--help	13066	version: No such file or directory
+pam-auth-update	present		0	
+pam_getenv	present		0	
+pam_namespace_helper	present		0	
+pam_timestamp_check	present		0	
+partx	present	--help	1473	partx from util-linux 2.38.1
+passwd	present	--help	1230	passwd: unrecognized option '--version'
+paste	present	--help	787	paste (GNU coreutils) 9.1
+pathchk	present	--help	566	pathchk (GNU coreutils) 9.1
+pdb3	present	--help	539	Error: version does not exist
+pdb3.11	present	--help	539	Error: version does not exist
+pdfattach	present	--help	530	pdfattach version 22.12.0
+pdfdetach	present	--help	874	pdfdetach version 22.12.0
+pdffonts	present	--help	639	I/O Error: Couldn't open file '--version': No such file or directory.
+pdfimages	present	--help	1180	pdfimages version 22.12.0
+pdfinfo	present	--help	1458	I/O Error: Couldn't open file '--version': No such file or directory.
+pdfseparate	present	--help	520	pdfseparate version 22.12.0
+pdfsig	present	-h	2001	I/O Error: Couldn't open file '--version': No such file or directory.
+pdftocairo	present	--help	3461	pdftocairo version 22.12.0
+pdftohtml	present	--help	1782	I/O Error: Couldn't open file '--version': No such file or directory.
+pdftoppm	present	--help	4109	I/O Error: Couldn't open file '--version': No such file or directory.
+pdftops	present	--help	3513	I/O Error: Couldn't open file '--version': No such file or directory.
+pdftotext	present	--help	2176	I/O Error: Couldn't open file '--version': No such file or directory.
+pdfunite	present	--help	447	pdfunite version 22.12.0
+perl5.36-x86_64-linux-gnu	present	--help	2044	Summary of my perl5 (revision 5 version 36 subversion 0) configuration:
+perl5.36.0	present	--help	2029	Summary of my perl5 (revision 5 version 36 subversion 0) configuration:
+perlbug	present	--help	2315	perlbug version 1.42
+perldoc	present		0	
+perlivp	present	--help	360	
+perlthanks	present	--help	2327	perlbug version 1.42
+pgrep	present	--help	1786	pgrep from procps-ng 4.0.2
+piconv	present	--help	1276	Unknown option: version
+pidof	present	-h	533	
+pidwait	present	--help	1592	pidwait from procps-ng 4.0.2
+pinentry	present	--help	1081	pinentry-curses (pinentry) 1.2.1
+pinentry-curses	present	--help	1081	pinentry-curses (pinentry) 1.2.1
+pinfo	present	--help	2702	plaso - pinfo version 20260512
+pinky	present	--help	1065	pinky (GNU coreutils) 9.1
+pip	present	--help	4639	pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)
+pip2.7	present	--help	2901	pip 19.2.3 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)
+pip3	present	--help	4640	pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)
+pip3.11	present	--help	4643	pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)
+pivot_root	present	--help	188	pivot_root from util-linux 2.38.1
+pkgconf	present	--help	5357	1.8.1
+pkill	present	--help	1719	pkill from procps-ng 4.0.2
+pl2pm	present		0	Can't open --version: No such file or directory at /usr/bin/pl2pm line 43.
+pldd	present	--help	309	pldd (Debian GLIBC 2.36-9+deb12u14) 2.36
+pmap	present	--help	890	pmap from procps-ng 4.0.2
+pod2html	present	--help	2048	Unknown option: version
+pod2man	present	--help	8667	Unknown option: version
+pod2text	present	--help	5309	Unknown option: version
+pod2usage	present	--help	1776	Unknown option: version
+podchecker	present	--help	550	Unknown option: version
+policy-rc.d	present		0	
+pr	present	--help	4162	pr (GNU coreutils) 9.1
+prefetch	present	--help	293	
+printenv	present	--help	734	printenv (GNU coreutils) 9.1
+printf	present	--help	1646	printf (GNU coreutils) 9.1
+prlimit	present	--help	1817	prlimit from util-linux 2.38.1
+prove	present	--help	3059	TAP::Harness v3.44 and Perl v5.36.0
+ps	present	--help	164	ps from procps-ng 4.0.2
+psort	present	--help	9968	plaso - psort version 20260512
+pstat	present	--help	496	The Sleuth Kit ver 4.11.1
+ptar	present	--help	1639	/usr/bin/ptar version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+ptardiff	present	--help	652	/usr/bin/ptardiff version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+ptargrep	present	--help	4453	Unknown option: version
+ptx	present	--help	1831	ptx (GNU coreutils) 9.1
+pw-inspector	present	--help	1173	
+pwck	present	--help	440	pwck: unrecognized option '--version'
+pwconv	present	--help	157	pwconv: unrecognized option '--version'
+pwd	present	--help	722	pwd (GNU coreutils) 9.1
+pwdx	present	--help	166	pwdx from procps-ng 4.0.2
+pwhistory_helper	present		0	
+pwunconv	present	--help	159	pwunconv: unrecognized option '--version'
+py3clean	present	--help	411	py3clean 3.11.2-1+b1
+py3compile	present	--help	1381	py3compile 3.11.2-1+b1
+py3versions	present	--help	684	usage: py3versions [-v] [-h] [-d|--default] [-s|--supported] [-i|--installed] 
+pydoc	present	--help	1022	no Python documentation found for 'version'
+pydoc3	present	--help	1230	No Python documentation found for 'version'.
+pydoc3.11	present	--help	1230	No Python documentation found for 'version'.
+pygettext3	present	--help	4592	pygettext.py (xgettext for Python) 1.5
+pygettext3.11	present	--help	4592	pygettext.py (xgettext for Python) 1.5
+pygmentize	present	--help	4048	Pygments version 2.20.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.
+python	present	--help	2515	Python 3.11.2
+python2	present	--help	2913	Python 2.7.18
+python2.7	present	--help	2915	Python 2.7.18
+python2.7-config	present		0	Usage: /usr/local/bin/python2.7-config [--prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--help]
+python3	present	--help	2516	Python 3.11.2
+python3-config	present	--help	147	
+python3.11	present	--help	2519	Python 3.11.2
+python3.11-config	present	--help	150	Usage: /usr/bin/python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed
+r2agent	present	--help	498	r2agent 6.1.9 +1 abi:124 @ linux-x86_64
+r2p	present		0	
+r2pm	present	--help	1518	r2pm 6.1.9 +1 abi:124 @ linux-x86_64
+r2r	present	--help	123	r2r 6.1.9 +1 abi:124 @ linux-x86_64
+r2sdb	present	-h	712	sdb 2.4.8
+radare2	present	-h	2598	6.1.9-124  r2
+rafs2	present	--help	914	rafs2 6.1.9 +1 abi:124 @ linux-x86_64
+ragg2	present	-h	1927	ragg2 6.1.9 +1 abi:124 @ linux-x86_64
+randpkt	present	--help	1166	randpkt: unrecognized option: version
+ranlib	present	--help	816	GNU ranlib (GNU Binutils for Debian) 2.40
+rapatch2	present	-h	248	rapatch2 6.1.9 +1 abi:124 @ linux-x86_64
+rarun2	present	-h	962	rarun2 6.1.9 +1 abi:124 @ linux-x86_64
+rasign2	present	--help	882	rasign2 6.1.9 +1 abi:124 @ linux-x86_64
+ravc2	present	-h	739	ravc2 6.1.9 +1 abi:124 @ linux-x86_64
+rawshark	present	--help	1827	Rawshark (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+rbash	present	--help	768	GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)
+rdma	present	--help	237	rdma utility, iproute2-6.1.0
+readelf	present	--help	4681	GNU readelf (GNU Binutils for Debian) 2.40
+readlink	present	--help	1353	readlink (GNU coreutils) 9.1
+readprofile	present	--help	900	readprofile from util-linux 2.38.1
+realpath	present	--help	1045	realpath (GNU coreutils) 9.1
+regfexport	present	--help	762	
+regfinfo	present	--help	717	
+regfmount	present	--help	861	
+regipy-diff	present	--help	153	
+regipy-dump	present	--help	1223	
+regipy-parse-header	present	--help	128	
+regipy-plugins-list	present	help	124	
+regipy-plugins-run	present	--help	1034	
+regipy-process-transaction-logs	present	--help	188	
+registry-diff	absent		0	
+regripper	present	--help	1417	Unknown option: -version
+remove-shell	present	-h	151	
+rename.ul	present	--help	540	rename.ul from util-linux 2.38.1
+renice	present	--help	555	renice from util-linux 2.38.1
+reset	present	--help	562	ncurses 6.4.20221231
+resize2fs	present	--help	177	resize2fs 1.47.0 (5-Feb-2023)
+resizepart	present	--help	226	resizepart from util-linux 2.38.1
+rev	present	--help	167	rev from util-linux 2.38.1
+rgrep	present	--help	4041	grep (GNU grep) 3.8
+rich-click	present	--help	5138	rich-click, version 1.9.8
+rm	present	--help	2013	rm (GNU coreutils) 9.1
+rmdir	present	--help	731	rmdir (GNU coreutils) 9.1
+rmt	present	--help	498	rmt (GNU tar) 1.34
+rmt-tar	present	--help	502	rmt (GNU tar) 1.34
+roman	present	--help	270	
+routel	present	help	3782	option --version not recognized
+rpcgen	present	--help	1377	rpcgen (rpcsvc-proto) 1.4.3
+rtacct	present		0	rtacct utility, iproute2-6.1.0
+rtcwake	present	--help	896	rtcwake from util-linux 2.38.1
+rtmon	present	help	203	Argument "--version" is unknown, try "rtmon help".
+rtstat	present	--help	672	rtstat Version 6.1.0
+run-parts	present	--help	1119	Debian run-parts program, version 5.7
+runcon	present	--help	880	runcon (GNU coreutils) 9.1
+runuser	present	--help	1256	runuser from util-linux 2.38.1
+rview	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+savelog	present	--help	953	Rotated `version' at Wed Jul 29 08:22:16 AM UTC 2026.
+scalar	present	--help	168	git version 2.39.5
+sccainfo	present	--help	293	
+script	present	--help	1107	script from util-linux 2.38.1
+scriptlive	present	--help	642	scriptlive from util-linux 2.38.1
+scriptreplay	present	--help	918	scriptreplay from util-linux 2.38.1
+sdiff	present	--help	1831	sdiff (GNU diffutils) 3.8
+sed	present	--help	1837	sed (GNU sed) 4.9
+select-editor	present		0	
+sensible-browser	present		0	
+sensible-editor	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+sensible-pager	present	--help	13066	version: No such file or directory
+seq	present	--help	1463	seq (GNU coreutils) 9.1
+service	present		0	service ver. 1.65.2+deb12u1
+setarch	present	--help	1093	setarch from util-linux 2.38.1
+setcap	present	--help	613	
+setpriv	present	--help	1502	setpriv from util-linux 2.38.1
+setsid	present	--help	347	setsid from util-linux 2.38.1
+setterm	present	--help	2371	setterm from util-linux 2.38.1
+sg	present		0	sg: group 'version' does not exist
+sh	present		0	sh: 0: cannot open version: No such file
+sha1sum	present	--help	1600	sha1sum (GNU coreutils) 9.1
+sha224sum	present	--help	1600	sha224sum (GNU coreutils) 9.1
+sha256sum	present	--help	1602	sha256sum (GNU coreutils) 9.1
+sha384sum	present	--help	1602	sha384sum (GNU coreutils) 9.1
+sha512sum	present	--help	1602	sha512sum (GNU coreutils) 9.1
+shadowconfig	present		0	
+sharkd	present	--help	723	
+shasum	present	--help	1911	6.02
+shred	present	--help	1971	shred (GNU coreutils) 9.1
+shuf	present	--help	1036	shuf (GNU coreutils) 9.1
+sigfind	present	--help	393	The Sleuth Kit ver 4.11.1
+size	present	--help	1055	GNU size (GNU Binutils for Debian) 2.40
+skill	present	--help	1432	skill from procps-ng 4.0.2
+slabtop	present	--help	681	slabtop from procps-ng 4.0.2
+sleep	present	--help	601	sleep (GNU coreutils) 9.1
+smtpd.py	present	--help	892	Python SMTP proxy version 0.2
+snice	present	--help	1400	snice from procps-ng 4.0.2
+sort	present	--help	4082	sort (GNU coreutils) 9.1
+sorter	present	--help	1491	Unknown option: --version
+splain	present	--help	618	/usr/bin/splain version 1.39 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+split	present	--help	2325	split (GNU coreutils) 9.1
+srch_strings	present	--help	779	'version': No such file
+ss	present	--help	3143	ss utility, iproute2-6.1.0
+start-stop-daemon	present	--help	3162	start-stop-daemon 1.21.23 for Debian
+stat	present	--help	3862	stat (GNU coreutils) 9.1
+stdbuf	present	--help	1409	stdbuf (GNU coreutils) 9.1
+streamzip	present	--help	1503	1.002
+strings	present	--help	1577	GNU strings (GNU Binutils for Debian) 2.40
+strip	present	--help	2471	GNU strip (GNU Binutils for Debian) 2.40
+stty	present	--help	7998	stty (GNU coreutils) 9.1
+su	present	--help	1064	su from util-linux 2.38.1
+sudo	present	--help	3210	
+sudo_logsrvd	present	--help	383	sudo_logsrvd version 1.9.13p3
+sudo_sendlog	present	--help	818	sudo_sendlog version 1.9.13p3
+sudoedit	present	--help	1704	
+sudoreplay	present	--help	802	sudoreplay version 1.9.13p3
+sulogin	present	--help	393	sulogin from util-linux 2.38.1
+sum	present	--help	560	sum (GNU coreutils) 9.1
+swaplabel	present	--help	294	swaplabel from util-linux 2.38.1
+swapoff	present	--help	633	swapoff from util-linux 2.38.1
+swapon	present	--help	1877	swapon from util-linux 2.38.1
+switch_root	present	--help	240	switch_root from util-linux 2.38.1
+sync	present	--help	602	sync (GNU coreutils) 9.1
+sysctl	present	--help	1108	sysctl from procps-ng 4.0.2
+tabs	present	--help	670	ncurses 6.4.20221231
+tabulate	present	--help	971	option --version not recognized
+tac	present	--help	732	tac (GNU coreutils) 9.1
+tail	present	--help	2776	tail (GNU coreutils) 9.1
+tar	present	--help	16662	tar (GNU tar) 1.34
+tarcat	present	--help	1107	cat (GNU coreutils) 9.1
+taskset	present	--help	795	taskset from util-linux 2.38.1
+tc	present	-h	401	Option "--version" is unknown, try "tc -help".
+tee	present	--help	1169	tee (GNU coreutils) 9.1
+tempfile	present	--help	508	
+test	present		0	
+text2pcap	present	--help	6450	Text2pcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+tic	present	--help	1737	ncurses 6.4.20221231
+timeout	present	--help	2057	timeout (GNU coreutils) 9.1
+tipc	present		0	tipc: unrecognized option '--version'
+tload	present	--help	249	tload from procps-ng 4.0.2
+toe	present		0	ncurses 6.4.20221231
+top	present	--help	1336	top from procps-ng 4.0.2
+touch	present	--help	1579	touch (GNU coreutils) 9.1
+tput	present	--help	433	ncurses 6.4.20221231
+tqdm	present	--help	6818	4.68.3
+tr	present	--help	2575	tr (GNU coreutils) 9.1
+true	present	--help	599	true (GNU coreutils) 9.1
+truncate	present	--help	1325	truncate (GNU coreutils) 9.1
+tset	present	--help	560	ncurses 6.4.20221231
+tsk_comparedir	present	--help	763	The Sleuth Kit ver 4.11.1
+tsk_imageinfo	present	--help	318	The Sleuth Kit ver 4.11.1
+tsk_loaddb	present	--help	697	The Sleuth Kit ver 4.11.1
+tsort	present	--help	458	tsort (GNU coreutils) 9.1
+tty	present	--help	453	tty (GNU coreutils) 9.1
+tune2fs	present	--help	483	
+tzselect	present	--help	704	tzselect (Debian GLIBC 2.36-9+deb12u14) 2.36
+ucf	present	--help	1854	ucf: unrecognized option '--version'
+ucfq	present	--help	417	Unknown option: version
+ucfr	present	--help	912	ucfr: unrecognized option '--version'
+uclampset	present	--help	706	uclampset from util-linux 2.38.1
+umount	present	--help	1306	umount from util-linux 2.38.1 (libmount 2.38.1: selinux, smack, btrfs, verity, namespaces, assert, debug)
+unafs	present		0	
+uname	present	--help	988	uname (GNU coreutils) 9.1
+uncompress	present	--help	1063	gunzip (gzip) 1.12
+unexpand	present	--help	1184	unexpand (GNU coreutils) 9.1
+uniq	present	--help	1744	uniq (GNU coreutils) 9.1
+unique	present		0	
+unix_chkpwd	present		0	
+unix_update	present		0	
+unlink	present	--help	398	unlink (GNU coreutils) 9.1
+unlzma	present	--help	1433	xz (XZ Utils) 5.4.1
+unshare	present	--help	2236	unshare from util-linux 2.38.1
+unxz	present	--help	1431	xz (XZ Utils) 5.4.1
+unzipsfx	present	--help	141	UnZipSFX 6.00 of 20 April 2009, by Info-ZIP (http://www.info-zip.org).
+update-alternatives	present	--help	2335	Debian update-alternatives version 1.21.23.
+update-ca-certificates	present	(no args)	124	
+update-catalog	present	--help	485	
+update-locale	present	--help	379	Unknown option: version
+update-mime-database	present		0	update-mime-database (shared-mime-info) 2.2
+update-passwd	present	--help	1013	update-passwd 3.6.1
+update-rc.d	present	--help	277	
+update-shells	present	--help	180	unrecognized option --version
+uptime	present	--help	240	uptime from procps-ng 4.0.2
+useradd	present	--help	2252	useradd: unrecognized option '--version'
+userdel	present	--help	612	userdel: unrecognized option '--version'
+usermod	present	--help	2098	usermod: unrecognized option '--version'
+users	present	--help	465	users (GNU coreutils) 9.1
+usnjls	present	--help	559	The Sleuth Kit ver 4.11.1
+utmpdump	present	--help	386	utmpdump from util-linux 2.38.1
+validlocale	present		0	locale '--version' not available
+vdir	present	--help	7735	vdir (GNU coreutils) 9.1
+vdpa	present	--help	158	vdpa: unrecognized option '--version'
+vi	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+view	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+vigr	present	--help	367	vigr: unrecognized option '--version'
+vim.tiny	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+vipw	present	--help	367	vipw: unrecognized option '--version'
+visudo	present	--help	481	visudo version 1.9.13p3
+vivserver	present	--help	300	/data/version is not a valid directory!
+vmstat	present	--help	722	vmstat from procps-ng 4.0.2
+vol	present	--help	26683	INFO     volatility3.cli: Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
+volatility3	present	--help	26790	INFO     volatility3.cli: Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
+volshell	present	--help	3215	INFO     root        : Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
+vshadowdebug	present	--help	359	
+vshadowinfo	present	--help	434	
+vshadowmount	present	--help	640	
+w	present	--help	449	w from procps-ng 4.0.2
+wall	present	--help	369	wall from util-linux 2.38.1
+watch	present	--help	887	watch from procps-ng 4.0.2
+watchgnupg	present	--help	798	watchgnupg (GnuPG) 2.2.40
+wc	present	--help	1212	wc (GNU coreutils) 9.1
+wdctl	present	--help	1101	wdctl from util-linux 2.38.1
+wheel	present	--help	570	usage: wheel [-h] {unpack,pack,convert,tags,info,version,help} ...
+whereis	present	--help	594	whereis from util-linux 2.38.1
+which	present		0	
+which.debianutils	present		0	
+who	present	--help	1541	who (GNU coreutils) 9.1
+whoami	present	--help	412	whoami (GNU coreutils) 9.1
+wipefs	present	--help	1208	wipefs from util-linux 2.38.1
+x86_64	present	--help	1019	x86_64 from util-linux 2.38.1
+x86_64-linux-gnu-addr2line	present	--help	1313	GNU addr2line (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-ar	present	--help	2229	GNU ar (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-as	present	--help	10870	GNU assembler (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-c++filt	present	--help	1023	GNU c++filt (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-cpp	present	--help	4124	x86_64-linux-gnu-cpp (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-cpp-12	present	--help	4130	x86_64-linux-gnu-cpp-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-dwp	present	--help	442	GNU dwp (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-elfedit	present	--help	1277	GNU elfedit (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-g++	present	--help	4124	x86_64-linux-gnu-g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-g++-12	present	--help	4130	x86_64-linux-gnu-g++-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcc	present	--help	4124	x86_64-linux-gnu-gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcc-12	present	--help	4130	x86_64-linux-gnu-gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcc-ar	present	--help	2205	GNU ar (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gcc-ar-12	present	--help	2205	GNU ar (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gcc-nm	present	--help	2911	GNU nm (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gcc-nm-12	present	--help	2911	GNU nm (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gcc-ranlib	present	--help	834	GNU ranlib (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gcc-ranlib-12	present	--help	834	GNU ranlib (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gcov	present	--help	1993	gcov (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcov-12	present	--help	1993	gcov (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcov-dump	present	--help	392	gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcov-dump-12	present	--help	392	gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcov-tool	present	--help	1367	x86_64-linux-gnu-gcov-tool (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gcov-tool-12	present	--help	1370	x86_64-linux-gnu-gcov-tool-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+x86_64-linux-gnu-gold	present	--help	22915	GNU gold (GNU Binutils for Debian 2.40) 1.16
+x86_64-linux-gnu-gp-archive	present	--help	2397	GNU x86_64-linux-gnu-gp-archive binutils version 2.40.00
+x86_64-linux-gnu-gp-collect-app	present	--help	4392	GNU x86_64-linux-gnu-gp-collect-app binutils version 2.40.00
+x86_64-linux-gnu-gp-display-html	present	--help	2761	gp-display-html GNU binutils version 2.40.00
+x86_64-linux-gnu-gp-display-src	present	--help	1571	GNU x86_64-linux-gnu-gp-display-src binutils version 2.40.00
+x86_64-linux-gnu-gp-display-text	present	--help	1554	GNU x86_64-linux-gnu-gp-display-text binutils version 2.40.00
+x86_64-linux-gnu-gprof	present	--help	838	GNU gprof (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-gprofng	present	--help	3287	GNU x86_64-linux-gnu-gprofng binutils version 2.40.00
+x86_64-linux-gnu-ld	present	--help	32637	GNU ld (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-ld.bfd	present	--help	32653	GNU ld (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-ld.gold	present	--help	22924	GNU gold (GNU Binutils for Debian 2.40) 1.16
+x86_64-linux-gnu-lto-dump	present	--help	65536	x86_64-linux-gnu-lto-dump: error: version: file too short
+x86_64-linux-gnu-lto-dump-12	present	--help	65536	x86_64-linux-gnu-lto-dump-12: error: version: file too short
+x86_64-linux-gnu-nm	present	--help	2927	GNU nm (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-objcopy	present	--help	8463	GNU objcopy (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-objdump	present	--help	7445	GNU objdump (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-pkg-config	present	--help	5357	1.8.1
+x86_64-linux-gnu-pkgconf	present	--help	5357	1.8.1
+x86_64-linux-gnu-python3-config	present	--help	164	
+x86_64-linux-gnu-python3.11-config	present	--help	167	Usage: /usr/bin/x86_64-linux-gnu-python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed
+x86_64-linux-gnu-ranlib	present	--help	850	GNU ranlib (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-readelf	present	--help	4681	GNU readelf (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-size	present	--help	1089	GNU size (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-strings	present	--help	1611	GNU strings (GNU Binutils for Debian) 2.40
+x86_64-linux-gnu-strip	present	--help	2505	GNU strip (GNU Binutils for Debian) 2.40
+xargs	present	--help	3120	xargs (GNU findutils) 4.9.0
+xortool-xor	present	--help	481	error: option --version not recognized
+xsubpp	present	--help	205	Unknown option: version
+xxd	present	--help	1344	
+xz	present	--help	1429	xz (XZ Utils) 5.4.1
+xzcat	present	--help	1432	xz (XZ Utils) 5.4.1
+xzcmp	present	--help	349	xzcmp (XZ Utils) 5.4.1
+xzdiff	present	--help	352	xzdiff (XZ Utils) 5.4.1
+xzegrep	present	--help	231	xzegrep (XZ Utils) 5.4.1
+xzfgrep	present	--help	231	xzfgrep (XZ Utils) 5.4.1
+xzgrep	present	--help	227	xzgrep (XZ Utils) 5.4.1
+xzless	present	--help	184	xzless (XZ Utils) 5.4.1
+xzmore	present	--help	147	xzmore (XZ Utils) 5.4.1
+yes	present	--help	401	yes (GNU coreutils) 9.1
+ypdomainname	present	--help	1487	hostname 3.23
+zcat	present	--help	707	zcat (gzip) 1.12
+zcmp	present	--help	375	zcmp (gzip) 1.12
+zdiff	present	--help	314	zdiff (gzip) 1.12
+zdump	present	--help	471	zdump (Debian GLIBC 2.36-9+deb12u14) 2.36
+zegrep	present	--help	453	zgrep (gzip) 1.12
+zfgrep	present	--help	453	zgrep (gzip) 1.12
+zforce	present	--help	157	zforce (gzip) 1.12
+zgrep	present	--help	453	zgrep (gzip) 1.12
+zic	present	--help	254	zic (Debian GLIBC 2.36-9+deb12u14) 2.36
+zipdetails	present	--help	685	2.104
+zipdump	present	--help	2830	zipdump.py 0.0.35
+zipgrep	present	--help	131	
+zipinfo	present	--help	1035	ZipInfo 3.00 of 20 April 2009, by Greg Roelofs and the Info-ZIP group.
+zless	present	--help	195	zless (gzip) 1.12
+zmore	present	--help	158	zmore (gzip) 1.12
+znew	present	--help	649	znew (gzip) 1.12
+zramctl	present	--help	1693	zramctl from util-linux 2.38.1

@@ -1,0 +1,32 @@
+# command: dirmngr-client
+# version: dirmngr-client (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+dirmngr-client (GnuPG) 2.2.40
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: dirmngr-client [options] [certfile|pattern]
+Test an X.509 certificate against a CRL or do an OCSP check
+The process returns 0 if the certificate is valid, 1 if it is
+not valid and other error codes for general failures
+
+Options:
+ -v, --verbose                   verbose
+ -q, --quiet                     be somewhat more quiet
+     --ocsp                      use OCSP instead of CRLs
+     --ping                      check whether a dirmngr is running
+     --cache-cert                add a certificate to the cache
+     --validate                  validate a certificate
+     --lookup                    lookup a certificate
+ -l, --local                     lookup only locally stored certificates
+ -u, --url                       expect an URL for --lookup
+     --load-crl                  load a CRL into the dirmngr
+     --squid-mode                special mode for use by Squid
+     --pem                       expect certificates in PEM format
+     --force-default-responder   force the use of the default OCSP responder
+
+Please report bugs to <https://bugs.gnupg.org>.

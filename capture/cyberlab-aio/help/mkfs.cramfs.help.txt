@@ -1,0 +1,29 @@
+# command: mkfs.cramfs
+# version: mkfs.cramfs from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ mkfs.cramfs [-h] [-v] [-b blksize] [-e edition] [-N endian] [-i file] [-n name] dirname outfile
+
+Make compressed ROM file system.
+
+Options:
+ -v             be verbose
+ -E             make all warnings errors (non-zero exit status)
+ -b blksize     use this blocksize, must equal page size
+ -e edition     set edition number (part of fsid)
+ -N endian      set cramfs endianness (big|little|host), default host
+ -i file        insert a file image into the filesystem
+ -n name        set name of cramfs filesystem
+ -p             pad by 512 bytes for boot code
+ -s             sort directory entries (old option, ignored)
+ -z             make explicit holes
+ dirname        root of the filesystem to be compressed
+ outfile        output file
+
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see mkfs.cramfs(8).

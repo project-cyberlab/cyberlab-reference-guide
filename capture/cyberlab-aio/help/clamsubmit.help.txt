@@ -1,0 +1,23 @@
+# command: clamsubmit
+# version: ClamAV 1.4.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+clamsubmit: illegal option -- -
+
+                       Clam AntiVirus: Malware and False Positive Reporting Tool 1.4.3
+           By The ClamAV Team: https://www.clamav.net/about.html#credits
+           (C) 2024 Cisco Systems, Inc.
+
+    clamsubmit -hHinpVvd?
+
+    -h or -?                  Show this help
+    -v                        Show version
+    -e [EMAIL]                Your email address (required)
+    -n [FILE/-]               Submit a false negative (FN)
+    -N [NAME]                 Your name contained in quotation marks (required)
+    -p [FILE/-]               Submit a false positive (FP)
+    -V [VIRUS]                Detected virus name (required with -p)
+    -d                        Enable debug output
+
+You must specify -n or -p. Both are mutually exclusive. Pass in - as the filename for stdin.

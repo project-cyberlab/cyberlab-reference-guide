@@ -1,0 +1,10 @@
+# command: pwconv
+# version: pwconv: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: pwconv [options]
+
+Options:
+  -h, --help                    display this help message and exit
+  -R, --root CHROOT_DIR         directory to chroot into

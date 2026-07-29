@@ -1,0 +1,16 @@
+# command: pivot_root
+# version: pivot_root from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ pivot_root [options] new_root put_old
+
+Change the root filesystem.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see pivot_root(8).

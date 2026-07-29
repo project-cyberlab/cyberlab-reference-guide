@@ -1,0 +1,12 @@
+# command: xzfgrep
+# version: xzfgrep (XZ Utils) 5.4.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: xzfgrep [OPTION]... [-e] PATTERN [FILE]...
+Look for instances of PATTERN in the input FILEs, using their
+uncompressed contents if they are compressed.
+
+OPTIONs are the same as for 'grep -F'.
+
+Report bugs to <xz@tukaani.org>.

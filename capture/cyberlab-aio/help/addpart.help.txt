@@ -1,0 +1,16 @@
+# command: addpart
+# version: addpart from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ addpart <disk device> <partition number> <start> <length>
+
+Tell the kernel about the existence of a specified partition.
+
+Options:
+ -h, --help     display this help
+ -V, --version  display version
+
+For more details see addpart(8).

@@ -1,0 +1,43 @@
+# command: gpgconf
+# version: gpgconf (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+gpgconf (GnuPG) 2.2.40
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: gpgconf [options]
+Manage configuration options for tools of the GnuPG system
+
+Commands:
+ 
+     --list-components            list all components
+     --check-programs             check all programs
+     --list-options COMPONENT     list options
+     --change-options COMPONENT   change options
+     --check-options COMPONENT    check options
+     --apply-defaults             apply global default values
+     --apply-profile FILE         update configuration files using FILE
+ -L, --list-dirs                  get the configuration directories for gpgconf
+     --list-config                list global configuration file
+     --check-config               check global configuration file
+     --query-swdb                 query the software version database
+ -R, --reload                     reload all or a given component
+     --launch                     launch a given component
+ -K, --kill                       kill a given component
+ -V, --show-versions              
+ -X, --show-configs               
+
+Options:
+ 
+ -o, --output                     use as output file
+ -v, --verbose                    verbose
+ -q, --quiet                      quiet
+ -n, --dry-run                    do not make any changes
+ -r, --runtime                    activate changes at runtime, if possible
+     --status-fd FD               write status info to this FD
+
+Please report bugs to <https://bugs.gnupg.org>.

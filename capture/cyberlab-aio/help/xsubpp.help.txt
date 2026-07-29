@@ -1,0 +1,7 @@
+# command: xsubpp
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown option: help
+Usage: xsubpp [-v] [-csuffix csuffix] [-except] [-prototypes] [-noversioncheck] [-nolinenumbers] [-nooptimize] [-noinout] [-noargtypes] [-strip|s pattern] [-typemap typemap]... file.xs

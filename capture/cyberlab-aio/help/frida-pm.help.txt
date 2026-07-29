@@ -1,0 +1,18 @@
+# command: frida-pm
+# version: 17.16.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: frida-pm [options] <command> [...]
+
+positional arguments:
+  <command>
+    search              search for packages
+    install             install one or more packages
+
+options:
+  -h, --help            show this help message and exit
+  -O FILE, --options-file FILE
+                        text file containing additional command line options
+  --version             show program's version number and exit
+  --registry HOST       package registry to use (default: registry.npmjs.org)

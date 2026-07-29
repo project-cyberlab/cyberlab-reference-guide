@@ -1,0 +1,6 @@
+# command: x86_64-linux-gnu-python3-config
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/x86_64-linux-gnu-python3-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed

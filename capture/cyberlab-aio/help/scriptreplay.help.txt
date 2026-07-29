@@ -1,0 +1,30 @@
+# command: scriptreplay
+# version: scriptreplay from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ scriptreplay [options]
+ scriptreplay [-t] timingfile [typescript] [divisor]
+
+Play back terminal typescripts, using timing information.
+
+Options:
+ -t, --timing <file>     script timing log file
+ -T, --log-timing <file> alias to -t
+ -I, --log-in <file>     script stdin log file
+ -O, --log-out <file>    script stdout log file (default)
+ -B, --log-io <file>     script stdin and stdout log file
+
+ -s, --typescript <file> deprecated alias to -O
+
+     --summary           display overview about recorded session and exit
+ -d, --divisor <num>     speed up or slow down execution with time divisor
+ -m, --maxdelay <num>    wait at most this many seconds between updates
+ -x, --stream <name>     stream type (out, in, signal or info)
+ -c, --cr-mode <type>    CR char mode (auto, never, always)
+ -h, --help              display this help
+ -V, --version           display version
+
+For more details see scriptreplay(1).

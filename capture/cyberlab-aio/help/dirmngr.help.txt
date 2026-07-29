@@ -1,0 +1,76 @@
+# command: dirmngr
+# version: dirmngr (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+dirmngr (GnuPG) 2.2.40
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: dirmngr [options] [command [args]]
+Keyserver, CRL, and OCSP access for GnuPG
+
+Commands:
+ 
+     --server                     run in server mode (foreground)
+     --daemon                     run in daemon mode (background)
+     --supervised                 run in supervised mode
+     --list-crls                  list the contents of the CRL cache
+     --load-crl FILE              load CRL from FILE into cache
+     --fetch-crl URL              fetch a CRL from URL
+     --shutdown                   shutdown the dirmngr
+     --flush                      flush the cache
+
+Options used for startup:
+     --no-detach                  do not detach from the console
+ -s, --sh                         sh-style command output
+ -c, --csh                        csh-style command output
+     --options FILE               read options from FILE
+
+Options controlling the diagnostic output:
+ -v, --verbose                    verbose
+ -q, --quiet                      be somewhat more quiet
+     --debug-level LEVEL          set the debugging level to LEVEL
+     --log-file FILE              write server mode logs to FILE
+
+Options controlling the configuration:
+     --allow-version-check        allow online software version check
+     --max-replies N              do not return more than N items in one query
+
+Network related options:
+     --use-tor                    route all network traffic via Tor
+
+Configuration for Keyservers:
+     --keyserver URL              use keyserver at URL
+     --hkp-cacert FILE            use the CA certificates in FILE for HKP over TLS
+
+Configuration for HTTP servers:
+     --disable-http               inhibit the use of HTTP
+     --ignore-http-dp             ignore HTTP CRL distribution points
+     --http-proxy URL             redirect all HTTP requests to URL
+     --honor-http-proxy           use system's HTTP proxy setting
+
+Configuration of LDAP servers to use:
+     --disable-ldap               inhibit the use of LDAP
+     --ignore-ldap-dp             ignore LDAP CRL distribution points
+     --ldap-proxy HOST            use HOST for LDAP queries
+     --only-ldap-proxy            do not use fallback hosts with --ldap-proxy
+     --ldapserver SPEC            use this keyserver to lookup keys
+     --ldapserverlist-file FILE   read LDAP server list from FILE
+     --add-servers                add new servers discovered in CRL distribution points to serverlist
+     --ldaptimeout N              set LDAP timeout to N seconds
+
+Configuration for OCSP:
+     --allow-ocsp                 allow sending OCSP requests
+     --ignore-ocsp-service-url    ignore certificate contained OCSP service URLs
+     --ocsp-responder URL         use OCSP responder at URL
+     --ocsp-signer FPR            OCSP response signed by FPR
+
+Other options:
+     --force                      force loading of outdated CRLs
+
+(See the "info" manual for a complete listing of all commands and options)
+
+Please report bugs to <https://bugs.gnupg.org>.

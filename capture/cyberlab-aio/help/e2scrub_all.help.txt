@@ -1,0 +1,11 @@
+# command: e2scrub_all
+# version: e2scrub_all 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/sbin/e2scrub_all: illegal option -- -
+Usage: /usr/sbin/e2scrub_all [OPTIONS]
+ -n: Show what commands e2scrub_all would execute.
+ -r: Remove e2scrub snapshots.
+ -A: Scrub all ext[234] filesystems even if not mounted.
+ -V: Print version information and exit.

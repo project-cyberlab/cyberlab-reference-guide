@@ -1,0 +1,25 @@
+# command: idna
+# version: idna 3.18
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: python -m idna [-h] [-e | -d] [--strict] [--version] [domain ...]
+
+Convert a domain name between its Unicode (U-label) and ASCII-compatible
+(A-label) forms. With no mode flag, the direction is chosen from the first
+input — if it contains an xn-- label the stream is decoded, otherwise it is
+encoded — and the same mode is applied to every remaining input. UTS #46
+mapping is applied by default; pass --strict to disable it. When no domains
+are given on the command line and stdin is piped, one domain per line is read
+from stdin.
+
+positional arguments:
+  domain        One or more domain names to convert. Omit to read from stdin.
+
+options:
+  -h, --help    show this help message and exit
+  -e, --encode  Encode the input to its ASCII A-label form.
+  -d, --decode  Decode the input from its ASCII A-label form.
+  --strict      Disable the default UTS #46 mapping and apply IDNA 2008 rules
+                verbatim.
+  --version     show program's version number and exit

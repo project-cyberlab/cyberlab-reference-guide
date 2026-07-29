@@ -1,0 +1,14 @@
+# command: ps
+# version: ps from procps-ng 4.0.2
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).

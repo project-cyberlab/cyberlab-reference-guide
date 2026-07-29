@@ -1,0 +1,14 @@
+# command: pdfunite
+# version: pdfunite version 22.12.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pdfunite version 22.12.0
+Copyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+Usage: pdfunite [options] <PDF-sourcefile-1>..<PDF-sourcefile-n> <PDF-destfile>
+  -v             : print copyright and version info
+  -h             : print usage information
+  -help          : print usage information
+  --help         : print usage information
+  -?             : print usage information

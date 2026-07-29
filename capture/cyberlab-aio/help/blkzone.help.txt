@@ -1,0 +1,34 @@
+# command: blkzone
+# version: blkzone from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ blkzone <command> [options] <device>
+
+Run zone command on the given block device.
+
+Commands:
+ report       Report zone information about the given device
+ capacity     Report sum of zone capacities for the given device
+ reset        Reset a range of zones.
+ open         Open a range of zones.
+ close        Close a range of zones.
+ finish       Set a range of zones to Full.
+
+Options:
+ -o, --offset <sector>  start sector of zone to act (in 512-byte sectors)
+ -l, --length <sectors> maximum sectors to act (in 512-byte sectors)
+ -c, --count <number>   maximum number of zones
+ -f, --force            enforce on block devices used by the system
+ -v, --verbose          display more details
+
+ -h, --help             display this help
+ -V, --version          display version
+
+Arguments:
+ <sector> and <sectors> arguments may be followed by the suffixes for
+   GiB, TiB, PiB, EiB, ZiB, and YiB (the "iB" is optional)
+
+For more details see blkzone(8).

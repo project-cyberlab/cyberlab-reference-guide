@@ -1,0 +1,25 @@
+# command: scriptlive
+# version: scriptlive from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ scriptlive [options]
+ scriptlive [-t] timingfile [-I|-B] typescript
+
+Execute terminal typescript.
+
+Options:
+ -t, --timing <file>     script timing log file
+ -T, --log-timing <file> alias to -t
+ -I, --log-in <file>     script stdin log file
+ -B, --log-io <file>     script stdin and stdout log file
+
+ -c, --command <command> run command rather than interactive shell
+ -d, --divisor <num>     speed up or slow down execution with time divisor
+ -m, --maxdelay <num>    wait at most this many seconds between updates
+ -h, --help              display this help
+ -V, --version           display version
+
+For more details see scriptlive(1).

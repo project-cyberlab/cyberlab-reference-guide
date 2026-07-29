@@ -1,0 +1,20 @@
+# command: mkfs.bfs
+# version: mkfs.bfs from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: mkfs.bfs [options] device [block-count]
+
+Make an SCO bfs filesystem.
+
+Options:
+ -N, --inodes=NUM    specify desired number of inodes
+ -V, --vname=NAME    specify volume name
+ -F, --fname=NAME    specify file system name
+ -v, --verbose       explain what is being done
+ -c                  this option is silently ignored
+ -l                  this option is silently ignored
+ -h, --help          display this help
+ -V, --version       display version
+
+For more details see mkfs.bfs(8).

@@ -1,0 +1,23 @@
+# command: cpan
+# version: /usr/bin/cpan version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/bin/cpan version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+running under Perl version 5.36.0.
+
+Usage: cpan [-OPTIONS [-MORE_OPTIONS]] [--] [PROGRAM_ARG1 ...]
+
+The following single-character options are accepted:
+	With arguments: -M -j
+	Boolean (without arguments): -h -v -V -I -g -G -C -A -D -O -l -L -a -r -p -P -J -w -x -X -T -c -f -i -m -s -t -u
+
+Options may be merged together.  -- stops processing of options.
+Space is not required between options and their arguments.
+
+For more details run
+	perldoc -F /usr/bin/cpan
+  [Now continuing due to backward compatibility and excessive paranoia.
+   See 'perldoc Getopt::Std' about $Getopt::Std::STANDARD_HELP_VERSION.]
+Nothing to install!
+Loading internal logger. Log::Log4perl recommended for better logging

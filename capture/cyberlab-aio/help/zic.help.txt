@@ -1,0 +1,11 @@
+# command: zic
+# version: zic (Debian GLIBC 2.36-9+deb12u14) 2.36
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+zic: usage is zic [ --version ] [ --help ] [ -v ] \
+	[ -b {slim|fat} ] [ -d directory ] [ -l localtime ] [ -L leapseconds ] \
+	[ -p posixrules ] [ -r '[@lo][/@hi]' ] [ -t localtime-link ] \
+	[ filename ... ]
+
+Report bugs to <http://www.debian.org/Bugs/>.

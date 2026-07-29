@@ -1,0 +1,14 @@
+# command: gzexe
+# version: gzexe (gzip) 1.12
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/gzexe [OPTION] FILE...
+Replace each executable FILE with a compressed version of itself.
+Make a backup FILE~ of the old version of FILE.
+
+  -d             Decompress each FILE instead of compressing it.
+      --help     display this help and exit
+      --version  output version information and exit
+
+Report bugs to <bug-gzip@gnu.org>.

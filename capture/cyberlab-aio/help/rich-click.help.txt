@@ -1,0 +1,56 @@
+# command: rich-click
+# version: rich-click, version 1.9.8
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+                                                                                
+ Usage: rich-click [OPTIONS] SCRIPT | MODULE[:CLICK_COMMAND] ...                
+                                                                                
+ The rich-click CLI provides richly formatted help output from any tool using   
+ click, formatted with rich.                                                    
+ Full docs here:                                                                
+ https://ewels.github.io/rich-click/latest/documentation/rich_click_cli/        
+ The rich-click command line tool can be prepended before any Python package    
+ using native click to provide attractive richified click help output.          
+ For example, if you have a package called my_package that uses click, you can  
+ run:                                                                           
+ >>> rich-click my_package --help                                               
+ When not rendering help text, the provided command will run normally, so it is 
+ safe to replace calls to the tool with rich-click in front, e.g.:              
+ >>> rich-click my_package cmd --foo 3                                          
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --theme        -t  THEME            Set the theme to render the CLI with.    │
+│ --rich-config  -c  JSON             Keyword arguments to pass into the       │
+│                                     RichHelpConfiguration() used to render   │
+│                                     the help text of the command. You can    │
+│                                     pass either a JSON directly, or a file   │
+│                                     prefixed with `@` (for example:          │
+│                                     '@rich_config.json'). Note that the      │
+│                                     --rich-config option is also used to     │
+│                                     render this help text you're reading     │
+│                                     right now!                               │
+│ --output       -o  [html|svg|text]  Optionally render help text as HTML or   │
+│                                     SVG or plain text. By default, help text │
+│                                     is rendered normally.                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Advanced Options ───────────────────────────────────────────────────────────╮
+│ --errors-in-output-format              If set, forces the CLI to render CLI  │
+│                                        error messages in the format          │
+│                                        specified by the --output option. By  │
+│                                        default, error messages render        │
+│                                        normally, i.e. they are not converted │
+│                                        to html or svg.                       │
+│ --suppress-warnings/--do-not-suppress  Suppress warnings when there are      │
+│ -warnings                              conflicting entry_points. This        │
+│                                        situation is extremely rare. [env     │
+│                                        var:                                  │
+│                                        RICH_CLICK_CLI_SUPPRESS_WARNINGS]     │
+│ --patch-rich-click/--no-patch-rich-cl  If set, patch rich_click.Command, not │
+│ ick                                    just click.Command.                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Extra ──────────────────────────────────────────────────────────────────────╮
+│ --themes       List all available themes and exit.                           │
+│ --version      Show the version and exit.                                    │
+│ --help     -h  Show this message and exit.                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯

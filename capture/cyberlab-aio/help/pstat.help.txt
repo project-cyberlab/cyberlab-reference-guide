@@ -1,0 +1,15 @@
+# command: pstat
+# version: The Sleuth Kit ver 4.11.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pstat: invalid option -- '-'
+Invalid argument: --help
+usage: pstat [-tvV] [-p pooltype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] image
+	-t: display type only
+	-i imgtype: The format of the image file (use '-i list' for supported types)
+	-b dev_sector_size: The size (in bytes) of the device sectors
+	-P pooltype: Pool container type (use '-P list' for supported types)
+	-o imgoffset: The offset of the file system in the image (in sectors)
+	-v: verbose output to stderr
+	-V: Print version

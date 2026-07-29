@@ -1,0 +1,32 @@
+# command: gpg-connect-agent
+# version: gpg-connect-agent (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+gpg-connect-agent (GnuPG) 2.2.40
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /root/.gnupg
+
+Syntax: gpg-connect-agent [options]
+Connect to a running agent and send commands
+
+
+Options:
+ 
+ -v, --verbose           verbose
+ -q, --quiet             quiet
+     --hex               print data out hex encoded
+     --decode            decode received data lines
+     --dirmngr           connect to the dirmngr
+ -S, --raw-socket NAME   connect to Assuan socket NAME
+ -T, --tcp-socket ADDR   connect to Assuan server at ADDR
+ -E, --exec              run the Assuan server given on the command line
+     --no-ext-connect    do not use extended connect mode
+ -r, --run FILE          run commands from FILE on startup
+ -s, --subst             run /subst on startup
+
+Please report bugs to <https://bugs.gnupg.org>.

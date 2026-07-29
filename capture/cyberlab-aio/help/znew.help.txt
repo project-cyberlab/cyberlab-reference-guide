@@ -1,0 +1,20 @@
+# command: znew
+# version: znew (gzip) 1.12
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/znew [OPTION]... [FILE]...
+Recompress files from .Z (compress) format to .gz (gzip) format.
+
+Options:
+
+  -f     Force recompression even if a .gz file already exists.
+  -t     Test the new files before deleting originals.
+  -v     Verbose; display name and statistics for each file compressed.
+  -9     Use the slowest compression method (optimal compression).
+  -P     Use pipes for the conversion to reduce disk space usage.
+  -K     Keep a .Z file when it is smaller than the .gz file; implies -t.
+      --help     display this help and exit
+      --version  output version information and exit
+
+Report bugs to <bug-gzip@gnu.org>.

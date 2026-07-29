@@ -1,0 +1,100 @@
+# command: gpgsm
+# version: gpgsm (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+gpgsm (GnuPG) 2.2.40
+libgcrypt 1.10.1
+libksba 1.6.3
+Copyright (C) 2022 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /root/.gnupg
+Supported algorithms:
+Cipher: 3DES, AES128, AES192, AES256, SERPENT128, SERPENT192, SERPENT256, SEED, CAMELLIA128, CAMELLIA192, CAMELLIA256
+Pubkey: RSA, ECC
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224, WHIRLPOOL
+
+Syntax: gpgsm [options] [files]
+Sign, check, encrypt or decrypt using the S/MIME protocol
+Default operation depends on the input data
+
+Commands:
+ 
+ -s, --sign                             make a signature
+ -b, --detach-sign                      make a detached signature
+ -e, --encrypt                          encrypt data
+ -d, --decrypt                          decrypt data (default)
+     --verify                           verify a signature
+ -k, --list-keys                        list keys
+     --list-external-keys               list external keys
+ -K, --list-secret-keys                 list secret keys
+     --list-chain                       list certificate chain
+     --fingerprint                      list keys and fingerprints
+     --generate-key                     generate a new key pair
+     --delete-keys                      remove keys from the public keyring
+     --import                           import certificates
+     --export                           export certificates
+     --learn-card                       register a smartcard
+     --server                           run in server mode
+     --call-dirmngr                     pass a command to the dirmngr
+     --call-protect-tool                invoke gpg-protect-tool
+     --change-passphrase                change a passphrase
+
+Options controlling the diagnostic output:
+ -v, --verbose                          verbose
+ -q, --quiet                            be somewhat more quiet
+     --no-tty                           don't use the terminal at all
+     --debug-level LEVEL                set the debugging level to LEVEL
+     --log-file FILE                    write server mode logs to FILE
+
+Options controlling the configuration:
+     --include-certs N                  number of certificates to include
+     --policy-file FILE                 take policy information from FILE
+
+Options controlling the input:
+     --assume-armor                     assume input is in PEM format
+     --assume-base64                    assume input is in base-64 format
+     --assume-binary                    assume input is in binary format
+
+Options controlling the output:
+ -a, --armor                            create ascii armored output
+     --base64                           create base-64 encoded output
+ -o, --output FILE                      write output to FILE
+
+Options to specify keys:
+ -r, --recipient USER-ID                encrypt for USER-ID
+ -u, --local-user USER-ID               use USER-ID to sign or decrypt
+     --default-key USER-ID              use USER-ID as default secret key
+     --encrypt-to NAME                  encrypt to user ID NAME as well
+     --keyring FILE                     add keyring to the list of keyrings
+
+Options controlling key import and export:
+     --disable-dirmngr                  disable all access to the dirmngr
+     --auto-issuer-key-retrieve         fetch missing issuer certificates
+     --p12-charset NAME                 use encoding NAME for PKCS#12 passphrases
+
+Options controlling the security:
+     --disable-crl-checks               never consult a CRL
+     --disable-trusted-cert-crl-check   do not check CRLs for root certificates
+     --enable-ocsp                      check validity using OCSP
+     --disable-policy-checks            do not check certificate policies
+     --cipher-algo NAME                 use cipher algorithm NAME
+     --digest-algo NAME                 use message digest algorithm NAME
+
+Options for unattended use:
+     --batch                            batch mode: never ask
+     --yes                              assume yes on most questions
+     --no                               assume no on most questions
+     --status-fd FD                     write status info to this FD
+
+Other options:
+     --options FILE                     read options from FILE
+ -n, --dry-run                          do not make any changes
+     --audit-log FILE                   write an audit log to FILE
+
+(See the man page for a complete listing of all commands and options)
+
+Please report bugs to <https://bugs.gnupg.org>.

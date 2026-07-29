@@ -1,0 +1,29 @@
+# command: rafs2
+# version: rafs2 6.1.9 +1 abi:124 @ linux-x86_64
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: rafs2 [options] -t <fstype> <file>
+Options:
+  -t <type>    Filesystem type (ext2, fat, ntfs, iso9660, hfs, ubifs, etc.)
+  -o <offset>  Offset to mount filesystem (default: 0)
+  -O <opts>    Mount options (key=value,key=value)
+  -m <path>    Mount point path (default: /)
+  -i           Interactive mode (shell)
+  -l <path>    List directory contents
+  -c <file>    Cat file contents
+  -x <src:dst> Extract file from image to host
+  -n           Show filesystem details (like 'mn' command)
+  -L           List available filesystem types
+  -j           Output in JSON format
+  -h           Show this help
+  -v           Show version
+
+Examples:
+  rafs2 -L
+  rafs2 -t ext2 -l / image.img
+  rafs2 -t fat -o 0x1000 -c /boot/config.txt disk.img
+  rafs2 -t ntfs -n filesystem.img
+  rafs2 -t 9fs -O tcp:127.0.0.1:9999 -l / /dev/null
+  rafs2 -t iso9660 -i cdrom.iso
+  rafs2 -t ext2 -x /etc/passwd:passwd.txt image.img

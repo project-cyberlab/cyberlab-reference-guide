@@ -1,0 +1,32 @@
+# command: r2pm
+# version: r2pm 6.1.9 +1 abi:124 @ linux-x86_64
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: r2pm [-flags] [pkgs...]
+Commands:
+ -a [repository]   add or -delete external repository
+ -c <pkgname>      clear cached sources for the given package (see -cp)
+ -ci <pkgname>     clean + install
+ -cp               clean the user's home plugin directory
+ -d,doc <pkgname>  show documentation and source for given package
+ -e <pkgname>      edit using $EDITOR the given package script
+ -f                force operation (requires -U, -i or -u)
+ -gi <pkg>         global install (system-wide)
+ -h                display this help message
+ -H ([variable])   list all or selected r2pm environment variables
+ -i <pkgname>      install/update package and its dependencies (see -c, -g)
+ -I                information about the repository and installed packages
+ -j                json output (requires -l, -s or -v)
+ -l                list installed packages
+ -q                be quiet (requires an action)
+ -r <cmd ...args>  run shell command with R2PM_BINDIR in PATH
+ -R <pkgname>      reload plugin (See R2PM_RELOAD code block package)
+ -s [<keyword>]    search available packages in database matching a string
+ -t <YYYY-MM-DD>   set the package checkout date (requires an action)
+ -u <pkgname>      uninstall package (see -f to force uninstall)
+ -uci <pkgname>    uninstall + clean + install
+ -ui <pkgname>     uninstall + install
+ -U                download/initialize or update database (-f for a clean clone)
+ -UU               same as -U but upgrade all the installed r2 plugins
+ -v                show version

@@ -1,0 +1,8 @@
+# command: resize2fs
+# version: resize2fs 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+resize2fs 1.47.0 (5-Feb-2023)
+resize2fs: invalid option -- '-'
+Usage: resize2fs [-d debug_flags] [-f] [-F] [-M] [-P] [-p] device [-b|-s|new_size] [-S RAID-stride] [-z undo_file]

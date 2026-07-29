@@ -1,0 +1,19 @@
+# command: dpkg-scansources
+# version: Debian dpkg-scansources version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-scansources [<option>...] <binary-path> [<override-file> [<path-prefix>]] > Sources
+
+Options:
+  -n, --no-sort            don't sort by package before outputting.
+  -e, --extra-override <file>
+                           use extra override file.
+  -s, --source-override <file>
+                           use file for additional source overrides, default
+                           is regular override file with .src appended.
+      --debug              turn debugging on.
+  -?, --help               show this help message.
+      --version            show the version.
+
+See the man page for the full documentation.

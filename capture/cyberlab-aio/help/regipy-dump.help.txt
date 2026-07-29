@@ -1,0 +1,26 @@
+# command: regipy-dump
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: regipy-dump [OPTIONS] HIVE_PATH
+
+Options:
+  -o FILE
+  -p, --registry-path TEXT      A registry path to start iterating from
+  -t, --timeline                Create a CSV timeline instead
+  -l, --hive-type TEXT          Specify a hive type, if it could not be
+                                identified for some reason
+  -r, --partial_hive_path TEXT  The path from which the partial hive actually
+                                starts, for example: -t ntuser -r "/Software"
+                                would mean this is actually a HKCU hive,
+                                starting from HKCU/Software
+  -v, --verbose                 Verbosity
+  -d, --do-not-fetch-values     Not fetching the values for each subkey makes
+                                the iteration way faster. Values count will
+                                still be returned
+  -s, --start-date TEXT         If "-s" was specified, fetch only values for
+                                subkeys starting this timestamp in isoformat
+  -e, --end-date TEXT           If "-e" was specified, fetch only values for
+                                subkeys until this timestamp in isoformat
+  --help                        Show this message and exit.

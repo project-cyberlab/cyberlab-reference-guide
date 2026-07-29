@@ -1,0 +1,6 @@
+# command: python3.11-config
+# version: Usage: /usr/bin/python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed

@@ -1,0 +1,9 @@
+# command: zmore
+# version: zmore (gzip) 1.12
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: /usr/bin/zmore [OPTION]... [FILE]...
+Like 'more', but operate on the uncompressed contents of any compressed FILEs.
+
+Report bugs to <bug-gzip@gnu.org>.

@@ -1,0 +1,55 @@
+# command: pdftops
+# version: I/O Error: Couldn't open file '--version': No such file or directory.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+pdftops version 22.12.0
+Copyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+Usage: pdftops [options] <PDF-file> [<PS-file>]
+  -f <int>                       : first page to print
+  -l <int>                       : last page to print
+  -level1                        : generate Level 1 PostScript
+  -level1sep                     : generate Level 1 separable PostScript
+  -level2                        : generate Level 2 PostScript
+  -level2sep                     : generate Level 2 separable PostScript
+  -level3                        : generate Level 3 PostScript
+  -level3sep                     : generate Level 3 separable PostScript
+  -origpagesizes                 : conserve original page sizes
+  -eps                           : generate Encapsulated PostScript (EPS)
+  -form                          : generate a PostScript form
+  -opi                           : generate OPI comments
+  -r <int>                       : resolution for rasterization, in DPI (default is 300)
+  -binary                        : write binary data in Level 1 PostScript
+  -noembt1                       : don't embed Type 1 fonts
+  -noembtt                       : don't embed TrueType fonts
+  -noembcidps                    : don't embed CID PostScript fonts
+  -noembcidtt                    : don't embed CID TrueType fonts
+  -passfonts                     : don't substitute missing fonts
+  -aaRaster <string>             : enable anti-aliasing on rasterization: yes, no
+  -rasterize <string>            : control rasterization: always, never, whenneeded
+  -processcolorformat <string>   : color format that is used during rasterization and transparency reduction: MONO8, RGB8, CMYK8
+  -processcolorprofile <string>  : ICC color profile to use as the process color profile during rasterization and transparency reduction
+  -defaultgrayprofile <string>   : ICC color profile to use as the DefaultGray color space
+  -defaultrgbprofile <string>    : ICC color profile to use as the DefaultRGB color space
+  -defaultcmykprofile <string>   : ICC color profile to use as the DefaultCMYK color space
+  -optimizecolorspace            : convert gray RGB images to gray color space
+  -passlevel1customcolor         : pass custom color in level1sep
+  -preload                       : preload images and forms
+  -paper <string>                : paper size (letter, legal, A4, A3, match)
+  -paperw <int>                  : paper width, in points
+  -paperh <int>                  : paper height, in points
+  -nocrop                        : don't crop pages to CropBox
+  -expand                        : expand pages smaller than the paper size
+  -noshrink                      : don't shrink pages larger than the paper size
+  -nocenter                      : don't center pages smaller than the paper size
+  -duplex                        : enable duplex printing
+  -opw <string>                  : owner password (for encrypted files)
+  -upw <string>                  : user password (for encrypted files)
+  -overprint                     : enable overprint emulation during rasterization
+  -q                             : don't print any messages or errors
+  -v                             : print copyright and version info
+  -h                             : print usage information
+  -help                          : print usage information
+  --help                         : print usage information
+  -?                             : print usage information

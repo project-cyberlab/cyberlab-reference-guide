@@ -1,0 +1,10 @@
+# command: debconf-show
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Unknown option: help
+Usage: 
+    debconf-show packagename [...] [--db=dbname]
+    debconf-show --listowners [--db=dbname]
+    debconf-show --listdbs

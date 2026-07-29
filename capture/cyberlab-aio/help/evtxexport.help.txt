@@ -1,0 +1,45 @@
+# command: evtxexport
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+evtxexport 20181227
+
+evtxexport: invalid option -- '-'
+Invalid argument: evtxexport
+Use evtxexport to export items stored in a Windows XML Event Viewer
+Log (EVTX) file.
+
+Usage: evtxexport [ -c codepage ] [ -f format ] [ -l log_file ]
+                  [ -m mode ] [ -p resource_files_path ]
+                  [ -r registy_files_path ] [ -s system_file ]
+                  [ -S software_file ] [ -t event_log_type ]
+                  [ -hTvV ] source
+
+	source: the source file
+
+	-c:     codepage of ASCII strings, options: ascii, windows-874,
+	        windows-932, windows-936, windows-949, windows-950,
+	        windows-1250, windows-1251, windows-1252 (default),
+	        windows-1253, windows-1254, windows-1255, windows-1256
+	        windows-1257 or windows-1258
+	-f:     output format, options: xml, text (default)
+	-h:     shows this help
+	-l:     logs information about the exported items
+	-m:     export mode, option: all, items (default), recovered
+	        'all' exports the (allocated) items and recovered items,
+	        'items' exports the (allocated) items and 'recovered' exports
+	        the recovered items
+	-p:     search PATH for the resource files
+	-r:     name of the directory containing the SOFTWARE and SYSTEM
+	        (Windows) Registry file
+	-s:     filename of the SYSTEM (Windows) Registry file.
+	        This option overrides the path provided by -r
+	-S:     filename of the SOFTWARE (Windows) Registry file.
+	        This option overrides the path provided by -r
+	-t:     event log type, options: application, security, system
+	        if not specified the event log type is determined based
+	        on the filename.
+	-T:     use event template definitions to parse the event record data
+	-v:     verbose output to stderr
+	-V:     print version

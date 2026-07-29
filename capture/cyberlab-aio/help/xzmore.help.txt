@@ -1,0 +1,9 @@
+# command: xzmore
+# version: xzmore (XZ Utils) 5.4.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: xzmore [OPTION]... [FILE]...
+Like 'more', but operate on the uncompressed contents of xz compressed FILEs.
+
+Report bugs to <xz@tukaani.org>.

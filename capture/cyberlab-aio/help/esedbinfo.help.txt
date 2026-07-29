@@ -1,0 +1,19 @@
+# command: esedbinfo
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+esedbinfo 20181229
+
+esedbinfo: invalid option -- '-'
+Invalid argument: esedbinfo
+Use esedbinfo to determine information about an Extensible Storage Engine (ESE)
+Database File (EDB).
+
+Usage: esedbinfo [ -hvV ] source
+
+	source: the source file
+
+	-h:     shows this help
+	-v:     verbose output to stderr
+	-V:     print version

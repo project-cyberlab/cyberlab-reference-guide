@@ -1,0 +1,9 @@
+# command: rdma
+# version: rdma utility, iproute2-6.1.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: rdma [ OPTIONS ] OBJECT { COMMAND | help }
+       rdma [ -f[orce] ] -b[atch] filename
+where  OBJECT := { dev | link | resource | system | statistic | help }
+       OPTIONS := { -V[ersion] | -d[etails] | -j[son] | -p[retty] -r[aw]}

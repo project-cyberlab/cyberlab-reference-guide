@@ -1,0 +1,14 @@
+# command: getconf
+# version: getconf (Debian GLIBC 2.36-9+deb12u14) 2.36
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: getconf [-v SPEC] VAR
+  or:  getconf [-v SPEC] PATH_VAR PATH
+
+Get the configuration value for variable VAR, or for variable PATH_VAR
+for path PATH.  If SPEC is given, give values for compilation
+environment SPEC.
+
+For bug reporting instructions, please see:
+<http://www.debian.org/Bugs/>.

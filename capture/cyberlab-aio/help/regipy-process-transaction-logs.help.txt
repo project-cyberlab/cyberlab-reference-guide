@@ -1,0 +1,13 @@
+# command: regipy-process-transaction-logs
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: regipy-process-transaction-logs [OPTIONS] HIVE_PATH
+
+Options:
+  -p FILE        [required]
+  -s FILE
+  -o FILE
+  -v, --verbose  Verbosity
+  --help         Show this message and exit.

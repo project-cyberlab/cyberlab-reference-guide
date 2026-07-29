@@ -1,0 +1,41 @@
+# command: wipefs
+# version: wipefs from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ wipefs [options] <device>
+
+Wipe signatures from a device.
+
+Options:
+ -a, --all           wipe all magic strings (BE CAREFUL!)
+ -b, --backup        create a signature backup in $HOME
+ -f, --force         force erasure
+ -i, --noheadings    don't print headings
+ -J, --json          use JSON output format
+ -n, --no-act        do everything except the actual write() call
+ -o, --offset <num>  offset to erase, in bytes
+ -O, --output <list> COLUMNS to display (see below)
+ -p, --parsable      print out in parsable instead of printable format
+ -q, --quiet         suppress output messages
+ -t, --types <list>  limit the set of filesystem, RAIDs or partition tables
+     --lock[=<mode>] use exclusive device lock (yes, no or nonblock)
+ -h, --help          display this help
+ -V, --version       display version
+
+Arguments:
+ <num> arguments may be followed by the suffixes for
+   GiB, TiB, PiB, EiB, ZiB, and YiB (the "iB" is optional)
+
+Available output columns:
+     UUID  partition/filesystem UUID
+    LABEL  filesystem LABEL
+   LENGTH  magic string length
+     TYPE  superblok type
+   OFFSET  magic string offset
+    USAGE  type description
+   DEVICE  block device name
+
+For more details see wipefs(8).

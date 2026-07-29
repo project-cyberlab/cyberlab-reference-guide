@@ -1,0 +1,10 @@
+# command: regipy-parse-header
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: regipy-parse-header [OPTIONS] HIVE_PATH
+
+Options:
+  -v, --verbose  Verbosity
+  --help         Show this message and exit.

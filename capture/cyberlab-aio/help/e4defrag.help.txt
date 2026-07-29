@@ -1,0 +1,9 @@
+# command: e4defrag
+# version: e4defrag 1.47.0 (5-Feb-2023)
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+e4defrag: invalid option -- '-'
+e4defrag 1.47.0 (5-Feb-2023)
+Usage	: e4defrag [-v] file...| directory...| device...
+	: e4defrag  -c  file...| directory...| device...

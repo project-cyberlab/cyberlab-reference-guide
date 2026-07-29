@@ -1,0 +1,29 @@
+# command: enc2xs
+# version: /usr/bin/enc2xs version 2.24 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/bin/enc2xs version 2.24 calling Getopt::Std::getopts (version 1.13 [paranoid]),
+running under Perl version 5.36.0.
+
+Usage: enc2xs [-OPTIONS [-MORE_OPTIONS]] [--] [PROGRAM_ARG1 ...]
+
+The following single-character options are accepted:
+	With arguments: -M -o -f -n
+	Boolean (without arguments): -C -S -Q -q -O -v
+
+Options may be merged together.  -- stops processing of options.
+Space is not required between options and their arguments.
+
+For more details run
+	perldoc -F /usr/bin/enc2xs
+  [Now continuing due to backward compatibility and excessive paranoia.
+   See 'perldoc Getopt::Std' about $Getopt::Std::STANDARD_HELP_VERSION.]
+Use of uninitialized value $cname in -f at /usr/bin/enc2xs line 225.
+Use of uninitialized value $cname in open at /usr/bin/enc2xs line 226.
+Use of uninitialized value $cname in concatenation (.) or string at /usr/bin/enc2xs line 226.
+Cannot open :No such file or directory at /usr/bin/enc2xs line 226.
+
+ARGV:
+opt:  q => undef
+  v => undef

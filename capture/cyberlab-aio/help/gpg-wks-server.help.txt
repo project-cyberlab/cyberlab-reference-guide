@@ -1,0 +1,35 @@
+# command: gpg-wks-server
+# version: gpg-wks-server (GnuPG) 2.2.40
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+gpg-wks-server (GnuPG) 2.2.40
+Copyright (C) 2022 g10 Code GmbH
+License GNU LGPL-2.1-or-later <https://gnu.org/licenses/>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Syntax: gpg-wks-server command [options]
+Server for the Web Key Service protocol
+
+Commands:
+ 
+     --receive             receive a submission or confirmation
+     --cron                run regular jobs
+     --list-domains        list configured domains
+     --check               check whether a key is installed
+     --install-key         install a key from FILE into the WKD
+     --remove-key          remove a key from the WKD
+     --revoke-key          mark a key as revoked
+
+Options:
+ 
+ -v, --verbose             verbose
+ -q, --quiet               be somewhat more quiet
+     --send                send the mail using sendmail
+ -o, --output FILE         write the mail to FILE
+ -C, --directory DIR       use DIR as top directory
+     --from ADDR           use ADDR as the default sender
+     --header NAME=VALUE   add "NAME: VALUE" as header to all mails
+
+Please report bugs to <https://bugs.gnupg.org>.

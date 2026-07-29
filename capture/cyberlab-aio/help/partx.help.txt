@@ -1,0 +1,45 @@
+# command: partx
+# version: partx from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ partx [-a|-d|-s|-u] [--nr <n:m> | <partition>] <disk>
+
+Tell the kernel about the presence and numbering of partitions.
+
+Options:
+ -a, --add            add specified partitions or all of them
+ -d, --delete         delete specified partitions or all of them
+ -u, --update         update specified partitions or all of them
+ -s, --show           list partitions
+
+ -b, --bytes          print SIZE in bytes rather than in human readable format
+ -g, --noheadings     don't print headings for --show
+ -n, --nr <n:m>       specify the range of partitions (e.g. --nr 2:4)
+ -o, --output <list>  define which output columns to use
+     --output-all     output all columns
+ -P, --pairs          use key="value" output format
+ -r, --raw            use raw output format
+ -S, --sector-size <num>  overwrite sector size
+ -t, --type <type>    specify the partition type
+     --list-types     list supported partition types and exit
+ -v, --verbose        verbose mode
+
+ -h, --help           display this help
+ -V, --version        display version
+
+Available output columns:
+         NR  partition number
+      START  start of the partition in sectors
+        END  end of the partition in sectors
+    SECTORS  number of sectors
+       SIZE  human readable size
+       NAME  partition name
+       UUID  partition UUID
+       TYPE  partition type (a string, a UUID, or hex)
+      FLAGS  partition flags
+     SCHEME  partition table type (dos, gpt, ...)
+
+For more details see partx(8).

@@ -1,0 +1,9 @@
+# command: c_rehash
+# version: 
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+Usage: c_rehash [-old] [-h] [-help] [-v] [dirs...]
+   -old use old-style digest
+   -h or -help print this help text
+   -v print files removed and linked

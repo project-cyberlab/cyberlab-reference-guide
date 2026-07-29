@@ -1,0 +1,18 @@
+# command: msoffcrypto-tool
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: msoffcrypto-tool [-h] (-p [PASSWORD] | -t) [-e] [-v] [infile] [outfile]
+
+positional arguments:
+  infile                input file
+  outfile               output file (if blank, stdout is used)
+
+options:
+  -h, --help            show this help message and exit
+  -p [PASSWORD], --password [PASSWORD]
+                        password text
+  -t, --test            test if the file is encrypted
+  -e                    encryption mode (default is false)
+  -v                    print verbose information

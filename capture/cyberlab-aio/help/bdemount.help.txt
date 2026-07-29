@@ -1,0 +1,31 @@
+# command: bdemount
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+bdemount 20190102
+
+bdemount: invalid option -- '-'
+Invalid argument: bdemount
+Use bdemount to mount a BitLocker Drive Encrypted (BDE) volume
+
+Usage: bdemount [ -k keys ] [ -o offset ] [ -p password ]
+                [ -r recovery_password ] [ -s startup_key_path ]
+                [ -X extended_options ] [ -hvV ] volume mount_point
+
+	volume:      a BitLocker Drive Encrypted (BDE) volume
+
+	mount_point: the directory to serve as mount point
+
+	-h:          shows this help
+	-k:          the full volume encryption key and tweak key formatted in base16 and
+	             separated by a : character e.g. FVEK:TWEAK
+	-o:          specify the volume offset in bytes
+	-p:          specify the password/passphrase
+	-r:          specify the recovery password/passphrase
+	-s:          specify the path of the file containing the startup key. Typically
+	             this file has the extension .BEK
+	-v:          verbose output to stderr, while bdemount will remain running in the
+	             foreground
+	-V:          print version
+	-X:          extended options to pass to sub system

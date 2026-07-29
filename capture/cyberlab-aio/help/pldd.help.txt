@@ -1,0 +1,14 @@
+# command: pldd
+# version: pldd (Debian GLIBC 2.36-9+deb12u14) 2.36
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: pldd [OPTION...] PID
+List dynamic shared objects loaded into process.
+
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+  -V, --version              Print program version
+
+For bug reporting instructions, please see:
+<http://www.debian.org/Bugs/>.

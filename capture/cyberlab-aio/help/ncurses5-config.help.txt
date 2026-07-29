@@ -1,0 +1,32 @@
+# command: ncurses5-config
+# version: 6.4.20221231
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: ncurses5-config [options]
+
+Options:
+  --prefix           echos the package-prefix of ncurses
+  --exec-prefix      echos the executable-prefix of ncurses
+
+  --cflags           echos the C compiler flags needed to compile with ncurses
+  --libs             echos the libraries needed to link with ncurses
+
+  --libs-only-L      echos -L linker options (search path) for ncurses
+  --libs-only-l      echos -l linker options (libraries) for ncurses
+  --libs-only-other  echos linker options other than -L/-l
+
+  --version          echos the release+patchdate version of ncurses
+  --abi-version      echos the ABI version of ncurses
+  --mouse-version    echos the mouse-interface version of ncurses
+
+  --bindir           echos the directory containing ncurses programs
+  --datadir          echos the directory containing ncurses data
+  --includedir       echos the directory containing ncurses header files
+  --libdir           echos the directory containing ncurses libraries
+  --mandir           echos the directory containing ncurses manpages
+  --terminfo         echos the $TERMINFO terminfo database path
+  --terminfo-dirs    echos the $TERMINFO_DIRS directory list
+  --termpath         echos the $TERMPATH termcap list
+
+  --help             prints this message

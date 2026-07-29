@@ -1,0 +1,8 @@
+# command: git-upload-archive
+# version: 
+# captured-via: -help
+# image: cyberlab-aio:v1
+#---
+0008ACK
+0000003bfatal: '-help' does not appear to be a git repository
+0031git upload-archive: archiver died with errorfatal: sent error to the client: git upload-archive: archiver died with error

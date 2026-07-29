@@ -1,0 +1,17 @@
+# command: cffi-gen-src
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: cffi-gen-src [-h] {exec-python,read-sources} ...
+
+Generate CFFI C source for extension modules.
+
+positional arguments:
+  {exec-python,read-sources}
+    exec-python         Execute a Python script that defines an FFI object
+    read-sources        Read cdef and C source prelude files that define an
+                        FFI object
+
+options:
+  -h, --help            show this help message and exit

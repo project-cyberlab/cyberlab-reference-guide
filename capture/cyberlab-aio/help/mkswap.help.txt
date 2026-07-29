@@ -1,0 +1,25 @@
+# command: mkswap
+# version: mkswap from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ mkswap [options] device [size]
+
+Set up a Linux swap area.
+
+Options:
+ -c, --check               check bad blocks before creating the swap area
+ -f, --force               allow swap size area be larger than device
+ -q, --quiet               suppress output and warning messages
+ -p, --pagesize SIZE       specify page size in bytes
+ -L, --label LABEL         specify label
+ -v, --swapversion NUM     specify swap-space version number
+ -U, --uuid UUID           specify the uuid to use
+     --verbose             verbose output
+     --lock[=<mode>]       use exclusive device lock (yes, no or nonblock)
+ -h, --help                display this help
+ -V, --version             display version
+
+For more details see mkswap(8).

@@ -1,0 +1,9 @@
+# command: add-shell
+# version: 
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+realpath: invalid option -- 'h'
+Try 'realpath --help' for more information.
+basename: invalid option -- 'h'
+Try 'basename --help' for more information.

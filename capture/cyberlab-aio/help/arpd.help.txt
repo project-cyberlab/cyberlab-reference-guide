@@ -1,0 +1,7 @@
+# command: arpd
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+arpd: invalid option -- '-'
+Usage: arpd [ -lkh? ] [ -a N ] [ -b dbase ] [ -B number ] [ -f file ] [ -n time ] [-p interval ] [ -R rate ] [ interfaces ]

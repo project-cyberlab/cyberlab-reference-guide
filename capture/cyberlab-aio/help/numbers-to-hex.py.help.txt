@@ -1,0 +1,28 @@
+# command: numbers-to-hex.py
+# version: numbers-to-hex.py 0.0.4
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: numbers-to-hex.py [options] [[@]file ...]
+Program to convert decimal numbers into hex numbers
+
+Arguments:
+@file: process each file listed in the text file specified
+wildcards are supported
+
+Source code put in the public domain by Didier Stevens, no Copyright
+Use at your own risk
+https://DidierStevens.com
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -m, --man             Print manual
+  -o OUTPUT, --output=OUTPUT
+                        Output to file
+  -i, --ignore          Do not generate an error when a number larger than 255
+                        is found
+  -n NUMBER, --number=NUMBER
+                        Minimum number of numbers per line (1 by default)
+  -s, --signed          Numbers are signed bytes: add 256 if negative
+  -e, --expression      Handle simple expressions

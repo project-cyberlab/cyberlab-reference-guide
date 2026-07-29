@@ -1,0 +1,20 @@
+# command: gpgparsemail
+# version: gpgparsemail: can't open '--version': No such file or directory
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: gpgparsemail [OPTION] [FILE]
+Parse a mail message into an annotated format.
+
+  --crypto    decrypt or verify messages
+  --no-header don't output the header lines
+  --verbose   enable extra informational output
+  --debug     enable additional debug output
+  --help      display this help and exit
+
+With no FILE, or when FILE is -, read standard input.
+
+WARNING: This tool is under development.
+         The semantics may change without notice
+
+Report bugs to <bug-gnupg@gnu.org>.

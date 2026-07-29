@@ -1,0 +1,22 @@
+# command: h2ph
+# version: /usr/bin/h2ph version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+/usr/bin/h2ph version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+running under Perl version 5.36.0.
+
+Usage: h2ph [-OPTIONS [-MORE_OPTIONS]] [--] [PROGRAM_ARG1 ...]
+
+The following single-character options are accepted:
+	With arguments: -d
+	Boolean (without arguments): -D -r -l -h -a -Q -e
+
+Options may be merged together.  -- stops processing of options.
+Space is not required between options and their arguments.
+
+For more details run
+	perldoc -F /usr/bin/h2ph
+  [Now continuing due to backward compatibility and excessive paranoia.
+   See 'perldoc Getopt::Std' about $Getopt::Std::STANDARD_HELP_VERSION.]
+Destination directory /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 doesn't exist or isn't a directory

@@ -1,0 +1,37 @@
+# command: chainsaw
+# version: chainsaw 2.16.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Rapidly work with Forensic Artefacts
+
+Usage: chainsaw [OPTIONS] <COMMAND>
+
+Commands:
+  dump     Dump artefacts into a different format
+  hunt     Hunt through artefacts using detection rules for threat detection
+  lint     Lint provided rules to ensure that they load correctly
+  search   Search through forensic artefacts for keywords or patterns
+  analyse  Perform various analyses on artefacts
+  help     Print this message or the help of the given subcommand(s)
+
+Options:
+      --no-banner                  Hide Chainsaw's banner
+      --num-threads <NUM_THREADS>  Limit the thread number (default: num of CPUs)
+  -v...                            Print verbose output
+  -h, --help                       Print help
+  -V, --version                    Print version
+
+Examples:
+
+    Hunt with Sigma and Chainsaw Rules:
+        ./chainsaw hunt evtx_attack_samples/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml -r rules/
+
+    Hunt with Sigma rules and output in JSON:
+        ./chainsaw hunt evtx_attack_samples/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml --json
+
+    Search for the case-insensitive word 'mimikatz':
+        ./chainsaw search mimikatz -i evtx_attack_samples/
+
+    Search for Powershell Script Block Events (EventID 4014):
+        ./chainsaw search -t 'Event.System.EventID: =4104' evtx_attack_samples/

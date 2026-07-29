@@ -1,0 +1,26 @@
+# command: uclampset
+# version: uclampset from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ uclampset [options]
+ uclampset [options] --pid <pid> | --system | <command> <arg>...
+
+Show or change the utilization clamping attributes.
+
+Options:
+ -m <value>           util_min value to set
+ -M <value>           util_max value to set
+ -a, --all-tasks      operate on all the tasks (threads) for a given pid
+ -p, --pid <pid>      operate on existing given pid
+ -s, --system         operate on system
+ -R, --reset-on-fork  set reset-on-fork flag
+ -v, --verbose        display status information
+ -h, --help           display this help
+ -V, --version        display version
+
+Utilization value range is [0:1024]. Use special -1 value to reset to system's default.
+
+For more details see uclampset(1).

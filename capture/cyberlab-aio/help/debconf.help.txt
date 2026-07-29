@@ -1,0 +1,10 @@
+# command: debconf
+# version: Unknown option: version
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: debconf [options] command [args]
+  -o,  --owner=package		Set the package that owns the command.
+  -f,  --frontend		Specify debconf frontend to use.
+  -p,  --priority		Specify minimum priority question to show.
+       --terse			Enable terse mode.

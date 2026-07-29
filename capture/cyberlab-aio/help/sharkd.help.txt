@@ -1,0 +1,28 @@
+# command: sharkd
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Running as user "root" and group "root". This could be dangerous.
+
+Usage: sharkd [<classic_options>|<gold_options>]
+
+Classic (classic_options):
+  [-|<socket>]
+
+  <socket> examples:
+  - unix:/tmp/sharkd.sock - listen on unix file /tmp/sharkd.sock
+
+Gold (gold_options):
+  -a <socket>, --api <socket>
+                           listen on this socket
+  -h, --help               show this help information
+  -v, --version            show version information
+  -C <config profile>, --config-profile <config profile>
+                           start with specified configuration profile
+
+  Examples:
+    sharkd -C myprofile
+    sharkd -a tcp:127.0.0.1:4446 -C myprofile
+
+See the sharkd page of the Wireshark wiki for full details.

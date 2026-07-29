@@ -1,0 +1,15 @@
+# command: fc-cat
+# version: fontconfig version 2.14.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+usage: fc-cat [-rv] [--recurse] [--verbose] [*-le64.cache-8|directory]...
+       fc-cat [-Vh] [--version] [--help]
+Reads font information cache from:
+ 1) specified fontconfig cache file
+ 2) related to a particular font directory
+
+  -r, --recurse        recurse into subdirectories
+  -v, --verbose        be verbose
+  -V, --version        display font config version and exit
+  -h, --help           display this help and exit

@@ -1,0 +1,75 @@
+# command: dpkg-source
+# version: Debian dpkg-source version 1.21.23.
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: dpkg-source [<option>...] <command>
+
+Commands:
+  -x, --extract <filename>.dsc [<output-dir>]
+                           extract source package.
+  -b, --build <dir>        build source package.
+      --print-format <dir> print the format to be used for the source package.
+      --before-build <dir> run the corresponding source package format hook.
+      --after-build <dir>  run the corresponding source package format hook.
+      --commit [<dir> [<patch-name>]]
+                           store upstream changes in a new patch.
+
+Build options:
+  -c<control-file>         get control info from this file.
+  -l<changelog-file>       get per-version info from this file.
+  -F<changelog-format>     force changelog format.
+  --format=<source-format> set the format to be used for the source package.
+  -V<name>=<value>         set a substitution variable.
+  -T<substvars-file>       read variables here.
+  -D<field>=<value>        override or add a .dsc field and value.
+  -U<field>                remove a field.
+  -i, --diff-ignore[=<regex>]
+                           filter out files to ignore diffs of
+                             (defaults to: '(?:^|/).*~$|(?:^|/)\.#.*$|(?:^|/)\..*\.sw.$|(?:^|/),,.*(?:$|/.*$)|(?:^|/)(?:DEADJOE|\.arch-inventory|\.(?:bzr|cvs|hg|git|mtn-)ignore)$|(?:^|/)(?:CVS|RCS|\.deps|\{arch\}|\.arch-ids|\.svn|\.hg(?:tags|sigs)?|_darcs|\.git(?:attributes|modules|review)?|\.mailmap|\.shelf|_MTN|\.be|\.bzr(?:\.backup|tags)?)(?:$|/.*$)').
+  -I, --tar-ignore[=<pattern>]
+                           filter out files when building tarballs
+                             (defaults to: -I*.a -I*.la -I*.o -I*.so -I.*.sw? -I*/*~ -I,,* -I.[#~]* -I.arch-ids -I.arch-inventory -I.be -I.bzr -I.bzr.backup -I.bzr.tags -I.bzrignore -I.cvsignore -I.deps -I.git -I.gitattributes -I.gitignore -I.gitmodules -I.gitreview -I.hg -I.hgignore -I.hgsigs -I.hgtags -I.mailmap -I.mtn-ignore -I.shelf -I.svn -ICVS -IDEADJOE -IRCS -I_MTN -I_darcs -I{arch}).
+  -Z, --compression=<compression>
+                           select compression to use (defaults to 'xz',
+                             supported are: bzip2 gzip lzma xz).
+  -z, --compression-level=<level>
+                           compression level to use (defaults to '6',
+                             supported are: '1'-'9', 'best', 'fast')
+
+Extract options:
+  --no-copy                don't copy .orig tarballs
+  --no-check               don't check signature and checksums before unpacking
+  --no-overwrite-dir       do not overwrite directory on extraction
+  --require-valid-signature abort if the package doesn't have a valid signature
+  --require-strong-checksums
+                           abort if the package contains no strong checksums
+  --ignore-bad-version     allow bad source package versions.
+
+Build format 1.0 options:
+  -sa                      auto select original source.
+  -sk                      use packed original source (unpack and keep).
+  -sp                      use packed original source (unpack and remove).
+  -su                      use unpacked original source (pack and keep).
+  -sr                      use unpacked original source (pack and remove).
+  -ss                      trust packed and unpacked original sources are same.
+  -sn                      there is no diff, do main tarfile only.
+  -sA, -sK, -sP, -sU, -sR  like -sa, -sk, -sp, -su, -sr but may overwrite.
+  --abort-on-upstream-changes
+                           abort if generated diff has upstream files changes.
+
+Extract format 1.0 options:
+  -sp                      leave original source packed in current directory.
+  -su                      do not copy original source to current directory.
+  -sn                      unpack original source tree too.
+  --skip-debianization     do not apply debian diff to upstream sources.
+
+General options:
+      --threads-max=<threads>
+                           use at most <threads> with compressor.
+  -q                       quiet mode.
+  -?, --help               show this help message.
+      --version            show the version.
+
+Source format specific build and extract options are available;
+use --format with --help to see them.

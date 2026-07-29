@@ -1,0 +1,13 @@
+# command: fusermount
+# version: fusermount3 version: 3.14.0
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+fusermount: [options] mountpoint
+Options:
+ -h		    print help
+ -V		    print version
+ -o opt[,opt...]    mount options
+ -u		    unmount
+ -q		    quiet
+ -z		    lazy unmount

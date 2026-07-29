@@ -1,0 +1,19 @@
+# command: tput
+# version: ncurses 6.4.20221231
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+tput: invalid option -- '-'
+Usage: tput [options] [command]
+
+Options:
+  -S <<       read commands from standard input
+  -T TERM     use this instead of $TERM
+  -V          print curses-version
+  -x          do not try to clear scrollback
+
+Commands:
+  clear       clear the screen
+  init        initialize the terminal
+  reset       reinitialize the terminal
+  capname     unlike clear/init/reset, print value for capability "capname"

@@ -1,0 +1,19 @@
+# command: swaplabel
+# version: swaplabel from util-linux 2.38.1
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+
+Usage:
+ swaplabel [options] <device>
+
+Display or change the label or UUID of a swap area.
+
+Options:
+ -L, --label <label> specify a new label
+ -U, --uuid <uuid>   specify a new uuid
+
+ -h, --help          display this help
+ -V, --version       display version
+
+For more details see swaplabel(8).

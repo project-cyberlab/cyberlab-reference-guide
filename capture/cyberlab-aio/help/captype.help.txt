@@ -1,0 +1,14 @@
+# command: captype
+# version: Captype (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Captype (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3)
+Print the file types of capture files.
+See https://www.wireshark.org for more information.
+
+Usage: captype [options] <infile> ...
+
+Miscellaneous:
+  -h, --help               display this help and exit
+  -v, --version            display version info and exit

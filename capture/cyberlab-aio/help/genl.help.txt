@@ -1,0 +1,8 @@
+# command: genl
+# version: Option "--version" is unknown, try "genl -help".
+# captured-via: -h
+# image: cyberlab-aio:v1
+#---
+Usage: genl [ OPTIONS ] OBJECT [help] }
+where  OBJECT := { ctrl etc }
+       OPTIONS := { -s[tatistics] | -d[etails] | -r[aw] | -V[ersion] | -h[elp] }

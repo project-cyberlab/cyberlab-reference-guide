@@ -1,0 +1,17 @@
+# command: tempfile
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+WARNING: tempfile is deprecated; consider using mktemp instead.
+Usage: tempfile [OPTION]
+
+Create a temporary file in a safe manner.
+
+-d, --directory=DIR  place temporary file in DIR
+-m, --mode=MODE      open with MODE instead of 0600
+-n, --name=FILE      use FILE instead of tempnam(3)
+-p, --prefix=STRING  set temporary file's prefix to STRING
+-s, --suffix=STRING  set temporary file's suffix to STRING
+    --help           display this help and exit
+    --version        output version information and exit

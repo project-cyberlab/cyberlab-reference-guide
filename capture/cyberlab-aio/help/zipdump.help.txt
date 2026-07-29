@@ -1,0 +1,61 @@
+# command: zipdump
+# version: zipdump.py 0.0.35
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: zipdump.py [options] [zipfile]
+ZIP dump utility
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -m, --man             Print manual
+  -s SELECT, --select=SELECT
+                        select index nr or name
+  -S SEPARATOR, --separator=SEPARATOR
+                        Separator character (default )
+  -o OUTPUT, --output=OUTPUT
+                        Output to file
+  -d, --dump            perform dump of first file or selected file
+  -D, --dumpall         perform dump of all files or selected file
+  -x, --hexdump         perform hex dump of first file or selected file
+  -X, --hexdumpall      perform hex dump of all files or selected file
+  -a, --asciidump       perform ascii dump of first file or selected file
+  -A, --asciidumpall    perform ascii dump of all files or selected file
+  -t TRANSLATE, --translate=TRANSLATE
+                        string translation, like utf16 or .decode("utf8")
+  -e, --extended        report extended information
+  -p PASSWORD, --password=PASSWORD
+                        The ZIP password to be used (default infected)
+  -P PASSWORDFILE, --passwordfile=PASSWORDFILE
+                        A file with ZIP passwords to be used in a dictionary
+                        attack; use . to use build-in list
+  --passwordfilestop=PASSWORDFILESTOP
+                        A file with ZIP passwords to be used in a dictionary
+                        attack, stop after the attack; use . to use build-in
+                        list
+  -y YARA, --yara=YARA  YARA rule file (or directory or @file) to check files
+                        (YARA search doesn't work with -s option)
+  --yarastrings         Print YARA strings
+  --yarastringsraw      Print only YARA strings
+  -C DECODERS, --decoders=DECODERS
+                        decoders to load (separate decoders with a comma , ;
+                        @file supported)
+  --decoderoptions=DECODEROPTIONS
+                        options for the decoder
+  -v, --verbose         verbose output with decoder errors
+  -c CUT, --cut=CUT     cut data
+  -r, --regular         if the ZIP file contains a single ZIP file, handle it
+                        like a regular (non-ZIP) file
+  -z, --zipfilename     include the filename of the ZIP file in the output
+  -E EXTRA, --extra=EXTRA
+                        add extra info (environment variable: ZIPDUMP_EXTRA)
+  -j, --jsonoutput      produce json output
+  --decoderdir=DECODERDIR
+                        directory for the decoder
+  -f FIND, --find=FIND  Find PK MAGIC sequence (use l or list for listing,
+                        number for selecting)
+  -i, --info            display extra info
+  -W WRITE, --write=WRITE
+                        Write all files to disk
+  --stats               produce statistics

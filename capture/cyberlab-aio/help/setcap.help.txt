@@ -1,0 +1,18 @@
+# command: setcap
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+fatal error: Invalid argument
+usage: setcap [-h] [-q] [-v] [-n <rootid>] (-r|-|<caps>) <filename> [ ... (-r|-|<capsN>) <filenameN> ]
+
+ Note <filename> must be a regular (non-symlink) file.
+ -r          remove capability from file
+ -           read capability text from stdin
+ <capsN>     cap_from_text(3) formatted file capability
+ [ Note: capsh --suggest="something..." might help you pick. ]
+ -h          this message and exit status 0
+ -q          quietly
+ -v          validate supplied capability matches file
+ -n <rootid> write a user namespace (!= 0) limited capability
+ --license   display the license info

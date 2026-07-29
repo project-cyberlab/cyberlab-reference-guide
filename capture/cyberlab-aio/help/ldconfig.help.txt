@@ -1,0 +1,29 @@
+# command: ldconfig
+# version: ldconfig (Debian GLIBC 2.36-9+deb12u14) 2.36
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Usage: ldconfig [OPTION...]
+Configure Dynamic Linker Run Time Bindings.
+
+  -c, --format=FORMAT        Format to use: new (default), old, or compat
+  -C CACHE                   Use CACHE as cache file
+  -f CONF                    Use CONF as configuration file
+  -i, --ignore-aux-cache     Ignore auxiliary cache file
+  -l                         Manually link individual libraries.
+  -n                         Only process directories specified on the command
+                             line.  Don't build cache.
+  -N                         Don't build cache
+  -p, --print-cache          Print cache
+  -r ROOT                    Change to and use ROOT as root directory
+  -v, --verbose              Generate verbose messages
+  -X                         Don't update symbolic links
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+  -V, --version              Print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+For bug reporting instructions, please see:
+<http://www.debian.org/Bugs/>.

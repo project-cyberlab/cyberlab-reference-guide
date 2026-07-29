@@ -1,0 +1,19 @@
+# command: sccainfo
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+sccainfo 20200717
+
+sccainfo: invalid option -- '-'
+Invalid argument: sccainfo
+Use sccainfo to determine information about a Windows
+Prefetch File (PF).
+
+Usage: sccainfo [ -hvV ] source
+
+	source: the source file
+
+	-h:     shows this help
+	-v:     verbose output to stderr
+	-V:     print version

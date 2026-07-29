@@ -1,0 +1,9 @@
+# command: regipy-plugins-list
+# version: 
+# captured-via: help
+# image: cyberlab-aio:v1
+#---
+Usage: regipy-plugins-list [OPTIONS]
+Try 'regipy-plugins-list --help' for help.
+
+Error: Got unexpected extra argument (help)

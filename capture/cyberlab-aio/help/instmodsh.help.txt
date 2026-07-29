@@ -1,0 +1,1839 @@
+# command: instmodsh
+# version: 
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - List all installed modules
+   m <module>   - Select a module
+   q            - Quit the program
+cmd? Available commands are:
+   l            - 

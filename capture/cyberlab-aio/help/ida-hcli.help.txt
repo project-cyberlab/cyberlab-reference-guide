@@ -1,0 +1,34 @@
+# command: ida-hcli
+# version: ida-hcli, version 0.18.3
+# captured-via: --help
+# image: cyberlab-aio:v1
+#---
+                                                                                
+ Usage: ida-hcli [OPTIONS] COMMAND [ARGS]...                                    
+                                                                                
+ HCLI (v0.18.3)                                                                 
+ !!!!! Hex-Rays Command-line interface for managing IDA installation, licenses  
+ and more.                                                                      
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --version                     Show the version and exit.                     │
+│ --quiet             -q        Run without prompting the user                 │
+│ --auth              -a  TEXT  Force authentication type (interactive|key)    │
+│ --auth-credentials  -s  TEXT  Force specific credentials by name             │
+│ --disable-updates             Disable automatic update checking              │
+│ --help                        Show this message and exit.                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ auth         Manage hcli api keys.                                           │
+│ commands     List all available command combinations.                        │
+│ download     Download IDA binaries, SDKs, and utilities.                     │
+│ extension    Manage hcli extensions.                                         │
+│ ida          Manage IDA installations.                                       │
+│ license      Manage IDA licenses.                                            │
+│ login        Log in to the Hex-Rays portal and create new credentials.       │
+│ logout       Log out and remove stored credentials.                          │
+│ plugin       Manage IDA Pro plugins.                                         │
+│ share        Share files with Hex-Rays.                                      │
+│ update       Check for hcli updates.                                         │
+│ whoami       Display the currently logged-in user.                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
