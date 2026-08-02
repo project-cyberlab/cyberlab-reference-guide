@@ -1455,4 +1455,140 @@ ENRICHMENT: dict[str, dict] = {
             "the keyword and IOC pass; this tool gets you the bytes.",
         ],
     },
+
+    "file": {
+        "purpose": "Identify a file's type from its contents rather than its "
+                   "name, using magic signatures.",
+        "when": {
+            "-i": "Print a MIME type instead of prose. The form to use when the "
+                  "output feeds a script rather than a person.",
+            "--mime-type": "MIME type only, without the encoding.",
+            "--mime-encoding": "Character encoding only.",
+            "-b": "Omit the filename, leaving just the type — for pipelines and "
+                  "for-loops.",
+            "-z": "Look inside compressed files and report what they contain "
+                  "rather than reporting a compressed stream.",
+            "-Z": "Same, without reporting the compression itself.",
+            "-k": "Keep going after the first match and print every rule that "
+                  "fired. Files crafted to defeat identification often match "
+                  "more than one signature, and the disagreement is the finding.",
+            "-f": "Read the list of files to test from a file, for a corpus.",
+            "-L": "Follow symlinks and report the target.",
+            "-h": "Do not follow symlinks — report the link itself.",
+            "-m": "Use an alternative magic database.",
+            "-C": "Compile a magic file to its indexed form.",
+            "-s": "Read block and character devices too. Needed to type a raw "
+                  "disk, which `file` otherwise refuses.",
+            "-r": "Print raw bytes rather than escaping unprintables.",
+            "-p": "Preserve the access time on the files examined — the flag "
+                  "that stops a triage sweep from rewriting timestamps across "
+                  "the evidence.",
+            "-e": "Exclude a test type, when one is misfiring on a corpus.",
+            "-0": "Print a NUL after the filename, for safe piping into `xargs -0`.",
+            "-N": "Do not pad filenames to align the output.",
+            "-P": "Tune a parser limit, e.g. `bytes` or `indir`.",
+            "-S": "Disable the sandbox. Only when seccomp blocks a legitimate "
+                  "test, and never on untrusted input if avoidable.",
+        },
+        "gotchas": [
+            "Magic reads the first few hundred bytes. Prepend a valid header to "
+            "anything and `file` will report the header — it is a fast triage "
+            "signal, not an authority on content.",
+            "`-p` preserves atime. Without it, typing a directory tree updates "
+            "access times across the evidence, which is the kind of avoidable "
+            "contamination that gets noticed later.",
+            "An 'ASCII text' verdict on something you expected to be binary "
+            "usually means it is base64 or hex, not that it is harmless.",
+        ],
+    },
+
+    "rabin2": {
+        "purpose": "Report the structure of a binary — headers, sections, "
+                   "imports, exports, strings, symbols — for any format radare2 "
+                   "understands.",
+        "when": {
+            "-I": "The header summary: format, architecture, bits, endianness, "
+                  "stripped, and whether NX, PIE and canaries are on. The usual "
+                  "first command on an unknown binary.",
+            "-i": "Imports. What a binary asks the OS for is the fastest read on "
+                  "what it can do.",
+            "-E": "Exports — the entry points a DLL offers.",
+            "-s": "Symbols, when the binary is not stripped.",
+            "-S": "Sections with their sizes and permissions. A section that is "
+                  "both writable and executable is worth a second look.",
+            "-z": "Strings from the data sections.",
+            "-zz": "Strings from the whole file, including sections a normal "
+                   "pass skips.",
+            "-l": "Linked libraries.",
+            "-e": "Entrypoint address.",
+            "-c": "Class information, for Objective-C, Java and .NET binaries.",
+            "-R": "Relocations.",
+            "-H": "Headers in full detail.",
+            "-j": "JSON output, for a pipeline.",
+            "-q": "Quiet, minimal formatting — easier to parse in a shell.",
+            "-k": "Query a specific field rather than printing everything.",
+            "-O": "Patch the binary. Read-only work never needs this, and using "
+                  "it on evidence modifies it.",
+            "-a": "Force the architecture when detection is wrong.",
+            "-b": "Force the bit width, 32 or 64.",
+            "-A": "List all sub-binaries in a fat/universal file.",
+            "-x": "Extract the sub-binaries of a fat file.",
+            "-v": "Version.",
+        },
+        "gotchas": [
+            "This is the static, scriptable half of radare2. Nothing here "
+            "executes the binary, which makes it safe to run over a corpus of "
+            "samples — unlike opening them in a debugger.",
+            "The security flags in `-I` describe the *binary*, not the running "
+            "process. NX and ASLR also depend on the loader and the OS.",
+            "`-z` misses strings outside the data sections, which is where "
+            "packed and obfuscated samples hide theirs. Try `-zz` before "
+            "concluding a sample has none.",
+        ],
+    },
+
+    "volshell": {
+        "purpose": "An interactive Python shell over a memory image, with "
+                   "Volatility's object model loaded — for questions no plugin "
+                   "answers.",
+        "when": {
+            "-f": "The memory image.",
+            "--file": "The memory image.",
+            "-w": "Treat the image as Windows.",
+            "--windows": "Treat the image as Windows.",
+            "-l": "Treat the image as Linux.",
+            "--linux": "Treat the image as Linux.",
+            "-m": "Treat the image as macOS.",
+            "--mac": "Treat the image as macOS.",
+            "--pid": "Enter with a process context already selected, so `cc()` "
+                     "is not the first thing you type.",
+            "--script": "Run a Python script against the image and drop into "
+                        "the shell afterwards — the repeatable form of an "
+                        "interactive session.",
+            "--script-only": "Run the script and exit. This is how an "
+                             "exploratory session becomes an automated one.",
+            "-s": "Where to find symbol tables — the usual fix when a Linux or "
+                  "macOS image will not resolve.",
+            "--symbol-dirs": "Where to find symbol tables.",
+            "-o": "Directory for files written out of the shell.",
+            "--output-dir": "Directory for files written out of the shell.",
+            "--offline": "Never fetch symbols online.",
+            "--clear-cache": "Drop cached items when results look stale.",
+            "-q": "Quiet.",
+            "--quiet": "Quiet.",
+            "-v": "More verbose output.",
+            "--verbosity": "More verbose output.",
+        },
+        "gotchas": [
+            "Reach for this when a plugin nearly answers the question but not "
+            "quite. If a plugin exists, use the plugin — it is tested and this "
+            "is not.",
+            "Findings from an interactive session are not reproducible by "
+            "default. Move anything that matters into `--script` so the result "
+            "can be regenerated and reviewed.",
+            "The same symbol requirement as `volatility3` applies: without an "
+            "ISF matching the exact kernel build, a Linux or macOS image will "
+            "not resolve at all.",
+        ],
+    },
 }
