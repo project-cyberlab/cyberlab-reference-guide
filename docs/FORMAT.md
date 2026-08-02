@@ -5,6 +5,33 @@ reference works that already do this well, then fixing what they each get wrong
 for our use case: **a field guide you open mid-mission when you need a
 capability and do not remember the tool.**
 
+## Who this is for
+
+Two readers, and the second one is the harder test.
+
+**The experienced analyst** knows the tool exists and needs the flag. The
+options table serves them, and completeness is what they are here for.
+
+**The junior analyst** has never opened the tool. They need enough to take a
+section, run with it, complete a basic task, and start learning — without
+another source open beside it. That means a page must answer three questions
+the options table cannot:
+
+1. **When would I reach for this at all?** — the Purpose, written for someone
+   who does not already know.
+2. **What do I actually type first?** — a labelled invocation, where the label
+   says *why*, not just *what*. `mmls image.dd` teaches nothing;
+   "the offset every other TSK tool needs is the Start column" teaches the
+   workflow.
+3. **What comes before and after this?** — almost no DFIR tool is used alone.
+   `mmls` gives the offset that `fsstat` needs, which gives the block size that
+   makes `blkls` output readable. A page that omits the sequence leaves a
+   beginner holding a correct command and no idea where it fits.
+
+Writing only for the first reader is the failure mode, because it looks
+finished. A page can list every flag correctly and still be unusable by someone
+meeting the tool for the first time.
+
 ---
 
 ## 1. What the research said
