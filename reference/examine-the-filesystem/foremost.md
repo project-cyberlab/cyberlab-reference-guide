@@ -44,7 +44,7 @@ All 11 options parsed from the captured help text; 8 reviewed with usage guidanc
 
 ## Gotchas
 
-- Carving recovers content but **not filenames or timestamps** — those live in filesystem metadata that carving bypasses. Use `tsk_recover` when the filesystem is intact and carve only what it cannot reach.
+- Carving recovers content but **not filenames or timestamps** — those live in filesystem metadata that carving bypasses. Use [`tsk_recover`](tsk_recover.md) when the filesystem is intact and carve only what it cannot reach.
 - The output directory must be empty; foremost aborts otherwise. This trips scripted reruns constantly.
 
 ## See also

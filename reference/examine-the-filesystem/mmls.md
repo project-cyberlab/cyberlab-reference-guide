@@ -48,7 +48,7 @@ All 12 options parsed from the captured help text; 9 reviewed with usage guidanc
 ## Gotchas
 
 - The **Start** column is in sectors. That value is what every other TSK tool wants for `-o`. Multiplying by the sector size here is the single most common mistake in a TSK workflow.
-- If `mmls` reports no partition table, the image may be a single volume rather than a whole disk — try `fsstat` on it directly at offset 0 before assuming the image is corrupt.
+- If `mmls` reports no partition table, the image may be a single volume rather than a whole disk — try [`fsstat`](fsstat.md) on it directly at offset 0 before assuming the image is corrupt.
 
 ## See also
 

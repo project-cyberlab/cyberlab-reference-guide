@@ -11,6 +11,7 @@ lacks the generated-marker.
 """
 from __future__ import annotations
 import json
+import os
 import re
 import sys
 from datetime import date
@@ -144,6 +145,57 @@ def siblings(cmd: str) -> list[str]:
     return uniq[:8]
 
 
+def page_path_of(tool: str) -> Path | None:
+    """Where a tool's page lives, or None if it has none."""
+    for ph, caps in TAXONOMY.items():
+        for _cap, cmds in caps:
+            if tool in cmds:
+                cand = REF / slug(ph) / f"{tool}.md"
+                if cand.exists():
+                    return cand
+    return None
+
+
+def link_inline_mentions(text: str, cmd: str, page: Path) -> str:
+    """Turn `othertool` in prose into a link to that tool's page.
+
+    Readers navigate by following links inside the sentence they are already
+    reading, far more than by going back to an index, so a tool named mid-page
+    should be reachable from there. Only inline code spans are linked: several
+    tools are also ordinary English words (`file`, `stat`, `strings`, `less`),
+    and linking those on sight would turn the prose into a minefield. A code
+    span is an explicit statement that the author meant the command.
+    """
+    parts = re.split(r"(```.*?```)", text, flags=re.S)      # never touch fenced code
+    for idx, part in enumerate(parts):
+        if part.startswith("```"):
+            continue
+        out_lines = []
+        for line in part.splitlines(keepends=True):
+            # Tables carry captured flag text; leave them alone.
+            if line.lstrip().startswith("|"):
+                out_lines.append(line)
+                continue
+
+            def repl(m: re.Match) -> str:
+                tool = m.group(1).strip()
+                if tool == cmd:
+                    return m.group(0)
+                target = page_path_of(tool)
+                if target is None:
+                    return m.group(0)
+                rel = os.path.relpath(target, page.parent).replace(os.sep, "/")
+                return f"[`{tool}`]({rel})"
+
+            # Skip spans already inside a markdown link.
+            if re.search(r"\]\([^)]*\)", line):
+                out_lines.append(line)
+                continue
+            out_lines.append(re.sub(r"`([^`\n]{2,40})`", repl, line))
+        parts[idx] = "".join(out_lines)
+    return "".join(parts)
+
+
 def build_page(cmd: str, meta: dict) -> str:
     img = meta["image"]
     help_path = CAP / img / "help" / f"{cmd}.help.txt"
@@ -269,7 +321,9 @@ def main() -> None:
             continue
         path.parent.mkdir(parents=True, exist_ok=True)
         try:
-            path.write_text(build_page(cmd, meta), encoding="utf-8")
+            page = build_page(cmd, meta)
+            page = link_inline_mentions(page, cmd, path)
+            path.write_text(page, encoding="utf-8")
             written += 1
         except Exception as e:                       # one bad tool must not stop the run
             print(f"  WARN {cmd}: {e}", file=sys.stderr)

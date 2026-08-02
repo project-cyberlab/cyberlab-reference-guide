@@ -142,7 +142,7 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 
 ## Gotchas
 
-- This produces a .plaso database, **not** a timeline you can read. `psort.py` is the second half; running only this looks like nothing happened.
+- This produces a .plaso database, **not** a timeline you can read. [`psort.py`](psort.py.md) is the second half; running only this looks like nothing happened.
 - A full run on a disk image can take hours and tens of GB. Scope with `--parsers` unless you genuinely need everything.
 
 ## See also

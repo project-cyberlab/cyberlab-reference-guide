@@ -44,7 +44,7 @@ All 14 options parsed from the captured help text; 3 reviewed with usage guidanc
 ## Gotchas
 
 - GNU `strings` reads only initialised, loaded sections by default. Use `-a` to scan the whole file — malware routinely hides outside them.
-- It finds ASCII by default and will miss UTF-16LE strings that Windows binaries are full of. When a PE looks empty, that is usually why — reach for `floss` instead.
+- It finds ASCII by default and will miss UTF-16LE strings that Windows binaries are full of. When a PE looks empty, that is usually why — reach for [`floss`](../malware-triage-static/floss.md) instead.
 
 ## See also
 

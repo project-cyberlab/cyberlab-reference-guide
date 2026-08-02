@@ -143,7 +143,7 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 
 - **Always timeout-guard binwalk in a harness.** Signature scanning on a large or synthetic image can run effectively forever; this project has been bitten by exactly that.
 - `-e -M` on an unknown blob can produce an enormous directory tree. Set `-d` and carve into a scratch filesystem, not your case directory.
-- A signature hit is a guess based on magic bytes. Confirm with `file` or entropy before reporting an embedded filesystem as fact.
+- A signature hit is a guess based on magic bytes. Confirm with [`file`](file.md) or entropy before reporting an embedded filesystem as fact.
 
 ## See also
 
