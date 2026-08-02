@@ -105,3 +105,98 @@ a passage on a real page. Where two independent sources agree, confidence is
 high. Where they conflict, the tool's own documentation wins, and the conflict
 is worth recording — a walkthrough contradicting the man page is either out of
 date or wrong, and either way it is a signal about that source's reliability.
+
+
+---
+
+# Deep research: how to verify generated claims
+
+Prompted by a direct challenge - had the research actually been done, across
+the board, on doing this properly. It had not, beyond the prior loops and the
+local measurements above. This is that research, and it changed the design.
+
+## The finding that matters: confirmation bias in verifiers
+
+**MARCH - Multi-Agent Reinforced Self-Check** (arXiv 2603.24579).
+
+When a verifier sees the evidence **and** the draft together, it endorses
+errors through *internal coherence* rather than grounding. The paper names
+this confirmation bias and measures it.
+
+Their fix is **deliberate information asymmetry**:
+
+| Role | Sees | Job |
+|---|---|---|
+| Solver | question + documents | writes the draft |
+| Proposer | the draft | decomposes it into atomic, separately checkable questions |
+| Checker | **documents only, never the draft** | re-answers those questions independently |
+
+Disagreement between what the draft claims and what the Checker derives is the
+hallucination signal. They call it *blind scrutiny*.
+
+Measured: an 8B model went from 55.2% to 75.2% average accuracy on
+RAGTruth/FaithBench, matching far larger proprietary models. On HotpotQA it
+reached 71.2%, above GPT-4o at 64.0%.
+
+**This matches the local benchmark exactly.** Six models here produced the
+same answer regardless of size, because architecture - not parameter count -
+is what determines quality on this job.
+
+**Our gate had precisely the bias described.** It saw the note and the evidence
+together, which is why it approved two inverted workflows.
+
+## Verify at the point of creation, not later
+
+**Delayed Verification Destabilizes Multi-Agent LLM Belief** (arXiv 2606.27409).
+
+Verification meant to suppress hallucination can destabilise a system when
+delayed: correction that is too strong or too delayed turns consensus into
+oscillation, below a threshold that shrinks as delay grows.
+
+The reassuring part for this design: **factual tasks with absorbing boundaries
+- truth as a fixed constraint - remain stable regardless of delay.** A
+retrieved passage is exactly such a constraint. This pipeline sits in the
+stable regime by construction, because every claim is anchored to a fetched
+document rather than to another agent's belief.
+
+Design rule taken from it: verify each claim where it is created; never let an
+unverified claim flow downstream and become an input.
+
+## What was implemented, and how it was calibrated
+
+`scripts/blind_check.py`. Proposer (qwen3:14b, l3e7) decomposes a note into
+neutral questions - prompted to ask "Which runs first, X or Y?" rather than
+"Does X run before Y?", so the question does not leak the answer. Checker
+(gemma3:27b, rick) answers from the passages alone. Different host **and**
+different model family, because two qwen models share training data and
+therefore share blind spots.
+
+**Tested by deliberate inversion** on strong evidence - a true note about
+`fls -m` feeding `mactime`, and the same note with the order reversed:
+
+- FALSE note -> **rejected**. The decisive check: "Which runs first, mactime
+  or fls -m?" - claim said mactime, sources said fls. Exactly the failure that
+  passed every mechanical check.
+- TRUE note -> initially also rejected, which exposed a flaw worth recording.
+
+**Ask about contradiction, not agreement.** The first judge prompt asked "do
+these agree?" and marked "building a timeline" against "collecting temporal
+data from file systems" as disagreement - the same fact at two granularities.
+Likewise "produces the body file" against "a line for each file", which is
+one output described two ways. A judge hunting agreement rejects correct work.
+Only genuine conflict counts; different wording, different detail level, or
+extra detail on one side are all compatible.
+
+**Zero tolerance is wrong for a noisy judge.** MARCH's Zero-Tolerance Reward
+assumes the judge is right. Measured here it is not. So the thresholds are
+calibrated to observed reliability:
+
+| Signal | Verdict | Why |
+|---|---|---|
+| Ordering contradiction | **reject** | "Which runs first" has one answer; the judge got it right in both directions, and it is the error that actually misleads a junior analyst |
+| Two or more contradictions | **reject** | Independent conflicts are unlikely to both be judge noise |
+| Exactly one contradiction | **review** | Judge is not reliable enough alone to bin otherwise-good work |
+| Sources answered nothing | **review** | Evidence too thin to rule either way |
+
+Discarding correct notes is not a safe default. It is how a loop quietly stops
+making progress while appearing rigorous.
