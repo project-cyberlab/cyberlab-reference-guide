@@ -32,7 +32,7 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| base64dump.py | — | Locate and decode strings encoded in Base64 and other common encodings. |
+| [base64dump.py](../reference/malware-triage-static/base64dump.py.md) | — | Locate and decode strings encoded in Base64 and other common encodings. |
 | Tesseract OCR | `tesseract` | Examine images to identify and extract text using optical character recognition \(OCR\). |
 
 ### Analyze Documents / Microsoft Office
@@ -43,17 +43,17 @@ is written from memory. Sources are listed at the end.
 | Hachoir | `hachoir-grep`, `hachoir-metadata`, `hachoir-strip`, `hachoir-wx` | View, edit, and carve contents of various binary file types. |
 | libolecf | `olecfexport`, `olecfinfo`, `olecfmount`, `etc` | Microsoft Office OLE2 compound documents. |
 | msoffcrypto-crack.py | — | Recover the password of an encrypted Microsoft Office document. |
-| msoffcrypto-tool | — | Decrypt a Microsoft Office file with password, intermediate key, or private key which generated its escrow key. |
+| [msoffcrypto-tool](../reference/malware-triage-documents/msoffcrypto-tool.md) | — | Decrypt a Microsoft Office file with password, intermediate key, or private key which generated its escrow key. |
 | msoffice-crypt | — | Encrypt and decrypt OOXML Microsoft Office documents. |
-| oledump.py | — | Analyze OLE2 Structured Storage files. |
-| olefile | — | Python package to parse, read and write MS OLE2 files. |
-| oletools | `mraptor`, `msodde`, `olebrowse`, `oledir`, `oleid`, `olemap`, `olemeta`, `oleobj`, `oletimes`, `olevba`, `pyxswf`, `rtfobj`, `ezhexviewer` | Microsoft Office OLE2 compound documents. |
+| [oledump.py](../reference/malware-triage-documents/oledump.py.md) | — | Analyze OLE2 Structured Storage files. |
+| [olefile](../reference/malware-triage-documents/olefile.md) | — | Python package to parse, read and write MS OLE2 files. |
+| oletools | [`mraptor`](../reference/malware-triage-documents/mraptor.md), [`msodde`](../reference/malware-triage-documents/msodde.md), [`olebrowse`](../reference/malware-triage-documents/olebrowse.md), [`oledir`](../reference/malware-triage-documents/oledir.md), [`oleid`](../reference/malware-triage-documents/oleid.md), [`olemap`](../reference/malware-triage-documents/olemap.md), [`olemeta`](../reference/malware-triage-documents/olemeta.md), [`oleobj`](../reference/malware-triage-documents/oleobj.md), [`oletimes`](../reference/malware-triage-documents/oletimes.md), [`olevba`](../reference/malware-triage-documents/olevba.md), [`pyxswf`](../reference/malware-triage-documents/pyxswf.md), [`rtfobj`](../reference/malware-triage-documents/rtfobj.md), [`ezhexviewer`](../reference/report-support/ezhexviewer.md) | Microsoft Office OLE2 compound documents. |
 | onedump.py | — | Extract and analyze embedded files from OneNote documents. |
 | pcode2code | — | Decompile VBA macro p-code from Microsoft Office documents. |
-| pcodedmp | — | Disassemble VBA p-code. |
+| [pcodedmp](../reference/malware-triage-documents/pcodedmp.md) | — | Disassemble VBA p-code. |
 | rtfdump.py | — | Analyze a suspicious RTF file. |
 | SSView | `ssview` | Analyze OLE2 Structured Storage files. |
-| XLMMacroDeobfuscator | `xlmdeobfuscator`, `runxlrd2.py` | Deobfuscate XLM macros (also known as Excel 4.0 macros) from Microsoft Office files. |
+| XLMMacroDeobfuscator | [`xlmdeobfuscator`](../reference/malware-triage-documents/xlmdeobfuscator.md), `runxlrd2.py` | Deobfuscate XLM macros (also known as Excel 4.0 macros) from Microsoft Office files. |
 | xmldump.py | — | Extract contents of XML files, in particular OOXML-formatted Microsoft Office documents. |
 | zipdump.py | — | Analyze zip-compressed files. |
 
@@ -62,8 +62,8 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | Origamindee | `pdfcop`, `pdfdecompress`, `pdfdecrypt`, `pdfextract`, `etc` | Parse, modify, generate PDF files. |
-| pdf-parser.py | — | Examine elements of the PDF file. |
-| pdfid.py | — | Identify suspicious elements of the PDF file. |
+| [pdf-parser.py](../reference/malware-triage-documents/pdf-parser.py.md) | — | Examine elements of the PDF file. |
+| [pdfid.py](../reference/malware-triage-documents/pdfid.py.md) | — | Identify suspicious elements of the PDF file. |
 | pdfresurrect | — | Extract previous versions of content from PDF files. |
 | pdftk-java | `pdftk` | Edit, create, and examine PDF files. |
 | pdftool.py | — | Analyze PDF files to identify incremental updates to the document. |
@@ -83,9 +83,9 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| Frida | `frida`, `frida-ps`, `frida-trace`, `frida-discover`, `frida-ls-devices`, `frida-kill` | Trace the execution of a process to analyze its behavior. |
+| [Frida](../reference/reverse-engineering/frida.md) | [`frida`](../reference/reverse-engineering/frida.md), [`frida-ps`](../reference/reverse-engineering/frida-ps.md), [`frida-trace`](../reference/reverse-engineering/frida-trace.md), [`frida-discover`](../reference/reverse-engineering/frida-discover.md), [`frida-ls-devices`](../reference/reverse-engineering/frida-ls-devices.md), [`frida-kill`](../reference/reverse-engineering/frida-kill.md) | Trace the execution of a process to analyze its behavior. |
 | r2pipe | — | Examine binary files, including disassembling and debugging. |
-| radare2 | `r2`, `rasm2`, `rabin2`, `rahash2`, `rafind2`, `r2ai`, `decai`, `pdg` | Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (A |
+| radare2 | [`r2`](../reference/reverse-engineering/r2.md), [`rasm2`](../reference/reverse-engineering/rasm2.md), [`rabin2`](../reference/malware-triage-static/rabin2.md), [`rahash2`](../reference/acquire-preserve/rahash2.md), [`rafind2`](../reference/examine-the-filesystem/rafind2.md), `r2ai`, `decai`, `pdg` | Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (A |
 | Wine | `wine` | Run Windows applications. |
 | x64dbg Automate MCP (OpenCode skills) | — | Drive x64dbg on a remote Windows VM from OpenCode on REMnux, with eight AI commands for tracing, unpacking, state snapsh |
 
@@ -132,7 +132,7 @@ is written from memory. Sources are listed at the end.
 |---|---|---|
 | 1768.py | — | Analyze Cobalt Strike beacons. |
 | Balbuzard | `balbuzard`, `bbcrack`, `bbharvest`, `bbtrans` | Extract and deobfuscate patterns from suspicious files. |
-| base64dump.py | — | Locate and decode strings encoded in Base64 and other common encodings. |
+| [base64dump.py](../reference/malware-triage-static/base64dump.py.md) | — | Locate and decode strings encoded in Base64 and other common encodings. |
 | brxor.py | — | Bruteforce XOR'ed strings to find those that are English words. |
 | Chepy | `chepy` | Decode and otherwise analyze data using this command-line tool and Python library. |
 | Cobalt Strike Configuration Extractor (CSCE) and Parser <a href="#csce" id="csce"></a> | `csce`, `list-cs-settings` | Analyze Cobalt Strike beacons. |
@@ -140,15 +140,15 @@ is written from memory. Sources are listed at the end.
 | cs-decrypt-metadata.py | — | Decrypt Cobalt Strike metadata. |
 | cs-extract-key.py | — | Extract AES and HMAC keys from Cobalt Strike beacon process memory. |
 | cut-bytes.py | — | Cut out a part of a data stream. |
-| CyberChef | `cyberchef` | Decode and otherwise analyze data using this browser app. |
+| [CyberChef](../reference/decode-deobfuscate/cyberchef.md) | [`cyberchef`](../reference/decode-deobfuscate/cyberchef.md) | Decode and otherwise analyze data using this browser app. |
 | DC3-MWCP | `mwcp` | Parsing configuration information from malware. |
 | ex_pe_xor.py | — | Search an XOR'ed file for indications of executable binaries. |
-| FLOSS | `floss` | Extract and deobfuscate strings from PE executables. |
+| [FLOSS](../reference/malware-triage-static/floss.md) | [`floss`](../reference/malware-triage-static/floss.md) | Extract and deobfuscate strings from PE executables. |
 | format-bytes.py | — | Decompose structured binary data with format strings. |
 | hex-to-bin.py | — | Convert hexadecimal text dumps to binary data. |
 | Malchive | — | Perform static analysis of various aspects of malicious code. |
 | NoMoreXOR.py | — | Help guess a file's 256-byte XOR by using frequency analysis. |
-| numbers-to-string.py | — | Translate number sequences into ASCII characters. |
+| [numbers-to-string.py](../reference/malware-triage-static/numbers-to-string.py.md) | — | Translate number sequences into ASCII characters. |
 | re-search.py | — | Search files using regular expressions from a built-in library or custom patterns. |
 | sets.py | — | Perform set operations on lines or bytes in text files. |
 | strdeob.pl | — | Locate and decode stack strings in executable files. |
@@ -160,27 +160,27 @@ is written from memory. Sources are listed at the end.
 | XORSearch | `xorsearch` | Locate and decode strings obfuscated using common techniques. |
 | xorsearch.py | — | Search for XOR, ROL, ROT, and SHIFT encoded strings with YARA and regex support. |
 | XORStrings | — | Search for XOR encoded strings in a file. |
-| xortool | — | Analyze XOR-encoded data. |
+| [xortool](../reference/reverse-engineering/xortool.md) | — | Analyze XOR-encoded data. |
 
 ### Examine Static Properties / Elf Files
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| pyelftools | `readelf.py` | Python library for parsing and analyzing ELF files and DWARF debugging information. |
+| pyelftools | [`readelf.py`](../reference/malware-triage-static/readelf.py.md) | Python library for parsing and analyzing ELF files and DWARF debugging information. |
 
 ### Examine Static Properties / General
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| 7-Zip | `7za` | Compress and decompress files using a variety of algorithms. |
-| binwalk | — | Extract and analyze firmware images. |
-| bulk_extractor | — | Extract interesting strings from binary files. |
-| ClamAV | `clamscan`, `freshclam` | Scan files for malware signatures. |
+| 7-Zip | [`7za`](../reference/malware-triage-static/7za.md) | Compress and decompress files using a variety of algorithms. |
+| [binwalk](../reference/examine-the-filesystem/binwalk.md) | — | Extract and analyze firmware images. |
+| [bulk_extractor](../reference/examine-the-filesystem/bulk_extractor.md) | — | Extract interesting strings from binary files. |
+| ClamAV | [`clamscan`](../reference/malware-triage-static/clamscan.md), [`freshclam`](../reference/malware-triage-static/freshclam.md) | Scan files for malware signatures. |
 | Detect-It-Easy | — | Determine types of files and examine file properties. |
 | disitool | `disitool.py` | Manipulate embedded digital signatures. |
 | DroidLysis | `droidlysis` | Perform static analysis of Android applications. |
 | ExifTool | `exiftool` | Tool to read from, write to, and edit EXIF metadata of various file types. |
-| file | — | Identify file type using "magic" numbers. |
+| [file](../reference/examine-the-filesystem/file.md) | — | Identify file type using "magic" numbers. |
 | file-magic.py | — | Identify file types using the Python magic module. |
 | Hachoir | `hachoir-grep`, `hachoir-metadata`, `hachoir-strip`, `hachoir-wx` | View, edit, and carve contents of various binary file types. |
 | Hash ID | `hash-id.py` | Identify different types of hashes. |
@@ -193,7 +193,7 @@ is written from memory. Sources are listed at the end.
 | re-search.py | — | Search the file for built-in regular expressions of common suspicious artifacts. |
 | signsrch | — | Find patterns of common encryption, compression, or encoding algorithms. |
 | Sleuth Kit | — | Analyze disk images and recover files from them. |
-| ssdeep | — | Compute Context Triggered Piecewise Hashes (CTPH), also known as fuzzy hashes. |
+| [ssdeep](../reference/acquire-preserve/ssdeep.md) | — | Compute Context Triggered Piecewise Hashes (CTPH), also known as fuzzy hashes. |
 | strings.py | — | Extract ASCII and Unicode strings from binary files with length sorting and filtering. |
 | thefuzz | — | Fuzzy String Matching in Python. |
 | TrID | `trid`, `tridupdate` | Identify file type using signatures. |
@@ -231,9 +231,9 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | Anomy | `anomy` | A wrapper around wget, ssh, sftp, ftp, and telnet to route these connections through Tor to anonymize your traffic. |
-| cURL | `curl` | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
+| [cURL](../reference/report-support/curl.md) | [`curl`](../reference/report-support/curl.md) | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
 | EPIC IRC Client | `epic5` | Examine IRC activities with this IRC client. |
-| GNU Wget | `wget` | Interact with servers via HTTP, HTTPS, FTP, and FTPS using this command-line tool. |
+| GNU Wget | [`wget`](../reference/report-support/wget.md) | Interact with servers via HTTP, HTTPS, FTP, and FTPS using this command-line tool. |
 | netcat | `nc` | Read and write data across network connections. |
 | thug | — | Examine suspicious website using this low-interaction honeyclient. |
 | tor | — | Obfuscate your origins by routing traffic through a network of anonymizing nodes. |
@@ -249,13 +249,13 @@ is written from memory. Sources are listed at the end.
 | mitmproxy | `mitmproxy`, `mitmdump`, `mitmweb` | Investigate website interactions using this web proxy. |
 | monitor-network | — | Monitor traffic on the first active network interface using tshark, printing a live summary to the screen or saving it t |
 | Network Miner Free Edition | `networkminer` | Examine network traffic and carve PCAP capture files. |
-| ngrep | — | Look for patterns in network traffic. |
+| [ngrep](../reference/network-analysis/ngrep.md) | — | Look for patterns in network traffic. |
 | PolarProxy | `polarproxy` | Intercept and decrypt TLS traffic. |
 | tcpdump | — | Capture and analyze network traffic with this command-line sniffer. |
-| tcpflow | — | Analyze the flow of network traffic. |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | — | Analyze the flow of network traffic. |
 | tcpick | — | Capture and analyze network traffic with this command-line sniffer. |
-| tcpxtract | — | Extract files from network traffic. |
-| tshark | — | Capture and analyze network traffic with this console-based sniffer. |
+| [tcpxtract](../reference/examine-the-filesystem/tcpxtract.md) | — | Extract files from network traffic. |
+| [tshark](../reference/acquire-preserve/tshark.md) | — | Capture and analyze network traffic with this console-based sniffer. |
 | wireshark | — | Capture and analyze network traffic with this sniffer. |
 
 ### Explore Network Interactions / Services
@@ -267,7 +267,7 @@ is written from memory. Sources are listed at the end.
 | fakedns | — | Respond to DNS queries with the specified IP address. |
 | fakemail | — | Intercept and examine SMTP email activity with this fake SMTP server. |
 | FakeNet-NG | — | Emulate common network services and interact with malware. |
-| INetSim | `inetsim` | Emulate common network services and interact with malware. |
+| [INetSim](../reference/network-analysis/inetsim.md) | [`inetsim`](../reference/network-analysis/inetsim.md) | Emulate common network services and interact with malware. |
 | inspircd 3 | — | Examine IRC activity with this IRC server. |
 | netcat | `nc` | Read and write data across network connections. |
 | Nginx | — | Web server. |
@@ -284,25 +284,25 @@ is written from memory. Sources are listed at the end.
 | malwoverview | `malwoverview` | Query public repositories of malware data (e.g., VirusTotal, HybridAnalysis). |
 | nsrllookup | — | Look up MD5 file hashes in the NIST National Software Reference Library (NSRL). |
 | pdnstool | — | Query passive DNS databases for DNS data. |
-| Scalpel | — | Carve contents out of binary files, such as partitions. |
+| [Scalpel](../reference/examine-the-filesystem/scalpel.md) | — | Carve contents out of binary files, such as partitions. |
 | time-decode | — | Decode and encode date and timestamps. |
 | virustotal-search | `virustotal-search.py` | Search VirusTotal for file hashes. |
 | virustotal-submit | `virustotal-submit.py` | Submit files to VirusTotal. |
-| Yara | `yara` | Identify and classify malware samples using Yara rules. |
+| [Yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) | Identify and classify malware samples using Yara rules. |
 | YARA-X | — | Scan files using YARA rules, the next generation of YARA written in Rust. |
 
 ### General Utilities / General
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| 7-Zip | `7za` | Compress and decompress files using a variety of algorithms. |
+| 7-Zip | [`7za`](../reference/malware-triage-static/7za.md) | Compress and decompress files using a variety of algorithms. |
 | cabextract | — | Extract Microsoft cabinet (cab) files. |
-| cURL | `curl` | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
+| [cURL](../reference/report-support/curl.md) | [`curl`](../reference/report-support/curl.md) | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
 | Docker | — | Run and manage containers. |
 | Firefox | `firefox` | Web browser. |
 | GNOME Calculator | `galculator` | Calculator. |
 | IBus | `ibus-setup` | Adjust input methods for the GUI. |
-| Info-ZIP | `zip`, `unzip` | Compress and decompress files using the zip algorithm. |
+| Info-ZIP | `zip`, [`unzip`](../reference/malware-triage-static/unzip.md) | Compress and decompress files using the zip algorithm. |
 | myip | — | Determine the IP address of the default network interface. |
 | myjson-filter.py | — | Filter data formatted using the JSON format used by Didier Stevens' tools. |
 | nasm | — | An x86-64 assembler. |
@@ -332,9 +332,9 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| AESKeyFinder | `aeskeyfind` | Find 128-bit and 256-bit AES keys in a memory image. |
-| bulk_extractor | — | Extract interesting strings from binary files. |
-| RSAKeyFinder | `rsakeyfind` | Find BER-encoded RSA private keys in a memory image. |
+| AESKeyFinder | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) | Find 128-bit and 256-bit AES keys in a memory image. |
+| [bulk_extractor](../reference/examine-the-filesystem/bulk_extractor.md) | — | Extract interesting strings from binary files. |
+| RSAKeyFinder | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) | Find BER-encoded RSA private keys in a memory image. |
 | Volatility Framework | — | Memory forensics tool and framework. |
 
 ### Statically Analyze Code / .Net
@@ -364,10 +364,10 @@ is written from memory. Sources are listed at the end.
 | Cutter | — | Reverse engineering platform powered by Rizin. |
 | Detect-It-Easy <a id="detect-it-easy"></a> | — | Determine types of files and examine file properties. |
 | Ghidra | — | Software reverse engineering tool suite. |
-| objdump | — | Disassemble binary files. |
+| [objdump](../reference/malware-triage-static/objdump.md) | — | Disassemble binary files. |
 | Qiling | — | Emulate code execution of PE files, shellcode, etc. for a variety of OS and hardware platforms. |
-| radare2 | `r2`, `rasm2`, `rabin2`, `rahash2`, `rafind2`, `r2ai`, `decai`, `pdg` | Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (A |
-| Vivisect | `vivbin`, `vdbbin` | Statically examine and emulate binary files. |
+| radare2 | [`r2`](../reference/reverse-engineering/r2.md), [`rasm2`](../reference/reverse-engineering/rasm2.md), [`rabin2`](../reference/malware-triage-static/rabin2.md), [`rahash2`](../reference/acquire-preserve/rahash2.md), [`rafind2`](../reference/examine-the-filesystem/rafind2.md), `r2ai`, `decai`, `pdg` | Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (A |
+| Vivisect | [`vivbin`](../reference/reverse-engineering/vivbin.md), [`vdbbin`](../reference/reverse-engineering/vdbbin.md) | Statically examine and emulate binary files. |
 
 ### Statically Analyze Code / Java
 
@@ -384,7 +384,7 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | binee (Binary Emulation Environment) | — | Analyze I/O operations of a suspicious PE file by emulating its execution. |
-| capa | — | Detect suspicious capabilities in PE files. |
+| [capa](../reference/malware-triage-static/capa.md) | — | Detect suspicious capabilities in PE files. |
 | Malchive | — | Perform static analysis of various aspects of malicious code. |
 | mbcscan | `mbcscan.py` | Scan a PE file to list the associated Malware Behavior Catalog (MBC) details. |
 | Speakeasy | — | Emulate code execution, including shellcode, Windows drivers, and Windows PE files. |
@@ -411,11 +411,11 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| binwalk | — | Extract and analyze firmware images. |
+| [binwalk](../reference/examine-the-filesystem/binwalk.md) | — | Extract and analyze firmware images. |
 | Bytehist | `bytehist` | Generate byte-usage-histograms for all types of files with a focus on PE files. |
-| ClamAV | `clamscan`, `freshclam` | Scan files for malware signatures. |
+| ClamAV | [`clamscan`](../reference/malware-triage-static/clamscan.md), [`freshclam`](../reference/malware-triage-static/freshclam.md) | Scan files for malware signatures. |
 | TrID | `trid`, `tridupdate` | Identify file type using signatures. |
-| UPX | `upx` | Pack and unpack PE files. |
+| [UPX](../reference/malware-triage-static/upx.md) | [`upx`](../reference/malware-triage-static/upx.md) | Pack and unpack PE files. |
 
 ### Use Artificial Intelligence / General
 
@@ -424,7 +424,7 @@ is written from memory. Sources are listed at the end.
 | GhidrAssistMCP | — | MCP server for AI-assisted reverse engineering in Ghidra. |
 | OpenCode | — | Open-source AI coding agent for the terminal. |
 | ProcmonMCP | — | MCP server that lets AI assistants analyze Process Monitor (Procmon) XML captures. |
-| radare2 | `r2`, `rasm2`, `rabin2`, `rahash2`, `rafind2`, `r2ai`, `decai`, `pdg` | Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (A |
+| radare2 | [`r2`](../reference/reverse-engineering/r2.md), [`rasm2`](../reference/reverse-engineering/rasm2.md), [`rabin2`](../reference/malware-triage-static/rabin2.md), [`rahash2`](../reference/acquire-preserve/rahash2.md), [`rafind2`](../reference/examine-the-filesystem/rafind2.md), `r2ai`, `decai`, `pdg` | Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (A |
 | REMnux MCP Server | `remnux-mcp-server` | MCP server for using the REMnux malware analysis toolkit via AI assistants. |
 | x64dbg Automate MCP (OpenCode skills) | — | Drive x64dbg on a remote Windows VM from OpenCode on REMnux, with eight AI commands for tracing, unpacking, state snapsh |
 
@@ -450,7 +450,7 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | aesfix | `aesfix` |  |
-| aeskeyfind | `aeskeyfind` |  |
+| [aeskeyfind](../reference/memory-forensics/aeskeyfind.md) | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) |  |
 | ccrypt | `ccrypt` |  |
 | steghide | `steghide` |  |
 | stegosuite | `stegosuite` |  |
@@ -493,15 +493,15 @@ is written from memory. Sources are listed at the end.
 | afflib-tools | `afflib-tools` |  |
 | apktool | `apktool` |  |
 | autopsy | `autopsy` |  |
-| binwalk | `binwalk` |  |
+| [binwalk](../reference/examine-the-filesystem/binwalk.md) | [`binwalk`](../reference/examine-the-filesystem/binwalk.md) |  |
 | binwalk3 | `binwalk3` |  |
 | bulk-extractor | `bulk-extractor` |  |
 | bytecode-viewer | `bytecode-viewer` |  |
 | cabextract | `cabextract` |  |
 | chkrootkit | `chkrootkit` |  |
 | creddump7 | `creddump7` |  |
-| dc3dd | `dc3dd` |  |
-| dcfldd | `dcfldd` |  |
+| [dc3dd](../reference/acquire-preserve/dc3dd.md) | [`dc3dd`](../reference/acquire-preserve/dc3dd.md) |  |
+| [dcfldd](../reference/acquire-preserve/dcfldd.md) | [`dcfldd`](../reference/acquire-preserve/dcfldd.md) |  |
 | ddrescue | `ddrescue` |  |
 | dumpzilla | `dumpzilla` |  |
 | edb-debugger | `edb-debugger` |  |
@@ -513,7 +513,7 @@ is written from memory. Sources are listed at the end.
 | extundelete | `extundelete` |  |
 | fcrackzip | `fcrackzip` |  |
 | firmware-mod-kit | `firmware-mod-kit` |  |
-| foremost | `foremost` |  |
+| [foremost](../reference/examine-the-filesystem/foremost.md) | [`foremost`](../reference/examine-the-filesystem/foremost.md) |  |
 | forensic-artifacts | `forensic-artifacts` |  |
 | forensics-colorize | `forensics-colorize` |  |
 | galleta | `galleta` |  |
@@ -523,7 +523,7 @@ is written from memory. Sources are listed at the end.
 | grokevt | `grokevt` |  |
 | guymager | `guymager` |  |
 | hashdeep | `hashdeep` |  |
-| inetsim | `inetsim` |  |
+| [inetsim](../reference/network-analysis/inetsim.md) | [`inetsim`](../reference/network-analysis/inetsim.md) |  |
 | jadx | `jadx` |  |
 | javasnoop | `javasnoop` |  |
 | libhivex-bin | `libhivex-bin` |  |
@@ -543,8 +543,8 @@ is written from memory. Sources are listed at the end.
 | ollydbg | `ollydbg` |  |
 | parted | `parted` |  |
 | pasco | `pasco` |  |
-| pdf-parser | `pdf-parser` |  |
-| pdfid | `pdfid` |  |
+| [pdf-parser](../reference/malware-triage-documents/pdf-parser.md) | [`pdf-parser`](../reference/malware-triage-documents/pdf-parser.md) |  |
+| [pdfid](../reference/malware-triage-documents/pdfid.md) | [`pdfid`](../reference/malware-triage-documents/pdfid.md) |  |
 | plaso | `plaso` |  |
 | polenum | `polenum` |  |
 | pst-utils | `pst-utils` |  |
@@ -559,23 +559,23 @@ is written from memory. Sources are listed at the end.
 | recoverjpeg | `recoverjpeg` |  |
 | recstudio | `recstudio` |  |
 | reglookup | `reglookup` |  |
-| regripper | `regripper` |  |
+| [regripper](../reference/windows-artifacts/regripper.md) | [`regripper`](../reference/windows-artifacts/regripper.md) |  |
 | rephrase | `rephrase` |  |
 | rifiuti | `rifiuti` |  |
 | rifiuti2 | `rifiuti2` |  |
 | rizin-cutter | `rizin-cutter` |  |
 | rkhunter | `rkhunter` |  |
-| rsakeyfind | `rsakeyfind` |  |
+| [rsakeyfind](../reference/memory-forensics/rsakeyfind.md) | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) |  |
 | rz-ghidra | `rz-ghidra` |  |
 | safecopy | `safecopy` |  |
 | samdump2 | `samdump2` |  |
-| scalpel | `scalpel` |  |
+| [scalpel](../reference/examine-the-filesystem/scalpel.md) | [`scalpel`](../reference/examine-the-filesystem/scalpel.md) |  |
 | scrounge-ntfs | `scrounge-ntfs` |  |
 | sleuthkit | `sleuthkit` |  |
 | sqlitebrowser | `sqlitebrowser` |  |
-| ssdeep | `ssdeep` |  |
+| [ssdeep](../reference/acquire-preserve/ssdeep.md) | [`ssdeep`](../reference/acquire-preserve/ssdeep.md) |  |
 | tcpdump | `tcpdump` |  |
-| tcpflow | `tcpflow` |  |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) |  |
 | tcpick | `tcpick` |  |
 | tcpreplay | `tcpreplay` |  |
 | truecrack | `truecrack` |  |
@@ -589,7 +589,7 @@ is written from memory. Sources are listed at the end.
 | wireshark | `wireshark` |  |
 | xmount | `xmount` |  |
 | xplico | `xplico` |  |
-| yara | `yara` |  |
+| [yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) |  |
 
 ### Fuzzing
 
@@ -632,7 +632,7 @@ is written from memory. Sources are listed at the end.
 | ncat | `ncat` |  |
 | netdiscover | `netdiscover` |  |
 | netmask | `netmask` |  |
-| nmap | `nmap` |  |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
 | onesixtyone | `onesixtyone` |  |
 | p0f | `p0f` |  |
 | qsslcaudit | `qsslcaudit` |  |
@@ -669,12 +669,12 @@ is written from memory. Sources are listed at the end.
 | freerdp3-x11 | `freerdp3-x11` |  |
 | gpp-decrypt | `gpp-decrypt` |  |
 | hash-identifier | `hash-identifier` |  |
-| hashcat | `hashcat` |  |
+| [hashcat](../reference/decode-deobfuscate/hashcat.md) | [`hashcat`](../reference/decode-deobfuscate/hashcat.md) |  |
 | hashcat-utils | `hashcat-utils` |  |
 | hashid | `hashid` |  |
-| hydra | `hydra` |  |
+| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) |  |
 | hydra-gtk | `hydra-gtk` |  |
-| john | `john` |  |
+| [john](../reference/decode-deobfuscate/john.md) | [`john`](../reference/decode-deobfuscate/john.md) |  |
 | johnny | `johnny` |  |
 | maskprocessor | `maskprocessor` |  |
 | medusa | `medusa` |  |
@@ -778,7 +778,7 @@ is written from memory. Sources are listed at the end.
 | sniffjoke | `sniffjoke` |  |
 | sslsniff | `sslsniff` |  |
 | sslsplit | `sslsplit` |  |
-| tcpflow | `tcpflow` |  |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) |  |
 | tcpreplay | `tcpreplay` |  |
 | wifi-honey | `wifi-honey` |  |
 | wireshark | `wireshark` |  |
@@ -802,7 +802,7 @@ is written from memory. Sources are listed at the end.
 | legion | `legion` |  |
 | lynis | `lynis` |  |
 | nikto | `nikto` |  |
-| nmap | `nmap` |  |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
 | ohrwurm | `ohrwurm` |  |
 | peass | `peass` |  |
 | protos-sip | `protos-sip` |  |
@@ -849,7 +849,7 @@ is written from memory. Sources are listed at the end.
 | heartleech | `heartleech` |  |
 | httprint | `httprint` |  |
 | httrack | `httrack` |  |
-| hydra | `hydra` |  |
+| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) |  |
 | hydra-gtk | `hydra-gtk` |  |
 | jboss-autopwn | `jboss-autopwn` |  |
 | joomscan | `joomscan` |  |
@@ -862,7 +862,7 @@ is written from memory. Sources are listed at the end.
 | ncrack | `ncrack` |  |
 | nikto | `nikto` |  |
 | nishang | `nishang` |  |
-| nmap | `nmap` |  |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
 | oscanner | `oscanner` |  |
 | owasp-mantra-ff | `owasp-mantra-ff` |  |
 | padbuster | `padbuster` |  |
@@ -928,21 +928,21 @@ is written from memory. Sources are listed at the end.
 | blobrunner | `blobrunner` |  |
 | blobrunner64 | `blobrunner64` |  |
 | bytecodeviewer | `bytecodeviewer` |  |
-| capa | `capa` |  |
+| [capa](../reference/malware-triage-static/capa.md) | [`capa`](../reference/malware-triage-static/capa.md) |  |
 | capa-explorer-web | `capa-explorer-web` |  |
 | chrome.extensions | `chrome.extensions` |  |
 | cmder | `cmder` |  |
 | codetrack | `codetrack` |  |
 | cryptotester | `cryptotester` |  |
 | cutter | `cutter` |  |
-| cyberchef | `cyberchef` |  |
+| [cyberchef](../reference/decode-deobfuscate/cyberchef.md) | [`cyberchef`](../reference/decode-deobfuscate/cyberchef.md) |  |
 | cygwin | `cygwin` |  |
 | de4dot-cex | `de4dot-cex` |  |
 | dependencywalker | `dependencywalker` |  |
 | dex2jar | `dex2jar` |  |
 | didier-stevens-beta | `didier-stevens-beta` |  |
 | didier-stevens-suite | `didier-stevens-suite` |  |
-| die | `die` |  |
+| [die](../reference/malware-triage-static/die.md) | [`die`](../reference/malware-triage-static/die.md) |  |
 | dll-to-exe | `dll-to-exe` |  |
 | dnlib | `dnlib` |  |
 | dnspyex | `dnspyex` |  |
@@ -954,8 +954,8 @@ is written from memory. Sources are listed at the end.
 | ezviewer | `ezviewer` |  |
 | fakenet-ng | `fakenet-ng` |  |
 | fiddler | `fiddler` |  |
-| file | `file` |  |
-| floss | `floss` |  |
+| [file](../reference/examine-the-filesystem/file.md) | [`file`](../reference/examine-the-filesystem/file.md) |  |
+| [floss](../reference/malware-triage-static/floss.md) | [`floss`](../reference/malware-triage-static/floss.md) |  |
 | garbageman | `garbageman` |  |
 | ghidra | `ghidra` |  |
 | goresym | `goresym` |  |
@@ -994,7 +994,7 @@ is written from memory. Sources are listed at the end.
 | microsoft-office | `microsoft-office` |  |
 | nasm | `nasm` |  |
 | net-reactor-slayer | `net-reactor-slayer` |  |
-| nmap | `nmap` |  |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
 | notepadplusplus | `notepadplusplus` |  |
 | notepadpp.plugin.compare | `notepadpp.plugin.compare` |  |
 | notepadpp.plugin.jstool | `notepadpp.plugin.jstool` |  |
@@ -1035,7 +1035,7 @@ is written from memory. Sources are listed at the end.
 | uncompyle6 | `uncompyle6` |  |
 | uniextract2 | `uniextract2` |  |
 | unpyc3 | `unpyc3` |  |
-| upx | `upx` |  |
+| [upx](../reference/malware-triage-static/upx.md) | [`upx`](../reference/malware-triage-static/upx.md) |  |
 | vb-decompiler-lite | `vb-decompiler-lite` |  |
 | vbdec | `vbdec` |  |
 | vcbuildtools | `vcbuildtools` |  |
@@ -1051,7 +1051,7 @@ is written from memory. Sources are listed at the end.
 | x64dbg.plugin.ollydumpex | `x64dbg.plugin.ollydumpex` |  |
 | x64dbg.plugin.scyllahide | `x64dbg.plugin.scyllahide` |  |
 | x64dbg.plugin.x64dbgpy | `x64dbg.plugin.x64dbgpy` |  |
-| yara | `yara` |  |
+| [yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) |  |
 
 
 ## SIFT Workstation
@@ -1061,11 +1061,11 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | absent | `absent` |  |
-| aeskeyfind | `aeskeyfind` |  |
+| [aeskeyfind](../reference/memory-forensics/aeskeyfind.md) | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) |  |
 | afflib-tools | `afflib-tools` |  |
 | aircrack-ng | `aircrack-ng` |  |
 | android-sdk-platform-tools | `android-sdk-platform-tools` |  |
-| arp-scan | `arp-scan` |  |
+| [arp-scan](../reference/network-analysis/arp-scan.md) | [`arp-scan`](../reference/network-analysis/arp-scan.md) |  |
 | autopsy | `autopsy` |  |
 | avfs | `avfs` |  |
 | aws-cli | `aws-cli` |  |
@@ -1080,8 +1080,8 @@ is written from memory. Sources are listed at the end.
 | cmospwd | `cmospwd` |  |
 | cryptcat | `cryptcat` |  |
 | cryptsetup | `cryptsetup` |  |
-| dc3dd | `dc3dd` |  |
-| dcfldd | `dcfldd` |  |
+| [dc3dd](../reference/acquire-preserve/dc3dd.md) | [`dc3dd`](../reference/acquire-preserve/dc3dd.md) |  |
+| [dcfldd](../reference/acquire-preserve/dcfldd.md) | [`dcfldd`](../reference/acquire-preserve/dcfldd.md) |  |
 | default-jre | `default-jre` |  |
 | disktype | `disktype` |  |
 | dislocker | `dislocker` |  |
@@ -1102,9 +1102,9 @@ is written from memory. Sources are listed at the end.
 | extundelete | `extundelete` |  |
 | fdupes | `fdupes` |  |
 | feh | `feh` |  |
-| file | `file` |  |
+| [file](../reference/examine-the-filesystem/file.md) | [`file`](../reference/examine-the-filesystem/file.md) |  |
 | flex | `flex` |  |
-| foremost | `foremost` |  |
+| [foremost](../reference/examine-the-filesystem/foremost.md) | [`foremost`](../reference/examine-the-filesystem/foremost.md) |  |
 | gawk | `gawk` |  |
 | gdb | `gdb` |  |
 | gddrescue | `gddrescue` |  |
@@ -1115,7 +1115,7 @@ is written from memory. Sources are listed at the end.
 | gzrt | `gzrt` |  |
 | hashdeep | `hashdeep` |  |
 | hexedit | `hexedit` |  |
-| hydra | `hydra` |  |
+| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) |  |
 | hydra-gtk | `hydra-gtk` |  |
 | init | `init` |  |
 | ipython3 | `ipython3` |  |
@@ -1134,9 +1134,9 @@ is written from memory. Sources are listed at the end.
 | netsed | `netsed` |  |
 | netwox | `netwox` |  |
 | nfdump | `nfdump` |  |
-| ngrep | `ngrep` |  |
+| [ngrep](../reference/network-analysis/ngrep.md) | [`ngrep`](../reference/network-analysis/ngrep.md) |  |
 | nikto | `nikto` |  |
-| ntfs-3g | `ntfs-3g` |  |
+| [ntfs-3g](../reference/acquire-preserve/ntfs-3g.md) | [`ntfs-3g`](../reference/acquire-preserve/ntfs-3g.md) |  |
 | okular | `okular` |  |
 | onboard | `onboard` |  |
 | open-iscsi | `open-iscsi` |  |
@@ -1182,29 +1182,29 @@ is written from memory. Sources are listed at the end.
 | qemu-utils | `qemu-utils` |  |
 | radare2 | `radare2` |  |
 | rar | `rar` |  |
-| rsakeyfind | `rsakeyfind` |  |
+| [rsakeyfind](../reference/memory-forensics/rsakeyfind.md) | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) |  |
 | safecopy | `safecopy` |  |
 | samdump2 | `samdump2` |  |
-| scalpel | `scalpel` |  |
+| [scalpel](../reference/examine-the-filesystem/scalpel.md) | [`scalpel`](../reference/examine-the-filesystem/scalpel.md) |  |
 | silversearcher-ag | `silversearcher-ag` |  |
 | sleuthkit | `sleuthkit` |  |
 | socat | `socat` |  |
 | squashfs-tools | `squashfs-tools` |  |
-| ssdeep | `ssdeep` |  |
+| [ssdeep](../reference/acquire-preserve/ssdeep.md) | [`ssdeep`](../reference/acquire-preserve/ssdeep.md) |  |
 | ssldump | `ssldump` |  |
 | sslsniff | `sslsniff` |  |
 | stunnel4 | `stunnel4` |  |
 | swig | `swig` |  |
 | tcl | `tcl` |  |
-| tcpflow | `tcpflow` |  |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) |  |
 | tcpick | `tcpick` |  |
 | tcpreplay | `tcpreplay` |  |
 | tcpslice | `tcpslice` |  |
 | tcpstat | `tcpstat` |  |
 | tcptrace | `tcptrace` |  |
 | tcptrack | `tcptrack` |  |
-| tcpxtract | `tcpxtract` |  |
-| testdisk | `testdisk` |  |
+| [tcpxtract](../reference/examine-the-filesystem/tcpxtract.md) | [`tcpxtract`](../reference/examine-the-filesystem/tcpxtract.md) |  |
+| [testdisk](../reference/examine-the-filesystem/testdisk.md) | [`testdisk`](../reference/examine-the-filesystem/testdisk.md) |  |
 | tofrodos | `tofrodos` |  |
 | transmission | `transmission` |  |
 | ugrep | `ugrep` |  |
@@ -1274,7 +1274,7 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| CyberChef | — | Visual data decode/parse/analysis |
+| [CyberChef](../reference/decode-deobfuscate/cyberchef.md) | — | Visual data decode/parse/analysis |
 | Onion AI Assistant | — | AI triage assistance for analysts |
 | Security Onion Console (SOC) | — | Web UI for threat hunting & grid management |
 | TheHive | — | Collaborative IR & case management |

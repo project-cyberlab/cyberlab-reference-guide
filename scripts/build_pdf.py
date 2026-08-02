@@ -242,6 +242,7 @@ def add_outline(pdf_path: Path, tool_pages: list[Path]) -> int:
     """
     try:
         from pypdf import PdfReader, PdfWriter
+        from pypdf.generic import ArrayObject, NameObject, NullObject
     except ImportError:
         print("  pypdf not installed - outline skipped", file=sys.stderr)
         return 0
@@ -300,6 +301,42 @@ def add_outline(pdf_path: Path, tool_pages: list[Path]) -> int:
             f"{title}  ({len(pages)})", first, parent=ref_root)
         for p in sorted(pages, key=lambda q: page_for("tool-" + slug(q.stem)) or 0):
             bookmark(p.stem, "tool-" + slug(p.stem), parent=cap_node)
+
+    # Rewrite link annotations to point at an explicit page destination rather
+    # than a named one. Chrome and Edge's built-in PDF viewers resolve named
+    # destinations poorly -- links simply do not jump -- while Adobe handles
+    # them fine. Most people read this in a browser, so the links have to work
+    # there.
+    fixed = 0
+    for page in writer.pages:
+        for annot in (page.get("/Annots") or []):
+            try:
+                obj = annot.get_object()
+            except Exception:
+                continue
+            if obj.get("/Subtype") != "/Link":
+                continue
+            dest = obj.get("/Dest")
+            if dest is None or not isinstance(dest, (str, bytes)):
+                continue
+            name = str(dest).lstrip("/")
+            target = dests.get("/" + name) or dests.get(name)
+            if target is None:
+                continue
+            target = target.get_object()
+            arr = target.get("/D", target) if isinstance(target, dict) else target
+            try:
+                pg = page_of.get(arr[0].idnum)
+            except (AttributeError, IndexError, TypeError):
+                continue
+            if pg is None:
+                continue
+            obj[NameObject("/Dest")] = ArrayObject(
+                [writer.pages[pg].indirect_reference,
+                 NameObject("/XYZ"), NullObject(), NullObject(), NullObject()])
+            fixed += 1
+    if fixed:
+        print(f"resolved {fixed} link destinations to explicit pages")
 
     writer.page_mode = "/UseOutlines"          # open with the bookmark pane showing
     with open(pdf_path, "wb") as fh:
