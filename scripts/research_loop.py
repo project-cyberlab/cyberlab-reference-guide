@@ -41,8 +41,10 @@ CAP = ROOT / "capture"
 REF = ROOT / "reference"
 DRAFT = ROOT / "scripts" / "enrichment_draft.py"
 
-# rick reaches l3e7 over the wired LAN; both run ollama.
-OLLAMA = os.environ.get("OLLAMA_HOST", "http://192.168.1.253:11435")
+# l3e7 is the thinking box. Port 11434 is the ollama default -- this
+# pointed at 11435 and silently failed every call, which is why the
+# loop shipped without ever having been run.
+OLLAMA = os.environ.get("OLLAMA_HOST", "http://192.168.1.253:11434")
 DEFAULT_MODEL = os.environ.get("RESEARCH_MODEL",
                                "mistral-small3.2:24b-instruct-2506-q4_K_M")
 
@@ -123,6 +125,33 @@ HEDGE = re.compile(r"\b(may be used|can be used|is used to|allows you to|"
                    r"if desired|various|etc\.)\b", re.I)
 
 
+def flag_desc(help_text: str, flag: str) -> str:
+    """The captured description sitting next to this flag in the help output."""
+    lines = help_text.splitlines()
+    for i, line in enumerate(lines):
+        s = line.strip()
+        if not s.startswith("-"):
+            continue
+        head = re.split(r"\s{2,}", s, 1)
+        if flag not in re.findall(r"(?<![\w-])(--?[A-Za-z][A-Za-z0-9-]*)", head[0]):
+            continue
+        if len(head) > 1 and head[1].strip():
+            return head[1].strip()
+        # optparse and argparse both wrap: when a flag takes an argument the
+        # spec fills the line and the description lands on the next one,
+        # indented further. Without this the guard silently sees no
+        # description and waves the paraphrase through -- which is exactly
+        # what happened on pdf-parser.
+        indent = len(line) - len(line.lstrip())
+        for nxt in lines[i + 1:]:
+            if not nxt.strip():
+                break
+            if len(nxt) - len(nxt.lstrip()) > indent:
+                return nxt.strip()
+            break
+    return ""
+
+
 def validate(draft: dict, cmd: str, help_text: str, real_flags: set[str]) -> tuple[dict, list[str]]:
     """Keep only notes that are grounded, specific and short."""
     kept, rejected = {}, []
@@ -144,6 +173,26 @@ def validate(draft: dict, cmd: str, help_text: str, real_flags: set[str]) -> tup
         if note.strip().lower() in described:
             rejected.append(f"{flag}: restates the help text")
             continue
+        # The subtler restatement, and the one that actually got through:
+        # take the flag's own description, prepend "When you need to", submit.
+        # "-o: select indirect object by id" becomes "When you need to focus on
+        # specific indirect objects by their IDs" -- which fills the column and
+        # tells a junior analyst nothing they could not read one cell to the
+        # left. Compare content words against the captured description for this
+        # specific flag and refuse a paraphrase.
+        desc = flag_desc(help_text, flag)
+        if desc:
+            stop = {"the", "a", "an", "of", "to", "and", "or", "in", "on",
+                    "for", "with", "by", "when", "you", "your", "need",
+                    "want", "are", "is", "it", "this", "that", "their",
+                    "specific", "use", "using", "from", "at", "as", "be"}
+            def words(s):
+                return {w for w in re.findall(r"[a-z]+", s.lower())
+                        if w not in stop and len(w) > 2}
+            nw, dw = words(note), words(desc)
+            if nw and len(nw & dw) / len(nw) >= 0.45:
+                rejected.append(f"{flag}: paraphrases its own description")
+                continue
         # A note naming a flag that does not exist is the cardinal error.
         bogus = [f for f in re.findall(r"(?<![\w-])(--?[A-Za-z][A-Za-z0-9-]*)", note)
                  if f not in real_flags]
