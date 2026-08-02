@@ -10,10 +10,6 @@
 
 Try cryptographic operations against a sample.
 
-## Window
-
-![CryptoTester main window](../../capture/gui/CryptoTester/CryptoTester.png)
-
 ## Controls
 
 All 149 nodes come from the capture; the 126 interactive controls are listed here.
