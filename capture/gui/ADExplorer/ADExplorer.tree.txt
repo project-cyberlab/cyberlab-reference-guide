@@ -1,0 +1,4 @@
+﻿# gui-tree: ADExplorer
+# exe: C:\Tools\sysinternals\ADExplorer.exe
+# captured: 2026-08-02T06:29:33.5759292-07:00
+# ERROR: no top-level window

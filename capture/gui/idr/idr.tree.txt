@@ -1,0 +1,19 @@
+﻿# gui-tree: idr
+# exe: C:\Tools\idr\idr.exe
+# captured: 2026-08-02T06:29:21.4977892-07:00
+# window: Interactive Delphi Reconstructor by crypto
+# class: TFMain_11011981
+#---
+Pane #524850
+Pane #524978
+  Pane "Units (F2)" #590436
+    Pane #524898
+Pane #393970
+  Pane "ClassViewer (F7)" #328448
+    Pane #459452
+    Pane #328450
+      Pane #524882
+        Pane "Branch" #328414
+        Pane "Tree" #328428
+    Pane #328454
+#--- nodes: 12

@@ -1,0 +1,156 @@
+﻿# gui-tree: CryptoTester
+# exe: C:\Tools\CryptoTester\CryptoTester.exe
+# captured: 2026-08-02T06:28:30.6071681-07:00
+# window: CryptoTester
+# class: WindowsForms10.Window.8.app.0.141b42a_r7_ad1
+#---
+StatusBar "statusStrip1" #917906
+  Text "Idle"
+MenuBar "menuStrip1" #524686
+  MenuItem "File"
+    MenuItem "Open File"
+    MenuItem "Input"
+      MenuItem "Text"
+      MenuItem "Base64"
+      MenuItem "Zero Bytes"
+      MenuItem "Sequential Bytes"
+      MenuItem "Integer"
+      MenuItem "Chrysanthemum.jpg"
+      MenuItem "Desert.jpg"
+    MenuItem "Save Output"
+  MenuItem "Tools"
+    MenuItem "Blob Analyzer"
+    MenuItem "RSA Calculator"
+    MenuItem "Key Finder"
+    MenuItem "Keystream Finder"
+    MenuItem "RNG Tester"
+    MenuItem "Base Encoder"
+    MenuItem "String Encoder"
+    MenuItem "Unit Tester"
+    MenuItem "ECC Validator"
+    MenuItem "Chunk Viewer"
+  MenuItem "Operations"
+    MenuItem "XOR Files"
+    MenuItem "AND Files"
+    MenuItem "Generate Keystream"
+    MenuItem "Visual Difference"
+    MenuItem "Bruteforce Algorithm"
+    MenuItem "Bruteforce Keys"
+    MenuItem "Attempt Blind Decryption"
+  MenuItem "Advanced"
+    MenuItem "Little Endian"
+    MenuItem "Custom"
+      MenuItem "Rounds"
+      MenuItem "Constant"
+      MenuItem "Position"
+      MenuItem "Matrix"
+    MenuItem "IV"
+      MenuItem "Get IV From Input"
+      MenuItem "Auto Derive IV"
+      MenuItem "Enter Text IV"
+      MenuItem "Base64"
+      MenuItem "Recover IV From Plaintext"
+    MenuItem "Presets"
+      MenuItem "HiddenTear"
+      MenuItem "OpenSSL"
+      MenuItem "DiskCryptorVolumeHeader"
+  MenuItem "Convert"
+    MenuItem "DWORD ⇆ Integer"
+    MenuItem "Hex ⇆ Integers"
+  MenuItem "Cracking"
+    MenuItem "XOR"
+      MenuItem "XOR Attack"
+    MenuItem "RSA"
+      MenuItem "RSA Broadcast Attack"
+  MenuItem "About"
+Pane #1
+  Pane "Encrypt/Decrypt" #393580
+    Pane "⤭" #590170
+    Group "Input File Info" #262444
+      Pane #262442
+        Text "Filesize:" #459008
+        Text "MIME:" #917746
+        Text "Mod 16:" #589930
+        Text "Entropy:" #720998
+        Text "false" #131636
+        Text "unknown" #590202
+        Text "0.00" #393764
+        Text "0 bytes" #589906
+    Group "Selection Options" #786508
+      Pane #2
+        Pane "Range" #524354
+          Pane #131632
+            Text "Offset:" #262752
+            Text "Length:" #197238
+            Pane "0" #328284
+            Pane "0" #131700
+            Pane "⟳" #197208
+      Pane "Lock Parameters" #131694
+      Pane "Splice Remaining Bytes" #1049208
+    Group "Key Options" #328278
+      Pane "+" #66170
+      Pane #66172
+      ComboBox "None" #66176
+        Text
+        Button "Open" [Alt+Down Arrow]
+      ComboBox "Derive:" #66180
+        Text "Derive:"
+        Button "Open" [Alt+Down Arrow]
+      Pane "CNG Blob" #66184
+      Pane "ASN.1" #66186
+      Pane "1" #66188
+      Text "0 bytes" #66190
+      Pane "PEM" #66192
+      Pane #66194
+      Pane "1" #66196
+      Text "Derive:" #66200
+      Pane "XML" #66202
+      Text "Hash:" #66204
+      Pane "Blob" #66206
+      Pane "Base64" #66208
+      Text "Format:" #66210
+      Pane "Hex" #66212
+      Pane "Text" #66214
+      Text "Key:" #66216
+      Pane #66218
+    Group "Encryption Options" #66220
+      Pane #66222
+        ComboBox "IV Bytes:" #66224
+          Text "IV Bytes:"
+          Button "Open" [Alt+Down Arrow]
+        Text "IV Bytes:" #66228
+        Text "Block Mode:" #66230
+        Text "Algorithm:" #66232
+        ComboBox "CBC" #66234
+          Text
+          Button "Open" [Alt+Down Arrow]
+        Text "Padding:" #66238
+        Pane #66240
+        ComboBox "None / PKCS#1 v1.5" #66242
+          Text
+          Button "Open" [Alt+Down Arrow]
+      Pane "🔒 Encrypt" #66246
+      Pane "🔓 Decrypt" #66248
+    Pane #66250
+      Pane #459264
+      Text "Input" #66252
+      Pane #524824
+      Text "Output" #66254
+      Text "00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F" #66256
+      Text "00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F" #66258
+      Pane "🔍" #66260
+      Pane "🡨" #66262
+      Pane "🔍" #66264
+      Pane #66266
+      ComboBox "None" #66268
+        Text
+        Button "Open" [Alt+Down Arrow]
+      Pane #66272
+      Text "Hash:" #66274
+      Pane #3
+        Pane "Hash" #66278
+          Pane #66280
+            ComboBox "None" #66282
+            Pane #66286
+      Text "Public Key:" #66288
+#--- nodes: 149

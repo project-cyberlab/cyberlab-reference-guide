@@ -1,0 +1,26 @@
+﻿# gui-tree: OffVis
+# exe: C:\Tools\OffVis\OffVis.exe
+# captured: 2026-08-02T06:28:45.3103042-07:00
+# window: OffVis: 
+# class: WindowsForms10.Window.8.app.0.378734a
+#---
+Pane #328306
+  Pane #524908
+    Pane "Raw File Contents" #459370
+      Pane #131780
+        Pane #131772
+      Pane #262760
+  Pane #262754
+    Pane "Parsing Results" #262750
+      Pane #393818
+      Pane #197200
+      Pane #1
+        Pane "Parsing Notes" #262732
+          Pane #197194
+Pane #197188
+  Pane "Parse" #197186
+  Pane "Parser:" #197182
+  Pane #197184
+Pane "menuStrip1" #197178
+Pane "statusStrip1" #197176
+#--- nodes: 19

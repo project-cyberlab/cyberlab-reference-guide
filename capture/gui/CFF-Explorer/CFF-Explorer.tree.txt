@@ -1,0 +1,11 @@
+﻿# gui-tree: CFF-Explorer
+# exe: C:\Tools\Explorer Suite\CFF Explorer.exe
+# captured: 2026-08-02T06:25:28.1778082-07:00
+# window: CFF Explorer VIII
+# class: #32770
+#---
+Pane #1024
+Pane #1025
+Pane #1026
+Pane "Tree" #1001
+#--- nodes: 4

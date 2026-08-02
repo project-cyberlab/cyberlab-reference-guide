@@ -1,7 +1,6 @@
-ï»¿# gui-tree: die
+﻿# gui-tree: die
 # exe: C:\Tools\die\die.exe
-# captured: 2026-08-02T05:58:09.2193276-07:00
-# session: 1
+# captured: 2026-08-02T06:25:00.4652752-07:00
 # window: Detect It Easy v3.10 [Windows 10 Version 2009] (x86_64)
 # class: GuiMainWindow
 #---

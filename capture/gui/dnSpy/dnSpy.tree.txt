@@ -1,0 +1,302 @@
+﻿# gui-tree: dnSpy
+# exe: C:\Tools\dnSpy\dnSpy.exe
+# captured: 2026-08-02T06:25:12.6996513-07:00
+# window: dnSpy v6.5.1 (64-bit, .NET Framework)
+# class: Window
+#---
+Image
+ToolBar
+  Menu
+    MenuItem "File" [Alt+F]
+      MenuItem "Export to Project..." [J]
+        Image
+        Text "Export to Pro_ject..."
+      MenuItem "Save..." [S]
+        Image
+        Text "_Save..."
+      MenuItem "Save Module..." [M]
+        Text "Save _Module..."
+      MenuItem "Save All..." [L]
+        Image
+        Text "Save A_ll..."
+      Separator
+      MenuItem "Open..." [O]
+        Image
+        Text "_Open..."
+      MenuItem "Open from GAC..." [G]
+        Image
+        Text "Open from _GAC..."
+      MenuItem "Open List..." [I]
+        Text "Open L_ist..."
+      MenuItem "Recent Files" [F]
+        Text "Recent _Files"
+      MenuItem "Reload All Assemblies" [R]
+        Text "_Reload All Assemblies"
+      MenuItem "Close All"
+        Image
+        Text "Close All"
+      MenuItem "Close Old In-Memory Modules"
+        Text "Close Old In-Memory Modules"
+      MenuItem "Close All Framework Assemblies"
+        Text "Close All Framework Assemblies"
+      MenuItem "Close All Missing Files"
+        Text "Close All Missing Files"
+      MenuItem "Sort Assemblies" [T]
+        Image
+        Text "Sor_t Assemblies"
+      Separator
+      MenuItem "Restart as Administrator"
+        Text "Restart as Administrator"
+      MenuItem "Exit" [X]
+        Image
+        Text "E_xit"
+    MenuItem "Edit" [Alt+E]
+      MenuItem "Undo"
+        Image
+        Text "Undo"
+      MenuItem "Redo"
+        Image
+        Text "Redo"
+      Separator
+      MenuItem "Find" [F]
+        Image
+        Text "_Find"
+      MenuItem "Search Assemblies" [S]
+        Image
+        Text "_Search Assemblies"
+      Separator
+      MenuItem "Create Assembly..."
+        Text "Create Assembly..."
+      MenuItem "Create NetModule..."
+        Text "Create NetModule..."
+    MenuItem "View" [Alt+V]
+      MenuItem "Word Wrap" [W]
+        Text "_Word Wrap"
+      MenuItem "Highlight Current Line" [H]
+        Text "_Highlight Current Line"
+      MenuItem "Full Screen" [U]
+        Image
+        Text "F_ull Screen"
+      MenuItem "Collapse TreeView Nodes" [V]
+        Image
+        Text "Collapse Tree_View Nodes"
+      MenuItem "Theme" [T]
+        MenuItem "Blue" [B]
+          Text "_Blue"
+        MenuItem "Dark" [D]
+          Text "_Dark"
+        MenuItem "Light" [L]
+          Text "_Light"
+      MenuItem "Language"
+        MenuItem "System"
+          Text "System"
+        MenuItem "čeština"
+          Text "čeština"
+        MenuItem "Deutsch"
+          Text "Deutsch"
+        MenuItem "English"
+          Text "English"
+        MenuItem "español (España, alfabetización internacional)"
+          Text "español (España, alfabetización internacional)"
+        MenuItem "français"
+          Text "français"
+        MenuItem "italiano"
+          Text "italiano"
+        MenuItem "magyar"
+          Text "magyar"
+        MenuItem "português (Brasil)"
+          Text "português (Brasil)"
+        MenuItem "português (Portugal)"
+          Text "português (Portugal)"
+        MenuItem "Tiếng Việt"
+          Text "Tiếng Việt"
+        MenuItem "Türkçe"
+          Text "Türkçe"
+        MenuItem "русский"
+          Text "русский"
+        MenuItem "українська"
+          Text "українська"
+        MenuItem "فارسی"
+          Text "فارسی"
+        MenuItem "中文(中国)"
+          Text "中文(中国)"
+      Separator
+      MenuItem "Code" [C]
+        Image
+        Text "_Code"
+      MenuItem "Assembly Explorer" [P]
+        Image
+        Text "Assembly Ex_plorer"
+      MenuItem "Output" [O]
+        Image
+        Text "_Output"
+      MenuItem "C# Interactive"
+        Image
+        Text "C# Interactive"
+      MenuItem "Bookmarks" [K]
+        MenuItem "Bookmark Window" [B]
+          Image
+          Text "_Bookmark Window"
+        Separator
+        MenuItem "Toggle Bookmark" [T]
+          Image
+          Text "_Toggle Bookmark"
+        MenuItem "Enable All Bookmarks" [A]
+          Image
+          Text "Enable _All Bookmarks"
+        MenuItem "Enable Bookmark"
+          Image
+          Text "Enable Bookmark"
+        MenuItem "Previous Bookmark" [P]
+          Image
+          Text "_Previous Bookmark"
+        MenuItem "Next Bookmark" [B]
+          Image
+          Text "Next _Bookmark"
+        MenuItem "Clear Bookmarks" [C]
+          Image
+          Text "_Clear Bookmarks"
+        Separator
+        MenuItem "Previous Bookmark With Same Label"
+          Image
+          Text "Previous Bookmark With Same Label"
+        MenuItem "Next Bookmark With Same Label"
+          Image
+          Text "Next Bookmark With Same Label"
+        Separator
+        MenuItem "Previous Bookmark In Document" [R]
+          Image
+          Text "P_revious Bookmark In Document"
+        MenuItem "Next Bookmark In Document" [E]
+          Image
+          Text "N_ext Bookmark In Document"
+        MenuItem "Clear All Bookmarks In Document"
+          Text "Clear All Bookmarks In Document"
+      Separator
+      MenuItem "Options..." [O]
+        Image
+        Text "_Options..."
+    MenuItem "Debug" [Alt+D]
+      MenuItem "Windows" [W]
+        MenuItem "Breakpoints" [B]
+          Image
+          Text "_Breakpoints"
+        MenuItem "Module Breakpoints" [U]
+          Image
+          Text "Mod_ule Breakpoints"
+        MenuItem "Exception Settings" [X]
+          Image
+          Text "E_xception Settings"
+        MenuItem "Output" [O]
+          Image
+          Text "_Output"
+      Separator
+      MenuItem "Start Debugging..." [S]
+        Image
+        Text "_Start Debugging..."
+      MenuItem "Start Without Debugging" [H]
+        Image
+        Text "Start Wit_hout Debugging"
+      MenuItem "Attach to Process..." [P]
+        Image
+        Text "Attach to _Process..."
+      MenuItem "Attach to Process (Unity)..." [U]
+        Image
+        Text "Attach to Process (_Unity)..."
+      Separator
+      MenuItem "Toggle Breakpoint" [G]
+        Text "To_ggle Breakpoint"
+      Separator
+      MenuItem "Options..." [O]
+        Image
+        Text "_Options..."
+    MenuItem "Window" [Alt+W]
+      MenuItem "New Window" [N]
+        Image
+        Text "_New Window"
+      Separator
+      MenuItem "Close All Tabs" [L]
+        Image
+        Text "C_lose All Tabs"
+      Separator
+      MenuItem "Windows..." [W]
+        Text "_Windows..."
+    MenuItem "Help" [Alt+H]
+      MenuItem "Latest Release" [L]
+        Text "_Latest Release"
+      MenuItem "Issues" [I]
+        Text "_Issues"
+      MenuItem "Wiki" [W]
+        Text "_Wiki"
+      MenuItem "Source Code" [S]
+        Text "_Source Code"
+      Separator
+      MenuItem "About" [A]
+        Text "_About"
+  Separator
+  Button "Back" #BrowseBack
+    Image
+  Button "Forward" #BrowseForward
+    Image
+  Separator
+  Button "Open" #Open
+    Image
+  Button #SaveAll
+    Image
+  Separator
+  ComboBox
+  Separator
+  Button "Undo" #Undo
+    Image
+  Button "Redo" #Redo
+    Image
+  Separator
+  Button
+    Image
+    Text "Start"
+  Separator
+  Button #SearchRoutedCommand
+    Image
+Custom
+  Separator #topSeparator
+  Button #closeBtn
+  Image
+  Text "A new version of dnSpy is available: 6.6.0.0"
+  Text "Open download page" #text
+  Text "Ignore this update" #text
+  Separator
+Tab
+  Text "Assembly Explorer"
+  Tree
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+    TreeItem "dnSpy.Contracts.Controls.FastTextBlock"
+      Button
+      Image
+Thumb
+#--- nodes: 295

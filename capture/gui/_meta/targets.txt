@@ -1,0 +1,15 @@
+die|C:\Tools\die\die.exe
+dnSpy|C:\Tools\dnSpy\dnSpy.exe
+CFF-Explorer|C:\Tools\Explorer Suite\CFF Explorer.exe
+PE-Detective|C:\Tools\Explorer Suite\PE Detective.exe
+Signature-Explorer|C:\Tools\Explorer Suite\Signature Explorer.exe
+HashMyFiles|C:\Tools\HashMyFiles\HashMyFiles.exe
+PDFStreamDumper|C:\Tools\PDFStreamDumper\PDFStreamDumper.exe
+Regshot|C:\Tools\Regshot-x64-Unicode\Regshot-x64-Unicode.exe
+CryptoTester|C:\Tools\CryptoTester\CryptoTester.exe
+OffVis|C:\Tools\OffVis\OffVis.exe
+VB-Decompiler|C:\Tools\VB Decompiler\VB Decompiler.exe
+vbdec|C:\Tools\vbdec\vbdec.exe
+idr|C:\Tools\idr\idr.exe
+ADExplorer|C:\Tools\sysinternals\ADExplorer.exe
+AccessEnum|C:\Tools\sysinternals\AccessEnum.exe

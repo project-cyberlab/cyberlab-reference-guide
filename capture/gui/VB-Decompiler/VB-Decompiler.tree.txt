@@ -1,0 +1,19 @@
+﻿# gui-tree: VB-Decompiler
+# exe: C:\Tools\VB Decompiler\VB Decompiler.exe
+# captured: 2026-08-02T06:28:57.3884155-07:00
+# window: VB Decompiler Lite v26.4
+# class: t0000000
+#---
+Pane #328234
+  Pane #918054
+    Pane "Decompile" #131836
+    Pane "..." #655904
+    Pane #786970
+Pane "Panel3" #459348
+  Pane #393810
+    Pane "Decompiler" #786932
+      Pane #459308
+Pane "Panel2" #393782
+  Pane #393778
+Pane #459378
+#--- nodes: 12

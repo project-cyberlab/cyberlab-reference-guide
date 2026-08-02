@@ -1,0 +1,23 @@
+﻿# gui-tree: PDFStreamDumper
+# exe: C:\Tools\PDFStreamDumper\PDFStreamDumper.exe
+# captured: 2026-08-02T06:26:16.4121666-07:00
+# window: PDF Stream Dumper - http://sandsprite.com
+# class: ThunderRT6FormDC
+#---
+Pane #3
+  Pane
+    Pane
+  Pane
+Pane #4
+  Pane #5
+  Pane "Load" #6
+  Pane "..." #7
+  Pane "Shell" #8
+  Pane "Abort" #9
+Pane "Progress Bar"
+Pane
+Pane
+Pane
+  Pane
+Pane
+#--- nodes: 16

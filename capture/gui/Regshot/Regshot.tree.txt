@@ -1,0 +1,4 @@
+﻿# gui-tree: Regshot
+# exe: C:\Tools\Regshot-x64-Unicode\Regshot-x64-Unicode.exe
+# captured: 2026-08-02T06:26:28.4902913-07:00
+# ERROR: This command cannot be run due to the error: The operation was canceled by the user.

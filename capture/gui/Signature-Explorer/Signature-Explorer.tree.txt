@@ -1,0 +1,34 @@
+﻿# gui-tree: Signature-Explorer
+# exe: C:\Tools\Explorer Suite\Signature Explorer.exe
+# captured: 2026-08-02T06:25:52.2871748-07:00
+# window: Signature Explorer II
+# class: WindowsForms10.Window.8.app.0.378734a
+#---
+Pane #1
+  Pane "Edit" #328216
+    Pane "Save Changes" #393754
+    Pane "Signature" #328224
+      Pane "Check that the signature doesn't already exist" #393636
+      Pane "Clear" #524690
+      Pane "Delete" #328078
+      Pane "Modify" #262508
+      Pane "Add" #327936
+      Pane #458858
+      Pane "Entire Portable Executable:" #655436
+      Pane #458820
+      Pane "Entry Point:" #393282
+      Pane #590348
+      Pane "Comments:" #131374
+      Pane #131372
+      Pane "Name:" #131370
+    Pane "Signatures" #589926
+      Pane #262692
+        Pane
+      Pane "Number of signatures: 0" #458834
+      Pane #459130
+      Pane "Filter:" #131476
+    Pane "Signature Database" #131454
+      Pane "..." #197130
+      Pane "Refresh" #328214
+      Pane #66088
+#--- nodes: 27

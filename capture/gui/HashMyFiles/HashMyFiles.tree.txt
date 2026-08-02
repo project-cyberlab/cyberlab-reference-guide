@@ -1,0 +1,11 @@
+﻿# gui-tree: HashMyFiles
+# exe: C:\Tools\HashMyFiles\HashMyFiles.exe
+# captured: 2026-08-02T06:26:04.3652963-07:00
+# window: HashMyFiles
+# class: HashMyFiles
+#---
+Pane "0 file(s)" #257
+Pane #258
+Pane #259
+  Pane
+#--- nodes: 4

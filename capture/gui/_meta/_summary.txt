@@ -1,0 +1,17 @@
+﻿# gui batch capture 2026-08-02T06:25:00.3558969-07:00
+die	OK	45
+dnSpy	OK	295
+CFF-Explorer	OK	4
+PE-Detective	OK	15
+Signature-Explorer	OK	27
+HashMyFiles	OK	4
+PDFStreamDumper	OK	16
+Regshot	START-FAILED	0
+CryptoTester	OK	149
+OffVis	OK	19
+VB-Decompiler	OK	12
+vbdec	OK	8
+idr	OK	12
+ADExplorer	NO-WINDOW	0
+AccessEnum	OK	5
+# done

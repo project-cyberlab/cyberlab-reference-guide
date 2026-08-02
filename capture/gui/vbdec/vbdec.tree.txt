@@ -1,0 +1,15 @@
+﻿# gui-tree: vbdec
+# exe: C:\Tools\vbdec\vbdec.exe
+# captured: 2026-08-02T06:29:09.4196679-07:00
+# window: vbdec
+# class: ThunderRT6FormDC
+#---
+Pane
+Pane #7
+Pane #9
+Pane "Search Log" #10
+  Pane #11
+Pane
+Pane
+  Pane
+#--- nodes: 8

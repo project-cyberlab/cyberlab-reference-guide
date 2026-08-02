@@ -1,0 +1,22 @@
+﻿# gui-tree: PE-Detective
+# exe: C:\Tools\Explorer Suite\PE Detective.exe
+# captured: 2026-08-02T06:25:40.2246652-07:00
+# window: PE Detective
+# class: #32770
+#---
+Pane #1000
+Pane "File Name:"
+Pane "Browse" #1001
+Pane "Scan" #1006
+Pane "About" #1009
+Pane "Directory Scan" #1012
+Pane "Recursive" #1013
+Pane "Deep Scan" #1002
+Pane #1003
+Pane "Best Match" #1015
+Pane #1004
+Pane "All Matches" #1014
+Pane #1005
+  Pane
+Pane #1007
+#--- nodes: 15
