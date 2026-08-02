@@ -16,9 +16,30 @@ from __future__ import annotations
 
 ENRICHMENT: dict[str, dict] = {
 
+    # Invocations are written by hand, one task per entry. Every flag used in
+    # them exists in that tool's capture, because the linter checks flags found
+    # in fenced blocks against the captured help and fails the build on one
+    # that does not. The task line matters as much as the command: a bare
+    # command is something to copy, a labelled one is something to learn.
     "mmls": {
         "purpose": "Display the partition layout of a disk image, including "
                    "unallocated gaps.",
+        "invocations": [
+            {"task": "First look at an unknown disk image",
+             "cmd": "mmls {{image.dd}}"},
+            {"task": "The offset you need for every other TSK tool is the "
+                     "Start column, in sectors",
+             "cmd": "mmls {{image.dd}}   # then: fls -o {{2048}} {{image.dd}}"},
+            {"task": "Force the volume-system type when detection guesses wrong",
+             "cmd": "mmls -t dos {{image.dd}}"},
+            {"task": "Read an E01 rather than a raw image",
+             "cmd": "mmls -i ewf {{image.E01}}"},
+            {"task": "4Kn drive, where the 512-byte default computes every "
+                     "offset wrong",
+             "cmd": "mmls -b 4096 {{image.dd}}"},
+            {"task": "Show only the gaps, where a hidden partition would sit",
+             "cmd": "mmls -A {{image.dd}}"},
+        ],
         "when": {
             "-t": "Force the volume-system type when auto-detection guesses wrong "
                   "(`-t list` shows the options).",

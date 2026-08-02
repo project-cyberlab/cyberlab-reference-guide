@@ -10,6 +10,23 @@
 
 Display the partition layout of a disk image, including unallocated gaps.
 
+## Common invocations
+
+```
+# First look at an unknown disk image
+mmls {{image.dd}}
+# The offset you need for every other TSK tool is the Start column, in sectors
+mmls {{image.dd}}   # then: fls -o {{2048}} {{image.dd}}
+# Force the volume-system type when detection guesses wrong
+mmls -t dos {{image.dd}}
+# Read an E01 rather than a raw image
+mmls -i ewf {{image.E01}}
+# 4Kn drive, where the 512-byte default computes every offset wrong
+mmls -b 4096 {{image.dd}}
+# Show only the gaps, where a hidden partition would sit
+mmls -A {{image.dd}}
+```
+
 ## Options
 
 All 12 options parsed from the captured help text; 9 reviewed with usage guidance.

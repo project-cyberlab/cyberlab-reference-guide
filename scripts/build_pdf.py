@@ -188,12 +188,20 @@ p, li { orphans: 3; widows: 3; }
 code { font: 9.2pt/1.35 "Cascadia Mono", Consolas, monospace;
        background: #f2f5f8; padding: .1em .32em; border-radius: 3px;
        border: 1px solid #e2e8ef; }
+/* Long lines must WRAP, never scroll. `overflow-x: auto` gives a scrollbar on
+   a web page and gives nothing at all on paper or in a PDF viewer: the text
+   past the right edge is simply clipped and unreachable. Wrapping is the only
+   way the content survives. */
 pre { background: #f7f9fb; border: 1px solid #dde5ed; border-left: 3px solid #1f6feb;
-      border-radius: 4px; padding: .6em .8em; overflow-x: auto;
+      border-radius: 4px; padding: .6em .8em;
+      white-space: pre-wrap; word-wrap: break-word; overflow-wrap: anywhere;
       page-break-inside: avoid; }
-pre code { background: none; border: none; padding: 0; font-size: 8.8pt; }
+pre code { background: none; border: none; padding: 0; font-size: 8.8pt;
+           white-space: pre-wrap; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
 table { border-collapse: collapse; width: 100%; margin: .6em 0; font-size: 9pt;
-        page-break-inside: auto; }
+        page-break-inside: auto; table-layout: fixed; }
+td, th { overflow-wrap: anywhere; word-break: normal; }
 th { background: #0b2545; color: #fff; text-align: left; padding: .38em .5em;
      font-weight: 600; }
 td { border: 1px solid #dde5ed; padding: .32em .5em; vertical-align: top; }
