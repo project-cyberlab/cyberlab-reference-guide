@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Hash a set of files and compare the results.
+Hash a set of files — MD5, SHA-1, SHA-256 and CRC32 — and show them in one sortable list. Sorting by hash collapses duplicates across directories instantly, which is what makes it a triage tool rather than a hashing utility.
 
 ## Window
 
@@ -16,11 +16,7 @@ Hash a set of files and compare the results.
 
 ## Controls
 
-All 4 nodes come from the capture; the 1 interactive controls are listed here.
-
-| Control | Type | AutomationId | What it does |
-|---|---|---|---|
-| **0 file(s)** | Pane | `257` | |
+The window exposes 1 further named controls: **0 file(s)**. The full tree, with every automation id, is in [the capture](../../capture/gui/HashMyFiles/HashMyFiles.tree.txt).
 
 ## Using it
 

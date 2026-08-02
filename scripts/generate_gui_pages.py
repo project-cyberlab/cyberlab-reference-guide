@@ -25,21 +25,83 @@ MARKER = "<!-- generated-by: scripts/generate_gui_pages.py -->"
 # Which capability each GUI tool belongs under. Placement is a judgement call
 # about what the tool is for, so it is written down here rather than guessed
 # from the control tree.
+# Purpose is two or three sentences: what the tool is for, what an analyst gets
+# out of it, and where it sits relative to the alternatives. Not a product
+# blurb and not a paragraph -- enough that someone who has never opened it
+# knows whether it is the right thing to reach for.
 CAPABILITY = {
-    "dnSpy":              ("reverse-engineering",       ".NET assembly browser and debugger"),
-    "VB-Decompiler":      ("reverse-engineering",       "Visual Basic decompiler"),
-    "vbdec":              ("reverse-engineering",       "Visual Basic 5/6 decompiler"),
-    "idr":                ("reverse-engineering",       "Delphi decompiler and form reconstructor"),
-    "CFF-Explorer":       ("malware-triage-static",     "PE structure editor and viewer"),
-    "PE-Detective":       ("malware-triage-static",     "PE packer and compiler signature scanner"),
-    "Signature-Explorer": ("malware-triage-static",     "Browse and edit packer signature databases"),
-    "PDFStreamDumper":    ("malware-triage-documents",  "Inspect and extract PDF object streams"),
-    "OffVis":             ("malware-triage-documents",  "Visualise Office binary file structure"),
-    "HashMyFiles":        ("acquire-preserve",          "Hash a set of files and compare the results"),
-    "CryptoTester":       ("decode-deobfuscate",        "Try cryptographic operations against a sample"),
-    "Regshot":            ("windows-artifacts",         "Diff the registry across a detonation"),
-    "AccessEnum":         ("windows-artifacts",         "Enumerate filesystem and registry permissions"),
-    "ADExplorer":         ("windows-artifacts",         "Browse and snapshot Active Directory"),
+    "dnSpy": ("reverse-engineering",
+              "Decompile, browse and debug .NET assemblies. It reconstructs "
+              "readable C# from IL, so a managed sample is usually faster to "
+              "understand here than in a disassembler, and it can attach a "
+              "debugger to the running assembly when static reading stalls"),
+    "VB-Decompiler": ("reverse-engineering",
+                      "Recover source-level structure from Visual Basic "
+                      "executables. P-code binaries decompile close to the "
+                      "original; native-compiled ones yield disassembly with "
+                      "the VB runtime calls identified"),
+    "vbdec": ("reverse-engineering",
+              "Decompile VB5 and VB6 binaries, recovering forms, controls and "
+              "event handlers. Those names usually survive compilation and "
+              "describe what the program was written to do"),
+    "idr": ("reverse-engineering",
+            "Reconstruct Delphi programs: identify the runtime library, "
+            "recover form definitions and name the event handlers. Delphi "
+            "binaries are mostly runtime code, so separating the author's few "
+            "hundred lines from the library's tens of thousands is the "
+            "difference between a tractable job and an intractable one"),
+    "CFF-Explorer": ("malware-triage-static",
+                     "Inspect and edit every structure in a PE file — headers, "
+                     "sections, imports, exports, resources — with a built-in "
+                     "hex editor. The import table and the gap between virtual "
+                     "and raw section sizes are the two fastest reads on what "
+                     "a binary can do and whether it is packed"),
+    "PE-Detective": ("malware-triage-static",
+                     "Scan a PE, or a directory of them, against a signature "
+                     "database to name the compiler, linker or packer that "
+                     "produced it. Answers \"what built this?\" before you "
+                     "commit to unpacking"),
+    "Signature-Explorer": ("malware-triage-static",
+                           "Browse, edit and add to the packer signature "
+                           "database that PE Detective and CFF Explorer read. "
+                           "This is how a sample nothing recognises becomes a "
+                           "signature that catches the next one"),
+    "PDFStreamDumper": ("malware-triage-documents",
+                        "Enumerate the objects and streams inside a PDF and "
+                        "decode them, applying the filters so JavaScript, "
+                        "embedded files and launch actions are readable rather "
+                        "than compressed noise"),
+    "OffVis": ("malware-triage-documents",
+               "Visualise the record structure of legacy binary Office files "
+               "beside their raw bytes. Exploits in these formats work by "
+               "malforming records, so seeing the parsed structure disagree "
+               "with the bytes is the detection"),
+    "HashMyFiles": ("acquire-preserve",
+                    "Hash a set of files — MD5, SHA-1, SHA-256 and CRC32 — and "
+                    "show them in one sortable list. Sorting by hash collapses "
+                    "duplicates across directories instantly, which is what "
+                    "makes it a triage tool rather than a hashing utility"),
+    "CryptoTester": ("decode-deobfuscate",
+                     "Try cryptographic and encoding operations against a "
+                     "sample interactively: XOR, block ciphers, hashes and "
+                     "conversions, with entropy and pattern views to judge "
+                     "whether a result is plausible plaintext. Built for the "
+                     "guess-and-check work of recovering a malware "
+                     "configuration blob"),
+    "Regshot": ("windows-artifacts",
+                "Take a registry and filesystem snapshot before and after "
+                "detonating a sample, then diff them. The delta is the "
+                "persistence and configuration the sample wrote"),
+    "AccessEnum": ("windows-artifacts",
+                   "Enumerate the effective permissions across a directory "
+                   "tree or registry branch and show them in one list. Sorting "
+                   "by permission surfaces the outlier — the world-writable "
+                   "path that does not belong"),
+    "ADExplorer": ("windows-artifacts",
+                   "Browse Active Directory as a live tree and take offline "
+                   "snapshots of it. A snapshot can be diffed later, which "
+                   "turns \"what changed in the directory?\" into a question "
+                   "with an answer"),
 }
 
 # Older Win32 dialogs expose no real control types: every button, checkbox and
@@ -352,27 +414,51 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
               if c["type"] in LEAF
               and (c["name"] if c["type"] in ("Pane", "Group") else (c["name"] or c["id"]))]
     if leaves:
-        L += ["## Controls", "",
-              f"All {len(data['controls'])} nodes come from the capture; "
-              f"the {len(leaves)} interactive controls are listed here.", "",
-              "| Control | Type | AutomationId | What it does |", "|---|---|---|---|"]
-        seen = set()
-        for c in leaves:
+        # Structure follows the Wireshark User's Guide, which documents a window
+        # as prose plus a short list of its major parts rather than an
+        # inventory of every control. A 179-row table of every button in dnSpy
+        # is not a reference, it is a data dump, and the AutomationId column was
+        # worse: `toolButtonElapsedTime` is how the linter ties a claim to the
+        # capture, and it means nothing to an analyst. Both are in
+        # capture/gui/<tool>/<tool>.tree.txt, which is where evidence belongs.
+        notes = GUI_NOTES.get(tool, {}).get("controls", {})
+
+        # Curated controls first, in the order they were written. These are the
+        # ones someone actually reaches for.
+        curated = [c for c in leaves
+                   if (c["name"] or "").strip() in notes]
+        rest = [c for c in leaves
+                if (c["name"] or "").strip() not in notes]
+
+        L += ["## Controls", ""]
+        if curated:
+            L += ["| Control | Type | What it does |", "|---|---|---|"]
+            seen = set()
+            for c in curated:
+                label = (c["name"] or "").strip().replace("|", "\\|")
+                key = (label, c["type"])
+                if key in seen:
+                    continue
+                seen.add(key)
+                L.append(f"| **{label}** | {c['type']} | "
+                         f"{notes[label].replace('|', chr(92) + '|')} |")
+            L.append("")
+
+        named_rest = []
+        seen_r = set()
+        for c in rest:
             label = (c["name"] or c["id"].split(".")[-1] or "").strip()
-            # An unnamed control with no AutomationId has nothing to call it by.
-            # Emitting `****` for it produces empty bold, which makes the bold
-            # match run on into the next table row and reports the whole run as
-            # an invented control.
-            if not label or not label.strip("|`"):
+            if not label or not label.strip("|`") or label in seen_r:
                 continue
-            label = label.replace("|", "\\|")
-            key = (label, c["type"])
-            if key in seen:
-                continue
-            seen.add(key)
-            aid = c["id"].split(".")[-1] if c["id"] else "—"
-            L.append(f"| **{label}** | {c['type']} | `{aid}` | |")
-        L.append("")
+            seen_r.add(label)
+            named_rest.append(label.replace("|", "\\|"))
+        if named_rest:
+            shown = ", ".join(f"**{n}**" for n in named_rest[:40])
+            more = ("" if len(named_rest) <= 40
+                    else f", and {len(named_rest) - 40} more")
+            L += [f"The window exposes {len(named_rest)} further named controls: "
+                  f"{shown}{more}. The full tree, with every automation id, is in "
+                  f"[the capture](../../capture/gui/{tool}/{tool}.tree.txt).", ""]
 
     if data["values"]:
         L += ["## Enumerated values", "",

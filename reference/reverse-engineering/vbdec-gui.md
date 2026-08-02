@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Visual Basic 5/6 decompiler.
+Decompile VB5 and VB6 binaries, recovering forms, controls and event handlers. Those names usually survive compilation and describe what the program was written to do.
 
 ## Window
 
@@ -16,11 +16,7 @@ Visual Basic 5/6 decompiler.
 
 ## Controls
 
-All 8 nodes come from the capture; the 1 interactive controls are listed here.
-
-| Control | Type | AutomationId | What it does |
-|---|---|---|---|
-| **Search Log** | Pane | `10` | |
+The window exposes 1 further named controls: **Search Log**. The full tree, with every automation id, is in [the capture](../../capture/gui/vbdec/vbdec.tree.txt).
 
 ## Using it
 

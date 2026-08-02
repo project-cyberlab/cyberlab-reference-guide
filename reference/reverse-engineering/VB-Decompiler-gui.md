@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Visual Basic decompiler.
+Recover source-level structure from Visual Basic executables. P-code binaries decompile close to the original; native-compiled ones yield disassembly with the VB runtime calls identified.
 
 ## Window
 
@@ -16,15 +16,7 @@ Visual Basic decompiler.
 
 ## Controls
 
-All 12 nodes come from the capture; the 5 interactive controls are listed here.
-
-| Control | Type | AutomationId | What it does |
-|---|---|---|---|
-| **Decompile** | Pane | `131836` | |
-| **...** | Pane | `655904` | |
-| **Panel3** | Pane | `459348` | |
-| **Decompiler** | Pane | `786932` | |
-| **Panel2** | Pane | `393782` | |
+The window exposes 5 further named controls: **Decompile**, **...**, **Panel3**, **Decompiler**, **Panel2**. The full tree, with every automation id, is in [the capture](../../capture/gui/VB-Decompiler/VB-Decompiler.tree.txt).
 
 ## Using it
 

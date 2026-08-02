@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Enumerate filesystem and registry permissions.
+Enumerate the effective permissions across a directory tree or registry branch and show them in one list. Sorting by permission surfaces the outlier — the world-writable path that does not belong.
 
 ## Window
 
@@ -16,14 +16,7 @@ Enumerate filesystem and registry permissions.
 
 ## Controls
 
-All 30 nodes come from the capture; the 4 interactive controls are listed here.
-
-| Control | Type | AutomationId | What it does |
-|---|---|---|---|
-| **You can also use the /accepteula command-line switch to accept the EULA.** | Pane | `502` | |
-| **Agree** | Pane | `1` | |
-| **Decline** | Pane | `2` | |
-| **Print** | Pane | `501` | |
+The window exposes 4 further named controls: **You can also use the /accepteula command-line switch to accept the EULA.**, **Agree**, **Decline**, **Print**. The full tree, with every automation id, is in [the capture](../../capture/gui/AccessEnum/AccessEnum.tree.txt).
 
 ## Using it
 

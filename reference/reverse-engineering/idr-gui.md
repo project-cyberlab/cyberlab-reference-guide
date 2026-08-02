@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Delphi decompiler and form reconstructor.
+Reconstruct Delphi programs: identify the runtime library, recover form definitions and name the event handlers. Delphi binaries are mostly runtime code, so separating the author's few hundred lines from the library's tens of thousands is the difference between a tractable job and an intractable one.
 
 ## Window
 
@@ -16,14 +16,7 @@ Delphi decompiler and form reconstructor.
 
 ## Controls
 
-All 12 nodes come from the capture; the 4 interactive controls are listed here.
-
-| Control | Type | AutomationId | What it does |
-|---|---|---|---|
-| **Units (F2)** | Pane | `590436` | |
-| **ClassViewer (F7)** | Pane | `328448` | |
-| **Branch** | Pane | `328414` | |
-| **Tree** | Pane | `328428` | |
+The window exposes 4 further named controls: **Units (F2)**, **ClassViewer (F7)**, **Branch**, **Tree**. The full tree, with every automation id, is in [the capture](../../capture/gui/idr/idr.tree.txt).
 
 ## Using it
 
