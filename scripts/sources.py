@@ -24,6 +24,7 @@ from __future__ import annotations
 import json
 import re
 import threading
+import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -155,15 +156,62 @@ def trust(url: str) -> int:
     return 3 if any(t in u for t in TRUSTED) else 0
 
 
-def search(query: str, limit: int = 10) -> list[dict]:
-    """Metasearch, best-trusted first, junk dropped."""
+# Minimum seconds between searches.
+#
+# SearxNG is a metasearch front end: it has no index of its own and forwards
+# to consumer engines that police automated traffic. A pass firing roughly 400
+# queries suspended all four -- brave and google cse "too many requests",
+# startpage a CAPTCHA with an hour-long suspension, duckduckgo timing out --
+# and every tool searched afterwards was recorded as having no sources.
+#
+# That is the worst failure mode this project has, because it does not look
+# like a failure. It looks like an answered question with the answer "nothing
+# exists", which is the one conclusion the guide is forbidden to draw.
+#
+# Pacing keeps a long pass inside what the upstreams tolerate. The durable fix
+# is an index that expects programmatic use -- see docs/LOOP-RESEARCH.md.
+SEARCH_INTERVAL = 2.5
+_last_search = [0.0]
+
+
+def _pace() -> None:
+    gap = time.time() - _last_search[0]
+    if gap < SEARCH_INTERVAL:
+        time.sleep(SEARCH_INTERVAL - gap)
+    _last_search[0] = time.time()
+
+
+def _search_once(query: str) -> list | None:
     q = urllib.parse.urlencode({"q": query, "format": "json"})
-    raw = _get(f"{SEARX}/search?{q}", timeout=25)
+    raw = _get(f"{SEARX}/search?{q}", timeout=30)
     if not raw:
-        return []
+        return None
     try:
-        results = json.loads(raw).get("results", [])
+        return json.loads(raw).get("results", [])
     except json.JSONDecodeError:
+        return None
+
+
+def search(query: str, limit: int = 10) -> list[dict]:
+    """Metasearch, best-trusted first, junk dropped.
+
+    Retries an empty result, because empty usually means the upstream engines
+    are rate-limited rather than that nothing exists. A whole pass once
+    recorded 39 tools as having no sources at all; the cause was Wikipedia
+    answering "Too many request (suspended_time=180)" and DuckDuckGo timing
+    out, not an absent internet. A loop that turns throttling into "no answer
+    exists" manufactures exactly the false conclusion this project is built
+    to avoid, and it does it silently and at scale.
+    """
+    _pace()
+    results = _search_once(query)
+    if not results:
+        # One retry only. Suspensions here are measured in minutes to an hour,
+        # so hammering the retry neither recovers the engine nor helps -- it is
+        # what exhausted them in the first place.
+        time.sleep(6)
+        results = _search_once(query)
+    if not results:
         return []
     out = []
     for r in results:

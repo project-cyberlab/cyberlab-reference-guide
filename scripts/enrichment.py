@@ -1983,9 +1983,21 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for foremost when recovering lost files from disk images or drives, often after creating an image with tools like dd, and before analyzing the recovered data; they choose it because it uses built-in file types for reliable and faster recovery based on headers, footers, and internal data structures.',
         'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
     },
+    'hashcat': {
+        'scenario': 'An analyst reaches for hashcat when they need to crack offline password hashes obtained from a system, not for online accounts; they would run it after acquiring the hash and consulting the wiki or forums for guidance, as it is specifically designed for this purpose and cannot be used with just a username.',
+        'sources': ['https://hashcat.net/wiki/doku.php?id=frequently_asked_questions'],
+    },
+    'hayabusa': {
+        'scenario': 'An analyst reaches for Hayabusa when generating fast, consolidated timelines from Windows event logs during threat hunting or forensics, often after collecting logs via live-response packages or Velociraptor, and before analyzing them in tools like Elastic Stack or Timesketch, due to its speed, multi-threading, and compatibility with sigma-based detection rules.',
+        'sources': ['https://github.com/Yamato-Security/hayabusa'],
+    },
     'log2timeline.py': {
         'scenario': 'An analyst reaches for log2timeline.py when processing storage media images to extract and create a timeline of events, often after imaging a drive or volume, and before analyzing the extracted data for forensic artifacts. They may use it with a filter file to target specific file paths for more efficient triage, or handle encrypted volumes by specifying credentials or partitions, as the tool supports options like --logfile, --partitions, and --vss_stores. The tool is chosen for its ability to process diverse file types, manage encrypted volumes, and use filter files for focused extraction, which may not be as seamlessly supported by similar tools.',
         'sources': ['https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html'],
+    },
+    'pdfid': {
+        'scenario': 'An analyst reaches for pdfid when triaging PDF files to quickly identify potential malicious content, such as JavaScript or obfuscation, before deeper analysis with a parser; they may run it initially to screen suspicious files due to its simplicity and reduced risk of exploitation compared to full parsers.',
+        'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
     },
 }
 

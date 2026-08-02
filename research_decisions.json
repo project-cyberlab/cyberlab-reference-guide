@@ -30,5 +30,17 @@
   "oleid": {
     "verdict": "reject",
     "why": "'after initial checks or before deeper analysis' fits every tool ever written and so tells the reader nothing"
+  },
+  "pdfid": {
+    "verdict": "accept",
+    "why": "correct order (triage before the parser) and a real reason for it: counting keywords does not parse, so it carries less exposure than a full parser on a hostile file"
+  },
+  "hayabusa": {
+    "verdict": "accept",
+    "why": "concrete on both sides -- after log collection via live-response or Velociraptor, before analysis in Elastic or Timesketch"
+  },
+  "hashcat": {
+    "verdict": "accept",
+    "why": "the offline-vs-online distinction is exactly the thing a junior analyst gets wrong, and it names the precondition: you need the hash first, not a username"
   }
 }
