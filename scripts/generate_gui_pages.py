@@ -109,7 +109,14 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
               "| Control | Type | AutomationId | What it does |", "|---|---|---|---|"]
         seen = set()
         for c in leaves:
-            label = c["name"] or c["id"].split(".")[-1]
+            label = (c["name"] or c["id"].split(".")[-1] or "").strip()
+            # An unnamed control with no AutomationId has nothing to call it by.
+            # Emitting `****` for it produces empty bold, which makes the bold
+            # match run on into the next table row and reports the whole run as
+            # an invented control.
+            if not label or not label.strip("|`"):
+                continue
+            label = label.replace("|", "\\|")
             key = (label, c["type"])
             if key in seen:
                 continue

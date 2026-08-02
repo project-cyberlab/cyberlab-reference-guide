@@ -1,6 +1,7 @@
 ﻿# gui-tree: die
 # exe: C:\Tools\die\die.exe
-# captured: 2026-08-02T06:25:00.4652752-07:00
+# sample: C:\Windows\System32\notepad.exe
+# captured: 2026-08-02T07:39:57.3037724-07:00
 # window: Detect It Easy v3.10 [Windows 10 Version 2009] (x86_64)
 # class: GuiMainWindow
 #---
@@ -11,12 +12,15 @@ Group #GuiMainWindow.centralwidget
     Button "..." #GuiMainWindow.centralwidget.groupBoxFileName.toolButtonOpenFile
   Group #GuiMainWindow.centralwidget.widgetFormats
     Group "File type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileType
-      ComboBox "File type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileType.comboBoxFileType [Down]
+      ComboBox "File type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileType.comboBoxFileType
         List
+          ListItem "Binary"
+          ListItem "MSDOS"
+          ListItem "PE64"
     Group "File size" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileSize
       Edit "File size" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileSize.lineEditFileSize
     Group "Scan" #GuiMainWindow.centralwidget.widgetFormats.groupBoxScanEngine
-      ComboBox "Scan" #GuiMainWindow.centralwidget.widgetFormats.groupBoxScanEngine.comboBoxScanEngine [Down]
+      ComboBox "Scan" #GuiMainWindow.centralwidget.widgetFormats.groupBoxScanEngine.comboBoxScanEngine
         List
           ListItem "Automatic"
           ListItem "Detect It Easy (DiE)"
@@ -33,15 +37,39 @@ Group #GuiMainWindow.centralwidget
     Custom #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan
       Group #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE
         Tree #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.treeViewResult
+          TreeItem "PE64"
+          TreeItem
+          TreeItem
+          TreeItem "Operation system: Windows(10)[AMD64, 64-bit, GUI]"
+          TreeItem "S"
+          TreeItem "?"
+          TreeItem "Linker: Microsoft Linker(14.16.27412)"
+          TreeItem "S"
+          TreeItem "?"
+          TreeItem "Compiler: Microsoft Visual C/C++(19.16.27412)[C++]"
+          TreeItem "S"
+          TreeItem "?"
+          TreeItem "Language: C++"
+          TreeItem "S"
+          TreeItem "?"
+          TreeItem "Tool: Visual Studio(2017, v15.9)"
+          TreeItem "S"
+          TreeItem "?"
+          TreeItem "Debug data: Binary[Offset=0x0002a0e4,Size=0x24]"
+          TreeItem
+          TreeItem
+          TreeItem "Debug data: PDB file link(7.0)"
+          TreeItem "S"
+          TreeItem "?"
         Custom #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan
           Group #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan
             Button "Signatures" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieSignatures
-            ComboBox #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.comboBoxFlags [Down]
-            ComboBox #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.comboBoxDatabases [Down]
+            ComboBox #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.comboBoxFlags
+            ComboBox #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.comboBoxDatabases
             Button "Directory" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieScanDirectory
             Button "Log" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieLog
             Button ">" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieExtraInformation
-            Button "0 msec" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.toolButtonElapsedTime
+            Button "211 msec" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.toolButtonElapsedTime
             Button "Scan" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieScanStart
   Group #GuiMainWindow.centralwidget.groupBoxExtra
     CheckBox "Advanced" #GuiMainWindow.centralwidget.groupBoxExtra.checkBoxAdvanced
@@ -49,4 +77,4 @@ Group #GuiMainWindow.centralwidget
     Button "Options" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonOptions
     Button "About" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonAbout
     Button "Exit" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonExit
-#--- nodes: 45
+#--- nodes: 72

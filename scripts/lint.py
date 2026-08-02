@@ -94,9 +94,13 @@ def main() -> int:
                 s = s.strip()
                 if not s or s.endswith(":") or len(s) > 30:
                     return False
-                return not any(ch in s for ch in ",;")
+                return not any(ch in s for ch in ",;|")
 
-            claimed = {c for c in re.findall(r"\*\*([^*]{1,40})\*\*", text)
+            # Must not span a line: between two legitimate bold spans on
+            # consecutive table rows sits "| Button | `X` | |\n| ", and a
+            # pattern that crosses newlines matches that gap and reports it as
+            # an invented control.
+            claimed = {c for c in re.findall(r"\*\*([^*\n]{1,40})\*\*", text)
                        if looks_like_control(c)}
 
             invented_ctrls = sorted(
