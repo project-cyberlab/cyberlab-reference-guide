@@ -11,3 +11,4 @@ __pycache__/
 
 # read-only working copy of cyberlab, pulled for mining
 .mined/
+capture/source-cache/
