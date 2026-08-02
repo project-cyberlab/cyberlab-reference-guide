@@ -66,6 +66,62 @@ def main() -> int:
         rel = page.relative_to(ROOT).as_posix()
         text = page.read_text(encoding="utf-8", errors="replace")
 
+        # A "<tool>-gui" page documents the graphical interface of a tool whose
+        # CLI is documented separately. It is gated against the accessibility
+        # tree in capture/gui/ exactly as a CLI page is gated against --help:
+        # a control named on the page must exist in the tree, and a control in
+        # the tree should be accounted for on the page.
+        if cmd.endswith("-gui"):
+            base = cmd[:-4]
+            tree = CAP / "gui" / base / f"{base}.tree.txt"
+            if not tree.exists():
+                errors.append(f"E-GUI-NOCAPTURE {rel}: no control tree at "
+                              f"capture/gui/{base}/{base}.tree.txt")
+                continue
+            dump = tree.read_text(encoding="utf-8", errors="replace")
+
+            # Control names as the walker recorded them: Type "Name" #AutomationId
+            captured_ctrls = set(re.findall(r'^\s*\w+ "([^"]+)"', dump, re.M))
+            captured_ids = set(re.findall(r"#(\S+)", dump))
+
+            # Controls the page claims, written in bold. Bold is also used for
+            # header labels ("Kit:") and ordinary emphasis, so a claim only
+            # counts when it looks like a control label: short, no trailing
+            # colon, no sentence punctuation. Otherwise every emphasised phrase
+            # is reported as an invented control and the check becomes noise
+            # nobody reads.
+            def looks_like_control(s: str) -> bool:
+                s = s.strip()
+                if not s or s.endswith(":") or len(s) > 30:
+                    return False
+                return not any(ch in s for ch in ",;")
+
+            claimed = {c for c in re.findall(r"\*\*([^*]{1,40})\*\*", text)
+                       if looks_like_control(c)}
+
+            invented_ctrls = sorted(
+                c for c in claimed
+                if c not in captured_ctrls and c not in captured_ids)
+            if invented_ctrls:
+                warns.append(
+                    f"W-GUI-INVENTED {rel}: {len(invented_ctrls)} name(s) not in "
+                    f"the tree: {', '.join(invented_ctrls[:6])}")
+
+            missing_ctrls = sorted(c for c in captured_ctrls if c not in text)
+            if missing_ctrls:
+                warns.append(
+                    f"W-GUI-MISSING {rel}: {len(missing_ctrls)} captured "
+                    f"control(s) absent: {', '.join(missing_ctrls[:6])}")
+
+            if not re.search(r"!\[[^\]]*\]\([^)]*\.png\)", text):
+                warns.append(f"W-GUI-NOSHOT {rel}: no screenshot referenced")
+
+            steps = len(re.findall(r"^\d+\. ", text, re.M))
+            if steps > 7:
+                warns.append(f"W-GUI-STEPS {rel}: {steps} numbered steps; "
+                             f"more than seven means more than one task")
+            continue
+
         cf = captured_flags(cmd)
         if cf is None:
             errors.append(f"E-NOCAPTURE {rel}: no capture for `{cmd}`")
