@@ -51,4 +51,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`cyberchef`](../decode-deobfuscate/cyberchef.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`rax2`](../decode-deobfuscate/rax2.md), [`openssl`](../decode-deobfuscate/openssl.md)
+[`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), `grep`, [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`cyberchef`](../decode-deobfuscate/cyberchef.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`rax2`](../decode-deobfuscate/rax2.md), [`openssl`](../decode-deobfuscate/openssl.md)

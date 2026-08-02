@@ -1329,4 +1329,130 @@ ENRICHMENT: dict[str, dict] = {
             "identical to a clean host.",
         ],
     },
+
+    "diec": {
+        "purpose": "Identify a file's format, compiler, linker and packer from "
+                   "the command line — the scriptable half of Detect It Easy.",
+        "when": {
+            "-r": "Recurse a directory. This is the flag that makes `diec` the "
+                  "right tool for a corpus, where the GUI handles one sample.",
+            "-d": "Deep scan: look past the entry point for signatures a quick "
+                  "pass misses. Slower, and worth it on anything suspicious.",
+            "-u": "Heuristic scan, for packers with no exact signature. Raises "
+                  "false positives, so treat a heuristic-only hit as a lead.",
+            "-g": "Aggressive scan — the most thorough and the noisiest.",
+            "-a": "Scan every type rather than stopping at the detected format.",
+            "-e": "Show entropy. High entropy with no packer signature is the "
+                  "interesting case: something is compressed or encrypted and "
+                  "nothing recognises it.",
+            "-i": "Show file info — size, format, architecture.",
+            "-S": "Ask for one specific piece of info, e.g. `-S Hash#MD5`. The "
+                  "form to use when scripting rather than reading.",
+            "-U": "Hide unknown results, to cut noise across a large scan.",
+            "-b": "Verbose output, including which signature matched.",
+            "-l": "Profile signature performance — for tuning a slow scan, not "
+                  "for analysis.",
+            "-j": "JSON output, for a pipeline.",
+        },
+        "gotchas": [
+            "`diec` and the GUI share a signature set, so they agree by "
+            "construction. Use this for corpora and reports; use "
+            "[the GUI](die-gui.md) when you need to browse *why* something "
+            "matched.",
+            "A packer name is a signature match, not proof. Custom and modified "
+            "packers match nothing, so silence is not the same as clean.",
+            "Deep and aggressive scans cost real time on a large directory. "
+            "Sample before committing to a full corpus run.",
+        ],
+    },
+
+    "dumpcap": {
+        "purpose": "Capture packets to a file. It does nothing else — which is "
+                   "the point.",
+        "when": {
+            "-i": "Interface to capture from. `-D` lists what is available.",
+            "-w": "Output file. Without it, dumpcap writes to a temporary file "
+                  "and tells you where, which is rarely what you meant.",
+            "-f": "Capture filter in BPF syntax. Applied before writing, so "
+                  "anything it excludes is gone permanently.",
+            "-b": "Ring buffer: roll to a new file on duration, filesize or "
+                  "count. The difference between a capture that runs overnight "
+                  "and one that fills the disk at 3am.",
+            "-a": "Autostop condition — duration, filesize or files.",
+            "-c": "Stop after N packets.",
+            "-s": "Snapshot length: truncate each packet. Headers only, when "
+                  "payload must not be recorded.",
+            "-B": "Kernel buffer size in MiB. Raise it first when a fast link "
+                  "reports drops; the default is small for modern traffic.",
+            "-p": "Do not enter promiscuous mode — only traffic for this host.",
+            "-I": "Monitor mode, for 802.11 management and control frames.",
+            "-D": "List interfaces and exit.",
+            "-L": "List link-layer types for the chosen interface.",
+            "-S": "Print per-interface packet statistics once a second, for "
+                  "confirming traffic is arriving before committing to a "
+                  "long capture.",
+            "-d": "Print the compiled BPF for a filter, to check it means what "
+                  "you think before capturing hours of the wrong thing.",
+            "-M": "Machine-readable output for `-D`, `-L` and `-S`.",
+            "-y": "Force the link-layer type.",
+            "-n": "pcapng output (the default).",
+            "-P": "Legacy pcap output, for a tool that cannot read pcapng.",
+            "-q": "Quiet — no packet-count updates.",
+        },
+        "gotchas": [
+            "This is deliberately minimal: it captures and it does not dissect. "
+            "That is why it is the right thing to run as the privileged process "
+            "and why `tshark` shells out to it — the analysis code never needs "
+            "the capture privilege.",
+            "Filtering here is destructive. A capture filter that was slightly "
+            "wrong cannot be widened afterwards; capture broadly and filter at "
+            "analysis time whenever the disk allows it.",
+            "Drops are reported at the end, not during. Check the count before "
+            "treating a capture as complete — a busy link with the default "
+            "buffer loses packets silently.",
+        ],
+    },
+
+    "oledump.py": {
+        "purpose": "List and extract the streams inside an OLE2 file — the "
+                   "container behind legacy Office documents and many malicious "
+                   "attachments.",
+        "when": {
+            "-s": "Select a stream by number, or `a` for all. Everything else "
+                  "operates on the selection, so this usually comes first.",
+            "-d": "Dump the selected stream raw, for carving an embedded "
+                  "payload out to a file.",
+            "-x": "Hex dump, when the stream is binary and you need to see "
+                  "structure.",
+            "-a": "ASCII dump, for a quick look at mostly-text content.",
+            "-A": "ASCII dump with run-length encoding, which collapses long "
+                  "runs of padding that otherwise bury the content.",
+            "-S": "Strings dump — the fastest way to see whether a stream holds "
+                  "anything readable.",
+            "-v": "Decompress VBA. Macro streams are stored compressed, so "
+                  "without this the source looks like binary noise. This is the "
+                  "flag the tool exists for.",
+            "--vbadecompresscorrupt": "Decompress as far as possible and show "
+                                      "it, for a deliberately corrupted macro "
+                                      "stream that defeats a clean decompress.",
+            "--vbadecompressskipattributes": "Skip the attribute preamble and "
+                                             "show only the macro body.",
+            "-r": "Treat the input as a raw stream rather than an OLE file, for "
+                  "a stream already carved out elsewhere.",
+            "-T": "Head and tail only, to glance at a large stream.",
+            "-t": "Apply a translation such as `utf16` when the stream is "
+                  "wide-character text.",
+            "-m": "Print the full manual, which documents the plugin and "
+                  "selection syntax this summary cannot cover.",
+        },
+        "gotchas": [
+            "The stream letters in the listing are the finding: `M` marks a "
+            "macro stream and `O` an embedded object. A document with neither "
+            "is not carrying either, whatever else it contains.",
+            "OOXML files — .docx, .xlsx — are ZIP archives, not OLE2. Unzip "
+            "first and run this against the extracted `vbaProject.bin`.",
+            "Reading a decompressed macro is not analysing it. `olevba` adds "
+            "the keyword and IOC pass; this tool gets you the bytes.",
+        ],
+    },
 }

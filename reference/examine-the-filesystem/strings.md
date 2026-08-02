@@ -48,4 +48,4 @@ All 14 options parsed from the captured help text; 3 reviewed with usage guidanc
 
 ## See also
 
-[`rafind2`](../examine-the-filesystem/rafind2.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`floss`](../malware-triage-static/floss.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)
+[`rafind2`](../examine-the-filesystem/rafind2.md), `grep`, [`xxd`](../examine-the-filesystem/xxd.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`floss`](../malware-triage-static/floss.md), [`base64dump.py`](../malware-triage-static/base64dump.py.md), [`numbers-to-string.py`](../malware-triage-static/numbers-to-string.py.md)

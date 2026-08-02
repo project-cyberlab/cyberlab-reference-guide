@@ -60,11 +60,11 @@ Legend: **bold** = captured from a real binary, page can be written · plain = i
 
 ### Inspect metadata for one file or inode
 
-[**istat**](examine-the-filesystem/istat.md), [**ils**](examine-the-filesystem/ils.md), [**file**](examine-the-filesystem/file.md), [**stat**](examine-the-filesystem/stat.md), `exiftool`, `trid`, `magika`
+[**istat**](examine-the-filesystem/istat.md), [**ils**](examine-the-filesystem/ils.md), [**file**](examine-the-filesystem/file.md), **stat**, `exiftool`, `trid`, `magika`
 
 ### Search raw data for a pattern
 
-[**rafind2**](examine-the-filesystem/rafind2.md), [**strings**](examine-the-filesystem/strings.md), [**grep**](examine-the-filesystem/grep.md), [**xxd**](examine-the-filesystem/xxd.md), [**bulk_extractor**](examine-the-filesystem/bulk_extractor.md), `lightgrep`
+[**rafind2**](examine-the-filesystem/rafind2.md), [**strings**](examine-the-filesystem/strings.md), **grep**, [**xxd**](examine-the-filesystem/xxd.md), [**bulk_extractor**](examine-the-filesystem/bulk_extractor.md), `lightgrep`
 
 
 ## Build the timeline
@@ -231,11 +231,11 @@ Legend: **bold** = captured from a real binary, page can be written · plain = i
 
 ### Fetch and verify external references
 
-[**curl**](report-support/curl.md), [**wget**](report-support/wget.md)
+**curl**, **wget**
 
 ### Inspect files by hand
 
-[**xxd**](examine-the-filesystem/xxd.md), [**ezhexviewer**](report-support/ezhexviewer.md), [**less**](report-support/less.md), `hexdump`
+[**xxd**](examine-the-filesystem/xxd.md), [**ezhexviewer**](report-support/ezhexviewer.md), **less**, `hexdump`
 
 
 ---

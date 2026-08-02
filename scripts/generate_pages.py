@@ -341,6 +341,9 @@ def build_page(cmd: str, meta: dict) -> str:
 def main() -> None:
     written = skipped = preserved = 0
     for cmd, meta in sorted(COV["documented"].items()):
+        if cmd in OUT_OF_SCOPE:
+            skipped += 1
+            continue
         caps = capability_of(cmd)
         if not caps:
             skipped += 1

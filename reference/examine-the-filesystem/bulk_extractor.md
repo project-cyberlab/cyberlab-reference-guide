@@ -122,4 +122,4 @@ All 69 options parsed from the captured help text; 58 reviewed with usage guidan
 
 ## See also
 
-[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md)
+[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), `grep`, [`xxd`](../examine-the-filesystem/xxd.md)
