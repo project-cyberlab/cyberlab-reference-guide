@@ -199,7 +199,13 @@ def fetch_text(url: str, max_chars: int = 40000) -> str:
     text = re.sub(r"&gt;", ">", text)
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n\s*\n+", "\n\n", text)
-    p.write_text(text, encoding="utf-8")
+    # Never cache a failed fetch. forensicswiki.xyz is dead and returns a
+    # 12-character body; caching that meant the URL could never be retried,
+    # and four tools were permanently starved of sources by one dead host
+    # while the diagnostics reported it as "search terms are wrong". An empty
+    # result is a transient condition until proven otherwise.
+    if len(text.strip()) >= 500:
+        p.write_text(text, encoding="utf-8")
     return text[:max_chars]
 
 
@@ -341,7 +347,9 @@ _seed_suite(
 )
 _seed_suite(
     "foremost scalpel",
-    ("https://forensicswiki.xyz/wiki/index.php?title=Foremost",),
+    ("http://foremost.sourceforge.net/",
+     "https://www.kali.org/tools/foremost/",
+     "https://www.kali.org/tools/scalpel/"),
 )
 _seed_suite(
     "bulk_extractor",
@@ -370,9 +378,11 @@ _seed_suite(
      "https://github.com/Yamato-Security/hayabusa"),
 )
 _seed_suite(
-    "dc3dd dcfldd ewfacquire guymager",
-    ("https://forensicswiki.xyz/wiki/index.php?title=Dc3dd",
-     "https://github.com/libyal/libewf/wiki/Tools"),
+    "dd dc3dd dcfldd ewfacquire guymager ewfinfo ewfmount",
+    ("https://github.com/libyal/libewf/wiki/Tools",
+     "https://www.kali.org/tools/dc3dd/",
+     "https://www.kali.org/tools/dcfldd/",
+     "https://www.kali.org/tools/guymager/"),
 )
 _seed_suite(
     "radare2 r2",
@@ -419,20 +429,49 @@ def corpus_for(tool: str, max_pages: int = 10) -> list[dict]:
             pages.append({"url": url, "title": "(canonical)",
                           "trust": 3, "text": text})
 
-    for q in (f'{tool} {anchor} walkthrough example',
-              f'{tool} {anchor} when to use analyst workflow',
-              f'{tool} {anchor} tutorial step by step',
-              f'{tool} {anchor} cheat sheet command'):
-        for hit in search(q, limit=8):
-            if hit["url"] in seen:
-                continue
-            seen.add(hit["url"])
-            text = fetch_text(hit["url"])
-            if text:
-                pages.append({"url": hit["url"], "title": hit["title"],
-                              "trust": hit["trust"], "text": text})
-            if len(pages) >= max_pages:
-                return pages
+    def harvest(queries, cap: int) -> None:
+        for q in queries:
+            for hit in search(q, limit=8):
+                if len(pages) >= cap:
+                    return
+                if hit["url"] in seen:
+                    continue
+                seen.add(hit["url"])
+                text = fetch_text(hit["url"])
+                if text:
+                    pages.append({"url": hit["url"], "title": hit["title"],
+                                  "trust": hit["trust"], "text": text})
+
+    # Wave one is deliberately capped below max_pages. Filling the whole
+    # budget here meant the quality check below never ran and the second wave
+    # never fired -- the corpus was full of reference pages before anything
+    # asked whether they were any good.
+    harvest((f'{tool} {anchor} walkthrough example',
+             f'{tool} {anchor} when to use analyst workflow',
+             f'{tool} {anchor} tutorial step by step',
+             f'{tool} {anchor} cheat sheet command'),
+            cap=max(3, max_pages - 4))
+
+    # Second wave, only when the first found nothing scenario-bearing.
+    #
+    # Imaging tools showed the problem: dd, dc3dd and foremost all retrieved
+    # fine and every passage scored 0-2, because the pages that rank for a
+    # tool's name are reference pages -- a Kali tool page states what a flag
+    # does and never says when you would reach for it. The fix is not more
+    # pages, it is differently-shaped ones, so this wave asks for the genres
+    # that narrate an investigation rather than describe a program.
+    best = 0
+    for pg in pages:
+        for sc, _ in passages_using(pg["text"], tool, limit=3):
+            best = max(best, sc)
+    if best >= 4:
+        return pages
+
+    harvest((f'{tool} case study investigation writeup',
+             f'how to use {tool} real world example {anchor}',
+             f'{tool} lab exercise forensics course',
+             f'using {tool} incident response'),
+            cap=max_pages)
     return pages
 
 

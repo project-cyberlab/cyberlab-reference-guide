@@ -387,6 +387,48 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
     return rec
 
 
+
+def tools_needing_work(limit: int, skip: set[str]) -> list[str]:
+    """Tools with a page and no tool-level guidance yet.
+
+    Ordered by whether the tool sits next to a confusable neighbour, because
+    that is where a junior analyst makes the wrong call -- not by which page
+    has the most blank cells, which put hashcat first purely for having 143
+    options nobody has to choose between.
+    """
+    NEIGHBOURS = [
+        "pdfid", "pdf-parser", "pdf-parser.py", "pdfid.py",
+        "photorec", "testdisk", "foremost", "scalpel", "bulk_extractor",
+        "dd", "dc3dd", "dcfldd", "ewfacquire", "guymager",
+        "oleid", "olevba", "mraptor", "oleobj", "rtfobj", "msodde",
+        "die", "diec", "upx", "binwalk",
+        "fls", "mactime", "icat", "ils", "istat", "mmls", "fsstat",
+        "tsk_recover", "tsk_gettimes", "img_stat",
+        "vol", "volatility3", "log2timeline.py", "psort.py",
+        "tshark", "capinfos", "editcap", "mergecap", "dumpcap",
+        "chainsaw", "hayabusa", "evtxexport", "yara", "clamscan",
+        "ssdeep", "exiftool", "hashcat", "john", "radare2", "frida",
+    ]
+    cov = json.loads((ROOT / "capture" / "coverage.json").read_text(encoding="utf-8"))
+    have = set(cov["documented"])
+    ordered = [t for t in NEIGHBOURS if t in have and t not in skip]
+    if len(ordered) < limit:
+        rest = sorted(t for t in have if t not in set(NEIGHBOURS) and t not in skip)
+        ordered += rest
+    return ordered[:limit]
+
+
+def already_done() -> set[str]:
+    done: set[str] = set()
+    for f in (OUT, REVIEW, MISSES):
+        try:
+            done |= {r["tool"] for r in json.loads(f.read_text(encoding="utf-8"))
+                     if not r.get("flag")}
+        except Exception:
+            pass
+    return done
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tool")
@@ -394,9 +436,17 @@ def main() -> int:
     ap.add_argument("--flags", action="store_true",
                     help="also work this tool's captured flags")
     ap.add_argument("--limit-flags", type=int, default=12)
+    ap.add_argument("--auto", type=int, default=0,
+                    help="pick this many tools that still need work")
+    ap.add_argument("--append", action="store_true",
+                    help="add to existing results instead of replacing")
     a = ap.parse_args()
 
     tools = a.tools or ([a.tool] if a.tool else [])
+    if a.auto:
+        tools = tools_needing_work(a.auto, already_done() if a.append else set())
+        print(f"auto-selected {len(tools)} tools: {', '.join(tools[:10])}"
+              f"{' ...' if len(tools) > 10 else ''}")
     if not tools:
         print("pass --tool or --tools")
         return 1
@@ -422,6 +472,13 @@ def main() -> int:
                 misses.append(rec)
                 print(f"  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}")
 
+    if a.append:
+        for f, new in ((OUT, results), (REVIEW, review), (MISSES, misses)):
+            try:
+                old = json.loads(f.read_text(encoding="utf-8"))
+            except Exception:
+                old = []
+            new[:0] = old
     OUT.write_text(json.dumps(results, indent=2), encoding="utf-8")
     MISSES.write_text(json.dumps(misses, indent=2), encoding="utf-8")
     print(f"\nkept {kept}, not kept {len(misses)}")
