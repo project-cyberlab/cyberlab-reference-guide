@@ -89,6 +89,16 @@ def _split_flags(blob: str) -> list[tuple[str, str]]:
         arg = arg.strip("<>{}").strip()
         if arg.startswith("[") and arg.endswith("]") and "[" not in arg[1:-1]:
             arg = arg[1:-1].strip()
+        # An argument is a placeholder name, not a sentence fragment. These all
+        # shipped: "autostop cond." and "ringbuffer opt." carried the trailing
+        # period of an abbreviation, "[!]list" kept an unbalanced bracket, and
+        # rahash2 -t recorded the word "to" from its description.
+        arg = arg.rstrip(".,;:")
+        if arg.count("[") != arg.count("]"):
+            arg = arg.replace("[", "").replace("]", "")
+        if arg.lower() in ("the", "a", "an", "of", "to", "and", "or", "is",
+                           "for", "with", "in", "on"):
+            arg = ""
         if arg.lower() in ("", "n/a"):
             arg = ""
         out.append((flag, arg))
@@ -222,6 +232,26 @@ def parse_purpose(help_text: str, cmd: str) -> str:
             continue
         # "usage: fls [-adDFlhpruvV] ..." is a synopsis, not a purpose.
         if re.match(rf"^{re.escape(cmd)}\b.*\[-", s):
+            continue
+        # A banner is not a purpose. These all reached the Purpose line of a
+        # published page: "hashcat (v6.2.6) starting in help mode",
+        # "Nping 0.7.93 ( https://nmap.org/nping )", "Rip v.3.0 - CLI RegRipper
+        # tool", "Hayabusa v3.9.0 - Showa Day Release".
+        if re.match(rf"^{re.escape(cmd)}\b[^.]*\bv?\d+\.\d+", s, re.I):
+            continue
+        if re.search(r"\bstarting in \w+ mode\b", s, re.I):
+            continue
+        if re.match(r"^\S+\s+v?\.?\d+\.\d+(\.\d+)?\s*[-(]", s):
+            continue
+        # A bare field label such as "Description:" or "Standard commands",
+        # and continuation fragments such as "(may be repeated)" or
+        # "or:  dd OPTION", are structure from the help text, not prose.
+        if re.match(r"^[A-Z][a-z]+( [a-z]+)?:?\s*$", s):
+            continue
+        if s.startswith(("(", "or:", "See ", "Please")):
+            continue
+        # A URL on its own line is a homepage, not a description.
+        if re.match(r"^\(?https?://", s):
             continue
         if len(s) < 12 or len(s) > 200:
             continue

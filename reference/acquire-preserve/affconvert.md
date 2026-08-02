@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Please, see more info in manpage.
+Convert between AFF and raw images in either direction. The usual reason is a tool that only reads one of them; keep the original, because converting to raw discards the metadata and hashes AFF was carrying.
 
 ## Synopsis
 

@@ -8,7 +8,7 @@
 
 ## Purpose
 
-John the Ripper password cracker, version 1.9.0
+Copyright (c) 1996-2019 by Solar Designer
 
 ## Synopsis
 

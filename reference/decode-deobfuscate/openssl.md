@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Standard commands
+The general-purpose crypto toolkit: inspect certificates, compute digests, encrypt and decrypt, and speak TLS to a service. In analysis it is most often used to read a certificate a sample presented, or to decrypt a blob once the key is known.
 
 ## Options
 

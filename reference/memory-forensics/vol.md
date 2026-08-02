@@ -56,12 +56,12 @@ All 35 options parsed from the captured help text; 9 reviewed with usage guidanc
 | `-u` | URL | Search online for ISF json files |  |
 | `--remote-isf-url` | URL | Search online for ISF json files |  |
 | `--filters` | FILTERS | List of filters to apply to the output (in the form of [+-]columname,pattern[!]) |  |
-| `--hide-columns` | HIDE_COLUMNS ... | Case-insensitive space separated list of prefixes to determine which columns to hide in the output if provided |  |
+| `--hide-columns` | HIDE_COLUMNS  | Case-insensitive space separated list of prefixes to determine which columns to hide in the output if provided |  |
 | `-r` | RENDERER | Determines how to render the output (quick, none, csv, pretty, json, jsonl, arrow, parquet) | Choose the renderer: `csv`/`json` when feeding another tool. |
 | `--renderer` | RENDERER | Determines how to render the output (quick, none, csv, pretty, json, jsonl, arrow, parquet) | Choose the renderer: `csv`/`json` when feeding another tool. |
 | `--single-location` | SINGLE_LOCATION | Specifies a base location on which to stack |  |
-| `--stackers` | STACKERS ... | List of stackers |  |
-| `--single-swap-locations` | SINGLE_SWAP_LOCATIONS ... | Specifies a list of swap layer URIs for use with single-location |  |
+| `--stackers` | STACKERS  | List of stackers |  |
+| `--single-swap-locations` | SINGLE_SWAP_LOCATIONS  | Specifies a list of swap layer URIs for use with single-location |  |
 
 ## Gotchas
 

@@ -21,6 +21,191 @@ ENRICHMENT: dict[str, dict] = {
     # in fenced blocks against the captured help and fails the build on one
     # that does not. The task line matters as much as the command: a bare
     # command is something to copy, a labelled one is something to learn.
+
+    # --- Purposes -----------------------------------------------------------
+    # Written because the parsed ones were unusable. parse_purpose takes the
+    # first plausible line of the help text, and for these tools that line was
+    # a banner, a field label or a synopsis: "Description:", "or:  dd OPTION",
+    # "hashcat (v6.2.6) starting in help mode". Each of these says what the
+    # tool is for to someone who has not met it.
+
+    "AppCompatCacheParser": {
+        "purpose": "Parse the Application Compatibility Cache (Shimcache) out "
+                   "of the SYSTEM registry hive. Windows records an executable "
+                   "here when the shim engine examines it, which happens for "
+                   "programs that were run and for some that were merely "
+                   "present — so it is evidence of existence and interest, not "
+                   "proof of execution.",
+    },
+    "RECmd": {
+        "purpose": "Query and export Windows registry hives from the command "
+                   "line, using batch files of plugin definitions to pull "
+                   "known-interesting keys in one pass. The batch approach is "
+                   "the point: it turns 'check the usual persistence "
+                   "locations' into one reproducible command.",
+    },
+    "SrumECmd": {
+        "purpose": "Parse the System Resource Usage Monitor database, which "
+                   "Windows keeps for roughly 30 days. It records bytes sent "
+                   "and received per application per user — the artifact that "
+                   "answers 'how much data left this host, and which process "
+                   "sent it?' long after the network logs have rolled.",
+    },
+    "dd": {
+        "purpose": "Copy data block by block, without interpreting it. In "
+                   "forensics this is the plain-raw imaging tool: it will read "
+                   "a whole device including unallocated space, but it has no "
+                   "hashing, no error recovery and no metadata. Prefer "
+                   "`dc3dd`, `dcfldd` or `ewfacquire` for evidence; reach for "
+                   "`dd` when you need a byte range and nothing else.",
+    },
+    "xxd": {
+        "purpose": "Produce a hex dump, or reverse one back into binary with "
+                   "`-r`. The reverse direction is what distinguishes it from "
+                   "a viewer: edit the hex, convert it back, and you have "
+                   "carved or patched a file without a hex editor.",
+    },
+    "hashcat": {
+        "purpose": "Recover passwords from hashes using GPU-accelerated "
+                   "guessing — dictionary, rule-mutated, mask and brute-force "
+                   "attacks across several hundred hash types. In DFIR it is "
+                   "usually pointed at credentials recovered from a host to "
+                   "establish what an attacker could have reused elsewhere.",
+    },
+    "nping": {
+        "purpose": "Craft and send arbitrary network packets, and report what "
+                   "comes back. Unlike `ping` it will build TCP, UDP, ICMP or "
+                   "raw ARP probes with chosen flags and payloads, which makes "
+                   "it the tool for asking a firewall or an IDS a precise "
+                   "question about what it permits.",
+    },
+    "regripper": {
+        "purpose": "Run plugins against a Windows registry hive and print what "
+                   "each finds. The plugins encode where the interesting keys "
+                   "live and how to interpret them, so it answers 'what is in "
+                   "this hive that matters?' without you memorising key paths.",
+    },
+    "rip.pl": {
+        "purpose": "The command-line entry point to RegRipper — run one plugin "
+                   "or a whole profile against a registry hive. Scriptable in "
+                   "a way the GUI is not, which is what makes it the form used "
+                   "in a pipeline.",
+    },
+    "hayabusa": {
+        "purpose": "Scan Windows event logs against a bundled Sigma rule set "
+                   "and produce a ranked timeline of what looks like attacker "
+                   "activity. It is built for speed over a whole log directory, "
+                   "so it is the first pass that tells you which hosts and "
+                   "which hours deserve a closer look.",
+    },
+    "tcpflow": {
+        "purpose": "Reassemble TCP streams from a capture and write each "
+                   "conversation to its own file. Where a packet tool shows "
+                   "you frames, this gives you the bytes each side actually "
+                   "sent, in order — which is what you need to read a protocol "
+                   "or recover a transferred file.",
+    },
+    "tcpxtract": {
+        "purpose": "Carve files out of network traffic by signature, without "
+                   "understanding the protocol that carried them. Useful when "
+                   "a transfer is not something a dissector recognises and you "
+                   "only need the payload.",
+    },
+    "sigtool": {
+        "purpose": "Inspect and build ClamAV signature databases: unpack a "
+                   ".cvd, list its signatures, or generate a new one from a "
+                   "sample. The bridge between 'ClamAV detects this' and "
+                   "'here is exactly which signature fired and why'.",
+    },
+    "freshclam": {
+        "purpose": "Update ClamAV's signature databases. Worth knowing in an "
+                   "air-gapped lab, where it will fail silently and leave "
+                   "`clamscan` quietly scanning with signatures that are "
+                   "months old.",
+    },
+    "pcodedmp": {
+        "purpose": "Disassemble the VBA p-code stored alongside macro source "
+                   "in an Office document. The two can disagree: an attacker "
+                   "can leave innocuous source in place while the p-code that "
+                   "actually executes does something else, and this is how you "
+                   "see the difference.",
+    },
+    "pdf-parser.py": {
+        "purpose": "Walk a PDF's object graph and show what each object "
+                   "contains, decoding streams on request. Where `pdfid` "
+                   "counts suspicious keywords, this resolves references and "
+                   "shows the actual content — the step from 'this PDF "
+                   "contains JavaScript' to 'here is the JavaScript'.",
+    },
+    "pdf-parser": {
+        "purpose": "Walk a PDF's object graph and show what each object "
+                   "contains, decoding streams on request. Where `pdfid` "
+                   "counts suspicious keywords, this resolves references and "
+                   "shows the actual content — the step from 'this PDF "
+                   "contains JavaScript' to 'here is the JavaScript'.",
+    },
+    "affinfo": {
+        "purpose": "Print the metadata of an AFF forensic container: acquisition "
+                   "details, hashes and segment layout. The AFF equivalent of "
+                   "`ewfinfo`, and the fastest way to see what an .aff file "
+                   "claims about its own provenance.",
+    },
+    "affcat": {
+        "purpose": "Stream the raw contents of an AFF container to stdout, so "
+                   "tools that cannot read AFF can be fed the image through a "
+                   "pipe rather than a full conversion to raw.",
+    },
+    "affconvert": {
+        "purpose": "Convert between AFF and raw images in either direction. The "
+                   "usual reason is a tool that only reads one of them; keep "
+                   "the original, because converting to raw discards the "
+                   "metadata and hashes AFF was carrying.",
+    },
+    "md5sum": {
+        "purpose": "Compute or verify MD5 checksums. Still everywhere in DFIR "
+                   "for matching files against hash sets, but MD5 is broken "
+                   "for collisions — use it to say two files are the same, "
+                   "never to prove a file is what it claims.",
+    },
+    "openssl": {
+        "purpose": "The general-purpose crypto toolkit: inspect certificates, "
+                   "compute digests, encrypt and decrypt, and speak TLS to a "
+                   "service. In analysis it is most often used to read a "
+                   "certificate a sample presented, or to decrypt a blob once "
+                   "the key is known.",
+    },
+    "regipy-dump": {
+        "purpose": "Dump a registry hive to JSON with regipy, so the contents "
+                   "can be searched, diffed or fed into other tooling rather "
+                   "than read key by key.",
+    },
+    "regipy-plugins-run": {
+        "purpose": "Run regipy's plugins over a hive and emit structured "
+                   "results. The Python counterpart to RegRipper, and the "
+                   "easier one to embed in a pipeline because the output is "
+                   "JSON rather than formatted text.",
+    },
+    "regipy-diff": {
+        "purpose": "Diff two registry hives and report what changed between "
+                   "them. The artifact-level version of a before-and-after "
+                   "detonation: snapshot, run the sample, snapshot again, and "
+                   "read the delta.",
+    },
+    "regipy-parse-header": {
+        "purpose": "Print a hive's header — sequence numbers, timestamp and "
+                   "whether it was cleanly unmounted. A dirty hive means "
+                   "transaction logs still hold recent changes, so this is the "
+                   "check that tells you whether you are reading the whole "
+                   "story.",
+    },
+    "hydra": {
+        "purpose": "Test credentials against a network service across many "
+                   "protocols. In an authorised engagement it answers whether "
+                   "a recovered password works elsewhere; it is loud, it locks "
+                   "accounts, and it belongs nowhere near production without "
+                   "written permission.",
+    },
+
     "mmls": {
         "purpose": "Display the partition layout of a disk image, including "
                    "unallocated gaps.",

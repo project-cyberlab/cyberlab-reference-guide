@@ -8,7 +8,7 @@
 
 ## Purpose
 
-_TODO: one-line imperative purpose._
+Stream the raw contents of an AFF container to stdout, so tools that cannot read AFF can be fed the image through a pipe rather than a full conversion to raw.
 
 ## Synopsis
 

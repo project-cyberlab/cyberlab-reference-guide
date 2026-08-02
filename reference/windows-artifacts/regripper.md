@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Rip v.3.0 - CLI RegRipper tool
+Run plugins against a Windows registry hive and print what each finds. The plugins encode where the interesting keys live and how to interpret them, so it answers 'what is in this hive that matters?' without you memorising key paths.
 
 ## Options
 

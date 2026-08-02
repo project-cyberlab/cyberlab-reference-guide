@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Print or check MD5 (128-bit) checksums.
+Compute or verify MD5 checksums. Still everywhere in DFIR for matching files against hash sets, but MD5 is broken for collisions — use it to say two files are the same, never to prove a file is what it claims.
 
 ## Synopsis
 

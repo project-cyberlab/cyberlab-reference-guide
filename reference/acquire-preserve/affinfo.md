@@ -8,7 +8,7 @@
 
 ## Purpose
 
-(may be repeated)
+Print the metadata of an AFF forensic container: acquisition details, hashes and segment layout. The AFF equivalent of [`ewfinfo`](ewfinfo.md), and the fastest way to see what an .aff file claims about its own provenance.
 
 ## Synopsis
 

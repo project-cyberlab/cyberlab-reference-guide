@@ -56,12 +56,12 @@ All 35 options parsed from the captured help text; 33 reviewed with usage guidan
 | `-u` | URL | Search online for ISF json files | Point at an alternative ISF repository. |
 | `--remote-isf-url` | URL | Search online for ISF json files | Point at an alternative ISF repository. |
 | `--filters` | FILTERS | List of filters to apply to the output (in the form of [+-]columname,pattern[!]) | Filter rows as `[+-]column,pattern`, so a plugin that returns thousands of rows can be narrowed without a second pass. |
-| `--hide-columns` | HIDE_COLUMNS ... | Case-insensitive space separated list of prefixes to determine which columns to hide in the output if provided | Drop columns from the output to keep a wide table readable. |
+| `--hide-columns` | HIDE_COLUMNS  | Case-insensitive space separated list of prefixes to determine which columns to hide in the output if provided | Drop columns from the output to keep a wide table readable. |
 | `-r` | RENDERER | Determines how to render the output (quick, none, csv, pretty, json, jsonl, arrow, parquet) | Output renderer. `csv` or `jsonl` when the result feeds another tool; `pretty` is for reading, not for parsing. |
 | `--renderer` | RENDERER | Determines how to render the output (quick, none, csv, pretty, json, jsonl, arrow, parquet) | Output renderer. `csv` or `jsonl` when the result feeds another tool; `pretty` is for reading. |
 | `--single-location` | SINGLE_LOCATION | Specifies a base location on which to stack | The image URI, when it is not a plain local file (`-f` is shorthand for this). |
-| `--stackers` | STACKERS ... | List of stackers | Control the layer stackers used to interpret the image. |
-| `--single-swap-locations` | SINGLE_SWAP_LOCATIONS ... | Specifies a list of swap layer URIs for use with single-location | Supply swap files alongside the image, so paged-out memory can be resolved. |
+| `--stackers` | STACKERS  | List of stackers | Control the layer stackers used to interpret the image. |
+| `--single-swap-locations` | SINGLE_SWAP_LOCATIONS  | Specifies a list of swap layer URIs for use with single-location | Supply swap files alongside the image, so paged-out memory can be resolved. |
 
 ## Gotchas
 

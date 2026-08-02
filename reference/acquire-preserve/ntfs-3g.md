@@ -8,7 +8,7 @@
 
 ## Purpose
 
-ntfs-3g 2022.10.3 integrated FUSE 28 - Third Generation NTFS Driver
+Configuration type 7, XATTRS are on, POSIX ACLS are on
 
 ## Synopsis
 

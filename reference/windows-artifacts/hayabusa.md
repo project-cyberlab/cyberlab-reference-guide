@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Hayabusa v3.9.0 - Showa Day Release
+Scan Windows event logs against a bundled Sigma rule set and produce a ranked timeline of what looks like attacker activity. It is built for speed over a whole log directory, so it is the first pass that tells you which hosts and which hours deserve a closer look.
 
 ## Synopsis
 

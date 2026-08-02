@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Description:
+Parse the System Resource Usage Monitor database, which Windows keeps for roughly 30 days. It records bytes sent and received per application per user — the artifact that answers 'how much data left this host, and which process sent it?' long after the network logs have rolled.
 
 ## Synopsis
 

@@ -89,6 +89,23 @@ def audit_pages() -> list[str]:
 
         if re.search(r"\*\*Version:\*\*\s*\S{45,}", text):
             out.append(f"VERSION-LONG {rel}: version string over 45 chars")
+
+        # The Argument column holds a placeholder name. A sentence fragment,
+        # an unbalanced bracket or a stray English word means the flag parser
+        # grabbed part of the description instead.
+        for m in re.finditer(r"^\|\s*`([^`]+)`\s*\|\s*([^|]*?)\s*\|", text, re.M):
+            arg = m.group(2).strip()
+            if not arg or arg == "—":
+                continue
+            if arg.count("[") != arg.count("]") or arg.count("<") != arg.count(">"):
+                out.append(f"ARG-BRACKETS {rel}: `{m.group(1)}` -> {arg[:30]}")
+            elif arg.endswith((".", ",", ";", ":")):
+                out.append(f"ARG-PUNCT {rel}: `{m.group(1)}` -> {arg[:30]}")
+            elif arg.lower() in ("the", "a", "an", "of", "to", "and", "or",
+                                 "is", "for", "with", "in", "on"):
+                out.append(f"ARG-STRAY {rel}: `{m.group(1)}` -> {arg[:30]}")
+            elif len(arg) > 30:
+                out.append(f"ARG-LONG {rel}: `{m.group(1)}` -> {arg[:30]}")
     return out
 
 

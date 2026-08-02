@@ -8,7 +8,7 @@
 
 ## Purpose
 
-identified for some reason
+Dump a registry hive to JSON with regipy, so the contents can be searched, diffed or fed into other tooling rather than read key by key.
 
 ## Synopsis
 

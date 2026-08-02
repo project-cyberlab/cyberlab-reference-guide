@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Rip v.3.0 - CLI RegRipper tool
+The command-line entry point to RegRipper — run one plugin or a whole profile against a registry hive. Scriptable in a way the GUI is not, which is what makes it the form used in a pipeline.
 
 ## Options
 

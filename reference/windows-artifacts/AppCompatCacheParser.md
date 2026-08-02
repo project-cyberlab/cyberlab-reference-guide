@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Description:
+Parse the Application Compatibility Cache (Shimcache) out of the SYSTEM registry hive. Windows records an executable here when the shim engine examines it, which happens for programs that were run and for some that were merely present — so it is evidence of existence and interest, not proof of execution.
 
 ## Synopsis
 

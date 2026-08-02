@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Nping 0.7.93 ( https://nmap.org/nping )
+Craft and send arbitrary network packets, and report what comes back. Unlike `ping` it will build TCP, UDP, ICMP or raw ARP probes with chosen flags and payloads, which makes it the tool for asking a firewall or an IDS a precise question about what it permits.
 
 ## Synopsis
 
@@ -64,7 +64,7 @@ All 85 options parsed from the captured help text. The final column is filled in
 | `--evil` | — | Set Reserved / Evil flag. |  |
 | `--ttl` | hops | Set time to live [0-255]. |  |
 | `--badsum-ip` | — | Use a random invalid checksum. |  |
-| `--ip-options` | S\|R [route]\|L [route]\|T\|U ... | Set IP options |  |
+| `--ip-options` | S\|R [route]\|L [route]\|T\|U  | Set IP options |  |
 | `--mtu` | size | Set MTU. Packets get fragmented if MTU is small enough. |  |
 | `-6` | — | Use IP version 6. |  |
 | `--IPv6` | — | Use IP version 6. |  |

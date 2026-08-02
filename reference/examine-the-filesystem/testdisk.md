@@ -8,7 +8,7 @@
 
 ## Purpose
 
-TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
 
 ## Synopsis
 

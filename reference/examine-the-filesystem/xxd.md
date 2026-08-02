@@ -8,7 +8,7 @@
 
 ## Purpose
 
-xxd [options] [infile [outfile]]
+Produce a hex dump, or reverse one back into binary with `-r`. The reverse direction is what distinguishes it from a viewer: edit the hex, convert it back, and you have carved or patched a file without a hex editor.
 
 ## Synopsis
 

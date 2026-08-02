@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Scan files for malware signatures.
+Inspect and build ClamAV signature databases: unpack a .cvd, list its signatures, or generate a new one from a sample. The bridge between 'ClamAV detects this' and 'here is exactly which signature fired and why'.
 
 ## Options
 

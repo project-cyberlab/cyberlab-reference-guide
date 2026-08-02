@@ -8,7 +8,7 @@
 
 ## Purpose
 
-_TODO: one-line imperative purpose._
+Diff two registry hives and report what changed between them. The artifact-level version of a before-and-after detonation: snapshot, run the sample, snapshot again, and read the delta.
 
 ## Synopsis
 

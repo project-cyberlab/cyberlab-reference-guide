@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Description:
+Query and export Windows registry hives from the command line, using batch files of plugin definitions to pull known-interesting keys in one pass. The batch approach is the point: it turns 'check the usual persistence locations' into one reproducible command.
 
 ## Synopsis
 

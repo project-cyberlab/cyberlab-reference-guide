@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Extract files from network traffic.
+Carve files out of network traffic by signature, without understanding the protocol that carried them. Useful when a transfer is not something a dissector recognises and you only need the payload.
 
 ## Synopsis
 

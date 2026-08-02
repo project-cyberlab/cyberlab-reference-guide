@@ -8,7 +8,7 @@
 
 ## Purpose
 
-identified for some reason
+Run regipy's plugins over a hive and emit structured results. The Python counterpart to RegRipper, and the easier one to embed in a pipeline because the output is JSON rather than formatted text.
 
 ## Synopsis
 

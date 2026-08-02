@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Analyze the flow of network traffic.
+Reassemble TCP streams from a capture and write each conversation to its own file. Where a packet tool shows you frames, this gives you the bytes each side actually sent, in order — which is what you need to read a protocol or recover a transferred file.
 
 ## Synopsis
 

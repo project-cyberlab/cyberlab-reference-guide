@@ -8,7 +8,7 @@
 
 ## Purpose
 
-or:  dd OPTION
+Copy data block by block, without interpreting it. In forensics this is the plain-raw imaging tool: it will read a whole device including unallocated space, but it has no hashing, no error recovery and no metadata. Prefer [`dc3dd`](dc3dd.md), [`dcfldd`](dcfldd.md) or [`ewfacquire`](ewfacquire.md) for evidence; reach for `dd` when you need a byte range and nothing else.
 
 ## Synopsis
 

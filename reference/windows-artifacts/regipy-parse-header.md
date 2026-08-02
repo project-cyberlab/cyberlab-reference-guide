@@ -8,7 +8,7 @@
 
 ## Purpose
 
-_TODO: one-line imperative purpose._
+Print a hive's header — sequence numbers, timestamp and whether it was cleanly unmounted. A dirty hive means transaction logs still hold recent changes, so this is the check that tells you whether you are reading the whole story.
 
 ## Synopsis
 

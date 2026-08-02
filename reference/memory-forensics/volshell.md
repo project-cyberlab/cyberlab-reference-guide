@@ -60,8 +60,8 @@ All 38 options parsed from the captured help text; 21 reviewed with usage guidan
 | `-m` | — | Run a Mac volshell | Treat the image as macOS. |
 | `--mac` | — | Run a Mac volshell | Treat the image as macOS. |
 | `--single-location` | SINGLE_LOCATION | Specifies a base location on which to stack |  |
-| `--stackers` | STACKERS ... | List of stackers |  |
-| `--single-swap-locations` | SINGLE_SWAP_LOCATIONS ... | Specifies a list of swap layer URIs for use with single-location |  |
+| `--stackers` | STACKERS  | List of stackers |  |
+| `--single-swap-locations` | SINGLE_SWAP_LOCATIONS  | Specifies a list of swap layer URIs for use with single-location |  |
 | `--script` | SCRIPT | File to load and execute at start | Run a Python script against the image and drop into the shell afterwards — the repeatable form of an interactive session. |
 | `--script-only` | — | Exit volshell after the script specified in --script completes | Run the script and exit. This is how an exploratory session becomes an automated one. |
 | `--pid` | PID | Process ID | Enter with a process context already selected, so `cc()` is not the first thing you type. |

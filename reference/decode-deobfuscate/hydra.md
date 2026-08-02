@@ -8,7 +8,7 @@
 
 ## Purpose
 
-_TODO: one-line imperative purpose._
+Test credentials against a network service across many protocols. In an authorised engagement it answers whether a recovered password works elsewhere; it is loud, it locks accounts, and it belongs nowhere near production without written permission.
 
 ## Options
 

@@ -41,7 +41,7 @@ All 23 options parsed from the captured help text. The final column is filled in
 | `-r` | — | output radare commands |  |
 | `-R` | — | output radare2 sdb commands (k file.<algo>=...) |  |
 | `-s` | string | hash this string instead of files |  |
-| `-t` | to | stop hashing at given address |  |
+| `-t` | — | stop hashing at given address |  |
 | `-x` | hexstr | hash this hexpair string instead of files |  |
 | `-X` | — | output in hexpairs instead of binary/plain |  |
 | `-v` | — | show version information |  |

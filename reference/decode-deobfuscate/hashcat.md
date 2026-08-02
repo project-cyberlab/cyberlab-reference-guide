@@ -8,7 +8,7 @@
 
 ## Purpose
 
-hashcat (v6.2.6) starting in help mode
+Recover passwords from hashes using GPU-accelerated guessing — dictionary, rule-mutated, mask and brute-force attacks across several hundred hash types. In DFIR it is usually pointed at credentials recovered from a host to establish what an attacker could have reused elsewhere.
 
 ## Synopsis
 

@@ -22,9 +22,9 @@ All 66 options parsed from the captured help text; 24 reviewed with usage guidan
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `--exclude` | host1[,host2][,host3],... | Exclude hosts/networks | Skip these hosts. The safety flag: use it for anything fragile before starting a range scan. |
+| `--exclude` | host1[,host2][,host3] | Exclude hosts/networks | Skip these hosts. The safety flag: use it for anything fragile before starting a range scan. |
 | `--excludefile` | exclude_file | Exclude list from file | Skip the hosts listed in a file. |
-| `--dns-servers` | serv1[,serv2],... | Specify custom DNS servers |  |
+| `--dns-servers` | serv1[,serv2] | Specify custom DNS servers |  |
 | `--system-dns` | — | Use OS's DNS resolver |  |
 | `--traceroute` | — | Trace hop path to each host | Trace the path to each host. |
 | `--scanflags` | flags | Customize TCP scan flags |  |
@@ -58,10 +58,10 @@ All 66 options parsed from the captured help text; 24 reviewed with usage guidan
 | `--max-rate` | number | Send packets no faster than <number> per second |  |
 | `-f` | — | fragment packets (optionally w/given MTU) |  |
 | `--mtu` | val | fragment packets (optionally w/given MTU) |  |
-| `-D` | decoy1,decoy2[,ME],... | Cloak a scan with decoys | Decoy scan. |
+| `-D` | decoy1,decoy2[,ME] | Cloak a scan with decoys | Decoy scan. |
 | `-S` | IP_Address | Spoof source address | Spoof the source address. |
 | `-e` | iface | Use specified interface | Choose the interface to scan from. |
-| `--proxies` | url1,[url2],... | Relay connections through HTTP/SOCKS4 proxies |  |
+| `--proxies` | url1,[url2] | Relay connections through HTTP/SOCKS4 proxies |  |
 | `--data` | hex string | Append a custom payload to sent packets |  |
 | `--data-string` | string | Append a custom ASCII string to sent packets |  |
 | `--data-length` | num | Append random data to sent packets |  |
