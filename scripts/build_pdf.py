@@ -10,6 +10,7 @@ Pipeline: markdown -> one self-contained HTML (print CSS + generated contents)
 from __future__ import annotations
 import html
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -426,6 +427,13 @@ def main() -> int:
 
     n = add_outline(pdf_path, tool_pages)
     print(f"added {n} PDF bookmarks")
+
+    # build/ is gitignored, so a PDF left only there never reaches anyone who
+    # clones or downloads the repo. Publish the finished artifact to the repo
+    # root, which is the copy people actually open.
+    published = ROOT / "CyberLab-Reference-Guide.pdf"
+    shutil.copyfile(pdf_path, published)
+    print(f"published {published.name} ({published.stat().st_size:,} bytes)")
     return 0
 
 

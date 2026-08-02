@@ -626,4 +626,136 @@ ENRICHMENT: dict[str, dict] = {
             "compression routinely hides a 2 TB image inside 700 GB.",
         ],
     },
+
+    # --- The Sleuth Kit, remainder -----------------------------------------
+    # fls, icat, istat and mmls are already curated. These four complete the
+    # set. Every TSK tool shares -f/-i/-b/-o/-P/-B/-v/-V, so the shared flags
+    # are explained the same way on each page rather than differently, which
+    # is what a reader flipping between them needs.
+
+    "fsstat": {
+        "purpose": "Report a filesystem's layout and parameters: type, block "
+                   "size, inode range, and the geometry every other TSK tool "
+                   "needs.",
+        "when": {
+            "-t": "Print only the filesystem type. The scriptable form when all "
+                  "you need is a yes/no on what this volume is.",
+            "-f": "Force the filesystem type when detection is wrong or the "
+                  "superblock is damaged (`-f list` shows the options).",
+            "-o": "Offset, in **sectors**, of the filesystem inside the image. "
+                  "Take it from `mmls`; this is the flag that ties the two "
+                  "tools together.",
+            "-i": "Set the image format for non-raw evidence such as E01 or AFF.",
+            "-b": "Device sector size. Needed on 4Kn drives, where the 512-byte "
+                  "default silently computes every offset wrong.",
+            "-P": "Pool type, for APFS or LVM containers that hold the volume.",
+            "-B": "Starting block within a pool volume.",
+            "-k": "Password for an encrypted volume.",
+            "-v": "Verbose diagnostics to stderr, useful when detection fails.",
+        },
+        "gotchas": [
+            "Run this first. Block size and inode range from `fsstat` are what "
+            "make `blkls`, `icat` and `ils` output interpretable — starting "
+            "anywhere else means guessing at the numbers they print.",
+            "If it reports the wrong type or refuses the volume, the `-o` offset "
+            "is wrong far more often than the image is corrupt.",
+        ],
+    },
+
+    "ffind": {
+        "purpose": "Find the file name that points at a given inode — the "
+                   "reverse of a directory lookup.",
+        "when": {
+            "-a": "Show every name for the inode. Hard-linked files have more "
+                  "than one, and stopping at the first hides that.",
+            "-d": "Deleted names only. The direct answer to \"what was this "
+                  "inode called before it was removed?\"",
+            "-u": "Undeleted names only, when a recycled inode is returning "
+                  "stale hits.",
+            "-f": "Force the filesystem type (`-f list` shows the options).",
+            "-o": "Offset, in sectors, from `mmls`.",
+            "-i": "Image format for non-raw evidence such as E01 or AFF.",
+            "-b": "Device sector size; required on 4Kn drives.",
+            "-P": "Pool type, for APFS or LVM containers.",
+            "-B": "Starting block within a pool volume.",
+            "-v": "Verbose diagnostics to stderr.",
+        },
+        "gotchas": [
+            "Inodes are reused. A name returned for a deleted inode may belong "
+            "to whatever claimed it next, not to the file you are chasing — "
+            "corroborate with `istat` timestamps before naming it in a report.",
+            "This is the tool for the question `icat` provokes: you carved data "
+            "out by inode and now need to say what it was called.",
+        ],
+    },
+
+    "blkls": {
+        "purpose": "Extract filesystem blocks — by default the unallocated "
+                   "ones, which is the input a carver wants.",
+        "when": {
+            "-A": "Unallocated blocks. The default and the usual intent: pipe "
+                  "this into `foremost` or `scalpel` so the carver reads only "
+                  "free space instead of the whole image.",
+            "-a": "Allocated blocks only — the inverse, when isolating live data.",
+            "-e": "Every block, including filesystem metadata.",
+            "-s": "Slack space only: the tail of the last block of each file, "
+                  "where fragments of previous contents survive. A distinct "
+                  "hunt from carving free space, and it ignores the other flags.",
+            "-l": "List block details rather than emitting their contents.",
+            "-f": "Force the filesystem type (`-f list` shows the options).",
+            "-o": "Offset, in sectors, from `mmls`.",
+            "-i": "Image format for non-raw evidence such as E01 or AFF.",
+            "-b": "Device sector size; required on 4Kn drives.",
+            "-P": "Pool type, for APFS or LVM containers.",
+            "-B": "Starting block within a pool volume.",
+            "-v": "Verbose diagnostics to stderr.",
+        },
+        "gotchas": [
+            "Output goes to stdout and is the size of the free space — redirect "
+            "it to a file on a volume that can hold it, not into a pager.",
+            "Block offsets in the extracted stream do **not** match offsets in "
+            "the original image, because only unallocated blocks were written. "
+            "Use `-l` if you need to map a hit back to its real location.",
+        ],
+    },
+
+    "ils": {
+        "purpose": "List inode metadata, including inodes that no longer have a "
+                   "name pointing at them.",
+        "when": {
+            "-p": "Orphan inodes — allocated content with no directory entry. "
+                  "Files that were unlinked while still open, and a standard "
+                  "hiding place worth checking explicitly.",
+            "-O": "Unallocated inodes that were still open at the time of "
+                  "imaging (UFS/ExtX). The same trick, caught mid-deletion.",
+            "-e": "Every inode, allocated or not.",
+            "-a": "Allocated inodes only.",
+            "-A": "Unallocated inodes only — deleted file metadata that often "
+                  "survives after the name is gone.",
+            "-l": "Linked inodes (a name still points at them).",
+            "-L": "Unlinked inodes (nothing does).",
+            "-z": "Unused inodes.",
+            "-Z": "Used inodes.",
+            "-m": "mactime format — the form `mactime` consumes to build a "
+                  "timeline. This is how deleted-file metadata reaches the "
+                  "timeline at all.",
+            "-s": "Correct for a known clock skew on the source machine, in "
+                  "seconds, so times line up with other evidence.",
+            "-f": "Force the filesystem type (`-f list` shows the options).",
+            "-o": "Offset, in sectors, from `mmls`.",
+            "-i": "Image format for non-raw evidence such as E01 or AFF.",
+            "-b": "Device sector size; required on 4Kn drives.",
+            "-P": "Pool type, for APFS or LVM containers.",
+            "-B": "Starting block within a pool volume.",
+            "-v": "Verbose diagnostics to stderr.",
+        },
+        "gotchas": [
+            "`ils` finds metadata with no name; `ffind` turns an inode back into "
+            "a name; `icat` extracts its content. Deleted-file work is usually "
+            "all three in sequence.",
+            "An inode surviving does not mean its data did. The blocks it points "
+            "at may already be reallocated, so `icat` can return another file's "
+            "contents entirely.",
+        ],
+    },
 }
