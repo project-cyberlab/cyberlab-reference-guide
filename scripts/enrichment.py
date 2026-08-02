@@ -892,4 +892,182 @@ ENRICHMENT: dict[str, dict] = {
             "recent, which is normally the part you care about.",
         ],
     },
+
+    # --- Memory and bulk data ----------------------------------------------
+    # volatility3 and bulk_extractor both list short and long forms as separate
+    # rows, so both spellings are annotated. Saying "see -x" on the long form
+    # would leave whichever one the reader looked up first unexplained.
+
+    "volatility3": {
+        "purpose": "Analyse a memory image. These are the framework-wide "
+                   "options; each plugin adds its own, shown by "
+                   "`volatility3 <plugin> --help`.",
+        "when": {
+            "-f": "The memory image. Almost every invocation starts here.",
+            "--file": "The memory image. Almost every invocation starts here.",
+            "-r": "Output renderer. `csv` or `jsonl` when the result feeds "
+                  "another tool; `pretty` is for reading, not for parsing.",
+            "--renderer": "Output renderer. `csv` or `jsonl` when the result "
+                          "feeds another tool; `pretty` is for reading.",
+            "-o": "Directory for files the plugin writes — dumped processes, "
+                  "extracted DLLs. Required before any `--dump` plugin option "
+                  "does anything useful.",
+            "--output-dir": "Directory for files the plugin writes. Required "
+                            "before any `--dump` plugin option is useful.",
+            "-s": "Where to find symbol tables. The usual fix when a Linux or "
+                  "macOS image will not resolve: the ISF for that exact kernel "
+                  "has to be reachable.",
+            "--symbol-dirs": "Where to find symbol tables — the usual fix when a "
+                             "Linux or macOS image will not resolve.",
+            "--offline": "Never fetch symbols online. Use it on an analysis host "
+                         "that must not touch the network, and expect failures "
+                         "unless the ISFs are already local.",
+            "-u": "Point at an alternative ISF repository.",
+            "--remote-isf-url": "Point at an alternative ISF repository.",
+            "--clear-cache": "Drop cached items. First thing to try when results "
+                             "look stale or an image was replaced in place.",
+            "--cache-path": "Move the cache somewhere with room; it grows.",
+            "--parallelism": "Enable process or thread parallelism. Off by "
+                             "default, and worth turning on for a long scan.",
+            "--filters": "Filter rows as `[+-]column,pattern`, so a plugin that "
+                         "returns thousands of rows can be narrowed without a "
+                         "second pass.",
+            "--hide-columns": "Drop columns from the output to keep a wide table "
+                              "readable.",
+            "-p": "Additional plugin directories, for plugins outside the tree.",
+            "--plugin-dirs": "Additional plugin directories.",
+            "-l": "Also write output to a log file.",
+            "--log": "Also write output to a log file.",
+            "-q": "Suppress progress feedback, for scripted runs.",
+            "--quiet": "Suppress progress feedback, for scripted runs.",
+            "-v": "More verbose output; repeat for more.",
+            "--verbosity": "More verbose output; repeat for more.",
+            "-c": "Load options from a JSON config.",
+            "--config": "Load options from a JSON config.",
+            "-e": "Override a single configuration setting.",
+            "--extend": "Override a single configuration setting.",
+            "--write-config": "Write the resolved configuration to config.json — "
+                              "useful for making a complex run reproducible.",
+            "--save-config": "Write the resolved configuration to a named file.",
+            "--single-location": "The image URI, when it is not a plain local "
+                                 "file (`-f` is shorthand for this).",
+            "--single-swap-locations": "Supply swap files alongside the image, so "
+                                       "paged-out memory can be resolved.",
+            "--stackers": "Control the layer stackers used to interpret the image.",
+        },
+        "gotchas": [
+            "Symbols are the usual failure, not the image. Windows profiles are "
+            "generated automatically, but Linux and macOS need an ISF matching "
+            "the exact kernel build — same version is not enough.",
+            "Volatility 3 dropped the Volatility 2 profile system entirely, so "
+            "`--profile` from older notes and blog posts does not exist here.",
+            "It has pinned CPU indefinitely on a malformed image before. Run long "
+            "analyses under a timeout rather than assuming progress.",
+        ],
+    },
+
+    "bulk_extractor": {
+        "purpose": "Scan an image for features — email addresses, URLs, credit "
+                   "card numbers, EXIF, keys — without parsing the filesystem "
+                   "at all, so deleted and unallocated content is included.",
+        "when": {
+            "-o": "Output directory. Required, and it must not already exist "
+                  "unless you also pass `-Z`.",
+            "--outdir": "Output directory. Required.",
+            "-E": "Run exactly one scanner and disable the rest. The fastest way "
+                  "to answer a single question instead of a full sweep.",
+            "--enable_exclusive": "Run exactly one scanner and disable the rest.",
+            "-e": "Enable a scanner that is off by default, repeatable.",
+            "--enable": "Enable a scanner that is off by default, repeatable.",
+            "-x": "Disable a scanner, repeatable. Turning off the noisy ones is "
+                  "usually a bigger speed win than adding threads.",
+            "--disable": "Disable a scanner, repeatable.",
+            "-f": "Search for a regex pattern, repeatable.",
+            "--find": "Search for a regex pattern, repeatable.",
+            "-F": "Read search patterns from a file — the practical form when "
+                  "hunting a list of indicators.",
+            "--find_file": "Read search patterns from a file.",
+            "--find-case-sensitive": "Make `-f`/`-F` case-sensitive; they are not "
+                                     "by default.",
+            "-w": "Stop list: features to suppress. This is how you cut the "
+                  "known-good noise that otherwise buries the findings.",
+            "--stop_list": "Stop list of features to suppress.",
+            "-r": "Alert list: features to flag prominently — the inverse of a "
+                  "stop list, for known-bad indicators.",
+            "--alert_list": "Alert list of features to flag prominently.",
+            "-j": "Thread count. Defaults to the core count; lower it when the "
+                  "scan is competing with other work.",
+            "--threads": "Thread count.",
+            "-J": "Single-threaded. Slow, but the first thing to try when a scan "
+                  "crashes or results look non-deterministic.",
+            "--no_threads": "Single-threaded — use when debugging a crash.",
+            "-s": "Random sampling as `frac[:passes]`. Scans a fraction of a huge "
+                  "image to judge whether a full run is worth the hours.",
+            "--sampling": "Random sampling as `frac[:passes]`.",
+            "-Y": "Restrict the scan to a byte range, when `mmls` already told "
+                  "you which region matters.",
+            "--scan": "Restrict the scan to a `<start>[-end]` byte range.",
+            "-R": "Treat the input as a directory and recurse it, rather than as "
+                  "a disk image.",
+            "--recurse": "Treat the input as a directory and recurse it.",
+            "-C": "Bytes of context stored around each hit. Raise it when a bare "
+                  "match is not enough to judge relevance.",
+            "--context_window": "Bytes of context stored around each hit.",
+            "-M": "Maximum recursion depth into nested containers. Lower it if a "
+                  "zip bomb or deeply nested archive stalls the scan.",
+            "--max_depth": "Maximum recursion depth into nested containers.",
+            "-Z": "Wipe the output directory first. Convenient for reruns and "
+                  "destructive by definition — never point it at a directory "
+                  "holding results you still need.",
+            "--zap": "Wipe the output directory first — destructive.",
+            "-q": "Suppress status and performance output.",
+            "--quit": "Suppress status and performance output.",
+            "-H": "Report what each scanner does. Worth reading once; the scanner "
+                  "set is the tool.",
+            "--info_scanners": "Report what each scanner does.",
+            "-S": "Set a scanner option as `name=value`, repeatable.",
+            "--set": "Set a scanner option as `name=value`, repeatable.",
+            "-P": "Additional directories to load scanner plugins from.",
+            "--scanner_dir": "Additional directories to load scanner plugins from.",
+            "-A": "Add an offset to reported feature locations — use it when "
+                  "scanning a carved fragment so offsets still refer to the "
+                  "original image.",
+            "--offset_add": "Add an offset to reported feature locations.",
+            "-b": "Prepend a banner file to every feature file, e.g. a case "
+                  "header.",
+            "--banner_file": "Prepend a banner file to every feature file.",
+            "-G": "Page size read per pass.",
+            "--pagesize": "Page size read per pass.",
+            "-g": "Margin carried between pages, so a feature spanning a page "
+                  "boundary is still found.",
+            "--marginsize": "Margin carried between pages, so features spanning a "
+                            "page boundary are still found.",
+            "-z": "Start at a given page number, to resume a long scan.",
+            "--page_start": "Start at a given page number.",
+            "-p": "Print the value at a path, with optional length and hex or raw "
+                  "output — inspection rather than scanning.",
+            "--path": "Print the value at a path, for inspection rather than "
+                      "scanning.",
+            "--log-level": "Diagnostic log level.",
+            "--log-file": "Diagnostic log file; defaults inside the output "
+                          "directory.",
+            "-d": "Debug-level diagnostic logging.",
+            "--max_minute_wait": "How long to wait for all data to be read before "
+                                 "giving up — raise it for slow or failing media.",
+            "--max_bad_alloc_errors": "Allocation failures tolerated before "
+                                      "aborting.",
+        },
+        "gotchas": [
+            "It ignores the filesystem completely. That is the point — it finds "
+            "content in unallocated space and slack that a filesystem-aware tool "
+            "cannot reach — but it also means a hit carries no filename and no "
+            "timestamp. Map the offset back with `ffind`/`istat` before naming "
+            "a file in a report.",
+            "Feature files are raw pattern matches, not verified findings. The "
+            "credit-card scanner in particular flags anything passing a Luhn "
+            "check, which includes plenty of ordinary numbers.",
+            "Output is large and the scan is long. Sample with `-s` on a "
+            "multi-terabyte image before committing to a full pass.",
+        ],
+    },
 }
