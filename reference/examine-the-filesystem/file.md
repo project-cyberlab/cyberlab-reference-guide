@@ -2,7 +2,7 @@
 # file
 
 **Kit:** REMnux · FLARE-VM · SIFT Workstation  **Capability:** Inspect metadata for one file or inode; Identify what a file actually is  **Version:** file-5.44
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/file.help.txt)  **Docs:** <https://github.com/file/file>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/file.help.txt)  **Docs:** <https://github.com/file/file>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

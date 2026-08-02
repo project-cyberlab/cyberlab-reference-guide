@@ -2,7 +2,7 @@
 # tcpflow
 
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Read and filter packet captures; Extract files and payloads from traffic  **Version:** TCPFLOW 1.6.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tcpflow.help.txt)  **Docs:** <https://downloads.digitalcorpora.org/downloads/tcpflow/>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/tcpflow.help.txt)  **Docs:** <https://downloads.digitalcorpora.org/downloads/tcpflow/>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

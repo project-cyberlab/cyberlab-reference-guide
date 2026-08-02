@@ -2,7 +2,7 @@
 # nping
 
 **Kit:** Kali Linux · FLARE-VM  **Capability:** Probe or scan hosts and services
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/nping.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/nping.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -49,7 +49,7 @@ All 85 options parsed from the captured help text. The final column is filled in
 | `--icmp-redirect-addr` | addr | Set redirect address. |  |
 | `--icmp-param-pointer` | pnt | Set parameter problem pointer. |  |
 | `--icmp-advert-lifetime` | time | Set router advertisement lifetime. |  |
-| `--icmp-advert-entry` | IP | Add router advertisement entry. |  |
+| `--icmp-advert-entry` | IP,pref | Add router advertisement entry. |  |
 | `--icmp-orig-time` | — | <timestamp> : Set originate timestamp. |  |
 | `--icmp-recv-time` | — | <timestamp> : Set receive timestamp. |  |
 | `--icmp-trans-time` | timestamp | Set transmit timestamp. |  |

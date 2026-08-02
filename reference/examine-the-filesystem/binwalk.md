@@ -2,7 +2,7 @@
 # binwalk
 
 **Kit:** REMnux · Kali Linux  **Capability:** Carve files out of unstructured data; Detect and reverse packing; Find hidden data
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/binwalk.help.txt)  **Docs:** <https://github.com/ReFirmLabs/binwalk>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/binwalk.help.txt)  **Docs:** <https://github.com/ReFirmLabs/binwalk>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -54,8 +54,8 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--include` | str | Only show results that match <str> |  |
 | `-e` | — | Automatically extract known file types | Extract what is found, rather than only listing it. |
 | `--extract` | — | Automatically extract known file types |  |
-| `-D` | type[:ext[:cmd | Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd> |  |
-| `--dd` | type[:ext[:cmd | Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd> |  |
+| `-D` | type[:ext[:cmd]] | Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd> |  |
+| `--dd` | type[:ext[:cmd]] | Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd> |  |
 | `-M` | — | Recursively scan extracted files | Recurse into extracted files (matryoshka) — for nested firmware. |
 | `--matryoshka` | — | Recursively scan extracted files |  |
 | `-d` | int | Limit matryoshka recursion depth (default: 8 levels deep) | Limit recursion depth; unbounded `-M` can explode. |

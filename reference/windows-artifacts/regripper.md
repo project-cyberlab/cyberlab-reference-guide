@@ -2,7 +2,7 @@
 # regripper
 
 **Kit:** Kali Linux  **Capability:** Parse registry hives
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/regripper.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/regripper.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

@@ -2,7 +2,7 @@
 # RECmd
 
 **Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse registry hives  **Version:** 2026.5.0+bcd0ac33ed98de61ea6de551eef96052bddbbd49
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/RECmd.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/RECmd.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

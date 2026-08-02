@@ -11,16 +11,43 @@ import re
 
 # A flag token: -v  --verbose  --long-opt  -X  /F (windows-style)
 FLAG = r"(?:--[A-Za-z0-9][A-Za-z0-9_-]*|-[A-Za-z0-9?#@]|/[A-Za-z0-9?]+)"
-# An argument attached to the flag: =VAL  <VAL>  [VAL]  VAL
-ARG = r"(?:[=\s](?:<[^>]{1,40}>|\[[^\]]{1,40}\]|\{[^}]{1,40}\}|[A-Za-z][A-Za-z0-9_.-]{0,30}))"
+# A simple value token, used for the space-separated form (-o FILE). Kept tight:
+# after a space, anything looser starts eating description words.
+VAL = r"(?:<[^>]{1,40}>|\[[^\]]{1,40}\]|\{[^}]{1,40}\}|[A-Za-z][A-Za-z0-9_.-]{0,30})"
+# An argument attached to the flag. Real help text is messier than "=VAL":
+#   --incremental[=MODE]     optional value, the bracket comes *before* the '='
+#   --groups=[-]GID[,..]     bracketed and punctuated value after '='
+#   --node=MIN[-MAX]/TOTAL   slashes and dashes inside the value
+# An '=' makes the binding unambiguous, so everything up to whitespace can be
+# taken; after a bare space we stay conservative and only accept VAL.
+# "-E<fieldsoption>=<value>" binds its argument with no separator at all.
+ATTACHED = r"(?:<[^>]{1,40}>(?:=<[^>]{1,40}>)?)"
+# A trailing "..." (repeatable option) must not defeat the gap match:
+#   "-a <autostop cond.> ..., --autostop <autostop cond.> ..."
+# "={VAL}" must be tried before "=\S+": a bracketed value may contain spaces
+# ("--script=<Lua scripts>"), and the non-space form would stop at "=<Lua".
+ARG = rf"(?:\[=[^\]]{{0,40}}\]|{ATTACHED}|={VAL}|=\S{{1,40}}|\s{VAL})(?:\s*\.\.\.)?"
+# Aliases are also written slash-joined, sometimes with the "--" left off the
+# later members: "--scan-delay/--max-scan-delay", "--min-rtt-timeout/max-rtt-timeout".
+# The suffix is matched so the line parses at all; _split_flags then keeps only
+# the members that carry their own prefix, because expanding "max-rtt-timeout"
+# into "--max-rtt-timeout" would be an inference, and inferred flags are exactly
+# what this parser exists to prevent.
+ALT = r"(?:/[A-Za-z0-9][A-Za-z0-9_-]*)*"
 
 # Whole-line option definition: leading space, flag(s), optional arg, then
 # either two+ spaces before the description or end of line.
 # Two shapes are common and both must match:
 #   "  -o, --output FILE    write here"   (comma-separated, 2+ space gap)
 #   "\t-d: Display deleted entries only"  (colon separator, single space) -- TSK
+#   "--wordlist=FILE --stdin    wordlist mode"  (space-separated, no comma)
+# The space-separated alternative is restricted to *long* flags: a short flag
+# after a single space is far more likely to be prose ("-1 to disable") than a
+# second option, and inventing an option is the one failure that matters here.
+LONG = r"--[A-Za-z0-9][A-Za-z0-9_-]*"
 OPT_LINE = re.compile(
-    rf"^(?P<indent>\s*)(?P<flags>{FLAG}(?:{ARG})?(?:\s*,\s*{FLAG}(?:{ARG})?)*)"
+    rf"^(?P<indent>\s*)(?P<flags>{FLAG}{ALT}(?:{ARG})?"
+    rf"(?:\s*[,;]\s*{FLAG}{ALT}(?:{ARG})?|\s+{LONG}{ALT}(?:{ARG})?)*)"
     rf"(?P<gap>\s*:\s+|\s{{2,}}|\s*$)(?P<desc>.*)$"
 )
 
@@ -37,25 +64,45 @@ SECTION_STOP = re.compile(
 def _split_flags(blob: str) -> list[tuple[str, str]]:
     """'-o, --output FILE' -> [('-o',''), ('--output','FILE')] (arg on last)."""
     out: list[tuple[str, str]] = []
-    for part in re.split(r"\s*,\s*", blob.strip()):
-        part = part.strip()
+    # Split on commas *or* whitespace that precedes another flag, so
+    # "--wordlist=FILE --stdin" yields both options rather than being dropped.
+    # The separator must be followed by a flag: a comma inside a value, as in
+    # "--groups=[-]GID[,..]", is part of the value and must not split it.
+    for part in re.split(rf"\s*[,;]\s*(?={FLAG})|\s+(?={FLAG})|/(?=-)", blob.strip()):
+        part = part.strip().rstrip(".").strip()
         if not part:
             continue
-        m = re.match(rf"^({FLAG})(?:[=\s]+(.+))?$", part)
+        # Drop a bare slash-suffix ("max-rtt-timeout"): it names a real option
+        # but only by implication, and implied flags are not evidence. Guard the
+        # leading slash first -- "/F" is itself a flag, and splitting it here
+        # would delete every Windows-style option.
+        if not part.startswith("/"):
+            part = part.split("/")[0]
+        m = re.match(rf"^({FLAG})(?:(\[=[^\]]*\])|({ATTACHED})|[=\s]+(.+))?$", part)
         if not m:
             continue
-        flag, arg = m.group(1), (m.group(2) or "").strip()
-        arg = arg.strip("<>[]{}").strip()
+        flag = m.group(1)
+        # "--incremental[=MODE]" -> the value is MODE and it is optional.
+        arg = (m.group(2) or m.group(3) or m.group(4) or "").strip()
+        if arg.startswith("[=") and arg.endswith("]"):
+            arg = arg[2:-1].strip() + " (optional)" if arg[2:-1].strip() else ""
+        arg = arg.strip("<>{}").strip()
+        if arg.startswith("[") and arg.endswith("]") and "[" not in arg[1:-1]:
+            arg = arg[1:-1].strip()
         if arg.lower() in ("", "n/a"):
             arg = ""
         out.append((flag, arg))
     if not out:
         return []
-    # An argument written once after a group applies to the group's last flag;
-    # propagate it so `-o, --output FILE` records FILE for both.
-    arg = next((a for _, a in reversed(out) if a), "")
-    if arg:
-        out = [(f, arg) for f, _ in out]
+    # An argument written once after a comma-separated group applies to the
+    # whole group, so `-o, --output FILE` records FILE for both -- they are
+    # aliases for one option. Space-separated flags are *different* options
+    # ("--wordlist=FILE --stdin"), so the argument must not be propagated or
+    # --stdin acquires an argument it does not take.
+    if "," in blob:
+        arg = next((a for _, a in reversed(out) if a), "")
+        if arg:
+            out = [(f, arg) for f, _ in out]
     return out
 
 

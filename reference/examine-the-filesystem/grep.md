@@ -2,7 +2,7 @@
 # grep
 
 **Kit:** Base OS — present on every Linux image  **Capability:** Search raw data for a pattern  **Version:** grep (GNU grep) 3.8
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/grep.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/grep.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -40,7 +40,7 @@ grep "Event Identifier" /tmp/security_events.txt | awk -F: '{print $2}' | sort |
 
 ## Options
 
-All 81 options parsed from the captured help text. The final column is filled in by review.
+All 82 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -123,6 +123,7 @@ All 81 options parsed from the captured help text. The final column is filled in
 | `--context` | NUM | print NUM lines of output context |  |
 | `--group-separator` | SEP | print SEP on line between matches with context |  |
 | `--no-group-separator` | — | do not print separator for matches with context |  |
+| `--colour` | WHEN (optional) | use markers to highlight the matching strings; WHEN is 'always', 'never', or 'auto' |  |
 | `-U` | — | do not strip CR characters at EOL (MSDOS/Windows) |  |
 | `--binary` | — | do not strip CR characters at EOL (MSDOS/Windows) |  |
 

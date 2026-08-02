@@ -2,7 +2,7 @@
 # dumpcap
 
 **Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Capture live network traffic
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/dumpcap.help.txt)  **Docs:** <https://www.wireshark.org>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/dumpcap.help.txt)  **Docs:** <https://www.wireshark.org>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -22,7 +22,7 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 44 options parsed from the captured help text. The final column is filled in by review.
+All 48 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -50,17 +50,21 @@ All 44 options parsed from the captured help text. The final column is filled in
 | `-S` | — | print statistics for each interface once per second |  |
 | `-M` | — | for -D, -L, and -S, produce machine-readable output |  |
 | `-c` | packet count | stop after n packets (def: infinite) |  |
+| `-a` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM kB files:NUM - stop after NUM files packets:NUM - stop after NUM packets |  |
+| `--autostop` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM kB files:NUM - stop after NUM files packets:NUM - stop after NUM packets |  |
 | `-w` | filename | name of file to save (def: tempfile) |  |
 | `-g` | — | enable group read access on the output file(s) |  |
+| `-b` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM kB files:NUM - ringbuffer: replace after NUM files packets:NUM - ringbuffer: replace after NUM packets in |  |
+| `--ring-buffer` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM kB files:NUM - ringbuffer: replace after NUM files packets:NUM - ringbuffer: replace after NUM packets in |  |
 | `-n` | — | use pcapng format instead of pcap (default) |  |
 | `-P` | — | use libpcap format instead of pcapng |  |
 | `--capture-comment` | comment | add a capture comment to the output file (only for pcapng) |  |
 | `--temp-dir` | directory | write temporary files to this directory (default: /tmp) |  |
 | `--log-level` | level | sets the active log level ("critical", "warning", etc.) |  |
 | `--log-fatal` | level | sets level to abort the program ("critical" or "warning") |  |
-| `--log-domains` | !]list | comma separated list of the active log domains |  |
-| `--log-debug` | !]list | comma separated list of domains with "debug" level |  |
-| `--log-noisy` | !]list | comma separated list of domains with "noisy" level |  |
+| `--log-domains` | [!]list | comma separated list of the active log domains |  |
+| `--log-debug` | [!]list | comma separated list of domains with "debug" level |  |
+| `--log-noisy` | [!]list | comma separated list of domains with "noisy" level |  |
 | `--log-file` | path | file to output messages to (in addition to stderr) |  |
 | `-N` | packet_limit | maximum number of packets buffered within dumpcap |  |
 | `-C` | byte_limit | maximum number of bytes used for buffering packets within dumpcap |  |

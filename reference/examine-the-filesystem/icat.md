@@ -2,7 +2,7 @@
 # icat
 
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Recover deleted or lost files  **Version:** The Sleuth Kit ver 4.11.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/icat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/icat.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

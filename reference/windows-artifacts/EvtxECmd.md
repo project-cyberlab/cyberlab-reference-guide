@@ -2,7 +2,7 @@
 # EvtxECmd
 
 **Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse Windows event logs  **Version:** 2026.5.0+bfc7f47ccbf65ffc9a3777cde5498db2fdd94664
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/EvtxECmd.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/EvtxECmd.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

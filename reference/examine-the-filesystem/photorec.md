@@ -2,7 +2,7 @@
 # photorec
 
 **Kit:** SIFT Workstation  **Capability:** Recover deleted or lost files  **Version:** PhotoRec 7.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/photorec.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/photorec.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

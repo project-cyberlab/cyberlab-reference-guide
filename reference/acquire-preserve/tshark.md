@@ -2,7 +2,7 @@
 # tshark
 
 **Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Capture live network traffic; Read and filter packet captures
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/tshark.help.txt)  **Docs:** <https://www.wireshark.org>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/tshark.help.txt)  **Docs:** <https://www.wireshark.org>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -40,7 +40,7 @@ tshark -r exercise/sample.pcap -Y "http.request" -T fields -e http.host -e http.
 
 ## Options
 
-All 71 options parsed from the captured help text; 12 reviewed with usage guidance.
+All 75 options parsed from the captured help text; 12 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -63,6 +63,10 @@ All 71 options parsed from the captured help text; 12 reviewed with usage guidan
 | `--list-data-link-types` | — | print list of link-layer types of iface and exit |  |
 | `--list-time-stamp-types` | — | print list of timestamp types for iface and exit |  |
 | `-c` | packet count | stop after n packets (def: infinite) | Stop after N packets — a fast way to sample a huge capture. |
+| `-a` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM KB files:NUM - stop after NUM files packets:NUM - stop after NUM packets |  |
+| `--autostop` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM KB files:NUM - stop after NUM files packets:NUM - stop after NUM packets |  |
+| `-b` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM KB files:NUM - ringbuffer: replace after NUM files packets:NUM - switch to next file after NUM packets in |  |
+| `--ring-buffer` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM KB files:NUM - ringbuffer: replace after NUM files packets:NUM - switch to next file after NUM packets in |  |
 | `-r` | infile | set the filename to read from (or '-' for stdin) | Read from a capture file — the normal forensic mode. |
 | `--read-file` | infile | set the filename to read from (or '-' for stdin) |  |
 | `-2` | — | perform a two-pass analysis | Two-pass analysis, so fields needing later context resolve. |
@@ -105,9 +109,9 @@ All 71 options parsed from the captured help text; 12 reviewed with usage guidan
 | `--temp-dir` | directory | write temporary files to this directory (default: /tmp) |  |
 | `--log-level` | level | sets the active log level ("critical", "warning", etc.) |  |
 | `--log-fatal` | level | sets level to abort the program ("critical" or "warning") |  |
-| `--log-domains` | !]list | comma separated list of the active log domains |  |
-| `--log-debug` | !]list | comma separated list of domains with "debug" level |  |
-| `--log-noisy` | !]list | comma separated list of domains with "noisy" level |  |
+| `--log-domains` | [!]list | comma separated list of the active log domains |  |
+| `--log-debug` | [!]list | comma separated list of domains with "debug" level |  |
+| `--log-noisy` | [!]list | comma separated list of domains with "noisy" level |  |
 | `--log-file` | path | file to output messages to (in addition to stderr) |  |
 | `-h` | — | display this help and exit |  |
 | `--help` | — | display this help and exit |  |

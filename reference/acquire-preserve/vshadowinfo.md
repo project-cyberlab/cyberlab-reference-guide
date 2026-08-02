@@ -2,7 +2,7 @@
 # vshadowinfo
 
 **Kit:** SIFT Workstation (libyal)  **Capability:** Inspect or mount a forensic image container
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/vshadowinfo.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/vshadowinfo.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

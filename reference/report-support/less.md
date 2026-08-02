@@ -2,7 +2,7 @@
 # less
 
 **Kit:** Base OS — present on every Linux image  **Capability:** Inspect files by hand  **Version:** version: No such file or directory
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/less.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/less.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -16,7 +16,7 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 58 options parsed from the captured help text. The final column is filled in by review.
+All 62 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -47,8 +47,10 @@ All 58 options parsed from the captured help text. The final column is filled in
 | `-N` | — | .... --line-numbers --LINE-NUMBERS Don't use line numbers. |  |
 | `-o` | _f_i_l_e | . --log-file=[_f_i_l_e] Copy to log file (standard input only). |  |
 | `-O` | _f_i_l_e | . --LOG-FILE=[_f_i_l_e] Copy to log file (unconditionally overwrite). |  |
-| `-p` | _p_a_t_t_e_r_n | --pattern=[_p_a_t_t_e_r_n] Start at pattern (from command line). |  |
-| `-P` | _p_r_o_m_p_t | --prompt=[_p_r_o_m_p_t] Define new prompt. |  |
+| `-p` | _p_a_t_t_e_r_n | Start at pattern (from command line). |  |
+| `--pattern` | _p_a_t_t_e_r_n | Start at pattern (from command line). |  |
+| `-P` | _p_r_o_m_p_t | Define new prompt. |  |
+| `--prompt` | _p_r_o_m_p_t | Define new prompt. |  |
 | `-q` | — | .... --quiet --QUIET --silent --SILENT Quiet the terminal bell. |  |
 | `-Q` | — | .... --quiet --QUIET --silent --SILENT Quiet the terminal bell. |  |
 | `-r` | — | .... --raw-control-chars --RAW-CONTROL-CHARS Output "raw" control characters. |  |
@@ -56,6 +58,8 @@ All 58 options parsed from the captured help text. The final column is filled in
 | `-s` | — | ........ --squeeze-blank-lines Squeeze multiple blank lines. |  |
 | `-S` | — | ........ --chop-long-lines Chop (truncate) long lines rather than wrapping. |  |
 | `-t` | _t_a_g | .. --tag=[_t_a_g] Find a tag. |  |
+| `-T` | _t_a_g_s_f_i_l_e | Use an alternate tags file. |  |
+| `--tag-file` | _t_a_g_s_f_i_l_e | Use an alternate tags file. |  |
 | `-u` | — | .... --underline-special --UNDERLINE-SPECIAL Change handling of backspaces. |  |
 | `-U` | — | .... --underline-special --UNDERLINE-SPECIAL Change handling of backspaces. |  |
 | `-V` | — | ........ --version Display the version number of "less". |  |

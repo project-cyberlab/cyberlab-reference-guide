@@ -2,7 +2,7 @@
 # sigtool
 
 **Kit:** REMnux · SIFT Workstation  **Capability:** Verify evidence integrity with hashes; Scan with signatures for known-bad  **Version:** ClamAV 1.4.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/sigtool.help.txt)  **Docs:** <https://www.clamav.net>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/sigtool.help.txt)  **Docs:** <https://www.clamav.net>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -16,7 +16,7 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 34 options parsed from the captured help text. The final column is filled in by review.
+All 35 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -48,6 +48,7 @@ All 34 options parsed from the captured help text. The final column is filled in
 | `--datadir` | DIR | Use DIR as default database directory |  |
 | `--unpack` | FILE | -u FILE Unpack a CVD/CLD file |  |
 | `--unpack-current` | SHORTNAME | Unpack local CVD/CLD into cwd |  |
+| `--list-sigs` | FILE (optional) | -l[FILE] List signature names |  |
 | `--find-sigs` | REGEX | -fREGEX Find signatures matching REGEX |  |
 | `--decode-sigs` | — | Decode signatures from stdin |  |
 | `--vba` | FILE | Extract VBA/Word6 macro code |  |

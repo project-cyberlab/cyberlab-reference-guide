@@ -2,7 +2,7 @@
 # nmap
 
 **Kit:** Kali Linux · FLARE-VM  **Capability:** Probe or scan hosts and services  **Version:** Nmap version 7.93
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/nmap.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/nmap.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -38,13 +38,13 @@ nmap -p 8000 --script http-title 127.0.0.1
 
 ## Options
 
-All 60 options parsed from the captured help text. The final column is filled in by review.
+All 66 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `--exclude` | host1 | Exclude hosts/networks |  |
+| `--exclude` | host1[,host2][,host3],... | Exclude hosts/networks |  |
 | `--excludefile` | exclude_file | Exclude list from file |  |
-| `--dns-servers` | serv1 | Specify custom DNS servers |  |
+| `--dns-servers` | serv1[,serv2],... | Specify custom DNS servers |  |
 | `--system-dns` | — | Use OS's DNS resolver |  |
 | `--traceroute` | — | Trace hop path to each host |  |
 | `--scanflags` | flags | Customize TCP scan flags |  |
@@ -60,7 +60,7 @@ All 60 options parsed from the captured help text. The final column is filled in
 | `--version-all` | — | Try every single probe (intensity 9) |  |
 | `--version-trace` | — | Show detailed version scan activity (for debugging) |  |
 | `--script` | Lua scripts | <Lua scripts> is a comma separated list of directories, script-files or script-categories |  |
-| `--script-args` | n1=v1 | provide arguments to scripts |  |
+| `--script-args` | n1=v1,[n2=v2,...] | provide arguments to scripts |  |
 | `--script-args-file` | filename | provide NSE script args in a file |  |
 | `--script-trace` | — | Show all data sent and received |  |
 | `--script-updatedb` | — | Update the script database. |  |
@@ -68,20 +68,26 @@ All 60 options parsed from the captured help text. The final column is filled in
 | `-O` | — | Enable OS detection |  |
 | `--osscan-limit` | — | Limit OS detection to promising targets |  |
 | `--osscan-guess` | — | Guess OS more aggressively |  |
+| `-T` | 0-5 | Set timing template (higher is faster) |  |
+| `--min-hostgroup` | — | Parallel host scan group sizes |  |
+| `--min-parallelism` | — | Probe parallelization |  |
+| `--min-rtt-timeout` | — | Specifies probe round trip time. |  |
 | `--max-retries` | tries | Caps number of port scan probe retransmissions. |  |
 | `--host-timeout` | time | Give up on target after this long |  |
 | `--min-rate` | number | Send packets no slower than <number> per second |  |
 | `--max-rate` | number | Send packets no faster than <number> per second |  |
-| `-D` | decoy1 | Cloak a scan with decoys |  |
+| `-f` | — | fragment packets (optionally w/given MTU) |  |
+| `--mtu` | val | fragment packets (optionally w/given MTU) |  |
+| `-D` | decoy1,decoy2[,ME],... | Cloak a scan with decoys |  |
 | `-S` | IP_Address | Spoof source address |  |
 | `-e` | iface | Use specified interface |  |
-| `--proxies` | url1 | Relay connections through HTTP/SOCKS4 proxies |  |
+| `--proxies` | url1,[url2],... | Relay connections through HTTP/SOCKS4 proxies |  |
 | `--data` | hex string | Append a custom payload to sent packets |  |
 | `--data-string` | string | Append a custom ASCII string to sent packets |  |
 | `--data-length` | num | Append random data to sent packets |  |
 | `--ip-options` | options | Send packets with specified ip options |  |
 | `--ttl` | val | Set IP time-to-live field |  |
-| `--spoof-mac` | mac address/prefix/vendor name | Spoof your MAC address |  |
+| `--spoof-mac` | mac address | Spoof your MAC address |  |
 | `--badsum` | — | Send packets with a bogus TCP/UDP/SCTP checksum |  |
 | `-v` | — | Increase verbosity level (use -vv or more for greater effect) |  |
 | `-d` | — | Increase debugging level (use -dd or more for greater effect) |  |
@@ -92,7 +98,7 @@ All 60 options parsed from the captured help text. The final column is filled in
 | `--append-output` | — | Append to rather than clobber specified output files |  |
 | `--resume` | filename | Resume an aborted scan |  |
 | `--noninteractive` | — | Disable runtime interactions via keyboard |  |
-| `--stylesheet` | path/URL | XSL stylesheet to transform XML output to HTML |  |
+| `--stylesheet` | path | XSL stylesheet to transform XML output to HTML |  |
 | `--webxml` | — | Reference stylesheet from Nmap.Org for more portable XML |  |
 | `--no-stylesheet` | — | Prevent associating of XSL stylesheet w/XML output |  |
 | `-6` | — | Enable IPv6 scanning |  |

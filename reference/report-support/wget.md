@@ -2,7 +2,7 @@
 # wget
 
 **Kit:** REMnux  **Capability:** Fetch and verify external references  **Version:** GNU Wget 1.21.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/wget.help.txt)  **Docs:** <https://www.gnu.org/software/wget/>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/wget.help.txt)  **Docs:** <https://www.gnu.org/software/wget/>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -22,7 +22,7 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 184 options parsed from the captured help text. The final column is filled in by review.
+All 185 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -149,6 +149,7 @@ All 184 options parsed from the captured help text. The final column is filled i
 | `--ca-certificate` | FILE | file with the bundle of CAs |  |
 | `--ca-directory` | DIR | directory where hash list of CAs is stored |  |
 | `--crl-file` | FILE | file with bundle of CRLs |  |
+| `--pinnedpubkey` | FILE | Public key (PEM/DER) file, or any number of base64 encoded sha256 hashes preceded by 'sha256//' and separated by ';', to verify peer against |  |
 | `--ciphers` | STR | Set the priority string (GnuTLS) or cipher list string (OpenSSL) directly. Use with care. This option overrides --secure-protocol. The format and syntax of this string depend on the specific SSL/TLS e |  |
 | `--no-hsts` | — | disable HSTS |  |
 | `--hsts-file` | — | path of HSTS database (will override default) |  |

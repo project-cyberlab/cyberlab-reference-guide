@@ -2,7 +2,7 @@
 # ezhexviewer
 
 **Kit:** REMnux  **Capability:** Inspect files by hand
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/ezhexviewer.help.txt)  **Docs:** <https://www.decalage.info/python/oletools>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/ezhexviewer.help.txt)  **Docs:** <https://www.decalage.info/python/oletools>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

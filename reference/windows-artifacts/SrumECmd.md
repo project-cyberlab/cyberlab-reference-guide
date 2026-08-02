@@ -2,7 +2,7 @@
 # SrumECmd
 
 **Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse ESE / SRUM / Amcache databases  **Version:** 2026.5.0+880ad26bcb011976a8fc521eea63fc5e6e65ba02
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/SrumECmd.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/SrumECmd.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

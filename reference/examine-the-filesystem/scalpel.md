@@ -2,7 +2,7 @@
 # scalpel
 
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Carve files out of unstructured data  **Version:** Scalpel version 1.60
-**Captured:** `cyberlab-aio` via `-h` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/scalpel.help.txt)  **Docs:** <https://github.com/sleuthkit/scalpel>
+**Captured:** `cyberlab-aio` via `-h` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/scalpel.help.txt)  **Docs:** <https://github.com/sleuthkit/scalpel>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

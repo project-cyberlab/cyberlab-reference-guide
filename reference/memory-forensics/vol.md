@@ -2,7 +2,7 @@
 # vol
 
 **Kit:** SIFT Workstation (Volatility 3)  **Capability:** Analyse a memory image
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/vol.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/vol.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -53,7 +53,7 @@ All 35 options parsed from the captured help text; 9 reviewed with usage guidanc
 | `--help` | — | Show this help message and exit, for specific plugin options use 'vol <pluginname> --help' |  |
 | `-c` | CONFIG | Load the configuration from a json file | Load saved configuration from a JSON file. |
 | `--config` | CONFIG | Load the configuration from a json file |  |
-| `--parallelism` | processes | Enables parallelism (defaults to off if no argument given) |  |
+| `--parallelism` | {processes,threads,off} | Enables parallelism (defaults to off if no argument given) |  |
 | `-e` | EXTEND | Extend the configuration with a new (or changed) setting |  |
 | `--extend` | EXTEND | Extend the configuration with a new (or changed) setting |  |
 | `-p` | PLUGIN_DIRS | Semi-colon separated list of paths to find plugins | Add a directory of custom plugins. |

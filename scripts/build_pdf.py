@@ -39,6 +39,71 @@ SECTIONS = [
     ("Kit Tool List", ROOT / "catalog" / "KIT-TOOLS.md"),
 ]
 
+# Where the repo lives publicly. Links that point at files which are *not*
+# reproduced inside the PDF (raw captures, scripts) are rewritten to here, so a
+# downloaded PDF never references the author's local disk.
+REPO_URL = "https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main"
+
+
+def slug(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
+# Repo-relative paths that ARE reproduced as sections in the PDF, and the
+# in-document anchor each one becomes. Keep in step with SECTIONS above.
+INLINED = {
+    "README.md": "overview",
+    "reference/INDEX.md": "capability-index",
+    "docs/FORMAT.md": "the-format",
+    "docs/PLAN.md": "roadmap",
+    "catalog/KIT-TOOLS.md": "kit-tool-list",
+}
+
+
+def rewrite_href(href: str, src: Path) -> str:
+    """Map a link written for the repo onto something valid inside the PDF.
+
+    Markdown pages cross-reference each other with relative paths
+    (``../INDEX.md``). Rendered to HTML and printed from a ``file://`` URL those
+    resolve against the author's filesystem, so the shipped PDF would point at
+    directories that exist only on one machine. Every repo-relative link
+    therefore becomes either an internal anchor (if that file is inlined as a
+    PDF section) or an absolute GitHub URL (if it is not).
+    """
+    if not href or href.startswith(("http://", "https://", "mailto:", "#")):
+        return href
+
+    path_part, _, frag = href.partition("#")
+    if not path_part:                      # pure "#anchor"
+        return href
+
+    # Resolve relative to the page that wrote the link, then make it repo-relative.
+    try:
+        target = (src.parent / path_part).resolve()
+        rel = target.relative_to(ROOT).as_posix()
+    except (ValueError, OSError):
+        return href                        # escapes the repo: leave it alone
+
+    if rel in INLINED:
+        return "#" + INLINED[rel]
+
+    # Another tool page -> its section anchor in the Tool Reference.
+    if rel.startswith("reference/") and rel.endswith(".md"):
+        return "#tool-" + slug(Path(rel).stem)
+
+    # Everything else (raw captures, scripts) is evidence that lives in the
+    # repo but not in the PDF: send the reader to the public copy.
+    return f"{REPO_URL}/{rel}" + (f"#{frag}" if frag else "")
+
+
+def fix_links(html_fragment: str, src: Path) -> str:
+    return re.sub(
+        r'href="([^"]*)"',
+        lambda m: f'href="{html.escape(rewrite_href(html.unescape(m.group(1)), src), quote=True)}"',
+        html_fragment,
+    )
+
+
 CSS = """
 @page { size: Letter; margin: 16mm 14mm 16mm 14mm;
         @bottom-center { content: counter(page); } }
@@ -77,7 +142,168 @@ a { color: #1f6feb; text-decoration: none; }
 .toc { page-break-after: always; }
 .toc a { color: #14181d; }
 .toc ul { list-style: none; padding-left: 1em; }
+/* Page numbers in the contents and index. A leader dot rule would need
+   CSS GCPM which Chrome lacks, so the number is right-aligned in its own
+   column instead -- same job, renders everywhere. */
+.toc li { display: flex; align-items: baseline; gap: .4em; }
+.toc li > a:first-child { flex: 0 1 auto; }
+.toc .pg { margin-left: auto; color: #7a8794; font-variant-numeric: tabular-nums;
+           font-size: 9pt; white-space: nowrap; }
+.toc ul ul .pg { font-size: 8.5pt; }
+.idx { column-count: 3; column-gap: 1.4em; font-size: 9pt; }
+.idx div { break-inside: avoid; display: flex; gap: .35em; }
+.idx .pg { margin-left: auto; color: #7a8794; font-variant-numeric: tabular-nums; }
+.idx a { color: #14181d; }
+.idx .grp { column-span: all; font-weight: 700; color: #0b2545; margin: .7em 0 .25em;
+            border-bottom: 1px solid #d6dde5; }
 """
+
+
+CAPABILITY_TITLES = {
+    "acquire-preserve": "Acquire & preserve",
+    "examine-the-filesystem": "Examine the filesystem",
+    "build-the-timeline": "Build the timeline",
+    "windows-artifacts": "Windows artifacts",
+    "memory-forensics": "Memory forensics",
+    "network-analysis": "Network analysis",
+    "malware-triage-static": "Malware triage — static",
+    "malware-triage-documents": "Malware triage — documents",
+    "reverse-engineering": "Reverse engineering",
+    "decode-deobfuscate": "Decode & deobfuscate",
+    "report-support": "Report & support",
+}
+
+
+def dest_pages(pdf_path: Path) -> dict[str, int]:
+    """anchor -> 1-based page number, read back from the rendered PDF.
+
+    Page numbers cannot be known before rendering, so the build renders once to
+    learn them and again to print them. Chrome writes a ``/Dests`` table for our
+    anchor ids, which makes the mapping exact rather than estimated.
+    """
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        return {}
+    reader = PdfReader(str(pdf_path))
+    page_of = {p.indirect_reference.idnum: i + 1
+               for i, p in enumerate(reader.pages)
+               if p.indirect_reference is not None}
+    dests = reader.trailer["/Root"].get("/Dests")
+    dests = dests.get_object() if dests is not None else {}
+    out: dict[str, int] = {}
+    for name, d in dests.items():
+        d = d.get_object()
+        arr = d.get("/D", d) if isinstance(d, dict) else d
+        try:
+            pg = page_of.get(arr[0].idnum)
+        except (AttributeError, IndexError, TypeError):
+            continue
+        if pg:
+            out[str(name).lstrip("/")] = pg
+    return out
+
+
+def build_tool_index(tool_pages: list[Path], pages: dict[str, int]) -> str:
+    """Alphabetical back-of-book index: every tool, its capability, its page."""
+    rows = sorted(tool_pages, key=lambda p: p.stem.lower())
+    out = ['<div class="section" id="tool-index"><h1>Alphabetical Tool Index</h1>',
+           '<p>Every tool in the guide, A&ndash;Z, with the page its entry starts on.</p>',
+           '<div class="idx">']
+    letter = ""
+    for p in rows:
+        first = p.stem[0].upper()
+        if not first.isalpha():
+            first = "#"
+        if first != letter:
+            letter = first
+            out.append(f'<div class="grp">{html.escape(letter)}</div>')
+        anchor = "tool-" + slug(p.stem)
+        pg = pages.get(anchor)
+        cap = CAPABILITY_TITLES.get(p.parent.name, p.parent.name.replace("-", " "))
+        out.append(
+            f'<div><a href="#{anchor}"><code>{html.escape(p.stem)}</code></a>'
+            f'<span style="color:#7a8794"> {html.escape(cap)}</span>'
+            f'<span class="pg">{pg if pg else "&mdash;"}</span></div>')
+    out.append("</div></div>")
+    return "".join(out)
+
+
+def add_outline(pdf_path: Path, tool_pages: list[Path]) -> int:
+    """Give the PDF a real bookmark tree.
+
+    Headless Chrome renders anchors and named destinations but emits no
+    document outline, so a 370-page guide opens with an empty bookmark pane and
+    the only way to reach a tool is scrolling. Chrome *does* write a ``/Dests``
+    table mapping our anchor ids to pages, so the outline can be reconstructed
+    exactly rather than estimated: front matter at the top level, then a
+    chapter per capability with its tools nested underneath.
+    """
+    try:
+        from pypdf import PdfReader, PdfWriter
+    except ImportError:
+        print("  pypdf not installed - outline skipped", file=sys.stderr)
+        return 0
+
+    reader = PdfReader(str(pdf_path))
+    writer = PdfWriter()
+    writer.append_pages_from_reader(reader)
+
+    # page object id -> page index, so a named destination resolves to a page
+    page_of = {p.indirect_reference.idnum: i
+               for i, p in enumerate(reader.pages)
+               if p.indirect_reference is not None}
+
+    dests = reader.trailer["/Root"].get("/Dests")
+    dests = dests.get_object() if dests is not None else {}
+
+    def page_for(anchor: str) -> int | None:
+        d = dests.get("/" + anchor) or dests.get(anchor)
+        if d is None:
+            return None
+        d = d.get_object()
+        arr = d.get("/D", d) if isinstance(d, dict) else d
+        try:
+            return page_of.get(arr[0].idnum)
+        except (AttributeError, IndexError, TypeError):
+            return None
+
+    added = 0
+
+    def bookmark(title: str, anchor: str, parent=None):
+        nonlocal added
+        pg = page_for(anchor)
+        if pg is None:
+            return None
+        added += 1
+        return writer.add_outline_item(title, pg, parent=parent)
+
+    for title, _ in SECTIONS:
+        bookmark(title, slug(title))
+
+    ref_root = bookmark("Tool Reference", "reference")
+    by_cap: dict[str, list[Path]] = {}
+    for p in tool_pages:
+        by_cap.setdefault(p.parent.name, []).append(p)
+
+    for cap, pages in sorted(
+            by_cap.items(),
+            key=lambda kv: min((page_for("tool-" + slug(p.stem)) or 10**6)
+                               for p in kv[1])):
+        title = CAPABILITY_TITLES.get(cap, cap.replace("-", " ").capitalize())
+        first = min((page_for("tool-" + slug(p.stem)) or 10**6) for p in pages)
+        if first == 10**6:
+            continue
+        added += 1
+        cap_node = writer.add_outline_item(
+            f"{title}  ({len(pages)})", first, parent=ref_root)
+        for p in sorted(pages, key=lambda q: page_for("tool-" + slug(q.stem)) or 0):
+            bookmark(p.stem, "tool-" + slug(p.stem), parent=cap_node)
+
+    writer.page_mode = "/UseOutlines"          # open with the bookmark pane showing
+    with open(pdf_path, "wb") as fh:
+        writer.write(fh)
+    return added
 
 
 def find_browser() -> str | None:
@@ -92,9 +318,13 @@ def convert(md_text: str) -> str:
         md_text, extensions=["tables", "fenced_code", "toc", "sane_lists"])
 
 
-def main() -> int:
-    # Tool pages, grouped by their capability directory.
-    tool_pages = sorted(p for p in (ROOT / "reference").rglob("*.md") if p.name != "INDEX.md")
+def render_html(tool_pages: list[Path], pages: dict[str, int]) -> str:
+    """Build the whole document. `pages` is empty on the first pass and holds
+    anchor->page on the second, which is when the contents gets its numbers."""
+
+    def pg(anchor: str) -> str:
+        n = pages.get(anchor)
+        return f'<span class="pg">{n}</span>' if n else ""
 
     parts: list[str] = []
     toc: list[str] = []
@@ -112,56 +342,91 @@ def main() -> int:
         if not path.exists():
             print(f"  skip (missing): {path.name}", file=sys.stderr)
             continue
-        anchor = re.sub(r"[^a-z0-9]+", "-", title.lower())
-        toc.append(f'<li><a href="#{anchor}">{html.escape(title)}</a></li>')
+        anchor = slug(title)
+        toc.append(f'<li><a href="#{anchor}">{html.escape(title)}</a>{pg(anchor)}</li>')
         body.append(f'<div class="section" id="{anchor}">'
-                    f'{convert(path.read_text(encoding="utf-8"))}</div>')
+                    f'{fix_links(convert(path.read_text(encoding="utf-8")), path)}</div>')
 
     if tool_pages:
-        toc.append('<li><a href="#reference">Tool Reference</a><ul>')
+        toc.append(f'<li><a href="#reference">Tool Reference</a>{pg("reference")}<ul>')
         body.append('<div class="section" id="reference"><h1>Tool Reference</h1>'
                     '<p>One page per tool. Every option below was read off the '
                     'real binary and is checked by the linter.</p></div>')
+        # Group the contents by capability so it reads as chapters, not a
+        # 135-entry flat list.
+        by_cap: dict[str, list[Path]] = {}
         for p in tool_pages:
-            name = p.stem
-            anchor = "tool-" + re.sub(r"[^a-z0-9]+", "-", name.lower())
-            cat = p.parent.name.replace("-", " ")
-            toc.append(f'<li><a href="#{anchor}">{html.escape(name)} '
-                       f'<em>({html.escape(cat)})</em></a></li>')
-            body.append(f'<div class="section" id="{anchor}">'
-                        f'{convert(p.read_text(encoding="utf-8"))}</div>')
+            by_cap.setdefault(p.parent.name, []).append(p)
+        for cap in sorted(by_cap, key=lambda c: CAPABILITY_TITLES.get(c, c)):
+            title = CAPABILITY_TITLES.get(cap, cap.replace("-", " ").capitalize())
+            group = sorted(by_cap[cap], key=lambda q: q.stem.lower())
+            toc.append(f'<li><strong>{html.escape(title)}</strong> '
+                       f'<span style="color:#7a8794">({len(group)})</span></li><ul>')
+            for p in group:
+                anchor = "tool-" + slug(p.stem)
+                toc.append(f'<li><a href="#{anchor}">{html.escape(p.stem)}</a>'
+                           f'{pg(anchor)}</li>')
+                body.append(f'<div class="section" id="{anchor}">'
+                            f'{fix_links(convert(p.read_text(encoding="utf-8")), p)}</div>')
+            toc.append("</ul>")
         toc.append("</ul></li>")
+        toc.append(f'<li><a href="#tool-index">Alphabetical Tool Index</a>'
+                   f'{pg("tool-index")}</li>')
+        body.append(build_tool_index(tool_pages, pages))
 
     parts.append('<div class="toc"><h1>Contents</h1><ul>'
                  + "".join(toc) + "</ul></div>")
     parts.extend(body)
 
-    html_doc = (f"<!doctype html><html><head><meta charset='utf-8'>"
-                f"<title>CyberLab Reference Guide</title>"
-                f"<style>{CSS}</style></head><body>"
-                f"{''.join(parts)}</body></html>")
+    return (f"<!doctype html><html><head><meta charset='utf-8'>"
+            f"<title>CyberLab Reference Guide</title>"
+            f"<style>{CSS}</style></head><body>"
+            f"{''.join(parts)}</body></html>")
 
+
+def main() -> int:
+    tool_pages = sorted(p for p in (ROOT / "reference").rglob("*.md")
+                        if p.name != "INDEX.md")
     html_path = BUILD / "cyberlab-reference-guide.html"
-    html_path.write_text(html_doc, encoding="utf-8")
-    print(f"wrote {html_path.relative_to(ROOT)} ({len(html_doc):,} bytes)")
+    pdf_path = BUILD / "cyberlab-reference-guide.pdf"
 
     browser = find_browser()
+
+    def render(pages: dict[str, int]) -> bool:
+        doc = render_html(tool_pages, pages)
+        html_path.write_text(doc, encoding="utf-8")
+        if not browser:
+            return False
+        subprocess.run(
+            [browser, "--headless", "--disable-gpu", "--no-sandbox",
+             "--no-pdf-header-footer", f"--print-to-pdf={pdf_path}",
+             html_path.as_uri()],
+            check=False, timeout=300,
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return pdf_path.exists()
+
     if not browser:
+        render({})
         print("No Edge/Chrome found — HTML written, PDF skipped.", file=sys.stderr)
         return 1
 
-    pdf_path = BUILD / "cyberlab-reference-guide.pdf"
-    cmd = [browser, "--headless", "--disable-gpu", "--no-sandbox",
-           "--no-pdf-header-footer", f"--print-to-pdf={pdf_path}",
-           html_path.as_uri()]
-    subprocess.run(cmd, check=False, timeout=180,
-                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    if pdf_path.exists():
-        print(f"wrote {pdf_path.relative_to(ROOT)} "
-              f"({pdf_path.stat().st_size:,} bytes)")
-        return 0
-    print("PDF was not produced.", file=sys.stderr)
-    return 1
+    # Pass 1 exists only to discover where everything landed.
+    if not render({}):
+        print("PDF was not produced.", file=sys.stderr)
+        return 1
+    pages = dest_pages(pdf_path)
+    print(f"pass 1: {len(pages)} anchors located")
+
+    # Pass 2 prints those page numbers into the contents and the index.
+    if not render(pages):
+        print("PDF was not produced on pass 2.", file=sys.stderr)
+        return 1
+    print(f"wrote {pdf_path.relative_to(ROOT)} "
+          f"({pdf_path.stat().st_size:,} bytes)")
+
+    n = add_outline(pdf_path, tool_pages)
+    print(f"added {n} PDF bookmarks")
+    return 0
 
 
 if __name__ == "__main__":

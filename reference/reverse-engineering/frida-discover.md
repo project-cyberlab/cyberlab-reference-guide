@@ -2,7 +2,7 @@
 # frida-discover
 
 **Kit:** REMnux  **Capability:** Emulate or instrument execution  **Version:** 17.16.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/frida-discover.help.txt)  **Docs:** <https://frida.re>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/frida-discover.help.txt)  **Docs:** <https://frida.re>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -55,15 +55,15 @@ All 43 options parsed from the captured help text. The final column is filled in
 | `--attach-pid` | PID | attach to PID |  |
 | `-W` | PATTERN | await spawn matching PATTERN |  |
 | `--await` | PATTERN | await spawn matching PATTERN |  |
-| `--stdio` | inherit | stdio behavior when spawning (defaults to “inherit”) |  |
+| `--stdio` | inherit,pipe | stdio behavior when spawning (defaults to “inherit”) |  |
 | `--aux` | option | set aux option when spawning, such as “uid=(int)42” (supported types are: string, bool, int) |  |
-| `--realm` | native | realm to attach in |  |
-| `--exceptor` | full | configure the exception handling mode |  |
+| `--realm` | native,emulated | realm to attach in |  |
+| `--exceptor` | full,handler-only,off | configure the exception handling mode |  |
 | `--disable-unwind-broker` | — | disable the unwind broker |  |
 | `--disable-exit-monitor` | — | disable the exit monitor |  |
 | `--disable-thread-suspend-monitor` | — | disable the thread suspend monitor |  |
 | `--linker-notifier-offset` | OFFSET | add a linker notifier OFFSET (may be specified multiple times) |  |
-| `--runtime` | qjs | script runtime to use |  |
+| `--runtime` | qjs,v8 | script runtime to use |  |
 | `--debug` | — | enable the Node.js compatible script debugger |  |
 | `--squelch-crash` | — | if enabled, will not dump crash report to console |  |
 | `-O` | FILE | text file containing additional command line options |  |

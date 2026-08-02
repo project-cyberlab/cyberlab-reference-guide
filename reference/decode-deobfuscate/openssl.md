@@ -2,7 +2,7 @@
 # openssl
 
 **Kit:** Base OS — present on every Linux image  **Capability:** Decode, decrypt or transform encoded data  **Version:** Invalid command '--version'; type "help" for a list.
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/openssl.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/openssl.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

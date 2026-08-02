@@ -2,7 +2,7 @@
 # curl
 
 **Kit:** REMnux  **Capability:** Fetch and verify external references  **Version:** curl 7.88.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/curl.help.txt)  **Docs:** <https://curl.se>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/curl.help.txt)  **Docs:** <https://curl.se>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

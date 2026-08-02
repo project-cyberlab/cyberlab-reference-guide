@@ -2,7 +2,7 @@
 # capinfos
 
 **Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Read and filter packet captures  **Version:** Git v4.0.17
-**Captured:** `cyberlab-aio` via `--help` on 2026-07-29  [raw](../../capture/cyberlab-aio/help/capinfos.help.txt)  **Docs:** <https://www.wireshark.org>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/capinfos.help.txt)  **Docs:** <https://www.wireshark.org>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
