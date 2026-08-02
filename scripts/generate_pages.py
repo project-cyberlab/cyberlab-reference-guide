@@ -303,6 +303,27 @@ def build_page(cmd: str, meta: dict) -> str:
 
     L += ["## Purpose", "", purpose or "_TODO: one-line imperative purpose._", ""]
 
+    # "When you'd reach for this" -- the tool-level scenario.
+    #
+    # This is the section the whole research loop exists to fill, and it is a
+    # section rather than a table cell because the useful answer will not fit
+    # in one: what situation brings you here, what runs before and after, and
+    # why this tool rather than the one beside it. A junior analyst choosing
+    # between pdfid and pdf-parser, or photorec and testdisk, needs the
+    # difference spelled out, not two similar definitions.
+    #
+    # Sources are printed with it. A claim a reader cannot check is a claim
+    # they have to take on trust, and this guide has already published
+    # confidently-wrong text once.
+    ent = ENRICHMENT.get(cmd, {})
+    scenario = ent.get("scenario", "")
+    if scenario:
+        L += ["## When you'd reach for this", "", scenario, ""]
+        srcs = ent.get("sources") or []
+        if srcs:
+            L.append("**Sources:** " + " · ".join(f"<{u}>" for u in srcs[:3]))
+            L.append("")
+
     if syn:
         L += ["## Synopsis", "", "```", syn, "```", ""]
 
