@@ -52,6 +52,9 @@ def reviewed_rows() -> tuple[int, int]:
 
 
 def main() -> int:
+    run("fill_purposes.py")
+    run("link_kit_list.py")
+    run("generate_gui_pages.py")
     run("generate_pages.py")
     run("build_index.py")
     lint = run("lint.py")

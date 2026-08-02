@@ -449,464 +449,464 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| aesfix | `aesfix` |  |
-| [aeskeyfind](../reference/memory-forensics/aeskeyfind.md) | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) |  |
-| ccrypt | `ccrypt` |  |
-| steghide | `steghide` |  |
-| stegosuite | `stegosuite` |  |
-| stegsnow | `stegsnow` |  |
+| aesfix | `aesfix` | Tool for correcting bit errors in an AES key schedule. |
+| [aeskeyfind](../reference/memory-forensics/aeskeyfind.md) | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) | Tool for locating AES keys in a captured memory image. |
+| ccrypt | `ccrypt` | Secure encryption and decryption of files and streams. |
+| steghide | `steghide` | Steganography hiding tool. |
+| stegosuite | `stegosuite` | Steganography tool to hide information in image files. |
+| stegsnow | `stegsnow` | Steganography using ASCII files. |
 
 ### Database
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| jsql-injection | `jsql-injection` |  |
-| mdbtools | `mdbtools` |  |
-| oscanner | `oscanner` |  |
-| sidguesser | `sidguesser` |  |
-| sqldict | `sqldict` |  |
-| sqlitebrowser | `sqlitebrowser` |  |
-| sqlmap | `sqlmap` |  |
-| sqlninja | `sqlninja` |  |
-| sqlsus | `sqlsus` |  |
-| tnscmd10g | `tnscmd10g` |  |
+| jsql-injection | `jsql-injection` | Java tool for automatic database injection. |
+| mdbtools | `mdbtools` | JET / MS Access database (MDB) tools. |
+| oscanner | `oscanner` | Oracle assessment framework. |
+| sidguesser | `sidguesser` | Guesses sids against an Oracle database. |
+| sqldict | `sqldict` | Dictionary attack tool for SQL Server. |
+| sqlitebrowser | `sqlitebrowser` | GUI editor for SQLite databases. |
+| sqlmap | `sqlmap` | Automatic SQL injection tool. |
+| sqlninja | `sqlninja` | SQL server injection and takeover tool. |
+| sqlsus | `sqlsus` | MySQL injection tool. |
+| tnscmd10g | `tnscmd10g` | Tool to prod the oracle tnslsnr process. |
 
 ### Exploitation
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| armitage | `armitage` |  |
-| beef-xss | `beef-xss` |  |
-| exploitdb | `exploitdb` |  |
-| metasploit-framework | `metasploit-framework` |  |
-| msfpc | `msfpc` |  |
-| set | `set` |  |
-| shellnoob | `shellnoob` |  |
-| sqlmap | `sqlmap` |  |
-| termineter | `termineter` |  |
+| armitage | `armitage` | Cyber attack management for Metasploit. |
+| beef-xss | `beef-xss` | Browser Exploitation Framework (BeEF). |
+| exploitdb | `exploitdb` | Searchable Exploit Database archive. |
+| metasploit-framework | `metasploit-framework` | Framework for exploit development and vulnerability research. |
+| msfpc | `msfpc` | MSFvenom Payload Creator (MSFPC). |
+| set | `set` | Social-Engineer Toolkit. |
+| shellnoob | `shellnoob` | Shellcode writing toolkit. |
+| sqlmap | `sqlmap` | Automatic SQL injection tool. |
+| termineter | `termineter` | Smart meter testing framework. |
 
 ### Forensics
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| 7zip | `7zip` |  |
-| afflib-tools | `afflib-tools` |  |
-| apktool | `apktool` |  |
-| autopsy | `autopsy` |  |
-| [binwalk](../reference/examine-the-filesystem/binwalk.md) | [`binwalk`](../reference/examine-the-filesystem/binwalk.md) |  |
-| binwalk3 | `binwalk3` |  |
+| 7zip | `7zip` | 7-Zip file archiver with a high compression ratio. |
+| afflib-tools | `afflib-tools` | Advanced Forensics Format Library (utilities). |
+| apktool | `apktool` | Tool for reverse engineering Android apk files. |
+| autopsy | `autopsy` | Graphical interface to SleuthKit. |
+| [binwalk](../reference/examine-the-filesystem/binwalk.md) | [`binwalk`](../reference/examine-the-filesystem/binwalk.md) | Tool library for analyzing binary blobs and executable code. |
+| binwalk3 | `binwalk3` | Tool library for analyzing binary blobs and executable code. |
 | bulk-extractor | `bulk-extractor` |  |
-| bytecode-viewer | `bytecode-viewer` |  |
-| cabextract | `cabextract` |  |
-| chkrootkit | `chkrootkit` |  |
-| creddump7 | `creddump7` |  |
-| [dc3dd](../reference/acquire-preserve/dc3dd.md) | [`dc3dd`](../reference/acquire-preserve/dc3dd.md) |  |
-| [dcfldd](../reference/acquire-preserve/dcfldd.md) | [`dcfldd`](../reference/acquire-preserve/dcfldd.md) |  |
-| ddrescue | `ddrescue` |  |
-| dumpzilla | `dumpzilla` |  |
-| edb-debugger | `edb-debugger` |  |
-| ewf-tools | `ewf-tools` |  |
-| exifprobe | `exifprobe` |  |
-| exiv2 | `exiv2` |  |
-| ext3grep | `ext3grep` |  |
-| ext4magic | `ext4magic` |  |
-| extundelete | `extundelete` |  |
-| fcrackzip | `fcrackzip` |  |
-| firmware-mod-kit | `firmware-mod-kit` |  |
-| [foremost](../reference/examine-the-filesystem/foremost.md) | [`foremost`](../reference/examine-the-filesystem/foremost.md) |  |
-| forensic-artifacts | `forensic-artifacts` |  |
-| forensics-colorize | `forensics-colorize` |  |
-| galleta | `galleta` |  |
-| gdb | `gdb` |  |
-| gpart | `gpart` |  |
-| gparted | `gparted` |  |
-| grokevt | `grokevt` |  |
-| guymager | `guymager` |  |
-| hashdeep | `hashdeep` |  |
-| [inetsim](../reference/network-analysis/inetsim.md) | [`inetsim`](../reference/network-analysis/inetsim.md) |  |
-| jadx | `jadx` |  |
-| javasnoop | `javasnoop` |  |
-| libhivex-bin | `libhivex-bin` |  |
-| libsmali-java | `libsmali-java` |  |
-| lvm2 | `lvm2` |  |
-| lynis | `lynis` |  |
-| mac-robber | `mac-robber` |  |
-| magicrescue | `magicrescue` |  |
+| bytecode-viewer | `bytecode-viewer` | Java 8+ Jar & Android APK Reverse Engineering Suite. |
+| cabextract | `cabextract` | Microsoft Cabinet file unpacker. |
+| chkrootkit | `chkrootkit` | Rootkit detector. |
+| creddump7 | `creddump7` | Python tool to extract credentials and secrets from Windows registry hives. |
+| [dc3dd](../reference/acquire-preserve/dc3dd.md) | [`dc3dd`](../reference/acquire-preserve/dc3dd.md) | Patched version of GNU dd with forensic features. |
+| [dcfldd](../reference/acquire-preserve/dcfldd.md) | [`dcfldd`](../reference/acquire-preserve/dcfldd.md) | Enhanced version of dd for forensics and security. |
+| ddrescue | `ddrescue` | Data recovery and protection tool. |
+| dumpzilla | `dumpzilla` | Mozilla browser forensic tool. |
+| edb-debugger | `edb-debugger` | Cross platform x86/x86-64 debugger. |
+| ewf-tools | `ewf-tools` | Collection of tools for reading and writing EWF files. |
+| exifprobe | `exifprobe` | Read metadata from digital pictures. |
+| exiv2 | `exiv2` | EXIF/IPTC/XMP metadata manipulation tool. |
+| ext3grep | `ext3grep` | Tool to help recover deleted files on ext3 filesystems. |
+| ext4magic | `ext4magic` | Recover deleted files from ext3 or ext4 partitions. |
+| extundelete | `extundelete` | Utility to recover deleted files from ext3/ext4 partition. |
+| fcrackzip | `fcrackzip` | Password cracker for zip archives. |
+| firmware-mod-kit | `firmware-mod-kit` | Deconstruct and reconstruct firmware images. |
+| [foremost](../reference/examine-the-filesystem/foremost.md) | [`foremost`](../reference/examine-the-filesystem/foremost.md) | Forensic program to recover lost files. |
+| forensic-artifacts | `forensic-artifacts` | Knowledge base of forensic artifacts (data files). |
+| forensics-colorize | `forensics-colorize` | Show differences between files using color graphics. |
+| galleta | `galleta` | Internet Explorer cookie forensic analysis tool. |
+| gdb | `gdb` | GNU Debugger. |
+| gpart | `gpart` | Guess PC disk partition table, find lost partitions. |
+| gparted | `gparted` | GNOME partition editor. |
+| grokevt | `grokevt` | Scripts for reading Microsoft Windows event log files. |
+| guymager | `guymager` | Forensic imaging tool based on Qt. |
+| hashdeep | `hashdeep` | Recursively compute hashsums or piecewise hashings. |
+| [inetsim](../reference/network-analysis/inetsim.md) | [`inetsim`](../reference/network-analysis/inetsim.md) | Software suite for simulating common internet services. |
+| jadx | `jadx` | Dex to Java decompiler. |
+| javasnoop | `javasnoop` | Intercept Java applications locally. |
+| libhivex-bin | `libhivex-bin` | Utilities for reading and writing Windows Registry hives. |
+| libsmali-java | `libsmali-java` | Assembler/disassembler for Android's dex format. |
+| lvm2 | `lvm2` | Linux Logical Volume Manager. |
+| lynis | `lynis` | Security auditing tool for Unix based systems. |
+| mac-robber | `mac-robber` | Collects data about allocated files in mounted filesystems. |
+| magicrescue | `magicrescue` | Recover files by looking for magic bytes. |
 | md5deep | `md5deep` |  |
-| mdbtools | `mdbtools` |  |
-| memdump | `memdump` |  |
-| metacam | `metacam` |  |
-| missidentify | `missidentify` |  |
-| myrescue | `myrescue` |  |
-| nasm | `nasm` |  |
-| nasty | `nasty` |  |
-| ollydbg | `ollydbg` |  |
-| parted | `parted` |  |
-| pasco | `pasco` |  |
-| [pdf-parser](../reference/malware-triage-documents/pdf-parser.md) | [`pdf-parser`](../reference/malware-triage-documents/pdf-parser.md) |  |
-| [pdfid](../reference/malware-triage-documents/pdfid.md) | [`pdfid`](../reference/malware-triage-documents/pdfid.md) |  |
-| plaso | `plaso` |  |
-| polenum | `polenum` |  |
-| pst-utils | `pst-utils` |  |
-| python3-capstone | `python3-capstone` |  |
-| python3-dfdatetime | `python3-dfdatetime` |  |
-| python3-dfvfs | `python3-dfvfs` |  |
-| python3-dfwinreg | `python3-dfwinreg` |  |
-| python3-distorm3 | `python3-distorm3` |  |
-| radare2 | `radare2` |  |
-| readpe | `readpe` |  |
-| recoverdm | `recoverdm` |  |
-| recoverjpeg | `recoverjpeg` |  |
+| mdbtools | `mdbtools` | JET / MS Access database (MDB) tools. |
+| memdump | `memdump` | Utility to dump memory contents to standard output. |
+| metacam | `metacam` | Extract EXIF information from digital camera files. |
+| missidentify | `missidentify` | Find win32 applications. |
+| myrescue | `myrescue` | Rescue data from damaged disks. |
+| nasm | `nasm` | General-purpose x86 assembler. |
+| nasty | `nasty` | Tool which helps you to recover your GPG passphrase. |
+| ollydbg | `ollydbg` | 32-bit assembler level analysing debugger. |
+| parted | `parted` | Disk partition manipulator. |
+| pasco | `pasco` | Internet Explorer cache forensic analysis tool. |
+| [pdf-parser](../reference/malware-triage-documents/pdf-parser.md) | [`pdf-parser`](../reference/malware-triage-documents/pdf-parser.md) | Parses PDF files to identify fundamental elements. |
+| [pdfid](../reference/malware-triage-documents/pdfid.md) | [`pdfid`](../reference/malware-triage-documents/pdfid.md) | Scans PDF files for certain PDF keywords. |
+| plaso | `plaso` | Super timeline all the things -- metapackage. |
+| polenum | `polenum` | Extracts the password policy from a Windows system. |
+| pst-utils | `pst-utils` | Tools for reading Microsoft Outlook PST files. |
+| python3-capstone | `python3-capstone` | Lightweight multi-architecture disassembly framework - Python bindings. |
+| python3-dfdatetime | `python3-dfdatetime` | Digital Forensics date and time library for Python 3. |
+| python3-dfvfs | `python3-dfvfs` | Digital Forensics Virtual File System. |
+| python3-dfwinreg | `python3-dfwinreg` | Digital Forensics Windows Registry library for Python 3. |
+| python3-distorm3 | `python3-distorm3` | Powerful disassembler library for x86/AMD64 binary streams (Python3 bindings). |
+| radare2 | `radare2` | Free and advanced command line hexadecimal editor. |
+| readpe | `readpe` | Command-line tools to manipulate Windows PE files. |
+| recoverdm | `recoverdm` | Recover files on disks with damaged sectors. |
+| recoverjpeg | `recoverjpeg` | Recover JFIF (JPEG) pictures and MOV movies. |
 | recstudio | `recstudio` |  |
-| reglookup | `reglookup` |  |
-| [regripper](../reference/windows-artifacts/regripper.md) | [`regripper`](../reference/windows-artifacts/regripper.md) |  |
-| rephrase | `rephrase` |  |
-| rifiuti | `rifiuti` |  |
-| rifiuti2 | `rifiuti2` |  |
-| rizin-cutter | `rizin-cutter` |  |
-| rkhunter | `rkhunter` |  |
-| [rsakeyfind](../reference/memory-forensics/rsakeyfind.md) | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) |  |
-| rz-ghidra | `rz-ghidra` |  |
-| safecopy | `safecopy` |  |
-| samdump2 | `samdump2` |  |
-| [scalpel](../reference/examine-the-filesystem/scalpel.md) | [`scalpel`](../reference/examine-the-filesystem/scalpel.md) |  |
-| scrounge-ntfs | `scrounge-ntfs` |  |
-| sleuthkit | `sleuthkit` |  |
-| sqlitebrowser | `sqlitebrowser` |  |
-| [ssdeep](../reference/acquire-preserve/ssdeep.md) | [`ssdeep`](../reference/acquire-preserve/ssdeep.md) |  |
-| tcpdump | `tcpdump` |  |
-| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) |  |
-| tcpick | `tcpick` |  |
-| tcpreplay | `tcpreplay` |  |
-| truecrack | `truecrack` |  |
-| undbx | `undbx` |  |
-| unhide | `unhide` |  |
+| reglookup | `reglookup` | Utility to analysis for Windows NT-based registry. |
+| [regripper](../reference/windows-artifacts/regripper.md) | [`regripper`](../reference/windows-artifacts/regripper.md) | Perform forensic analysis of registry hives. |
+| rephrase | `rephrase` | Specialized passphrase recovery tool for GnuPG. |
+| rifiuti | `rifiuti` | MS Windows recycle bin analysis tool. |
+| rifiuti2 | `rifiuti2` | Replacement for rifiuti, a MS Windows recycle bin analysis tool. |
+| rizin-cutter | `rizin-cutter` | Reverse engineering platform powered by rizin. |
+| rkhunter | `rkhunter` | Rootkit, backdoor, sniffer and exploit scanner. |
+| [rsakeyfind](../reference/memory-forensics/rsakeyfind.md) | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) | Locates BER-encoded RSA private keys in memory images. |
+| rz-ghidra | `rz-ghidra` | Ghidra decompiler and sleigh disassembler for rizin. |
+| safecopy | `safecopy` | Data recovery tool for problematic or damaged media. |
+| samdump2 | `samdump2` | Dump Windows 2k/NT/XP password hashes. |
+| [scalpel](../reference/examine-the-filesystem/scalpel.md) | [`scalpel`](../reference/examine-the-filesystem/scalpel.md) | Fast filesystem-independent file recovery. |
+| scrounge-ntfs | `scrounge-ntfs` | Data recovery program for NTFS filesystems. |
+| sleuthkit | `sleuthkit` | Tools for forensics analysis on volume and filesystem data. |
+| sqlitebrowser | `sqlitebrowser` | GUI editor for SQLite databases. |
+| [ssdeep](../reference/acquire-preserve/ssdeep.md) | [`ssdeep`](../reference/acquire-preserve/ssdeep.md) | Recursive piecewise hashing tool. |
+| tcpdump | `tcpdump` | Command-line network traffic analyzer. |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) | TCP flow recorder. |
+| tcpick | `tcpick` | TCP stream sniffer and connection tracker. |
+| tcpreplay | `tcpreplay` | Tool to replay saved tcpdump files at arbitrary speeds. |
+| truecrack | `truecrack` | Bruteforce password cracker for TrueCrypt volumes. |
+| undbx | `undbx` | Tool to extract, recover and undelete e-mail messages from .dbx files. |
+| unhide | `unhide` | Forensic tool to find hidden processes and ports. |
 | unrar | `unrar` |  |
-| upx-ucl | `upx-ucl` |  |
-| vinetto | `vinetto` |  |
+| upx-ucl | `upx-ucl` | Efficient live-compressor for executables. |
+| vinetto | `vinetto` | Forensics tool to examine Thumbs.db files. |
 | wce | `wce` |  |
-| winregfs | `winregfs` |  |
-| wireshark | `wireshark` |  |
-| xmount | `xmount` |  |
-| xplico | `xplico` |  |
-| [yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) |  |
+| winregfs | `winregfs` | Windows registry FUSE filesystem. |
+| wireshark | `wireshark` | Network traffic analyzer - graphical interface. |
+| xmount | `xmount` | Tool for crossmounting between disk image formats. |
+| xplico | `xplico` | Network Forensic Analysis Tool (NFAT). |
+| [yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) | Pattern matching swiss knife for malware researchers. |
 
 ### Fuzzing
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| afl++ | `afl++` |  |
-| sfuzz | `sfuzz` |  |
-| spike | `spike` |  |
-| wfuzz | `wfuzz` |  |
+| afl++ | `afl++` | Instrumentation-driven fuzzer for binary formats. |
+| sfuzz | `sfuzz` | Black Box testing utilities. |
+| spike | `spike` | Network protocol fuzzer. |
+| wfuzz | `wfuzz` | Web application bruteforcer. |
 
 ### Information Gathering
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| 0trace | `0trace` |  |
-| arping | `arping` |  |
-| braa | `braa` |  |
-| dmitry | `dmitry` |  |
-| dnsenum | `dnsenum` |  |
-| dnsmap | `dnsmap` |  |
-| dnsrecon | `dnsrecon` |  |
-| dnstracer | `dnstracer` |  |
-| dnswalk | `dnswalk` |  |
-| enum4linux | `enum4linux` |  |
-| fierce | `fierce` |  |
-| firewalk | `firewalk` |  |
-| fping | `fping` |  |
-| fragrouter | `fragrouter` |  |
-| ftester | `ftester` |  |
-| hping3 | `hping3` |  |
-| ike-scan | `ike-scan` |  |
-| intrace | `intrace` |  |
+| 0trace | `0trace` | Traceroute tool that can run within an existing TCP connection. |
+| arping | `arping` | Sends IP and/or ARP pings (to the MAC address). |
+| braa | `braa` | Mass SNMP scanner. |
+| dmitry | `dmitry` | Deepmagic Information Gathering Tool. |
+| dnsenum | `dnsenum` | Tool to enumerate domain DNS information. |
+| dnsmap | `dnsmap` | DNS domain name brute forcing tool. |
+| dnsrecon | `dnsrecon` | Powerful DNS enumeration script. |
+| dnstracer | `dnstracer` | Trace DNS queries to the source. |
+| dnswalk | `dnswalk` | Checks dns zone information using nameserver lookups. |
+| enum4linux | `enum4linux` | Enumerates info from Windows and Samba systems. |
+| fierce | `fierce` | Domain DNS scanner. |
+| firewalk | `firewalk` | Active reconnaissance network security tool. |
+| fping | `fping` | Sends ICMP ECHO_REQUEST packets to network hosts. |
+| fragrouter | `fragrouter` | IDS evasion toolkit. |
+| ftester | `ftester` | Tool for testing firewalls and Intrusion Detection System (IDS). |
+| hping3 | `hping3` | Active Network Smashing Tool. |
+| ike-scan | `ike-scan` | Discover and fingerprint IKE hosts (IPsec VPN Servers). |
+| intrace | `intrace` | Traceroute-like application piggybacking on existing TCP connections. |
 | irpas | `irpas` |  |
-| lbd | `lbd` |  |
-| legion | `legion` |  |
+| lbd | `lbd` | Load balancer detector. |
+| legion | `legion` | Semi-automated network penetration testing tool. |
 | maltego | `maltego` |  |
-| masscan | `masscan` |  |
-| metagoofil | `metagoofil` |  |
-| nbtscan | `nbtscan` |  |
-| ncat | `ncat` |  |
-| netdiscover | `netdiscover` |  |
-| netmask | `netmask` |  |
-| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
-| onesixtyone | `onesixtyone` |  |
-| p0f | `p0f` |  |
-| qsslcaudit | `qsslcaudit` |  |
-| recon-ng | `recon-ng` |  |
-| smbmap | `smbmap` |  |
-| smtp-user-enum | `smtp-user-enum` |  |
-| snmpcheck | `snmpcheck` |  |
-| ssldump | `ssldump` |  |
-| sslh | `sslh` |  |
-| sslscan | `sslscan` |  |
-| sslyze | `sslyze` |  |
-| swaks | `swaks` |  |
-| thc-ipv6 | `thc-ipv6` |  |
-| theharvester | `theharvester` |  |
-| tlssled | `tlssled` |  |
-| twofi | `twofi` |  |
-| unicornscan | `unicornscan` |  |
+| masscan | `masscan` | TCP port scanner. |
+| metagoofil | `metagoofil` | Tool designed for extracting metadata of public documents. |
+| nbtscan | `nbtscan` | Scan networks searching for NetBIOS information. |
+| ncat | `ncat` | NMAP netcat reimplementation. |
+| netdiscover | `netdiscover` | Active/passive network address scanner using ARP requests. |
+| netmask | `netmask` | Helps determine network masks. |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) | The Network Mapper. |
+| onesixtyone | `onesixtyone` | Fast and simple SNMP scanner. |
+| p0f | `p0f` | Passive OS fingerprinting tool. |
+| qsslcaudit | `qsslcaudit` | Test SSL/TLS clients how secure they are. |
+| recon-ng | `recon-ng` | Web Reconnaissance framework written in Python. |
+| smbmap | `smbmap` | Handy SMB enumeration tool. |
+| smtp-user-enum | `smtp-user-enum` | Username guessing tool for the SMTP service. |
+| snmpcheck | `snmpcheck` | SNMP service enumeration tool. |
+| ssldump | `ssldump` | SSLv3/TLS network protocol analyzer. |
+| sslh | `sslh` | Applicative protocol multiplexer. |
+| sslscan | `sslscan` | Tests SSL/TLS enabled services to discover supported cipher suites. |
+| sslyze | `sslyze` | Fast and full-featured SSL scanner. |
+| swaks | `swaks` | SMTP command-line test tool. |
+| thc-ipv6 | `thc-ipv6` | The Hacker Choice's IPv6 Attack Toolkit. |
+| theharvester | `theharvester` | Tool for gathering e-mail accounts and subdomain names from public sources. |
+| tlssled | `tlssled` | Evaluates the security of a target SSL/TLS (HTTPS) server. |
+| twofi | `twofi` | Twitter words of interest. |
+| unicornscan | `unicornscan` | Userland distributed TCP/IP stack. |
 | urlcrazy | `urlcrazy` |  |
-| wafw00f | `wafw00f` |  |
+| wafw00f | `wafw00f` | Identify and fingerprint Web Application Firewall products. |
 | zenmap | `zenmap` |  |
 
 ### Passwords
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| cewl | `cewl` |  |
-| chntpw | `chntpw` |  |
-| cisco-auditing-tool | `cisco-auditing-tool` |  |
-| cmospwd | `cmospwd` |  |
-| crackle | `crackle` |  |
-| creddump7 | `creddump7` |  |
-| crunch | `crunch` |  |
-| fcrackzip | `fcrackzip` |  |
-| freerdp3-x11 | `freerdp3-x11` |  |
-| gpp-decrypt | `gpp-decrypt` |  |
-| hash-identifier | `hash-identifier` |  |
-| [hashcat](../reference/decode-deobfuscate/hashcat.md) | [`hashcat`](../reference/decode-deobfuscate/hashcat.md) |  |
-| hashcat-utils | `hashcat-utils` |  |
-| hashid | `hashid` |  |
-| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) |  |
-| hydra-gtk | `hydra-gtk` |  |
-| [john](../reference/decode-deobfuscate/john.md) | [`john`](../reference/decode-deobfuscate/john.md) |  |
-| johnny | `johnny` |  |
-| maskprocessor | `maskprocessor` |  |
-| medusa | `medusa` |  |
-| mimikatz | `mimikatz` |  |
-| ncrack | `ncrack` |  |
-| onesixtyone | `onesixtyone` |  |
-| ophcrack | `ophcrack` |  |
-| ophcrack-cli | `ophcrack-cli` |  |
-| pack | `pack` |  |
-| pack2 | `pack2` |  |
-| passing-the-hash | `passing-the-hash` |  |
-| patator | `patator` |  |
-| pdfcrack | `pdfcrack` |  |
-| pipal | `pipal` |  |
-| polenum | `polenum` |  |
-| rainbowcrack | `rainbowcrack` |  |
-| rarcrack | `rarcrack` |  |
-| rcracki-mt | `rcracki-mt` |  |
-| rsmangler | `rsmangler` |  |
-| samdump2 | `samdump2` |  |
-| seclists | `seclists` |  |
-| sipcrack | `sipcrack` |  |
-| sipvicious | `sipvicious` |  |
-| smbmap | `smbmap` |  |
-| sqldict | `sqldict` |  |
-| statsprocessor | `statsprocessor` |  |
-| sucrack | `sucrack` |  |
-| thc-pptp-bruter | `thc-pptp-bruter` |  |
-| truecrack | `truecrack` |  |
-| twofi | `twofi` |  |
-| wordlists | `wordlists` |  |
+| cewl | `cewl` | Custom word list generator. |
+| chntpw | `chntpw` | NT SAM password recovery utility. |
+| cisco-auditing-tool | `cisco-auditing-tool` | Scans Cisco routers for vulnerabilities. |
+| cmospwd | `cmospwd` | Decrypt BIOS passwords from CMOS. |
+| crackle | `crackle` | Crack and decrypt BLE encryption. |
+| creddump7 | `creddump7` | Python tool to extract credentials and secrets from Windows registry hives. |
+| crunch | `crunch` | Tool for creating wordlist. |
+| fcrackzip | `fcrackzip` | Password cracker for zip archives. |
+| freerdp3-x11 | `freerdp3-x11` | RDP client for Windows Terminal Services (X11 client tramsitional package). |
+| gpp-decrypt | `gpp-decrypt` | Group Policy Preferences decrypter. |
+| hash-identifier | `hash-identifier` | Tool to identify hash types. |
+| [hashcat](../reference/decode-deobfuscate/hashcat.md) | [`hashcat`](../reference/decode-deobfuscate/hashcat.md) | World's fastest and most advanced password recovery utility. |
+| hashcat-utils | `hashcat-utils` | Set of small utilities for advanced password cracking. |
+| hashid | `hashid` | Identify the different types of hashes used to encrypt data. |
+| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) | Very fast network logon cracker. |
+| hydra-gtk | `hydra-gtk` | Very fast network logon cracker - GTK+ based GUI. |
+| [john](../reference/decode-deobfuscate/john.md) | [`john`](../reference/decode-deobfuscate/john.md) | Active password cracking tool. |
+| johnny | `johnny` | GUI for John the Ripper. |
+| maskprocessor | `maskprocessor` | High-performance word generator with a per-position configurable charset. |
+| medusa | `medusa` | Fast, parallel, modular, login brute-forcer for network services. |
+| mimikatz | `mimikatz` | Uses admin rights on Windows to display passwords in plaintext. |
+| ncrack | `ncrack` | High-speed network authentication cracking tool. |
+| onesixtyone | `onesixtyone` | Fast and simple SNMP scanner. |
+| ophcrack | `ophcrack` | Microsoft Windows password cracker using rainbow tables (gui). |
+| ophcrack-cli | `ophcrack-cli` | Microsoft Windows password cracker using rainbow tables (cmdline). |
+| pack | `pack` | Password analysis and cracking kit. |
+| pack2 | `pack2` | Password analysis and cracking kit 2. |
+| passing-the-hash | `passing-the-hash` | Patched tools to use password hashes as authentication input. |
+| patator | `patator` | Multi-purpose brute-forcer. |
+| pdfcrack | `pdfcrack` | PDF files password cracker. |
+| pipal | `pipal` | Statistical analysis on password dumps. |
+| polenum | `polenum` | Extracts the password policy from a Windows system. |
+| rainbowcrack | `rainbowcrack` | Rainbow table password cracker. |
+| rarcrack | `rarcrack` | Password cracker for rar archives. |
+| rcracki-mt | `rcracki-mt` | Version of rcrack that supports hybrid and indexed tables. |
+| rsmangler | `rsmangler` | Wordlist mangling tool. |
+| samdump2 | `samdump2` | Dump Windows 2k/NT/XP password hashes. |
+| seclists | `seclists` | Collection of multiple types of security lists. |
+| sipcrack | `sipcrack` | SIP login dumper/cracker. |
+| sipvicious | `sipvicious` | Tools to audit SIP based VoIP systems. |
+| smbmap | `smbmap` | Handy SMB enumeration tool. |
+| sqldict | `sqldict` | Dictionary attack tool for SQL Server. |
+| statsprocessor | `statsprocessor` | Word generator based on per-position Markov chains. |
+| sucrack | `sucrack` | Multithreaded su bruteforcer. |
+| thc-pptp-bruter | `thc-pptp-bruter` | THC PPTP Brute Force. |
+| truecrack | `truecrack` | Bruteforce password cracker for TrueCrypt volumes. |
+| twofi | `twofi` | Twitter words of interest. |
+| wordlists | `wordlists` | Contains the rockyou wordlist. |
 
 ### Post Exploitation
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| cymothoa | `cymothoa` |  |
-| dbd | `dbd` |  |
-| dns2tcp | `dns2tcp` |  |
-| exe2hexbat | `exe2hexbat` |  |
-| iodine | `iodine` |  |
-| laudanum | `laudanum` |  |
-| mimikatz | `mimikatz` |  |
-| miredo | `miredo` |  |
-| nishang | `nishang` |  |
-| powersploit | `powersploit` |  |
-| proxychains4 | `proxychains4` |  |
-| proxytunnel | `proxytunnel` |  |
-| ptunnel | `ptunnel` |  |
-| pwnat | `pwnat` |  |
-| sbd | `sbd` |  |
+| cymothoa | `cymothoa` | Stealth backdooring tool. |
+| dbd | `dbd` | Netcat clone with encryption. |
+| dns2tcp | `dns2tcp` | TCP-over-DNS tunnel server and client. |
+| exe2hexbat | `exe2hexbat` | Convert EXE to bat. |
+| iodine | `iodine` | Tool for tunneling IPv4 data through a DNS server. |
+| laudanum | `laudanum` | Collection of injectable web files. |
+| mimikatz | `mimikatz` | Uses admin rights on Windows to display passwords in plaintext. |
+| miredo | `miredo` | Teredo IPv6 tunneling through NATs. |
+| nishang | `nishang` | Collection of PowerShell scripts and payloads. |
+| powersploit | `powersploit` | PowerShell Post-Exploitation Framework. |
+| proxychains4 | `proxychains4` | Redirect connections through socks/http proxies (proxychains-ng). |
+| proxytunnel | `proxytunnel` | Help SSH and other protocols through HTTP(S) proxies. |
+| ptunnel | `ptunnel` | Tunnel TCP connections over ICMP packets. |
+| pwnat | `pwnat` | NAT to NAT client-server communication. |
+| sbd | `sbd` | Secure backdoor for Linux and Windows. |
 | shellter | `shellter` |  |
-| sslh | `sslh` |  |
-| stunnel4 | `stunnel4` |  |
-| udptunnel | `udptunnel` |  |
-| veil | `veil` |  |
-| webacoo | `webacoo` |  |
-| weevely | `weevely` |  |
+| sslh | `sslh` | Applicative protocol multiplexer. |
+| stunnel4 | `stunnel4` | Universal SSL tunnnel for network daemons - compatibility package. |
+| udptunnel | `udptunnel` | Tunnel UDP packets over a TCP connection. |
+| veil | `veil` | Generates payloads to bypass anti-virus solutions. |
+| webacoo | `webacoo` | Web backdoor cookie script kit. |
+| weevely | `weevely` | Stealth tiny web shell. |
 
 ### Reverse Engineering
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| apktool | `apktool` |  |
-| bytecode-viewer | `bytecode-viewer` |  |
-| clang | `clang` |  |
-| dex2jar | `dex2jar` |  |
-| edb-debugger | `edb-debugger` |  |
-| jadx | `jadx` |  |
-| javasnoop | `javasnoop` |  |
-| jd-gui | `jd-gui` |  |
-| metasploit-framework | `metasploit-framework` |  |
-| ollydbg | `ollydbg` |  |
-| radare2 | `radare2` |  |
+| apktool | `apktool` | Tool for reverse engineering Android apk files. |
+| bytecode-viewer | `bytecode-viewer` | Java 8+ Jar & Android APK Reverse Engineering Suite. |
+| clang | `clang` | C, C++ and Objective-C compiler (LLVM based), clang binary. |
+| dex2jar | `dex2jar` | Tools to work with android .dex and java .class files. |
+| edb-debugger | `edb-debugger` | Cross platform x86/x86-64 debugger. |
+| jadx | `jadx` | Dex to Java decompiler. |
+| javasnoop | `javasnoop` | Intercept Java applications locally. |
+| jd-gui | `jd-gui` | GUI Java .class decompiler. |
+| metasploit-framework | `metasploit-framework` | Framework for exploit development and vulnerability research. |
+| ollydbg | `ollydbg` | 32-bit assembler level analysing debugger. |
+| radare2 | `radare2` | Free and advanced command line hexadecimal editor. |
 | recstudio | `recstudio` |  |
-| rizin | `rizin` |  |
-| rizin-cutter | `rizin-cutter` |  |
-| rz-ghidra | `rz-ghidra` |  |
+| rizin | `rizin` | Reverse engineering framework and command-line toolset. |
+| rizin-cutter | `rizin-cutter` | Reverse engineering platform powered by rizin. |
+| rz-ghidra | `rz-ghidra` | Ghidra decompiler and sleigh disassembler for rizin. |
 
 ### Sniffing Spoofing
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| above | `above` |  |
-| bettercap | `bettercap` |  |
-| darkstat | `darkstat` |  |
-| dnschef | `dnschef` |  |
-| driftnet | `driftnet` |  |
-| dsniff | `dsniff` |  |
-| ettercap-graphical | `ettercap-graphical` |  |
-| ferret-sidejack | `ferret-sidejack` |  |
-| fiked | `fiked` |  |
-| hamster-sidejack | `hamster-sidejack` |  |
-| hexinject | `hexinject` |  |
-| isr-evilgrade | `isr-evilgrade` |  |
-| macchanger | `macchanger` |  |
-| mitmproxy | `mitmproxy` |  |
-| netsniff-ng | `netsniff-ng` |  |
-| rebind | `rebind` |  |
-| responder | `responder` |  |
-| sniffjoke | `sniffjoke` |  |
-| sslsniff | `sslsniff` |  |
-| sslsplit | `sslsplit` |  |
-| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) |  |
-| tcpreplay | `tcpreplay` |  |
-| wifi-honey | `wifi-honey` |  |
-| wireshark | `wireshark` |  |
+| above | `above` | Network security sniffer for finding vulnerabilities in the network. |
+| bettercap | `bettercap` | Complete, modular, portable and easily extensible MITM framework. |
+| darkstat | `darkstat` | Network traffic analyzer. |
+| dnschef | `dnschef` | DNS proxy for penetration testers. |
+| driftnet | `driftnet` | Picks out and displays images from network traffic. |
+| dsniff | `dsniff` | Various tools to sniff network traffic for cleartext insecurities. |
+| ettercap-graphical | `ettercap-graphical` | Ettercap GUI-enabled executable. |
+| ferret-sidejack | `ferret-sidejack` | Monitors data and extracts interesting data. |
+| fiked | `fiked` | Cisco VPN attack tool. |
+| hamster-sidejack | `hamster-sidejack` | Sidejacking tool. |
+| hexinject | `hexinject` | Versatile packet injector and sniffer. |
+| isr-evilgrade | `isr-evilgrade` | Evilgrade framework. |
+| macchanger | `macchanger` | Utility for manipulating the MAC address of network interfaces. |
+| mitmproxy | `mitmproxy` | SSL-capable man-in-the-middle HTTP proxy. |
+| netsniff-ng | `netsniff-ng` | Linux network packet sniffer toolkit. |
+| rebind | `rebind` | DNS rebinding tool. |
+| responder | `responder` | LLMNR/NBT-NS/mDNS Poisoner. |
+| sniffjoke | `sniffjoke` | Transparent TCP connection scrambler. |
+| sslsniff | `sslsniff` | SSL/TLS man-in-the-middle attack tool. |
+| sslsplit | `sslsplit` | Transparent and scalable SSL/TLS interception. |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) | TCP flow recorder. |
+| tcpreplay | `tcpreplay` | Tool to replay saved tcpdump files at arbitrary speeds. |
+| wifi-honey | `wifi-honey` | Wi-Fi honeypot. |
+| wireshark | `wireshark` | Network traffic analyzer - graphical interface. |
 
 ### Vulnerability
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| afl++ | `afl++` |  |
-| bed | `bed` |  |
-| cisco-auditing-tool | `cisco-auditing-tool` |  |
-| cisco-global-exploiter | `cisco-global-exploiter` |  |
-| cisco-ocs | `cisco-ocs` |  |
-| cisco-torch | `cisco-torch` |  |
-| copy-router-config | `copy-router-config` |  |
-| dhcpig | `dhcpig` |  |
-| enumiax | `enumiax` |  |
-| gvm | `gvm` |  |
-| iaxflood | `iaxflood` |  |
-| inviteflood | `inviteflood` |  |
-| legion | `legion` |  |
-| lynis | `lynis` |  |
+| afl++ | `afl++` | Instrumentation-driven fuzzer for binary formats. |
+| bed | `bed` | A network protocol fuzzer. |
+| cisco-auditing-tool | `cisco-auditing-tool` | Scans Cisco routers for vulnerabilities. |
+| cisco-global-exploiter | `cisco-global-exploiter` | Simple and fast Cisco exploitation tool. |
+| cisco-ocs | `cisco-ocs` | Mass Cisco scanner. |
+| cisco-torch | `cisco-torch` | Cisco device scanner. |
+| copy-router-config | `copy-router-config` | Copies Cisco configs via SNMP. |
+| dhcpig | `dhcpig` | DHCP exhaustion script using scapy network library. |
+| enumiax | `enumiax` | IAX protocol username enumerator. |
+| gvm | `gvm` | Remote network security auditor - metapackage and useful scripts. |
+| iaxflood | `iaxflood` | VoIP flooder tool. |
+| inviteflood | `inviteflood` | SIP/SDP INVITE message flooding over UDP/IP. |
+| legion | `legion` | Semi-automated network penetration testing tool. |
+| lynis | `lynis` | Security auditing tool for Unix based systems. |
 | nikto | `nikto` |  |
-| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
-| ohrwurm | `ohrwurm` |  |
-| peass | `peass` |  |
-| protos-sip | `protos-sip` |  |
-| rtpbreak | `rtpbreak` |  |
-| rtpflood | `rtpflood` |  |
-| rtpinsertsound | `rtpinsertsound` |  |
-| rtpmixsound | `rtpmixsound` |  |
-| sctpscan | `sctpscan` |  |
-| sfuzz | `sfuzz` |  |
-| siege | `siege` |  |
-| siparmyknife | `siparmyknife` |  |
-| sipp | `sipp` |  |
-| sipsak | `sipsak` |  |
-| sipvicious | `sipvicious` |  |
-| slowhttptest | `slowhttptest` |  |
-| spike | `spike` |  |
-| t50 | `t50` |  |
-| thc-ssl-dos | `thc-ssl-dos` |  |
-| unix-privesc-check | `unix-privesc-check` |  |
-| voiphopper | `voiphopper` |  |
-| yersinia | `yersinia` |  |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) | The Network Mapper. |
+| ohrwurm | `ohrwurm` | RTP fuzzer. |
+| peass | `peass` | Privilege Escalation Awesome Scripts SUITE. |
+| protos-sip | `protos-sip` | SIP test suite. |
+| rtpbreak | `rtpbreak` | Detects, reconstructs, and analyzes RTP sessions. |
+| rtpflood | `rtpflood` | Tool to flood any RTP device. |
+| rtpinsertsound | `rtpinsertsound` | Inserts audio into a specified stream. |
+| rtpmixsound | `rtpmixsound` | Mixes pre-recorded audio in real-time. |
+| sctpscan | `sctpscan` | SCTP network scanner for discovery and security. |
+| sfuzz | `sfuzz` | Black Box testing utilities. |
+| siege | `siege` | HTTP regression testing and benchmarking utility. |
+| siparmyknife | `siparmyknife` | SIP fuzzing tool. |
+| sipp | `sipp` | Traffic generator for the SIP protocol. |
+| sipsak | `sipsak` | SIP Swiss army knife. |
+| sipvicious | `sipvicious` | Tools to audit SIP based VoIP systems. |
+| slowhttptest | `slowhttptest` | Application layer Denial of Service attacks simulation tool. |
+| spike | `spike` | Network protocol fuzzer. |
+| t50 | `t50` | Multi-protocol packet injector tool. |
+| thc-ssl-dos | `thc-ssl-dos` | Stress tester for the SSL handshake. |
+| unix-privesc-check | `unix-privesc-check` | Script to check for simple privilege escalation vectors. |
+| voiphopper | `voiphopper` | Runs a VLAN hop security test. |
+| yersinia | `yersinia` | Network vulnerabilities check software. |
 
 ### Web
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| apache-users | `apache-users` |  |
-| apache2 | `apache2` |  |
-| beef-xss | `beef-xss` |  |
-| burpsuite | `burpsuite` |  |
-| cadaver | `cadaver` |  |
-| commix | `commix` |  |
-| cutycapt | `cutycapt` |  |
-| davtest | `davtest` |  |
-| default-mysql-server | `default-mysql-server` |  |
-| dirb | `dirb` |  |
-| dirbuster | `dirbuster` |  |
-| dotdotpwn | `dotdotpwn` |  |
-| eyewitness | `eyewitness` |  |
-| ferret-sidejack | `ferret-sidejack` |  |
-| ftester | `ftester` |  |
-| hakrawler | `hakrawler` |  |
-| hamster-sidejack | `hamster-sidejack` |  |
-| heartleech | `heartleech` |  |
+| apache-users | `apache-users` | Enumerate usernames on systems with Apache UserDir module. |
+| apache2 | `apache2` | Apache HTTP Server. |
+| beef-xss | `beef-xss` | Browser Exploitation Framework (BeEF). |
+| burpsuite | `burpsuite` | Platform for security testing of web applications. |
+| cadaver | `cadaver` | Command-line WebDAV client. |
+| commix | `commix` | Automated All-in-One OS Command Injection and Exploitation Tool. |
+| cutycapt | `cutycapt` | Utility to capture WebKit's rendering of a web page. |
+| davtest | `davtest` | Testing tool for WebDAV servers. |
+| default-mysql-server | `default-mysql-server` | MySQL database server binaries and system database setup (metapackage). |
+| dirb | `dirb` | URL bruteforcing tool. |
+| dirbuster | `dirbuster` | Web server directory brute-forcer. |
+| dotdotpwn | `dotdotpwn` | Directory Traversal Fuzzer. |
+| eyewitness | `eyewitness` | Rapid web application triage tool. |
+| ferret-sidejack | `ferret-sidejack` | Monitors data and extracts interesting data. |
+| ftester | `ftester` | Tool for testing firewalls and Intrusion Detection System (IDS). |
+| hakrawler | `hakrawler` | Web crawler designed for easy, quick discovery of endpoints and assets. |
+| hamster-sidejack | `hamster-sidejack` | Sidejacking tool. |
+| heartleech | `heartleech` | Scanner detecting systems vulnerable to the heartbleed OpenSSL bug. |
 | httprint | `httprint` |  |
-| httrack | `httrack` |  |
-| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) |  |
-| hydra-gtk | `hydra-gtk` |  |
-| jboss-autopwn | `jboss-autopwn` |  |
-| joomscan | `joomscan` |  |
-| jsql-injection | `jsql-injection` |  |
-| laudanum | `laudanum` |  |
-| lbd | `lbd` |  |
+| httrack | `httrack` | Copy websites to your computer (Offline browser). |
+| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) | Very fast network logon cracker. |
+| hydra-gtk | `hydra-gtk` | Very fast network logon cracker - GTK+ based GUI. |
+| jboss-autopwn | `jboss-autopwn` | JBoss script for obtaining remote shell access. |
+| joomscan | `joomscan` | OWASP Joomla Vulnerability Scanner Project. |
+| jsql-injection | `jsql-injection` | Java tool for automatic database injection. |
+| laudanum | `laudanum` | Collection of injectable web files. |
+| lbd | `lbd` | Load balancer detector. |
 | maltego | `maltego` |  |
-| medusa | `medusa` |  |
-| mitmproxy | `mitmproxy` |  |
-| ncrack | `ncrack` |  |
+| medusa | `medusa` | Fast, parallel, modular, login brute-forcer for network services. |
+| mitmproxy | `mitmproxy` | SSL-capable man-in-the-middle HTTP proxy. |
+| ncrack | `ncrack` | High-speed network authentication cracking tool. |
 | nikto | `nikto` |  |
-| nishang | `nishang` |  |
-| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
-| oscanner | `oscanner` |  |
+| nishang | `nishang` | Collection of PowerShell scripts and payloads. |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) | The Network Mapper. |
+| oscanner | `oscanner` | Oracle assessment framework. |
 | owasp-mantra-ff | `owasp-mantra-ff` |  |
-| padbuster | `padbuster` |  |
-| paros | `paros` |  |
-| patator | `patator` |  |
-| php | `php` |  |
-| php-mysql | `php-mysql` |  |
-| proxychains4 | `proxychains4` |  |
-| proxytunnel | `proxytunnel` |  |
-| qsslcaudit | `qsslcaudit` |  |
-| redsocks | `redsocks` |  |
-| sidguesser | `sidguesser` |  |
-| siege | `siege` |  |
-| skipfish | `skipfish` |  |
-| slowhttptest | `slowhttptest` |  |
-| sqldict | `sqldict` |  |
-| sqlitebrowser | `sqlitebrowser` |  |
-| sqlmap | `sqlmap` |  |
-| sqlninja | `sqlninja` |  |
-| sqlsus | `sqlsus` |  |
-| ssldump | `ssldump` |  |
-| sslh | `sslh` |  |
-| sslscan | `sslscan` |  |
-| sslsniff | `sslsniff` |  |
-| sslsplit | `sslsplit` |  |
-| sslyze | `sslyze` |  |
-| stunnel4 | `stunnel4` |  |
-| thc-ssl-dos | `thc-ssl-dos` |  |
-| tlssled | `tlssled` |  |
-| tnscmd10g | `tnscmd10g` |  |
-| uniscan | `uniscan` |  |
-| wafw00f | `wafw00f` |  |
-| wapiti | `wapiti` |  |
-| watobo | `watobo` |  |
-| webacoo | `webacoo` |  |
-| webscarab | `webscarab` |  |
-| webshells | `webshells` |  |
-| weevely | `weevely` |  |
-| wfuzz | `wfuzz` |  |
-| whatweb | `whatweb` |  |
-| wireshark | `wireshark` |  |
+| padbuster | `padbuster` | Script for performing Padding Oracle attacks. |
+| paros | `paros` | Web application proxy. |
+| patator | `patator` | Multi-purpose brute-forcer. |
+| php | `php` | Server-side, HTML-embedded scripting language (default). |
+| php-mysql | `php-mysql` | MySQL module for PHP [default]. |
+| proxychains4 | `proxychains4` | Redirect connections through socks/http proxies (proxychains-ng). |
+| proxytunnel | `proxytunnel` | Help SSH and other protocols through HTTP(S) proxies. |
+| qsslcaudit | `qsslcaudit` | Test SSL/TLS clients how secure they are. |
+| redsocks | `redsocks` | Arbitrary TCP connection redirector to a SOCKS or HTTPS proxy server. |
+| sidguesser | `sidguesser` | Guesses sids against an Oracle database. |
+| siege | `siege` | HTTP regression testing and benchmarking utility. |
+| skipfish | `skipfish` | Fully automated, active web application security reconnaissance tool. |
+| slowhttptest | `slowhttptest` | Application layer Denial of Service attacks simulation tool. |
+| sqldict | `sqldict` | Dictionary attack tool for SQL Server. |
+| sqlitebrowser | `sqlitebrowser` | GUI editor for SQLite databases. |
+| sqlmap | `sqlmap` | Automatic SQL injection tool. |
+| sqlninja | `sqlninja` | SQL server injection and takeover tool. |
+| sqlsus | `sqlsus` | MySQL injection tool. |
+| ssldump | `ssldump` | SSLv3/TLS network protocol analyzer. |
+| sslh | `sslh` | Applicative protocol multiplexer. |
+| sslscan | `sslscan` | Tests SSL/TLS enabled services to discover supported cipher suites. |
+| sslsniff | `sslsniff` | SSL/TLS man-in-the-middle attack tool. |
+| sslsplit | `sslsplit` | Transparent and scalable SSL/TLS interception. |
+| sslyze | `sslyze` | Fast and full-featured SSL scanner. |
+| stunnel4 | `stunnel4` | Universal SSL tunnnel for network daemons - compatibility package. |
+| thc-ssl-dos | `thc-ssl-dos` | Stress tester for the SSL handshake. |
+| tlssled | `tlssled` | Evaluates the security of a target SSL/TLS (HTTPS) server. |
+| tnscmd10g | `tnscmd10g` | Tool to prod the oracle tnslsnr process. |
+| uniscan | `uniscan` | LFI, RFI, and RCE vulnerability scanner. |
+| wafw00f | `wafw00f` | Identify and fingerprint Web Application Firewall products. |
+| wapiti | `wapiti` | Web application vulnerability scanner. |
+| watobo | `watobo` | Semi-automated web application scanner. |
+| webacoo | `webacoo` | Web backdoor cookie script kit. |
+| webscarab | `webscarab` | Web application review tool. |
+| webshells | `webshells` | Collection of webshells. |
+| weevely | `weevely` | Stealth tiny web shell. |
+| wfuzz | `wfuzz` | Web application bruteforcer. |
+| whatweb | `whatweb` | Next generation web scanner. |
+| wireshark | `wireshark` | Network traffic analyzer - graphical interface. |
 | wpscan | `wpscan` |  |
-| xsser | `xsser` |  |
-| zaproxy | `zaproxy` |  |
+| xsser | `xsser` | XSS testing framework. |
+| zaproxy | `zaproxy` | Testing tool for finding vulnerabilities in web applications. |
 
 
 ## FLARE-VM
@@ -915,143 +915,143 @@ is written from memory. Sources are listed at the end.
 
 | Tool | Command(s) | Purpose |
 |---|---|---|
-| 010editor | `010editor` |  |
-| 7zip | `7zip` |  |
-| advanced-installer | `advanced-installer` |  |
-| angr | `angr` |  |
-| apimonitor | `apimonitor` |  |
-| apktool | `apktool` |  |
-| asar | `asar` |  |
-| autoit-ripper | `autoit-ripper` |  |
-| binaryninja | `binaryninja` |  |
-| bindiff | `bindiff` |  |
-| blobrunner | `blobrunner` |  |
-| blobrunner64 | `blobrunner64` |  |
-| bytecodeviewer | `bytecodeviewer` |  |
-| [capa](../reference/malware-triage-static/capa.md) | [`capa`](../reference/malware-triage-static/capa.md) |  |
-| capa-explorer-web | `capa-explorer-web` |  |
-| chrome.extensions | `chrome.extensions` |  |
-| cmder | `cmder` |  |
-| codetrack | `codetrack` |  |
-| cryptotester | `cryptotester` |  |
-| cutter | `cutter` |  |
-| [cyberchef](../reference/decode-deobfuscate/cyberchef.md) | [`cyberchef`](../reference/decode-deobfuscate/cyberchef.md) |  |
-| cygwin | `cygwin` |  |
-| de4dot-cex | `de4dot-cex` |  |
-| dependencywalker | `dependencywalker` |  |
-| dex2jar | `dex2jar` |  |
-| didier-stevens-beta | `didier-stevens-beta` |  |
-| didier-stevens-suite | `didier-stevens-suite` |  |
-| [die](../reference/malware-triage-static/die.md) | [`die`](../reference/malware-triage-static/die.md) |  |
-| dll-to-exe | `dll-to-exe` |  |
-| dnlib | `dnlib` |  |
-| dnspyex | `dnspyex` |  |
-| dotdumper | `dotdumper` |  |
+| 010editor | `010editor` | Professional text and hex editor with Binary Templates technology. |
+| 7zip | `7zip` | 7-Zip file archiver with a high compression ratio. |
+| advanced-installer | `advanced-installer` | Advanced Installer is a Windows installer authoring tool that can be used to analyze MSI files. |
+| angr | `angr` | Angr is a multi-architecture binary analysis toolkit providing features like disassembly, IR lifting, program instr... |
+| apimonitor | `apimonitor` | API Monitor lets you monitor and control API calls made by applications and services. |
+| apktool | `apktool` | Tool for reverse engineering Android apk files. |
+| asar | `asar` | Asar decompresses .asar archives. |
+| autoit-ripper | `autoit-ripper` | Extracts compiled AutoIt scripts from PE executables. |
+| binaryninja | `binaryninja` | Binary Ninja is an interactive decompiler, disassembler, debugger, and binary analysis platform built by reverse en... |
+| bindiff | `bindiff` | A comparison tool for binary files that assists in quickly finding differences and similarities in disassembled code. |
+| blobrunner | `blobrunner` | BlobRunner is a simple tool to quickly debug shellcode extracted during malware analysis. |
+| blobrunner64 | `blobrunner64` | BlobRunner is a simple tool to quickly debug shellcode extracted during malware analysis. |
+| bytecodeviewer | `bytecodeviewer` | A lightweight user-friendly Java/Android Bytecode Viewer, Decompiler and more. |
+| [capa](../reference/malware-triage-static/capa.md) | [`capa`](../reference/malware-triage-static/capa.md) | Capa detects capabilities in executable files. You run it against a PE file or shellcode and it tells you what it t... |
+| capa-explorer-web | `capa-explorer-web` | Web interface for exploring and understanding capa results. |
+| chrome.extensions | `chrome.extensions` | A package for multiple useful chrome extensions from the Chrome webstore. |
+| cmder | `cmder` | Metapackage for cmder. |
+| codetrack | `codetrack` | A free .NET Performance Profile and Execution Analyzer. |
+| [cryptotester](../reference/decode-deobfuscate/CryptoTester-gui.md) | [`cryptotester`](../reference/decode-deobfuscate/CryptoTester-gui.md) | Utility tool for performing cryptanalysis with a focus on ransomware cryptography. |
+| cutter | `cutter` | Disconnect routed IP connections. |
+| [cyberchef](../reference/decode-deobfuscate/cyberchef.md) | [`cyberchef`](../reference/decode-deobfuscate/cyberchef.md) | Cyber Swiss Army Knife. |
+| cygwin | `cygwin` | Wrapper for cygwin and useful cygwin packages. |
+| de4dot-cex | `de4dot-cex` | A de4dot fork with full support for vanilla ConfuserEx. |
+| dependencywalker | `dependencywalker` | Scans PE files and builds a hierarchical tree diagram of all dependent modules. |
+| dex2jar | `dex2jar` | Tools to work with android .dex and java .class files. |
+| didier-stevens-beta | `didier-stevens-beta` | Beta versions of Didier Stevens's software. |
+| didier-stevens-suite | `didier-stevens-suite` | Tools colection by Didier Stevens. |
+| [die](../reference/malware-triage-static/die.md) | [`die`](../reference/malware-triage-static/die.md) | Detect It Easy, or abbreviated "DIE" is a program for determining types of files. |
+| dll-to-exe | `dll-to-exe` | Converts a DLL into a ready-to-use EXE. |
+| dnlib | `dnlib` | .NET module/assembly reader/writer library. |
+| dnspyex | `dnspyex` | DnSpyEx is a unofficial continuation of the dnSpy project which is a debugger and .NET assembly editor. You can use... |
+| dotdumper | `dotdumper` | An automatic unpacker and logger for DotNet Framework targeting files. |
 | dotnet3.5 | `dotnet3.5` |  |
-| exeinfope | `exeinfope` |  |
-| explorersuite | `explorersuite` |  |
-| extreme_dumper | `extreme_dumper` |  |
-| ezviewer | `ezviewer` |  |
-| fakenet-ng | `fakenet-ng` |  |
-| fiddler | `fiddler` |  |
-| [file](../reference/examine-the-filesystem/file.md) | [`file`](../reference/examine-the-filesystem/file.md) |  |
-| [floss](../reference/malware-triage-static/floss.md) | [`floss`](../reference/malware-triage-static/floss.md) |  |
-| garbageman | `garbageman` |  |
-| ghidra | `ghidra` |  |
-| goresym | `goresym` |  |
-| gostringungarbler | `gostringungarbler` |  |
-| hashmyfiles | `hashmyfiles` |  |
-| hollowshunter | `hollowshunter` |  |
-| hxd | `hxd` |  |
-| ida.plugin.capa | `ida.plugin.capa` |  |
-| ida.plugin.comida | `ida.plugin.comida` |  |
-| ida.plugin.delphihelper | `ida.plugin.delphihelper` |  |
-| ida.plugin.dereferencing | `ida.plugin.dereferencing` |  |
-| ida.plugin.diaphora | `ida.plugin.diaphora` |  |
-| ida.plugin.flare | `ida.plugin.flare` |  |
-| ida.plugin.flare-emu | `ida.plugin.flare-emu` |  |
-| ida.plugin.hashdb | `ida.plugin.hashdb` |  |
-| ida.plugin.hrtng | `ida.plugin.hrtng` |  |
-| ida.plugin.ifl | `ida.plugin.ifl` |  |
-| ida.plugin.xray | `ida.plugin.xray` |  |
-| ida.plugin.xrefer | `ida.plugin.xrefer` |  |
-| idafree | `idafree` |  |
-| idr | `idr` |  |
-| ifpstools | `ifpstools` |  |
-| ilspy | `ilspy` |  |
-| innoextract | `innoextract` |  |
-| innounp | `innounp` |  |
-| internet_detector | `internet_detector` |  |
-| ipython | `ipython` |  |
-| isd | `isd` |  |
-| js-beautify | `js-beautify` |  |
-| js-deobfuscator | `js-deobfuscator` |  |
-| keystone | `keystone` |  |
-| libraries.python3 | `libraries.python3` |  |
-| magika | `magika` |  |
-| malware-jail | `malware-jail` |  |
-| map | `map` |  |
-| microsoft-office | `microsoft-office` |  |
-| nasm | `nasm` |  |
-| net-reactor-slayer | `net-reactor-slayer` |  |
-| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) |  |
-| notepadplusplus | `notepadplusplus` |  |
-| notepadpp.plugin.compare | `notepadpp.plugin.compare` |  |
-| notepadpp.plugin.jstool | `notepadpp.plugin.jstool` |  |
-| notepadpp.plugin.xmltools | `notepadpp.plugin.xmltools` |  |
-| obfuscator-io-deobfuscator | `obfuscator-io-deobfuscator` |  |
-| offvis | `offvis` |  |
-| onenoteanalyzer | `onenoteanalyzer` |  |
-| pdbresym | `pdbresym` |  |
-| pdfstreamdumper | `pdfstreamdumper` |  |
-| pe_unmapper | `pe_unmapper` |  |
-| pebear | `pebear` |  |
-| peid | `peid` |  |
-| pesieve | `pesieve` |  |
-| pestudio | `pestudio` |  |
-| pkg-unpacker | `pkg-unpacker` |  |
-| pma-labs | `pma-labs` |  |
-| procdot | `procdot` |  |
-| processdump | `processdump` |  |
-| psnotify | `psnotify` |  |
-| pycdas | `pycdas` |  |
-| pycdc | `pycdc` |  |
-| pylingual | `pylingual` |  |
-| rat-king-parser | `rat-king-parser` |  |
-| recaf | `recaf` |  |
-| reg_export | `reg_export` |  |
-| regcool | `regcool` |  |
-| regshot | `regshot` |  |
-| resourcehacker | `resourcehacker` |  |
-| rundotnetdll | `rundotnetdll` |  |
-| scdbg | `scdbg` |  |
-| sclauncher | `sclauncher` |  |
-| sclauncher64 | `sclauncher64` |  |
-| sfextract | `sfextract` |  |
-| shellcode_launcher | `shellcode_launcher` |  |
-| sysinternals | `sysinternals` |  |
-| systeminformer | `systeminformer` |  |
-| ttd | `ttd` |  |
-| uncompyle6 | `uncompyle6` |  |
-| uniextract2 | `uniextract2` |  |
-| unpyc3 | `unpyc3` |  |
-| [upx](../reference/malware-triage-static/upx.md) | [`upx`](../reference/malware-triage-static/upx.md) |  |
-| vb-decompiler-lite | `vb-decompiler-lite` |  |
-| vbdec | `vbdec` |  |
-| vcbuildtools | `vcbuildtools` |  |
+| exeinfope | `exeinfope` | Displays metadata for a variety of file types and identifies many executable packers. |
+| explorersuite | `explorersuite` | A suite of tools including CFF Explorer and a process viewer. |
+| extreme_dumper | `extreme_dumper` | .NET Assembly Dumper from memory of processes. |
+| ezviewer | `ezviewer` | Standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .txt, .log, .rtf, .otd, .htm, .html, .mht, .csv, a... |
+| fakenet-ng | `fakenet-ng` | FakeNet-NG is a next generation dynamic network analysis tool for malware analysts and penetration testers. |
+| fiddler | `fiddler` | Intercepts, decrypts, and analyzes HTTPS traffic. |
+| [file](../reference/examine-the-filesystem/file.md) | [`file`](../reference/examine-the-filesystem/file.md) | Recognize the type of data in a file using "magic" numbers. |
+| [floss](../reference/malware-triage-static/floss.md) | [`floss`](../reference/malware-triage-static/floss.md) | FLOSS uses advanced static analysis techniques to automatically deobfuscate strings from malware binaries. You can... |
+| garbageman | `garbageman` | A set of tools designed for .NET heap analysis. |
+| ghidra | `ghidra` | Software Reverse Engineering Framework. |
+| goresym | `goresym` | Go symbol recovery tool. |
+| gostringungarbler | `gostringungarbler` | GoStringUngarbler deobfuscates strings in Go binaries obfuscated by garble. |
+| [hashmyfiles](../reference/acquire-preserve/HashMyFiles-gui.md) | [`hashmyfiles`](../reference/acquire-preserve/HashMyFiles-gui.md) | HashMyFiles is small utility that allows you to calculate the MD5 and SHA1 hashes of one or more files in your syst... |
+| hollowshunter | `hollowshunter` | Scans all running processes. Recognizes and dumps a variety of potentially malicious implants (replaced/implanted P... |
+| hxd | `hxd` | Freeware hex editor. |
+| ida.plugin.capa | `ida.plugin.capa` | Capa explorer is an IDAPython plugin that integrates capa with IDA Pro. |
+| ida.plugin.comida | `ida.plugin.comida` | IDA Plugin that help analyzing modules using COM. |
+| ida.plugin.delphihelper | `ida.plugin.delphihelper` | DelphiHelper. |
+| ida.plugin.dereferencing | `ida.plugin.dereferencing` | IDA Pro plugin that implements new registers and stack views. |
+| ida.plugin.diaphora | `ida.plugin.diaphora` | Diaphora is a program diffing IDA plugin. |
+| ida.plugin.flare | `ida.plugin.flare` | IDA Pro plugins used by the FLARE team. |
+| ida.plugin.flare-emu | `ida.plugin.flare-emu` | A user friendly scriptable emulation framework that supports multiple binary analysis tools. |
+| ida.plugin.hashdb | `ida.plugin.hashdb` | Malware string hash lookup plugin for IDA Pro. |
+| ida.plugin.hrtng | `ida.plugin.hrtng` | IDA Pro plugin with features such as decryption, automation, deobfuscation, patching, lib code recognition and pseu... |
+| ida.plugin.ifl | `ida.plugin.ifl` | Interactive Functions List IDA Pro plugin. |
+| ida.plugin.xray | `ida.plugin.xray` | Hexrays decompiler plugin that colorizes and filters the decompiler's output based on regular expressions. |
+| ida.plugin.xrefer | `ida.plugin.xrefer` | Custom navigation interface within IDA. |
+| idafree | `idafree` | Free version of IDA, a powerful Interactive DisAssembler and debugger. |
+| [idr](../reference/reverse-engineering/idr-gui.md) | [`idr`](../reference/reverse-engineering/idr-gui.md) | Interactive Delphi Reconstructor. |
+| ifpstools | `ifpstools` | IFPSTools.NET: tools for working with RemObject PascalScript compiled bytecode files. |
+| ilspy | `ilspy` | ILSpy is a .NET assembly browser and decompiler. |
+| innoextract | `innoextract` | Tool for extracting data from an Inno Setup installer. |
+| innounp | `innounp` | Unpacker for Inno Setup installers. |
+| internet_detector | `internet_detector` | Tool that changes the background and a taskbar icon if it detects internet connectivity. |
+| ipython | `ipython` | A powerful interactive Python shell. |
+| isd | `isd` | Inno Setup Decompiler. |
+| js-beautify | `js-beautify` | JavaScript beautifier and deobfuscator. |
+| js-deobfuscator | `js-deobfuscator` | Deobfuscator to remove common JS obfuscation techniques. |
+| keystone | `keystone` | OpenStack identity service. |
+| libraries.python3 | `libraries.python3` | Metapackage to install common Python 3.9 libraries. |
+| magika | `magika` | Magika is an AI powered file type detection tool that uses deep learning to provide accurate detection. |
+| malware-jail | `malware-jail` | Sandbox for semi-automatic Javascript malware analysis, deobfuscation and payload extraction. |
+| map | `map` | Handful of small utility type applications useful for analyzing malicious code. |
+| microsoft-office | `microsoft-office` | Microsoft Office ProPlusRetail. |
+| nasm | `nasm` | General-purpose x86 assembler. |
+| net-reactor-slayer | `net-reactor-slayer` | NETReactorSlayer is an open source (GPLv3) deobfuscator and unpacker for Eziriz .NET Reactor. |
+| [nmap](../reference/network-analysis/nmap.md) | [`nmap`](../reference/network-analysis/nmap.md) | The Network Mapper. |
+| notepadplusplus | `notepadplusplus` | Wrapper for Notepad++. |
+| notepadpp.plugin.compare | `notepadpp.plugin.compare` | ComparePlus plugin for Notepad++. |
+| notepadpp.plugin.jstool | `notepadpp.plugin.jstool` | A JavaScript (JSON) tool for Notepad++ (formerly JSMinNpp). |
+| notepadpp.plugin.xmltools | `notepadpp.plugin.xmltools` | XML Tools plugin for Notepad++. |
+| obfuscator-io-deobfuscator | `obfuscator-io-deobfuscator` | A deobfuscator for scripts obfuscated by Obfuscator.io. |
+| [offvis](../reference/malware-triage-documents/OffVis-gui.md) | [`offvis`](../reference/malware-triage-documents/OffVis-gui.md) | The Microsoft Office Visualization Tool (OffVis) is a tool from Microsoft that helps understanding the Microsoft Of... |
+| onenoteanalyzer | `onenoteanalyzer` | A C# based tool for analyzing malicious OneNote documents. |
+| pdbresym | `pdbresym` | Download PDBs. |
+| [pdfstreamdumper](../reference/malware-triage-documents/PDFStreamDumper-gui.md) | [`pdfstreamdumper`](../reference/malware-triage-documents/PDFStreamDumper-gui.md) | PDFStreamDumper is a free, open source tool to analyze malicious PDF documents. |
+| pe_unmapper | `pe_unmapper` | Small tool to convert beteween the PE alignments (raw and virtual). |
+| pebear | `pebear` | Delivers fast and flexible "first view" for malware analysts. |
+| peid | `peid` | PEiD detects most common packers, cryptors and compilers for PE files. |
+| pesieve | `pesieve` | Pe-sieve recognizes and dumps variety of implants within the scanned process. |
+| pestudio | `pestudio` | The goal of pestudio is to spot artifacts of executable files in order to ease and accelerate Malware Initial Asses... |
+| pkg-unpacker | `pkg-unpacker` | Unpacker for pkg applications. |
+| pma-labs | `pma-labs` | Binaries for the book Practical Malware Analysis. |
+| procdot | `procdot` | Creates visual graphs from procmon output. |
+| processdump | `processdump` | Process Dump is a Windows reverse-engineering command-line tool to dump malware memory components back to disk for... |
+| psnotify | `psnotify` | A POC tool to fight .NET anti-dumping tricks. |
+| pycdas | `pycdas` | Python byte-code disassembler. |
+| pycdc | `pycdc` | Python decompiler. |
+| pylingual | `pylingual` | Python decompiler for modern Python versions. |
+| rat-king-parser | `rat-king-parser` | Multi-family RAT config parser/extractor. |
+| recaf | `recaf` | Java bytecode editor. |
+| reg_export | `reg_export` | A CLI that exports the raw content of a registry value to a file. |
+| regcool | `regcool` | In addition to all the features that you can find in RegEdit and RegEdt32, RegCool adds many powerful features that... |
+| regshot | `regshot` | Regshot is a small, free and open-source registry compare utility that allows you to quickly take a snapshot of you... |
+| resourcehacker | `resourcehacker` | Resource Hacker is a resource editor for 32bit and 64bit Windows applications. |
+| rundotnetdll | `rundotnetdll` | A simple utility to list all methods of a given .NET Assembly and to invoke them. |
+| scdbg | `scdbg` | Scdbg is an emulation based shellcode API logger and debugger. |
+| sclauncher | `sclauncher` | A small program to load 32-bit shellcode and allow for execution or debugging. Can also output PE files from shellc... |
+| sclauncher64 | `sclauncher64` | A small program to load 64-bit shellcode and allow for execution or debugging. Can also output PE files from shellc... |
+| sfextract | `sfextract` | Command-line utility to extract files from single file bundles in .NET. |
+| shellcode_launcher | `shellcode_launcher` | Shellcode launcher utility. |
+| sysinternals | `sysinternals` | Sysinternals suite. |
+| systeminformer | `systeminformer` | A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware. |
+| ttd | `ttd` | Time travel debugging command line utility. |
+| uncompyle6 | `uncompyle6` | A decompiler for Python 1.0-3.8. |
+| uniextract2 | `uniextract2` | Universal Extractor 2 is an unofficial updated and extended version of the original UniExtract by Jared Breland. |
+| unpyc3 | `unpyc3` | A decompiler for Python 3.7+. |
+| [upx](../reference/malware-triage-static/upx.md) | [`upx`](../reference/malware-triage-static/upx.md) | UPX is a free, secure, portable, extendable, high-performance executable packer for several executable formats. |
+| vb-decompiler-lite | `vb-decompiler-lite` | VB Decompiler is a decompiler for Visual Basic, VB.NET and C# applications. |
+| [vbdec](../reference/reverse-engineering/vbdec-gui.md) | [`vbdec`](../reference/reverse-engineering/vbdec-gui.md) | VBDec works as a VB6 disassembler, PCode debugger, structure viewer for all vb6 executables, and can generate IDA s... |
+| vcbuildtools | `vcbuildtools` | Metapackage that requires the dependencies below: - visualstudio2017buildtools - visualstudio2017-workload-vctools. |
 | vcredist-all | `vcredist-all` |  |
-| vscode | `vscode` |  |
-| vscode.extension.jupyter | `vscode.extension.jupyter` |  |
-| vscode.extension.python | `vscode.extension.python` |  |
-| windbg | `windbg` |  |
-| windows-terminal | `windows-terminal` |  |
-| wireshark | `wireshark` |  |
-| x64dbg | `x64dbg` |  |
-| x64dbg.plugin.dbgchild | `x64dbg.plugin.dbgchild` |  |
-| x64dbg.plugin.ollydumpex | `x64dbg.plugin.ollydumpex` |  |
-| x64dbg.plugin.scyllahide | `x64dbg.plugin.scyllahide` |  |
-| x64dbg.plugin.x64dbgpy | `x64dbg.plugin.x64dbgpy` |  |
-| [yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) |  |
+| vscode | `vscode` | VSCode is a modern, open-source code editor. |
+| vscode.extension.jupyter | `vscode.extension.jupyter` | Jupyter notebook support, interactive programming and computing that supports Intellisense, debugging and more. |
+| vscode.extension.python | `vscode.extension.python` | Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linti... |
+| windbg | `windbg` | WinDbg is a debugger that can be used to analyze crash dumps, debug live user-mode and kernel-mode code, and examin... |
+| windows-terminal | `windows-terminal` | Windows Terminal is a new, modern, feature-rich, productive terminal application for command-line users. |
+| wireshark | `wireshark` | Network traffic analyzer - graphical interface. |
+| x64dbg | `x64dbg` | An open-source x64/x32 debugger for Windows. |
+| x64dbg.plugin.dbgchild | `x64dbg.plugin.dbgchild` | DbgChild is an x64dbg plugin to automatically attach to spawned child processes. |
+| x64dbg.plugin.ollydumpex | `x64dbg.plugin.ollydumpex` | This plugin is process memory dumper for OllyDbg and Immunity Debugger. OllyDumpEx = OllyDump + PE Dumper - obsolet... |
+| x64dbg.plugin.scyllahide | `x64dbg.plugin.scyllahide` | ScyllaHide is an advanced open-source x64/x86 user mode Anti-Anti-Debug library. |
+| x64dbg.plugin.x64dbgpy | `x64dbg.plugin.x64dbgpy` | Automating x64dbg using Python. |
+| [yara](../reference/malware-triage-static/yara.md) | [`yara`](../reference/malware-triage-static/yara.md) | Pattern matching swiss knife for malware researchers. |
 
 
 ## SIFT Workstation
@@ -1061,167 +1061,167 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | absent | `absent` |  |
-| [aeskeyfind](../reference/memory-forensics/aeskeyfind.md) | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) |  |
-| afflib-tools | `afflib-tools` |  |
-| aircrack-ng | `aircrack-ng` |  |
-| android-sdk-platform-tools | `android-sdk-platform-tools` |  |
-| [arp-scan](../reference/network-analysis/arp-scan.md) | [`arp-scan`](../reference/network-analysis/arp-scan.md) |  |
-| autopsy | `autopsy` |  |
-| avfs | `avfs` |  |
+| [aeskeyfind](../reference/memory-forensics/aeskeyfind.md) | [`aeskeyfind`](../reference/memory-forensics/aeskeyfind.md) | Tool for locating AES keys in a captured memory image. |
+| afflib-tools | `afflib-tools` | Advanced Forensics Format Library (utilities). |
+| aircrack-ng | `aircrack-ng` | Wireless WEP/WPA cracking utilities. |
+| android-sdk-platform-tools | `android-sdk-platform-tools` | Tools for interacting with an Android platform. |
+| [arp-scan](../reference/network-analysis/arp-scan.md) | [`arp-scan`](../reference/network-analysis/arp-scan.md) | Arp scanning and fingerprinting tool. |
+| autopsy | `autopsy` | Graphical interface to SleuthKit. |
+| avfs | `avfs` | Virtual filesystem to access archives, disk images, remote locations. |
 | aws-cli | `aws-cli` |  |
-| bless | `bless` |  |
-| blt | `blt` |  |
+| bless | `bless` | A full featured hexadecimal editor. |
+| blt | `blt` | Graphics extension library for Tcl/Tk - run-time. |
 | bulk-extractor | `bulk-extractor` |  |
-| cabextract | `cabextract` |  |
-| ccrypt | `ccrypt` |  |
-| chromium-browser | `chromium-browser` |  |
-| clamav | `clamav` |  |
+| cabextract | `cabextract` | Microsoft Cabinet file unpacker. |
+| ccrypt | `ccrypt` | Secure encryption and decryption of files and streams. |
+| chromium-browser | `chromium-browser` | Transitional package - chromium-browser -> chromium snap. |
+| clamav | `clamav` | Anti-virus utility for Unix - command-line interface. |
 | claude-code | `claude-code` |  |
-| cmospwd | `cmospwd` |  |
-| cryptcat | `cryptcat` |  |
-| cryptsetup | `cryptsetup` |  |
-| [dc3dd](../reference/acquire-preserve/dc3dd.md) | [`dc3dd`](../reference/acquire-preserve/dc3dd.md) |  |
-| [dcfldd](../reference/acquire-preserve/dcfldd.md) | [`dcfldd`](../reference/acquire-preserve/dcfldd.md) |  |
-| default-jre | `default-jre` |  |
-| disktype | `disktype` |  |
-| dislocker | `dislocker` |  |
-| docker | `docker` |  |
-| dos2unix | `dos2unix` |  |
+| cmospwd | `cmospwd` | Decrypt BIOS passwords from CMOS. |
+| cryptcat | `cryptcat` | Lightweight version netcat extended with twofish encryption. |
+| cryptsetup | `cryptsetup` | Disk encryption support - startup scripts. |
+| [dc3dd](../reference/acquire-preserve/dc3dd.md) | [`dc3dd`](../reference/acquire-preserve/dc3dd.md) | Patched version of GNU dd with forensic features. |
+| [dcfldd](../reference/acquire-preserve/dcfldd.md) | [`dcfldd`](../reference/acquire-preserve/dcfldd.md) | Enhanced version of dd for forensics and security. |
+| default-jre | `default-jre` | Standard Java or Java compatible Runtime. |
+| disktype | `disktype` | Detection of content format of a disk or disk image. |
+| dislocker | `dislocker` | Read/write encrypted BitLocker volumes. |
+| docker | `docker` | Transitional package. |
+| dos2unix | `dos2unix` | Convert text file line endings between CRLF and LF. |
 | dotnet | `dotnet` |  |
-| driftnet | `driftnet` |  |
-| dsniff | `dsniff` |  |
-| e2fsprogs | `e2fsprogs` |  |
-| ent | `ent` |  |
-| epic5 | `epic5` |  |
-| etherape | `etherape` |  |
-| ettercap-graphical | `ettercap-graphical` |  |
-| ewf-tools | `ewf-tools` |  |
+| driftnet | `driftnet` | Picks out and displays images from network traffic. |
+| dsniff | `dsniff` | Various tools to sniff network traffic for cleartext insecurities. |
+| e2fsprogs | `e2fsprogs` | Ext2/ext3/ext4 file system utilities. |
+| ent | `ent` | Pseudorandom number sequence test program. |
+| epic5 | `epic5` | Epic irc client, version 5. |
+| etherape | `etherape` | Graphical network monitor. |
+| ettercap-graphical | `ettercap-graphical` | Ettercap GUI-enabled executable. |
+| ewf-tools | `ewf-tools` | Collection of tools for reading and writing EWF files. |
 | exfat-extras | `exfat-extras` |  |
-| exfat-fuse | `exfat-fuse` |  |
-| exif | `exif` |  |
-| extundelete | `extundelete` |  |
-| fdupes | `fdupes` |  |
-| feh | `feh` |  |
-| [file](../reference/examine-the-filesystem/file.md) | [`file`](../reference/examine-the-filesystem/file.md) |  |
-| flex | `flex` |  |
-| [foremost](../reference/examine-the-filesystem/foremost.md) | [`foremost`](../reference/examine-the-filesystem/foremost.md) |  |
-| gawk | `gawk` |  |
-| gdb | `gdb` |  |
-| gddrescue | `gddrescue` |  |
-| ghex | `ghex` |  |
-| graphviz | `graphviz` |  |
-| grepcidr | `grepcidr` |  |
-| gthumb | `gthumb` |  |
-| gzrt | `gzrt` |  |
-| hashdeep | `hashdeep` |  |
-| hexedit | `hexedit` |  |
-| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) |  |
-| hydra-gtk | `hydra-gtk` |  |
-| init | `init` |  |
-| ipython3 | `ipython3` |  |
-| jq | `jq` |  |
-| kdiff3 | `kdiff3` |  |
-| kpartx | `kpartx` |  |
-| lft | `lft` |  |
-| lvm2 | `lvm2` |  |
-| magnus | `magnus` |  |
-| mdadm | `mdadm` |  |
-| mtd-utils | `mtd-utils` |  |
-| nbd-client | `nbd-client` |  |
-| nbtscan | `nbtscan` |  |
-| netcat | `netcat` |  |
-| netpbm | `netpbm` |  |
-| netsed | `netsed` |  |
-| netwox | `netwox` |  |
-| nfdump | `nfdump` |  |
-| [ngrep](../reference/network-analysis/ngrep.md) | [`ngrep`](../reference/network-analysis/ngrep.md) |  |
+| exfat-fuse | `exfat-fuse` | Read and write exFAT driver for FUSE. |
+| exif | `exif` | Command-line utility to show EXIF information in JPEG files. |
+| extundelete | `extundelete` | Utility to recover deleted files from ext3/ext4 partition. |
+| fdupes | `fdupes` | Identifies duplicate files within given directories. |
+| feh | `feh` | Imlib2 based image viewer. |
+| [file](../reference/examine-the-filesystem/file.md) | [`file`](../reference/examine-the-filesystem/file.md) | Recognize the type of data in a file using "magic" numbers. |
+| flex | `flex` | Fast lexical analyzer generator. |
+| [foremost](../reference/examine-the-filesystem/foremost.md) | [`foremost`](../reference/examine-the-filesystem/foremost.md) | Forensic program to recover lost files. |
+| gawk | `gawk` | GNU awk, a pattern scanning and processing language. |
+| gdb | `gdb` | GNU Debugger. |
+| gddrescue | `gddrescue` | GNU data recovery tool. |
+| ghex | `ghex` | GNOME Hex editor for files. |
+| graphviz | `graphviz` | Rich set of graph drawing tools. |
+| grepcidr | `grepcidr` | Filter IP addresses matching IPv4/IPv6 CIDR/network specification. |
+| gthumb | `gthumb` | Image viewer and browser. |
+| gzrt | `gzrt` | Gzip recovery toolkit. |
+| hashdeep | `hashdeep` | Recursively compute hashsums or piecewise hashings. |
+| hexedit | `hexedit` | Viewer and editor in hexadecimal or ASCII for files or devices. |
+| [hydra](../reference/decode-deobfuscate/hydra.md) | [`hydra`](../reference/decode-deobfuscate/hydra.md) | Very fast network logon cracker. |
+| hydra-gtk | `hydra-gtk` | Very fast network logon cracker - GTK+ based GUI. |
+| init | `init` | Metapackage ensuring an init system is installed. |
+| ipython3 | `ipython3` | Enhanced interactive Python 3 shell. |
+| jq | `jq` | Lightweight and flexible command-line JSON processor. |
+| kdiff3 | `kdiff3` | Compares and merges 2 or 3 files or directories. |
+| kpartx | `kpartx` | Create device mappings for partitions. |
+| lft | `lft` | Layer-four traceroute. |
+| lvm2 | `lvm2` | Linux Logical Volume Manager. |
+| magnus | `magnus` | Very simple screen magnifier. |
+| mdadm | `mdadm` | Tool for managing Linux MD devices (software RAID). |
+| mtd-utils | `mtd-utils` | Memory Technology Device Utilities. |
+| nbd-client | `nbd-client` | Network Block Device protocol - client. |
+| nbtscan | `nbtscan` | Scan networks searching for NetBIOS information. |
+| netcat | `netcat` | TCP/IP swiss army knife -- transitional package. |
+| netpbm | `netpbm` | Graphics conversion tools between image formats. |
+| netsed | `netsed` | Network packet-altering stream editor. |
+| netwox | `netwox` | Networking utilities. |
+| nfdump | `nfdump` | Netflow capture daemon. |
+| [ngrep](../reference/network-analysis/ngrep.md) | [`ngrep`](../reference/network-analysis/ngrep.md) | Grep for network traffic. |
 | nikto | `nikto` |  |
-| [ntfs-3g](../reference/acquire-preserve/ntfs-3g.md) | [`ntfs-3g`](../reference/acquire-preserve/ntfs-3g.md) |  |
-| okular | `okular` |  |
-| onboard | `onboard` |  |
-| open-iscsi | `open-iscsi` |  |
-| openjdk | `openjdk` |  |
-| ophcrack | `ophcrack` |  |
-| ophcrack-cli | `ophcrack-cli` |  |
-| orca | `orca` |  |
-| outguess | `outguess` |  |
-| p0f | `p0f` |  |
-| p7zip-full | `p7zip-full` |  |
-| patch | `patch` |  |
-| pdftk-java | `pdftk-java` |  |
-| perl | `perl` |  |
-| pev | `pev` |  |
-| pff-tools | `pff-tools` |  |
+| [ntfs-3g](../reference/acquire-preserve/ntfs-3g.md) | [`ntfs-3g`](../reference/acquire-preserve/ntfs-3g.md) | Read/write NTFS driver for FUSE. |
+| okular | `okular` | Universal document viewer. |
+| onboard | `onboard` | Simple On-screen Keyboard. |
+| open-iscsi | `open-iscsi` | ISCSI initiator tools. |
+| openjdk | `openjdk` | Metapackage for OpenJDK to ensure all packages use the same OpenJDK version. |
+| ophcrack | `ophcrack` | Microsoft Windows password cracker using rainbow tables (gui). |
+| ophcrack-cli | `ophcrack-cli` | Microsoft Windows password cracker using rainbow tables (cmdline). |
+| orca | `orca` | Scriptable screen reader. |
+| outguess | `outguess` | Universal steganographic tool. |
+| p0f | `p0f` | Passive OS fingerprinting tool. |
+| p7zip-full | `p7zip-full` | 7z and 7za file archivers with high compression ratio. |
+| patch | `patch` | Apply a diff file to an original. |
+| pdftk-java | `pdftk-java` | Pdftk port to java - a tool for manipulating PDF documents. |
+| perl | `perl` | Larry Wall's Practical Extraction and Report Language. |
+| pev | `pev` | Text-based tool to analyze PE files. |
+| pff-tools | `pff-tools` | Utilities for MS Outlook PAB, PST and OST files. |
 | phonon | `phonon` |  |
-| pkg-config | `pkg-config` |  |
+| pkg-config | `pkg-config` | Manage compile and link flags for libraries (transitional package). |
 | plaso-tools | `plaso-tools` |  |
-| powershell | `powershell` |  |
-| pst-utils | `pst-utils` |  |
-| pv | `pv` |  |
+| powershell | `powershell` | PowerShell is an automation and configuration management platform. |
+| pst-utils | `pst-utils` | Tools for reading Microsoft Outlook PST files. |
+| pv | `pv` | Shell pipeline element to meter data passing through. |
 | python-flowgrep | `python-flowgrep` |  |
-| python3-debian | `python3-debian` |  |
-| python3-dfvfs | `python3-dfvfs` |  |
-| python3-fuse | `python3-fuse` |  |
+| python3-debian | `python3-debian` | Python 3 modules to work with Debian-related data formats. |
+| python3-dfvfs | `python3-dfvfs` | Digital Forensics Virtual File System. |
+| python3-fuse | `python3-fuse` | Python bindings for FUSE (Filesystems in USErspace) (Python 3 package). |
 | python3-keyrings-alt | `python3-keyrings-alt` |  |
-| python3-m2crypto | `python3-m2crypto` |  |
-| python3-magic | `python3-magic` |  |
-| python3-pefile | `python3-pefile` |  |
-| python3-plaso | `python3-plaso` |  |
-| python3-pypff | `python3-pypff` |  |
-| python3-pyqt5 | `python3-pyqt5` |  |
+| python3-m2crypto | `python3-m2crypto` | Python wrapper for the OpenSSL library (Python 3 modules). |
+| python3-magic | `python3-magic` | Python3 interface to the libmagic file type identification library. |
+| python3-pefile | `python3-pefile` | Portable Executable (PE) parsing module for Python. |
+| python3-plaso | `python3-plaso` | Super timeline all the things -- Python 3. |
+| python3-pypff | `python3-pypff` | Python 3 bindings for libpff. |
+| python3-pyqt5 | `python3-pyqt5` | Python 3 bindings for Qt5. |
 | python3-pytsk3 | `python3-pytsk3` |  |
-| python3-redis | `python3-redis` |  |
-| python3-setuptools-rust | `python3-setuptools-rust` |  |
-| python3-tk | `python3-tk` |  |
-| python3-tsk | `python3-tsk` |  |
-| python3-virtualenv | `python3-virtualenv` |  |
+| python3-redis | `python3-redis` | Python bindings for Redis, a persistent key-value database. |
+| python3-setuptools-rust | `python3-setuptools-rust` | Setuptools Rust extension plugin. |
+| python3-tk | `python3-tk` | Tkinter - Writing Tk applications with Python 3.x. |
+| python3-tsk | `python3-tsk` | Python Bindings for The Sleuth Kit. |
+| python3-virtualenv | `python3-virtualenv` | Python virtual environment creator. |
 | python3-wxgtk4 | `python3-wxgtk4` |  |
-| python3-xlsxwriter | `python3-xlsxwriter` |  |
-| python3-yara | `python3-yara` |  |
-| qemu | `qemu` |  |
-| qemu-utils | `qemu-utils` |  |
-| radare2 | `radare2` |  |
+| python3-xlsxwriter | `python3-xlsxwriter` | Python 3 module for creating Excel XLSX files. |
+| python3-yara | `python3-yara` | Python 3 bindings for YARA. |
+| qemu | `qemu` | Fast processor emulator, dummy package. |
+| qemu-utils | `qemu-utils` | QEMU utilities. |
+| radare2 | `radare2` | Free and advanced command line hexadecimal editor. |
 | rar | `rar` |  |
-| [rsakeyfind](../reference/memory-forensics/rsakeyfind.md) | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) |  |
-| safecopy | `safecopy` |  |
-| samdump2 | `samdump2` |  |
-| [scalpel](../reference/examine-the-filesystem/scalpel.md) | [`scalpel`](../reference/examine-the-filesystem/scalpel.md) |  |
-| silversearcher-ag | `silversearcher-ag` |  |
-| sleuthkit | `sleuthkit` |  |
-| socat | `socat` |  |
-| squashfs-tools | `squashfs-tools` |  |
-| [ssdeep](../reference/acquire-preserve/ssdeep.md) | [`ssdeep`](../reference/acquire-preserve/ssdeep.md) |  |
-| ssldump | `ssldump` |  |
-| sslsniff | `sslsniff` |  |
-| stunnel4 | `stunnel4` |  |
-| swig | `swig` |  |
-| tcl | `tcl` |  |
-| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) |  |
-| tcpick | `tcpick` |  |
-| tcpreplay | `tcpreplay` |  |
-| tcpslice | `tcpslice` |  |
-| tcpstat | `tcpstat` |  |
-| tcptrace | `tcptrace` |  |
-| tcptrack | `tcptrack` |  |
-| [tcpxtract](../reference/examine-the-filesystem/tcpxtract.md) | [`tcpxtract`](../reference/examine-the-filesystem/tcpxtract.md) |  |
-| [testdisk](../reference/examine-the-filesystem/testdisk.md) | [`testdisk`](../reference/examine-the-filesystem/testdisk.md) |  |
-| tofrodos | `tofrodos` |  |
-| transmission | `transmission` |  |
-| ugrep | `ugrep` |  |
-| unity-control-center | `unity-control-center` |  |
+| [rsakeyfind](../reference/memory-forensics/rsakeyfind.md) | [`rsakeyfind`](../reference/memory-forensics/rsakeyfind.md) | Locates BER-encoded RSA private keys in memory images. |
+| safecopy | `safecopy` | Data recovery tool for problematic or damaged media. |
+| samdump2 | `samdump2` | Dump Windows 2k/NT/XP password hashes. |
+| [scalpel](../reference/examine-the-filesystem/scalpel.md) | [`scalpel`](../reference/examine-the-filesystem/scalpel.md) | Fast filesystem-independent file recovery. |
+| silversearcher-ag | `silversearcher-ag` | Very fast grep-like program, alternative to ack. |
+| sleuthkit | `sleuthkit` | Tools for forensics analysis on volume and filesystem data. |
+| socat | `socat` | Multipurpose relay for bidirectional data transfer. |
+| squashfs-tools | `squashfs-tools` | Tool to create and append to squashfs filesystems. |
+| [ssdeep](../reference/acquire-preserve/ssdeep.md) | [`ssdeep`](../reference/acquire-preserve/ssdeep.md) | Recursive piecewise hashing tool. |
+| ssldump | `ssldump` | SSLv3/TLS network protocol analyzer. |
+| sslsniff | `sslsniff` | SSL/TLS man-in-the-middle attack tool. |
+| stunnel4 | `stunnel4` | Universal SSL tunnnel for network daemons - compatibility package. |
+| swig | `swig` | Generate scripting interfaces to C/C++ code. |
+| tcl | `tcl` | Tool Command Language (default version) - shell. |
+| [tcpflow](../reference/network-analysis/tcpflow.md) | [`tcpflow`](../reference/network-analysis/tcpflow.md) | TCP flow recorder. |
+| tcpick | `tcpick` | TCP stream sniffer and connection tracker. |
+| tcpreplay | `tcpreplay` | Tool to replay saved tcpdump files at arbitrary speeds. |
+| tcpslice | `tcpslice` | Extract pieces of and/or glue together tcpdump files. |
+| tcpstat | `tcpstat` | Network interface statistics reporting tool. |
+| tcptrace | `tcptrace` | Tool for analyzing tcpdump output. |
+| tcptrack | `tcptrack` | TCP connection tracker, with states and speeds. |
+| [tcpxtract](../reference/examine-the-filesystem/tcpxtract.md) | [`tcpxtract`](../reference/examine-the-filesystem/tcpxtract.md) | Extract files from network traffic based on file signatures. |
+| [testdisk](../reference/examine-the-filesystem/testdisk.md) | [`testdisk`](../reference/examine-the-filesystem/testdisk.md) | Partition scanner and disk recovery tool, and PhotoRec file recovery tool. |
+| tofrodos | `tofrodos` | Converts DOS <-> Unix text files, alias tofromdos. |
+| transmission | `transmission` | Lightweight BitTorrent client. |
+| ugrep | `ugrep` | Faster grep with an interactive query UI. |
+| unity-control-center | `unity-control-center` | Utilities to configure the GNOME desktop. |
 | unrar | `unrar` |  |
-| upx-ucl | `upx-ucl` |  |
-| vbindiff | `vbindiff` |  |
-| virtuoso-minimal | `virtuoso-minimal` |  |
-| vmfs-tools | `vmfs-tools` |  |
-| winbind | `winbind` |  |
-| wine | `wine` |  |
-| wireshark | `wireshark` |  |
-| xdot | `xdot` |  |
-| xfsprogs | `xfsprogs` |  |
-| xmount | `xmount` |  |
-| zenity | `zenity` |  |
-| zlib1g-dev | `zlib1g-dev` |  |
+| upx-ucl | `upx-ucl` | Efficient live-compressor for executables. |
+| vbindiff | `vbindiff` | Visual binary diff, visually compare binary files. |
+| virtuoso-minimal | `virtuoso-minimal` | High-performance database - core dependency package. |
+| vmfs-tools | `vmfs-tools` | Tools to access VMFS filesystems. |
+| winbind | `winbind` | Service to resolve user and group information from Windows NT servers. |
+| wine | `wine` | Windows API implementation - standard suite. |
+| wireshark | `wireshark` | Network traffic analyzer - graphical interface. |
+| xdot | `xdot` | Interactive viewer for Graphviz dot files. |
+| xfsprogs | `xfsprogs` | Utilities for managing the XFS filesystem. |
+| xmount | `xmount` | Tool for crossmounting between disk image formats. |
+| zenity | `zenity` | Display graphical dialog boxes from shell scripts. |
+| zlib1g-dev | `zlib1g-dev` | Compression library - development. |
 
 
 ## Security Onion
