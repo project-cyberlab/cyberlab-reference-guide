@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Invalid argument: ewfverify
+Recompute an EWF/E01 image's hashes and check them against the values stored at acquisition.
 
 ## Synopsis
 
@@ -28,25 +28,26 @@ ewfverify /evidence/case01.E01
 
 ## Options
 
-All 11 options parsed from the captured help text. The final column is filled in by review.
+All 11 options parsed from the captured help text; 9 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-A` | — | codepage of header section, options: ascii (default), windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-125 |  |
-| `-d` | — | calculate additional digest (hash) types besides md5, options: sha1, sha256 |  |
-| `-f` | — | specify the input format, options: raw (default), files (restricted to logical volume files) |  |
+| `-A` | — | codepage of header section, options: ascii (default), windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-125 | Header codepage. |
+| `-d` | — | calculate additional digest (hash) types besides md5, options: sha1, sha256 | Also verify an additional digest such as sha256, when one was recorded at acquisition. |
+| `-f` | — | specify the input format, options: raw (default), files (restricted to logical volume files) | Output format. |
 | `-h` | — | shows this help |  |
-| `-l` | — | logs verification errors and the digest (hash) to the log_filename |  |
-| `-p` | — | specify the process buffer size (default is the chunk size) |  |
-| `-q` | — | quiet shows minimal status information |  |
-| `-v` | — | verbose output to stderr |  |
+| `-l` | — | logs verification errors and the digest (hash) to the log_filename | Write the verification result to a log file — the artefact worth keeping with the case, not just terminal output. |
+| `-p` | — | specify the process buffer size (default is the chunk size) | Process buffer size. |
+| `-q` | — | quiet shows minimal status information | Minimal output, for scripted checks. |
+| `-v` | — | verbose output to stderr | Verbose diagnostics to stderr. |
 | `-V` | — | print version |  |
-| `-w` | — | zero sectors on checksum error (mimic EnCase like behavior) |  |
-| `-x` | — | use the chunk data instead of the buffered read and write functions. |  |
+| `-w` | — | zero sectors on checksum error (mimic EnCase like behavior) | Wipe sectors that could not be read. |
+| `-x` | — | use the chunk data instead of the buffered read and write functions. | Bypass the buffered read/write path. |
 
 ## Gotchas
 
-_TODO: operational traps._
+- This reads every byte, so it takes as long as the acquisition did. Budget for that rather than discovering it mid-deadline.
+- A pass proves the image matches what was recorded **at acquisition**. It says nothing about whether the acquisition captured the device correctly — a disk failing mid-image produces a verifiable image of incomplete data.
 
 ## See also
 

@@ -463,4 +463,167 @@ ENRICHMENT: dict[str, dict] = {
             "prioritising in triage.",
         ],
     },
+
+    # --- Acquisition -------------------------------------------------------
+    # The E01 workflow: acquire, inspect, verify, convert. This is the first
+    # step of every investigation and was the least documented part of the
+    # guide until the tools existed in the kit to capture from.
+
+    "ewfacquire": {
+        "purpose": "Acquire a disk, volume or device into an EWF/E01 evidence "
+                   "container, with the case metadata and hashes stored inside "
+                   "the image itself.",
+        "when": {
+            "-t": "Set the output name, without extension — ewfacquire appends "
+                  "`.E01`, `.E02`… itself. The one flag you always pass.",
+            "-2": "Write a second copy in the same pass. Two independent copies "
+                  "for the cost of one read, which matters when the source is "
+                  "failing and may not survive a second acquisition.",
+            "-c": "Trade size against time. `best` on a slow USB source is often "
+                  "faster overall than `none`, because the bottleneck is the "
+                  "read, not the CPU.",
+            "-d": "Add sha1 or sha256 alongside the default md5. Worth doing "
+                  "once, at acquisition: md5 alone is increasingly challenged, "
+                  "and rehashing later means reading the whole image again.",
+            "-C": "Case number, stored in the image header.",
+            "-D": "Description, stored in the image header.",
+            "-e": "Examiner name, stored in the image header.",
+            "-E": "Evidence number, stored in the image header.",
+            "-N": "Free-text notes, stored in the image header. These five "
+                  "metadata flags are the reason to choose E01 over a raw `dd` "
+                  "image: the container describes its own provenance.",
+            "-f": "Choose the EWF variant. `encase6` is the safe default for "
+                  "interoperability; pick the format the tool that will read it "
+                  "expects, not the newest one available.",
+            "-S": "Segment size. The 1.4 GiB default suits FAT32 and optical "
+                  "media; raise it on a modern filesystem to avoid hundreds of "
+                  "fragments.",
+            "-b": "Sectors per chunk. Larger chunks read faster but lose more "
+                  "data to each unreadable sector.",
+            "-g": "Error granularity — how much data around a bad sector is "
+                  "discarded. Lower values preserve more of a failing disk at "
+                  "the cost of speed.",
+            "-r": "Read retries before giving up on a sector. Raise it for a "
+                  "dying drive; lower it when retries are heating a drive that "
+                  "may not survive the acquisition.",
+            "-w": "Zero unreadable sectors instead of aborting, the way EnCase "
+                  "does. Keeps offsets aligned so the filesystem still parses.",
+            "-R": "Resume an interrupted acquisition at a safe point, instead of "
+                  "restarting a multi-hour read.",
+            "-u": "Unattended — suppresses the interactive prompts. Required "
+                  "for any scripted or headless acquisition.",
+            "-q": "Minimal status output, for logs.",
+            "-l": "Write the acquisition log, including errors and hashes, to a "
+                  "file. This is the record you cite later; do not skip it.",
+            "-o": "Start at an offset rather than sector 0.",
+            "-B": "Acquire a fixed number of bytes rather than the whole device — "
+                  "with `-o`, the way to image one region.",
+            "-m": "Record the media type (fixed, removable, optical, memory) in "
+                  "the header.",
+            "-M": "Record whether this is a physical device or a logical volume.",
+            "-P": "Override bytes-per-sector. Needed on 4Kn drives where the "
+                  "512-byte assumption is wrong.",
+            "-p": "Process buffer size — a throughput tuning knob.",
+            "-T": "Supply a CUE file when imaging optical media, so the track "
+                  "layout is preserved.",
+            "-s": "Swap byte pairs for a big-endian source. Rare, and wrong "
+                  "unless you know the source endianness differs.",
+            "-A": "Header codepage, for non-ASCII metadata.",
+            "-x": "Bypass the buffered read/write path.",
+            "-v": "Verbose diagnostics to stderr — worth capturing alongside "
+                  "`-l` when a source is throwing read errors.",
+        },
+        "gotchas": [
+            "The case metadata flags default to literal placeholder strings — "
+            "`case_number`, `examiner_name`, `evidence_number`. Omit them and the "
+            "image ships with those placeholders recorded as fact, which is worse "
+            "than an empty field because it looks filled in.",
+            "`-t` takes the name **without** an extension. Passing `image.E01` "
+            "produces `image.E01.E01`.",
+            "Acquisition is not verification. `ewfacquire` records hashes; proving "
+            "the image still matches them later is `ewfverify`.",
+        ],
+    },
+
+    "ewfinfo": {
+        "purpose": "Show the metadata, hashes and acquisition details recorded "
+                   "inside an EWF/E01 image.",
+        "when": {
+            "-i": "Acquisition details only — who imaged it, when, with what.",
+            "-m": "Media details only — geometry, sector size, media type.",
+            "-e": "Read errors recorded at acquisition. Check this before "
+                  "trusting a clean-looking image: unreadable sectors are noted "
+                  "here, not in the filesystem.",
+            "-f": "Emit DFXML instead of text, when the output feeds a tool "
+                  "rather than a person.",
+            "-d": "Date format. `iso8601` is the unambiguous choice for a report.",
+            "-A": "Header codepage, for images with non-ASCII metadata.",
+            "-v": "Verbose diagnostics to stderr.",
+        },
+        "gotchas": [
+            "This reads the header only. It reports the hash that was recorded at "
+            "acquisition; it does not recompute it, so it cannot tell you the "
+            "image is still intact. Use `ewfverify` for that.",
+        ],
+    },
+
+    "ewfverify": {
+        "purpose": "Recompute an EWF/E01 image's hashes and check them against "
+                   "the values stored at acquisition.",
+        "when": {
+            "-d": "Also verify an additional digest such as sha256, when one was "
+                  "recorded at acquisition.",
+            "-l": "Write the verification result to a log file — the artefact "
+                  "worth keeping with the case, not just terminal output.",
+            "-q": "Minimal output, for scripted checks.",
+            "-f": "Output format.",
+            "-p": "Process buffer size.",
+            "-A": "Header codepage.",
+            "-v": "Verbose diagnostics to stderr.",
+            "-w": "Wipe sectors that could not be read.",
+            "-x": "Bypass the buffered read/write path.",
+        },
+        "gotchas": [
+            "This reads every byte, so it takes as long as the acquisition did. "
+            "Budget for that rather than discovering it mid-deadline.",
+            "A pass proves the image matches what was recorded **at acquisition**. "
+            "It says nothing about whether the acquisition captured the device "
+            "correctly — a disk failing mid-image produces a verifiable image of "
+            "incomplete data.",
+        ],
+    },
+
+    "ewfexport": {
+        "purpose": "Convert an EWF/E01 image to raw, or to another EWF format, "
+                   "including extracting a subset of it.",
+        "when": {
+            "-t": "Target name. `-` writes to stdout, which lets the image be "
+                  "piped straight into another tool without staging a full raw "
+                  "copy on disk.",
+            "-f": "Output format — `raw` for tools that cannot read EWF, or "
+                  "another EWF variant for compatibility.",
+            "-o": "Start offset, to export a region rather than the whole image.",
+            "-B": "Number of bytes to export — with `-o`, extracts one partition.",
+            "-S": "Segment size for the output.",
+            "-c": "Compression for an EWF target.",
+            "-d": "Calculate an additional digest over the exported data.",
+            "-u": "Unattended, for scripted conversion.",
+            "-q": "Minimal output.",
+            "-l": "Log the export.",
+            "-s": "Swap byte pairs.",
+            "-b": "Sectors per chunk.",
+            "-p": "Process buffer size.",
+            "-A": "Header codepage.",
+            "-v": "Verbose diagnostics to stderr.",
+            "-w": "Zero sectors that cannot be read.",
+            "-x": "Bypass the buffered read/write path.",
+        },
+        "gotchas": [
+            "Exporting to raw discards the metadata and hashes that justified "
+            "using E01. Keep the original: the raw copy is a working artefact, "
+            "not the evidence.",
+            "A raw export needs the full uncompressed size in free space. E01 "
+            "compression routinely hides a 2 TB image inside 700 GB.",
+        ],
+    },
 }
