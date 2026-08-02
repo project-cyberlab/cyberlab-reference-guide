@@ -2,7 +2,7 @@
 # regipy-parse-header
 
 **Kit:** SIFT Workstation (regipy)  **Capability:** Parse registry hives
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/regipy-parse-header.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/regipy-parse-header.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

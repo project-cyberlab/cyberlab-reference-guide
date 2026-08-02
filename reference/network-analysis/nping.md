@@ -2,7 +2,7 @@
 # nping
 
 **Kit:** Kali Linux · FLARE-VM  **Capability:** Probe or scan hosts and services
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/nping.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/nping.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

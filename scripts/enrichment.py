@@ -1070,4 +1070,125 @@ ENRICHMENT: dict[str, dict] = {
             "multi-terabyte image before committing to a full pass.",
         ],
     },
+
+    # --- Packet capture handling -------------------------------------------
+
+    "editcap": {
+        "purpose": "Cut, split, deduplicate and convert capture files — the "
+                   "tool that makes an unmanageable pcap workable before "
+                   "analysis starts.",
+        "when": {
+            "-A": "Keep only packets at or after this timestamp.",
+            "-B": "Keep only packets before this timestamp. With `-A`, this is "
+                  "how a multi-gigabyte capture becomes the incident window.",
+            "-c": "Split into files of N packets each. The standard fix for a "
+                  "capture too large for Wireshark to open.",
+            "-i": "Split into files covering N seconds each — the same fix, when "
+                  "time is the natural unit.",
+            "-d": "Drop duplicate packets using the default 5-packet window. "
+                  "Captures taken from a SPAN port routinely see each packet "
+                  "twice, which distorts every count downstream.",
+            "-D": "Drop duplicates with an explicit window, when `-d`'s default "
+                  "is too narrow.",
+            "-w": "Drop duplicates within a time window rather than a packet "
+                  "count.",
+            "--novlan": "Ignore VLAN tags when comparing for duplicates, so the "
+                        "same frame seen on two VLANs collapses to one.",
+            "-r": "Invert the selection: keep the specified packets instead of "
+                  "deleting them. Easy to forget, and it reverses the meaning of "
+                  "the whole command.",
+            "-s": "Truncate each packet to N bytes. Strips payload while keeping "
+                  "headers — the usual way to share a capture without its "
+                  "contents.",
+            "-L": "Adjust the recorded frame length to match after truncating, so "
+                  "the file is not self-inconsistent.",
+            "-t": "Shift every timestamp by a relative amount. This is how a "
+                  "capture from a host with a skewed clock is aligned to the "
+                  "rest of the timeline.",
+            "-F": "Output file format; pcapng by default. An empty `-F` lists "
+                  "the choices.",
+            "-T": "Output encapsulation type, when the link type must change.",
+            "--discard-all-secrets": "Strip embedded decryption secrets before "
+                                     "handing the file to someone else.",
+            "--capture-comment": "Attach a comment to the file — a place to "
+                                 "record provenance that travels with the "
+                                 "capture.",
+            "--discard-capture-comment": "Remove existing comments on output.",
+            "-I": "Ignore N leading bytes when comparing for duplicates.",
+            "-o": "With `-E`, skip bytes before introducing errors.",
+            "--seed": "With `-E`, fix the random seed so a corrupted-capture test "
+                      "is reproducible.",
+            "-V": "Verbose; with the duplicate options it reports what was "
+                  "removed rather than silently dropping packets.",
+        },
+        "gotchas": [
+            "`-r` inverts the selection. Without it the named packets are "
+            "**deleted**, which is the opposite of what most people intend the "
+            "first time.",
+            "Deduplication is a heuristic over a window, not a proof. A genuine "
+            "retransmission looks like a duplicate, and dropping it destroys the "
+            "evidence that a retransmission occurred.",
+            "Splitting renumbers packets per output file. Frame numbers cited "
+            "from a split file do not refer to the original capture.",
+        ],
+    },
+
+    "ngrep": {
+        "purpose": "Grep packet payloads, live or from a capture, with BPF "
+                   "filtering — pattern matching on the wire.",
+        "when": {
+            "-I": "Read from a pcap file instead of an interface. The safe mode: "
+                  "no capture privileges and no risk of touching live traffic.",
+            "-O": "Write matched packets to a pcap, turning a search into a "
+                  "smaller capture that Wireshark can open.",
+            "-i": "Case-insensitive match — usually what you want for protocol "
+                  "keywords and hostnames.",
+            "-w": "Match the pattern as a whole word, to stop a short string "
+                  "matching inside longer ones.",
+            "-X": "Treat the pattern as hexadecimal, for matching binary "
+                  "signatures rather than text.",
+            "-x": "Print payloads as a hexdump — necessary when the protocol is "
+                  "not text.",
+            "-v": "Invert the match, to see everything that is *not* the known "
+                  "traffic.",
+            "-t": "Print a timestamp on every match.",
+            "-T": "Print the delta since the previous match; twice for delta from "
+                  "the first. Useful for spotting beaconing intervals.",
+            "-n": "Stop after N packets.",
+            "-A": "Also print N packets following each match, for the response to "
+                  "the request that matched.",
+            "-d": "Choose the capture interface rather than the pcap default.",
+            "-p": "Do not enter promiscuous mode — capture only traffic addressed "
+                  "to this host.",
+            "-s": "Set the BPF capture length.",
+            "-S": "Limit how much of a matched packet is shown.",
+            "-W": "Output format: `byline` is far more readable for text "
+                  "protocols than the default.",
+            "-F": "Read the BPF filter from a file, when it is too long to be "
+                  "comfortable on a command line.",
+            "-M": "Single-line matching instead of multi-line.",
+            "-D": "Replay a pcap at its recorded timing rather than as fast as "
+                  "possible.",
+            "-e": "Show empty packets, which are otherwise hidden.",
+            "-q": "Suppress the reception hash marks.",
+            "-l": "Line-buffer stdout, so output appears when piped.",
+            "-c": "Force the column width.",
+            "-P": "Set the character shown for non-printable bytes.",
+            "-N": "Show sub-protocol numbers.",
+            "-R": "Skip privilege revocation.",
+            "-K": "Send packets to kill matched connections. This **writes to the "
+                  "network** — it is not an analysis option, and it does not "
+                  "belong anywhere near evidence handling.",
+        },
+        "gotchas": [
+            "It matches within individual packets. A string split across TCP "
+            "segments will not be found — reassembly is `tshark`'s job, not "
+            "this one's.",
+            "`-K` is the one flag here that changes the world instead of "
+            "observing it. Everything else reads; that one transmits.",
+            "Matching payload on a live interface needs capture privileges, and "
+            "on a busy link `ngrep` drops packets silently. Capture first, "
+            "search the file afterwards, when the answer has to be complete.",
+        ],
+    },
 }

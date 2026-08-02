@@ -2,7 +2,7 @@
 # rafind2
 
 **Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Search raw data for a pattern  **Version:** rafind2 6.1.9
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/rafind2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/rafind2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

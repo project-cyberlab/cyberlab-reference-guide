@@ -2,7 +2,7 @@
 # frida-trace
 
 **Kit:** REMnux  **Capability:** Emulate or instrument execution  **Version:** 17.16.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/frida-trace.help.txt)  **Docs:** <https://frida.re>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/frida-trace.help.txt)  **Docs:** <https://frida.re>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

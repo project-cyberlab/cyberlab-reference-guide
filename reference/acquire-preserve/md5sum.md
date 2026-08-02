@@ -2,7 +2,7 @@
 # md5sum
 
 **Kit:** Base OS — present on every Linux image  **Capability:** Verify evidence integrity with hashes  **Version:** md5sum (GNU coreutils) 9.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/md5sum.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/md5sum.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

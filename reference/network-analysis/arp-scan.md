@@ -2,7 +2,7 @@
 # arp-scan
 
 **Kit:** SIFT Workstation  **Capability:** Probe or scan hosts and services  **Version:** arp-scan 1.10.0
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/arp-scan.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/arp-scan.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

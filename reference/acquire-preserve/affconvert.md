@@ -2,7 +2,7 @@
 # affconvert
 
 **Kit:** Kali Linux · SIFT Workstation  **Capability:** Image a disk, volume or device  **Version:** affconvert version 3.7.20
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/affconvert.help.txt)
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/affconvert.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

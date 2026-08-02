@@ -2,7 +2,7 @@
 # wget
 
 **Kit:** REMnux  **Capability:** Fetch and verify external references  **Version:** GNU Wget 1.21.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/wget.help.txt)  **Docs:** <https://www.gnu.org/software/wget/>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/wget.help.txt)  **Docs:** <https://www.gnu.org/software/wget/>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

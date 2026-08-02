@@ -2,7 +2,7 @@
 # john
 
 **Kit:** Kali Linux  **Capability:** Crack passwords and hashes  **Version:** stat: version: No such file or directory
-**Captured:** `cyberlab-aio` via `(no args)` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/john.help.txt)
+**Captured:** `cyberlab-aio` via `(no args)` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/john.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

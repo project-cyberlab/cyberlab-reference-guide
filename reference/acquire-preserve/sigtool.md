@@ -2,7 +2,7 @@
 # sigtool
 
 **Kit:** REMnux · SIFT Workstation  **Capability:** Verify evidence integrity with hashes; Scan with signatures for known-bad  **Version:** ClamAV 1.4.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-01  [raw](../../capture/cyberlab-aio/help/sigtool.help.txt)  **Docs:** <https://www.clamav.net>
+**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/sigtool.help.txt)  **Docs:** <https://www.clamav.net>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
