@@ -14,10 +14,25 @@ Enumerate filesystem and registry permissions.
 
 ![AccessEnum main window](../../capture/gui/AccessEnum/AccessEnum.png)
 
+## Controls
+
+All 30 nodes come from the capture; the 4 interactive controls are listed here.
+
+| Control | Type | AutomationId | What it does |
+|---|---|---|---|
+| **You can also use the /accepteula command-line switch to accept the EULA.** | Pane | `502` | |
+| **Agree** | Pane | `1` | |
+| **Decline** | Pane | `2` | |
+| **Print** | Pane | `501` | |
+
 ## Using it
 
-_TODO: numbered click-path, at most seven steps per task._
+1. Accept the licence on first run; until that is done the tool never reaches its main window.
+2. Choose the directory or registry key to enumerate.
+3. Run the scan, then sort by the permissions column rather than by path — the outliers are the finding, and they do not cluster by location.
+4. Save the results as the before-state when you are about to change anything.
 
 ## Gotchas
 
-_TODO: what surprises an analyst here._
+- It reports what the ACLs say, not what is reachable. Group membership, inheritance and share permissions all sit on top of this.
+- The capture behind this page is the licence dialog, not the tool: a first run shows the EULA and nothing else. Sysinternals binaries need `-accepteula` before they can be driven automatically, so the control table here documents that dialog rather than the main window.

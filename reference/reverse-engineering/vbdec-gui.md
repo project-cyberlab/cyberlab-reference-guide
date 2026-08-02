@@ -14,10 +14,19 @@ Visual Basic 5/6 decompiler.
 
 ![vbdec main window](../../capture/gui/vbdec/vbdec.png)
 
+## Controls
+
+All 8 nodes come from the capture; the 1 interactive controls are listed here.
+
+| Control | Type | AutomationId | What it does |
+|---|---|---|---|
+| **Search Log** | Pane | `10` | |
+
 ## Using it
 
-_TODO: numbered click-path, at most seven steps per task._
+1. Open the VB5/VB6 binary.
+2. Work from the form and control names, which usually survive and describe the program's intent.
 
 ## Gotchas
 
-_TODO: what surprises an analyst here._
+- Scope is VB5 and VB6 only. VB.NET is a .NET assembly — use [dnSpy](../reverse-engineering/dnSpy-gui.md) for those.

@@ -202,8 +202,14 @@ All 295 nodes come from the capture; the 183 interactive controls are listed her
 
 ## Using it
 
-_TODO: numbered click-path, at most seven steps per task._
+1. **Open** the .NET assembly.
+2. Read the decompiled C# rather than the IL first — .NET decompiles cleanly enough that the source is usually the fastest route.
+3. Use **Search Assemblies** for the strings and API names that matter, instead of browsing the namespace tree.
+4. Set a breakpoint and start debugging when static reading stalls — this is a debugger as well as a decompiler, which is the reason to choose it.
+5. **Export to Project...** when the assembly is worth reading as a whole in an editor.
 
 ## Gotchas
 
-_TODO: what surprises an analyst here._
+- Obfuscated assemblies decompile into something that looks like code and is not. Names are meaningless after obfuscation; the control flow may be too. De-obfuscate first with `de4dot`.
+- Debugging runs the sample. Do it only on the isolated VM, with no network path out.
+- It edits and recompiles assemblies. That is useful and it is also how evidence gets modified by accident — work on a copy.
