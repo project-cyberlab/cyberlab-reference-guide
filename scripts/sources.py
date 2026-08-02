@@ -330,6 +330,71 @@ _seed_suite(
     ("https://www.wireshark.org/docs/wsug_html_chunked/AppToolstshark.html",),
 )
 _seed_suite(
+    "photorec testdisk fidentify",
+    ("https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step",
+     "https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step",
+     "https://www.cgsecurity.org/wiki/PhotoRec"),
+)
+_seed_suite(
+    "binwalk",
+    ("https://github.com/ReFirmLabs/binwalk/wiki/Usage",),
+)
+_seed_suite(
+    "foremost scalpel",
+    ("https://forensicswiki.xyz/wiki/index.php?title=Foremost",),
+)
+_seed_suite(
+    "bulk_extractor",
+    ("https://github.com/simsong/bulk_extractor/wiki",),
+)
+_seed_suite(
+    "exiftool",
+    ("https://exiftool.org/examples.html",),
+)
+_seed_suite(
+    "hashcat",
+    ("https://hashcat.net/wiki/doku.php?id=hashcat",
+     "https://hashcat.net/wiki/doku.php?id=frequently_asked_questions"),
+)
+_seed_suite(
+    "john",
+    ("https://www.openwall.com/john/doc/EXAMPLES.shtml",),
+)
+_seed_suite(
+    "yara",
+    ("https://yara.readthedocs.io/en/stable/writingrules.html",),
+)
+_seed_suite(
+    "chainsaw hayabusa",
+    ("https://github.com/WithSecureLabs/chainsaw",
+     "https://github.com/Yamato-Security/hayabusa"),
+)
+_seed_suite(
+    "dc3dd dcfldd ewfacquire guymager",
+    ("https://forensicswiki.xyz/wiki/index.php?title=Dc3dd",
+     "https://github.com/libyal/libewf/wiki/Tools"),
+)
+_seed_suite(
+    "radare2 r2",
+    ("https://book.rada.re/basic_commands/intro.html",),
+)
+_seed_suite(
+    "frida frida-trace",
+    ("https://frida.re/docs/frida-trace/",),
+)
+_seed_suite(
+    "diec die",
+    ("https://github.com/horsicq/Detect-It-Easy",),
+)
+_seed_suite(
+    "upx",
+    ("https://github.com/upx/upx/blob/devel/README.md",),
+)
+_seed_suite(
+    "ssdeep",
+    ("https://ssdeep-project.github.io/ssdeep/usage.html",),
+)
+_seed_suite(
     "log2timeline.py psort.py pinfo.py",
     ("https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",),
 )

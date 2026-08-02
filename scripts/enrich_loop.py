@@ -33,6 +33,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import sources  # noqa: E402
+import blind_check  # noqa: E402
 
 ROOT = HERE.parent
 OUT = ROOT / "research_output.json"
@@ -349,6 +350,18 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
     t0 = time.time()
     note = ask(base, model, prompt)
     ok, why = gate(note, ev, tool, capture_flags(tool) if flag else None)
+
+    # Blind verification, only for notes the mechanical gate approved. The
+    # gate sees the note and the evidence together and is therefore prone to
+    # confirmation bias (MARCH, arXiv 2603.24579) -- it approved two inverted
+    # workflows. This re-derives the claims from the sources alone.
+    blind = None
+    if ok:
+        blind = blind_check.verify(note, ev)
+        if blind["verdict"] == "reject":
+            ok, why = False, "blind check: " + blind["reason"]
+        elif blind["verdict"] == "review":
+            ok, why = False, "NEEDS-REVIEW: blind check: " + blind["reason"]
     rec = {
         "tool": tool, "flag": flag,
         "status": "kept" if ok else "rejected",
@@ -358,6 +371,7 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
         "top_score": ev[0]["score"],
         "sources_tried": len({e["url"] for e in ev}),
         "worker": name, "seconds": round(time.time() - t0, 1),
+        "blind": blind,
     }
     if not ok:
         # Three distinct outcomes, and collapsing them loses the point.
