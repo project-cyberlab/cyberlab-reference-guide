@@ -1,0 +1,53 @@
+ï»¿# gui-tree: die
+# exe: C:\Tools\die\die.exe
+# captured: 2026-08-02T05:58:09.2193276-07:00
+# session: 1
+# window: Detect It Easy v3.10 [Windows 10 Version 2009] (x86_64)
+# class: GuiMainWindow
+#---
+Group #GuiMainWindow.centralwidget
+  Group "File name" #GuiMainWindow.centralwidget.groupBoxFileName
+    Button ">" #GuiMainWindow.centralwidget.groupBoxFileName.toolButtonRecentFiles
+    Edit "File name" #GuiMainWindow.centralwidget.groupBoxFileName.lineEditFileName
+    Button "..." #GuiMainWindow.centralwidget.groupBoxFileName.toolButtonOpenFile
+  Group #GuiMainWindow.centralwidget.widgetFormats
+    Group "File type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileType
+      ComboBox "File type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileType.comboBoxFileType [Down]
+        List
+    Group "File size" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileSize
+      Edit "File size" #GuiMainWindow.centralwidget.widgetFormats.groupBoxFileSize.lineEditFileSize
+    Group "Scan" #GuiMainWindow.centralwidget.widgetFormats.groupBoxScanEngine
+      ComboBox "Scan" #GuiMainWindow.centralwidget.widgetFormats.groupBoxScanEngine.comboBoxScanEngine [Down]
+        List
+          ListItem "Automatic"
+          ListItem "Detect It Easy (DiE)"
+          ListItem "Nauz File Detector (NFD)"
+          ListItem "Yara rules"
+    Group "Endianness" #GuiMainWindow.centralwidget.widgetFormats.groupBoxEndianness
+      Edit "Endianness" #GuiMainWindow.centralwidget.widgetFormats.groupBoxEndianness.lineEditEndianness
+    Group "Mode" #GuiMainWindow.centralwidget.widgetFormats.groupBoxMode
+      Edit "Mode" #GuiMainWindow.centralwidget.widgetFormats.groupBoxMode.lineEditMode
+    Group "Architecture" #GuiMainWindow.centralwidget.widgetFormats.groupBoxArch
+      Edit "Architecture" #GuiMainWindow.centralwidget.widgetFormats.groupBoxArch.lineEditArch
+    Group "Type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxType
+      Edit "Type" #GuiMainWindow.centralwidget.widgetFormats.groupBoxType.lineEditType
+    Custom #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan
+      Group #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE
+        Tree #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.treeViewResult
+        Custom #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan
+          Group #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan
+            Button "Signatures" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieSignatures
+            ComboBox #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.comboBoxFlags [Down]
+            ComboBox #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.comboBoxDatabases [Down]
+            Button "Directory" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieScanDirectory
+            Button "Log" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieLog
+            Button ">" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieExtraInformation
+            Button "0 msec" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.toolButtonElapsedTime
+            Button "Scan" #GuiMainWindow.centralwidget.widgetFormats.stackedWidgetScan.pageScanDIE.stackedWidgetDieScan.pageScan.pushButtonDieScanStart
+  Group #GuiMainWindow.centralwidget.groupBoxExtra
+    CheckBox "Advanced" #GuiMainWindow.centralwidget.groupBoxExtra.checkBoxAdvanced
+    Button "Shortcuts" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonShortcuts
+    Button "Options" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonOptions
+    Button "About" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonAbout
+    Button "Exit" #GuiMainWindow.centralwidget.groupBoxExtra.toolButtonExit
+#--- nodes: 45

@@ -108,24 +108,65 @@ Two capture paths exist, and they have different reach:
 
 | Path | Reach | Status |
 |---|---|---|
-| Hypervisor framebuffer (`qm monitor screendump`) | whole screen, no guest cooperation | **working** — used to diagnose the VM 101 boot failure |
-| In-guest per-window capture + UIA dump | single window, plus the control tree | **blocked**, see below |
+| Hypervisor framebuffer (`qm monitor screendump`) | whole screen, no guest cooperation | working — used to diagnose the VM 101 boot failure |
+| In-guest per-window capture + UIA dump | single window, plus the control tree | **working**, see below |
 
-**Known blocker.** GUI automation must run in the interactive desktop session.
-On VM 101 the SSH service lands in session 0, which has no window station, so
-`Start-Process notepad` yields *no window found*:
+### Getting into the interactive session
+
+GUI automation must run in the interactive desktop session. Anything driven from
+outside lands in session 0, which has no window station, so `Start-Process`
+returns a process with no window and the tree comes back empty:
 
 ```
-session 0  services  Disconnected   <- SSH lands here
+session 0  services  Disconnected   <- SSH and the guest agent land here
 session 1  flare     Active         <- the desktop, explorer running
 ```
 
-Two `schtasks /IT` variants returned `SCHED_S_TASK_HAS_NOT_RUN` (267011). The
-probe script itself stages correctly, so this is solely an execution-context
-problem. Untried: `PsExec -i 1`, a Startup-folder script run at autologon, or
-driving the framebuffer with `qm monitor sendkey`. Until it is resolved, GUI pages
-can carry vendor-sourced procedures and full-screen captures, but **not** the
-control inventory — and a page without item 6 is incomplete and must say so.
+What did not work, recorded so it is not retried:
+
+- `schtasks /IT`, both with `/RP` and with `/NP`, returned
+  `SCHED_S_TASK_HAS_NOT_RUN` (267011).
+- `PsExec -i 1` failed with *"Error creating key file... The handle is
+  invalid"*. PsExec needs valid console handles and the guest-agent channel
+  supplies none; redirecting from `NUL` did not satisfy it either.
+
+What works: a script in the **All Users Startup folder**, executed by autologon
+after a reboot. It runs as the console user in session 1 with a real desktop.
+
+> Check `DefaultPassword` before rebooting for this. On VM 101 `AutoAdminLogon`
+> was `1` but `DefaultPassword` was absent, so autologon would not have fired and
+> the machine would have stopped at the logon screen — with SSH password auth
+> already broken, that would have stranded it. Set the account password and the
+> autologon credentials, snapshot, *then* reboot.
+
+### Walking the tree
+
+`FindAll(TreeScope::Descendants)` on the top-level window is not enough. For
+applications whose content is virtualised — modern XAML, Qt, Java — it returns
+almost nothing; Notepad reports two Panes and no menu at all. Recurse with
+`TreeWalker.ControlViewWalker` instead, and expand `MenuItem`/`Menu` nodes
+through `ExpandCollapsePattern` on the way past, because a collapsed menu
+reports only its own label.
+
+Worked example, captured from the kit's own build:
+[`capture/gui/die/die.tree.txt`](../capture/gui/die/die.tree.txt) — Detect It
+Easy v3.10, 41 controls carrying stable AutomationIds, with the screenshot
+beside it.
+
+The reason this satisfies §2 is visible in that file:
+
+```
+ComboBox "Scan" #GuiMainWindow.centralwidget.widgetFormats.groupBoxScanEngine.comboBoxScanEngine
+  List
+    ListItem "Automatic"
+    ListItem "Detect It Easy (DiE)"
+    ListItem "Nauz File Detector (NFD)"
+    ListItem "Yara rules"
+```
+
+Those four ListItems are the permitted values of a GUI control, enumerated from
+the running binary. They are the direct analogue of a CLI flag's accepted
+arguments, and they can be linted exactly the same way.
 
 ---
 
