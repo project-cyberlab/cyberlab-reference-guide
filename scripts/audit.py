@@ -135,7 +135,16 @@ def audit_unexplained_sections() -> list[str]:
             continue
         rel = p.relative_to(ROOT).as_posix()
         lines = p.read_text(encoding="utf-8", errors="replace").splitlines()
+        # Fence-aware, because a `#` inside a code block is a shell comment
+        # and not a heading. The cyberlab loop learned this the expensive way:
+        # fence-blind section parsing mis-read 12 of 38 modules.
+        in_fence = False
         for i, line in enumerate(lines):
+            if line.lstrip().startswith("```"):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
             m = heading.match(line)
             if not m:
                 continue
