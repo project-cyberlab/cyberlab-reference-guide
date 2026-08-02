@@ -14,6 +14,12 @@
 
 Carve files out of an image or raw data by header and footer signatures.
 
+## When you'd reach for this
+
+An analyst reaches for foremost when recovering lost files from disk images or drives, often after creating an image with tools like dd, and before analyzing the recovered data; they choose it because it uses built-in file types for reliable and faster recovery based on headers, footers, and internal data structures.
+
+**Sources:** <http://foremost.sourceforge.net/> · <https://www.kali.org/tools/foremost/>
+
 ## Options
 
 All 11 options parsed from the captured help text; 8 reviewed with usage guidance.

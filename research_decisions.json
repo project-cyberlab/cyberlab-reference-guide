@@ -1,0 +1,34 @@
+{
+  "log2timeline.py": {
+    "verdict": "accept",
+    "why": "names the real position (after imaging, before analysis), the triage lever (filter file) and the encrypted-volume case"
+  },
+  "foremost": {
+    "verdict": "accept",
+    "why": "correct positioning after dd imaging and before analysis, and explains carving by header/footer rather than filesystem"
+  },
+  "olevba": {
+    "verdict": "reject",
+    "why": "asserts you run it after oledump-py; they are alternatives, not a sequence. An invented dependency is the same class of error as an invented flag"
+  },
+  "mraptor": {
+    "verdict": "reject",
+    "why": "leads with password-protected zips, a niche feature, and buries the actual job: a fast macro verdict used to triage many files"
+  },
+  "die": {
+    "verdict": "reject",
+    "why": "one source, score 1, and the differential is marketing language rather than a scenario"
+  },
+  "diec": {
+    "verdict": "reject",
+    "why": "one source, score 1; 'reduced false positives' is a claim about quality, not a situation an analyst can recognise"
+  },
+  "pdf-parser": {
+    "verdict": "reject",
+    "why": "hedged ('might use after initial checks') and never names the trigger, which is a non-zero pdfid count"
+  },
+  "oleid": {
+    "verdict": "reject",
+    "why": "'after initial checks or before deeper analysis' fits every tool ever written and so tells the reader nothing"
+  }
+}

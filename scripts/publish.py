@@ -38,12 +38,30 @@ BEGIN = "# --- BEGIN researched scenarios (scripts/publish.py) ---"
 END = "# --- END researched scenarios ---"
 
 
+DECISIONS = ROOT / "research_decisions.json"
+
+
 def load_kept() -> list[dict]:
+    """Only what survived the loop AND was explicitly accepted on review.
+
+    A mechanical threshold cannot stand in for the review. Measured on pass
+    two: foremost scored 2 on passage quality and was good; mraptor scored 5
+    and led with a niche feature while burying the tool's actual job. Score
+    and source count predict neither. So the review verdict is recorded per
+    tool in research_decisions.json and nothing publishes without one --
+    silence is not consent, because an unreviewed note is exactly what the
+    previous project shipped 44 modules of.
+    """
     try:
         recs = json.loads(KEPT.read_text(encoding="utf-8"))
     except Exception:
         return []
-    out = []
+    try:
+        decisions = json.loads(DECISIONS.read_text(encoding="utf-8"))
+    except Exception:
+        decisions = {}
+
+    out, unreviewed = [], []
     for r in recs:
         if r.get("flag"):
             continue                       # tool-level scenarios only, for now
@@ -54,8 +72,20 @@ def load_kept() -> list[dict]:
         note = " ".join((r.get("note") or "").split())
         if len(note) < 60:
             continue
+        d = decisions.get(r["tool"])
+        if not d:
+            unreviewed.append(r["tool"])
+            continue
+        if d.get("verdict") != "accept":
+            continue
+        # "An analyst reaches for this tool when..." reads as boilerplate on a
+        # page that is already about that tool. Name it, so a reader landing
+        # mid-document knows what they are reading about.
+        note = re.sub(r"\bthis tool\b", r["tool"], note, count=1)
         out.append({"tool": r["tool"], "note": note,
                     "citations": r["citations"][:3]})
+    if unreviewed:
+        print(f"held back, awaiting review: {', '.join(sorted(unreviewed))}\n")
     return out
 
 
