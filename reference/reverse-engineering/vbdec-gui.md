@@ -15,6 +15,8 @@ Decompile VB5 and VB6 binaries, recovering forms, controls and event handlers. T
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/vbdec/vbdec.tree.txt`](../../capture/gui/vbdec/vbdec.tree.txt).
+
 The window exposes 1 further named controls: **Search Log**. The full tree, with every automation id, is in [the capture](../../capture/gui/vbdec/vbdec.tree.txt).
 
 ## Using it

@@ -50,6 +50,16 @@ OUT_OF_SCOPE = {
 }
 
 
+# Tools that ship both a command line and a window. The names rarely match --
+# the GUI is `die`, the command is `diec` -- so a reader landing on one page
+# has no way to know the other exists. Both pages say so explicitly, and both
+# titles carry (CLI) or (GUI), because "diec" and "die-gui" side by side in an
+# index tell you nothing about which one opens a window.
+GUI_COUNTERPART = {
+    "diec": "die",
+    "die": "die",
+}
+
 def slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -249,7 +259,8 @@ def build_page(cmd: str, meta: dict) -> str:
     version = clean_version(meta.get("version") or "")
 
     rel_root = "../.." if caps else ".."
-    L: list[str] = [MARKER, f"# {cmd}", ""]
+    title = f"{cmd} (CLI)" if cmd in GUI_COUNTERPART else cmd
+    L: list[str] = [MARKER, f"# {title}", ""]
 
     # A two-column table, not a run of bold labels on one line. Joined with
     # spaces these fields render as "...pdfid.py 0.2.10 Captured: cyberlab-aio"
@@ -262,6 +273,20 @@ def build_page(cmd: str, meta: dict) -> str:
         rows.append(("Capability", "; ".join(c for _p, c in caps)))
     if version:
         rows.append(("Version", version))
+    # Say plainly when a tool has both a window and a command line. `die`,
+    # `die-gui` and `diec` are three pages for one product, and without this
+    # the reader has to work out which is which from the filename.
+    gui = GUI_COUNTERPART.get(cmd)
+    if gui:
+        gui_page = next((p for p in REF.rglob(f"{gui}-gui.md")), None)
+        if gui_page:
+            rel = gui_page.relative_to(REF).as_posix()
+            depth = "" if not caps else "../"
+            rows.append(("Graphical version",
+                         f"The same tool has a window-based version, "
+                         f"[{gui} (GUI)]({depth}{rel}), which is the better "
+                         f"choice when you are exploring one sample rather "
+                         f"than scripting"))
     rows.append(("Captured from",
                  f"`{img}` via `{meta.get('via','')}` on {date.today().isoformat()} "
                  f"— [raw help output]({rel_root}/capture/{img}/help/{help_path.name})"))

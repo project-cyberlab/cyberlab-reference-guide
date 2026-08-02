@@ -15,6 +15,8 @@ Enumerate the effective permissions across a directory tree or registry branch a
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/AccessEnum/AccessEnum.tree.txt`](../../capture/gui/AccessEnum/AccessEnum.tree.txt).
+
 The window exposes 4 further named controls: **You can also use the /accepteula command-line switch to accept the EULA.**, **Agree**, **Decline**, **Print**. The full tree, with every automation id, is in [the capture](../../capture/gui/AccessEnum/AccessEnum.tree.txt).
 
 ## Using it

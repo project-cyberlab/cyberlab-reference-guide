@@ -16,6 +16,8 @@ Recover source-level structure from Visual Basic executables. P-code binaries de
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/VB-Decompiler/VB-Decompiler.tree.txt`](../../capture/gui/VB-Decompiler/VB-Decompiler.tree.txt).
+
 The window exposes 3 further named controls: **Decompile**, **...**, **Decompiler**. The full tree, with every automation id, is in [the capture](../../capture/gui/VB-Decompiler/VB-Decompiler.tree.txt).
 
 ## Using it

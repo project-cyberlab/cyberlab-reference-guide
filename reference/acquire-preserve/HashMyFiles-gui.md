@@ -15,6 +15,8 @@ Hash a set of files — MD5, SHA-1, SHA-256 and CRC32 — and show them in one s
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/HashMyFiles/HashMyFiles.tree.txt`](../../capture/gui/HashMyFiles/HashMyFiles.tree.txt).
+
 The window exposes 1 further named controls: **0 file(s)**. The full tree, with every automation id, is in [the capture](../../capture/gui/HashMyFiles/HashMyFiles.tree.txt).
 
 ## Using it

@@ -15,6 +15,8 @@ Reconstruct Delphi programs: identify the runtime library, recover form definiti
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/idr/idr.tree.txt`](../../capture/gui/idr/idr.tree.txt).
+
 The window exposes 4 further named controls: **Units (F2)**, **ClassViewer (F7)**, **Branch**, **Tree**. The full tree, with every automation id, is in [the capture](../../capture/gui/idr/idr.tree.txt).
 
 ## Using it

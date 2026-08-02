@@ -109,6 +109,50 @@ def audit_pages() -> list[str]:
     return out
 
 
+def audit_unexplained_sections() -> list[str]:
+    """Flag sections that are a bare table with nothing saying why they exist.
+
+    Every complaint about this guide reading as a data dump has had the same
+    shape: a heading, then straight into rows. The AutomationId column, the
+    179-row control tables, the scan-engine list. The rows were often correct
+    and still useless, because a reader cannot tell what question the table
+    answers or when they would need it.
+
+    One sentence of lead-in is the difference. It is a low bar and it is worth
+    enforcing, because the failure mode is not writing something wrong -- it is
+    filling a field because the field was there.
+    """
+    out = []
+    # A handful of sections are self-evident from their title and do not need
+    # a sentence to justify a table.
+    # Matched on the leading word so that "Options -- complete" and
+    # "Options (common)" count as the same self-evident section.
+    OBVIOUS = {"options", "flags", "synopsis", "gotchas", "sources",
+               "see", "common", "related"}
+    heading = re.compile(r"^(#{2,4})\s+(.+?)\s*$")
+    for p in sorted(REF.rglob("*.md")):
+        if p.name == "INDEX.md":
+            continue
+        rel = p.relative_to(ROOT).as_posix()
+        lines = p.read_text(encoding="utf-8", errors="replace").splitlines()
+        for i, line in enumerate(lines):
+            m = heading.match(line)
+            if not m:
+                continue
+            first = re.split(r"[\s(]", m.group(2).strip().lower())[0]
+            if first in OBVIOUS:
+                continue
+            # Look at the first non-blank line under the heading.
+            for nxt in lines[i + 1:]:
+                if not nxt.strip():
+                    continue
+                if nxt.lstrip().startswith("|"):
+                    out.append(f"SECTION-UNEXPLAINED {rel}: '{m.group(2)}' "
+                               f"opens straight into a table")
+                break
+    return out
+
+
 def audit_kit_list() -> list[str]:
     out = []
     if not KIT.exists():
@@ -132,6 +176,7 @@ def main() -> int:
         "capture versions": audit_versions(),
         "capture bodies": audit_capture_noise(),
         "pages": audit_pages(),
+        "unexplained sections": audit_unexplained_sections(),
         "kit list": audit_kit_list(),
     }
     total = sum(len(v) for v in groups.values())

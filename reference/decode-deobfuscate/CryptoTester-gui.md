@@ -15,6 +15,8 @@ Try cryptographic and encoding operations against a sample interactively: XOR, b
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/CryptoTester/CryptoTester.tree.txt`](../../capture/gui/CryptoTester/CryptoTester.tree.txt).
+
 The window exposes 105 further named controls: **Idle**, **File**, **Open File**, **Input**, **Text**, **Base64**, **Zero Bytes**, **Sequential Bytes**, **Integer**, **Chrysanthemum.jpg**, **Desert.jpg**, **Save Output**, **Tools**, **Blob Analyzer**, **RSA Calculator**, **Key Finder**, **Keystream Finder**, **RNG Tester**, **Base Encoder**, **String Encoder**, **Unit Tester**, **ECC Validator**, **Chunk Viewer**, **Operations**, **XOR Files**, **AND Files**, **Generate Keystream**, **Visual Difference**, **Bruteforce Algorithm**, **Bruteforce Keys**, **Attempt Blind Decryption**, **Advanced**, **Little Endian**, **Custom**, **Rounds**, **Constant**, **Position**, **Matrix**, **IV**, **Get IV From Input**, and 65 more. The full tree, with every automation id, is in [the capture](../../capture/gui/CryptoTester/CryptoTester.tree.txt).
 
 ## Using it

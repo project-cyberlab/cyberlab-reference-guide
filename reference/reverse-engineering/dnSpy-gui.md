@@ -16,6 +16,8 @@ Decompile, browse and debug .NET assemblies. It reconstructs readable C# from IL
 
 ## Controls
 
+The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/dnSpy/dnSpy.tree.txt`](../../capture/gui/dnSpy/dnSpy.tree.txt).
+
 The window exposes 146 further named controls: **File**, **Export to Project...**, **Export to Pro_ject...**, **Save...**, **_Save...**, **Save Module...**, **Save _Module...**, **Save All...**, **Save A_ll...**, **Open...**, **_Open...**, **Open from GAC...**, **Open from _GAC...**, **Open List...**, **Open L_ist...**, **Recent Files**, **Recent _Files**, **Reload All Assemblies**, **_Reload All Assemblies**, **Close All**, **Close Old In-Memory Modules**, **Close All Framework Assemblies**, **Close All Missing Files**, **Sort Assemblies**, **Sor_t Assemblies**, **Restart as Administrator**, **Exit**, **E_xit**, **Edit**, **Undo**, **Redo**, **Find**, **_Find**, **Search Assemblies**, **_Search Assemblies**, **Create Assembly...**, **Create NetModule...**, **View**, **Word Wrap**, **_Word Wrap**, and 106 more. The full tree, with every automation id, is in [the capture](../../capture/gui/dnSpy/dnSpy.tree.txt).
 
 ## Using it

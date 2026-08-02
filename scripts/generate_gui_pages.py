@@ -472,7 +472,14 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
         rest = [c for c in leaves
                 if (c["name"] or "").strip() not in notes]
 
-        L += ["## Controls", ""]
+        # A heading followed straight by rows leaves the reader working out
+        # what question the table answers. Say it first.
+        L += ["## Controls", "",
+              "The parts of this window you will actually touch, read from the "
+              "application's own accessibility tree rather than from a "
+              "screenshot. The full node list is in "
+              f"[`capture/gui/{tool}/{tool}.tree.txt`]"
+              f"(../../capture/gui/{tool}/{tool}.tree.txt).", ""]
         if curated:
             L += ["| Control | Type | What it does |", "|---|---|---|"]
             seen = set()
