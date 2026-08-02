@@ -758,4 +758,138 @@ ENRICHMENT: dict[str, dict] = {
             "contents entirely.",
         ],
     },
+
+    # --- Windows artifacts, Eric Zimmerman's tools -------------------------
+    # These share a house style: -f or -d for input, --csv/--json/--html for
+    # output, --vss, --dedupe, --dt. Explaining the shared flags identically on
+    # each page is deliberate; a reader moving between them should not have to
+    # re-read the same idea in different words.
+
+    "PECmd": {
+        "purpose": "Parse Windows Prefetch files into evidence of what executed, "
+                   "when, how often, and which files each run touched.",
+        "when": {
+            "-d": "Recurse a directory — the normal mode, since Prefetch is only "
+                  "meaningful as a set. Point it at `C:\\Windows\\Prefetch`.",
+            "-f": "A single .pf file, when chasing one binary.",
+            "--csv": "Write CSV to a directory. This is the output that matters: "
+                     "Prefetch is a timeline source, and Timeline Explorer or a "
+                     "spreadsheet is where the pattern shows up.",
+            "--csvf": "Override the generated CSV filename.",
+            "--json": "JSON output, when the results feed another tool.",
+            "--jsonf": "Override the generated JSON filename.",
+            "--html": "XHTML report, for handing to someone who will not open a CSV.",
+            "-k": "Highlight extra keywords in the output. `temp` and `tmp` are "
+                  "highlighted by default; add the names you are hunting.",
+            "-o": "Save the decompressed Prefetch bytes. Win10+ Prefetch is "
+                  "MAM-compressed, so this is how you get something another tool "
+                  "or a hex editor can read.",
+            "-q": "Suppress the per-file detail. Worth it on a large directory "
+                  "when the CSV is the real output.",
+            "--vss": "Also parse every Volume Shadow Copy on the drive. Prefetch "
+                     "rolls over at 1024 entries on Win10+, so shadow copies are "
+                     "often the only place an older execution still exists.",
+            "--dedupe": "Drop duplicates by SHA-1 across the source and the shadow "
+                        "copies. Effectively mandatory with `--vss`, which "
+                        "otherwise returns the same file many times over.",
+            "--dt": "Custom timestamp format for the output.",
+            "--mp": "Higher-precision timestamps, when ordering events within the "
+                    "same second matters.",
+        },
+        "gotchas": [
+            "Prefetch proves a program **ran**; it does not prove who ran it or "
+            "what it did. Pair it with event logs or `AmcacheParser` before "
+            "attributing anything.",
+            "Absence is not evidence of absence. Prefetch can be disabled, is "
+            "commonly off on SSD-era server builds, and rolls over — a missing "
+            "entry means nothing on its own.",
+            "The last-run timestamps are the eight most recent executions only. "
+            "Older runs are gone from the file even though the run count keeps "
+            "counting them.",
+        ],
+    },
+
+    "EvtxECmd": {
+        "purpose": "Parse Windows event logs into a normalised, filterable CSV, "
+                   "mapping the useful fields out of the XML payload.",
+        "when": {
+            "-d": "Recurse a directory of .evtx files — the usual mode when "
+                  "working from a collected `winevt\\Logs`.",
+            "-f": "A single log, when you already know which one matters.",
+            "--csv": "Write CSV to a directory. The normal output, and the form "
+                     "the rest of a timeline workflow expects.",
+            "--csvf": "Override the generated CSV filename.",
+            "--json": "JSON output, for feeding another tool.",
+            "--jsonf": "Override the generated JSON filename.",
+            "--xml": "XML output.",
+            "--xmlf": "Override the generated XML filename.",
+            "--inc": "Process only these Event IDs. The fastest way to cut a "
+                     "multi-gigabyte log down to the question being asked — "
+                     "ranges are allowed (`4624,4625,5410-5500`).",
+            "--exc": "Process everything except these Event IDs. `--inc` wins if "
+                     "both are given.",
+            "--sd": "Drop events older than this date (UTC).",
+            "--ed": "Drop events newer than this date (UTC). With `--sd`, scopes "
+                    "the parse to the incident window instead of all history.",
+            "--maps": "Where the event maps live. The maps are what turn raw XML "
+                      "into named columns; without the right ones, useful fields "
+                      "stay buried in the payload.",
+            "--sync": "Pull the latest maps from upstream. Worth doing before a "
+                      "big parse — map coverage improves continuously.",
+            "--vss": "Also parse every Volume Shadow Copy on the drive, which is "
+                     "where cleared or rotated logs may survive.",
+            "--dedupe": "Drop duplicates by SHA-1 across the source and shadow "
+                        "copies. Use it whenever `--vss` is on.",
+            "--tdt": "Seconds of tolerance for time-discrepancy detection — flags "
+                     "records whose timestamps disagree, a clock-tampering signal.",
+            "--fj": "Export all available data in JSON rather than the mapped "
+                    "subset.",
+            "--met": "Show per-log metrics about what was processed.",
+            "--dt": "Custom timestamp format for the output.",
+        },
+        "gotchas": [
+            "Without a map for an Event ID, the interesting values stay inside "
+            "the XML payload rather than becoming columns. If an expected field "
+            "is missing, the map is usually the reason, not the log.",
+            "A cleared log is itself the finding: Security 1102 and System 104 "
+            "record the clearing. Include them explicitly when hunting "
+            "anti-forensics.",
+            "Event log timestamps are recorded in UTC but `--sd`/`--ed` are only "
+            "as good as your assumption about the host's clock. Corroborate "
+            "before building a timeline on them.",
+        ],
+    },
+
+    "AmcacheParser": {
+        "purpose": "Parse Amcache.hve — the record of programs present on a "
+                   "host, with SHA-1 hashes, including binaries that have since "
+                   "been deleted.",
+        "when": {
+            "-f": "The Amcache.hve to parse.",
+            "-i": "Include file entries associated with Programs entries. More "
+                  "complete, and noisier.",
+            "-b": "Whitelist of SHA-1 hashes to include.",
+            "-w": "Blacklist of SHA-1 hashes to exclude. Blacklisting overrides "
+                  "whitelisting, so a hash in both is dropped — the safe default "
+                  "when suppressing known-good noise.",
+            "--csv": "Write CSV to a directory. The usual output.",
+            "--csvf": "Override the generated CSV filename.",
+            "--nl": "Ignore transaction logs for a dirty hive. Leave this off "
+                    "unless you know why you want it: skipping the logs means "
+                    "parsing a hive that is missing its most recent changes.",
+            "--dt": "Custom timestamp format for the output.",
+            "--mp": "Higher-precision timestamps.",
+        },
+        "gotchas": [
+            "Amcache records that a binary was **present**, not that it ran. It "
+            "is evidence of existence; Prefetch and event logs are evidence of "
+            "execution. Conflating the two is the standard error with this "
+            "artifact.",
+            "It carries SHA-1 for entries, which makes it the fastest way to tie "
+            "a deleted binary to threat intelligence long after the file is gone.",
+            "The hive is usually dirty when collected from a live host. Let the "
+            "transaction logs replay — the entries only in the logs are the most "
+            "recent, which is normally the part you care about.",
+        ],
+    },
 }

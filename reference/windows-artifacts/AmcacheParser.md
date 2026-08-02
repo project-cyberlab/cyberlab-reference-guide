@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Description:
+Parse Amcache.hve — the record of programs present on a host, with SHA-1 hashes, including binaries that have since been deleted.
 
 ## Synopsis
 
@@ -22,19 +22,19 @@ _TODO: up to 8 task-titled invocations._
 
 ## Options
 
-All 15 options parsed from the captured help text. The final column is filled in by review.
+All 15 options parsed from the captured help text; 9 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-f` | f | Amcache.hve file to parse |  |
-| `-i` | — | Include file entries for Programs entries |  |
-| `-w` | w | Path to file containing SHA-1 hashes to *exclude* from the results. Blacklisting overrides whitelisting |  |
-| `-b` | b | Path to file containing SHA-1 hashes to *include* from the results. Blacklisting overrides whitelisting |  |
-| `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes |  |
-| `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name |  |
-| `--dt` | dt | The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for options. Default is: yyyy-MM-dd HH:mm:ss [default: yyyy-MM-dd HH:mm:ss] |  |
-| `--mp` | — | When true, display higher precision for timestamps |  |
-| `--nl` | — | When true, ignore transaction log files for dirty hives. Default is FALSE |  |
+| `-f` | f | Amcache.hve file to parse | The Amcache.hve to parse. |
+| `-i` | — | Include file entries for Programs entries | Include file entries associated with Programs entries. More complete, and noisier. |
+| `-w` | w | Path to file containing SHA-1 hashes to *exclude* from the results. Blacklisting overrides whitelisting | Blacklist of SHA-1 hashes to exclude. Blacklisting overrides whitelisting, so a hash in both is dropped — the safe default when suppressing known-good noise. |
+| `-b` | b | Path to file containing SHA-1 hashes to *include* from the results. Blacklisting overrides whitelisting | Whitelist of SHA-1 hashes to include. |
+| `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes | Write CSV to a directory. The usual output. |
+| `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name | Override the generated CSV filename. |
+| `--dt` | dt | The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for options. Default is: yyyy-MM-dd HH:mm:ss [default: yyyy-MM-dd HH:mm:ss] | Custom timestamp format for the output. |
+| `--mp` | — | When true, display higher precision for timestamps | Higher-precision timestamps. |
+| `--nl` | — | When true, ignore transaction log files for dirty hives. Default is FALSE | Ignore transaction logs for a dirty hive. Leave this off unless you know why you want it: skipping the logs means parsing a hive that is missing its most recent changes. |
 | `--debug` | — | Show debug information during processing |  |
 | `--trace` | — | Show trace information during processing |  |
 | `-?` | — | Show help and usage information |  |
@@ -44,7 +44,9 @@ All 15 options parsed from the captured help text. The final column is filled in
 
 ## Gotchas
 
-_TODO: operational traps._
+- Amcache records that a binary was **present**, not that it ran. It is evidence of existence; Prefetch and event logs are evidence of execution. Conflating the two is the standard error with this artifact.
+- It carries SHA-1 for entries, which makes it the fastest way to tie a deleted binary to threat intelligence long after the file is gone.
+- The hive is usually dirty when collected from a live host. Let the transaction logs replay — the entries only in the logs are the most recent, which is normally the part you care about.
 
 ## See also
 
