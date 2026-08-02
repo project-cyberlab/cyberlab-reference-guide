@@ -1591,4 +1591,164 @@ ENRICHMENT: dict[str, dict] = {
             "not resolve at all.",
         ],
     },
+
+    "objdump": {
+        "purpose": "Disassemble and dump the contents of an object file or "
+                   "executable — sections, symbols, relocations and code.",
+        "when": {
+            "-d": "Disassemble the executable sections. The common case.",
+            "-D": "Disassemble everything, including data. Use it when code has "
+                  "been hidden in a section not marked executable.",
+            "-x": "All headers at once — the fastest orientation on an unknown "
+                  "object.",
+            "-f": "The file header alone: format, architecture, entry point.",
+            "-p": "Format-specific private headers. On a PE this is where the "
+                  "import table and data directories live.",
+            "-h": "Section headers with sizes, addresses and flags.",
+            "-t": "The symbol table, when the binary is not stripped.",
+            "-T": "Dynamic symbols — what a shared object exports and imports.",
+            "-r": "Relocations.",
+            "-R": "Dynamic relocations, which reveal the PLT/GOT layout.",
+            "-s": "Full contents of each section as a hex dump.",
+            "-j": "Restrict the operation to one section, so a `-s` or `-d` on a "
+                  "large binary stays readable.",
+            "-S": "Interleave source with disassembly. Only useful when debug "
+                  "info survived, which for malware it has not.",
+            "-l": "Annotate with file and line numbers from debug info.",
+            "-C": "Demangle C++ symbols into something readable.",
+            "-b": "Force the file format when detection fails.",
+            "-m": "Force the architecture, needed for raw shellcode with no "
+                  "container to describe it.",
+            "-M": "Pass a disassembler option, e.g. `intel` for Intel syntax "
+                  "instead of AT&T.",
+            "-g": "Debug information, if present.",
+            "-w": "Wide output that does not truncate long symbol names.",
+            "-z": "Do not collapse blocks of zero bytes, when the padding "
+                  "itself matters.",
+        },
+        "gotchas": [
+            "Disassembly starts where the section says code starts. Packed and "
+            "self-modifying binaries decrypt themselves at runtime, so a static "
+            "pass shows the unpacking stub and nothing about the payload.",
+            "Default output is AT&T syntax. Most Windows malware documentation "
+            "is Intel, so `-M intel` avoids constant mental translation.",
+            "`-d` skips sections not marked executable, which is precisely where "
+            "code gets hidden. `-D` is slower and sees them.",
+        ],
+    },
+
+    "readelf": {
+        "purpose": "Display the structure of an ELF file — headers, sections, "
+                   "segments, symbols, notes and dynamic linkage.",
+        "when": {
+            "-h": "The ELF header: type, architecture, entry point. First thing "
+                  "to run on an unknown Linux binary.",
+            "-S": "Section headers.",
+            "-l": "Program headers, which describe what the loader maps. A "
+                  "section table can be stripped or faked; the program headers "
+                  "must be right or the binary will not run.",
+            "-d": "The dynamic section — needed libraries, RPATH, and the init "
+                  "and fini arrays that run before and after `main`.",
+            "-s": "The symbol table.",
+            "--dyn-syms": "Dynamic symbols only — what the binary imports and "
+                          "exports at runtime.",
+            "-n": "Notes, including the build ID that ties a stripped binary to "
+                  "its debug symbols.",
+            "-r": "Relocations.",
+            "-u": "Unwind information.",
+            "-x": "Hex dump of a named section.",
+            "-p": "String dump of a named section — the targeted alternative to "
+                  "running `strings` over the whole file.",
+            "-a": "Everything. Verbose, and the right first move when you do "
+                  "not yet know what you are looking for.",
+            "-C": "Demangle C++ symbols.",
+            "-D": "Use the dynamic symbol table rather than the static one.",
+            "-W": "Wide output that does not truncate.",
+            "-t": "Section details in full.",
+            "-e": "Header summary: file, section and program headers together.",
+        },
+        "gotchas": [
+            "The section header table is optional at runtime. Malware strips or "
+            "corrupts it to break tools, and the binary still runs — when "
+            "sections look wrong, read `-l` instead, because the loader must be "
+            "able to.",
+            "`DT_INIT` and `DT_INIT_ARRAY` in `-d` run before `main`. Code "
+            "placed there executes even if `main` looks harmless.",
+            "An `RPATH` or `RUNPATH` pointing somewhere writable is a hijack "
+            "waiting to happen, and it shows up here.",
+        ],
+    },
+
+    "nmap": {
+        "purpose": "Discover hosts, ports and services, and fingerprint what is "
+                   "listening.",
+        "when": {
+            "-sS": "SYN scan — the default when running privileged. Fast, and it "
+                   "does not complete the handshake.",
+            "-sT": "Full TCP connect, when you lack the privileges for `-sS`.",
+            "-sU": "UDP scan. Slow and unreliable by nature, but DNS, SNMP and "
+                   "DHCP live there and a TCP-only sweep never sees them.",
+            "-sn": "Host discovery only, no port scan — mapping what exists "
+                   "before deciding what to probe.",
+            "-Pn": "Skip discovery and treat every host as up. The flag for "
+                   "networks that drop ping, and the reason a scan that "
+                   "'found nothing' sometimes finds plenty.",
+            "-p": "Which ports. `-p-` is all 65535 and takes far longer than "
+                  "people expect.",
+            "-F": "Fast scan of the top 100 ports.",
+            "--top-ports": "Scan the N most common ports — the usual "
+                           "time/coverage compromise.",
+            "-sV": "Probe for service and version. This talks to the service "
+                   "properly, so it is louder and slower than a port scan.",
+            "--version-intensity": "How hard `-sV` tries, 0 to 9.",
+            "--version-light": "Intensity 2 — much faster, misses more.",
+            "--version-all": "Intensity 9.",
+            "-O": "OS fingerprint from the TCP/IP stack. A guess with a "
+                  "confidence, not a fact.",
+            "--osscan-guess": "Report near matches rather than staying silent.",
+            "-A": "Aggressive: version, OS, scripts and traceroute together. "
+                  "Convenient and unmistakably noisy.",
+            "-T": "Timing template 0-5. `-T4` is the usual choice on a LAN; "
+                  "`-T0` and `-T1` exist for evading rate-based detection and "
+                  "take hours.",
+            "--script": "Run NSE scripts. The category matters — `vuln` and "
+                        "`exploit` scripts actively test, and `exploit` can "
+                        "change the target.",
+            "--script-args": "Arguments for those scripts.",
+            "--script-help": "Explain what a script does before running it, "
+                             "which is worth doing for anything outside `safe`.",
+            "-oA": "Write all three output formats at once. Do this always — "
+                   "rerunning a scan to get a different format wastes time and "
+                   "produces different results.",
+            "-oN": "Normal output to a file.",
+            "-oX": "XML output, for tooling.",
+            "-oG": "Greppable output.",
+            "--open": "Show only open ports, cutting the closed-port noise.",
+            "-v": "Verbose; repeat for more.",
+            "-n": "No reverse DNS, which is often the single biggest speed-up.",
+            "-e": "Choose the interface to scan from.",
+            "-S": "Spoof the source address.",
+            "-D": "Decoy scan.",
+            "-6": "Scan IPv6. Hosts frequently expose more on v6 than v4 "
+                  "because the firewall rules were never mirrored.",
+            "--exclude": "Skip these hosts. The safety flag: use it for anything "
+                         "fragile before starting a range scan.",
+            "--excludefile": "Skip the hosts listed in a file.",
+            "--max-retries": "Cap retransmissions on a lossy link.",
+            "--host-timeout": "Give up on a host after this long, so one dead "
+                              "host cannot stall a range.",
+            "--traceroute": "Trace the path to each host.",
+        },
+        "gotchas": [
+            "Scanning is not passive. `-sV` and NSE talk to services properly, "
+            "`--script exploit` may change the target, and everything here is "
+            "recorded by anything watching. Have authorisation before running "
+            "it, and use `--exclude` for hosts that must not be touched.",
+            "`-p-` on a /24 is a very different job from the default scan. "
+            "Scope the ports before scoping the hosts.",
+            "A closed port and a filtered port are different findings. "
+            "'Filtered' means something dropped the probe, which is information "
+            "about the network rather than about the host.",
+        ],
+    },
 }
