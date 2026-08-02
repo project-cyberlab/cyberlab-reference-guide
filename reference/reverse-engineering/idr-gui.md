@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # idr (GUI)
 
-**Capability:** reverse engineering  **Window:** `TFMain_11011981`  **Version:** —
+**Capability:** reverse engineering  **Window title:** Interactive Delphi Reconstructor by crypto
 **Captured:** `C:\Tools\idr\idr.exe` on 2026-08-02 — control tree in [`capture/gui/idr/idr.tree.txt`](../../capture/gui/idr/idr.tree.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

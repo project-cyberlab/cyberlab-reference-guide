@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # vbdec (GUI)
 
-**Capability:** reverse engineering  **Window:** `ThunderRT6FormDC`  **Version:** —
+**Capability:** reverse engineering  **Window title:** vbdec
 **Captured:** `C:\Tools\vbdec\vbdec.exe` on 2026-08-02 — control tree in [`capture/gui/vbdec/vbdec.tree.txt`](../../capture/gui/vbdec/vbdec.tree.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

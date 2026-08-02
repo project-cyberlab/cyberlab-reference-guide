@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # HashMyFiles (GUI)
 
-**Capability:** acquire preserve  **Window:** `HashMyFiles`  **Version:** —
+**Capability:** acquire preserve  **Window title:** HashMyFiles
 **Captured:** `C:\Tools\HashMyFiles\HashMyFiles.exe` on 2026-08-02 — control tree in [`capture/gui/HashMyFiles/HashMyFiles.tree.txt`](../../capture/gui/HashMyFiles/HashMyFiles.tree.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

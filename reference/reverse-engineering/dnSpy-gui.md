@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # dnSpy (GUI)
 
-**Capability:** reverse engineering  **Window:** `Window`  **Version:** v6.5.1
+**Capability:** reverse engineering  **Window title:** dnSpy v6.5.1 (64-bit, .NET Framework)  **Version:** v6.5.1
 **Captured:** `C:\Tools\dnSpy\dnSpy.exe` on 2026-08-02 — control tree in [`capture/gui/dnSpy/dnSpy.tree.txt`](../../capture/gui/dnSpy/dnSpy.tree.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

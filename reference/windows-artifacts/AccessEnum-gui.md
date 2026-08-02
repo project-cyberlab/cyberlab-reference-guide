@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # AccessEnum (GUI)
 
-**Capability:** windows artifacts  **Window:** `#32770`  **Version:** —
+**Capability:** windows artifacts  **Window title:** AccessEnum License Agreement
 **Captured:** `C:\Tools\sysinternals\AccessEnum.exe` on 2026-08-02 — control tree in [`capture/gui/AccessEnum/AccessEnum.tree.txt`](../../capture/gui/AccessEnum/AccessEnum.tree.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

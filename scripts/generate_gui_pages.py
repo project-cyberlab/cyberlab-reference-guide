@@ -72,10 +72,17 @@ CAPABILITY = {
                         "embedded files and launch actions are readable rather "
                         "than compressed noise"),
     "OffVis": ("malware-triage-documents",
-               "Visualise the record structure of legacy binary Office files "
-               "beside their raw bytes. Exploits in these formats work by "
-               "malforming records, so seeing the parsed structure disagree "
-               "with the bytes is the detection"),
+               "Show a legacy Office file (`.doc`, `.xls`, `.ppt`) as three "
+               "linked views: the raw bytes, the record structure Microsoft's "
+               "own parser derives from them, and notes on where parsing "
+               "failed. Those formats are a chain of length-prefixed records, "
+               "and the classic Office exploits work by lying in a length or "
+               "pointer field so the reader walks off the end of a buffer. "
+               "Selecting a record highlights the bytes it came from, so a "
+               "field claiming 4000 bytes inside a 200-byte record is visible "
+               "rather than inferred — which is the thing you cannot see with "
+               "`strings` or a hex editor alone. Microsoft published it "
+               "alongside the MS10-087 advisory to teach exactly that reading"),
     "HashMyFiles": ("acquire-preserve",
                     "Hash a set of files — MD5, SHA-1, SHA-256 and CRC32 — and "
                     "show them in one sortable list. Sorting by hash collapses "
@@ -229,6 +236,24 @@ GUI_NOTES = {
         ],
     },
     "OffVis": {
+        "controls": {
+            "Parser:": "Which file format to parse as. Set it to match the "
+                       "document; parsing a .doc as .xls produces nonsense "
+                       "rather than an error.",
+            "Parse": "Run the parse. Nothing populates until this is pressed.",
+            "Raw File Contents": "The bytes, as a hex view. Selecting a record "
+                                 "in the results highlights the bytes it was "
+                                 "read from — the link between the two panes "
+                                 "is the whole point of the tool.",
+            "Parsing Results": "The record tree Microsoft's own parser derived. "
+                               "Walk it looking for a length or offset that "
+                               "cannot be true given the size of the record "
+                               "containing it.",
+            "Parsing Notes": "Where the parser struggled. On a malformed file "
+                             "this is the first place to look, because the "
+                             "point at which parsing breaks is usually the "
+                             "point the exploit targets.",
+        },
         "steps": [
             "Open the legacy Office binary — `.doc`, `.xls`, `.ppt`.",
             "Read the parsed structure against the raw bytes shown alongside it.",
@@ -395,9 +420,22 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
         version = vm.group(0)
 
     L = [MARKER, f"# {tool} (GUI)", ""]
-    L.append(f"**Capability:** {cap.replace('-', ' ')}  "
-             f"**Window:** `{head.get('class','')}`  "
-             f"**Version:** {version or '—'}")
+
+    # The window CLASS is not a header field. "WindowsForms10.Window.8.app.0.
+    # 378734a" is how the automation layer identifies a window and means
+    # nothing to an analyst -- the same mistake as putting AutomationId in the
+    # control table. It stays in the capture. The window TITLE is worth showing,
+    # because that is what the reader sees on screen.
+    #
+    # A blank "Version: —" is worse than no field at all: it looks like a gap
+    # rather than a tool that does not report one. Omitted when unknown.
+    bits = [f"**Capability:** {cap.replace('-', ' ')}"]
+    title = head.get("window", "").strip()
+    if title:
+        bits.append(f"**Window title:** {title}")
+    if version:
+        bits.append(f"**Version:** {version}")
+    L.append("  ".join(bits))
     L.append(f"**Captured:** `{head.get('exe','')}` on {head.get('captured','')[:10]} — "
              f"control tree in "
              f"[`capture/gui/{tool}/{tool}.tree.txt`](../../capture/gui/{tool}/{tool}.tree.txt)")
@@ -444,11 +482,25 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
                          f"{notes[label].replace('|', chr(92) + '|')} |")
             L.append("")
 
+        # WinForms and Qt leave their designer's default names in the tree --
+        # menuStrip1, statusStrip1, panel2, toolStripContainer1. They are not
+        # controls an analyst refers to, they are the framework talking to
+        # itself, and listing them makes the page look auto-generated because
+        # it is.
+        import re as _re
+        DESIGNER = _re.compile(
+            r"^(menuStrip|statusStrip|toolStrip|panel|splitContainer|"
+            r"tableLayoutPanel|flowLayoutPanel|groupBox|tabControl|"
+            r"contextMenuStrip|toolStripContainer|pictureBox|label|"
+            r"textBox|comboBox|listView|treeView|button)\d+$", _re.I)
+
         named_rest = []
         seen_r = set()
         for c in rest:
             label = (c["name"] or c["id"].split(".")[-1] or "").strip()
             if not label or not label.strip("|`") or label in seen_r:
+                continue
+            if DESIGNER.match(label):
                 continue
             seen_r.add(label)
             named_rest.append(label.replace("|", "\\|"))

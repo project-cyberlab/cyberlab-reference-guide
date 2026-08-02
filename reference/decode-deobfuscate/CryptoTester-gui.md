@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # CryptoTester (GUI)
 
-**Capability:** decode deobfuscate  **Window:** `WindowsForms10.Window.8.app.0.141b42a_r7_ad1`  **Version:** —
+**Capability:** decode deobfuscate  **Window title:** CryptoTester
 **Captured:** `C:\Tools\CryptoTester\CryptoTester.exe` on 2026-08-02 — control tree in [`capture/gui/CryptoTester/CryptoTester.tree.txt`](../../capture/gui/CryptoTester/CryptoTester.tree.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
