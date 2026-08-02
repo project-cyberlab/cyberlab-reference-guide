@@ -1,0 +1,11 @@
+# command: affstats
+# version: affstats version 3.7.20
+# captured-via: --help
+# image: cyberlab-aio:v2
+#---
+affstats: invalid option -- '-'
+affstats version 3.7.20
+
+usage: affstats [options] infile(s)
+      -m = print all output in megabytes
+      -V = Just print the version number and exit.

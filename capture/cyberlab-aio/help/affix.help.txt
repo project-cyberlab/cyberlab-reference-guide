@@ -1,0 +1,9 @@
+# command: affix
+# version: affix version 3.7.20
+# captured-via: --help
+# image: cyberlab-aio:v2
+#---
+affix: invalid option -- '-'
+usage: affix [options] file1 [...]
+  -y = Actually modify the files; normally just reports the problems
+  -v = Just print the version number and exit.

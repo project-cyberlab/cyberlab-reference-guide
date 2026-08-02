@@ -1,0 +1,35 @@
+# command: dislocker-fuse
+# version: dislocker-fuse: unrecognized option '--version'
+# captured-via: --help
+# image: cyberlab-aio:v2
+#---
+dislocker by Romain Coltel, v0.7.2 (compiled for Linux/x86_64)
+
+Usage: dislocker [-hqrsv] [-l LOG_FILE] [-O OFFSET] [-V VOLUME DECRYPTMETHOD -F[N]] [-- ARGS...]
+    with DECRYPTMETHOD = -p[RECOVERY_PASSWORD]|-f BEK_FILE|-u[USER_PASSWORD]|-k FVEK_FILE|-K VMK_FILE|-c
+
+Options:
+    -c, --clearkey        decrypt volume using a clear key (default)
+    -f, --bekfile BEKFILE
+                          decrypt volume using the bek file (on USB key)
+    -F, --force-block=[N] force use of metadata block number N (1, 2 or 3)
+    -h, --help            print this help and exit
+    -k, --fvek FVEK_FILE  decrypt volume using the FVEK directly
+    -K, --vmk VMK_FILE    decrypt volume using the VMK directly
+    -l, --logfile LOG_FILE
+                          put messages into this file (stdout by default)
+    -O, --offset OFFSET   BitLocker partition offset, in bytes (default is 0)
+    -p, --recovery-password=[RECOVERY_PASSWORD]
+                          decrypt volume using the recovery password method
+    -q, --quiet           do NOT display anything
+    -r, --readonly        do not allow one to write on the BitLocker volume
+    -s, --stateok         do not check the volume's state, assume it's ok to mount it
+    -u, --user-password=[USER_PASSWORD]
+                          decrypt volume using the user password method
+    -v, --verbosity       increase verbosity (CRITICAL errors are displayed by default)
+    -V, --volume VOLUME   volume to get metadata and keys from
+
+    --                    end of program options, beginning of FUSE's ones
+
+  ARGS are any arguments you want to pass to FUSE. You need to pass at least
+the mount-point.

@@ -118,4 +118,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`nmap`](../network-analysis/nmap.md)
+[`nmap`](../network-analysis/nmap.md), [`arp-scan`](../network-analysis/arp-scan.md)

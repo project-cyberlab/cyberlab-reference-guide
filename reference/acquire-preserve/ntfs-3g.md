@@ -30,4 +30,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`img_stat`](../acquire-preserve/img_stat.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md), [`bdeinfo`](../acquire-preserve/bdeinfo.md)
+[`ewfinfo`](../acquire-preserve/ewfinfo.md), [`ewfmount`](../acquire-preserve/ewfmount.md), [`ewfverify`](../acquire-preserve/ewfverify.md), [`ewfexport`](../acquire-preserve/ewfexport.md), [`affinfo`](../acquire-preserve/affinfo.md), [`affcat`](../acquire-preserve/affcat.md), [`img_stat`](../acquire-preserve/img_stat.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md)

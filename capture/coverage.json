@@ -150,11 +150,83 @@
       "via": "--help",
       "version": ""
     },
+    "affcat": {
+      "image": "cyberlab-aio",
+      "bytes": 806,
+      "via": "--help",
+      "version": "affcat version 3.7.20"
+    },
+    "affcompare": {
+      "image": "cyberlab-aio",
+      "bytes": 2258,
+      "via": "--help",
+      "version": "affcompare version 3.7.20"
+    },
+    "affconvert": {
+      "image": "cyberlab-aio",
+      "bytes": 144,
+      "via": "--help",
+      "version": "affconvert version 3.7.20"
+    },
+    "affcrypto": {
+      "image": "cyberlab-aio",
+      "bytes": 1763,
+      "via": "--help",
+      "version": "affcrypto version 3.7.20"
+    },
+    "affinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 1149,
+      "via": "--help",
+      "version": "affinfo version 3.7.20"
+    },
+    "affix": {
+      "image": "cyberlab-aio",
+      "bytes": 179,
+      "via": "--help",
+      "version": "affix version 3.7.20"
+    },
+    "affsegment": {
+      "image": "cyberlab-aio",
+      "bytes": 1359,
+      "via": "--help",
+      "version": "affsegment version 3.7.20"
+    },
+    "affsign": {
+      "image": "cyberlab-aio",
+      "bytes": 686,
+      "via": "--help",
+      "version": "affsign version 3.7.20"
+    },
+    "affstats": {
+      "image": "cyberlab-aio",
+      "bytes": 184,
+      "via": "--help",
+      "version": "affstats version 3.7.20"
+    },
+    "affuse": {
+      "image": "cyberlab-aio",
+      "bytes": 3145,
+      "via": "--help",
+      "version": ""
+    },
+    "affverify": {
+      "image": "cyberlab-aio",
+      "bytes": 287,
+      "via": "--help",
+      "version": "affverify version 3.7.20"
+    },
     "agetty": {
       "image": "cyberlab-aio",
       "bytes": 2196,
       "via": "--help",
       "version": "agetty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)"
+    },
+    "aircrack-ng": {
+      "image": "cyberlab-aio",
+      "bytes": 3017,
+      "via": "--help",
+      "version": "aircrack-ng: unrecognized option '--version'"
     },
     "appcompat": {
       "image": "cyberlab-aio",
@@ -215,6 +287,12 @@
       "bytes": 351,
       "via": "--help",
       "version": "arch (GNU coreutils) 9.1"
+    },
+    "arp-scan": {
+      "image": "cyberlab-aio",
+      "bytes": 10445,
+      "via": "--help",
+      "version": "arp-scan 1.10.0"
     },
     "arpd": {
       "image": "cyberlab-aio",
@@ -456,6 +534,12 @@
       "via": "-h",
       "version": ""
     },
+    "cabextract": {
+      "image": "cyberlab-aio",
+      "bytes": 986,
+      "via": "--help",
+      "version": "cabextract version 1.9"
+    },
     "capa": {
       "image": "cyberlab-aio",
       "bytes": 4392,
@@ -503,6 +587,12 @@
       "bytes": 4088,
       "via": "--help",
       "version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0"
+    },
+    "ccrypt": {
+      "image": "cyberlab-aio",
+      "bytes": 2004,
+      "via": "--help",
+      "version": "ccrypt 1.11. Secure encryption and decryption of files and streams."
     },
     "cffi-gen-src": {
       "image": "cyberlab-aio",
@@ -726,6 +816,12 @@
       "via": "--help",
       "version": "version: No such file or directory"
     },
+    "cryptsetup": {
+      "image": "cyberlab-aio",
+      "bytes": 14471,
+      "via": "--help",
+      "version": "cryptsetup 2.6.1 flags: UDEV BLKID KEYRING KERNEL_CAPI"
+    },
     "csplit": {
       "image": "cyberlab-aio",
       "bytes": 1472,
@@ -774,11 +870,23 @@
       "via": "--help",
       "version": "date (GNU coreutils) 9.1"
     },
+    "dc3dd": {
+      "image": "cyberlab-aio",
+      "bytes": 9633,
+      "via": "--help",
+      "version": "dc3dd (dc3dd) 7.2.646"
+    },
     "dcb": {
       "image": "cyberlab-aio",
       "bytes": 361,
       "via": "--help",
       "version": "dcb: unrecognized option '--version'"
+    },
+    "dcfldd": {
+      "image": "cyberlab-aio",
+      "bytes": 2520,
+      "via": "--help",
+      "version": "dcfldd (dcfldd) 1.9"
     },
     "dd": {
       "image": "cyberlab-aio",
@@ -947,6 +1055,18 @@
       "bytes": 691,
       "via": "--help",
       "version": "dirname (GNU coreutils) 9.1"
+    },
+    "dislocker": {
+      "image": "cyberlab-aio",
+      "bytes": 1647,
+      "via": "--help",
+      "version": "dislocker: unrecognized option '--version'"
+    },
+    "dislocker-fuse": {
+      "image": "cyberlab-aio",
+      "bytes": 1647,
+      "via": "--help",
+      "version": "dislocker-fuse: unrecognized option '--version'"
     },
     "dmesg": {
       "image": "cyberlab-aio",
@@ -1299,6 +1419,48 @@
     "evtxinfo": {
       "image": "cyberlab-aio",
       "bytes": 611,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfacquire": {
+      "image": "cyberlab-aio",
+      "bytes": 3947,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfacquirestream": {
+      "image": "cyberlab-aio",
+      "bytes": 3239,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfexport": {
+      "image": "cyberlab-aio",
+      "bytes": 3013,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfinfo": {
+      "image": "cyberlab-aio",
+      "bytes": 1068,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfmount": {
+      "image": "cyberlab-aio",
+      "bytes": 697,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfrecover": {
+      "image": "cyberlab-aio",
+      "bytes": 1236,
+      "via": "--help",
+      "version": ""
+    },
+    "ewfverify": {
+      "image": "cyberlab-aio",
+      "bytes": 1397,
       "via": "--help",
       "version": ""
     },
@@ -5678,6 +5840,7 @@
     "activate.csh",
     "activate.fish",
     "addgnupghome",
+    "affrecover",
     "applygnupgdefaults",
     "bzcmp",
     "bzdiff",
@@ -5690,6 +5853,7 @@
     "dash",
     "deb-systemd-invoke",
     "debconf-apt-progress",
+    "disktype",
     "dpkg-fsys-usrunmess",
     "e2freefrag",
     "e2label",
@@ -5769,11 +5933,7 @@
     "advanced-installer",
     "aesfix",
     "aeskeyfinder",
-    "affcat",
-    "affconvert",
-    "affinfo",
     "afl++",
-    "aircrack-ng",
     "androguard",
     "androidprojectcreator",
     "angr",
@@ -5784,7 +5944,6 @@
     "apkid",
     "apktool",
     "armitage",
-    "arp-scan",
     "arping",
     "asar",
     "autoit-ripper",
@@ -5819,10 +5978,8 @@
     "bytecode-viewer",
     "bytecodeviewer",
     "bytehist",
-    "cabextract",
     "cadaver",
     "capa-explorer-web",
-    "ccrypt",
     "cewl",
     "cfr",
     "chepy",
@@ -5848,7 +6005,6 @@
     "crunch",
     "cryptcat",
     "cryptotester",
-    "cryptsetup",
     "cs-analyze-processdump.py",
     "cs-decrypt-metadata.py",
     "cs-extract-key.py",
@@ -5864,8 +6020,6 @@
     "davtest",
     "dbd",
     "dc3-mwcp",
-    "dc3dd",
-    "dcfldd",
     "ddrescue",
     "de4dot",
     "de4dot-cex",
@@ -5885,8 +6039,6 @@
     "dirbuster",
     "disitool",
     "disitool.py",
-    "disktype",
-    "dislocker",
     "display",
     "dissect",
     "dll-to-exe",
@@ -5933,11 +6085,6 @@
     "ettercap-graphical",
     "evilclippy",
     "evince",
-    "ewfacquire",
-    "ewfexport",
-    "ewfinfo",
-    "ewfmount",
-    "ewfverify",
     "ex_pe_xor.py",
     "exe2hexbat",
     "exeinfope",

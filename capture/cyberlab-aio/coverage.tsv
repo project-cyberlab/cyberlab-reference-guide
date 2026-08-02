@@ -2,901 +2,11 @@ command	status	help_flag	bytes	version
 010editor	absent		0	
 0trace	absent		0	
 1768.py	absent		0	
+2to3	present	--help	1301	
 7-zip	absent		0	
+7z	present	--help	3140	
 7za	present	--help	3146	
 7zip	absent		0	
-above	absent		0	
-absent	absent		0	
-accept-all-ips	absent		0	
-advanced-installer	absent		0	
-aesfix	absent		0	
-aeskeyfind	present	--help	418	
-aeskeyfinder	absent		0	
-affcat	absent		0	
-affconvert	absent		0	
-affinfo	absent		0	
-afl++	absent		0	
-aircrack-ng	absent		0	
-androguard	absent		0	
-androidprojectcreator	absent		0	
-angr	absent		0	
-anomy	absent		0	
-apache-users	absent		0	
-apache2	absent		0	
-apimonitor	absent		0	
-apkid	absent		0	
-apktool	absent		0	
-armitage	absent		0	
-arp-scan	absent		0	
-arping	absent		0	
-asar	absent		0	
-autoit-ripper	absent		0	
-autopsy	absent		0	
-avfs	absent		0	
-aws-cli	absent		0	
-baksmali	absent		0	
-balbuzard	absent		0	
-base64dump.py	present	--help	3352	base64dump.py 0.0.30
-bbcrack	absent		0	
-bbharvest	absent		0	
-bbtrans	absent		0	
-bearcommander	absent		0	
-bearparser	absent		0	
-bed	absent		0	
-beef-xss	absent		0	
-bettercap	absent		0	
-binaryninja	absent		0	
-bindiff	absent		0	
-binee	absent		0	
-binwalk	present	--help	4245	
-binwalk3	absent		0	
-bless	absent		0	
-blkls	present	--help	872	The Sleuth Kit ver 4.11.1
-blobrunner	absent		0	
-blobrunner64	absent		0	
-blt	absent		0	
-box-export	absent		0	
-box-js	absent		0	
-braa	absent		0	
-brxor.py	absent		0	
-bulk_extractor	absent		0	
-burp-suite-community-edition	absent		0	
-burpsuite	absent		0	
-bytecode-viewer	absent		0	
-bytecodeviewer	absent		0	
-bytehist	absent		0	
-cabextract	absent		0	
-cadaver	absent		0	
-capa	present	--help	4392	capa 9.4.0
-capa-explorer-web	absent		0	
-capinfos	present	--help	2219	Capinfos (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
-ccrypt	absent		0	
-cewl	absent		0	
-cfr	absent		0	
-chepy	absent		0	
-chkrootkit	absent		0	
-chntpw	absent		0	
-chrome.extensions	absent		0	
-chromium-browser	absent		0	
-cisco-global-exploiter	absent		0	
-cisco-ocs	absent		0	
-cisco-torch	absent		0	
-clamdscan	absent		0	
-clamscan	present	--help	8404	ClamAV 1.4.3
-clang	absent		0	
-claude-code	absent		0	
-cmder	absent		0	
-cmospwd	absent		0	
-code	absent		0	
-codetrack	absent		0	
-commix	absent		0	
-convert	absent		0	
-copy-router-config	absent		0	
-crackle	absent		0	
-creddump7	absent		0	
-crunch	absent		0	
-cryptcat	absent		0	
-cryptotester	absent		0	
-cryptsetup	absent		0	
-cs-analyze-processdump.py	absent		0	
-cs-decrypt-metadata.py	absent		0	
-cs-extract-key.py	absent		0	
-cs-parse-traffic.py	absent		0	
-csce	absent		0	
-curl	present	--help	914	curl 7.88.1 (x86_64-pc-linux-gnu) libcurl/7.88.1 OpenSSL/3.0.20 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3 OpenLDAP/2.5.13
-cut-bytes.py	absent		0	
-cutter	absent		0	
-cutycapt	absent		0	
-cyberchef	present	--help	176	
-cygwin	absent		0	
-cymothoa	absent		0	
-d2j-dex2jar	absent		0	
-darkstat	absent		0	
-davtest	absent		0	
-dbd	absent		0	
-dc3-mwcp	absent		0	
-dc3dd	absent		0	
-dcfldd	absent		0	
-ddrescue	absent		0	
-de4dot	absent		0	
-de4dot-cex	absent		0	
-debloat	absent		0	
-decai	absent		0	
-decode-vbe.py	absent		0	
-decompyle++	absent		0	
-default-jre	absent		0	
-default-mysql-server	absent		0	
-dependencywalker	absent		0	
-dex2jar	absent		0	
-dexray	absent		0	
-dhcpig	absent		0	
-didier-stevens-beta	absent		0	
-didier-stevens-suite	absent		0	
-die	present	--help	403	Detect It Easy v3.10
-diec	present	--help	1545	die 3.10
-dirb	absent		0	
-dirbuster	absent		0	
-disitool	absent		0	
-disitool.py	absent		0	
-disktype	absent		0	
-dislocker	absent		0	
-display	absent		0	
-dissect	absent		0	
-dll-to-exe	absent		0	
-dllcharacteristics.py	absent		0	
-dmitry	absent		0	
-dnfile	absent		0	
-dnlib	absent		0	
-dns2tcp	absent		0	
-dnschef	absent		0	
-dnsenum	absent		0	
-dnslib	absent		0	
-dnsmap	absent		0	
-dnspyex	absent		0	
-dnsrecon	absent		0	
-dnsresolver.py	absent		0	
-dnstracer	absent		0	
-dnswalk	absent		0	
-docker	absent		0	
-domainstats	absent		0	
-dos2unix	absent		0	
-dotdotpwn	absent		0	
-dotdumper	absent		0	
-dotnet	present	--help	950	
-dotnet3.5	absent		0	
-dotnetfile	absent		0	
-driftnet	absent		0	
-droidlysis	absent		0	
-dsniff	absent		0	
-dumpcap	present	--help	5103	
-dumpzilla	absent		0	
-e2fsprogs	absent		0	
-edb	absent		0	
-edb-debugger	absent		0	
-editcap	present	--help	7040	Editcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
-elastalert-2	absent		0	
-elastic-agent	absent		0	
-elastic-fleet	absent		0	
-elasticsearch	absent		0	
-emldump.py	absent		0	
-ent	absent		0	
-enum4linux	absent		0	
-enumiax	absent		0	
-epic-irc-client	absent		0	
-epic5	absent		0	
-etc	absent		0	
-etherape	absent		0	
-ettercap-graphical	absent		0	
-evilclippy	absent		0	
-evince	absent		0	
-ewfacquire	absent		0	
-ewfexport	absent		0	
-ewfinfo	absent		0	
-ewfmount	absent		0	
-ewfverify	absent		0	
-ex_pe_xor.py	absent		0	
-exe2hexbat	absent		0	
-exeinfope	absent		0	
-exfat-extras	absent		0	
-exfat-fuse	absent		0	
-exif	absent		0	
-exifprobe	absent		0	
-exiftool	present		0	Error: File not found - version
-exiv2	absent		0	
-exploitdb	absent		0	
-explorersuite	absent		0	
-ext3grep	absent		0	
-ext4magic	absent		0	
-extract_msg	absent		0	
-extreme_dumper	absent		0	
-extundelete	absent		0	
-eyewitness	absent		0	
-ezhexviewer	present	--help	1593	
-ezviewer	absent		0	
-fakedns	absent		0	
-fakemail	absent		0	
-fakenet-ng	absent		0	
-fcrackzip	absent		0	
-fdupes	absent		0	
-feh	absent		0	
-ferret-sidejack	absent		0	
-ffind	present	--help	748	The Sleuth Kit ver 4.11.1
-fiddler	absent		0	
-fierce	absent		0	
-fiked	absent		0	
-file	present	--help	3189	file-5.44
-file-magic.py	absent		0	
-filebeat	absent		0	
-firefox	absent		0	
-firewalk	absent		0	
-firmware-mod-kit	absent		0	
-flex	absent		0	
-floss	present	--help	2337	floss 3.1.1
-fls	present	--help	1353	The Sleuth Kit ver 4.11.1
-foremost	present	-h	830	1.5.7
-forensic-artifacts	absent		0	
-forensics-colorize	absent		0	
-format-bytes.py	absent		0	
-fping	absent		0	
-fragrouter	absent		0	
-freerdp3-x11	absent		0	
-freqserver	absent		0	
-freshclam	present	--help	3341	ClamAV 1.4.3
-frida	present	--help	4398	17.16.3
-frida-discover	present	--help	2991	17.16.3
-frida-kill	present	--help	1525	17.16.3
-frida-ls-devices	present	--help	270	17.16.3
-frida-ps	present	--help	1649	17.16.3
-frida-trace	present	--help	4999	17.16.3
-fsstat	present	--help	679	The Sleuth Kit ver 4.11.1
-ftester	absent		0	
-galculator	absent		0	
-galleta	absent		0	
-garbageman	absent		0	
-gawk	absent		0	
-gdb	absent		0	
-gddrescue	absent		0	
-ghex	absent		0	
-ghidra	absent		0	
-ghidrassistmcp	absent		0	
-gnome-calculator	absent		0	
-gnu-project-debugger	absent		0	
-gnu-wget	absent		0	
-gootloaderautojsdecode.py	absent		0	
-goresym	absent		0	
-gostringungarbler	absent		0	
-gpart	absent		0	
-gparted	absent		0	
-gpp-decrypt	absent		0	
-grafana	absent		0	
-graphviz	absent		0	
-grepcidr	absent		0	
-grokevt	absent		0	
-gthumb	absent		0	
-guymager	absent		0	
-gvm	absent		0	
-gzrt	absent		0	
-hachoir	absent		0	
-hachoir-grep	absent		0	
-hachoir-metadata	absent		0	
-hachoir-strip	absent		0	
-hachoir-wx	absent		0	
-hakrawler	absent		0	
-hamster-sidejack	absent		0	
-hash-id	absent		0	
-hash-id.py	absent		0	
-hash-identifier	absent		0	
-hashcat	present	--help	58909	v6.2.6
-hashcat-utils	absent		0	
-hashdeep	absent		0	
-hashid	absent		0	
-hashmyfiles	absent		0	
-heartleech	absent		0	
-hex-to-bin.py	absent		0	
-hexedit	absent		0	
-hexinject	absent		0	
-hivexget	present		0	
-hivexregedit	absent		0	
-hivexsh	present	help	333	hivexsh: failed to open hive file: version: No such file or directory
-hollowshunter	absent		0	
-hping3	absent		0	
-httprint	absent		0	
-httrack	absent		0	
-hxd	absent		0	
-hydra	present	--help	237	Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
-hydra-gtk	absent		0	
-iaxflood	absent		0	
-ibus	absent		0	
-ibus-setup	absent		0	
-icat	present	--help	877	The Sleuth Kit ver 4.11.1
-ida.plugin.capa	absent		0	
-ida.plugin.comida	absent		0	
-ida.plugin.delphihelper	absent		0	
-ida.plugin.dereferencing	absent		0	
-ida.plugin.diaphora	absent		0	
-ida.plugin.flare	absent		0	
-ida.plugin.flare-emu	absent		0	
-ida.plugin.hashdb	absent		0	
-ida.plugin.hrtng	absent		0	
-ida.plugin.ifl	absent		0	
-ida.plugin.xray	absent		0	
-ida.plugin.xrefer	absent		0	
-idafree	absent		0	
-idr	absent		0	
-idx_parser.py	absent		0	
-ifpstools	absent		0	
-ike-scan	absent		0	
-ilm	absent		0	
-ils	present	--help	1068	The Sleuth Kit ver 4.11.1
-ilspy	absent		0	
-imagemagick	absent		0	
-img_stat	present	--help	340	The Sleuth Kit ver 4.11.1
-inetsim	present	--help	1646	INetSim 1.3.2 (2020-05-19) by Matthias Eckert & Thomas Hungenberg
-influxdb	absent		0	
-info-zip	absent		0	
-init	absent		0	
-innoextract	absent		0	
-innounp	absent		0	
-inspircd-3	absent		0	
-internet_detector	absent		0	
-intrace	absent		0	
-inviteflood	absent		0	
-iodine	absent		0	
-ipwhois	absent		0	
-ipython	absent		0	
-ipython3	absent		0	
-irpas	absent		0	
-isd	absent		0	
-isr-evilgrade	absent		0	
-istat	present	--help	1004	The Sleuth Kit ver 4.11.1
-jadx	absent		0	
-jadx-gui	absent		0	
-java-idx-parser	absent		0	
-javascript-deobfuscator	absent		0	
-javasnoop	absent		0	
-javassist	absent		0	
-jboss-autopwn	absent		0	
-jd-gui	absent		0	
-jd-gui-java-decompiler	absent		0	
-john	present	(no args)	1552	stat: version: No such file or directory
-johnny	absent		0	
-joomscan	absent		0	
-jq	absent		0	
-js	absent		0	
-js-ascii	absent		0	
-js-beautifier	absent		0	
-js-beautify	absent		0	
-js-deobfuscator	absent		0	
-js-file	absent		0	
-js_unshroud	absent		0	
-jsql-injection	absent		0	
-jstillery	absent		0	
-kdiff3	absent		0	
-keystone	absent		0	
-kibana	absent		0	
-kpartx	absent		0	
-laudanum	absent		0	
-lbd	absent		0	
-legion	absent		0	
-lft	absent		0	
-lief	absent		0	
-list-cs-settings	absent		0	
-log2timeline.py	present	--help	18762	plaso - log2timeline version 20260512
-logstash	absent		0	
-ltrace	absent		0	
-lvm2	absent		0	
-lynis	absent		0	
-mac-robber	absent		0	
-mac2unix	absent		0	
-macchanger	absent		0	
-mactime	present	--help	904	Unknown option: --version
-magicrescue	absent		0	
-magika	absent		0	
-magnus	absent		0	
-mail-parser	absent		0	
-malcat-lite	absent		0	
-malchive	absent		0	
-maltego	absent		0	
-malware-jail	absent		0	
-malwoverview	absent		0	
-managerhype	absent		0	
-manalyze	absent		0	
-map	absent		0	
-maskprocessor	absent		0	
-masscan	absent		0	
-mbcscan	absent		0	
-mbcscan.py	absent		0	
-md5deep	absent		0	
-mdadm	absent		0	
-mdbtools	absent		0	
-medusa	absent		0	
-memdump	absent		0	
-mergecap	present	--help	953	Mergecap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
-mermaid-viewer	absent		0	
-metacam	absent		0	
-metagoofil	absent		0	
-metasploit-framework	absent		0	
-microsoft-office	absent		0	
-mimikatz	absent		0	
-miredo	absent		0	
-missidentify	absent		0	
-mitmdump	absent		0	
-mitmproxy	absent		0	
-mitmweb	absent		0	
-mmls	present	--help	796	The Sleuth Kit ver 4.11.1
-mogrify	absent		0	
-monitor-network	absent		0	
-monodis	absent		0	
-mraptor	present	--help	790	MacroRaptor 0.56.2 - http://decalage.info/python/oletools
-msfpc	absent		0	
-msg-extractor	absent		0	
-msgconvert	absent		0	
-msodde	present	--help	1187	
-msoffcrypto-crack.py	absent		0	
-msoffice-crypt	absent		0	
-mtd-utils	absent		0	
-mwcp	absent		0	
-myip	absent		0	
-myjson-filter.py	absent		0	
-myrescue	absent		0	
-name-that-hash	absent		0	
-nasm	absent		0	
-nasty	absent		0	
-nautilus	absent		0	
-nbd-client	absent		0	
-nbtscan	absent		0	
-nc	absent		0	
-ncat	absent		0	
-ncrack	absent		0	
-net-reactor-slayer	absent		0	
-netcat	absent		0	
-netdiscover	absent		0	
-netmask	absent		0	
-netpbm	absent		0	
-netsed	absent		0	
-netsniff-ng	absent		0	
-network-miner-free-edition	absent		0	
-networkminer	absent		0	
-netwox	absent		0	
-nfdump	absent		0	
-nginx	absent		0	
-ngrep	present	--help	1702	ngrep: V1.47.1-git, libpcap version 1.10.3 (with TPACKET_V3)
-nikto	absent		0	
-nishang	absent		0	
-nmap	present	--help	5996	Nmap version 7.93 ( https://nmap.org )
-nomorexor.py	absent		0	
-notepadplusplus	absent		0	
-notepadpp.plugin.compare	absent		0	
-notepadpp.plugin.jstool	absent		0	
-notepadpp.plugin.xmltools	absent		0	
-nping	present	--help	6787	Failed to resolve given hostname/IP: version.  Note that you can't use '/mask' AND '1-4,7,100-' style IP ranges
-nsrllookup	absent		0	
-ntfs-3g	present	--help	698	ntfs-3g 2022.10.3 integrated FUSE 28
-nth	absent		0	
-numbers-to-string.py	present	--help	1331	numbers-to-string.py 0.0.11
-obfuscator-io-deobfuscator	absent		0	
-objdump	present	--help	7394	GNU objdump (GNU Binutils for Debian) 2.40
-objects.js	absent		0	
-offvis	absent		0	
-ofs2rva	absent		0	
-ohrwurm	absent		0	
-okular	absent		0	
-olebrowse	present	--help	1587	
-olecfexport	absent		0	
-olecfinfo	absent		0	
-olecfmount	absent		0	
-oledir	present	--help	594	oledir 0.54 - http://decalage.info/python/oletools
-oledump.py	present	--help	2814	oledump.py 0.0.85
-olefile	present	--help	535	ERROR    Error while parsing file 'version'
-oleid	present	--help	910	oleid 0.60.1 - http://decalage.info/oletools
-olemap	present	--help	1718	
-olemeta	present	--help	771	olemeta 0.54 - http://decalage.info/python/oletools
-oleobj	present	--help	1277	oleobj 0.60.1 - http://decalage.info/oletools
-oletimes	present	--help	773	oletimes 0.54 - http://decalage.info/python/oletools
-olevba	present	--help	2377	olevba 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools
-ollydbg	absent		0	
-onboard	absent		0	
-onedump.py	absent		0	
-onenoteanalyzer	absent		0	
-onesixtyone	absent		0	
-onion-ai-assistant	absent		0	
-open-iscsi	absent		0	
-opencanary	absent		0	
-opencode	absent		0	
-openjdk	absent		0	
-openssh	absent		0	
-ophcrack	absent		0	
-ophcrack-cli	absent		0	
-orca	absent		0	
-origamindee	absent		0	
-oscanner	absent		0	
-osquery	absent		0	
-outguess	absent		0	
-owasp-mantra-ff	absent		0	
-p0f	absent		0	
-p7zip-full	absent		0	
-pack	absent		0	
-pack2	absent		0	
-padbuster	absent		0	
-paros	absent		0	
-parted	absent		0	
-pasco	absent		0	
-passing-the-hash	absent		0	
-patator	absent		0	
-patch	present	--help	2955	GNU patch 2.7.6
-pcode2code	absent		0	
-pcodedmp	present	--help	573	pcodedmp version 1.2.6
-pdbresym	absent		0	
-pdf-parser	present	--help	2862	pdf-parser.py 0.7.14
-pdf-parser.py	present	--help	2862	pdf-parser.py 0.7.14
-pdfcop	absent		0	
-pdfcrack	absent		0	
-pdfdecompress	absent		0	
-pdfdecrypt	absent		0	
-pdfextract	absent		0	
-pdfid	present	--help	1700	pdfid.py 0.2.10
-pdfid.py	present	--help	1700	pdfid.py 0.2.10
-pdfresurrect	absent		0	
-pdfstreamdumper	absent		0	
-pdftk	absent		0	
-pdftk-java	absent		0	
-pdftool.py	absent		0	
-pdg	absent		0	
-pdnstool	absent		0	
-pe-tree	absent		0	
-pe_unmapper	absent		0	
-peass	absent		0	
-pebear	absent		0	
-pecheck.py	absent		0	
-pedis	absent		0	
-pedump	absent		0	
-peepdf-3	absent		0	
-pefile	absent		0	
-peframe	absent		0	
-pehash	absent		0	
-peid	absent		0	
-peldd	absent		0	
-pepack	absent		0	
-peres	absent		0	
-perl	present	--help	2023	Summary of my perl5 (revision 5 version 36 subversion 0) configuration:
-pescan	absent		0	
-pesec	absent		0	
-pesieve	absent		0	
-pestr	absent		0	
-pestudio	absent		0	
-pev	absent		0	
-phonon	absent		0	
-photorec	present	--help	405	PhotoRec 7.1, Data Recovery Utility, July 2019
-php	absent		0	
-php-mysql	absent		0	
-pinfo.py	present	--help	2717	plaso - pinfo version 20260512
-pipal	absent		0	
-pkg-config	present	--help	5357	1.8.1
-pkg-unpacker	absent		0	
-playbook	absent		0	
-pma-labs	absent		0	
-polarproxy	absent		0	
-polenum	absent		0	
-portex	absent		0	
-powershell	absent		0	
-powershell-core	absent		0	
-powersploit	absent		0	
-procdot	absent		0	
-processdump	absent		0	
-procmonmcp	absent		0	
-procyon	absent		0	
-protos-sip	absent		0	
-proxychains4	absent		0	
-proxytunnel	absent		0	
-psnotify	absent		0	
-psort.py	present	--help	10029	plaso - psort version 20260512
-pst-utils	absent		0	
-psteal.py	absent		0	
-ptunnel	absent		0	
-pv	absent		0	
-pwnat	absent		0	
-pwsh	absent		0	
-pycdas	absent		0	
-pycdc	absent		0	
-pyelftools	absent		0	
-pyinstaller-extractor	absent		0	
-pyinstxtractor-ng	absent		0	
-pyinstxtractor.py	absent		0	
-pylingual	absent		0	
-pyxswf	present	--help	2224	pyxswf 0.54 - http://decalage.info/python/oletools
-qemu	absent		0	
-qemu-utils	absent		0	
-qiling	absent		0	
-qpdf	absent		0	
-qsslcaudit	absent		0	
-r2	present	-h	2598	6.1.9-124  r2
-r2ai	absent		0	
-r2pipe	absent		0	
-rabin2	present	--help	3071	rabin2 6.1.9 +1 abi:124 @ linux-x86_64
-radiff2	present	-h	1963	radiff2 6.1.9 +1 abi:124 @ linux-x86_64
-rafind2	present	--help	122	rafind2 6.1.9 +1 abi:124 @ linux-x86_64
-rahash2	present	--help	1382	rahash2 6.1.9 +1 abi:124 @ linux-x86_64
-rainbowcrack	absent		0	
-rar	absent		0	
-rar2john	absent		0	
-rarcrack	absent		0	
-rasm2	present	--help	1757	rasm2 6.1.9 +1 abi:124 @ linux-x86_64
-rat-king-parser	absent		0	
-rax2	present	--help	2927	rax2 6.1.9 +1 abi:124 @ linux-x86_64
-rcracki-mt	absent		0	
-re-search.py	absent		0	
-readelf.py	present	--help	1637	readelf.py: based on pyelftools 0.33
-readpe	absent		0	
-rebind	absent		0	
-recaf	absent		0	
-recon-ng	absent		0	
-recoverdm	absent		0	
-recoverjpeg	absent		0	
-recstudio	absent		0	
-redis	absent		0	
-redress	absent		0	
-redsocks	absent		0	
-reg_export	absent		0	
-regcool	absent		0	
-reglookup	absent		0	
-regshot	absent		0	
-remnux-installer	absent		0	
-remnux-mcp-server	absent		0	
-reordercap	present	--help	397	Reordercap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
-rephrase	absent		0	
-resourcehacker	absent		0	
-responder	absent		0	
-restrict-egress	absent		0	
-rhino-debugger	absent		0	
-rifiuti	absent		0	
-rifiuti2	absent		0	
-rip	absent		0	
-rip.pl	present	--help	1417	Unknown option: -version
-rizin	absent		0	
-rizin-cutter	absent		0	
-rkhunter	absent		0	
-rsakeyfind	present	(no args)	221	
-rsakeyfinder	absent		0	
-rsmangler	absent		0	
-rtfdump.py	absent		0	
-rtfobj	present	--help	1244	rtfobj 0.60.1 on Python 3.11.2 - http://decalage.info/python/oletools
-rtpbreak	absent		0	
-rtpflood	absent		0	
-rtpinsertsound	absent		0	
-rtpmixsound	absent		0	
-rundotnetdll	absent		0	
-runsc	absent		0	
-runxlrd2.py	present		0	
-rva2ofs	absent		0	
-rz-bin	absent		0	
-rz-find	absent		0	
-rz-ghidra	absent		0	
-safecopy	absent		0	
-samdump2	absent		0	
-sandfly-processdecloak	absent		0	
-sbd	absent		0	
-scalpel	present	-h	1993	Scalpel version 1.60
-scdbg	absent		0	
-scite	absent		0	
-sclauncher	absent		0	
-sclauncher64	absent		0	
-scrounge-ntfs	absent		0	
-sctpscan	absent		0	
-seclists	absent		0	
-security-onion-console	absent		0	
-sensoroni	absent		0	
-set	present		0	
-sets.py	absent		0	
-sfextract	absent		0	
-sftp	absent		0	
-sfuzz	absent		0	
-sha256deep	absent		0	
-shcode2exe	absent		0	
-shellcode2exe.bat	absent		0	
-shellcode_launcher	absent		0	
-shellnoob	absent		0	
-shellter	absent		0	
-sidguesser	absent		0	
-siege	absent		0	
-signsrch	absent		0	
-sigtool	present	--help	4407	ClamAV 1.4.3
-silversearcher-ag	absent		0	
-siparmyknife	absent		0	
-sipcrack	absent		0	
-sipp	absent		0	
-sipsak	absent		0	
-sipvicious	absent		0	
-skipfish	absent		0	
-sleuth-kit	absent		0	
-slowhttptest	absent		0	
-smbmap	absent		0	
-smtp-user-enum	absent		0	
-sniffjoke	absent		0	
-snmpcheck	absent		0	
-so-apt-cacher-ng	absent		0	
-so-firewall	absent		0	
-so-idstools	absent		0	
-socat	absent		0	
-sortcanon.py	absent		0	
-speakeasy	absent		0	
-spidermonkey	absent		0	
-spike	absent		0	
-sqldict	absent		0	
-sqlite	absent		0	
-sqlite3	absent		0	
-sqlitebrowser	absent		0	
-sqlmap	absent		0	
-sqlninja	absent		0	
-sqlsus	absent		0	
-ssdeep	present	-h	915	2.14.1
-ssh	absent		0	
-sshpass	absent		0	
-ssldump	absent		0	
-sslh	absent		0	
-sslscan	absent		0	
-sslsniff	absent		0	
-sslsplit	absent		0	
-sslyze	absent		0	
-ssview	absent		0	
-statsprocessor	absent		0	
-steghide	absent		0	
-stegosuite	absent		0	
-stegsnow	absent		0	
-stenographer	absent		0	
-stpyv8	absent		0	
-strace	absent		0	
-strdeob.pl	absent		0	
-strelka	absent		0	
-strings.py	absent		0	
-stunnel4	absent		0	
-sucrack	absent		0	
-suricata	absent		0	
-suricatasc	absent		0	
-swaks	absent		0	
-swig	absent		0	
-sysinternals	absent		0	
-systeminformer	absent		0	
-t50	absent		0	
-tcl	absent		0	
-tcpdump	absent		0	
-tcpflow	present	--help	2597	TCPFLOW 1.6.1
-tcpick	absent		0	
-tcpreplay	absent		0	
-tcpslice	absent		0	
-tcpstat	absent		0	
-tcptrace	absent		0	
-tcptrack	absent		0	
-tcpxtract	present	--help	488	tcpxtract v1.0.1
-telegraf	absent		0	
-termineter	absent		0	
-tesseract	absent		0	
-tesseract-ocr	absent		0	
-testdisk	present	--help	1154	TestDisk 7.1, Data Recovery Utility, July 2019
-texteditor.py	absent		0	
-thc-ipv6	absent		0	
-thc-pptp-bruter	absent		0	
-thc-ssl-dos	absent		0	
-thefuzz	absent		0	
-theharvester	absent		0	
-thehive	absent		0	
-thug	absent		0	
-time-decode	absent		0	
-tlssled	absent		0	
-tnscmd10g	absent		0	
-tofrodos	absent		0	
-tor	absent		0	
-translate.py	absent		0	
-transmission	absent		0	
-trid	absent		0	
-tridupdate	absent		0	
-truecrack	absent		0	
-tshark	present	--help	9294	
-tsk_gettimes	present	--help	551	The Sleuth Kit ver 4.11.1
-tsk_recover	present	--help	920	The Sleuth Kit ver 4.11.1
-ttd	absent		0	
-twofi	absent		0	
-udptunnel	absent		0	
-ugrep	absent		0	
-uncompyle6	absent		0	
-undbx	absent		0	
-unfurl	absent		0	
-unhide	absent		0	
-unicode	absent		0	
-unicornscan	absent		0	
-uniextract2	absent		0	
-uniscan	absent		0	
-unity-control-center	absent		0	
-unix-privesc-check	absent		0	
-unix2dos	absent		0	
-unix2mac	absent		0	
-unpyc3	absent		0	
-unrar	absent		0	
-unrar-free	absent		0	
-unshadow	present		0	
-unxor	absent		0	
-unzip	present	--help	1509	UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
-upx	present	--help	5655	upx 4.2.4
-urlcrazy	absent		0	
-vb-decompiler-lite	absent		0	
-vbdec	absent		0	
-vbindiff	absent		0	
-vcbuildtools	absent		0	
-vcredist-all	absent		0	
-vdbbin	present	--help	1025	
-veil	absent		0	
-vinetto	absent		0	
-virtuoso-minimal	absent		0	
-virustotal-search	absent		0	
-virustotal-search.py	absent		0	
-virustotal-submit	absent		0	
-virustotal-submit.py	absent		0	
-visual-studio-code	absent		0	
-vivbin	present	--help	1851	
-vivisect	absent		0	
-voiphopper	absent		0	
-volatility-framework	absent		0	
-vscode	absent		0	
-vscode.extension.jupyter	absent		0	
-vscode.extension.python	absent		0	
-wafw00f	absent		0	
-wapiti	absent		0	
-watobo	absent		0	
-wazuh	absent		0	
-wce	absent		0	
-webacoo	absent		0	
-webcrack	absent		0	
-webscarab	absent		0	
-webshells	absent		0	
-weevely	absent		0	
-wfuzz	absent		0	
-wget	present	--help	13243	GNU Wget 1.21.3 built on linux-gnu.
-whatweb	absent		0	
-wifi-honey	absent		0	
-winbind	absent		0	
-windbg	absent		0	
-windows-terminal	absent		0	
-wine	absent		0	
-winregfs	absent		0	
-wordlists	absent		0	
-wpscan	absent		0	
-wxhexeditor	absent		0	
-x64dbg	absent		0	
-x64dbg-automate-mcp	absent		0	
-x64dbg.plugin.dbgchild	absent		0	
-x64dbg.plugin.ollydumpex	absent		0	
-x64dbg.plugin.scyllahide	absent		0	
-x64dbg.plugin.x64dbgpy	absent		0	
-xdot	absent		0	
-xfsprogs	absent		0	
-xlmdeobfuscator	present	--help	3820	
-xlmmacrodeobfuscator	absent		0	
-xmldump.py	absent		0	
-xmount	absent		0	
-xor-kpa.py	absent		0	
-xorbruteforcer.py	absent		0	
-xorsearch	absent		0	
-xorsearch.py	absent		0	
-xorstrings	absent		0	
-xortool	present	--help	1670	1.1.0
-xplico	absent		0	
-xsser	absent		0	
-yara	present	--help	2552	4.2.3
-yara-forge-rules	absent		0	
-yara-rules	absent		0	
-yara-x	absent		0	
-yarac	present	--help	613	4.2.3
-yersinia	absent		0	
-zaproxy	absent		0	
-zbarimg	absent		0	
-zeek	absent		0	
-zeek-cut	absent		0	
-zenity	absent		0	
-zenmap	absent		0	
-zip	absent		0	
-zip2john	absent		0	
-zipdump.py	absent		0	
-2to3	present	--help	1301	
-7z	present	--help	3140	
 7zr	present	--help	3127	
 Activate.ps1	present		0	
 AmcacheParser	present	--help	1710	2026.5.0+76dc8354aa98ce1e1c6f942abcfb09f583f411dd
@@ -916,6 +26,9 @@ VSCMount	present		0
 WxTCmd	present	--help	1063	2026.5.0+adbf96ed9c73dc6806d97b96160bb96bccd48f7a
 X11	absent		0	
 XORSearch	present	--help	2704	xorsearch.py 0.0.5
+above	absent		0	
+absent	absent		0	
+accept-all-ips	absent		0	
 activate	present		0	
 activate.csh	present		0	
 activate.fish	present		0	
@@ -925,7 +38,34 @@ addgroup	present	--help	1123	adduser version 3.134
 addpart	present	--help	239	addpart from util-linux 2.38.1
 addr2line	present	--help	1279	GNU addr2line (GNU Binutils for Debian) 2.40
 adduser	present	--help	1123	adduser version 3.134
+advanced-installer	absent		0	
+aesfix	absent		0	
+aeskeyfind	present	--help	418	
+aeskeyfinder	absent		0	
+affcat	present	--help	806	affcat version 3.7.20
+affcompare	present	--help	2258	affcompare version 3.7.20
+affconvert	present	--help	144	affconvert version 3.7.20
+affcrypto	present	--help	1763	affcrypto version 3.7.20
+affinfo	present	--help	1149	affinfo version 3.7.20
+affix	present	--help	179	affix version 3.7.20
+affrecover	present		0	affrecover version 3.7.20
+affsegment	present	--help	1359	affsegment version 3.7.20
+affsign	present	--help	686	affsign version 3.7.20
+affstats	present	--help	184	affstats version 3.7.20
+affuse	present	--help	3145	
+affverify	present	--help	287	affverify version 3.7.20
+afl++	absent		0	
 agetty	present	--help	2196	agetty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)
+aircrack-ng	present	--help	3017	aircrack-ng: unrecognized option '--version'
+androguard	absent		0	
+androidprojectcreator	absent		0	
+angr	absent		0	
+anomy	absent		0	
+apache-users	absent		0	
+apache2	absent		0	
+apimonitor	absent		0	
+apkid	absent		0	
+apktool	absent		0	
 appcompat	present	--help	2435	Version: 0.9.1
 applygnupgdefaults	present		0	
 apt	present	--help	1289	apt 2.6.1 (amd64)
@@ -937,31 +77,70 @@ apt-key	present	--help	738	Unknown option: --version
 apt-mark	present	--help	1117	apt 2.6.1 (amd64)
 ar	present	--help	2178	GNU ar (GNU Binutils for Debian) 2.40
 arch	present	--help	351	arch (GNU coreutils) 9.1
+armitage	absent		0	
+arp-scan	present	--help	10445	arp-scan 1.10.0
 arpd	present	--help	151	
+arping	absent		0	
 as	present	--help	10853	GNU assembler (GNU Binutils for Debian) 2.40
 asan_symbolize-15	present	--help	1914	
+asar	absent		0	
+autoit-ripper	absent		0	
+autopsy	absent		0	
+avfs	absent		0	
 awk	present	(no args)	1154	awk: not an option: --version
+aws-cli	absent		0	
 b2sum	present	--help	1819	b2sum (GNU coreutils) 9.1
 badblocks	present	--help	294	
+baksmali	absent		0	
+balbuzard	absent		0	
 base32	present	--help	1049	base32 (GNU coreutils) 9.1
 base64	present	--help	1049	base64 (GNU coreutils) 9.1
 base64dump	present	--help	3352	base64dump.py 0.0.30
+base64dump.py	present	--help	3352	base64dump.py 0.0.30
 basename	present	--help	956	basename (GNU coreutils) 9.1
 basenc	present	--help	1677	basenc (GNU coreutils) 9.1
 bash	present	--help	764	GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)
 bashbug	present	--help	598	GNU bashbug, version 5.2.15-release
+bbcrack	absent		0	
+bbharvest	absent		0	
+bbtrans	absent		0	
 bdeinfo	present	--help	768	
 bdemount	present	--help	1078	
+bearcommander	absent		0	
+bearparser	absent		0	
+bed	absent		0	
+beef-xss	absent		0	
+bettercap	absent		0	
+binaryninja	absent		0	
+bindiff	absent		0	
+binee	absent		0	
+binwalk	present	--help	4245	
+binwalk3	absent		0	
+bless	absent		0	
 blkcalc	present	--help	919	The Sleuth Kit ver 4.11.1
 blkcat	present	--help	978	The Sleuth Kit ver 4.11.1
 blkdiscard	present	--help	708	blkdiscard from util-linux 2.38.1
 blkid	present	--help	2033	blkid from util-linux 2.38.1  (libblkid 2.38.1, 04-Aug-2022)
+blkls	present	--help	872	The Sleuth Kit ver 4.11.1
 blkstat	present	--help	652	The Sleuth Kit ver 4.11.1
 blkzone	present	--help	956	blkzone from util-linux 2.38.1
+blobrunner	absent		0	
+blobrunner64	absent		0	
 blockdev	present	--help	1478	blockdev from util-linux 2.38.1
-bridge	present	--help	337	Option "-version" is unknown, try "bridge help".
+blt	absent		0	
+box-export	absent		0	
+box-js	absent		0	
+braa	absent		0	
+bridge	present	--help	337	"Option ""-version"" is unknown, try ""bridge help""."
+brxor.py	absent		0	
 bstrings	present	--help	3307	2026.5+6cca053120b10a1c5cb563e3574ec7b2e0e894e3
+bulk_extractor	absent		0	
 bunzip2	present	--help	1248	bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
+burp-suite-community-edition	absent		0	
+burpsuite	absent		0	
+bytecode-viewer	absent		0	
+bytecodeviewer	absent		0	
+bytehist	absent		0	
 bzcat	present	--help	1246	bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
 bzcmp	present		0	bzcmp: version not found or not a regular file
 bzdiff	present		0	bzdiff: version not found or not a regular file
@@ -980,40 +159,67 @@ c89-gcc	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
 c99	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
 c99-gcc	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
 c_rehash	present	-h	152	
+cabextract	present	--help	986	cabextract version 1.9
+cadaver	absent		0	
+capa	present	--help	4392	capa 9.4.0
+capa-explorer-web	absent		0	
 capa-offline	present	--help	4392	capa 9.4.0
+capinfos	present	--help	2219	Capinfos (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
 capsh	present	--help	2425	
 captoinfo	present	--help	1749	ncurses 6.4.20221231
 captype	present	--help	326	Captype (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
 cat	present	--help	1107	cat (GNU coreutils) 9.1
 cc	present	--help	4088	cc (Debian 12.2.0-14+deb12u1) 12.2.0
+ccrypt	present	--help	2004	ccrypt 1.11. Secure encryption and decryption of files and streams.
+cewl	absent		0	
 cffi-gen-src	present	--help	406	
+cfr	absent		0	
 chage	present	--help	884	chage: unrecognized option '--version'
 chainsaw	present	--help	1336	chainsaw 2.16.0
 chattr	present		0	Usage: chattr [-RVf] [-+=aAcCdDeijPsStTuFx] [-p project] [-v version] files...
 chcon	present	--help	2039	chcon (GNU coreutils) 9.1
 chcpu	present	--help	494	chcpu from util-linux 2.38.1
+chepy	absent		0	
 chfn	present	--help	477	chfn: unrecognized option '--version'
 chgpasswd	present	--help	569	chgpasswd: unrecognized option '--version'
 chgrp	present	--help	1949	chgrp (GNU coreutils) 9.1
+chkrootkit	absent		0	
 chmem	present	--help	482	chmem from util-linux 2.38.1
 chmod	present	--help	1079	chmod (GNU coreutils) 9.1
+chntpw	absent		0	
 choom	present	--help	369	choom from util-linux 2.38.1
 chown	present	--help	2614	chown (GNU coreutils) 9.1
 chpasswd	present	--help	568	chpasswd: unrecognized option '--version'
+chrome.extensions	absent		0	
+chromium-browser	absent		0	
 chroot	present	--help	703	chroot (GNU coreutils) 9.1
 chrt	present	--help	1116	chrt from util-linux 2.38.1
 chsh	present	--help	232	chsh: unrecognized option '--version'
+cisco-global-exploiter	absent		0	
+cisco-ocs	absent		0	
+cisco-torch	absent		0	
 cksum	present	--help	2165	cksum (GNU coreutils) 9.1
 clambc	present	--help	1229	Clam AntiVirus Bytecode Testing Tool 1.4.3
+clamdscan	absent		0	
+clamscan	present	--help	8404	ClamAV 1.4.3
 clamsubmit	present	--help	819	ClamAV 1.4.3
+clang	absent		0	
 clang++-15	present	--help	65536	Debian clang version 15.0.6
 clang-15	present	--help	65536	Debian clang version 15.0.6
 clang-cpp-15	present	--help	65536	Debian clang version 15.0.6
 clang-format-radare2	present	--help	1139	clang-format-radare2 1.0
+claude-code	absent		0	
 clear	present	--help	181	ncurses 6.4.20221231
 clear_console	present	--help	192	clear_console: Version 0.1
+cmder	absent		0	
+cmospwd	absent		0	
 cmp	present	--help	1314	cmp (GNU diffutils) 3.8
+code	absent		0	
+codetrack	absent		0	
 comm	present	--help	1436	comm (GNU coreutils) 9.1
+commix	absent		0	
+convert	absent		0	
+copy-router-config	absent		0	
 corelist	present	--help	3964	
 cp	present	--help	4822	cp (GNU coreutils) 9.1
 cpan	present	--help	780	/usr/bin/cpan version 1.64 calling Getopt::Std::getopts (version 1.13 [paranoid]),
@@ -1022,17 +228,45 @@ cpgr	present	--help	193	cpgr: version: No such file or directory
 cpp	present	--help	4090	cpp (Debian 12.2.0-14+deb12u1) 12.2.0
 cpp-12	present	--help	4096	cpp-12 (Debian 12.2.0-14+deb12u1) 12.2.0
 cppw	present	--help	193	cppw: version: No such file or directory
+crackle	absent		0	
+creddump7	absent		0	
 cron	present		0	
 crontab	present	--help	463	version: No such file or directory
+crunch	absent		0	
+cryptcat	absent		0	
+cryptotester	absent		0	
+cryptsetup	present	--help	14471	cryptsetup 2.6.1 flags: UDEV BLKID KEYRING KERNEL_CAPI 
+cs-analyze-processdump.py	absent		0	
+cs-decrypt-metadata.py	absent		0	
+cs-extract-key.py	absent		0	
+cs-parse-traffic.py	absent		0	
+csce	absent		0	
 csplit	present	--help	1472	csplit (GNU coreutils) 9.1
 ctrlaltdel	present	--help	193	ctrlaltdel from util-linux 2.38.1
 ctstat	present	--help	672	ctstat Version 6.1.0
+curl	present	--help	914	curl 7.88.1 (x86_64-pc-linux-gnu) libcurl/7.88.1 OpenSSL/3.0.20 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3 OpenLDAP/2.5.13
 cut	present	--help	1782	cut (GNU coreutils) 9.1
+cut-bytes.py	absent		0	
+cutter	absent		0	
+cutycapt	absent		0	
 cvtsudoers	present	--help	1329	cvtsudoers version 1.9.13p3
+cyberchef	present	--help	176	
+cygwin	absent		0	
+cymothoa	absent		0	
+d2j-dex2jar	absent		0	
+darkstat	absent		0	
 dash	present		0	dash: 0: cannot open version: No such file
 date	present	--help	4875	date (GNU coreutils) 9.1
+davtest	absent		0	
+dbd	absent		0	
+dc3-mwcp	absent		0	
+dc3dd	present	--help	9633	dc3dd (dc3dd) 7.2.646
 dcb	present	--help	361	dcb: unrecognized option '--version'
+dcfldd	present	--help	2520	dcfldd (dcfldd) 1.9
 dd	present	--help	3296	dd (coreutils) 9.1
+ddrescue	absent		0	
+de4dot	absent		0	
+de4dot-cex	absent		0	
 deb-systemd-helper	present	--help	197	Unknown option: version
 deb-systemd-invoke	present		0	
 debconf	present	--help	252	Unknown option: version
@@ -1042,28 +276,74 @@ debconf-copydb	present	--help	123	Unknown option: version
 debconf-escape	present	--help	168	Unknown option: version
 debconf-set-selections	present	--help	222	Unknown option: version
 debconf-show	present	--help	148	Unknown option: version
+debloat	absent		0	
 debugfs	present	--help	220	debugfs 1.47.0 (5-Feb-2023)
+decai	absent		0	
+decode-vbe.py	absent		0	
+decompyle++	absent		0	
+default-jre	absent		0	
+default-mysql-server	absent		0	
 delgroup	present	--help	548	deluser version 3.134
 delpart	present	--help	215	delpart from util-linux 2.38.1
 deluser	present	--help	548	deluser version 3.134
 delv	present	--help	2650	Invalid option: --version
+dependencywalker	absent		0	
 devlink	present	--help	375	devlink: unrecognized option '--version'
+dex2jar	absent		0	
+dexray	absent		0	
 df	present	--help	2430	df (GNU coreutils) 9.1
 dfir	present	--help	1713	
 dh_perl_openssl	present	--help	488	Can't locate Debian/Debhelper/Dh_Lib.pm in @INC (you may need to install the Debian::Debhelper::Dh_Lib module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/bin/dh_perl_openssl line 6.
+dhcpig	absent		0	
+didier-stevens-beta	absent		0	
+didier-stevens-suite	absent		0	
+die	present	--help	403	Detect It Easy v3.10
+diec	present	--help	1545	die 3.10
 diel	present	--help	403	Detect It Easy Lite v3.10
 diff	present	--help	5387	diff (GNU diffutils) 3.8
 diff3	present	--help	1996	diff3 (GNU diffutils) 3.8
 dig	present	--help	269	Invalid option: --version
 dir	present	--help	7732	dir (GNU coreutils) 9.1
+dirb	absent		0	
+dirbuster	absent		0	
 dircolors	present	--help	908	dircolors (GNU coreutils) 9.1
 dirmngr	present	--help	3211	dirmngr (GnuPG) 2.2.40
 dirmngr-client	present	--help	1333	dirmngr-client (GnuPG) 2.2.40
 dirname	present	--help	691	dirname (GNU coreutils) 9.1
+disitool	absent		0	
+disitool.py	absent		0	
+disktype	present		0	disktype: Can't stat --version: No such file or directory
+dislocker	present	--help	1647	dislocker: unrecognized option '--version'
+dislocker-fuse	present	--help	1647	dislocker-fuse: unrecognized option '--version'
+display	absent		0	
+dissect	absent		0	
+dll-to-exe	absent		0	
+dllcharacteristics.py	absent		0	
 dmesg	present	--help	2915	dmesg from util-linux 2.38.1
+dmitry	absent		0	
+dnfile	absent		0	
+dnlib	absent		0	
+dns2tcp	absent		0	
+dnschef	absent		0	
 dnsdomainname	present	--help	1487	hostname 3.23
+dnsenum	absent		0	
+dnslib	absent		0	
+dnsmap	absent		0	
+dnspyex	absent		0	
+dnsrecon	absent		0	
+dnsresolver.py	absent		0	
 dnstap-read	present	--help	198	
+dnstracer	absent		0	
+dnswalk	absent		0	
+docker	absent		0	
 domainname	present	--help	1487	hostname 3.23
+domainstats	absent		0	
+dos2unix	absent		0	
+dotdotpwn	absent		0	
+dotdumper	absent		0	
+dotnet	present	--help	950	
+dotnet3.5	absent		0	
+dotnetfile	absent		0	
 dpkg	present	--help	4837	Debian 'dpkg' package management program version 1.21.23 (amd64).
 dpkg-architecture	present	--help	1544	Debian dpkg-architecture version 1.21.23.
 dpkg-buildflags	present	--help	960	Debian dpkg-buildflags version 1.21.23.
@@ -1094,11 +374,17 @@ dpkg-statoverride	present	--help	961	Debian dpkg-statoverride version 1.21.23 (a
 dpkg-trigger	present	--help	799	Debian dpkg-trigger package trigger utility version 1.21.23 (amd64).
 dpkg-vendor	present	--help	448	Debian dpkg-vendor version 1.21.23.
 dpl4hydra	present	--help	1087	
+driftnet	absent		0	
+droidlysis	absent		0	
+dsniff	absent		0	
 du	present	--help	3797	du (GNU coreutils) 9.1
+dumpcap	present	--help	5103	
 dumpe2fs	present	--help	138	dumpe2fs 1.47.0 (5-Feb-2023)
+dumpzilla	absent		0	
 dwp	present	--help	425	GNU dwp (GNU Binutils for Debian) 2.40
 e2freefrag	present		0	version: No such file or directory while opening filesystem
 e2fsck	present	--help	856	e2fsck 1.47.0 (5-Feb-2023)
+e2fsprogs	absent		0	
 e2image	present	--help	264	e2image 1.47.0 (5-Feb-2023)
 e2label	present		0	e2label: No such file or directory while trying to open --version
 e2mmpstatus	present		0	Using EXT2FS Library version 1.47.0
@@ -1109,24 +395,71 @@ e4crypt	present	--help	345	Unknown command: --version
 e4defrag	present	--help	165	e4defrag 1.47.0 (5-Feb-2023)
 easy_install-2.7	present	--help	2101	setuptools 41.2.0 from /usr/local/lib/python2.7/site-packages (Python 2.7)
 echo	present	--help	1282	echo (GNU coreutils) 9.1
+edb	absent		0	
+edb-debugger	absent		0	
+editcap	present	--help	7040	Editcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
 editor	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
 egrep	present	--help	4041	grep (GNU grep) 3.8
+elastalert-2	absent		0	
+elastic-agent	absent		0	
+elastic-fleet	absent		0	
+elasticsearch	absent		0	
 elfedit	present	--help	1277	GNU elfedit (GNU Binutils for Debian) 2.40
 emldump	present	--help	1292	emldump.py 0.0.16
+emldump.py	absent		0	
 enc2xs	present	--help	975	/usr/bin/enc2xs version 2.24 calling Getopt::Std::getopts (version 1.13 [paranoid]),
 encguess	present	--help	994	/usr/bin/encguess version [unknown] calling Getopt::Std::getopts (version 1.13),
+ent	absent		0	
+enum4linux	absent		0	
+enumiax	absent		0	
 env	present	--help	1472	env (GNU coreutils) 9.1
+epic-irc-client	absent		0	
+epic5	absent		0	
 esedbexport	present	--help	1141	
 esedbinfo	present	--help	324	
+etc	absent		0	
+etherape	absent		0	
+ettercap-graphical	absent		0	
+evilclippy	absent		0	
+evince	absent		0	
 evtxexport	present	--help	1774	
 evtxinfo	present	--help	611	
+ewfacquire	present	--help	3947	
+ewfacquirestream	present	--help	3239	
+ewfexport	present	--help	3013	
+ewfinfo	present	--help	1068	
+ewfmount	present	--help	697	
+ewfrecover	present	--help	1236	
+ewfverify	present	--help	1397	
 ex	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+ex_pe_xor.py	absent		0	
+exe2hexbat	absent		0	
+exeinfope	absent		0	
+exfat-extras	absent		0	
+exfat-fuse	absent		0	
+exif	absent		0	
+exifprobe	absent		0	
+exiftool	present		0	Error: File not found - version
+exiv2	absent		0	
 expand	present	--help	1069	expand (GNU coreutils) 9.1
 expiry	present	--help	289	expiry: unrecognized option '--version'
+exploitdb	absent		0	
+explorersuite	absent		0	
 expr	present	--help	2156	expr (GNU coreutils) 9.1
+ext3grep	absent		0	
+ext4magic	absent		0	
+extract_msg	absent		0	
+extreme_dumper	absent		0	
+extundelete	absent		0	
+eyewitness	absent		0	
+ezhexviewer	present	--help	1593	
+ezviewer	absent		0	
 factor	present	--help	483	factor (GNU coreutils) 9.1
 faillock	present		0	faillock: Unknown option: --version
 faillog	present	--help	749	faillog: unrecognized option '--version'
+fakedns	absent		0	
+fakemail	absent		0	
+fakenet-ng	absent		0	
 fallocate	present	--help	931	fallocate from util-linux 2.38.1
 false	present	--help	604	false (GNU coreutils) 9.1
 fc-cache	present	--help	776	fontconfig version 2.14.1
@@ -1139,29 +472,61 @@ fc-query	present	--help	454	fontconfig version 2.14.1
 fc-scan	present	--help	462	fontconfig version 2.14.1
 fc-validate	present	--help	451	fontconfig version 2.14.1
 fcat	present	--help	759	The Sleuth Kit ver 4.11.1
+fcrackzip	absent		0	
+fdupes	absent		0	
+feh	absent		0	
+ferret-sidejack	absent		0	
+ffind	present	--help	748	The Sleuth Kit ver 4.11.1
 fgrep	present	--help	4041	grep (GNU grep) 3.8
+fiddler	absent		0	
 fidentify	present	--help	264	fidentify 7.1, Data Recovery Utility, July 2019
+fierce	absent		0	
+fiked	absent		0	
+file	present	--help	3189	file-5.44
+file-magic.py	absent		0	
+filebeat	absent		0	
 filefrag	present		0	filefrag 1.47.0 (5-Feb-2023)
 fincore	present	--help	599	fincore from util-linux 2.38.1
 find	present	--help	2110	find (GNU findutils) 4.9.0
 findfs	present	--help	211	findfs from util-linux 2.38.1
 findmnt	present	--help	4081	findmnt from util-linux 2.38.1
+firefox	absent		0	
+firewalk	absent		0	
+firmware-mod-kit	absent		0	
 fiwalk	present	--help	1711	SleuthKit Version: 4.11.1
+flex	absent		0	
 flock	present	--help	896	flock from util-linux 2.38.1
+floss	present	--help	2337	floss 3.1.1
+fls	present	--help	1353	The Sleuth Kit ver 4.11.1
 fmt	present	--help	1157	fmt (GNU coreutils) 9.1
 fold	present	--help	666	fold (GNU coreutils) 9.1
+foremost	present	-h	830	1.5.7
+forensic-artifacts	absent		0	
+forensics-colorize	absent		0	
+format-bytes.py	absent		0	
+fping	absent		0	
+fragrouter	absent		0	
 free	present	--help	1074	free from procps-ng 4.0.2
+freerdp3-x11	absent		0	
+freqserver	absent		0	
+freshclam	present	--help	3341	ClamAV 1.4.3
+frida	present	--help	4398	17.16.3
 frida-apk	present	--help	606	17.16.3
 frida-compile	present	--help	1171	17.16.3
 frida-create	present	--help	535	17.16.3
+frida-discover	present	--help	2991	17.16.3
 frida-itrace	present	--help	3421	
 frida-join	present	--help	3379	17.16.3
+frida-kill	present	--help	1525	17.16.3
 frida-ls	present	--help	1537	17.16.3
+frida-ls-devices	present	--help	270	17.16.3
 frida-pm	present	--help	488	17.16.3
+frida-ps	present	--help	1649	17.16.3
 frida-pull	present	--help	1534	17.16.3
 frida-push	present	--help	1533	17.16.3
 frida-rm	present	--help	1642	17.16.3
 frida-strace	present	--help	2134	17.16.3
+frida-trace	present	--help	4999	17.16.3
 fsck	present	--help	969	fsck from util-linux 2.38.1
 fsck.cramfs	present	--help	521	fsck.cramfs from util-linux 2.38.1
 fsck.ext2	present	--help	862	e2fsck 1.47.0 (5-Feb-2023)
@@ -1169,14 +534,20 @@ fsck.ext3	present	--help	862	e2fsck 1.47.0 (5-Feb-2023)
 fsck.ext4	present	--help	862	e2fsck 1.47.0 (5-Feb-2023)
 fsck.minix	present	--help	472	fsck.minix from util-linux 2.38.1
 fsfreeze	present	--help	275	fsfreeze from util-linux 2.38.1
+fsstat	present	--help	679	The Sleuth Kit ver 4.11.1
 fstab-decode	present		0	fstab-decode: --version: No such file or directory
 fstrim	present	--help	881	fstrim from util-linux 2.38.1
+ftester	absent		0	
 ftguess	present	--help	918	ftguess 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools
 funzip	present		0	
 fusermount	present	--help	172	fusermount3 version: 3.14.0
 fusermount3	present	--help	173	fusermount3 version: 3.14.0
 g++	present	--help	4090	g++ (Debian 12.2.0-14+deb12u1) 12.2.0
 g++-12	present	--help	4096	g++-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+galculator	absent		0	
+galleta	absent		0	
+garbageman	absent		0	
+gawk	absent		0	
 gcc	present	--help	4090	gcc (Debian 12.2.0-14+deb12u1) 12.2.0
 gcc-12	present	--help	4096	gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0
 gcc-ar	present	--help	2205	GNU ar (GNU Binutils for Debian) 2.40
@@ -1191,26 +562,39 @@ gcov-dump	present	--help	392	gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0
 gcov-dump-12	present	--help	392	gcov-dump (Debian 12.2.0-14+deb12u1) 12.2.0
 gcov-tool	present	--help	1350	gcov-tool (Debian 12.2.0-14+deb12u1) 12.2.0
 gcov-tool-12	present	--help	1353	gcov-tool-12 (Debian 12.2.0-14+deb12u1) 12.2.0
+gdb	absent		0	
+gddrescue	absent		0	
 gencat	present	--help	882	gencat (Debian GLIBC 2.36-9+deb12u14) 2.36
-genl	present	-h	150	Option "--version" is unknown, try "genl -help".
+genl	present	-h	150	"Option ""--version"" is unknown, try ""genl -help""."
 getcap	present	--help	148	version (No such file or directory)
 getconf	present	--help	295	getconf (Debian GLIBC 2.36-9+deb12u14) 2.36
 getent	present	--help	819	getent (Debian GLIBC 2.36-9+deb12u14) 2.36
 getopt	present	--help	903	getopt from util-linux 2.38.1
 getpcaps	present	--help	472	Cannot parse pid --version: (Invalid argument)
 getty	present	--help	2194	getty from util-linux 2.38.1 (flow control, hints, issue, issue.d, keyboard mode, plymouth, reload, syslog, widechar)
+ghex	absent		0	
+ghidra	absent		0	
+ghidrassistmcp	absent		0	
 git	present	--help	2160	git version 2.39.5
 git-receive-pack	present	(no args)	163	error: unknown option `version'
 git-shell	present		0	
 git-upload-archive	present	-help	197	
 git-upload-pack	present	-h	366	error: unknown option `version'
 gmake	present	--help	2714	GNU Make 4.3
+gnome-calculator	absent		0	
+gnu-project-debugger	absent		0	
+gnu-wget	absent		0	
 gold	present	--help	22864	GNU gold (GNU Binutils for Debian 2.40) 1.16
+gootloaderautojsdecode.py	absent		0	
+goresym	absent		0	
+gostringungarbler	absent		0	
 gp-archive	present	--help	2397	GNU x86_64-linux-gnu-gp-archive binutils version 2.40.00
 gp-collect-app	present	--help	4392	GNU x86_64-linux-gnu-gp-collect-app binutils version 2.40.00
 gp-display-html	present	--help	2761	gp-display-html GNU binutils version 2.40.00
 gp-display-src	present	--help	1571	GNU x86_64-linux-gnu-gp-display-src binutils version 2.40.00
 gp-display-text	present	--help	1554	GNU x86_64-linux-gnu-gp-display-text binutils version 2.40.00
+gpart	absent		0	
+gparted	absent		0	
 gpasswd	present	--help	637	gpasswd: unrecognized option '--version'
 gpg	present	--help	5008	gpg (GnuPG) 2.2.40
 gpg-agent	present	--help	3366	gpg-agent (GnuPG) 2.2.40
@@ -1224,9 +608,14 @@ gpgsm	present	--help	4606	gpgsm (GnuPG) 2.2.40
 gpgsplit	present	--help	628	gpgsplit (@GNUPG@) 2.2.40
 gpgtar	present	--help	1309	gpgtar (GnuPG) 2.2.40
 gpgv	present	--help	793	gpgv (GnuPG) 2.2.40
+gpp-decrypt	absent		0	
 gprof	present	--help	821	GNU gprof (GNU Binutils for Debian) 2.40
 gprofng	present	--help	3287	GNU x86_64-linux-gnu-gprofng binutils version 2.40.00
+grafana	absent		0	
+graphviz	absent		0	
 grep	present	--help	4041	grep (GNU grep) 3.8
+grepcidr	absent		0	
+grokevt	absent		0	
 groupadd	present	--help	810	groupadd: unrecognized option '--version'
 groupdel	present	--help	336	groupdel: unrecognized option '--version'
 groupmems	present	--help	578	groupmems: unrecognized option '--version'
@@ -1235,58 +624,163 @@ groups	present	--help	496	groups (GNU coreutils) 9.1
 grpck	present	--help	414	grpck: unrecognized option '--version'
 grpconv	present	--help	158	grpconv: unrecognized option '--version'
 grpunconv	present	--help	160	grpunconv: unrecognized option '--version'
+gthumb	absent		0	
 gunzip	present	--help	1059	gunzip (gzip) 1.12
+guymager	absent		0	
+gvm	absent		0	
 gzexe	present	--help	351	gzexe (gzip) 1.12
 gzip	present	--help	1245	gzip 1.12
+gzrt	absent		0	
 h2ph	present	--help	730	/usr/bin/h2ph version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
 h2xs	present	--help	3037	Defaulting to backwards compatibility with perl 5.36.0
+hachoir	absent		0	
+hachoir-grep	absent		0	
+hachoir-metadata	absent		0	
+hachoir-strip	absent		0	
+hachoir-wx	absent		0	
+hakrawler	absent		0	
+hamster-sidejack	absent		0	
 hardlink	present	--help	1718	hardlink from util-linux 2.38.1
+hash-id	absent		0	
+hash-id.py	absent		0	
+hash-identifier	absent		0	
+hashcat	present	--help	58909	v6.2.6
+hashcat-utils	absent		0	
+hashdeep	absent		0	
+hashid	absent		0	
+hashmyfiles	absent		0	
 hayabusa	present	help	1490	error: unexpected argument '--version' found
 hcli	present	--help	3022	hcli, version 0.18.3
 head	present	--help	1394	head (GNU coreutils) 9.1
+heartleech	absent		0	
 helpztags	present		0	
+hex-to-bin.py	absent		0	
+hexedit	absent		0	
+hexinject	absent		0	
 hfind	present	--help	672	The Sleuth Kit ver 4.11.1
+hivexget	present		0	
 hivexml	present		0	hivex_open: version: No such file or directory
+hivexregedit	absent		0	
+hivexsh	present	help	333	hivexsh: failed to open hive file: version: No such file or directory
+hollowshunter	absent		0	
 host	present	--help	1095	host 9.18.49-1~deb12u1-Debian
 hostid	present	--help	394	hostid (GNU coreutils) 9.1
 hostname	present	--help	1487	hostname 3.23
+hping3	absent		0	
+httprint	absent		0	
 httpx	present	--help	4378	
+httrack	absent		0	
 hwclock	present	--help	1949	hwclock from util-linux 2.38.1
+hxd	absent		0	
+hydra	present	--help	237	Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+hydra-gtk	absent		0	
 hydra-wizard	present		0	
 i386	present	--help	1017	i386 from util-linux 2.38.1
+iaxflood	absent		0	
+ibus	absent		0	
+ibus-setup	absent		0	
+icat	present	--help	877	The Sleuth Kit ver 4.11.1
 iconv	present	--help	894	iconv (Debian GLIBC 2.36-9+deb12u14) 2.36
 iconvconfig	present	--help	770	iconvconfig (Debian GLIBC 2.36-9+deb12u14) 2.36
 id	present	--help	1023	id (GNU coreutils) 9.1
 ida-hcli	present	--help	3022	ida-hcli, version 0.18.3
+ida.plugin.capa	absent		0	
+ida.plugin.comida	absent		0	
+ida.plugin.delphihelper	absent		0	
+ida.plugin.dereferencing	absent		0	
+ida.plugin.diaphora	absent		0	
+ida.plugin.flare	absent		0	
+ida.plugin.flare-emu	absent		0	
+ida.plugin.hashdb	absent		0	
+ida.plugin.hrtng	absent		0	
+ida.plugin.ifl	absent		0	
+ida.plugin.xray	absent		0	
+ida.plugin.xrefer	absent		0	
+idafree	absent		0	
 idle	present		0	
 idna	present	--help	980	idna 3.18
+idr	absent		0	
+idx_parser.py	absent		0	
 ifind	present	--help	987	The Sleuth Kit ver 4.11.1
+ifpstools	absent		0	
+ike-scan	absent		0	
+ilm	absent		0	
+ils	present	--help	1068	The Sleuth Kit ver 4.11.1
+ilspy	absent		0	
+imagemagick	absent		0	
 img_cat	present	--help	435	The Sleuth Kit ver 4.11.1
+img_stat	present	--help	340	The Sleuth Kit ver 4.11.1
+inetsim	present	--help	1646	INetSim 1.3.2 (2020-05-19) by Matthias Eckert & Thomas Hungenberg
+influxdb	absent		0	
+info-zip	absent		0	
 infocmp	present	--help	1433	ncurses 6.4.20221231
 infotocap	present	--help	1749	ncurses 6.4.20221231
+init	absent		0	
+innoextract	absent		0	
+innounp	absent		0	
+inspircd-3	absent		0	
 install	present	--help	3240	install (GNU coreutils) 9.1
 install-sgmlcatalog	present		0	Unknown option: version
 installkernel	present		0	Usage: installkernel <version> <image> <System.map> <directory>
 instmodsh	present	--help	65536	
-invoke-rc.d	present	--help	1574	invoke-rc.d: syntax error: unknown option "--version"
+internet_detector	absent		0	
+intrace	absent		0	
+inviteflood	absent		0	
+invoke-rc.d	present	--help	1574	"invoke-rc.d: syntax error: unknown option ""--version"""
+iodine	absent		0	
 ionice	present	--help	853	ionice from util-linux 2.38.1
-ip	present	--help	971	Option "-version" is unknown, try "ip -help".
+ip	present	--help	971	"Option ""-version"" is unknown, try ""ip -help""."
 ipcmk	present	--help	570	ipcmk from util-linux 2.38.1
 ipcrm	present	--help	678	ipcrm from util-linux 2.38.1
 ipcs	present	--help	782	ipcs from util-linux 2.38.1
+ipwhois	absent		0	
+ipython	absent		0	
+ipython3	absent		0	
+irpas	absent		0	
 ischroot	present	--help	240	Debian ischroot, version 5.7Copyright (C) 2011 Aurelien Jarno
+isd	absent		0	
 isosize	present	--help	339	isosize from util-linux 2.38.1
+isr-evilgrade	absent		0	
+istat	present	--help	1004	The Sleuth Kit ver 4.11.1
+jadx	absent		0	
+jadx-gui	absent		0	
+java-idx-parser	absent		0	
+javascript-deobfuscator	absent		0	
+javasnoop	absent		0	
+javassist	absent		0	
+jboss-autopwn	absent		0	
 jcat	present	--help	575	The Sleuth Kit ver 4.11.1
+jd-gui	absent		0	
+jd-gui-java-decompiler	absent		0	
 jls	present	--help	469	The Sleuth Kit ver 4.11.1
+john	present	(no args)	1552	stat: version: No such file or directory
+johnny	absent		0	
 join	present	--help	2531	join (GNU coreutils) 9.1
+joomscan	absent		0	
 jpeg_extract	present		0	
+jq	absent		0	
+js	absent		0	
+js-ascii	absent		0	
+js-beautifier	absent		0	
+js-beautify	absent		0	
+js-deobfuscator	absent		0	
+js-file	absent		0	
+js_unshroud	absent		0	
 json_pp	present	--help	135	Unknown option: version
+jsql-injection	absent		0	
+jstillery	absent		0	
 kbxutil	present	--help	856	kbxutil (GnuPG) 2.2.40
+kdiff3	absent		0	
+keystone	absent		0	
+kibana	absent		0	
 kill	present	--help	519	kill from procps-ng 4.0.2
 killall5	present		0	
+kpartx	absent		0	
 last	present	--help	1142	last from util-linux 2.38.1
 lastb	present	--help	1143	lastb from util-linux 2.38.1
 lastlog	present	--help	565	lastlog: unrecognized option '--version'
+laudanum	absent		0	
+lbd	absent		0	
 lcf	present	--help	668	lcf: unrecognized option '--version'
 ld	present	--help	32569	GNU ld (GNU Binutils for Debian) 2.40
 ld.bfd	present	--help	32585	GNU ld (GNU Binutils for Debian) 2.40
@@ -1295,26 +789,32 @@ ld.so	present	--help	2477	ld.so (Debian GLIBC 2.36-9+deb12u14) stable release ve
 ldattach	present	--help	1341	ldattach from util-linux 2.38.1
 ldconfig	present	--help	1134	ldconfig (Debian GLIBC 2.36-9+deb12u14) 2.36
 ldd	present	--help	440	ldd (Debian GLIBC 2.36-9+deb12u14) 2.36
+legion	absent		0	
 less	present	--help	13066	version: No such file or directory
 lessecho	present		0	1.15
 lessfile	present		0	
 lesskey	present		0	lesskey  version 590
 lesspipe	present		0	
+lft	absent		0	
 libnetcfg	present	--help	1002	/usr/bin/libnetcfg version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
+lief	absent		0	
 link	present	--help	416	link (GNU coreutils) 9.1
 linux32	present	--help	1020	linux32 from util-linux 2.38.1
 linux64	present	--help	1020	linux64 from util-linux 2.38.1
+list-cs-settings	absent		0	
 ln	present	--help	2880	ln (GNU coreutils) 9.1
 lnstat	present	--help	672	lnstat Version 6.1.0
 locale	present	--help	679	locale (Debian GLIBC 2.36-9+deb12u14) 2.36
 locale-gen	present		0	
 localedef	present	--help	2284	localedef (Debian GLIBC 2.36-9+deb12u14) 2.36
 log2timeline	present	--help	18612	plaso - log2timeline version 20260512
+log2timeline.py	present	--help	18762	plaso - log2timeline version 20260512
 logger	present	--help	1688	logger from util-linux 2.38.1
 login	present		0	
 logname	present	--help	358	logname (GNU coreutils) 9.1
 logrotate	present	--help	824	logrotate 3.21.0
 logsave	present	--help	192	
+logstash	absent		0	
 losetup	present	--help	2079	losetup from util-linux 2.38.1
 lowntfs-3g	present	--help	707	lowntfs-3g 2022.10.3 integrated FUSE 28
 ls	present	--help	7729	ls (GNU coreutils) 9.1
@@ -1331,6 +831,9 @@ lsns	present	--help	1395	lsns from util-linux 2.38.1
 lspgpot	present	help	205	
 lto-dump	present	--help	65536	lto-dump: fatal error: open version failed: No such file or directory
 lto-dump-12	present	--help	65536	lto-dump-12: fatal error: open version failed: No such file or directory
+ltrace	absent		0	
+lvm2	absent		0	
+lynis	absent		0	
 lzcat	present	--help	1432	xz (XZ Utils) 5.4.1
 lzcmp	present	--help	349	xzcmp (XZ Utils) 5.4.1
 lzdiff	present	--help	352	xzdiff (XZ Utils) 5.4.1
@@ -1341,17 +844,54 @@ lzless	present	--help	184	xzless (XZ Utils) 5.4.1
 lzma	present	--help	1431	xz (XZ Utils) 5.4.1
 lzmainfo	present	--help	253	lzmainfo (XZ Utils) 5.4.1
 lzmore	present	--help	147	xzmore (XZ Utils) 5.4.1
+mac-robber	absent		0	
+mac2unix	absent		0	
+macchanger	absent		0	
+mactime	present	--help	904	Unknown option: --version
+magicrescue	absent		0	
+magika	absent		0	
+magnus	absent		0	
+mail-parser	absent		0	
 mailer	present		0	stat: version: No such file or directory
 make	present	--help	2713	GNU Make 4.3
 make-first-existing-target	present		0	Unknown option: version
+malcat-lite	absent		0	
+malchive	absent		0	
+maltego	absent		0	
+malware-jail	absent		0	
+malwoverview	absent		0	
+managerhype	absent		0	
+manalyze	absent		0	
+map	absent		0	
 markdown-it	present	--help	707	markdown-it-py [version 4.2.0]
+maskprocessor	absent		0	
+masscan	absent		0	
 mawk	present	(no args)	1154	mawk: not an option: --version
+mbcscan	absent		0	
+mbcscan.py	absent		0	
 mcookie	present	--help	471	mcookie from util-linux 2.38.1
+md5deep	absent		0	
 md5sum	present	--help	1594	md5sum (GNU coreutils) 9.1
 md5sum.textutils	present	--help	1604	md5sum (GNU coreutils) 9.1
+mdadm	absent		0	
+mdbtools	absent		0	
 mdig	present	--help	175	Invalid option: --version
+medusa	absent		0	
+memdump	absent		0	
+mergecap	present	--help	953	Mergecap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+mermaid-viewer	absent		0	
 mesg	present	--help	236	mesg from util-linux 2.38.1
+metacam	absent		0	
+metagoofil	absent		0	
+metasploit-framework	absent		0	
+microsoft-office	absent		0	
 migrate-pubring-from-classic-gpg	present	--help	230	There is no --version/pubring.gpg, no need to migrate
+mimikatz	absent		0	
+miredo	absent		0	
+missidentify	absent		0	
+mitmdump	absent		0	
+mitmproxy	absent		0	
+mitmweb	absent		0	
 mkdir	present	--help	1004	mkdir (GNU coreutils) 9.1
 mke2fs	present	--help	510	mke2fs 1.47.0 (5-Feb-2023)
 mkfifo	present	--help	737	mkfifo (GNU coreutils) 9.1
@@ -1371,7 +911,11 @@ mkswap	present	--help	729	mkswap from util-linux 2.38.1
 mktemp	present	--help	1567	mktemp (GNU coreutils) 9.1
 mmcat	present	--help	516	The Sleuth Kit ver 4.11.1
 mmdbresolve	present		0	
+mmls	present	--help	796	The Sleuth Kit ver 4.11.1
 mmstat	present	--help	503	The Sleuth Kit ver 4.11.1
+mogrify	absent		0	
+monitor-network	absent		0	
+monodis	absent		0	
 more	present	--help	891	more from util-linux 2.38.1
 mount	present	--help	3068	mount from util-linux 2.38.1 (libmount 2.38.1: selinux, smack, btrfs, verity, namespaces, assert, debug)
 mount.fuse	present		0	
@@ -1380,28 +924,73 @@ mount.lowntfs-3g	present	--help	707	lowntfs-3g 2022.10.3 integrated FUSE 28
 mount.ntfs	present	--help	698	ntfs-3g 2022.10.3 integrated FUSE 28
 mount.ntfs-3g	present	--help	698	ntfs-3g 2022.10.3 integrated FUSE 28
 mountpoint	present	--help	475	mountpoint from util-linux 2.38.1
+mraptor	present	--help	790	MacroRaptor 0.56.2 - http://decalage.info/python/oletools
+msfpc	absent		0	
+msg-extractor	absent		0	
+msgconvert	absent		0	
+msodde	present	--help	1187	
+msoffcrypto-crack.py	absent		0	
 msoffcrypto-tool	present	--help	505	
+msoffice-crypt	absent		0	
+mtd-utils	absent		0	
 mv	present	--help	2116	mv (GNU coreutils) 9.1
+mwcp	absent		0	
+myip	absent		0	
+myjson-filter.py	absent		0	
+myrescue	absent		0	
+name-that-hash	absent		0	
 namei	present	--help	540	namei from util-linux 2.38.1
+nasm	absent		0	
+nasty	absent		0	
+nautilus	absent		0	
 nawk	present	(no args)	1154	nawk: not an option: --version
+nbd-client	absent		0	
+nbtscan	absent		0	
+nc	absent		0	
+ncat	absent		0	
+ncrack	absent		0	
 ncurses5-config	present	--help	1265	6.4.20221231
 ncurses6-config	present	--help	1265	6.4.20221231
 ncursesw5-config	present	--help	1280	6.4.20221231
 ncursesw6-config	present	--help	1280	6.4.20221231
+net-reactor-slayer	absent		0	
 net-server	present	--help	2246	
+netcat	absent		0	
+netdiscover	absent		0	
+netmask	absent		0	
+netpbm	absent		0	
+netsed	absent		0	
+netsniff-ng	absent		0	
+network-miner-free-edition	absent		0	
+networkminer	absent		0	
+netwox	absent		0	
 newgrp	present		0	newgrp: group 'version' does not exist
 newusers	present	--help	262	newusers: unrecognized option '--version'
+nfdump	absent		0	
+nginx	absent		0	
+ngrep	present	--help	1702	ngrep: V1.47.1-git, libpcap version 1.10.3 (with TPACKET_V3)
 nice	present	--help	892	nice (GNU coreutils) 9.1
+nikto	absent		0	
 nisdomainname	present	--help	1487	hostname 3.23
+nishang	absent		0	
 nl	present	--help	1978	nl (GNU coreutils) 9.1
 nm	present	--help	2893	GNU nm (GNU Binutils for Debian) 2.40
+nmap	present	--help	5996	Nmap version 7.93 ( https://nmap.org )
 nohup	present	--help	875	nohup (GNU coreutils) 9.1
 nologin	present		0	
+nomorexor.py	absent		0	
+notepadplusplus	absent		0	
+notepadpp.plugin.compare	absent		0	
+notepadpp.plugin.jstool	absent		0	
+notepadpp.plugin.xmltools	absent		0	
+nping	present	--help	6787	Failed to resolve given hostname/IP: version.  Note that you can't use '/mask' AND '1-4,7,100-' style IP ranges
 nproc	present	--help	568	nproc (GNU coreutils) 9.1
 nsenter	present	--help	1178	nsenter from util-linux 2.38.1
 nslookup	present	help	332	*** Invalid option: -version
+nsrllookup	absent		0	
 nstat	present	--help	540	nstat utility, iproute2-6.1.0
 nsupdate	present	--help	193	nsupdate 9.18.49-1~deb12u1-Debian
+ntfs-3g	present	--help	698	ntfs-3g 2022.10.3 integrated FUSE 28
 ntfs-3g.probe	present	--help	282	ntfs-3g.probe: Unknown option '--version'.
 ntfscat	present	--help	563	
 ntfsclone	present	--help	1401	ntfsclone v2022.10.3 (libntfs-3g)
@@ -1420,98 +1009,229 @@ ntfsresize	present	--help	1336	ntfsresize v2022.10.3 (libntfs-3g)
 ntfssecaudit	present	--help	1257	ntfssecaudit 1.5.0 : NTFS security data auditing
 ntfstruncate	present	--help	799	ntfstruncate v2022.10.3 (libntfs-3g)
 ntfsundelete	present	--help	1220	The device version doesn't exist
-ntfsusermap	present	(no args)	203	Could not open "--version"
+ntfsusermap	present	(no args)	203	"Could not open ""--version"""
 ntfswipe	present	--help	1050	The device version doesn't exist
+nth	absent		0	
 numbers-to-hex.py	present	--help	881	numbers-to-hex.py 0.0.4
+numbers-to-string.py	present	--help	1331	numbers-to-string.py 0.0.11
 numfmt	present	--help	4444	numfmt (GNU coreutils) 9.1
+obfuscator-io-deobfuscator	absent		0	
 objcopy	present	--help	8429	GNU objcopy (GNU Binutils for Debian) 2.40
+objdump	present	--help	7394	GNU objdump (GNU Binutils for Debian) 2.40
+objects.js	absent		0	
 od	present	--help	3560	od (GNU coreutils) 9.1
+offvis	absent		0	
+ofs2rva	absent		0	
+ohrwurm	absent		0	
+okular	absent		0	
+olebrowse	present	--help	1587	
+olecfexport	absent		0	
+olecfinfo	absent		0	
+olecfmount	absent		0	
+oledir	present	--help	594	oledir 0.54 - http://decalage.info/python/oletools
 oledump	present	--help	2814	oledump.py 0.0.85
-openssl	present	--help	2906	Invalid command '--version'; type "help" for a list.
+oledump.py	present	--help	2814	oledump.py 0.0.85
+olefile	present	--help	535	ERROR    Error while parsing file 'version'
+oleid	present	--help	910	oleid 0.60.1 - http://decalage.info/oletools
+olemap	present	--help	1718	
+olemeta	present	--help	771	olemeta 0.54 - http://decalage.info/python/oletools
+oleobj	present	--help	1277	oleobj 0.60.1 - http://decalage.info/oletools
+oletimes	present	--help	773	oletimes 0.54 - http://decalage.info/python/oletools
+olevba	present	--help	2377	olevba 0.60.2 on Python 3.11.2 - http://decalage.info/python/oletools
+ollydbg	absent		0	
+onboard	absent		0	
+onedump.py	absent		0	
+onenoteanalyzer	absent		0	
+onesixtyone	absent		0	
+onion-ai-assistant	absent		0	
+open-iscsi	absent		0	
+opencanary	absent		0	
+opencode	absent		0	
+openjdk	absent		0	
+openssh	absent		0	
+openssl	present	--help	2906	"Invalid command '--version'; type ""help"" for a list."
+ophcrack	absent		0	
+ophcrack-cli	absent		0	
+orca	absent		0	
+origamindee	absent		0	
+oscanner	absent		0	
+osquery	absent		0	
+outguess	absent		0	
+owasp-mantra-ff	absent		0	
+p0f	absent		0	
 p7zip	present	--help	457	/usr/bin/p7zip: ignoring unknown option --version
+p7zip-full	absent		0	
+pack	absent		0	
+pack2	absent		0	
+padbuster	absent		0	
 pager	present	--help	13066	version: No such file or directory
 pam-auth-update	present		0	
 pam_getenv	present		0	
 pam_namespace_helper	present		0	
 pam_timestamp_check	present		0	
+paros	absent		0	
+parted	absent		0	
 partx	present	--help	1473	partx from util-linux 2.38.1
+pasco	absent		0	
+passing-the-hash	absent		0	
 passwd	present	--help	1230	passwd: unrecognized option '--version'
 paste	present	--help	787	paste (GNU coreutils) 9.1
+patator	absent		0	
+patch	present	--help	2955	GNU patch 2.7.6
 pathchk	present	--help	566	pathchk (GNU coreutils) 9.1
+pcode2code	absent		0	
+pcodedmp	present	--help	573	pcodedmp version 1.2.6
 pdb3	present	--help	539	Error: version does not exist
 pdb3.11	present	--help	539	Error: version does not exist
+pdbresym	absent		0	
+pdf-parser	present	--help	2862	pdf-parser.py 0.7.14
+pdf-parser.py	present	--help	2862	pdf-parser.py 0.7.14
 pdfattach	present	--help	530	pdfattach version 22.12.0
+pdfcop	absent		0	
+pdfcrack	absent		0	
+pdfdecompress	absent		0	
+pdfdecrypt	absent		0	
 pdfdetach	present	--help	874	pdfdetach version 22.12.0
+pdfextract	absent		0	
 pdffonts	present	--help	639	I/O Error: Couldn't open file '--version': No such file or directory.
+pdfid	present	--help	1700	pdfid.py 0.2.10
+pdfid.py	present	--help	1700	pdfid.py 0.2.10
 pdfimages	present	--help	1180	pdfimages version 22.12.0
 pdfinfo	present	--help	1458	I/O Error: Couldn't open file '--version': No such file or directory.
+pdfresurrect	absent		0	
 pdfseparate	present	--help	520	pdfseparate version 22.12.0
 pdfsig	present	-h	2001	I/O Error: Couldn't open file '--version': No such file or directory.
+pdfstreamdumper	absent		0	
+pdftk	absent		0	
+pdftk-java	absent		0	
 pdftocairo	present	--help	3461	pdftocairo version 22.12.0
 pdftohtml	present	--help	1782	I/O Error: Couldn't open file '--version': No such file or directory.
+pdftool.py	absent		0	
 pdftoppm	present	--help	4109	I/O Error: Couldn't open file '--version': No such file or directory.
 pdftops	present	--help	3513	I/O Error: Couldn't open file '--version': No such file or directory.
 pdftotext	present	--help	2176	I/O Error: Couldn't open file '--version': No such file or directory.
 pdfunite	present	--help	447	pdfunite version 22.12.0
+pdg	absent		0	
+pdnstool	absent		0	
+pe-tree	absent		0	
+pe_unmapper	absent		0	
+peass	absent		0	
+pebear	absent		0	
+pecheck.py	absent		0	
+pedis	absent		0	
+pedump	absent		0	
+peepdf-3	absent		0	
+pefile	absent		0	
+peframe	absent		0	
+pehash	absent		0	
+peid	absent		0	
+peldd	absent		0	
+pepack	absent		0	
+peres	absent		0	
+perl	present	--help	2023	Summary of my perl5 (revision 5 version 36 subversion 0) configuration:
 perl5.36-x86_64-linux-gnu	present	--help	2044	Summary of my perl5 (revision 5 version 36 subversion 0) configuration:
 perl5.36.0	present	--help	2029	Summary of my perl5 (revision 5 version 36 subversion 0) configuration:
 perlbug	present	--help	2315	perlbug version 1.42
 perldoc	present		0	
 perlivp	present	--help	360	
 perlthanks	present	--help	2327	perlbug version 1.42
+pescan	absent		0	
+pesec	absent		0	
+pesieve	absent		0	
+pestr	absent		0	
+pestudio	absent		0	
+pev	absent		0	
 pgrep	present	--help	1786	pgrep from procps-ng 4.0.2
+phonon	absent		0	
+photorec	present	--help	405	PhotoRec 7.1, Data Recovery Utility, July 2019
+php	absent		0	
+php-mysql	absent		0	
 piconv	present	--help	1276	Unknown option: version
 pidof	present	-h	533	
 pidwait	present	--help	1592	pidwait from procps-ng 4.0.2
 pinentry	present	--help	1081	pinentry-curses (pinentry) 1.2.1
 pinentry-curses	present	--help	1081	pinentry-curses (pinentry) 1.2.1
 pinfo	present	--help	2702	plaso - pinfo version 20260512
+pinfo.py	present	--help	2717	plaso - pinfo version 20260512
 pinky	present	--help	1065	pinky (GNU coreutils) 9.1
 pip	present	--help	4639	pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)
 pip2.7	present	--help	2901	pip 19.2.3 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)
 pip3	present	--help	4640	pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)
 pip3.11	present	--help	4643	pip 26.1.2 from /opt/cyberlab-venv/lib/python3.11/site-packages/pip (python 3.11)
+pipal	absent		0	
 pivot_root	present	--help	188	pivot_root from util-linux 2.38.1
+pkg-config	present	--help	5357	1.8.1
+pkg-unpacker	absent		0	
 pkgconf	present	--help	5357	1.8.1
 pkill	present	--help	1719	pkill from procps-ng 4.0.2
 pl2pm	present		0	Can't open --version: No such file or directory at /usr/bin/pl2pm line 43.
+playbook	absent		0	
 pldd	present	--help	309	pldd (Debian GLIBC 2.36-9+deb12u14) 2.36
+pma-labs	absent		0	
 pmap	present	--help	890	pmap from procps-ng 4.0.2
 pod2html	present	--help	2048	Unknown option: version
 pod2man	present	--help	8667	Unknown option: version
 pod2text	present	--help	5309	Unknown option: version
 pod2usage	present	--help	1776	Unknown option: version
 podchecker	present	--help	550	Unknown option: version
+polarproxy	absent		0	
+polenum	absent		0	
 policy-rc.d	present		0	
+portex	absent		0	
+powershell	absent		0	
+powershell-core	absent		0	
+powersploit	absent		0	
 pr	present	--help	4162	pr (GNU coreutils) 9.1
 prefetch	present	--help	293	
 printenv	present	--help	734	printenv (GNU coreutils) 9.1
 printf	present	--help	1646	printf (GNU coreutils) 9.1
 prlimit	present	--help	1817	prlimit from util-linux 2.38.1
+procdot	absent		0	
+processdump	absent		0	
+procmonmcp	absent		0	
+procyon	absent		0	
+protos-sip	absent		0	
 prove	present	--help	3059	TAP::Harness v3.44 and Perl v5.36.0
+proxychains4	absent		0	
+proxytunnel	absent		0	
 ps	present	--help	164	ps from procps-ng 4.0.2
+psnotify	absent		0	
 psort	present	--help	9968	plaso - psort version 20260512
+psort.py	present	--help	10029	plaso - psort version 20260512
+pst-utils	absent		0	
 pstat	present	--help	496	The Sleuth Kit ver 4.11.1
+psteal.py	absent		0	
 ptar	present	--help	1639	/usr/bin/ptar version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
 ptardiff	present	--help	652	/usr/bin/ptardiff version [unknown] calling Getopt::Std::getopts (version 1.13 [paranoid]),
 ptargrep	present	--help	4453	Unknown option: version
+ptunnel	absent		0	
 ptx	present	--help	1831	ptx (GNU coreutils) 9.1
+pv	absent		0	
 pw-inspector	present	--help	1173	
 pwck	present	--help	440	pwck: unrecognized option '--version'
 pwconv	present	--help	157	pwconv: unrecognized option '--version'
 pwd	present	--help	722	pwd (GNU coreutils) 9.1
 pwdx	present	--help	166	pwdx from procps-ng 4.0.2
 pwhistory_helper	present		0	
+pwnat	absent		0	
+pwsh	absent		0	
 pwunconv	present	--help	159	pwunconv: unrecognized option '--version'
 py3clean	present	--help	411	py3clean 3.11.2-1+b1
 py3compile	present	--help	1381	py3compile 3.11.2-1+b1
 py3versions	present	--help	684	usage: py3versions [-v] [-h] [-d|--default] [-s|--supported] [-i|--installed] 
+pycdas	absent		0	
+pycdc	absent		0	
 pydoc	present	--help	1022	no Python documentation found for 'version'
 pydoc3	present	--help	1230	No Python documentation found for 'version'.
 pydoc3.11	present	--help	1230	No Python documentation found for 'version'.
+pyelftools	absent		0	
 pygettext3	present	--help	4592	pygettext.py (xgettext for Python) 1.5
 pygettext3.11	present	--help	4592	pygettext.py (xgettext for Python) 1.5
 pygmentize	present	--help	4048	Pygments version 2.20.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.
+pyinstaller-extractor	absent		0	
+pyinstxtractor-ng	absent		0	
+pyinstxtractor.py	absent		0	
+pylingual	absent		0	
 python	present	--help	2515	Python 3.11.2
 python2	present	--help	2913	Python 2.7.18
 python2.7	present	--help	2915	Python 2.7.18
@@ -1520,27 +1240,62 @@ python3	present	--help	2516	Python 3.11.2
 python3-config	present	--help	147	
 python3.11	present	--help	2519	Python 3.11.2
 python3.11-config	present	--help	150	Usage: /usr/bin/python3.11-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed
+pyxswf	present	--help	2224	pyxswf 0.54 - http://decalage.info/python/oletools
+qemu	absent		0	
+qemu-utils	absent		0	
+qiling	absent		0	
+qpdf	absent		0	
+qsslcaudit	absent		0	
+r2	present	-h	2598	6.1.9-124  r2
 r2agent	present	--help	498	r2agent 6.1.9 +1 abi:124 @ linux-x86_64
+r2ai	absent		0	
 r2p	present		0	
+r2pipe	absent		0	
 r2pm	present	--help	1518	r2pm 6.1.9 +1 abi:124 @ linux-x86_64
 r2r	present	--help	123	r2r 6.1.9 +1 abi:124 @ linux-x86_64
 r2sdb	present	-h	712	sdb 2.4.8
+rabin2	present	--help	3071	rabin2 6.1.9 +1 abi:124 @ linux-x86_64
 radare2	present	-h	2598	6.1.9-124  r2
+radiff2	present	-h	1963	radiff2 6.1.9 +1 abi:124 @ linux-x86_64
+rafind2	present	--help	122	rafind2 6.1.9 +1 abi:124 @ linux-x86_64
 rafs2	present	--help	914	rafs2 6.1.9 +1 abi:124 @ linux-x86_64
 ragg2	present	-h	1927	ragg2 6.1.9 +1 abi:124 @ linux-x86_64
+rahash2	present	--help	1382	rahash2 6.1.9 +1 abi:124 @ linux-x86_64
+rainbowcrack	absent		0	
 randpkt	present	--help	1166	randpkt: unrecognized option: version
 ranlib	present	--help	816	GNU ranlib (GNU Binutils for Debian) 2.40
 rapatch2	present	-h	248	rapatch2 6.1.9 +1 abi:124 @ linux-x86_64
+rar	absent		0	
+rar2john	absent		0	
+rarcrack	absent		0	
 rarun2	present	-h	962	rarun2 6.1.9 +1 abi:124 @ linux-x86_64
 rasign2	present	--help	882	rasign2 6.1.9 +1 abi:124 @ linux-x86_64
+rasm2	present	--help	1757	rasm2 6.1.9 +1 abi:124 @ linux-x86_64
+rat-king-parser	absent		0	
 ravc2	present	-h	739	ravc2 6.1.9 +1 abi:124 @ linux-x86_64
 rawshark	present	--help	1827	Rawshark (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+rax2	present	--help	2927	rax2 6.1.9 +1 abi:124 @ linux-x86_64
 rbash	present	--help	768	GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)
+rcracki-mt	absent		0	
 rdma	present	--help	237	rdma utility, iproute2-6.1.0
+re-search.py	absent		0	
 readelf	present	--help	4681	GNU readelf (GNU Binutils for Debian) 2.40
+readelf.py	present	--help	1637	readelf.py: based on pyelftools 0.33
 readlink	present	--help	1353	readlink (GNU coreutils) 9.1
+readpe	absent		0	
 readprofile	present	--help	900	readprofile from util-linux 2.38.1
 realpath	present	--help	1045	realpath (GNU coreutils) 9.1
+rebind	absent		0	
+recaf	absent		0	
+recon-ng	absent		0	
+recoverdm	absent		0	
+recoverjpeg	absent		0	
+recstudio	absent		0	
+redis	absent		0	
+redress	absent		0	
+redsocks	absent		0	
+reg_export	absent		0	
+regcool	absent		0	
 regfexport	present	--help	762	
 regfinfo	present	--help	717	
 regfmount	present	--help	861	
@@ -1551,16 +1306,33 @@ regipy-plugins-list	present	help	124
 regipy-plugins-run	present	--help	1034	
 regipy-process-transaction-logs	present	--help	188	
 registry-diff	absent		0	
+reglookup	absent		0	
 regripper	present	--help	1417	Unknown option: -version
+regshot	absent		0	
+remnux-installer	absent		0	
+remnux-mcp-server	absent		0	
 remove-shell	present	-h	151	
 rename.ul	present	--help	540	rename.ul from util-linux 2.38.1
 renice	present	--help	555	renice from util-linux 2.38.1
+reordercap	present	--help	397	Reordercap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+rephrase	absent		0	
 reset	present	--help	562	ncurses 6.4.20221231
 resize2fs	present	--help	177	resize2fs 1.47.0 (5-Feb-2023)
 resizepart	present	--help	226	resizepart from util-linux 2.38.1
+resourcehacker	absent		0	
+responder	absent		0	
+restrict-egress	absent		0	
 rev	present	--help	167	rev from util-linux 2.38.1
 rgrep	present	--help	4041	grep (GNU grep) 3.8
+rhino-debugger	absent		0	
 rich-click	present	--help	5138	rich-click, version 1.9.8
+rifiuti	absent		0	
+rifiuti2	absent		0	
+rip	absent		0	
+rip.pl	present	--help	1417	Unknown option: -version
+rizin	absent		0	
+rizin-cutter	absent		0	
+rkhunter	absent		0	
 rm	present	--help	2013	rm (GNU coreutils) 9.1
 rmdir	present	--help	731	rmdir (GNU coreutils) 9.1
 rmt	present	--help	498	rmt (GNU tar) 1.34
@@ -1568,66 +1340,161 @@ rmt-tar	present	--help	502	rmt (GNU tar) 1.34
 roman	present	--help	270	
 routel	present	help	3782	option --version not recognized
 rpcgen	present	--help	1377	rpcgen (rpcsvc-proto) 1.4.3
+rsakeyfind	present	(no args)	221	
+rsakeyfinder	absent		0	
+rsmangler	absent		0	
 rtacct	present		0	rtacct utility, iproute2-6.1.0
 rtcwake	present	--help	896	rtcwake from util-linux 2.38.1
-rtmon	present	help	203	Argument "--version" is unknown, try "rtmon help".
+rtfdump.py	absent		0	
+rtfobj	present	--help	1244	rtfobj 0.60.1 on Python 3.11.2 - http://decalage.info/python/oletools
+rtmon	present	help	203	"Argument ""--version"" is unknown, try ""rtmon help""."
+rtpbreak	absent		0	
+rtpflood	absent		0	
+rtpinsertsound	absent		0	
+rtpmixsound	absent		0	
 rtstat	present	--help	672	rtstat Version 6.1.0
 run-parts	present	--help	1119	Debian run-parts program, version 5.7
 runcon	present	--help	880	runcon (GNU coreutils) 9.1
+rundotnetdll	absent		0	
+runsc	absent		0	
 runuser	present	--help	1256	runuser from util-linux 2.38.1
+runxlrd2.py	present		0	
+rva2ofs	absent		0	
 rview	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+rz-bin	absent		0	
+rz-find	absent		0	
+rz-ghidra	absent		0	
+safecopy	absent		0	
+samdump2	absent		0	
+sandfly-processdecloak	absent		0	
 savelog	present	--help	953	Rotated `version' at Wed Jul 29 08:22:16 AM UTC 2026.
+sbd	absent		0	
 scalar	present	--help	168	git version 2.39.5
+scalpel	present	-h	1993	Scalpel version 1.60
 sccainfo	present	--help	293	
+scdbg	absent		0	
+scite	absent		0	
+sclauncher	absent		0	
+sclauncher64	absent		0	
 script	present	--help	1107	script from util-linux 2.38.1
 scriptlive	present	--help	642	scriptlive from util-linux 2.38.1
 scriptreplay	present	--help	918	scriptreplay from util-linux 2.38.1
+scrounge-ntfs	absent		0	
+sctpscan	absent		0	
 sdiff	present	--help	1831	sdiff (GNU diffutils) 3.8
+seclists	absent		0	
+security-onion-console	absent		0	
 sed	present	--help	1837	sed (GNU sed) 4.9
 select-editor	present		0	
 sensible-browser	present		0	
 sensible-editor	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
 sensible-pager	present	--help	13066	version: No such file or directory
+sensoroni	absent		0	
 seq	present	--help	1463	seq (GNU coreutils) 9.1
 service	present		0	service ver. 1.65.2+deb12u1
+set	present		0	
 setarch	present	--help	1093	setarch from util-linux 2.38.1
 setcap	present	--help	613	
 setpriv	present	--help	1502	setpriv from util-linux 2.38.1
+sets.py	absent		0	
 setsid	present	--help	347	setsid from util-linux 2.38.1
 setterm	present	--help	2371	setterm from util-linux 2.38.1
+sfextract	absent		0	
+sftp	absent		0	
+sfuzz	absent		0	
 sg	present		0	sg: group 'version' does not exist
 sh	present		0	sh: 0: cannot open version: No such file
 sha1sum	present	--help	1600	sha1sum (GNU coreutils) 9.1
 sha224sum	present	--help	1600	sha224sum (GNU coreutils) 9.1
+sha256deep	absent		0	
 sha256sum	present	--help	1602	sha256sum (GNU coreutils) 9.1
 sha384sum	present	--help	1602	sha384sum (GNU coreutils) 9.1
 sha512sum	present	--help	1602	sha512sum (GNU coreutils) 9.1
 shadowconfig	present		0	
 sharkd	present	--help	723	
 shasum	present	--help	1911	6.02
+shcode2exe	absent		0	
+shellcode2exe.bat	absent		0	
+shellcode_launcher	absent		0	
+shellnoob	absent		0	
+shellter	absent		0	
 shred	present	--help	1971	shred (GNU coreutils) 9.1
 shuf	present	--help	1036	shuf (GNU coreutils) 9.1
+sidguesser	absent		0	
+siege	absent		0	
 sigfind	present	--help	393	The Sleuth Kit ver 4.11.1
+signsrch	absent		0	
+sigtool	present	--help	4407	ClamAV 1.4.3
+silversearcher-ag	absent		0	
+siparmyknife	absent		0	
+sipcrack	absent		0	
+sipp	absent		0	
+sipsak	absent		0	
+sipvicious	absent		0	
 size	present	--help	1055	GNU size (GNU Binutils for Debian) 2.40
 skill	present	--help	1432	skill from procps-ng 4.0.2
+skipfish	absent		0	
 slabtop	present	--help	681	slabtop from procps-ng 4.0.2
 sleep	present	--help	601	sleep (GNU coreutils) 9.1
+sleuth-kit	absent		0	
+slowhttptest	absent		0	
+smbmap	absent		0	
+smtp-user-enum	absent		0	
 smtpd.py	present	--help	892	Python SMTP proxy version 0.2
 snice	present	--help	1400	snice from procps-ng 4.0.2
+sniffjoke	absent		0	
+snmpcheck	absent		0	
+so-apt-cacher-ng	absent		0	
+so-firewall	absent		0	
+so-idstools	absent		0	
+socat	absent		0	
 sort	present	--help	4082	sort (GNU coreutils) 9.1
+sortcanon.py	absent		0	
 sorter	present	--help	1491	Unknown option: --version
+speakeasy	absent		0	
+spidermonkey	absent		0	
+spike	absent		0	
 splain	present	--help	618	/usr/bin/splain version 1.39 calling Getopt::Std::getopts (version 1.13 [paranoid]),
 split	present	--help	2325	split (GNU coreutils) 9.1
+sqldict	absent		0	
+sqlite	absent		0	
+sqlite3	absent		0	
+sqlitebrowser	absent		0	
+sqlmap	absent		0	
+sqlninja	absent		0	
+sqlsus	absent		0	
 srch_strings	present	--help	779	'version': No such file
 ss	present	--help	3143	ss utility, iproute2-6.1.0
+ssdeep	present	-h	915	2.14.1
+ssh	absent		0	
+sshpass	absent		0	
+ssldump	absent		0	
+sslh	absent		0	
+sslscan	absent		0	
+sslsniff	absent		0	
+sslsplit	absent		0	
+sslyze	absent		0	
+ssview	absent		0	
 start-stop-daemon	present	--help	3162	start-stop-daemon 1.21.23 for Debian
 stat	present	--help	3862	stat (GNU coreutils) 9.1
+statsprocessor	absent		0	
 stdbuf	present	--help	1409	stdbuf (GNU coreutils) 9.1
+steghide	absent		0	
+stegosuite	absent		0	
+stegsnow	absent		0	
+stenographer	absent		0	
+stpyv8	absent		0	
+strace	absent		0	
+strdeob.pl	absent		0	
 streamzip	present	--help	1503	1.002
+strelka	absent		0	
 strings	present	--help	1577	GNU strings (GNU Binutils for Debian) 2.40
+strings.py	absent		0	
 strip	present	--help	2471	GNU strip (GNU Binutils for Debian) 2.40
 stty	present	--help	7998	stty (GNU coreutils) 9.1
+stunnel4	absent		0	
 su	present	--help	1064	su from util-linux 2.38.1
+sucrack	absent		0	
 sudo	present	--help	3210	
 sudo_logsrvd	present	--help	383	sudo_logsrvd version 1.9.13p3
 sudo_sendlog	present	--help	818	sudo_sendlog version 1.9.13p3
@@ -1635,12 +1502,19 @@ sudoedit	present	--help	1704
 sudoreplay	present	--help	802	sudoreplay version 1.9.13p3
 sulogin	present	--help	393	sulogin from util-linux 2.38.1
 sum	present	--help	560	sum (GNU coreutils) 9.1
+suricata	absent		0	
+suricatasc	absent		0	
+swaks	absent		0	
 swaplabel	present	--help	294	swaplabel from util-linux 2.38.1
 swapoff	present	--help	633	swapoff from util-linux 2.38.1
 swapon	present	--help	1877	swapon from util-linux 2.38.1
+swig	absent		0	
 switch_root	present	--help	240	switch_root from util-linux 2.38.1
 sync	present	--help	602	sync (GNU coreutils) 9.1
 sysctl	present	--help	1108	sysctl from procps-ng 4.0.2
+sysinternals	absent		0	
+systeminformer	absent		0	
+t50	absent		0	
 tabs	present	--help	670	ncurses 6.4.20221231
 tabulate	present	--help	971	option --version not recognized
 tac	present	--help	732	tac (GNU coreutils) 9.1
@@ -1648,48 +1522,106 @@ tail	present	--help	2776	tail (GNU coreutils) 9.1
 tar	present	--help	16662	tar (GNU tar) 1.34
 tarcat	present	--help	1107	cat (GNU coreutils) 9.1
 taskset	present	--help	795	taskset from util-linux 2.38.1
-tc	present	-h	401	Option "--version" is unknown, try "tc -help".
+tc	present	-h	401	"Option ""--version"" is unknown, try ""tc -help""."
+tcl	absent		0	
+tcpdump	absent		0	
+tcpflow	present	--help	2597	TCPFLOW 1.6.1
+tcpick	absent		0	
+tcpreplay	absent		0	
+tcpslice	absent		0	
+tcpstat	absent		0	
+tcptrace	absent		0	
+tcptrack	absent		0	
+tcpxtract	present	--help	488	tcpxtract v1.0.1
 tee	present	--help	1169	tee (GNU coreutils) 9.1
+telegraf	absent		0	
 tempfile	present	--help	508	
+termineter	absent		0	
+tesseract	absent		0	
+tesseract-ocr	absent		0	
 test	present		0	
+testdisk	present	--help	1154	TestDisk 7.1, Data Recovery Utility, July 2019
 text2pcap	present	--help	6450	Text2pcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).
+texteditor.py	absent		0	
+thc-ipv6	absent		0	
+thc-pptp-bruter	absent		0	
+thc-ssl-dos	absent		0	
+thefuzz	absent		0	
+theharvester	absent		0	
+thehive	absent		0	
+thug	absent		0	
 tic	present	--help	1737	ncurses 6.4.20221231
+time-decode	absent		0	
 timeout	present	--help	2057	timeout (GNU coreutils) 9.1
 tipc	present		0	tipc: unrecognized option '--version'
 tload	present	--help	249	tload from procps-ng 4.0.2
+tlssled	absent		0	
+tnscmd10g	absent		0	
 toe	present		0	ncurses 6.4.20221231
+tofrodos	absent		0	
 top	present	--help	1336	top from procps-ng 4.0.2
+tor	absent		0	
 touch	present	--help	1579	touch (GNU coreutils) 9.1
 tput	present	--help	433	ncurses 6.4.20221231
 tqdm	present	--help	6818	4.68.3
 tr	present	--help	2575	tr (GNU coreutils) 9.1
+translate.py	absent		0	
+transmission	absent		0	
+trid	absent		0	
+tridupdate	absent		0	
 true	present	--help	599	true (GNU coreutils) 9.1
+truecrack	absent		0	
 truncate	present	--help	1325	truncate (GNU coreutils) 9.1
 tset	present	--help	560	ncurses 6.4.20221231
+tshark	present	--help	9294	
 tsk_comparedir	present	--help	763	The Sleuth Kit ver 4.11.1
+tsk_gettimes	present	--help	551	The Sleuth Kit ver 4.11.1
 tsk_imageinfo	present	--help	318	The Sleuth Kit ver 4.11.1
 tsk_loaddb	present	--help	697	The Sleuth Kit ver 4.11.1
+tsk_recover	present	--help	920	The Sleuth Kit ver 4.11.1
 tsort	present	--help	458	tsort (GNU coreutils) 9.1
+ttd	absent		0	
 tty	present	--help	453	tty (GNU coreutils) 9.1
 tune2fs	present	--help	483	
+twofi	absent		0	
 tzselect	present	--help	704	tzselect (Debian GLIBC 2.36-9+deb12u14) 2.36
 ucf	present	--help	1854	ucf: unrecognized option '--version'
 ucfq	present	--help	417	Unknown option: version
 ucfr	present	--help	912	ucfr: unrecognized option '--version'
 uclampset	present	--help	706	uclampset from util-linux 2.38.1
+udptunnel	absent		0	
+ugrep	absent		0	
 umount	present	--help	1306	umount from util-linux 2.38.1 (libmount 2.38.1: selinux, smack, btrfs, verity, namespaces, assert, debug)
 unafs	present		0	
 uname	present	--help	988	uname (GNU coreutils) 9.1
 uncompress	present	--help	1063	gunzip (gzip) 1.12
+uncompyle6	absent		0	
+undbx	absent		0	
 unexpand	present	--help	1184	unexpand (GNU coreutils) 9.1
+unfurl	absent		0	
+unhide	absent		0	
+unicode	absent		0	
+unicornscan	absent		0	
+uniextract2	absent		0	
 uniq	present	--help	1744	uniq (GNU coreutils) 9.1
 unique	present		0	
+uniscan	absent		0	
+unity-control-center	absent		0	
+unix-privesc-check	absent		0	
+unix2dos	absent		0	
+unix2mac	absent		0	
 unix_chkpwd	present		0	
 unix_update	present		0	
 unlink	present	--help	398	unlink (GNU coreutils) 9.1
 unlzma	present	--help	1433	xz (XZ Utils) 5.4.1
+unpyc3	absent		0	
+unrar	absent		0	
+unrar-free	absent		0	
+unshadow	present		0	
 unshare	present	--help	2236	unshare from util-linux 2.38.1
+unxor	absent		0	
 unxz	present	--help	1431	xz (XZ Utils) 5.4.1
+unzip	present	--help	1509	UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
 unzipsfx	present	--help	141	UnZipSFX 6.00 of 20 April 2009, by Info-ZIP (http://www.info-zip.org).
 update-alternatives	present	--help	2335	Debian update-alternatives version 1.21.23.
 update-ca-certificates	present	(no args)	124	
@@ -1700,6 +1632,8 @@ update-passwd	present	--help	1013	update-passwd 3.6.1
 update-rc.d	present	--help	277	
 update-shells	present	--help	180	unrecognized option --version
 uptime	present	--help	240	uptime from procps-ng 4.0.2
+upx	present	--help	5655	upx 4.2.4
+urlcrazy	absent		0	
 useradd	present	--help	2252	useradd: unrecognized option '--version'
 userdel	present	--help	612	userdel: unrecognized option '--version'
 usermod	present	--help	2098	usermod: unrecognized option '--version'
@@ -1707,35 +1641,84 @@ users	present	--help	465	users (GNU coreutils) 9.1
 usnjls	present	--help	559	The Sleuth Kit ver 4.11.1
 utmpdump	present	--help	386	utmpdump from util-linux 2.38.1
 validlocale	present		0	locale '--version' not available
+vb-decompiler-lite	absent		0	
+vbdec	absent		0	
+vbindiff	absent		0	
+vcbuildtools	absent		0	
+vcredist-all	absent		0	
+vdbbin	present	--help	1025	
 vdir	present	--help	7735	vdir (GNU coreutils) 9.1
 vdpa	present	--help	158	vdpa: unrecognized option '--version'
+veil	absent		0	
 vi	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
 view	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
 vigr	present	--help	367	vigr: unrecognized option '--version'
 vim.tiny	present	--help	1995	VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Feb 16 2025 05:23:41)
+vinetto	absent		0	
 vipw	present	--help	367	vipw: unrecognized option '--version'
+virtuoso-minimal	absent		0	
+virustotal-search	absent		0	
+virustotal-search.py	absent		0	
+virustotal-submit	absent		0	
+virustotal-submit.py	absent		0	
+visual-studio-code	absent		0	
 visudo	present	--help	481	visudo version 1.9.13p3
+vivbin	present	--help	1851	
+vivisect	absent		0	
 vivserver	present	--help	300	/data/version is not a valid directory!
 vmstat	present	--help	722	vmstat from procps-ng 4.0.2
+voiphopper	absent		0	
 vol	present	--help	26683	INFO     volatility3.cli: Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
+volatility-framework	absent		0	
 volatility3	present	--help	26790	INFO     volatility3.cli: Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
 volshell	present	--help	3215	INFO     root        : Volatility plugins path: ['/opt/venv/lib/python3.11/site-packages/volatility3/plugins', '/opt/venv/lib/python3.11/site-packages/volatility3/framework/plugins']
+vscode	absent		0	
+vscode.extension.jupyter	absent		0	
+vscode.extension.python	absent		0	
 vshadowdebug	present	--help	359	
 vshadowinfo	present	--help	434	
 vshadowmount	present	--help	640	
 w	present	--help	449	w from procps-ng 4.0.2
+wafw00f	absent		0	
 wall	present	--help	369	wall from util-linux 2.38.1
+wapiti	absent		0	
 watch	present	--help	887	watch from procps-ng 4.0.2
 watchgnupg	present	--help	798	watchgnupg (GnuPG) 2.2.40
+watobo	absent		0	
+wazuh	absent		0	
 wc	present	--help	1212	wc (GNU coreutils) 9.1
+wce	absent		0	
 wdctl	present	--help	1101	wdctl from util-linux 2.38.1
+webacoo	absent		0	
+webcrack	absent		0	
+webscarab	absent		0	
+webshells	absent		0	
+weevely	absent		0	
+wfuzz	absent		0	
+wget	present	--help	13243	GNU Wget 1.21.3 built on linux-gnu.
+whatweb	absent		0	
 wheel	present	--help	570	usage: wheel [-h] {unpack,pack,convert,tags,info,version,help} ...
 whereis	present	--help	594	whereis from util-linux 2.38.1
 which	present		0	
 which.debianutils	present		0	
 who	present	--help	1541	who (GNU coreutils) 9.1
 whoami	present	--help	412	whoami (GNU coreutils) 9.1
+wifi-honey	absent		0	
+winbind	absent		0	
+windbg	absent		0	
+windows-terminal	absent		0	
+wine	absent		0	
+winregfs	absent		0	
 wipefs	present	--help	1208	wipefs from util-linux 2.38.1
+wordlists	absent		0	
+wpscan	absent		0	
+wxhexeditor	absent		0	
+x64dbg	absent		0	
+x64dbg-automate-mcp	absent		0	
+x64dbg.plugin.dbgchild	absent		0	
+x64dbg.plugin.ollydumpex	absent		0	
+x64dbg.plugin.scyllahide	absent		0	
+x64dbg.plugin.x64dbgpy	absent		0	
 x86_64	present	--help	1019	x86_64 from util-linux 2.38.1
 x86_64-linux-gnu-addr2line	present	--help	1313	GNU addr2line (GNU Binutils for Debian) 2.40
 x86_64-linux-gnu-ar	present	--help	2229	GNU ar (GNU Binutils for Debian) 2.40
@@ -1787,7 +1770,21 @@ x86_64-linux-gnu-size	present	--help	1089	GNU size (GNU Binutils for Debian) 2.4
 x86_64-linux-gnu-strings	present	--help	1611	GNU strings (GNU Binutils for Debian) 2.40
 x86_64-linux-gnu-strip	present	--help	2505	GNU strip (GNU Binutils for Debian) 2.40
 xargs	present	--help	3120	xargs (GNU findutils) 4.9.0
+xdot	absent		0	
+xfsprogs	absent		0	
+xlmdeobfuscator	present	--help	3820	
+xlmmacrodeobfuscator	absent		0	
+xmldump.py	absent		0	
+xmount	absent		0	
+xor-kpa.py	absent		0	
+xorbruteforcer.py	absent		0	
+xorsearch	absent		0	
+xorsearch.py	absent		0	
+xorstrings	absent		0	
+xortool	present	--help	1670	1.1.0
 xortool-xor	present	--help	481	error: option --version not recognized
+xplico	absent		0	
+xsser	absent		0	
 xsubpp	present	--help	205	Unknown option: version
 xxd	present	--help	1344	
 xz	present	--help	1429	xz (XZ Utils) 5.4.1
@@ -1799,19 +1796,34 @@ xzfgrep	present	--help	231	xzfgrep (XZ Utils) 5.4.1
 xzgrep	present	--help	227	xzgrep (XZ Utils) 5.4.1
 xzless	present	--help	184	xzless (XZ Utils) 5.4.1
 xzmore	present	--help	147	xzmore (XZ Utils) 5.4.1
+yara	present	--help	2552	4.2.3
+yara-forge-rules	absent		0	
+yara-rules	absent		0	
+yara-x	absent		0	
+yarac	present	--help	613	4.2.3
+yersinia	absent		0	
 yes	present	--help	401	yes (GNU coreutils) 9.1
 ypdomainname	present	--help	1487	hostname 3.23
+zaproxy	absent		0	
+zbarimg	absent		0	
 zcat	present	--help	707	zcat (gzip) 1.12
 zcmp	present	--help	375	zcmp (gzip) 1.12
 zdiff	present	--help	314	zdiff (gzip) 1.12
 zdump	present	--help	471	zdump (Debian GLIBC 2.36-9+deb12u14) 2.36
+zeek	absent		0	
+zeek-cut	absent		0	
 zegrep	present	--help	453	zgrep (gzip) 1.12
+zenity	absent		0	
+zenmap	absent		0	
 zfgrep	present	--help	453	zgrep (gzip) 1.12
 zforce	present	--help	157	zforce (gzip) 1.12
 zgrep	present	--help	453	zgrep (gzip) 1.12
 zic	present	--help	254	zic (Debian GLIBC 2.36-9+deb12u14) 2.36
+zip	absent		0	
+zip2john	absent		0	
 zipdetails	present	--help	685	2.104
 zipdump	present	--help	2830	zipdump.py 0.0.35
+zipdump.py	absent		0	
 zipgrep	present	--help	131	
 zipinfo	present	--help	1035	ZipInfo 3.00 of 20 April 2009, by Greg Roelofs and the Info-ZIP group.
 zless	present	--help	195	zless (gzip) 1.12

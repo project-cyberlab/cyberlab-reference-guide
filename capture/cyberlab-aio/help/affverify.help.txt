@@ -1,0 +1,14 @@
+# command: affverify
+# version: affverify version 3.7.20
+# captured-via: --help
+# image: cyberlab-aio:v2
+#---
+affverify: invalid option -- '-'
+affverify version 3.7.20
+usage: affverify [options] filename.aff
+Verifies the digital signatures on a file
+options:
+    -a      --- print all segments
+    -V      --- Just print the version number and exit.
+    -v      --- verbose
+  SHA256 is operational

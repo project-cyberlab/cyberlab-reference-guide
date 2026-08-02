@@ -1,0 +1,11 @@
+# command: affconvert
+# version: affconvert version 3.7.20
+# captured-via: --help
+# image: cyberlab-aio:v2
+#---
+affconvert: invalid option -- '-'
+affconvert version 3.7.20
+
+usage:   affconvert [options] file1 [... files] 
+
+Please, see more info in manpage.

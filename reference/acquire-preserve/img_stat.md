@@ -38,4 +38,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`ntfs-3g`](../acquire-preserve/ntfs-3g.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md), [`bdeinfo`](../acquire-preserve/bdeinfo.md), [`mmls`](../examine-the-filesystem/mmls.md), [`fsstat`](../examine-the-filesystem/fsstat.md), [`testdisk`](../examine-the-filesystem/testdisk.md)
+[`ewfinfo`](../acquire-preserve/ewfinfo.md), [`ewfmount`](../acquire-preserve/ewfmount.md), [`ewfverify`](../acquire-preserve/ewfverify.md), [`ewfexport`](../acquire-preserve/ewfexport.md), [`affinfo`](../acquire-preserve/affinfo.md), [`affcat`](../acquire-preserve/affcat.md), [`ntfs-3g`](../acquire-preserve/ntfs-3g.md), [`vshadowinfo`](../acquire-preserve/vshadowinfo.md)
