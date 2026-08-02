@@ -111,15 +111,36 @@ Requirements:
 
 ### Where screenshots may come from
 
-Ours first, always. A capture from the kit's own build needs no vetting: the
-version is known, the theme and OS are ours, there is no watermark, no licence
-question and no third party's private data in the frame. One reboot captures
-the whole FLARE toolset, which is cheaper than assessing a single borrowed
-image.
+The test is **which image teaches more**, not which one we produced.
 
-A screenshot from a reputable external source is acceptable **only** for a tool
-we cannot run ourselves — a GUI on a VM with no desktop session, or a web
-console — and only after it passes every one of these:
+A capture of our own build has real advantages: known version, no licence
+question, no watermark, no third party's data in frame. But an automated
+capture launches a tool and photographs it *at rest*, and a screenshot of an
+empty window documents a layout and nothing else. It is functionally devoid of
+context about what the tool does.
+
+A vendor's screenshot usually carries far more: a populated symbol tree, a
+decompiled function, a parsed structure with the interesting field highlighted.
+Vendors invest in those images being representative because they are how the
+product is sold, and that investment is worth using rather than duplicating
+badly.
+
+So:
+
+1. **Prefer our own capture when it shows the tool working.** Launching against
+   a sample achieves this — `die` captured against a real PE shows format,
+   architecture, compiler, linker and the signature chain, which is the page's
+   whole point. Do that before reaching elsewhere.
+2. **Use a vendor or project screenshot when it carries analytical context ours
+   cannot** — a large application mid-analysis, a view that needs a real case
+   loaded, a tool we cannot drive headlessly at all.
+3. **Never use a marketing composite**, a screenshot of a different product, or
+   one whose version is unstated.
+
+Either way the image is illustration. Evidence is the control tree, and item 6
+of §1 can only be satisfied by a dump from the running application.
+
+An external screenshot must pass every one of these:
 
 1. the version shown matches the version in the kit, or the difference is stated
 2. the source is the vendor, the project's own documentation, or its repository
