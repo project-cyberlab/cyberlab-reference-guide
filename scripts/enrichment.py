@@ -649,8 +649,19 @@ ENRICHMENT: dict[str, dict] = {
     },
 
     "pdfid": {
-        "purpose": "Triage a PDF by counting the structural keywords that indicate "
-                   "active content.",
+        "purpose": "Count the PDF tags that make a document *do* something, "
+                   "and print the tally. A PDF is a set of objects, and a "
+                   "handful of tag names are the ones that can execute or "
+                   "fetch: `/JavaScript` and `/JS` carry script, `/OpenAction` "
+                   "and `/AA` run something when the file opens or on an "
+                   "event, `/Launch` starts an external program, "
+                   "`/EmbeddedFile` carries another file inside this one, and "
+                   "`/URI` reaches the network. A normal invoice has none of "
+                   "them. Output is one line per tag with a count, so the "
+                   "judgement is simply: are any non-zero, and does this "
+                   "document have any business containing them? It parses "
+                   "nothing and decodes nothing -- it is the ten-second look "
+                   "that tells you whether to spend an hour with pdf-parser.",
         "when": {
             "-s": "Scan a directory of PDFs rather than a single file.",
             "-a": "Display all keyword counts, including zero entries.",

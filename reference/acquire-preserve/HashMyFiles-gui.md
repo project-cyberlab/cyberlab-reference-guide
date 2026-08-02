@@ -1,18 +1,17 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # HashMyFiles (GUI)
 
-**Capability:** acquire preserve  **Window title:** HashMyFiles
-**Captured:** `C:\Tools\HashMyFiles\HashMyFiles.exe` on 2026-08-02 — control tree in [`capture/gui/HashMyFiles/HashMyFiles.tree.txt`](../../capture/gui/HashMyFiles/HashMyFiles.tree.txt)
+| | |
+|---|---|
+| **Capability** | acquire preserve |
+| **Window title** | HashMyFiles |
+| **Captured from** | `C:\Tools\HashMyFiles\HashMyFiles.exe` on 2026-08-02 — control tree in [`capture/gui/HashMyFiles/HashMyFiles.tree.txt`](../../capture/gui/HashMyFiles/HashMyFiles.tree.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Hash a set of files — MD5, SHA-1, SHA-256 and CRC32 — and show them in one sortable list. Sorting by hash collapses duplicates across directories instantly, which is what makes it a triage tool rather than a hashing utility.
-
-## Window
-
-![HashMyFiles main window](../../capture/gui/HashMyFiles/HashMyFiles.png)
 
 ## Controls
 

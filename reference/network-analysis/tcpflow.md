@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # tcpflow
 
-**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Read and filter packet captures; Extract files and payloads from traffic  **Version:** TCPFLOW 1.6.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/tcpflow.help.txt)  **Docs:** <https://downloads.digitalcorpora.org/downloads/tcpflow/>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · SIFT Workstation |
+| **Capability** | Read and filter packet captures; Extract files and payloads from traffic |
+| **Version** | TCPFLOW 1.6.1 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/tcpflow.help.txt) |
+| **Documentation** | <https://downloads.digitalcorpora.org/downloads/tcpflow/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

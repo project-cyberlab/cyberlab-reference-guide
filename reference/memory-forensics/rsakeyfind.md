@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # rsakeyfind
 
-**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Recover encryption keys from memory
-**Captured:** `cyberlab-aio` via `(no args)` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/rsakeyfind.help.txt)  **Docs:** <https://citp.princeton.edu/our-work/memory/>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · SIFT Workstation |
+| **Capability** | Recover encryption keys from memory |
+| **Captured from** | `cyberlab-aio` via `(no args)` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/rsakeyfind.help.txt) |
+| **Documentation** | <https://citp.princeton.edu/our-work/memory/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

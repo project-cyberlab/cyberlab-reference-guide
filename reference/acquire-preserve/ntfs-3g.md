@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # ntfs-3g
 
-**Kit:** SIFT Workstation  **Capability:** Inspect or mount a forensic image container  **Version:** ntfs-3g 2022.10.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/ntfs-3g.help.txt)
+| | |
+|---|---|
+| **Kit** | SIFT Workstation |
+| **Capability** | Inspect or mount a forensic image container |
+| **Version** | ntfs-3g 2022.10.3 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/ntfs-3g.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

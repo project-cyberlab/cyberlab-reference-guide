@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # rahash2
 
-**Kit:** REMnux  **Capability:** Verify evidence integrity with hashes  **Version:** rahash2 6.1.9
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/rahash2.help.txt)  **Docs:** <https://www.radare.org/n/radare2.html>
+| | |
+|---|---|
+| **Kit** | REMnux |
+| **Capability** | Verify evidence integrity with hashes |
+| **Version** | rahash2 6.1.9 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/rahash2.help.txt) |
+| **Documentation** | <https://www.radare.org/n/radare2.html> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

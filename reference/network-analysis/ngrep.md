@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # ngrep
 
-**Kit:** REMnux · SIFT Workstation  **Capability:** Read and filter packet captures  **Version:** V1.47.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/ngrep.help.txt)  **Docs:** <https://github.com/jpr5/ngrep/>
+| | |
+|---|---|
+| **Kit** | REMnux · SIFT Workstation |
+| **Capability** | Read and filter packet captures |
+| **Version** | V1.47.1 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/ngrep.help.txt) |
+| **Documentation** | <https://github.com/jpr5/ngrep/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

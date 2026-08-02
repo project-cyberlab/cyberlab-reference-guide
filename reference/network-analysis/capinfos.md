@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # capinfos
 
-**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Read and filter packet captures  **Version:** Capinfos (Wireshark) 4.0.17.
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/capinfos.help.txt)  **Docs:** <https://www.wireshark.org>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · FLARE-VM · SIFT Workstation |
+| **Capability** | Read and filter packet captures |
+| **Version** | Capinfos (Wireshark) 4.0.17. |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/capinfos.help.txt) |
+| **Documentation** | <https://www.wireshark.org> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

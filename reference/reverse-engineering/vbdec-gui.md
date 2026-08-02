@@ -1,18 +1,17 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # vbdec (GUI)
 
-**Capability:** reverse engineering  **Window title:** vbdec
-**Captured:** `C:\Tools\vbdec\vbdec.exe` on 2026-08-02 — control tree in [`capture/gui/vbdec/vbdec.tree.txt`](../../capture/gui/vbdec/vbdec.tree.txt)
+| | |
+|---|---|
+| **Capability** | reverse engineering |
+| **Window title** | vbdec |
+| **Captured from** | `C:\Tools\vbdec\vbdec.exe` on 2026-08-02 — control tree in [`capture/gui/vbdec/vbdec.tree.txt`](../../capture/gui/vbdec/vbdec.tree.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Decompile VB5 and VB6 binaries, recovering forms, controls and event handlers. Those names usually survive compilation and describe what the program was written to do.
-
-## Window
-
-![vbdec main window](../../capture/gui/vbdec/vbdec.png)
 
 ## Controls
 

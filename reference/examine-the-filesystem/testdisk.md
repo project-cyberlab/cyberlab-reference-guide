@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # testdisk
 
-**Kit:** SIFT Workstation  **Capability:** See the partition and volume layout; Recover deleted or lost files  **Version:** TestDisk 7.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/testdisk.help.txt)
+| | |
+|---|---|
+| **Kit** | SIFT Workstation |
+| **Capability** | See the partition and volume layout; Recover deleted or lost files |
+| **Version** | TestDisk 7.1 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/testdisk.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

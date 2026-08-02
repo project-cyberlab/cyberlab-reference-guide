@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # cyberchef
 
-**Kit:** REMnux · FLARE-VM · Security Onion  **Capability:** Decode, decrypt or transform encoded data
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/cyberchef.help.txt)  **Docs:** <https://github.com/gchq/CyberChef/>
+| | |
+|---|---|
+| **Kit** | REMnux · FLARE-VM · Security Onion |
+| **Capability** | Decode, decrypt or transform encoded data |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/cyberchef.help.txt) |
+| **Documentation** | <https://github.com/gchq/CyberChef/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

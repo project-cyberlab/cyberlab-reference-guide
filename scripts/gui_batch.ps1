@@ -15,6 +15,7 @@ $summary = Join-Path $out "_summary.txt"
 "# gui batch capture $(Get-Date -Format o)" | Out-File $summary -Encoding UTF8
 
 Add-Type -AssemblyName UIAutomationClient, UIAutomationTypes, System.Drawing
+. (Join-Path $PSScriptRoot "gui_capture.ps1")
 
 $targets = Get-Content "C:\gui-targets.txt" | Where-Object { $_.Trim() }
 $walker = [System.Windows.Automation.TreeWalker]::ControlViewWalker
@@ -97,16 +98,13 @@ foreach ($line in $targets) {
     $lines | Out-File $log -Append -Encoding UTF8
     "#--- nodes: $($lines.Count)" | Out-File $log -Append -Encoding UTF8
 
-    try {
-        $r = $win.Current.BoundingRectangle
-        if ($r.Width -gt 0 -and $r.Height -gt 0 -and $r.Width -lt 10000) {
-            $bmp = New-Object System.Drawing.Bitmap([int]$r.Width, [int]$r.Height)
-            $g = [System.Drawing.Graphics]::FromImage($bmp)
-            $g.CopyFromScreen([int]$r.X, [int]$r.Y, 0, 0, $bmp.Size)
-            $bmp.Save((Join-Path $out "$name.png"), [System.Drawing.Imaging.ImageFormat]::Png)
-            $g.Dispose(); $bmp.Dispose()
-        }
-    } catch { }
+    # PrintWindow, never CopyFromScreen. CopyFromScreen copies whatever pixels
+    # are on the desktop inside a rectangle -- so a window smaller than its own
+    # bounding box, or one that does not paint its background, publishes the
+    # operator's taskbar, wallpaper and notifications. That happened twice.
+    # PrintWindow asks the window to render itself into our bitmap; the desktop
+    # is never read, and occlusion does not matter.
+    Save-WindowImage -Win $win -Path (Join-Path $out "$name.png")
 
     "$name`tOK`t$($lines.Count)" | Out-File $summary -Append -Encoding UTF8
 

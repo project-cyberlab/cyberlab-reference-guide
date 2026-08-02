@@ -1,8 +1,11 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # esedbexport
 
-**Kit:** SIFT Workstation (libyal)  **Capability:** Parse ESE / SRUM / Amcache databases
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/esedbexport.help.txt)
+| | |
+|---|---|
+| **Kit** | SIFT Workstation (libyal) |
+| **Capability** | Parse ESE / SRUM / Amcache databases |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/esedbexport.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

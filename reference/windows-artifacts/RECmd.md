@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # RECmd
 
-**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse registry hives  **Version:** 2026.5.0
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/RECmd.help.txt)
+| | |
+|---|---|
+| **Kit** | FLARE-VM / SIFT (Eric Zimmerman tools) |
+| **Capability** | Parse registry hives |
+| **Version** | 2026.5.0 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/RECmd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

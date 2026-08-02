@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # bulk_extractor
 
-**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Carve files out of unstructured data; Search raw data for a pattern; Recover encryption keys from memory  **Version:** bulk_extractor 2.2.0
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/bulk_extractor.help.txt)  **Docs:** <https://github.com/simsong/bulk_extractor/>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · SIFT Workstation |
+| **Capability** | Carve files out of unstructured data; Search raw data for a pattern; Recover encryption keys from memory |
+| **Version** | bulk_extractor 2.2.0 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/bulk_extractor.help.txt) |
+| **Documentation** | <https://github.com/simsong/bulk_extractor/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # foremost
 
-**Kit:** Kali Linux · SIFT Workstation  **Capability:** Carve files out of unstructured data; Extract files and payloads from traffic  **Version:** 1.5.7
-**Captured:** `cyberlab-aio` via `-h` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/foremost.help.txt)
+| | |
+|---|---|
+| **Kit** | Kali Linux · SIFT Workstation |
+| **Capability** | Carve files out of unstructured data; Extract files and payloads from traffic |
+| **Version** | 1.5.7 |
+| **Captured from** | `cyberlab-aio` via `-h` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/foremost.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

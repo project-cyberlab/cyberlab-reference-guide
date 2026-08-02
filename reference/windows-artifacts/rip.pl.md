@@ -1,8 +1,11 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # rip.pl
 
-**Kit:** Kali Linux  **Capability:** Parse registry hives
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/rip.pl.help.txt)
+| | |
+|---|---|
+| **Kit** | Kali Linux |
+| **Capability** | Parse registry hives |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/rip.pl.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

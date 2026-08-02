@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # tshark
 
-**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Capture live network traffic; Read and filter packet captures
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/tshark.help.txt)  **Docs:** <https://www.wireshark.org>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · FLARE-VM · SIFT Workstation |
+| **Capability** | Capture live network traffic; Read and filter packet captures |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/tshark.help.txt) |
+| **Documentation** | <https://www.wireshark.org> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

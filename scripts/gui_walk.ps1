@@ -110,17 +110,13 @@ Walk $win 0
 $lines | Out-File $log -Append -Encoding UTF8
 "#--- nodes: $($lines.Count)" | Out-File $log -Append -Encoding UTF8
 
-# Screenshot of the window as it was enumerated.
-try {
-    $r = $win.Current.BoundingRectangle
-    if ($r.Width -gt 0 -and $r.Height -gt 0) {
-        $bmp = New-Object System.Drawing.Bitmap([int]$r.Width, [int]$r.Height)
-        $g = [System.Drawing.Graphics]::FromImage($bmp)
-        $g.CopyFromScreen([int]$r.X, [int]$r.Y, 0, 0, $bmp.Size)
-        $bmp.Save((Join-Path $out "$Name.png"), [System.Drawing.Imaging.ImageFormat]::Png)
-        $g.Dispose(); $bmp.Dispose()
-    }
-} catch { "# screenshot failed: $($_.Exception.Message)" | Out-File $log -Append -Encoding UTF8 }
+# Screenshot of the window as it was enumerated. PrintWindow, not a screen
+# copy -- see scripts/gui_capture.ps1 for why that distinction is not cosmetic.
+. (Join-Path $PSScriptRoot "gui_capture.ps1")
+if (-not (Save-WindowImage -Win $win -Path (Join-Path $out "$Name.png"))) {
+    "# screenshot not saved (blank or unrenderable window)" |
+        Out-File $log -Append -Encoding UTF8
+}
 
 Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
 Get-Process -Name $Name -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue

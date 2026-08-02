@@ -1,18 +1,18 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # VB-Decompiler (GUI)
 
-**Capability:** reverse engineering  **Window title:** VB Decompiler Lite v26.4  **Version:** v26.4
-**Captured:** `C:\Tools\VB Decompiler\VB Decompiler.exe` on 2026-08-02 — control tree in [`capture/gui/VB-Decompiler/VB-Decompiler.tree.txt`](../../capture/gui/VB-Decompiler/VB-Decompiler.tree.txt)
+| | |
+|---|---|
+| **Capability** | reverse engineering |
+| **Window title** | VB Decompiler Lite v26.4 |
+| **Version** | v26.4 |
+| **Captured from** | `C:\Tools\VB Decompiler\VB Decompiler.exe` on 2026-08-02 — control tree in [`capture/gui/VB-Decompiler/VB-Decompiler.tree.txt`](../../capture/gui/VB-Decompiler/VB-Decompiler.tree.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Recover source-level structure from Visual Basic executables. P-code binaries decompile close to the original; native-compiled ones yield disassembly with the VB runtime calls identified.
-
-## Window
-
-![VB-Decompiler main window](../../capture/gui/VB-Decompiler/VB-Decompiler.png)
 
 ## Controls
 

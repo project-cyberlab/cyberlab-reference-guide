@@ -80,3 +80,19 @@ read — quarantine, not output.
 
 That constraint is the whole design. An unvalidated model writing command
 guidance is the cyberlab failure reproduced at machine speed.
+
+## Round 2 (reading the 08:18 PDF)
+
+| # | Issue | Status | Notes |
+|---|---|---|---|
+| 33 | **PDFStreamDumper screenshot shows the taskbar again** | **done** | Second occurrence of the same leak: taskbar, pinned icons, weather widget, clock. Root cause was never fixed, only the one image removed. `CopyFromScreen` reads *desktop pixels* inside a rectangle, so any area the window does not paint comes along. Replaced with `PrintWindow` (`scripts/gui_capture.ps1`), which asks the window to render itself — the desktop is never read. All 11 region-captured images deleted; `die` kept because it was re-captured and shows a real scan. |
+| 34 | Screenshots devoid of useful information | **done** | The same 11 were empty windows. An empty frame that leaks the desktop is negative value on both counts. Capture now refuses to save a window that rendered blank, so this cannot silently recur. |
+| 35 | AutomationId still present on the `die` page | **done** | Removed from both tables. It was linter plumbing that survived on the one hand-written page. |
+| 36 | `diec` appears as a stray token | **done** | The header joined two fields with spaces, so it rendered as "...(x86_64) CLI counterpart: diec". Header is a two-column table now, in both generators, across every page — and the CLI counterpart is introduced in a full sentence. |
+| 37 | `pdfid` purpose gives no context | **done** | "Triage a PDF by counting the structural keywords that indicate active content" assumes you know what those words mean. Rewritten to name the tags that matter and say what a non-zero count implies. |
+| 38 | "Use the GUI or the CLI?" section works | liked | Poses one question and answers it with a way forward. The shape to replicate — one question, not twenty. |
+| 39 | Annotated screenshots with callouts | open | Arrows pointing at regions, explaining what the controls do. Raised as a later step. Feasible programmatically: the accessibility tree already records a BoundingRectangle per control, so callouts can be drawn at exact coordinates rather than placed by hand. |
+| 40 | Fields populated from whatever source fills them | open | The structural objection behind several items above: an empty field invites auto-population, and auto-population is what put banner text in Purpose and description fragments in Argument. Each section needs to be judged on whether it helps a junior analyst carry out a task, not on whether it is full. |
+
+**Standing request:** push to GitHub continually — review happens against a
+downloaded PDF, so anything unpushed cannot be seen or commented on.

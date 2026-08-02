@@ -1,8 +1,11 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # CryptoTester (GUI)
 
-**Capability:** decode deobfuscate  **Window title:** CryptoTester
-**Captured:** `C:\Tools\CryptoTester\CryptoTester.exe` on 2026-08-02 — control tree in [`capture/gui/CryptoTester/CryptoTester.tree.txt`](../../capture/gui/CryptoTester/CryptoTester.tree.txt)
+| | |
+|---|---|
+| **Capability** | decode deobfuscate |
+| **Window title** | CryptoTester |
+| **Captured from** | `C:\Tools\CryptoTester\CryptoTester.exe` on 2026-08-02 — control tree in [`capture/gui/CryptoTester/CryptoTester.tree.txt`](../../capture/gui/CryptoTester/CryptoTester.tree.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

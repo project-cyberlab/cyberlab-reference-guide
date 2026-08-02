@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # MFTECmd
 
-**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse execution and persistence artifacts  **Version:** 2026.5.0
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/MFTECmd.help.txt)
+| | |
+|---|---|
+| **Kit** | FLARE-VM / SIFT (Eric Zimmerman tools) |
+| **Capability** | Parse execution and persistence artifacts |
+| **Version** | 2026.5.0 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/MFTECmd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

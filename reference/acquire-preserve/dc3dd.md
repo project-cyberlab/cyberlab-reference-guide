@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # dc3dd
 
-**Kit:** Kali Linux · SIFT Workstation  **Capability:** Image a disk, volume or device  **Version:** dc3dd (dc3dd) 7.2.646
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/dc3dd.help.txt)
+| | |
+|---|---|
+| **Kit** | Kali Linux · SIFT Workstation |
+| **Capability** | Image a disk, volume or device |
+| **Version** | dc3dd (dc3dd) 7.2.646 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/dc3dd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

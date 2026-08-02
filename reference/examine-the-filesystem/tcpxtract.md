@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # tcpxtract
 
-**Kit:** REMnux · SIFT Workstation  **Capability:** Carve files out of unstructured data; Extract files and payloads from traffic  **Version:** tcpxtract v1.0.1
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/tcpxtract.help.txt)  **Docs:** <http://tcpxtract.sourceforge.net/>
+| | |
+|---|---|
+| **Kit** | REMnux · SIFT Workstation |
+| **Capability** | Carve files out of unstructured data; Extract files and payloads from traffic |
+| **Version** | tcpxtract v1.0.1 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/tcpxtract.help.txt) |
+| **Documentation** | <http://tcpxtract.sourceforge.net/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

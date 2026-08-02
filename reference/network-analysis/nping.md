@@ -1,8 +1,11 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # nping
 
-**Kit:** Kali Linux · FLARE-VM  **Capability:** Probe or scan hosts and services
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/nping.help.txt)
+| | |
+|---|---|
+| **Kit** | Kali Linux · FLARE-VM |
+| **Capability** | Probe or scan hosts and services |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/nping.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

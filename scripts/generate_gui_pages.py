@@ -429,16 +429,20 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
     #
     # A blank "Version: —" is worse than no field at all: it looks like a gap
     # rather than a tool that does not report one. Omitted when unknown.
-    bits = [f"**Capability:** {cap.replace('-', ' ')}"]
+    # A table, not bold labels joined by spaces. Run together on one line the
+    # fields blur into each other and a short value reads as a stray word.
+    rows = [("Capability", cap.replace("-", " "))]
     title = head.get("window", "").strip()
     if title:
-        bits.append(f"**Window title:** {title}")
+        rows.append(("Window title", title))
     if version:
-        bits.append(f"**Version:** {version}")
-    L.append("  ".join(bits))
-    L.append(f"**Captured:** `{head.get('exe','')}` on {head.get('captured','')[:10]} — "
-             f"control tree in "
-             f"[`capture/gui/{tool}/{tool}.tree.txt`](../../capture/gui/{tool}/{tool}.tree.txt)")
+        rows.append(("Version", version))
+    rows.append(("Captured from",
+                 f"`{head.get('exe','')}` on {head.get('captured','')[:10]} — control "
+                 f"tree in [`capture/gui/{tool}/{tool}.tree.txt`]"
+                 f"(../../capture/gui/{tool}/{tool}.tree.txt)"))
+    L += ["| | |", "|---|---|"]
+    L += [f"| **{k}** | {v} |" for k, v in rows]
     L += ["", "[← Capability index](../INDEX.md) · "
               "[Kit tool list](../../catalog/KIT-TOOLS.md)", ""]
 

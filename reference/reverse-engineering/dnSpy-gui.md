@@ -1,18 +1,18 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # dnSpy (GUI)
 
-**Capability:** reverse engineering  **Window title:** dnSpy v6.5.1 (64-bit, .NET Framework)  **Version:** v6.5.1
-**Captured:** `C:\Tools\dnSpy\dnSpy.exe` on 2026-08-02 — control tree in [`capture/gui/dnSpy/dnSpy.tree.txt`](../../capture/gui/dnSpy/dnSpy.tree.txt)
+| | |
+|---|---|
+| **Capability** | reverse engineering |
+| **Window title** | dnSpy v6.5.1 (64-bit, .NET Framework) |
+| **Version** | v6.5.1 |
+| **Captured from** | `C:\Tools\dnSpy\dnSpy.exe` on 2026-08-02 — control tree in [`capture/gui/dnSpy/dnSpy.tree.txt`](../../capture/gui/dnSpy/dnSpy.tree.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Decompile, browse and debug .NET assemblies. It reconstructs readable C# from IL, so a managed sample is usually faster to understand here than in a disassembler, and it can attach a debugger to the running assembly when static reading stalls.
-
-## Window
-
-![dnSpy main window](../../capture/gui/dnSpy/dnSpy.png)
 
 ## Controls
 

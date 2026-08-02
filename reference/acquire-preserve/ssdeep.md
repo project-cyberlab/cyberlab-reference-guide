@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # ssdeep
 
-**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Verify evidence integrity with hashes; Compare or cluster samples; Find hidden data  **Version:** 2.14.1
-**Captured:** `cyberlab-aio` via `-h` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/ssdeep.help.txt)  **Docs:** <https://ssdeep-project.github.io/ssdeep/index.html>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · SIFT Workstation |
+| **Capability** | Verify evidence integrity with hashes; Compare or cluster samples; Find hidden data |
+| **Version** | 2.14.1 |
+| **Captured from** | `cyberlab-aio` via `-h` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/ssdeep.help.txt) |
+| **Documentation** | <https://ssdeep-project.github.io/ssdeep/index.html> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

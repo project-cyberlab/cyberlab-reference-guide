@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # hashcat
 
-**Kit:** Kali Linux  **Capability:** Crack passwords and hashes  **Version:** v6.2.6
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/hashcat.help.txt)
+| | |
+|---|---|
+| **Kit** | Kali Linux |
+| **Capability** | Crack passwords and hashes |
+| **Version** | v6.2.6 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

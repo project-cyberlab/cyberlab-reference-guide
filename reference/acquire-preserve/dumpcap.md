@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # dumpcap
 
-**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Capture live network traffic
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/dumpcap.help.txt)  **Docs:** <https://www.wireshark.org>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · FLARE-VM · SIFT Workstation |
+| **Capability** | Capture live network traffic |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/dumpcap.help.txt) |
+| **Documentation** | <https://www.wireshark.org> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

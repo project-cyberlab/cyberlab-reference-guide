@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # mactime
 
-**Kit:** REMnux · Kali Linux · SIFT Workstation  **Capability:** Build a filesystem MAC-time timeline
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/mactime.help.txt)  **Docs:** <https://www.sleuthkit.org/sleuthkit>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux · SIFT Workstation |
+| **Capability** | Build a filesystem MAC-time timeline |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/mactime.help.txt) |
+| **Documentation** | <https://www.sleuthkit.org/sleuthkit> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

@@ -1,18 +1,17 @@
 <!-- generated-by: scripts/generate_gui_pages.py -->
 # AccessEnum (GUI)
 
-**Capability:** windows artifacts  **Window title:** AccessEnum License Agreement
-**Captured:** `C:\Tools\sysinternals\AccessEnum.exe` on 2026-08-02 — control tree in [`capture/gui/AccessEnum/AccessEnum.tree.txt`](../../capture/gui/AccessEnum/AccessEnum.tree.txt)
+| | |
+|---|---|
+| **Capability** | windows artifacts |
+| **Window title** | AccessEnum License Agreement |
+| **Captured from** | `C:\Tools\sysinternals\AccessEnum.exe` on 2026-08-02 — control tree in [`capture/gui/AccessEnum/AccessEnum.tree.txt`](../../capture/gui/AccessEnum/AccessEnum.tree.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Enumerate the effective permissions across a directory tree or registry branch and show them in one list. Sorting by permission surfaces the outlier — the world-writable path that does not belong.
-
-## Window
-
-![AccessEnum main window](../../capture/gui/AccessEnum/AccessEnum.png)
 
 ## Controls
 

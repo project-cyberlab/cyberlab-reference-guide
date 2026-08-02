@@ -1,8 +1,12 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # binwalk
 
-**Kit:** REMnux · Kali Linux  **Capability:** Carve files out of unstructured data; Detect and reverse packing; Find hidden data
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/binwalk.help.txt)  **Docs:** <https://github.com/ReFirmLabs/binwalk>
+| | |
+|---|---|
+| **Kit** | REMnux · Kali Linux |
+| **Capability** | Carve files out of unstructured data; Detect and reverse packing; Find hidden data |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/binwalk.help.txt) |
+| **Documentation** | <https://github.com/ReFirmLabs/binwalk> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

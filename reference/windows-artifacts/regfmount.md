@@ -1,8 +1,11 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # regfmount
 
-**Kit:** SIFT Workstation (libyal)  **Capability:** Parse registry hives
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/regfmount.help.txt)
+| | |
+|---|---|
+| **Kit** | SIFT Workstation (libyal) |
+| **Capability** | Parse registry hives |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/regfmount.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

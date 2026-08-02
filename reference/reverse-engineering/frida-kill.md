@@ -1,8 +1,13 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # frida-kill
 
-**Kit:** REMnux  **Capability:** Emulate or instrument execution  **Version:** 17.16.3
-**Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/frida-kill.help.txt)  **Docs:** <https://frida.re>
+| | |
+|---|---|
+| **Kit** | REMnux |
+| **Capability** | Emulate or instrument execution |
+| **Version** | 17.16.3 |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/frida-kill.help.txt) |
+| **Documentation** | <https://frida.re> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

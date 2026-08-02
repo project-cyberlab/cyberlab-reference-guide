@@ -251,19 +251,25 @@ def build_page(cmd: str, meta: dict) -> str:
     rel_root = "../.." if caps else ".."
     L: list[str] = [MARKER, f"# {cmd}", ""]
 
-    bits = []
+    # A two-column table, not a run of bold labels on one line. Joined with
+    # spaces these fields render as "...pdfid.py 0.2.10 Captured: cyberlab-aio"
+    # -- the reader cannot tell where one field ends and the next begins, and
+    # a bare value like `diec` after "CLI counterpart:" reads as a stray token.
+    rows: list[tuple[str, str]] = []
     if vms:
-        bits.append(f"**Kit:** {' · '.join(vms)}")
+        rows.append(("Kit", " · ".join(vms)))
     if caps:
-        bits.append("**Capability:** " + "; ".join(c for _p, c in caps))
+        rows.append(("Capability", "; ".join(c for _p, c in caps)))
     if version:
-        bits.append(f"**Version:** {version}")
-    L.append("  ".join(bits))
-    ln = [f"**Captured:** `{img}` via `{meta.get('via','')}` on {date.today().isoformat()}",
-          f"[raw]({rel_root}/capture/{img}/help/{help_path.name})"]
+        rows.append(("Version", version))
+    rows.append(("Captured from",
+                 f"`{img}` via `{meta.get('via','')}` on {date.today().isoformat()} "
+                 f"— [raw help output]({rel_root}/capture/{img}/help/{help_path.name})"))
     if url:
-        ln.append(f"**Docs:** <{url}>")
-    L += ["  ".join(ln), ""]
+        rows.append(("Documentation", f"<{url}>"))
+    L += ["| | |", "|---|---|"]
+    L += [f"| **{k}** | {v} |" for k, v in rows]
+    L.append("")
 
     # Navigation back to the two entry points: you should never be stranded on
     # a tool page without a route back to "what else does this job?".
