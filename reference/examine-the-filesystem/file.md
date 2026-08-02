@@ -16,18 +16,6 @@ Identify a file's type from its contents rather than its name, using magic signa
 file [OPTION...] [FILE...]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 33-binwalk-firmware
-file foremost_out/jpg/*.jpg 2>/dev/null || file foremost_out/*/*
-# from cyberlab 35-radare2-intro
-file exercise/hello
-# from cyberlab 38-network-emulation
-file /tmp/beacon_reply.bin # -> data / HTML (INetSim default object)
-```
-
 ## Options
 
 All 54 options parsed from the captured help text; 20 reviewed with usage guidance.

@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # RECmd
 
-**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse registry hives  **Version:** 2026.5.0+bcd0ac33ed98de61ea6de551eef96052bddbbd49
+**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse registry hives  **Version:** 2026.5.0
 **Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/RECmd.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -15,10 +15,6 @@ Description:
 ```
 RECmd [options]
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

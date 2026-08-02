@@ -16,10 +16,6 @@ Capture packets to a file. It does nothing else — which is the point.
 dumpcap [options] ...
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 48 options parsed from the captured help text; 19 reviewed with usage guidance.

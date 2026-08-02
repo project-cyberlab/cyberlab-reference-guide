@@ -8,17 +8,13 @@
 
 ## Purpose
 
-Invalid argument: evtxinfo
+Use evtxinfo to determine information about a Windows XML Event Viewer
 
 ## Synopsis
 
 ```
 evtxinfo [ -c codepage ] [ -hvV ] source
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

@@ -17,16 +17,6 @@ dd [OPERAND]...
 or:  dd OPTION
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-dd if=/dev/zero of=exercise/sample.dd bs=1M count=10
-# from cyberlab 51-linux-triage-workflow
-dd if=/dev/zero of=triage_sample.raw bs=1M count=8
-```
-
 ## Options
 
 All 2 options parsed from the captured help text. The final column is filled in by review.

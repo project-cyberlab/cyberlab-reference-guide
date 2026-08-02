@@ -21,10 +21,6 @@ hex        ->  int              ;  rax2 0xa
 int        ->  bin              ;  rax2 b30
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 30 options parsed from the captured help text. The final column is filled in by review.

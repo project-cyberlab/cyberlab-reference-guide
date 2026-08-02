@@ -16,26 +16,6 @@ Discover hosts, ports and services, and fingerprint what is listening.
 nmap [Scan Type(s)] [Options] {target specification}
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 11-offensive-kali
-nmap --version
-# from cyberlab 11-offensive-kali
-nmap -sT -Pn -p 1-1024 127.0.0.1
-# from cyberlab 26-metasploit-workflow
-nmap -sV -Pn -p 1-1000 -oN scan.txt "$TARGET"
-# from cyberlab 26-metasploit-workflow
-nmap -sV -Pn -oX scan.xml "$TARGET"
-# from cyberlab 41-web-app-testing
-nmap -sV -p 80,443,8080 "$TARGET"
-# from cyberlab 41-web-app-testing
-nmap -p 80,443 --script http-title,http-headers,http-server-header "$TARGET"
-# from cyberlab 41-web-app-testing
-nmap -p 8000 --script http-title 127.0.0.1
-```
-
 ## Options
 
 All 66 options parsed from the captured help text; 24 reviewed with usage guidance.

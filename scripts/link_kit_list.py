@@ -50,12 +50,33 @@ def main() -> int:
     linked_tools = 0
     linked_cmds = 0
 
+    def unlink_missing(cell: str) -> str:
+        """Strip links whose target page no longer exists.
+
+        Pages come and go -- a tool ruled out of scope loses its page -- and
+        because this pass skips rows that already carry a link, a stale one
+        would survive forever and render as a dead anchor in the PDF.
+        """
+        def repl(m: re.Match) -> str:
+            label, target = m.group(1), m.group(2)
+            if target.startswith(("http://", "https://", "#")):
+                return m.group(0)
+            if (KIT.parent / target).resolve().exists():
+                return m.group(0)
+            return label
+        return re.sub(r"\[([^\]]+)\]\(([^)]+)\)", repl, cell)
+
     for i, line in enumerate(lines):
         if not line.startswith("| ") or line.startswith("| Tool") or set(line) <= set("|- "):
             continue
         cells = line.split("|")
         if len(cells) < 5:
             continue
+
+        cells[1] = " " + unlink_missing(cells[1].strip()) + " "
+        cells[2] = " " + unlink_missing(cells[2].strip()) + " "
+        line = "|".join(cells)
+        lines[i] = line
 
         tool = cells[1].strip()
         cmds = cells[2].strip()

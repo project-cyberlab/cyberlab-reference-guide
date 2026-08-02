@@ -17,10 +17,6 @@ rasm2 [-ACdDehHLBvw] [-a arch] [-b bits] [-s addr] [-S syntax]
 [-f file] [-o file] [-F fil:ter] [-i skip] [-l len] 'code'|hex|0101b|-
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 25 options parsed from the captured help text. The final column is filled in by review.

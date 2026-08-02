@@ -8,23 +8,13 @@
 
 ## Purpose
 
-Invalid argument: esedbexport
+Use esedbexport to export items stored in an Extensible Storage Engine (ESE)
 
 ## Synopsis
 
 ```
 esedbexport [ -c codepage ] [ -l logfile ] [ -m mode ] [ -t target ]
 [ -T table_name ] [ -hvV ] source
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 06-windows-artifact-libs
-esedbexport -V
-# from cyberlab 06-windows-artifact-libs
-esedbexport -t /tmp/edb_out exercise/Current.edb
 ```
 
 ## Options

@@ -18,14 +18,6 @@ ewfverify [ -A codepage ] [ -d digest_type ] [ -f format ]
 [ -hqvVwx ] ewf_files
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 57-forensic-acquisition
-ewfverify /evidence/case01.E01
-```
-
 ## Options
 
 All 11 options parsed from the captured help text; 9 reviewed with usage guidance.

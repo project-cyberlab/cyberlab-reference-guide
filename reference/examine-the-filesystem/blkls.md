@@ -16,10 +16,6 @@ Extract filesystem blocks — by default the unallocated ones, which is the inpu
 blkls [-aAelvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] image [images] [start-stop]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 13 options parsed from the captured help text; 12 reviewed with usage guidance.

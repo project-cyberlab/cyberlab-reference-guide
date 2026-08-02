@@ -16,24 +16,6 @@ Extract the contents of a file by inode, including deleted files.
 icat [-hrRsvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] image [images] inum[-typ[-id]]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-icat -o 2048 exercise/sample.dd 5 > /tmp/recovered_file.bin
-# from cyberlab 01-disk-forensics
-icat -o 0 exercise/sample.dd 5 > /tmp/recovered.txt
-# from cyberlab 22-sleuthkit-mastery
-icat -o 2048 exercise/practice.dd 4 | head
-# from cyberlab 22-sleuthkit-mastery
-icat -o 2048 exercise/practice.dd 6
-# from cyberlab 51-linux-triage-workflow
-icat -o 2048 disk.raw 5 > recovered_file.bin
-# from cyberlab 51-linux-triage-workflow
-icat exercise/triage_sample.raw $(fls -p exercise/triage_sample.raw | awk '/eicar.com/{gsub(/:/,"",$2);print $2}') > exercise/extract/eicar.com
-```
-
 ## Options
 
 All 14 options parsed from the captured help text; 8 reviewed with usage guidance.

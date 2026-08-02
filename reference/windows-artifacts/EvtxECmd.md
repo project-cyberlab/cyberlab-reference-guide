@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # EvtxECmd
 
-**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse Windows event logs  **Version:** 2026.5.0+bfc7f47ccbf65ffc9a3777cde5498db2fdd94664
+**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse Windows event logs  **Version:** 2026.5.0
 **Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/EvtxECmd.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -15,10 +15,6 @@ Parse Windows event logs into a normalised, filterable CSV, mapping the useful f
 ```
 EvtxECmd [options]
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

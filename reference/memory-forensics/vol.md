@@ -21,28 +21,6 @@ vol [-h] [-c CONFIG] [--parallelism [{processes,threads,off}]]
 [--hide-columns [HIDE_COLUMNS ...]] [-r RENDERER]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 02-memory-forensics
-vol --help | head -n 3
-# from cyberlab 02-memory-forensics
-vol -h | grep -i -E "pslist|netscan|windows.info" | head -n 10
-# from cyberlab 02-memory-forensics
-vol -f $IMAGE windows.pslist | head -n 20
-# from cyberlab 20-volatility-deep
-vol --version
-# from cyberlab 20-volatility-deep
-vol -f exercise/memdump.raw windows.info
-# from cyberlab 20-volatility-deep
-vol -f exercise/memdump.raw windows.pslist
-# from cyberlab 20-volatility-deep
-vol -f exercise/memdump.raw windows.pstree
-# from cyberlab 20-volatility-deep
-vol -f exercise/memdump.raw windows.psscan
-```
-
 ## Options
 
 All 35 options parsed from the captured help text; 9 reviewed with usage guidance.

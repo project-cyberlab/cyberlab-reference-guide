@@ -209,6 +209,20 @@ def parse_purpose(help_text: str, cmd: str) -> str:
             continue
         if re.match(r"^(Missing|Error|error|Cannot|Unknown option)\b", s):
             continue
+        # A tool that rejects --help announces the rejection, and the shapes it
+        # uses are many. "Invalid argument: bdeinfo" reached the Purpose line of
+        # four pages because the pattern above only matches "<cmd>: invalid
+        # option". Anything that reads as a complaint is not a description.
+        if re.match(r"^(invalid|unrecognized|unknown|illegal|unsupported)\b", s, re.I):
+            continue
+        if re.search(r"\b(invalid|unrecognized) (argument|option|parameter|value)\b", s, re.I):
+            continue
+        if re.search(r"(no such file|failed to open|not a valid|permission denied|"
+                     r"command not found|try '.*--help')", s, re.I):
+            continue
+        # "usage: fls [-adDFlhpruvV] ..." is a synopsis, not a purpose.
+        if re.match(rf"^{re.escape(cmd)}\b.*\[-", s):
+            continue
         if len(s) < 12 or len(s) > 200:
             continue
         if s.lower().startswith(cmd.lower()) and len(s.split()) < 4:

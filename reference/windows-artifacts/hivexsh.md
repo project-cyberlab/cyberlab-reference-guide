@@ -8,11 +8,7 @@
 
 ## Purpose
 
-hivexsh: failed to open hive file: help: No such file or directory
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
+If you think this file is a valid Windows binary hive file (_not_
 
 ## Options
 

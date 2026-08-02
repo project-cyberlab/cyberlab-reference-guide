@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # SrumECmd
 
-**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse ESE / SRUM / Amcache databases  **Version:** 2026.5.0+880ad26bcb011976a8fc521eea63fc5e6e65ba02
+**Kit:** FLARE-VM / SIFT (Eric Zimmerman tools)  **Capability:** Parse ESE / SRUM / Amcache databases  **Version:** 2026.5.0
 **Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/SrumECmd.help.txt)
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -15,10 +15,6 @@ Description:
 ```
 SrumECmd [options]
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

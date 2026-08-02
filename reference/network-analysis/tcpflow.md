@@ -20,14 +20,6 @@ tcpflow [-aBcCDhIpsvVZ] [-b max_bytes] [-d debug_level]
 [-w file] [-x scanner] [-X xmlfile] [-z|--chroot dir] [expression]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 07-network-pcap
-tcpflow --version | head -n 1
-```
-
 ## Options
 
 All 33 options parsed from the captured help text. The final column is filled in by review.

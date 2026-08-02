@@ -16,28 +16,6 @@ hashcat (v6.2.6) starting in help mode
 hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 11-offensive-kali
-hashcat --version
-# from cyberlab 11-offensive-kali
-hashcat -b -m 0 2>&1 | head -n 8
-# from cyberlab 11-offensive-kali
-hashcat -m 0 -a 0 exercise/lab_hash.txt /usr/share/wordlists/rockyou.txt
-# from cyberlab 11-offensive-kali
-hashcat -m 0 --show exercise/lab_hash.txt
-# from cyberlab 40-password-cracking
-hashcat prints a version string like "v6.2.6".
-# from cyberlab 40-password-cracking
-hashcat -m 0 -a 0 exercise/hash.txt exercise/wordlist.txt --potfile-path exercise/hc.pot
-# from cyberlab 40-password-cracking
-hashcat -m 0 --show exercise/hash.txt --potfile-path exercise/hc.pot
-# from cyberlab 40-password-cracking
-hashcat -m 0 -a 0 -r /usr/share/hashcat/rules/best64.rule exercise/hash.txt exercise/wordlist.txt --potfile-path exercise/hc.pot
-```
-
 ## Options
 
 All 143 options parsed from the captured help text. The final column is filled in by review.

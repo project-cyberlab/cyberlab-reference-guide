@@ -16,16 +16,6 @@ Find BER-encoded RSA private keys in a memory image.
 rsakeyfind MEMORY-IMAGE [MODULUS-FILE]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 02-memory-forensics
-rsakeyfind 2>&1 | head -n 1
-# from cyberlab 02-memory-forensics
-rsakeyfind sample.mem
-```
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

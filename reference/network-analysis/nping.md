@@ -16,10 +16,6 @@ Nping 0.7.93 ( https://nmap.org/nping )
 nping [Probe mode] [Options] {target specification}
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 85 options parsed from the captured help text. The final column is filled in by review.

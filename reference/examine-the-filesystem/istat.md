@@ -16,14 +16,6 @@ Show the full metadata for one inode: times, size, and the blocks it occupies.
 istat [-N num] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] [-z zone] [-s seconds] [-rvV] image inum
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 22-sleuthkit-mastery
-istat -o 2048 exercise/practice.dd 4
-```
-
 ## Options
 
 All 14 options parsed from the captured help text; 5 reviewed with usage guidance.

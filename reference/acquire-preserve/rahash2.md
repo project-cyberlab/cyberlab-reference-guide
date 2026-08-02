@@ -16,10 +16,6 @@ Examine binary files, including disassembling and debugging. Includes r2ai and d
 rahash2 [-BehjkLqRrvX] [-b S] [-a A] [-c H] [-E A] [-s S] [-f O] [-t O] [file] ...
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 23 options parsed from the captured help text. The final column is filled in by review.

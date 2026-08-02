@@ -16,14 +16,6 @@ Hunt through Windows event logs with Sigma rules and built-in detection logic, a
 chainsaw [OPTIONS] <COMMAND>
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 58-eventlog-hunting
-chainsaw hunt Security_sample.evtx -s sigma/ --mapping mapping.yml
-```
-
 ## Options
 
 All 6 options parsed from the captured help text; 2 reviewed with usage guidance.

@@ -21,14 +21,6 @@ ewfacquire [ -A codepage ] [ -b number_of_sectors ]
 [ -m media_type ] [ -M media_flags ] [ -N notes ]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 57-forensic-acquisition
-sudo ewfacquire -t /evidence/case01 -f encase6 -c deflate -S 2G /dev/sdX
-```
-
 ## Options
 
 All 32 options parsed from the captured help text; 30 reviewed with usage guidance.

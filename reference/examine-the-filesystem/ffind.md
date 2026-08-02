@@ -16,10 +16,6 @@ Find the file name that points at a given inode — the reverse of a directory l
 ffind [-aduvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] image [images] inode
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 11 options parsed from the captured help text; 10 reviewed with usage guidance.

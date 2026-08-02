@@ -132,10 +132,27 @@ def clean_version(v: str) -> str:
         return ""
     if re.search(r"(invalid|unknown|unrecognized)\s+option", v, re.I):
         return ""
+    # More ways a tool answers --version with something that is not a version:
+    # "/data/version is not a valid directory!", "------> --version <------",
+    # "/usr/bin/cpan version 1.64 calling Getopt::Std::getopts (...)".
+    if re.search(r"(not a valid|calling Getopt|no such file|command not found)", v, re.I):
+        return ""
+    if v.startswith(("-", "/", "=")) or set(v.strip()) <= set("-<> "):
+        return ""
+
+    # A build hash is not useful in a field guide:
+    # "2026.5.0+76dc8354aa98ce1e1c6f942abcfb09f583f411d" -> "2026.5.0".
+    v = re.sub(r"\+[0-9a-f]{7,}\b", "", v)
+    # "(Git v4.0.17 packaged as 4.0.17-0+deb12u3)" adds nothing either.
+    v = re.sub(r"\s*\((Git|git)[^)]*\)", "", v)
+
     m = re.search(r"([A-Za-z][A-Za-z0-9 ._-]{0,40}?\s*v?\d+\.\d+(?:\.\d+)?)", v)
     if m:
-        return m.group(1).strip()
-    return v[:60] if len(v) <= 60 else ""
+        out = m.group(1).strip()
+        # Trailing prose after the number ("ccrypt 1.11. Secure encryption...")
+        # is a description, not part of the version.
+        return out[:45]
+    return v[:45] if len(v) <= 45 else ""
 
 
 def capability_of(cmd: str) -> list[tuple[str, str]]:
@@ -258,17 +275,25 @@ def build_page(cmd: str, meta: dict) -> str:
     if syn:
         L += ["## Synopsis", "", "```", syn, "```", ""]
 
-    mined = CANDS.get(cmd, [])
-    L += ["## Common invocations", ""]
-    if mined:
-        L += ["<!-- candidates mined from cyberlab; verify each flag against the "
-              "options table below before treating as reviewed -->", "```"]
-        for m in mined[:8]:
-            L.append(f"# from cyberlab {m['module']}")
-            L.append(m["cmd"])
+    # Invocations mined from cyberlab are NOT published.
+    #
+    # cyberlab was an idea that reached roughly a quarter finished before the
+    # work pivoted, and its own content audit found fabricated CLI flags in ~44
+    # of 61 modules. Seeding a guide that exists to prevent fabrication from a
+    # source known to contain it is the wrong trade at any volume. The linter
+    # catches an invented *flag*, but a mined command can be wrong in ways it
+    # cannot see: right flags, wrong order, wrong context, wrong tool for the
+    # job. An empty section is honest; a plausible wrong command is not.
+    #
+    # The mined data stays in capture/cyberlab-candidates.json as a research
+    # lead for whoever writes these by hand.
+    invocations = ENRICHMENT.get(cmd, {}).get("invocations") or []
+    if invocations:
+        L += ["## Common invocations", "", "```"]
+        for inv in invocations[:8]:
+            L.append(f"# {inv['task']}")
+            L.append(inv["cmd"])
         L += ["```", ""]
-    else:
-        L += ["_TODO: up to 8 task-titled invocations._", ""]
 
     L += ["## Options", ""]
     if opts:

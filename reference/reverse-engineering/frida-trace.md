@@ -16,16 +16,6 @@ Trace the execution of a process to analyze its behavior.
 frida-trace [options] target
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 39-frida-tracing
-frida-trace --version
-# from cyberlab 39-frida-tracing
-timeout 8 frida-trace -f ./target -i getenv
-```
-
 ## Options
 
 All 82 options parsed from the captured help text. The final column is filled in by review.

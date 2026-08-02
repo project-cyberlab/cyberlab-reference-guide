@@ -8,17 +8,13 @@
 
 ## Purpose
 
-Invalid argument: esedbinfo
+Use esedbinfo to determine information about an Extensible Storage Engine (ESE)
 
 ## Synopsis
 
 ```
 esedbinfo [ -hvV ] source
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

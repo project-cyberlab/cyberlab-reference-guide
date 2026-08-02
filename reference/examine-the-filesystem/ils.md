@@ -16,10 +16,6 @@ List inode metadata, including inodes that no longer have a name pointing at the
 ils [-emOpvV] [-aAlLzZ] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] [-s seconds] image [images] [inum[-end]]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 19 options parsed from the captured help text; 18 reviewed with usage guidance.

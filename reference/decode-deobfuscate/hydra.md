@@ -10,16 +10,6 @@
 
 _TODO: one-line imperative purpose._
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 11-offensive-kali
-hydra -h 2>&1 | head -n 1
-# from cyberlab 11-offensive-kali
-hydra -U ssh 2>&1 | head -n 5
-```
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

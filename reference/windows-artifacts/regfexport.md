@@ -8,25 +8,13 @@
 
 ## Purpose
 
-Invalid argument: regfexport
+Use regfexport to export information from a Windows NT
 
 ## Synopsis
 
 ```
 regfexport [ -c codepage ] [ -K key_path ] [ -l logfile ]
 [ -hvV ] source
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 04-registry-analysis
-regfexport -V
-# from cyberlab 04-registry-analysis
-regfexport exercise/SYSTEM_sample.hive > /tmp/system_dump.txt
-# from cyberlab 04-registry-analysis
-regfexport exercise/SYSTEM_sample.hive | grep -i "ComputerName"
 ```
 
 ## Options

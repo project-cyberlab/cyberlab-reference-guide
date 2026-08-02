@@ -16,10 +16,6 @@ Trace the execution of a process to analyze its behavior.
 frida-discover [options] target
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 43 options parsed from the captured help text. The final column is filled in by review.

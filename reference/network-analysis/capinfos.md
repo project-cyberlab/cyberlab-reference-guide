@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # capinfos
 
-**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Read and filter packet captures  **Version:** Git v4.0.17
+**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Read and filter packet captures  **Version:** Capinfos (Wireshark) 4.0.17.
 **Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/capinfos.help.txt)  **Docs:** <https://www.wireshark.org>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -14,14 +14,6 @@ Capture and analyze network traffic with this sniffer.
 
 ```
 capinfos [options] <infile> ...
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 24-wireshark-deep
-capinfos exercise/sample.pcap
 ```
 
 ## Options

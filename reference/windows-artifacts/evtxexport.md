@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Invalid argument: evtxexport
+Use evtxexport to export items stored in a Windows XML Event Viewer
 
 ## Synopsis
 
@@ -18,18 +18,6 @@ evtxexport [ -c codepage ] [ -f format ] [ -l log_file ]
 [ -r registy_files_path ] [ -s system_file ]
 [ -S software_file ] [ -t event_log_type ]
 [ -hTvV ] source
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 06-windows-artifact-libs
-evtxexport -V
-# from cyberlab 06-windows-artifact-libs
-evtxexport -h
-# from cyberlab 06-windows-artifact-libs
-evtxexport -f text exercise/Security.evtx > /tmp/security_events.txt
 ```
 
 ## Options

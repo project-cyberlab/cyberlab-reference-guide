@@ -10,28 +10,6 @@
 
 Turn a TSK body file into a human-readable chronological timeline.
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-mactime -b /tmp/bodyfile.txt -d > /tmp/timeline.csv
-# from cyberlab 03-timeline-analysis
-mactime -V
-# from cyberlab 03-timeline-analysis
-mactime -b /tmp/body.txt -d > /tmp/mactime.csv
-# from cyberlab 22-sleuthkit-mastery
-mactime -b exercise/bodyfile.txt -d > exercise/timeline.csv
-# from cyberlab 22-sleuthkit-mastery
-mactime -b exercise/bodyfile.txt -d | tail
-# from cyberlab 23-plaso-supertimeline
-mactime -d -b exercise/bodyfile.txt > timeline.csv
-# from cyberlab 23-plaso-supertimeline
-mactime -d -b exercise/bodyfile.txt | awk -F',' '$3 ~ /b/' | sort
-# from cyberlab 23-plaso-supertimeline
-mactime -d -b exercise/bodyfile.txt | awk -F',' '$3 ~ /b/' | sort | head -n 1
-```
-
 ## Options
 
 All 9 options parsed from the captured help text; 8 reviewed with usage guidance.

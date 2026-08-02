@@ -8,22 +8,12 @@
 
 ## Purpose
 
-Invalid argument: vshadowinfo
+Use vshadowinfo to determine information about a Windows NT Volume Shadow
 
 ## Synopsis
 
 ```
 vshadowinfo [ -o offset ] [ -ahvV ] source
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 06-windows-artifact-libs
-vshadowinfo -V
-# from cyberlab 06-windows-artifact-libs
-vshadowinfo exercise/volume.raw
 ```
 
 ## Options

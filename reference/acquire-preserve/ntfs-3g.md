@@ -16,10 +16,6 @@ ntfs-3g 2022.10.3 integrated FUSE 28 - Third Generation NTFS Driver
 ntfs-3g [-o option[,...]] <device|image_file> <mount_point>
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

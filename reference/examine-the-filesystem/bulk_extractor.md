@@ -16,28 +16,6 @@ Scan an image for features — email addresses, URLs, credit card numbers, EXIF,
 bulk_extractor [OPTION...] image_name
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 02-memory-forensics
-bulk_extractor -V
-# from cyberlab 02-memory-forensics
-bulk_extractor -o be_out sample.mem
-# from cyberlab 05-file-carving
-bulk_extractor -o /tmp/bulk_out exercise/sample.dd
-# from cyberlab 05-file-carving
-bulk_extractor -o /tmp/ak_bulk exercise/sample.dd
-# from cyberlab 20-volatility-deep
-bulk_extractor -o be_out exercise/memdump.raw
-# from cyberlab 47-ransomware-memory-case
-bulk_extractor -E aes -E zip -o be_out memory.raw
-# from cyberlab 47-ransomware-memory-case
-bulk_extractor -E aes -o exercise/be_out exercise/memory.raw
-# from cyberlab 51-linux-triage-workflow
-bulk_extractor -o be_out disk.raw
-```
-
 ## Options
 
 All 69 options parsed from the captured help text; 58 reviewed with usage guidance.

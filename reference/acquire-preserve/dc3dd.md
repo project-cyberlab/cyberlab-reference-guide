@@ -16,14 +16,6 @@ dc3dd [OPTION 1] [OPTION 2] ... [OPTION N]
 ------
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 57-forensic-acquisition
-sudo dc3dd if=/dev/sdX of=/evidence/case01.dd hash=sha256 log=/evidence/case01.log
-```
-
 ## Options
 
 All 3 options parsed from the captured help text. The final column is filled in by review.

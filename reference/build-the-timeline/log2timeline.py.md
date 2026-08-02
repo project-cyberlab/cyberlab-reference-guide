@@ -21,18 +21,6 @@ log2timeline.py [-h] [--troubles] [-V] [--artifact_definitions PATH]
 [--extract_winreg_binary] [--preferred_year YEAR]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 03-timeline-analysis
-log2timeline.py --version
-# from cyberlab 03-timeline-analysis
-log2timeline.py --status_view none --storage-file /tmp/case.plaso exercise/sample_fs/
-# from cyberlab 49-intrusion-timeline-case
-log2timeline.py --storage-file timeline.plaso "$IMAGE"
-```
-
 ## Options
 
 All 100 options parsed from the captured help text; 8 reviewed with usage guidance.

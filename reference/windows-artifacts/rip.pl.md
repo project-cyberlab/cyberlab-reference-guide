@@ -10,22 +10,6 @@
 
 Rip v.3.0 - CLI RegRipper tool
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 04-registry-analysis
-rip.pl -h
-# from cyberlab 04-registry-analysis
-rip.pl -r exercise/SYSTEM_sample.hive -p compname
-# from cyberlab 49-intrusion-timeline-case
-rip.pl -h | head -n 3
-# from cyberlab 49-intrusion-timeline-case
-rip.pl -r NTUSER.DAT -p run
-# from cyberlab 49-intrusion-timeline-case
-rip.pl -r SYSTEM -p usbstor
-```
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

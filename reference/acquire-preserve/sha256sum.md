@@ -16,28 +16,6 @@ Print or check SHA256 (256-bit) checksums.
 sha256sum [OPTION]... [FILE]...
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-sha256sum /tmp/recovered.txt
-# from cyberlab 04-registry-analysis
-sha256sum exercise/SYSTEM_sample.hive
-# from cyberlab 05-file-carving
-sha256sum /tmp/ak_tcp/*.jpg
-# from cyberlab 10-malicious-documents
-sha256sum exercise/sample.doc
-# from cyberlab 21-yara-authoring
-sha256sum exercise/eicar_sample.txt
-# from cyberlab 26-metasploit-workflow
-sha256sum exercise/scan.xml
-# from cyberlab 32-remnux-static-triage
-sha256sum exercise/sample.exe
-# from cyberlab 33-binwalk-firmware
-sha256sum firmware.bin
-```
-
 ## Options
 
 All 17 options parsed from the captured help text. The final column is filled in by review.

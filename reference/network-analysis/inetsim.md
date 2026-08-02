@@ -16,16 +16,6 @@ Emulate common network services and interact with malware.
 /usr/bin/inetsim [options]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 38-network-emulation
-inetsim --version 2>&1 | head -n 3
-# from cyberlab 38-network-emulation
-sudo inetsim --config ~/lab38/inetsim.conf --data-dir /var/lib/inetsim --log-dir ~/lab38/log &
-```
-
 ## Options
 
 All 14 options parsed from the captured help text. The final column is filled in by review.

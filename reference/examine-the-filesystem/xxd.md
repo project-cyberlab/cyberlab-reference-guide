@@ -18,10 +18,6 @@ or
 xxd -r [-s [-]offset] [-c cols] [-ps] [infile [outfile]]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 16 options parsed from the captured help text. The final column is filled in by review.

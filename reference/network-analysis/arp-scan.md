@@ -16,10 +16,6 @@ Target hosts must be specified on the command line unless the --file or
 arp-scan [options] [hosts...]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

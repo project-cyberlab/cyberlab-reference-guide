@@ -16,18 +16,6 @@ Extract files from network traffic.
 tcpxtract [OPTIONS] [[-d <DEVICE>] [-f <FILE>]]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 05-file-carving
-tcpxtract --version 2>&1 | head -n 1
-# from cyberlab 05-file-carving
-tcpxtract -f exercise/sample.pcap -o /tmp/tcpxtract_out
-# from cyberlab 05-file-carving
-tcpxtract -f exercise/sample.pcap -o /tmp/ak_tcp
-```
-
 ## Options
 
 All 12 options parsed from the captured help text. The final column is filled in by review.

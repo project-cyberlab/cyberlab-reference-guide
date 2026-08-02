@@ -16,28 +16,6 @@ Wireshark's command line: capture, filter, dissect and export packet data, inclu
 tshark [options] ...
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 07-network-pcap
-tshark --version | head -n 1
-# from cyberlab 07-network-pcap
-tshark -r exercise/sample.pcap -q -z io,phs | head -n 30
-# from cyberlab 07-network-pcap
-tshark -r exercise/sample.pcap -Y 'http.request' -T fields -e ip.dst -e http.host -e http.request.uri
-# from cyberlab 07-network-pcap
-tshark -r exercise/sample.pcap -Y 'dns.flags.response == 0' -T fields -e dns.qry.name | sort -u
-# from cyberlab 07-network-pcap
-tshark -r exercise/sample.pcap -Y 'http.request' -T fields -e http.host -e http.request.uri
-# from cyberlab 24-wireshark-deep
-tshark -r exercise/sample.pcap -c 20
-# from cyberlab 24-wireshark-deep
-tshark -r exercise/sample.pcap -Y "dns.flags.response == 0" -T fields -e dns.qry.name
-# from cyberlab 24-wireshark-deep
-tshark -r exercise/sample.pcap -Y "http.request" -T fields -e http.host -e http.request.uri
-```
-
 ## Options
 
 All 75 options parsed from the captured help text; 19 reviewed with usage guidance.

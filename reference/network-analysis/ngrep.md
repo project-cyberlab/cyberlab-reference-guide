@@ -19,22 +19,6 @@ ngrep <-hNXViwqpevxlDtTRM> <-IO pcap_dump> <-n num> <-d dev> <-A num>
 <match expression> <bpf filter>
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 07-network-pcap
-ngrep -V 2>&1 | head -n 1
-# from cyberlab 07-network-pcap
-ngrep -I exercise/sample.pcap -q -W byline 'User-Agent'
-# from cyberlab 07-network-pcap
-ngrep -I exercise/sample.pcap -q -W byline 'User-Agent' | grep -i 'User-Agent'
-# from cyberlab 24-wireshark-deep
-ngrep -I exercise/sample.pcap -q -W byline "User-Agent"
-# from cyberlab 24-wireshark-deep
-ngrep -I exercise/sample.pcap -q -W byline "User-Agent" | grep -i "User-Agent"
-```
-
 ## Options
 
 All 29 options parsed from the captured help text; 27 reviewed with usage guidance.

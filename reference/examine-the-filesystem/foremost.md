@@ -10,20 +10,6 @@
 
 Carve files out of an image or raw data by header and footer signatures.
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 05-file-carving
-foremost -V
-# from cyberlab 05-file-carving
-foremost -t jpg,pdf -i exercise/sample.dd -o /tmp/foremost_out
-# from cyberlab 05-file-carving
-foremost -t jpg,pdf -i exercise/sample.dd -o /tmp/ak_foremost
-# from cyberlab 33-binwalk-firmware
-foremost -i firmware.bin -o foremost_out
-```
-
 ## Options
 
 All 11 options parsed from the captured help text; 8 reviewed with usage guidance.

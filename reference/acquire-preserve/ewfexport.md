@@ -20,10 +20,6 @@ ewfexport [ -A codepage ] [ -b number_of_sectors ]
 [ -S segment_file_size ] [ -t target ] [ -hqsuvVwx ] ewf_files
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 19 options parsed from the captured help text; 17 reviewed with usage guidance.

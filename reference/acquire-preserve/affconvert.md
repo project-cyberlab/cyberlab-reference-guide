@@ -16,10 +16,6 @@ Please, see more info in manpage.
 affconvert [options] file1 [... files]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

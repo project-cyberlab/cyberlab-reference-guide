@@ -10,10 +10,6 @@
 
 Rip v.3.0 - CLI RegRipper tool
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

@@ -18,14 +18,6 @@ testdisk /list  [/log]   [file.dd|file.e01|device]
 testdisk /version
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-testdisk /version
-```
-
 ## Options
 
 All 3 options parsed from the captured help text. The final column is filled in by review.

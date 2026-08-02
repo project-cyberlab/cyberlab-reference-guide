@@ -10,22 +10,6 @@
 
 Display the partition layout of a disk image, including unallocated gaps.
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-mmls -V
-# from cyberlab 01-disk-forensics
-mmls exercise/sample.dd
-# from cyberlab 22-sleuthkit-mastery
-mmls exercise/practice.dd
-# from cyberlab 51-linux-triage-workflow
-mmls disk.raw
-# from cyberlab 57-forensic-acquisition
-sudo mmls /mnt/ewf/ewf1
-```
-
 ## Options
 
 All 12 options parsed from the captured help text; 9 reviewed with usage guidance.

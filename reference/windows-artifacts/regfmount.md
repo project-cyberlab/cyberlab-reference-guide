@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Invalid argument: regfmount
+Use regfmount to mount a Windows NT Registry File (REGF)
 
 ## Synopsis
 
@@ -16,10 +16,6 @@ Invalid argument: regfmount
 regfmount [ -c codepage ] [ -X extended_options ] [ -hvV ] file
 mount_point
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

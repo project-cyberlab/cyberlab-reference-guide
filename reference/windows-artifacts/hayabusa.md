@@ -17,10 +17,6 @@ hayabusa.exe <COMMAND> [OPTIONS]
 hayabusa.exe help <COMMAND> or hayabusa.exe <COMMAND> -h
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

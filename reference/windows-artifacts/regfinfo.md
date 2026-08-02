@@ -8,24 +8,12 @@
 
 ## Purpose
 
-Invalid argument: regfinfo
+Use regfinfo to determine information about a Windows NT
 
 ## Synopsis
 
 ```
 regfinfo [ -B bodyfile ] [ -c codepage ] [ -hHvV ] source
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 04-registry-analysis
-regfinfo -V
-# from cyberlab 04-registry-analysis
-regfinfo exercise/SYSTEM_sample.hive
-# from cyberlab 04-registry-analysis
-regfinfo /tmp/SYSTEM_recovered.hive
 ```
 
 ## Options

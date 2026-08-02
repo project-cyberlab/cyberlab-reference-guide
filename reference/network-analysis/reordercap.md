@@ -1,7 +1,7 @@
 <!-- generated-by: scripts/generate_pages.py -->
 # reordercap
 
-**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Split, merge or repair capture files  **Version:** Git v4.0.17
+**Kit:** REMnux · Kali Linux · FLARE-VM · SIFT Workstation  **Capability:** Split, merge or repair capture files  **Version:** Reordercap (Wireshark) 4.0.17.
 **Captured:** `cyberlab-aio` via `--help` on 2026-08-02  [raw](../../capture/cyberlab-aio/help/reordercap.help.txt)  **Docs:** <https://www.wireshark.org>
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -15,10 +15,6 @@ Capture and analyze network traffic with this sniffer.
 ```
 reordercap [options] <infile> <outfile>
 ```
-
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
 
 ## Options
 

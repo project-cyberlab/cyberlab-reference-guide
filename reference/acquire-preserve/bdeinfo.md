@@ -8,23 +8,13 @@
 
 ## Purpose
 
-Invalid argument: bdeinfo
+Use bdeinfo to determine information about a BitLocker Drive
 
 ## Synopsis
 
 ```
 bdeinfo [ -k keys ] [ -o offset ] [ -p password ]
 [ -r password ] [ -s filename ] [ -hvV ] source
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 06-windows-artifact-libs
-bdeinfo -V
-# from cyberlab 06-windows-artifact-libs
-bdeinfo exercise/bitlocker.raw
 ```
 
 ## Options

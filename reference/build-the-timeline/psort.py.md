@@ -21,18 +21,6 @@ psort.py [-h] [--troubles] [-V] [--analysis PLUGIN_LIST]
 [--status_view_interval SECONDS] [--slice DATE_TIME]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 03-timeline-analysis
-psort.py --version
-# from cyberlab 03-timeline-analysis
-psort.py -o l2tcsv -w /tmp/timeline.csv /tmp/case.plaso
-# from cyberlab 49-intrusion-timeline-case
-psort.py -o l2tcsv -w super_timeline.csv timeline.plaso "date > '2024-01-10 00:00:00' AND date < '2024-01-12 00:00:00'"
-```
-
 ## Options
 
 All 59 options parsed from the captured help text; 4 reviewed with usage guidance.

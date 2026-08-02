@@ -20,16 +20,6 @@ xortool [-h | --help]
 xortool --version
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 09-deobfuscation
-xortool --version
-# from cyberlab 09-deobfuscation
-xortool -c 20 exercise/encoded_payload.bin
-```
-
 ## Options
 
 All 20 options parsed from the captured help text; 4 reviewed with usage guidance.

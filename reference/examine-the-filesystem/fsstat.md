@@ -16,22 +16,6 @@ Report a filesystem's layout and parameters: type, block size, inode range, and 
 fsstat [-tvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] image
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-fsstat -V
-# from cyberlab 01-disk-forensics
-fsstat -o 2048 exercise/sample.dd
-# from cyberlab 01-disk-forensics
-fsstat -o 0 exercise/sample.dd | grep -Ei "file system type|sector size|cluster size"
-# from cyberlab 22-sleuthkit-mastery
-fsstat -o 2048 exercise/practice.dd
-# from cyberlab 51-linux-triage-workflow
-fsstat -o 2048 disk.raw
-```
-
 ## Options
 
 All 10 options parsed from the captured help text; 9 reviewed with usage guidance.

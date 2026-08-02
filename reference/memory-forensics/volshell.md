@@ -21,10 +21,6 @@ volshell [-h] [-c CONFIG] [-e EXTEND] [-p PLUGIN_DIRS] [-s SYMBOL_DIRS]
 [--stackers [STACKERS ...]]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 38 options parsed from the captured help text; 21 reviewed with usage guidance.

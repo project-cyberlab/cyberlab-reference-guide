@@ -21,10 +21,6 @@ volatility3 [-h] [-c CONFIG] [--parallelism [{processes,threads,off}]]
 [--filters FILTERS] [--hide-columns [HIDE_COLUMNS ...]]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 35 options parsed from the captured help text; 33 reviewed with usage guidance.

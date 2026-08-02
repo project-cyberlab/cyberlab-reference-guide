@@ -8,20 +8,12 @@
 
 ## Purpose
 
-Invalid argument: ewfmount
+Use ewfmount to mount an Expert Witness Compression Format (EWF) image file
 
 ## Synopsis
 
 ```
 ewfmount [ -f format ] [ -X extended_options ] [ -hvV ] image mount_point
-```
-
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 57-forensic-acquisition
-sudo ewfmount /evidence/case01.E01 /mnt/ewf
 ```
 
 ## Options

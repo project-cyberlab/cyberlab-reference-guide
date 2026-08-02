@@ -19,18 +19,6 @@ scalpel [-b] [-c <config file>] [-d] [-h|V] [-i <file>]
 <imgfile> [<imgfile>] ...
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 05-file-carving
-scalpel -V
-# from cyberlab 05-file-carving
-scalpel -c /etc/scalpel/scalpel.conf -o /tmp/scalpel_out exercise/sample.dd
-# from cyberlab 05-file-carving
-scalpel -c /etc/scalpel/scalpel.conf -o /tmp/ak_scalpel exercise/sample.dd
-```
-
 ## Options
 
 All 17 options parsed from the captured help text. The final column is filled in by review.

@@ -16,10 +16,6 @@ Print sequences of printable characters found in a binary file.
 strings [option(s)] [file(s)]
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 14 options parsed from the captured help text; 3 reviewed with usage guidance.

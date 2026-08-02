@@ -16,10 +16,6 @@ identified for some reason
 regipy-dump [OPTIONS] HIVE_PATH
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 18 options parsed from the captured help text. The final column is filled in by review.

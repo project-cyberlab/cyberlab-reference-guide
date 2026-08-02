@@ -231,9 +231,9 @@ is written from memory. Sources are listed at the end.
 | Tool | Command(s) | Purpose |
 |---|---|---|
 | Anomy | `anomy` | A wrapper around wget, ssh, sftp, ftp, and telnet to route these connections through Tor to anonymize your traffic. |
-| [cURL](../reference/report-support/curl.md) | [`curl`](../reference/report-support/curl.md) | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
+| cURL | `curl` | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
 | EPIC IRC Client | `epic5` | Examine IRC activities with this IRC client. |
-| GNU Wget | [`wget`](../reference/report-support/wget.md) | Interact with servers via HTTP, HTTPS, FTP, and FTPS using this command-line tool. |
+| GNU Wget | `wget` | Interact with servers via HTTP, HTTPS, FTP, and FTPS using this command-line tool. |
 | netcat | `nc` | Read and write data across network connections. |
 | thug | — | Examine suspicious website using this low-interaction honeyclient. |
 | tor | — | Obfuscate your origins by routing traffic through a network of anonymizing nodes. |
@@ -297,7 +297,7 @@ is written from memory. Sources are listed at the end.
 |---|---|---|
 | 7-Zip | [`7za`](../reference/malware-triage-static/7za.md) | Compress and decompress files using a variety of algorithms. |
 | cabextract | — | Extract Microsoft cabinet (cab) files. |
-| [cURL](../reference/report-support/curl.md) | [`curl`](../reference/report-support/curl.md) | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
+| cURL | `curl` | Interact with servers via supported protocols, including HTTP, HTTPS, FTP, IMAP, etc. using this command-line tool. |
 | Docker | — | Run and manage containers. |
 | Firefox | `firefox` | Web browser. |
 | GNOME Calculator | `galculator` | Calculator. |

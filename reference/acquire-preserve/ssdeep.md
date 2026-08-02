@@ -16,24 +16,6 @@ Compute Context Triggered Piecewise Hashes (CTPH), also known as fuzzy hashes.
 ssdeep [-m file] [-k file] [-dpgvrsblcxa] [-t val] [-h|-V] [FILES]
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 08-malware-static-triage
-ssdeep -V
-# from cyberlab 08-malware-static-triage
-ssdeep exercise/sample.bin
-# from cyberlab 32-remnux-static-triage
-ssdeep sample.exe > baseline.txt
-# from cyberlab 32-remnux-static-triage
-ssdeep -m baseline.txt sample_mod.exe
-# from cyberlab 32-remnux-static-triage
-ssdeep exercise/sample.exe > exercise/baseline.txt
-# from cyberlab 32-remnux-static-triage
-ssdeep -m exercise/baseline.txt exercise/sample_mod.exe
-```
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

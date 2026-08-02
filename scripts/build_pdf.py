@@ -34,8 +34,10 @@ SECTIONS = [
     # The capability index is the primary entry point, so it comes before the
     # rationale -- in the field you want the lookup, not the design notes.
     ("Capability Index", ROOT / "reference" / "INDEX.md"),
-    ("The Format", ROOT / "docs" / "FORMAT.md"),
-    ("Roadmap", ROOT / "docs" / "PLAN.md"),
+    # docs/FORMAT.md and docs/PLAN.md are deliberately NOT here. The roadmap,
+    # the phase list and the risk table are about building the guide, not about
+    # using it, and in a field reference they are pages an analyst pays for and
+    # never reads. They stay in the repository, where that context belongs.
     # The kit index: VM -> category -> tool. Long, but it is the "what do I
     # have?" half of the guide and has to be carryable in the field too.
     ("Kit Tool List", ROOT / "catalog" / "KIT-TOOLS.md"),
@@ -56,8 +58,6 @@ def slug(text: str) -> str:
 INLINED = {
     "README.md": "overview",
     "reference/INDEX.md": "capability-index",
-    "docs/FORMAT.md": "the-format",
-    "docs/PLAN.md": "roadmap",
     "catalog/KIT-TOOLS.md": "kit-tool-list",
 }
 
@@ -124,7 +124,13 @@ def strip_placeholders(md_text: str) -> str:
                 j += 1
             meaningful = [b for b in body
                           if b.strip() and not re.match(r"^_TODO:.*_$", b.strip())]
-            if not meaningful:
+            has_placeholder = any(re.match(r"^_TODO:.*_$", b.strip()) for b in body)
+            # Drop the heading only when a placeholder is the ONLY thing under
+            # it. A heading whose body is empty because a subsection follows is
+            # a real heading -- removing it deletes the anchor every link to
+            # that section depends on, which is how the capability index's
+            # phase links were silently broken.
+            if not meaningful and has_placeholder:
                 i = j                      # drop heading and placeholder together
                 continue
             out.append(line)

@@ -16,20 +16,6 @@ Find and extract embedded files and filesystems inside a binary blob or firmware
 binwalk [OPTIONS] [FILE1] [FILE2] [FILE3] ...
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 33-binwalk-firmware
-binwalk --help | head -n 3
-# from cyberlab 33-binwalk-firmware
-binwalk firmware.bin
-# from cyberlab 33-binwalk-firmware
-binwalk -e firmware.bin
-# from cyberlab 33-binwalk-firmware
-binwalk -E firmware.bin
-```
-
 ## Options
 
 All 102 options parsed from the captured help text; 8 reviewed with usage guidance.

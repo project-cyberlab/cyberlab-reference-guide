@@ -16,10 +16,6 @@ Bulk-export files from an image to a directory.
 tsk_recover [-vVae] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o sector_offset] [-P pooltype] [-B pool_volume_block] [-d dir_inum] image [image] output_dir
 ```
 
-## Common invocations
-
-_TODO: up to 8 task-titled invocations._
-
 ## Options
 
 All 11 options parsed from the captured help text; 6 reviewed with usage guidance.

@@ -17,16 +17,6 @@ photorec [/log] [/debug] [/d recup_dir] [file.dd|file.e01|device]
 photorec /version
 ```
 
-## Common invocations
-
-<!-- candidates mined from cyberlab; verify each flag against the options table below before treating as reviewed -->
-```
-# from cyberlab 01-disk-forensics
-photorec /version
-# from cyberlab 01-disk-forensics
-photorec /log /d /tmp/carved /cmd exercise/sample.dd partition_none,options,mode_ext2,fileopt,everything,enable,search
-```
-
 ## Options
 
 All 2 options parsed from the captured help text. The final column is filled in by review.
