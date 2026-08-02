@@ -61,4 +61,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`wget`](../report-support/wget.md)
+`wget`

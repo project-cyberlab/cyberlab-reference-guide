@@ -36,6 +36,20 @@ if cf.exists():
     CANDS = json.loads(cf.read_text(encoding="utf-8"))["tools"]
 
 
+# Base-system utilities that are present on every Linux install and are not
+# what any of these platforms is known for. An analyst reference documents the
+# analyst tooling; nobody reaches for this guide to learn `less`.
+#
+# Deliberately conservative. Tools that are generic Unix but genuinely part of
+# a forensic workflow stay: file, strings, xxd, dd, md5sum, sha256sum, ssdeep,
+# unzip and 7za all earn their place in triage.
+OUT_OF_SCOPE = {
+    "less", "pager", "sensible-pager",   # also the only captures carrying
+                                         # man-style overstrike garbage
+    "grep", "stat", "curl", "wget",
+}
+
+
 def slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 

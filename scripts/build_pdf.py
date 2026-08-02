@@ -8,6 +8,7 @@ Pipeline: markdown -> one self-contained HTML (print CSS + generated contents)
 -> PDF via headless Edge/Chrome. No network, no LaTeX.
 """
 from __future__ import annotations
+import base64
 import html
 import re
 import shutil
@@ -97,12 +98,73 @@ def rewrite_href(href: str, src: Path) -> str:
     return f"{REPO_URL}/{rel}" + (f"#{frag}" if frag else "")
 
 
+def strip_placeholders(md_text: str) -> str:
+    """Drop unwritten sections rather than printing scaffolding at a reader.
+
+    Pages carry `_TODO: ..._` markers where curation has not happened yet. They
+    are the right thing in the source -- the linter counts them, so the debt is
+    visible and cannot be forgotten -- but printing "TODO: operational traps"
+    in a field guide tells the reader nothing except that the page is
+    unfinished. A shorter honest page is better than a padded one.
+
+    Only the placeholder and its now-empty heading are removed; a section with
+    real content is untouched.
+    """
+    lines = md_text.splitlines()
+    out: list[str] = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if re.match(r"^#{2,3} ", line):
+            # Look ahead: does this section contain anything but a placeholder?
+            j = i + 1
+            body: list[str] = []
+            while j < len(lines) and not re.match(r"^#{2,3} ", lines[j]):
+                body.append(lines[j])
+                j += 1
+            meaningful = [b for b in body
+                          if b.strip() and not re.match(r"^_TODO:.*_$", b.strip())]
+            if not meaningful:
+                i = j                      # drop heading and placeholder together
+                continue
+            out.append(line)
+            out.extend(b for b in body if not re.match(r"^_TODO:.*_$", b.strip()))
+            i = j
+            continue
+        out.append(line)
+        i += 1
+    return "\n".join(out)
+
+
 def fix_links(html_fragment: str, src: Path) -> str:
     return re.sub(
         r'href="([^"]*)"',
         lambda m: f'href="{html.escape(rewrite_href(html.unescape(m.group(1)), src), quote=True)}"',
         html_fragment,
     )
+
+
+def embed_images(html_fragment: str, src: Path) -> str:
+    """Inline screenshots as data URIs.
+
+    Image paths are written relative to the markdown file, but the HTML is
+    rendered from build/, so they resolve a level too high and every screenshot
+    comes out broken. Embedding sidesteps the path problem entirely and makes
+    the PDF self-contained, which matters because it is downloaded on its own,
+    away from the repository the images live in.
+    """
+    def repl(m: re.Match) -> str:
+        raw = html.unescape(m.group(1))
+        if raw.startswith(("http://", "https://", "data:")):
+            return m.group(0)
+        img = (src.parent / raw).resolve()
+        if not img.exists() or img.suffix.lower() not in (".png", ".jpg", ".jpeg", ".gif"):
+            return m.group(0)
+        mime = "image/png" if img.suffix.lower() == ".png" else "image/jpeg"
+        b64 = base64.b64encode(img.read_bytes()).decode("ascii")
+        return f'src="data:{mime};base64,{b64}"'
+
+    return re.sub(r'src="([^"]*)"', repl, html_fragment)
 
 
 CSS = """
@@ -383,7 +445,7 @@ def render_html(tool_pages: list[Path], pages: dict[str, int]) -> str:
         anchor = slug(title)
         toc.append(f'<li><a href="#{anchor}">{html.escape(title)}</a>{pg(anchor)}</li>')
         body.append(f'<div class="section" id="{anchor}">'
-                    f'{fix_links(convert(path.read_text(encoding="utf-8")), path)}</div>')
+                    f'{embed_images(fix_links(convert(strip_placeholders(path.read_text(encoding="utf-8"))), path), path)}</div>')
 
     if tool_pages:
         toc.append(f'<li><a href="#reference">Tool Reference</a>{pg("reference")}<ul>')
@@ -405,7 +467,7 @@ def render_html(tool_pages: list[Path], pages: dict[str, int]) -> str:
                 toc.append(f'<li><a href="#{anchor}">{html.escape(p.stem)}</a>'
                            f'{pg(anchor)}</li>')
                 body.append(f'<div class="section" id="{anchor}">'
-                            f'{fix_links(convert(p.read_text(encoding="utf-8")), p)}</div>')
+                            f'{embed_images(fix_links(convert(strip_placeholders(p.read_text(encoding="utf-8"))), p), p)}</div>')
             toc.append("</ul>")
         toc.append("</ul></li>")
         toc.append(f'<li><a href="#tool-index">Alphabetical Tool Index</a>'
