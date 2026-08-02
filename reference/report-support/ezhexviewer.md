@@ -24,4 +24,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`xxd`](../examine-the-filesystem/xxd.md), `less`
+[`xxd`](../examine-the-filesystem/xxd.md), [`less`](../report-support/less.md)

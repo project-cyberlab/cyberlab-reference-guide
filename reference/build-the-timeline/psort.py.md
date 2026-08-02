@@ -59,7 +59,7 @@ All 59 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `-d` | — | Enable debug output. |  |
 | `--debug` | — | Enable debug output. |  |
 | `-q` | — | Disable informational output. | Quiet, for scripted runs. |
-| `--quiet` | — | Disable informational output. |  |
+| `--quiet` | — | Disable informational output. | Quiet, for scripted runs. |
 | `-u` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
 | `--unattended` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
 | `--status_view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". |  |
@@ -88,10 +88,10 @@ All 59 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `--output_time_zone` | TIME_ZONE | time zone of date and time values written to the output, if supported by the output format. Use "list" to see a list of available time zones. Output formats that support an output time zone are: dynam |  |
 | `--output-time-zone` | TIME_ZONE | time zone of date and time values written to the output, if supported by the output format. Use "list" to see a list of available time zones. Output formats that support an output time zone are: dynam |  |
 | `-o` | FORMAT | The output format. Use "-o list" to see a list of available output formats. | Output format — `l2tcsv`, `dynamic`, `json`, or a timeline tool. |
-| `--output_format` | FORMAT | The output format. Use "-o list" to see a list of available output formats. |  |
-| `--output-format` | FORMAT | The output format. Use "-o list" to see a list of available output formats. |  |
+| `--output_format` | FORMAT | The output format. Use "-o list" to see a list of available output formats. | Output format — `l2tcsv`, `dynamic`, `json`, or a timeline tool. |
+| `--output-format` | FORMAT | The output format. Use "-o list" to see a list of available output formats. | Output format — `l2tcsv`, `dynamic`, `json`, or a timeline tool. |
 | `-w` | OUTPUT_FILE | Output filename. | Write output to a file rather than stdout. |
-| `--write` | OUTPUT_FILE | Output filename. |  |
+| `--write` | OUTPUT_FILE | Output filename. | Write output to a file rather than stdout. |
 | `--fields` | FIELDS | Defines which fields should be included in the output. |  |
 | `--profilers` | PROFILERS_LIST | List of profilers to use by the tool. This is a comma separated list where each entry is the name of a profiler. Use "--profilers list" to list the available profilers. |  |
 | `--profiling_directory` | DIRECTORY | Path to the directory that should be used to store the profiling sample files. By default the sample files are stored in the current working directory. |  |

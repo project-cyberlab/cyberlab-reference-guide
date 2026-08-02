@@ -51,7 +51,7 @@ All 69 options parsed from the captured help text; 58 reviewed with usage guidan
 | `-C` | arg | Size of context window reported in bytes (default: 16) | Bytes of context stored around each hit. Raise it when a bare match is not enough to judge relevance. |
 | `--context_window` | arg | Size of context window reported in bytes (default: 16) | Bytes of context stored around each hit. |
 | `-d` | — | enable debug-level diagnostic logging | Debug-level diagnostic logging. |
-| `--debug` | — | enable debug-level diagnostic logging |  |
+| `--debug` | — | enable debug-level diagnostic logging | Debug-level diagnostic logging. |
 | `-E` | arg | disable all scanners except the one specified. Same as -x all -E scanner. | Run exactly one scanner and disable the rest. The fastest way to answer a single question instead of a full sweep. |
 | `--enable_exclusive` | arg | disable all scanners except the one specified. Same as -x all -E scanner. | Run exactly one scanner and disable the rest. |
 | `-e` | arg | enable a scanner (can be repeated) | Enable a scanner that is off by default, repeatable. |
@@ -122,4 +122,4 @@ All 69 options parsed from the captured help text; 58 reviewed with usage guidan
 
 ## See also
 
-[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), `grep`, [`xxd`](../examine-the-filesystem/xxd.md)
+[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md)

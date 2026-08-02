@@ -51,4 +51,4 @@ All 14 options parsed from the captured help text; 5 reviewed with usage guidanc
 
 ## See also
 
-[`ils`](../examine-the-filesystem/ils.md), [`file`](../examine-the-filesystem/file.md), `stat`
+[`ils`](../examine-the-filesystem/ils.md), [`file`](../examine-the-filesystem/file.md), [`stat`](../examine-the-filesystem/stat.md)

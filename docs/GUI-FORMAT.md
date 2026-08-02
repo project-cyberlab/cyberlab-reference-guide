@@ -103,6 +103,41 @@ Requirements:
   version in the caption matches the version in the header.
 - Stored under `capture/gui/<tool>/` alongside the tree dump that backs it.
 - Caption names the window and the control being exercised.
+- **Show the tool doing something.** An empty main window documents the layout
+  and nothing else. Launch the tool against a sample so the panes hold real
+  output — a detected packer, a parsed header, a computed hash. The sample must
+  be benign; nothing in this pipeline hands live malware to a tool
+  automatically, and a clean binary exercises the same interface.
+
+### Where screenshots may come from
+
+Ours first, always. A capture from the kit's own build needs no vetting: the
+version is known, the theme and OS are ours, there is no watermark, no licence
+question and no third party's private data in the frame. One reboot captures
+the whole FLARE toolset, which is cheaper than assessing a single borrowed
+image.
+
+A screenshot from a reputable external source is acceptable **only** for a tool
+we cannot run ourselves — a GUI on a VM with no desktop session, or a web
+console — and only after it passes every one of these:
+
+1. the version shown matches the version in the kit, or the difference is stated
+2. the source is the vendor, the project's own documentation, or its repository
+3. the licence permits reuse, and the source is cited in `capture/SOURCES.md`
+4. no watermark, no third-party branding, no personal or customer data
+5. the controls visible in it match the control tree we captured, where we have one
+6. it illustrates the task the surrounding text describes, not a different one
+
+Item 5 is checked by reading the image, not by glancing at it. Run it through
+the 7B vision model on rick's 4090 and have it enumerate what is actually on
+screen — window title, version string, every visible control and label — then
+diff that against the control tree. Repeat the pass until it is stable; a
+single look is how a wrong-version screenshot gets through. If the model
+cannot resolve the detail well enough to enumerate controls, the image is not
+good enough to publish.
+
+An external screenshot is illustration, never evidence: it can never satisfy
+item 6 of §1, because only a tree dump from the running application can.
 
 Two capture paths exist, and they have different reach:
 

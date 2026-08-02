@@ -53,4 +53,4 @@ All 19 options parsed from the captured help text; 18 reviewed with usage guidan
 
 ## See also
 
-[`fls`](../examine-the-filesystem/fls.md), [`ffind`](../examine-the-filesystem/ffind.md), [`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`istat`](../examine-the-filesystem/istat.md), [`file`](../examine-the-filesystem/file.md), `stat`
+[`fls`](../examine-the-filesystem/fls.md), [`ffind`](../examine-the-filesystem/ffind.md), [`tsk_recover`](../examine-the-filesystem/tsk_recover.md), [`istat`](../examine-the-filesystem/istat.md), [`file`](../examine-the-filesystem/file.md), [`stat`](../examine-the-filesystem/stat.md)

@@ -41,7 +41,7 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 | `-R` | str | Scan target file(s) for the specified sequence of bytes |  |
 | `--raw` | str | Scan target file(s) for the specified sequence of bytes |  |
 | `-A` | — | Scan target file(s) for common executable opcode signatures | Scan for executable opcodes to identify architecture. |
-| `--opcodes` | — | Scan target file(s) for common executable opcode signatures |  |
+| `--opcodes` | — | Scan target file(s) for common executable opcode signatures | Scan for executable opcodes to identify architecture. |
 | `-m` | file | Specify a custom magic file to use |  |
 | `--magic` | file | Specify a custom magic file to use |  |
 | `-b` | — | Disable smart signature keywords |  |
@@ -49,19 +49,19 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 | `-I` | — | Show results marked as invalid |  |
 | `--invalid` | — | Show results marked as invalid |  |
 | `-x` | str | Exclude results that match <str> | Exclude signatures matching this string, to cut false hits. |
-| `--exclude` | str | Exclude results that match <str> |  |
+| `--exclude` | str | Exclude results that match <str> | Exclude signatures matching this string, to cut false hits. |
 | `-y` | str | Only show results that match <str> | Only report signatures matching this string. |
-| `--include` | str | Only show results that match <str> |  |
+| `--include` | str | Only show results that match <str> | Only report signatures matching this string. |
 | `-e` | — | Automatically extract known file types | Extract what is found, rather than only listing it. |
-| `--extract` | — | Automatically extract known file types |  |
+| `--extract` | — | Automatically extract known file types | Extract what is found, rather than only listing it. |
 | `-D` | type[:ext[:cmd]] | Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd> |  |
 | `--dd` | type[:ext[:cmd]] | Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd> |  |
 | `-M` | — | Recursively scan extracted files | Recurse into extracted files (matryoshka) — for nested firmware. |
-| `--matryoshka` | — | Recursively scan extracted files |  |
+| `--matryoshka` | — | Recursively scan extracted files | Recurse into extracted files (matryoshka) — for nested firmware. |
 | `-d` | int | Limit matryoshka recursion depth (default: 8 levels deep) | Limit recursion depth; unbounded `-M` can explode. |
-| `--depth` | int | Limit matryoshka recursion depth (default: 8 levels deep) |  |
+| `--depth` | int | Limit matryoshka recursion depth (default: 8 levels deep) | Limit recursion depth; unbounded `-M` can explode. |
 | `-C` | str | Extract files/folders to a custom directory (default: current working directory) | Choose the output directory for extractions. |
-| `--directory` | str | Extract files/folders to a custom directory (default: current working directory) |  |
+| `--directory` | str | Extract files/folders to a custom directory (default: current working directory) | Choose the output directory for extractions. |
 | `-j` | int | Limit the size of each extracted file |  |
 | `--size` | int | Limit the size of each extracted file |  |
 | `-n` | int | Limit the number of extracted files |  |
@@ -77,7 +77,7 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 | `-V` | — | Extract into sub-directories named by the offset |  |
 | `--subdirs` | — | Extract into sub-directories named by the offset |  |
 | `-E` | — | Calculate file entropy | Entropy analysis — the fast way to spot encryption or compression. |
-| `--entropy` | — | Calculate file entropy |  |
+| `--entropy` | — | Calculate file entropy | Entropy analysis — the fast way to spot encryption or compression. |
 | `-F` | — | Use faster, but less detailed, entropy analysis |  |
 | `--fast` | — | Use faster, but less detailed, entropy analysis |  |
 | `-J` | — | Save plot as a PNG |  |

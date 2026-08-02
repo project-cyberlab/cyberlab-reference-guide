@@ -95,4 +95,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`istat`](../examine-the-filesystem/istat.md), [`ils`](../examine-the-filesystem/ils.md), `stat`, [`die`](../malware-triage-static/die.md), [`diec`](../malware-triage-static/diec.md)
+[`istat`](../examine-the-filesystem/istat.md), [`ils`](../examine-the-filesystem/ils.md), [`stat`](../examine-the-filesystem/stat.md), [`die`](../malware-triage-static/die.md), [`diec`](../malware-triage-static/diec.md)

@@ -39,13 +39,13 @@ All 20 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `-x` | — | input is hex-encoded str |  |
 | `--hex` | — | input is hex-encoded str |  |
 | `-l` | LEN | length of the key | Fix the key length when you already know it. |
-| `--key-length` | LEN | length of the key |  |
+| `--key-length` | LEN | length of the key | Fix the key length when you already know it. |
 | `-m` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
-| `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] |  |
+| `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
 | `-c` | CHAR | most frequent char (one char or hex code) | Give the most frequent character of the plaintext — usually `20` (space) for text, `00` for binaries. This is the flag that makes or breaks the attack. |
-| `--char` | CHAR | most frequent char (one char or hex code) |  |
+| `--char` | CHAR | most frequent char (one char or hex code) | Give the most frequent character of the plaintext — usually `20` (space) for text, `00` for binaries. This is the flag that makes or breaks the attack. |
 | `-b` | — | brute force all possible most frequent chars | Brute-force the most frequent character rather than guessing. |
-| `--brute-chars` | — | brute force all possible most frequent chars |  |
+| `--brute-chars` | — | brute force all possible most frequent chars | Brute-force the most frequent character rather than guessing. |
 | `-o` | — | same as -b but will only check printable chars |  |
 | `--brute-printable` | — | same as -b but will only check printable chars |  |
 | `-f` | — | filter outputs based on the charset |  |

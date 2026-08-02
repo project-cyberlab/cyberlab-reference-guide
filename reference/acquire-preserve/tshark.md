@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Read, filter and dissect network captures from the command line.
+Wireshark's command line: capture, filter, dissect and export packet data, including fields for a timeline.
 
 ## Synopsis
 
@@ -40,49 +40,49 @@ tshark -r exercise/sample.pcap -Y "http.request" -T fields -e http.host -e http.
 
 ## Options
 
-All 75 options parsed from the captured help text; 12 reviewed with usage guidance.
+All 75 options parsed from the captured help text; 19 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-i` | interface | name or idx of interface (def: first non-loopback) | Capture live from an interface instead of reading a file. |
-| `--interface` | interface | name or idx of interface (def: first non-loopback) |  |
-| `-f` | capture filter | packet filter in libpcap filter syntax | Apply a *capture* filter (BPF syntax) before packets are stored. |
-| `-s` | snaplen | packet snapshot length (def: appropriate maximum) |  |
-| `--snapshot-length` | snaplen | packet snapshot length (def: appropriate maximum) |  |
-| `-p` | — | don't capture in promiscuous mode |  |
-| `--no-promiscuous-mode` | — | don't capture in promiscuous mode |  |
-| `-I` | — | capture in monitor mode, if available |  |
-| `--monitor-mode` | — | capture in monitor mode, if available |  |
-| `-B` | buffer size | size of kernel buffer (def: 2MB) |  |
-| `--buffer-size` | buffer size | size of kernel buffer (def: 2MB) |  |
-| `-y` | link type | link layer type (def: first appropriate) |  |
-| `--linktype` | link type | link layer type (def: first appropriate) |  |
-| `-D` | — | print list of interfaces and exit |  |
-| `--list-interfaces` | — | print list of interfaces and exit |  |
-| `-L` | — | print list of link-layer types of iface and exit |  |
-| `--list-data-link-types` | — | print list of link-layer types of iface and exit |  |
+| `-i` | interface | name or idx of interface (def: first non-loopback) | Capture live from an interface instead. Needs capture rights, and on a busy link a live dissect will drop packets. |
+| `--interface` | interface | name or idx of interface (def: first non-loopback) | Capture live from an interface instead. Needs capture rights, and on a busy link a live dissect will drop packets. |
+| `-f` | capture filter | packet filter in libpcap filter syntax | **Capture** filter, in BPF syntax. Applied before packets are written, so what it drops is gone forever. |
+| `-s` | snaplen | packet snapshot length (def: appropriate maximum) | Snapshot length; truncates each packet as it is captured. |
+| `--snapshot-length` | snaplen | packet snapshot length (def: appropriate maximum) | Snapshot length; truncates each packet as it is captured. |
+| `-p` | — | don't capture in promiscuous mode | Do not enter promiscuous mode. |
+| `--no-promiscuous-mode` | — | don't capture in promiscuous mode | Do not enter promiscuous mode. |
+| `-I` | — | capture in monitor mode, if available | Monitor mode, for capturing 802.11 management frames. |
+| `--monitor-mode` | — | capture in monitor mode, if available | Monitor mode, for capturing 802.11 management frames. |
+| `-B` | buffer size | size of kernel buffer (def: 2MB) | Kernel buffer size. Raise it when a fast link is dropping packets at capture time. |
+| `--buffer-size` | buffer size | size of kernel buffer (def: 2MB) | Kernel buffer size. Raise it when a fast link is dropping packets at capture time. |
+| `-y` | link type | link layer type (def: first appropriate) | Force the link-layer type. |
+| `--linktype` | link type | link layer type (def: first appropriate) | Force the link-layer type. |
+| `-D` | — | print list of interfaces and exit | List interfaces and exit — how you find the right `-i` value. |
+| `--list-interfaces` | — | print list of interfaces and exit | List interfaces and exit — how you find the right `-i` value. |
+| `-L` | — | print list of link-layer types of iface and exit | List the link-layer types an interface supports. |
+| `--list-data-link-types` | — | print list of link-layer types of iface and exit | List the link-layer types an interface supports. |
 | `--list-time-stamp-types` | — | print list of timestamp types for iface and exit |  |
-| `-c` | packet count | stop after n packets (def: infinite) | Stop after N packets — a fast way to sample a huge capture. |
-| `-a` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM KB files:NUM - stop after NUM files packets:NUM - stop after NUM packets |  |
-| `--autostop` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM KB files:NUM - stop after NUM files packets:NUM - stop after NUM packets |  |
-| `-b` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM KB files:NUM - ringbuffer: replace after NUM files packets:NUM - switch to next file after NUM packets in |  |
-| `--ring-buffer` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM KB files:NUM - ringbuffer: replace after NUM files packets:NUM - switch to next file after NUM packets in |  |
-| `-r` | infile | set the filename to read from (or '-' for stdin) | Read from a capture file — the normal forensic mode. |
-| `--read-file` | infile | set the filename to read from (or '-' for stdin) |  |
-| `-2` | — | perform a two-pass analysis | Two-pass analysis, so fields needing later context resolve. |
-| `-M` | packet count | perform session auto reset |  |
-| `-R` | read filter | packet Read filter in Wireshark display filter syntax (requires -2) |  |
-| `--read-filter` | read filter | packet Read filter in Wireshark display filter syntax (requires -2) |  |
-| `-Y` | display filter | packet displaY filter in Wireshark display filter syntax | Apply a *display* filter (Wireshark syntax) after dissection. |
-| `--display-filter` | display filter | packet displaY filter in Wireshark display filter syntax |  |
-| `-n` | — | disable all name resolutions (def: "mNd" enabled, or as set in preferences) | Disable name resolution. Also stops DNS lookups leaking from an evidence host — use it by default on an investigation. |
+| `-c` | packet count | stop after n packets (def: infinite) | Stop after N packets — the fast way to sample a huge file before committing to a full pass. |
+| `-a` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM KB files:NUM - stop after NUM files packets:NUM - stop after NUM packets | Autostop condition for a live capture: duration, filesize or file count. |
+| `--autostop` | autostop cond. | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM KB files:NUM - stop after NUM files packets:NUM - stop after NUM packets | Autostop condition for a live capture: duration, filesize or file count. |
+| `-b` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM KB files:NUM - ringbuffer: replace after NUM files packets:NUM - switch to next file after NUM packets in | Ring buffer: roll to a new file on time or size, so a long capture cannot fill the disk. |
+| `--ring-buffer` | ringbuffer opt. | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM KB files:NUM - ringbuffer: replace after NUM files packets:NUM - switch to next file after NUM packets in | Ring buffer: roll to a new file on time or size, so a long capture cannot fill the disk. |
+| `-r` | infile | set the filename to read from (or '-' for stdin) | Read a capture file. The safe default — analysis needs no privileges and cannot disturb the wire. |
+| `--read-file` | infile | set the filename to read from (or '-' for stdin) | Read a capture file. The safe default — analysis needs no privileges and cannot disturb the wire. |
+| `-2` | — | perform a two-pass analysis | Two-pass analysis, so fields that depend on later packets — reassembly, response times, stream indexes — are populated. |
+| `-M` | packet count | perform session auto reset | Reset dissector state every N packets, to bound memory on a very long capture. |
+| `-R` | read filter | packet Read filter in Wireshark display filter syntax (requires -2) | Read filter, which needs `-2`. Prefer `-Y` unless you know why you want this one. |
+| `--read-filter` | read filter | packet Read filter in Wireshark display filter syntax (requires -2) | Read filter, which needs `-2`. Prefer `-Y` unless you know why you want this one. |
+| `-Y` | display filter | packet displaY filter in Wireshark display filter syntax | **Display** filter, in Wireshark syntax. Applied after capture, so nothing is lost and it can be changed later. Confusing these two is the classic tshark mistake. |
+| `--display-filter` | display filter | packet displaY filter in Wireshark display filter syntax | **Display** filter, in Wireshark syntax. Applied after capture, so nothing is lost and it can be changed later. Confusing these two is the classic tshark mistake. |
+| `-n` | — | disable all name resolutions (def: "mNd" enabled, or as set in preferences) |  |
 | `-N` | name resolve flags | enable specific name resolution(s): "mnNtdv" |  |
 | `-H` | hosts file | read a list of entries from a hosts file, which will then be written to a capture file. (Implies -W n) |  |
 | `--enable-protocol` | proto_name | enable dissection of proto_name |  |
 | `--disable-protocol` | proto_name | disable dissection of proto_name |  |
 | `--enable-heuristic` | short_name | enable dissection of heuristic protocol |  |
 | `--disable-heuristic` | short_name | disable dissection of heuristic protocol |  |
-| `-w` | outfile\|- | write packets to a pcapng-format file named "outfile" (or '-' for stdout) | Write the (filtered) packets to a new capture file. |
+| `-w` | outfile\|- | write packets to a pcapng-format file named "outfile" (or '-' for stdout) | Write packets out rather than dissecting them, which is much faster when you only want a filtered subset. |
 | `--capture-comment` | comment | add a capture file comment, if supported |  |
 | `-C` | config profile | start with specified configuration profile |  |
 | `-F` | output file type | set the output file type, default is pcapng an empty "-F" option will list the file types |  |
@@ -91,18 +91,18 @@ All 75 options parsed from the captured help text; 12 reviewed with usage guidan
 | `-P` | — | print packet summary even when writing to a file |  |
 | `--print` | — | print packet summary even when writing to a file |  |
 | `-S` | separator | the line separator to print between packets |  |
-| `-x` | — | add output of hex and ASCII dump (Packet Bytes) | Hex and ASCII dump of packet contents. |
+| `-x` | — | add output of hex and ASCII dump (Packet Bytes) |  |
 | `--hexdump` | hexoption | add hexdump, set options for data source and ASCII dump all dump all data sources (-x default) frames dump only frame data source ascii include ASCII dump text (-x default) delimit delimit ASCII dump  |  |
 | `-j` | protocolfilter | protocols layers filter if -T ek\|pdml\|json selected (e.g. "ip ip.flags text", filter does not expand child nodes, unless child is specified also in the filter) |  |
 | `-J` | protocolfilter | top level protocol filter if -T ek\|pdml\|json selected (e.g. "http tcp", filter which expands all child nodes) |  |
-| `-e` | field | field to print if -Tfields selected (e.g. tcp.port, _ws.col.Info) this option can be repeated to print multiple fields | With `-T fields`, name each field to print. Repeatable. |
+| `-e` | field | field to print if -Tfields selected (e.g. tcp.port, _ws.col.Info) this option can be repeated to print multiple fields | Which field to print, repeatable. Only meaningful with `-T fields`, and the ordering is the column ordering. |
 | `-l` | — | flush standard output after each packet |  |
-| `-q` | — | be more quiet on stdout (e.g. when using statistics) | Suppress per-packet output, for use with `-z` statistics. |
+| `-q` | — | be more quiet on stdout (e.g. when using statistics) |  |
 | `-Q` | — | only log true errors to stderr (quieter than -q) |  |
 | `-g` | — | enable group read access on the output file(s) |  |
 | `-W` | n | Save extra information in the file, if supported. n = write network address resolution information |  |
 | `-U` | tap_name | PDUs export mode, see the man page for details |  |
-| `-z` | statistics | various statistics, see the man page for details | Run a statistics tap (conversations, endpoints, protocol tree). |
+| `-z` | statistics | various statistics, see the man page for details |  |
 | `--export-tls-session-keys` | keyfile | export TLS Session Keys to a file named "keyfile" |  |
 | `--color` | — | color output text similarly to the Wireshark GUI, requires a terminal with 24-bit color support Also supplies color attributes to pdml and psml formats (Note that attributes are nonstandard) |  |
 | `--no-duplicate-keys` | — | If -T json is specified, merge duplicate keys in an object into a single key with as value a json array containing all values |  |
@@ -122,9 +122,9 @@ All 75 options parsed from the captured help text; 12 reviewed with usage guidan
 
 ## Gotchas
 
-- **`-f` and `-Y` are different languages.** `-f` is BPF and applies at capture time; `-Y` is the Wireshark display filter and applies to a file. Passing display syntax to `-f` fails, sometimes silently.
-- Name resolution is on by default and will emit DNS queries from the analysis host. Use `-n` when touching evidence.
-- `-T fields` prints nothing useful without at least one `-e`.
+- Capture filters (`-f`) and display filters (`-Y`) use **different syntaxes** and apply at different times. `-f` discards packets permanently; `-Y` only hides them. Reaching for the wrong one is the most common way to destroy evidence with this tool.
+- Dissecting live on a busy link drops packets silently. Capture to a file first, analyse afterwards, whenever completeness matters.
+- `-T fields` prints nothing useful without `-e`. It is not an error, just empty output, which reads like the filter matched nothing.
 
 ## See also
 

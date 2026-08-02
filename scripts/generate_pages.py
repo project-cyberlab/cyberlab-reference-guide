@@ -279,10 +279,27 @@ def build_page(cmd: str, meta: dict) -> str:
         L += [note, "",
               "| Flag | Argument | What it does | When you would use it |",
               "|---|---|---|---|"]
+        # Many tools list a short and a long spelling of the same option as
+        # separate rows ("-c" and "--count"), carrying the identical captured
+        # description. Curating one and leaving the other blank means half the
+        # table is empty for no reason -- whichever spelling the reader looks
+        # up decides whether they get an answer. An identical description is
+        # the tool's own statement that these are one option, so the guidance
+        # is mirrored across them.
+        by_desc: dict[str, str] = {}
+        for o in opts:
+            key = re.sub(r"\s+", " ", o["desc"]).strip().lower()
+            g = when.get(o["flag"], "")
+            if key and g and key not in by_desc:
+                by_desc[key] = g
+
         for o in opts:
             d = re.sub(r"\s+", " ", o["desc"]).replace("|", "\\|").strip() or "—"
             a = (o["arg"] or "—").replace("|", "\\|")
-            w = when.get(o["flag"], "").replace("|", "\\|")
+            w = when.get(o["flag"], "")
+            if not w:
+                w = by_desc.get(re.sub(r"\s+", " ", o["desc"]).strip().lower(), "")
+            w = w.replace("|", "\\|")
             L.append(f"| `{o['flag']}` | {a} | {d[:200]} | {w} |")
         L.append("")
     else:

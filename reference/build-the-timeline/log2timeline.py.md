@@ -61,10 +61,10 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--skip_compressed_streams` | — | Skip processing file content within compressed streams, such as syslog.gz and syslog.bz2. |  |
 | `--skip-compressed-streams` | — | Skip processing file content within compressed streams, such as syslog.gz and syslog.bz2. |  |
 | `-f` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
-| `--filter-file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
-| `--filter_file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
-| `--file-filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
-| `--file_filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  |  |
+| `--filter-file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
+| `--filter_file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
+| `--file-filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
+| `--file_filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
 | `--hasher_file_size_limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. |  |
 | `--hasher-file-size-limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. |  |
 | `--hashers` | HASHER_LIST | Define a list of hashers to use by the tool. This is a comma separated list where each entry is the name of a hasher, such as "md5,sha256". "all" indicates that all hashers should be enabled. "none" d | Compute hashes during extraction, saving a second pass. |
@@ -80,14 +80,14 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--no_extract_winevt_resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. |  |
 | `--no-extract-winevt-resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. |  |
 | `-z` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
-| `--zone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT |  |
-| `--timezone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT |  |
+| `--zone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
+| `--timezone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
 | `--no_vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. |  |
 | `--no-vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. |  |
 | `--vss_only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. |  |
 | `--vss-only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. |  |
 | `--vss_stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | Also process Volume Shadow Copies — often where the pre-attack state survives. |
-| `--vss-stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val |  |
+| `--vss-stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | Also process Volume Shadow Copies — often where the pre-attack state survives. |
 | `-d` | — | Enable debug output. |  |
 | `--debug` | — | Enable debug output. |  |
 | `-q` | — | Disable informational output. |  |
@@ -103,7 +103,7 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--log_file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
 | `--log-file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
 | `--status_view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | Change progress display; `none` for clean logs. |
-| `--status-view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". |  |
+| `--status-view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | Change progress display; `none` for clean logs. |
 | `--status_view_file` | PATH | The name of the status view file. |  |
 | `--status-view-file` | PATH | The name of the status view file. |  |
 | `--status_view_interval` | SECONDS | Number of seconds to update the status view. |  |
@@ -134,7 +134,7 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--profiling_sample_rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). |  |
 | `--profiling-sample-rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). |  |
 | `--storage_file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | Where the .plaso output goes. |
-| `--storage-file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso |  |
+| `--storage-file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | Where the .plaso output goes. |
 | `--storage_format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite |  |
 | `--storage-format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite |  |
 | `--task_storage_format` | FORMAT | Format for task storage, the default is: sqlite. Supported options: redis, sqlite |  |

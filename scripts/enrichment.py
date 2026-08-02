@@ -1191,4 +1191,142 @@ ENRICHMENT: dict[str, dict] = {
             "search the file afterwards, when the answer has to be complete.",
         ],
     },
+
+    "MFTECmd": {
+        "purpose": "Parse NTFS metadata files — $MFT, $J, $Boot, $SDS, $I30 — "
+                   "into CSV or bodyfile, including entries for deleted files.",
+        "when": {
+            "-f": "The metadata file to parse. Required, and the file type is "
+                  "detected from its contents rather than its name.",
+            "-m": "Supply the $MFT alongside a $J. Without it the journal shows "
+                  "file names with no path, because the parent directory only "
+                  "exists in the $MFT.",
+            "--csv": "Write CSV to a directory. The normal output.",
+            "--csvf": "Override the generated CSV filename.",
+            "--json": "JSON output, for a pipeline.",
+            "--jsonf": "Override the generated JSON filename.",
+            "--body": "Bodyfile output, which is what `mactime` consumes — the "
+                      "bridge from NTFS metadata into a classic timeline.",
+            "--bodyf": "Override the generated bodyfile name.",
+            "--bdl": "Drive letter to record in the bodyfile. Required with "
+                     "`--body`, because a bodyfile path is meaningless without "
+                     "the volume it came from.",
+            "--blf": "Use LF rather than CRLF, when the output is going to a "
+                     "Unix toolchain.",
+            "--de": "Dump full detail for one entry, as `Entry` or `Entry-Seq`. "
+                    "The flag for interrogating a single suspicious file.",
+            "--fls": "List a directory's contents from the $MFT, for the entry "
+                     "given by `--de`.",
+            "--dd": "Directory to write an exported FILE record to.",
+            "--do": "Offset of the FILE record to dump, decimal or hex.",
+            "--ds": "Dump a security descriptor from $SDS by Id — how you get "
+                    "from a file to the ACL that was on it.",
+            "--dr": "Dump resident files out of the $MFT. Small files live "
+                    "entirely inside their MFT record, so this recovers content "
+                    "with no data runs to follow.",
+            "--ir": "Include resident data inline in the output rather than as "
+                    "separate files.",
+            "--re": "Restrict resident extraction to these extensions.",
+            "--rm": "Cap the size of resident data included.",
+            "--rs": "Recover slack space from FILE records. Old entries survive "
+                    "in the unused tail of a record, so this reaches deleted "
+                    "metadata that a straight parse skips.",
+            "--at": "Include all $STANDARD_INFORMATION timestamps rather than "
+                    "only those that differ from $FILE_NAME. Differences between "
+                    "the two attribute sets are the classic timestomping signal, "
+                    "so include them when that is the question.",
+            "--sn": "Include DOS 8.3 short names.",
+            "--fl": "Condensed file listing instead of the full attribute dump.",
+            "--vss": "Also parse every Volume Shadow Copy, which is where an "
+                     "older $MFT still holds entries the live one has reused.",
+            "--dedupe": "Drop duplicates by SHA-1 across the source and shadow "
+                        "copies. Use it whenever `--vss` is on.",
+            "--dt": "Custom timestamp format for the output.",
+        },
+        "gotchas": [
+            "$MFT entries are reused. A deleted file's record is overwritten by "
+            "the next file that needs it, so an entry describing a deleted file "
+            "may already belong to something else — check the sequence number "
+            "before asserting the two are the same file.",
+            "$STANDARD_INFORMATION timestamps are trivially forged; $FILE_NAME "
+            "timestamps are not, because they update only through the kernel. "
+            "`--at` is what lets you compare them, and a mismatch is the "
+            "strongest cheap indicator of timestomping.",
+            "Parsing a live volume's $MFT copied with a normal file copy will "
+            "fail — it is locked. Extract it with a forensic tool or from a "
+            "shadow copy.",
+        ],
+    },
+
+    "tshark": {
+        "purpose": "Wireshark's command line: capture, filter, dissect and "
+                   "export packet data, including fields for a timeline.",
+        "when": {
+            "-r": "Read a capture file. The safe default — analysis needs no "
+                  "privileges and cannot disturb the wire.",
+            "-i": "Capture live from an interface instead. Needs capture rights, "
+                  "and on a busy link a live dissect will drop packets.",
+            "-f": "**Capture** filter, in BPF syntax. Applied before packets are "
+                  "written, so what it drops is gone forever.",
+            "-Y": "**Display** filter, in Wireshark syntax. Applied after "
+                  "capture, so nothing is lost and it can be changed later. "
+                  "Confusing these two is the classic tshark mistake.",
+            "-R": "Read filter, which needs `-2`. Prefer `-Y` unless you know "
+                  "why you want this one.",
+            "-2": "Two-pass analysis, so fields that depend on later packets — "
+                  "reassembly, response times, stream indexes — are populated.",
+            "-T": "Output format. `fields` with `-e` is how you get CSV for a "
+                  "timeline; `json` and `ek` feed other tools.",
+            "-e": "Which field to print, repeatable. Only meaningful with "
+                  "`-T fields`, and the ordering is the column ordering.",
+            "-c": "Stop after N packets — the fast way to sample a huge file "
+                  "before committing to a full pass.",
+            "-a": "Autostop condition for a live capture: duration, filesize or "
+                  "file count.",
+            "-b": "Ring buffer: roll to a new file on time or size, so a long "
+                  "capture cannot fill the disk.",
+            "-w": "Write packets out rather than dissecting them, which is much "
+                  "faster when you only want a filtered subset.",
+            "-D": "List interfaces and exit — how you find the right `-i` value.",
+            "-L": "List the link-layer types an interface supports.",
+            "-s": "Snapshot length; truncates each packet as it is captured.",
+            "-p": "Do not enter promiscuous mode.",
+            "-I": "Monitor mode, for capturing 802.11 management frames.",
+            "-B": "Kernel buffer size. Raise it when a fast link is dropping "
+                  "packets at capture time.",
+            "-y": "Force the link-layer type.",
+            "-M": "Reset dissector state every N packets, to bound memory on a "
+                  "very long capture.",
+        },
+        "gotchas": [
+            "Capture filters (`-f`) and display filters (`-Y`) use **different "
+            "syntaxes** and apply at different times. `-f` discards packets "
+            "permanently; `-Y` only hides them. Reaching for the wrong one is "
+            "the most common way to destroy evidence with this tool.",
+            "Dissecting live on a busy link drops packets silently. Capture to a "
+            "file first, analyse afterwards, whenever completeness matters.",
+            "`-T fields` prints nothing useful without `-e`. It is not an error, "
+            "just empty output, which reads like the filter matched nothing.",
+        ],
+    },
+
+    "chainsaw": {
+        "purpose": "Hunt through Windows event logs with Sigma rules and "
+                   "built-in detection logic, at speed.",
+        "when": {
+            "--num-threads": "Cap the thread count. Defaults to every core, "
+                             "which is usually right on a dedicated analysis "
+                             "box and rude on a shared one.",
+            "--no-banner": "Suppress the banner, for clean output in a report or "
+                           "a pipeline.",
+        },
+        "gotchas": [
+            "The interesting options live on the subcommands — `hunt`, `search`, "
+            "`dump` — not at the top level captured here. Run "
+            "`chainsaw hunt --help` for the ones that matter.",
+            "Rules are not bundled with the binary. Without a Sigma rule set and "
+            "the mapping file, `hunt` runs and finds nothing, which looks "
+            "identical to a clean host.",
+        ],
+    },
 }
