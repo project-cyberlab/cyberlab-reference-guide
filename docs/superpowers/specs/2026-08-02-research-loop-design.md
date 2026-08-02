@@ -113,9 +113,37 @@ ladder cheapest-and-most-authoritative first:
 | 1 | Man page | Stripped from the container base; available at manpages.debian.org. Richer than `--help` — `fls -m` states its output feeds `mactime`, which is itself a "when" |
 | 2 | The tool's own documentation | REMnux docs, project README/wiki, the author's writing — Didier Stevens for the pdf tools, Eric Zimmerman for the EZ tools, the nmap book and NSE docs for nmap |
 | 3 | Workflow sources | SANS cheat sheets and posters, published DFIR write-ups |
+| 4 | **Training labs and walkthroughs** | University and vendor lab exercises, The DFIR Report, malware-traffic-analysis, guided investigations. These walk a reader through a scenario and tell them what to run — the scenario shape, not the definition shape |
 
-Tier 2 is where most real answers live, and it is the tier the previous
-attempt skipped entirely.
+Tier 2 is where most tool-level answers live, and it is the tier the previous
+attempt skipped entirely. Tier 4 is where most **flag-level** answers live,
+and it needs a different retrieval technique — see below.
+
+### 1a. Usage-in-context retrieval — the primary technique for flags
+
+Reference documentation defines a flag. A training lab *uses* it, and the
+prose around the command says why. So the query is not "what does `fls -s`
+do", it is **find this flag being used in a walkthrough and read the
+surrounding paragraph**.
+
+Validated 2026-08-02 against `fls`. A single usage-in-context search returned
+real scenario content for three flags:
+
+| Flag | What `--help` says | What the walkthrough gave |
+|---|---|---|
+| `-r` | recurse | Needed *together with* `-m` so the walk gathers every file rather than the top level |
+| `-m` | time machine format | Step one of a two-step timeline: `fls -m` writes the body file, `mactime` sorts and merges it |
+| `-s` | adjust times | **When you are correlating this host against other servers whose clocks disagree** |
+
+`-s` is the case that proves the premise. That is a real scenario a junior
+analyst needs, it is not derivable from `--help` by any amount of reasoning,
+and the cell would otherwise have stayed blank forever. The same search
+surfaced a university lab exercise — a literal guided training lab of the kind
+this tier is meant to find.
+
+This is therefore not a fallback tier. For flags it is the *primary* one, and
+the loop should query it first for flag-level work, reserving tiers 1–2 for
+what a flag mechanically does.
 
 Retrieval goes through rick's existing
 `~/work/night_loop/adapters/cyberlab_retrieval.py` — stdlib only, domain
