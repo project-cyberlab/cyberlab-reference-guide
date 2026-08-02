@@ -133,4 +133,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), [`xxd`](../examine-the-filesystem/xxd.md)
+[`rafind2`](../examine-the-filesystem/rafind2.md), [`strings`](../examine-the-filesystem/strings.md), [`xxd`](../examine-the-filesystem/xxd.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md)

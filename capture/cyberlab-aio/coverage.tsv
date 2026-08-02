@@ -134,7 +134,7 @@ braa	absent		0
 bridge	present	--help	337	"Option ""-version"" is unknown, try ""bridge help""."
 brxor.py	absent		0	
 bstrings	present	--help	3307	2026.5+6cca053120b10a1c5cb563e3574ec7b2e0e894e3
-bulk_extractor	absent		0	
+bulk_extractor	present	--help	8755	bulk_extractor 2.2.0-DEVELOP
 bunzip2	present	--help	1248	bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
 burp-suite-community-edition	absent		0	
 burpsuite	absent		0	

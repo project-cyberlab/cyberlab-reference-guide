@@ -61,4 +61,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`foremost`](../examine-the-filesystem/foremost.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md)
+[`foremost`](../examine-the-filesystem/foremost.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md)

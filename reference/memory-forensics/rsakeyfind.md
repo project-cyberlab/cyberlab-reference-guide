@@ -36,4 +36,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`aeskeyfind`](../memory-forensics/aeskeyfind.md)
+[`aeskeyfind`](../memory-forensics/aeskeyfind.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md)

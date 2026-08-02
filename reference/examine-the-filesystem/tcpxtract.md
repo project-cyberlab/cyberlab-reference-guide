@@ -53,4 +53,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpflow`](../network-analysis/tcpflow.md)
+[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`tcpflow`](../network-analysis/tcpflow.md)

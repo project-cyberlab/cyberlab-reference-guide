@@ -30,4 +30,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md)
+[`strings`](../examine-the-filesystem/strings.md), [`grep`](../examine-the-filesystem/grep.md), [`xxd`](../examine-the-filesystem/xxd.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md)

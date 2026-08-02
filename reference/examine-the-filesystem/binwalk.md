@@ -147,4 +147,4 @@ All 102 options parsed from the captured help text; 8 reviewed with usage guidan
 
 ## See also
 
-[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`upx`](../malware-triage-static/upx.md), [`die`](../malware-triage-static/die.md), [`diec`](../malware-triage-static/diec.md), [`7za`](../malware-triage-static/7za.md), [`unzip`](../malware-triage-static/unzip.md)
+[`foremost`](../examine-the-filesystem/foremost.md), [`scalpel`](../examine-the-filesystem/scalpel.md), `bulk_extractor`, [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`upx`](../malware-triage-static/upx.md), [`die`](../malware-triage-static/die.md), [`diec`](../malware-triage-static/diec.md), [`7za`](../malware-triage-static/7za.md)

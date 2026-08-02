@@ -456,6 +456,12 @@
       "via": "--help",
       "version": "2026.5+6cca053120b10a1c5cb563e3574ec7b2e0e894e3"
     },
+    "bulk_extractor": {
+      "image": "cyberlab-aio",
+      "bytes": 8755,
+      "via": "--help",
+      "version": "bulk_extractor 2.2.0-DEVELOP"
+    },
     "bunzip2": {
       "image": "cyberlab-aio",
       "bytes": 1248,
@@ -5972,7 +5978,6 @@
     "box-js",
     "braa",
     "brxor.py",
-    "bulk_extractor",
     "burp-suite-community-edition",
     "burpsuite",
     "bytecode-viewer",

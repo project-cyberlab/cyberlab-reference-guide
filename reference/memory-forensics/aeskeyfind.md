@@ -42,4 +42,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`rsakeyfind`](../memory-forensics/rsakeyfind.md)
+[`rsakeyfind`](../memory-forensics/rsakeyfind.md), `bulk_extractor`

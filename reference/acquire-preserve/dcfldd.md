@@ -35,4 +35,4 @@ _TODO: operational traps._
 
 ## See also
 
-[`dc3dd`](../acquire-preserve/dc3dd.md), [`dd`](../acquire-preserve/dd.md), `ewfacquire`, [`affconvert`](../acquire-preserve/affconvert.md)
+[`dc3dd`](../acquire-preserve/dc3dd.md), [`dd`](../acquire-preserve/dd.md), [`ewfacquire`](../acquire-preserve/ewfacquire.md), [`affconvert`](../acquire-preserve/affconvert.md)

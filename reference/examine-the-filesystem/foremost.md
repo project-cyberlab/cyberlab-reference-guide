@@ -49,4 +49,4 @@ All 11 options parsed from the captured help text; 8 reviewed with usage guidanc
 
 ## See also
 
-[`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`tcpflow`](../network-analysis/tcpflow.md)
+[`scalpel`](../examine-the-filesystem/scalpel.md), [`binwalk`](../examine-the-filesystem/binwalk.md), [`bulk_extractor`](../examine-the-filesystem/bulk_extractor.md), [`tcpxtract`](../examine-the-filesystem/tcpxtract.md), [`tcpflow`](../network-analysis/tcpflow.md)
