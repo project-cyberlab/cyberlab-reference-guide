@@ -119,6 +119,32 @@ ANCHORS = {
 }
 
 
+
+def anchor_for(tool: str) -> str:
+    """Search terms for this tool, hand-written if we have them.
+
+    101 of the 147 mapped tools had no anchor and fell back to "forensics
+    DFIR analysis", which is generic enough to return anything. The tool's
+    capability in the guide's own taxonomy is a far better guess: `psort.py`
+    sits under building the timeline, `capinfos` under network analysis, and
+    those words are what a practitioner would actually type alongside the
+    tool name.
+    """
+    if tool in ANCHORS:
+        return ANCHORS[tool]
+    try:
+        import sys as _s
+        _s.path.insert(0, str(Path(__file__).resolve().parent))
+        from taxonomy import TAXONOMY
+        for _phase, caps in TAXONOMY.items():
+            for cap, cmds in caps:
+                if tool in cmds:
+                    return f"{cap} forensics"
+    except Exception:
+        pass
+    return "forensics DFIR analysis"
+
+
 def _deadline(fn, timeout: float, default):
     """Run fn with a hard wall-clock bound.
 
@@ -464,7 +490,7 @@ def corpus_for(tool: str, max_pages: int = 10) -> list[dict]:
     Built once per tool and cached on disk, so every one of a tool's flags is
     mined from the same corpus instead of running a fresh search per flag.
     """
-    anchor = ANCHORS.get(tool, "forensics DFIR analysis")
+    anchor = anchor_for(tool)
     pages: list[dict] = []
     seen: set[str] = set()
 

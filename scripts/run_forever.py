@@ -134,6 +134,18 @@ def main() -> int:
             print("pass timed out; pausing before the next round", flush=True)
             time.sleep(120)
 
+        # A round that finishes almost instantly did no work -- it means the
+        # pass exited early rather than researched anything. Spinning on that
+        # burns CPU and fills the log with rounds that gained nothing, which
+        # is what 5,600 one-second rounds looked like from the outside:
+        # perfectly healthy.
+        elapsed = (datetime.now() -
+                   datetime.fromisoformat(started)).total_seconds()
+        if elapsed < 20:
+            print(f"round finished in {elapsed:.0f}s -- nothing to do; "
+                  f"backing off", flush=True)
+            time.sleep(300)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -497,7 +497,20 @@ def main() -> int:
 
     tools = a.tools or ([a.tool] if a.tool else [])
     if a.auto:
-        tools = tools_needing_work(a.auto, set() if a.replace else already_done())
+        seen = set() if a.replace else already_done()
+        tools = tools_needing_work(a.auto, seen)
+        if not tools:
+            # Everything attempted at least once. Start over rather than
+            # exiting: the user's instruction is to iterate forever and
+            # repeats are fine, and a second attempt is genuinely different --
+            # better seeds, a warmer cache, search engines recovered from
+            # whatever suspended them last time.
+            #
+            # Returning nothing here made run_forever spin: enrich_loop exited
+            # in under a second, the runner immediately started another round,
+            # and it did that 5,600 times while appearing healthy.
+            print("all tools attempted; starting another pass over them")
+            tools = tools_needing_work(a.auto, set())
         print(f"auto-selected {len(tools)} tools: {', '.join(tools[:10])}"
               f"{' ...' if len(tools) > 10 else ''}")
     if not tools:
