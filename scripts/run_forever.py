@@ -111,7 +111,7 @@ def main() -> int:
         # never fill it. Repeating a tool is fine -- a later pass has better
         # seeds, a warmer cache and recovered search engines, so a second look
         # is not wasted work.
-        cmd = ["scripts/enrich_loop.py", "--auto", str(a.batch), "--append"]
+        cmd = ["scripts/enrich_loop.py", "--auto", str(a.batch)]
         if rnd % 2 == 0:
             cmd += ["--flags", "--limit-flags", "6"]
         out = run(cmd, timeout=10800)

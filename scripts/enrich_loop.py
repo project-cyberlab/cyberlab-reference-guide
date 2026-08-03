@@ -486,13 +486,18 @@ def main() -> int:
     ap.add_argument("--limit-flags", type=int, default=12)
     ap.add_argument("--auto", type=int, default=0,
                     help="pick this many tools that still need work")
-    ap.add_argument("--append", action="store_true",
-                    help="add to existing results instead of replacing")
+    # Accumulating is the default. It used to require --append, and a manual
+    # single-tool run without the flag silently destroyed the accumulated
+    # record of five rounds -- misses went from 93 to 8 with no warning.
+    # Losing history by omitting an option is a trap, not a feature; the
+    # destructive path should be the one you have to ask for.
+    ap.add_argument("--replace", action="store_true",
+                    help="discard previous results instead of accumulating")
     a = ap.parse_args()
 
     tools = a.tools or ([a.tool] if a.tool else [])
     if a.auto:
-        tools = tools_needing_work(a.auto, already_done() if a.append else set())
+        tools = tools_needing_work(a.auto, set() if a.replace else already_done())
         print(f"auto-selected {len(tools)} tools: {', '.join(tools[:10])}"
               f"{' ...' if len(tools) > 10 else ''}")
     if not tools:
@@ -519,7 +524,7 @@ def main() -> int:
                 misses.append(rec)
                 print(f"  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}", flush=True)
 
-    if a.append:
+    if not a.replace:
         for f, new in ((OUT, results), (REVIEW, review), (MISSES, misses)):
             try:
                 old = json.loads(f.read_text(encoding="utf-8"))
