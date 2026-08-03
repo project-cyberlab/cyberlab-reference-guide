@@ -459,10 +459,28 @@ def tools_needing_work(limit: int, skip: set[str]) -> list[str]:
     ]
     cov = json.loads((ROOT / "capture" / "coverage.json").read_text(encoding="utf-8"))
     have = set(cov["documented"])
-    ordered = [t for t in NEIGHBOURS if t in have and t not in skip]
+
+    # Only tools the guide actually claims to cover.
+    #
+    # Falling back to every captured binary had the loop researching 2to3,
+    # addpart, addr2line and adduser -- base OS utilities that are not analyst
+    # tools and that this guide already decided not to document. Watching a
+    # live round was the only way to see it; the counters just showed misses.
+    #
+    # The taxonomy is the list of tools with a page, which is the same set
+    # that has somewhere for an answer to go.
+    try:
+        from taxonomy import TAXONOMY
+        mapped = {c for _ph, caps in TAXONOMY.items() for _cap, cmds in caps
+                  for c in cmds}
+    except Exception:
+        mapped = set()
+    pool = (have & mapped) or have
+
+    ordered = [t for t in NEIGHBOURS if t in pool and t not in skip]
     if len(ordered) < limit:
-        rest = sorted(t for t in have if t not in set(NEIGHBOURS) and t not in skip)
-        ordered += rest
+        ordered += sorted(t for t in pool
+                          if t not in set(NEIGHBOURS) and t not in skip)
     return ordered[:limit]
 
 
