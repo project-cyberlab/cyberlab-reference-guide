@@ -48,6 +48,14 @@ sys.path.insert(0, str(HERE))
 # Different HOST and different model FAMILY from the proposer. Two qwen
 # models share training data and blind spots; gemma checking qwen is a
 # genuinely separate opinion, which is the whole point of the asymmetry.
+# Separate GPUs and separate model families. rick's 4090 is free again, so the
+# checker gets the larger gemma back and the two roles stop queueing behind
+# each other on one card.
+#
+# The family split is the part that matters: two qwen models share a training
+# corpus and therefore share blind spots, so gemma checking qwen is a real
+# second opinion. The third comes from a hosted vendor (see free_api.py), and
+# a contradiction has to survive both before it counts.
 CHECKER = ("rick-4090", "http://100.112.76.79:11434", "gemma3:27b-it-q4_K_M")
 PROPOSER = ("l3e7-3090", "http://192.168.1.253:11434", "qwen3:14b")
 
