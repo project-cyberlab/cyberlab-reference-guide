@@ -499,6 +499,24 @@ _seed_suite(
 )
 
 
+
+# Seeds contributed from outside this module, in catalog/seed-urls.json.
+#
+# The loop searches through SearxNG, which forwards to consumer engines that
+# suspend it under sustained load. When all of them are down the loop can find
+# nothing, and without this it would keep recording that as tools having no
+# sources. Claude's own search does not go through that path, so it acts as
+# the search tier of last resort and writes what it finds into that file.
+try:
+    _extra = json.loads((ROOT / "catalog" / "seed-urls.json")
+                        .read_text(encoding="utf-8"))
+    for _tool, _urls in _extra.items():
+        if _tool.startswith("_"):
+            continue
+        SEEDS[_tool] = tuple(SEEDS.get(_tool, ())) + tuple(_urls)
+except Exception:
+    pass
+
 def corpus_for(tool: str, max_pages: int = 10) -> list[dict]:
     """Pages worth mining for this tool: canonical seeds, then search.
 

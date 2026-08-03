@@ -1,0 +1,14 @@
+{
+  "_comment": "Seed URLs found by Claude's own web search and fed to the loop. The loop searches through a self-hosted SearxNG, which forwards to consumer engines that suspend it under sustained load; when they are all down the loop can find nothing and would otherwise record that as tools having no sources. Claude's search does not go through that path, so it becomes the search tier of last resort and drops what it finds here.",
+  "vol": [
+    "https://www.dfirhive.com/post/windows-memory-and-process-analysis-volatility3-walkthrough",
+    "https://hivesecurity.gitlab.io/blog/memory-forensics-volatility-attack-detect/",
+    "https://blog.it-learn.io/posts/2026-06-03-memory-forensics-volatility-3-walkthrough/",
+    "https://www.hacknwatch.com/posts/volatility/"
+  ],
+  "volatility3": [
+    "https://www.dfirhive.com/post/windows-memory-and-process-analysis-volatility3-walkthrough",
+    "https://hivesecurity.gitlab.io/blog/memory-forensics-volatility-attack-detect/",
+    "https://www.wirsingsecurity.com/tutorials/memory-forensics-with-volatility-3/"
+  ]
+}
