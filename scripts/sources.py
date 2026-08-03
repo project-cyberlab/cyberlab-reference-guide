@@ -196,8 +196,9 @@ def trust(url: str) -> int:
 #
 # Pacing keeps a long pass inside what the upstreams tolerate. The durable fix
 # is an index that expects programmatic use -- see docs/LOOP-RESEARCH.md.
-SEARCH_INTERVAL = 1.5
+SEARCH_INTERVAL = 4.0
 _last_search = [0.0]
+_empty_streak = [0]
 
 
 def _pace() -> None:
@@ -238,7 +239,21 @@ def search(query: str, limit: int = 10) -> list[dict]:
         time.sleep(6)
         results = _search_once(query)
     if not results:
+        _empty_streak[0] += 1
+        # Consecutive empties mean the engines are suspended, not that the
+        # subject is undocumented. Continuing at that point does not just
+        # waste effort -- it writes "no sources found" against tool after
+        # tool, converting an outage into a permanent record that nothing
+        # exists. That is the one verdict this project may not produce, so
+        # the loop stops and waits instead of running blind.
+        if _empty_streak[0] >= 3:
+            wait = min(300, 45 * (_empty_streak[0] - 2))
+            print(f"    [search] {_empty_streak[0]} empty results in a row; "
+                  f"upstream engines look suspended. Waiting {wait}s rather "
+                  f"than recording false misses.", flush=True)
+            time.sleep(wait)
         return []
+    _empty_streak[0] = 0
     out = []
     for r in results:
         url = r.get("url", "")
