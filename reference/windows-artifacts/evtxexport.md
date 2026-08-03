@@ -5,13 +5,19 @@
 |---|---|
 | **Kit** | SIFT Workstation (libyal) |
 | **Capability** | Parse Windows event logs |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/evtxexport.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/evtxexport.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Use evtxexport to export items stored in a Windows XML Event Viewer
+
+## When you'd reach for this
+
+An analyst reaches for evtxexport when they need to extract and resolve Windows Event Log (EVTX) records into human-readable formats, particularly after acquiring EVTX files and before analyzing event details in tools like Event Viewer, as it reconstructs fully-formatted event messages using registry data and resource files, offering more accurate and context-rich output than basic parsers or raw XML extraction.
+
+**Sources:** <https://deepwiki.com/libyal/libevtx/5.2-evtxexport>
 
 ## Synopsis
 

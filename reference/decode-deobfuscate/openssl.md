@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | Base OS — present on every Linux image |
 | **Capability** | Decode, decrypt or transform encoded data |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/openssl.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/openssl.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

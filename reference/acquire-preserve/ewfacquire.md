@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Image a disk, volume or device |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/ewfacquire.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/ewfacquire.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

@@ -349,7 +349,18 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
         tool=tool, flag=flag or "", passages=render(ev))
     t0 = time.time()
     note = ask(base, model, prompt)
-    ok, why = gate(note, ev, tool, capture_flags(tool) if flag else None)
+    # Check invented flags on EVERY note, not only flag-level ones.
+    #
+    # This passed `None` for tool-level notes, which disabled the check that
+    # exists to stop the single failure this project was built around. Since
+    # flag-level work has never run, the check had protected nothing at all --
+    # and it showed: a clamscan note recommended `--memory`, which clamscan
+    # does not have. That is `clamscan --yaravars` again, the exact fabricated
+    # flag that ran through 44 of 61 modules in the previous project.
+    #
+    # A tool-level note that names a flag is making a claim about that flag,
+    # and it gets checked like any other.
+    ok, why = gate(note, ev, tool, capture_flags(tool))
 
     # Blind verification, only for notes the mechanical gate approved. The
     # gate sees the note and the evidence together and is therefore prone to

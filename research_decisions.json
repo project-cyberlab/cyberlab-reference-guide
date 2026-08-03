@@ -42,5 +42,41 @@
   "hashcat": {
     "verdict": "accept",
     "why": "the offline-vs-online distinction is exactly the thing a junior analyst gets wrong, and it names the precondition: you need the hash first, not a username"
+  },
+  "mactime": {
+    "verdict": "accept",
+    "why": "correct counterpart to fls: consumes the body file that fls -m writes, and sorts and merges it into the timeline"
+  },
+  "radare2": {
+    "verdict": "accept",
+    "why": "concrete and specific -- relative seeking with s.. to avoid retyping addresses in large binaries, and tweaking disassembly per architecture"
+  },
+  "evtxexport": {
+    "verdict": "accept",
+    "why": "names the real value: reconstructs fully-formatted event messages using registry and resource files, which raw EVTX parsing does not give you"
+  },
+  "base64": {
+    "verdict": "accept",
+    "why": "the trigger is exactly right and recognisable -- alphanumeric runs with = padding spotted in strings output"
+  },
+  "frida": {
+    "verdict": "accept",
+    "why": "names a real precondition (device and host version compatibility) that costs an analyst an afternoon when missed"
+  },
+  "aircrack-ng": {
+    "verdict": "accept",
+    "why": "correct order: capture first, crack, then airdecap-ng to decrypt the captured traffic"
+  },
+  "clamscan": {
+    "verdict": "reject",
+    "why": "recommends --memory, which clamscan does not have. This is clamscan --yaravars again, the fabricated flag from the previous project. It exposed a real bug: the invented-flag check was disabled for tool-level notes"
+  },
+  "bulk_extractor": {
+    "verdict": "reject",
+    "why": "leads with memory captures and an obscure acquisition tool; the tool's actual job is scanning an image for features -- emails, URLs, card numbers -- without parsing the filesystem"
+  },
+  "pdf-parser.py": {
+    "verdict": "reject",
+    "why": "same hedged vagueness rejected on pdf-parser: 'after initial checks' never names the trigger, which is a non-zero pdfid count"
   }
 }

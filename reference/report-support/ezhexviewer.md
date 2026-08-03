@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | REMnux |
 | **Capability** | Inspect files by hand |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/ezhexviewer.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/ezhexviewer.help.txt) |
 | **Documentation** | <https://www.decalage.info/python/oletools> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

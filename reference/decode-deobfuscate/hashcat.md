@@ -6,13 +6,19 @@
 | **Kit** | Kali Linux |
 | **Capability** | Crack passwords and hashes |
 | **Version** | v6.2.6 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Recover passwords from hashes using GPU-accelerated guessing — dictionary, rule-mutated, mask and brute-force attacks across several hundred hash types. In DFIR it is usually pointed at credentials recovered from a host to establish what an attacker could have reused elsewhere.
+
+## When you'd reach for this
+
+An analyst reaches for hashcat when they need to crack offline password hashes obtained from a system, not for online accounts; they would run it after acquiring the hash and consulting the wiki or forums for guidance, as it is specifically designed for this purpose and cannot be used with just a username.
+
+**Sources:** <https://hashcat.net/wiki/doku.php?id=frequently_asked_questions>
 
 ## Synopsis
 

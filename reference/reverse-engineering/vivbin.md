@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | REMnux |
 | **Capability** | Disassemble and explore a binary |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/vivbin.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/vivbin.help.txt) |
 | **Documentation** | <https://github.com/vivisect/vivisect> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

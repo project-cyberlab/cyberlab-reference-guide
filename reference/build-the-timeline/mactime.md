@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | Build a filesystem MAC-time timeline |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-02 — [raw help output](../../capture/cyberlab-aio/help/mactime.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/mactime.help.txt) |
 | **Documentation** | <https://www.sleuthkit.org/sleuthkit> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -13,6 +13,12 @@
 ## Purpose
 
 Turn a TSK body file into a human-readable chronological timeline.
+
+## When you'd reach for this
+
+An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They may use it over similar tools because it is part of the TSK suite and specifically designed to handle the body file format, enabling consistent merging of diverse temporal data.
+
+**Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Timelines>
 
 ## Options
 

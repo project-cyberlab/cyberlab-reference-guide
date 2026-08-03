@@ -1979,9 +1979,25 @@ ENRICHMENT: dict[str, dict] = {
 # by hand -- rerun publish.py. Anything hand-written belongs in
 # ENRICHMENT above, which always wins over this block.
 RESEARCHED: dict[str, dict] = {
+    'aircrack-ng': {
+        'scenario': 'An analyst reaches for aircrack-ng when cracking WEP/WPA keys after capturing encrypted packets, often using airdecap-ng afterward to decrypt WPA data packets; they choose it over similar tools due to its optimized FMS attack implementation, support for multi-processor systems, and ability to handle WEP/WPA1/2 networks efficiently.',
+        'sources': ['https://www.kali.org/tools/aircrack-ng/'],
+    },
+    'base64': {
+        'scenario': 'An analyst reaches for base64 when encountering alphanumeric strings with "=" padding during strings analysis, often running it after extracting potential encoded data from a file or before further processing to decode binary content into readable text, as it is a standard method for binary-to-text encoding in CTF challenges.',
+        'sources': ['https://github.com/mzfr/notes/blob/master/ctf/forensics.md', 'https://trailofbits.github.io/ctf/forensics/'],
+    },
+    'evtxexport': {
+        'scenario': 'An analyst reaches for evtxexport when they need to extract and resolve Windows Event Log (EVTX) records into human-readable formats, particularly after acquiring EVTX files and before analyzing event details in tools like Event Viewer, as it reconstructs fully-formatted event messages using registry data and resource files, offering more accurate and context-rich output than basic parsers or raw XML extraction.',
+        'sources': ['https://deepwiki.com/libyal/libevtx/5.2-evtxexport'],
+    },
     'foremost': {
         'scenario': 'An analyst reaches for foremost when recovering lost files from disk images or drives, often after creating an image with tools like dd, and before analyzing the recovered data; they choose it because it uses built-in file types for reliable and faster recovery based on headers, footers, and internal data structures.',
         'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
+    },
+    'frida': {
+        'scenario': 'An analyst reaches for Frida when needing to hook into Android app methods for runtime inspection, such as logging events during execution, often after decompiling the APK; they ensure version compatibility between the device and computer before use, and prefer it over similar tools for its flexibility in both rooted and non-rooted environments, as well as its integration with Objection for streamlined analysis.',
+        'sources': ['https://blog.huli.tw/2023/04/27/en/android-apk-decompile-intro-4/'],
     },
     'hashcat': {
         'scenario': 'An analyst reaches for hashcat when they need to crack offline password hashes obtained from a system, not for online accounts; they would run it after acquiring the hash and consulting the wiki or forums for guidance, as it is specifically designed for this purpose and cannot be used with just a username.',
@@ -1995,9 +2011,17 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for log2timeline.py when processing storage media images to extract and create a timeline of events, often after imaging a drive or volume, and before analyzing the extracted data for forensic artifacts. They may use it with a filter file to target specific file paths for more efficient triage, or handle encrypted volumes by specifying credentials or partitions, as the tool supports options like --logfile, --partitions, and --vss_stores. The tool is chosen for its ability to process diverse file types, manage encrypted volumes, and use filter files for focused extraction, which may not be as seamlessly supported by similar tools.',
         'sources': ['https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html'],
     },
+    'mactime': {
+        'scenario': 'An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They may use it over similar tools because it is part of the TSK suite and specifically designed to handle the body file format, enabling consistent merging of diverse temporal data.',
+        'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],
+    },
     'pdfid': {
         'scenario': 'An analyst reaches for pdfid when triaging PDF files to quickly identify potential malicious content, such as JavaScript or obfuscation, before deeper analysis with a parser; they may run it initially to screen suspicious files due to its simplicity and reduced risk of exploitation compared to full parsers.',
         'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
+    },
+    'radare2': {
+        'scenario': 'An analyst reaches for radare2 when navigating large executables or kernel code with complex memory addresses, using commands like `s..` for relative seeking to avoid typing full addresses, and after analyzing basic blocks or tweaking disassembly settings via `e` for architecture-specific views. They choose it over similar tools for its precision in handling high-memory addresses, visual configuration flexibility, and efficient byte-range editing with `i` or the Visual Assembler.',
+        'sources': ['https://book.rada.re/visual/visual_disassembly.html', 'https://reverseengineering.stackexchange.com/questions/15244/how-to-use-radare2-to-disassemble-an-executable-file', 'https://www.radare.org/advent/13.html'],
     },
 }
 
