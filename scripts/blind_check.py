@@ -146,6 +146,30 @@ def answer_from_sources(question: str, evidence: list[dict]) -> str:
         passages=render(evidence), question=question)))
 
 
+def answer_from_sources_vendor(question: str, evidence: list[dict]) -> tuple[str, str]:
+    """The same blind question, asked of a different vendor entirely.
+
+    The local checker and the local drafter are both open-weight models
+    trained on overlapping corpora, so they can be wrong in the same place
+    and call it agreement. A hosted frontier model from another vendor fails
+    differently, and differently-wrong is the only kind of second opinion
+    worth having.
+
+    This also fixes a measured problem. Judging alone, the local checker
+    called "produces the body file" a contradiction of "a line for each
+    file" -- one output described two ways -- and would have binned a correct
+    note. Requiring two vendors to agree before a contradiction counts turns
+    that single noisy verdict into a disagreement between checkers, which is
+    treated as unresolved rather than as a fault in the note.
+    """
+    try:
+        import free_api
+    except Exception:
+        return "", ""
+    return free_api.ask(ANSWER_PROMPT.format(
+        passages=render(evidence), question=question), max_tokens=120)
+
+
 def answer_from_note(question: str, note: str) -> str:
     return _strip_think(ask(PROPOSER, ANSWER_PROMPT.format(
         passages=f"[the claim under test]\n{note}", question=question)))
@@ -176,16 +200,30 @@ def verify(note: str, evidence: list[dict]) -> dict:
     checks, disagreements, unknowns = [], 0, 0
     for q in questions:
         claimed = answer_from_note(q, note)
-        found = answer_from_sources(q, evidence)     # blind
+        found = answer_from_sources(q, evidence)      # blind, local
+        vendor, who = answer_from_sources_vendor(q, evidence)   # blind, hosted
+
         if found.upper().startswith("UNKNOWN"):
             v = "UNKNOWN"
         else:
             v = agree(q, claimed, found)
+
+        # A contradiction has to survive a second vendor. One checker calling
+        # a conflict is as likely to be judge noise as a real fault -- it
+        # happened, on a note that was correct -- and binning good work is how
+        # a loop quietly stops progressing.
+        if v == "DISAGREE" and vendor:
+            if vendor.upper().startswith("UNKNOWN"):
+                v = "UNKNOWN"
+            elif agree(q, claimed, vendor) != "DISAGREE":
+                v = "UNRESOLVED"
         checks.append({"question": q, "claim_says": claimed[:160],
-                       "sources_say": found[:160], "verdict": v})
+                       "sources_say": found[:160],
+                       "second_opinion": (vendor or "")[:160],
+                       "vendor": who, "verdict": v})
         if v == "DISAGREE":
             disagreements += 1
-        elif v == "UNKNOWN":
+        elif v in ("UNKNOWN", "UNRESOLVED"):
             unknowns += 1
 
     # Calibrated to the judge's measured reliability, not to an ideal.
@@ -211,6 +249,18 @@ def verify(note: str, evidence: list[dict]) -> dict:
     if ordering_conflict:
         return {"verdict": "reject",
                 "reason": "sources contradict the claimed order of operations",
+                "checks": checks}
+    # An ordering contradiction fails on its own. "Which runs first" has one
+    # answer, both checkers agreed on it in testing, and a reversed workflow
+    # is the error that actually misleads a junior analyst -- it reads as
+    # authoritative and sends them down the expensive path first.
+    if any(c["verdict"] == "DISAGREE" and
+           re.search(r"(runs? first|before|after|then|order|follow)",
+                     c["question"], re.I)
+           for c in checks):
+        return {"verdict": "reject",
+                "reason": "two vendors agree the sources contradict the "
+                          "claimed order of operations",
                 "checks": checks}
     if disagreements >= 2:
         return {"verdict": "reject",

@@ -464,13 +464,13 @@ def main() -> int:
             if rec["status"] == "kept":
                 kept += 1
                 results.append(rec)
-                print(f"  KEPT     {label:28s} {rec['note'][:88]}")
+                print(f"  KEPT     {label:28s} {rec['note'][:88]}", flush=True)
             elif rec["status"] == "review":
                 review.append(rec)
-                print(f"  REVIEW   {label:28s} {rec['why'][:60]}")
+                print(f"  REVIEW   {label:28s} {rec['why'][:60]}", flush=True)
             else:
                 misses.append(rec)
-                print(f"  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}")
+                print(f"  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}", flush=True)
 
     if a.append:
         for f, new in ((OUT, results), (REVIEW, review), (MISSES, misses)):

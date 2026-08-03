@@ -170,7 +170,7 @@ def trust(url: str) -> int:
 #
 # Pacing keeps a long pass inside what the upstreams tolerate. The durable fix
 # is an index that expects programmatic use -- see docs/LOOP-RESEARCH.md.
-SEARCH_INTERVAL = 2.5
+SEARCH_INTERVAL = 1.5
 _last_search = [0.0]
 
 
