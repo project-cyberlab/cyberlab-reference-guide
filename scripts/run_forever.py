@@ -106,8 +106,15 @@ def main() -> int:
 
         print(f"\n=== round {rnd} at {started} "
               f"(requeued {requeued} throttled misses) ===", flush=True)
-        out = run(["scripts/enrich_loop.py", "--auto", str(a.batch), "--append"],
-                  timeout=7200)
+        # Alternate tool-level and flag-level rounds. The flag column is
+        # 3,166 rows and was never once attempted; tool scenarios alone can
+        # never fill it. Repeating a tool is fine -- a later pass has better
+        # seeds, a warmer cache and recovered search engines, so a second look
+        # is not wasted work.
+        cmd = ["scripts/enrich_loop.py", "--auto", str(a.batch), "--append"]
+        if rnd % 2 == 0:
+            cmd += ["--flags", "--limit-flags", "6"]
+        out = run(cmd, timeout=10800)
         print(out[-1200:], flush=True)
 
         assess = run(["scripts/loop_assess.py"], timeout=1800)

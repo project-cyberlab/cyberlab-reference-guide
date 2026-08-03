@@ -399,6 +399,43 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
 
 
 
+
+# Flags nobody needs a scenario for. --help and --version are not analytical
+# choices, and documenting when to use --help is the kind of filler that made
+# the guide feel auto-populated in the first place.
+_NOT_WORTH_IT = {"--help", "-h", "--version", "-V", "--usage", "-?"}
+
+
+def rank_flags(tool: str, limit: int) -> list[str]:
+    """The flags worth researching, most-used first.
+
+    Taking them alphabetically was actively perverse: for fls it selected
+    --help, -B, -D, -F, -P, -S, -V and -a, skipping -m, -r and -s -- the three
+    already proven to have evidence and the only three that change what an
+    analyst does. Nothing found sources, and the run looked like the flag path
+    did not work.
+
+    Rank by how often a flag actually appears in the tool's own corpus
+    instead. A flag people write walkthroughs about is both the one worth
+    documenting and the one that will have a passage to ground it, so the same
+    signal serves both ends.
+    """
+    real = capture_flags(tool) or set()
+    if not real:
+        return []
+    corpus = sources.corpus_for(tool)
+    text = " ".join(p["text"] for p in corpus)
+    counts: dict[str, int] = {}
+    for f in real:
+        if f in _NOT_WORTH_IT or len(f) < 2:
+            continue
+        n = len(re.findall(r"(?<![\w-])" + re.escape(f) + r"(?![\w-])", text))
+        if n:
+            counts[f] = n
+    ordered = sorted(counts, key=lambda f: (-counts[f], f))
+    return ordered[:limit]
+
+
 def tools_needing_work(limit: int, skip: set[str]) -> list[str]:
     """Tools with a page and no tool-level guidance yet.
 
@@ -467,8 +504,7 @@ def main() -> int:
         worker = WORKERS[i % len(WORKERS)]
         jobs: list[str | None] = [None]
         if a.flags:
-            fl = capture_flags(tool) or set()
-            jobs += sorted(f for f in fl if len(f) > 1)[:a.limit_flags]
+            jobs += rank_flags(tool, a.limit_flags)
         for flag in jobs:
             rec = work_one(tool, flag, worker)
             label = f"{tool}{' ' + flag if flag else ''}"
