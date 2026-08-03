@@ -16,3 +16,6 @@ research_output.json
 research_misses.json
 research_review.json
 research_assessment.md
+research_runlog.jsonl
+STOP
+research_decisions.json
