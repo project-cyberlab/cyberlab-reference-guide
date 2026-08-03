@@ -14,12 +14,6 @@
 
 Extract timestamped events from evidence into a Plaso storage file, the first half of a super-timeline.
 
-## When you'd reach for this
-
-An analyst reaches for log2timeline.py when processing storage media images to extract and create a timeline of events, often after imaging a drive or volume, and before analyzing the extracted data for forensic artifacts. They may use it with a filter file to target specific file paths for more efficient triage, or handle encrypted volumes by specifying credentials or partitions, as the tool supports options like --logfile, --partitions, and --vss_stores. The tool is chosen for its ability to process diverse file types, manage encrypted volumes, and use filter files for focused extraction, which may not be as seamlessly supported by similar tools.
-
-**Sources:** <https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html>
-
 ## Synopsis
 
 ```

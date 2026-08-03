@@ -16,7 +16,7 @@ Scan Windows event logs against a bundled Sigma rule set and produce a ranked ti
 
 ## When you'd reach for this
 
-An analyst reaches for Hayabusa when generating fast, consolidated timelines from Windows event logs during threat hunting or forensics, often after collecting logs via live-response packages or Velociraptor, and before analyzing them in tools like Elastic Stack or Timesketch, due to its speed, multi-threading, and compatibility with sigma-based detection rules.
+An analyst reaches for Hayabusa when generating fast forensics timelines from Windows event logs, either after collecting logs for offline analysis or during live-response investigations; they may run it before importing data into tools like Elastic Stack or Timesketch, as it consolidates events into structured formats and leverages Sigma rules for detection, offering speed and compatibility with enterprise-scale analysis platforms.
 
 **Sources:** <https://github.com/Yamato-Security/hayabusa>
 

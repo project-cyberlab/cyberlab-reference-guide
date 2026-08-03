@@ -35,13 +35,40 @@ BATCH = 25
 
 
 def run(cmd: list[str], timeout: int) -> str:
+    """Run a pass, echoing its output live.
+
+    This used to capture and print only when the pass finished, which meant a
+    round in progress showed nothing at all -- so the only thing left to watch
+    was the round counter. A counter going up looks identical whether the loop
+    is researching tools or dying instantly on a bad argument, and it did the
+    latter 5,649 times without anyone noticing.
+
+    Streaming makes a stalled or failing pass obvious within seconds instead
+    of at the end of a round that may take an hour.
+    """
+    lines: list[str] = []
     try:
-        p = subprocess.run([sys.executable] + cmd, cwd=ROOT, timeout=timeout,
-                           capture_output=True, text=True,
-                           encoding="utf-8", errors="replace")
-        return (p.stdout or "") + (p.stderr or "")
-    except subprocess.TimeoutExpired:
-        return "__TIMEOUT__"
+        proc = subprocess.Popen(
+            [sys.executable, "-u"] + cmd, cwd=ROOT,
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            text=True, encoding="utf-8", errors="replace", bufsize=1)
+    except Exception as e:
+        return f"__ERROR__ {e}"
+    deadline = time.time() + timeout
+    try:
+        for line in proc.stdout:              # type: ignore[union-attr]
+            print(line.rstrip(), flush=True)
+            lines.append(line)
+            if time.time() > deadline:
+                proc.kill()
+                return "__TIMEOUT__"
+        proc.wait(timeout=30)
+    except Exception:
+        try:
+            proc.kill()
+        except Exception:
+            pass
+    return "".join(lines)
 
 
 def counts() -> dict:
@@ -115,7 +142,6 @@ def main() -> int:
         if rnd % 2 == 0:
             cmd += ["--flags", "--limit-flags", "6"]
         out = run(cmd, timeout=10800)
-        print(out[-1200:], flush=True)
 
         assess = run(["scripts/loop_assess.py"], timeout=1800)
         print(assess[-1500:], flush=True)

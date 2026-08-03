@@ -17,9 +17,9 @@ Trace the execution of a process to analyze its behavior.
 
 ## When you'd reach for this
 
-An analyst reaches for Frida when needing to hook into Android app methods for runtime inspection, such as logging events during execution, often after decompiling the APK; they ensure version compatibility between the device and computer before use, and prefer it over similar tools for its flexibility in both rooted and non-rooted environments, as well as its integration with Objection for streamlined analysis.
+An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.
 
-**Sources:** <https://blog.huli.tw/2023/04/27/en/android-apk-decompile-intro-4/>
+**Sources:** <https://bananamafia.dev/post/r2frida-1/> · <https://github.com/dweinstein/awesome-frida>
 
 ## Synopsis
 
