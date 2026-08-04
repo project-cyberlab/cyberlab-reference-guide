@@ -15,6 +15,12 @@
 
 Carve contents out of binary files, such as partitions.
 
+## When you'd reach for this
+
+When an analyst needs to recover files from a disk image or raw device without relying on filesystem structure, they use Scalpel after imaging the drive, as it is filesystem-independent and can extract files from multiple formats. They may choose it over similar tools like Foremost because it is a faster, rewritten version designed for both digital forensics and file recovery.
+
+**Sources:** <https://www.kali.org/tools/scalpel/>
+
 ## Synopsis
 
 ```

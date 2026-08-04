@@ -14,6 +14,12 @@
 
 dc3dd [OPTION 1] [OPTION 2] ... [OPTION N]
 
+## When you'd reach for this
+
+An analyst reaches for dc3dd when encountering unreadable sectors during disk imaging, using cnt=, iskip=, and oskip= parameters before running it to handle errors, and prefers it for its robust error recovery features and ability to report progress upon interruption.
+
+**Sources:** <https://www.kali.org/tools/dc3dd/>
+
 ## Synopsis
 
 ```

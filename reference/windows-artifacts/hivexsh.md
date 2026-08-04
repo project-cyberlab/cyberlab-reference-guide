@@ -13,6 +13,12 @@
 
 If you think this file is a valid Windows binary hive file (_not_
 
+## When you'd reach for this
+
+An analyst reaches for hivexsh when examining pagefile.sys to extract and analyze carved registry hive fragments, often after initial string or artifact extraction, to process regf and hbin blocks for registry keys, command-line patterns, or credential indicators; they may use it in conjunction with RegRipper or Registry Explorer for deeper analysis, as it specifically handles registry data recovery from pagefile.sys fragments.
+
+**Sources:** <https://www.pagefilesysparser.com/en>
+
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

@@ -13,6 +13,12 @@
 
 Use evtxinfo to determine information about a Windows XML Event Viewer
 
+## When you'd reach for this
+
+An analyst reaches for evtxinfo after extracting EVTX files from memory dumps using tools like volatility's dumpfiles, running it to inspect file headers and chunk metadata before using evtxdump to parse event data, as it provides structural insights without full log parsing.
+
+**Sources:** <https://manpages.debian.org/unstable/libevtx-utils/evtxexport.1.en.html> · <https://www.rocheston.com/fire/> · <https://www.tophertimzen.com/resources/cs407/slides/week04_02-EventLogs.html>
+
 ## Synopsis
 
 ```

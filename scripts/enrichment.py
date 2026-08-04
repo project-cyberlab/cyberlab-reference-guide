@@ -1991,13 +1991,41 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for JLECmd when parsing individual Jump Lists or extracting shell item data from .automaticDestinations-ms files, often after obtaining the files through forensic imaging or before analyzing the extracted .lnk files with other tools like LNK Tool. They may choose JLECmd over JumpList Explorer (JLE) when command-line processing is required, though JLE is preferred for its graphical interface.',
         'sources': ['https://www.cyberengage.org/post/jump-list-analysis-tool-jlecmd-exe'],
     },
+    'PECmd': {
+        'scenario': 'An analyst reaches for PECmd when processing Windows Prefetch files to extract execution details, often running it after collecting .pf files from a system or before exporting data for further analysis; they may use it over similar tools due to its structured output options like JSON or CSV, and its specific focus on Windows Prefetch parsing.',
+        'sources': ['https://github.com/EricZimmerman/PECmd'],
+    },
     'RBCmd': {
         'scenario': 'An analyst reaches for RBCmd when examining deleted files in the Recycle Bin to extract metadata like deletion time, original path, and file size from $I and $R files, often after manually identifying these files or directories; they may run it following initial file recovery attempts or alongside tools that recover $R files, preferring it for its ability to parse and output structured data (e.g., CSV) directly from $I files, which contain critical forensic information not easily accessible through other means.',
         'sources': ['https://medium.com/@jenito/recycle-bin-forensics-inside-the-digital-trash-can-dc6d1f479af8', 'https://www.cyberengage.org/post/recycle-bin-i-analyses-tool-i_parse_v1-1'],
     },
+    'RecentFileCacheParser': {
+        'scenario': 'An analyst reaches for RecentFileCacheParser when parsing a RecentFileCache.bcf file to extract recently accessed file paths, often after acquiring a forensic image or during artifact collection; they may run it before exporting data to CSV or JSON for structured analysis, preferring it over similar tools due to its specialized focus on .bcf files and clear export formatting options.',
+        'sources': ['https://github.com/EricZimmerman/RecentFileCacheParser', 'https://github.com/wodzen/agent-forensics-skills/blob/main/skills/recentfilecacheparser/SKILL.md'],
+    },
+    'SBECmd': {
+        'scenario': 'An analyst reaches for SBECmd when processing mounted forensic images to extract ShellBags data from NTUSER.DAT and UsrClass.dat files, often running it after mounting the image and before manual analysis or generating reports, as it automates parsing and outputs structured CSV files, making it preferable for large-scale investigations over manual tools.',
+        'sources': ['https://cyber5w.com/blog/windows-shell-items-analysis', 'https://www.cyberengage.org/post/shell-bags-analysis-tool-sbecmd-exe-or-shellbagsexplorer-gui-version-very-important-artifact'],
+    },
+    'SumECmd': {
+        'scenario': 'An analyst reaches for SumECmd after repairing corrupted UAL database files with Esentutl.exe /p to parse the Windows User Access Log (UAL) and generate CSV files correlating role access timestamps, GUIDs, and role names, as it specifically handles UAL logs that retain historical authentication data longer than typical event logs. They may use it alongside EDR telemetry and Security event logs to investigate suspicious activity, such as anomalous logins or appliance connections, due to its focus on UAL artifacts.',
+        'sources': ['https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign', 'https://github.com/AndrewRathbun/Awesome-KAPE', 'https://github.com/S-RM/wiskess_rust'],
+    },
+    'WxTCmd': {
+        'scenario': 'An analyst reaches for WxTCmd when examining Windows 10 timeline data to determine execution times or user activity, running it with the -f option on an ActivitiesCache.db file before opening the resulting CSV in EZviewer; they choose it over tools like JLECmd because WxTCmd specifically processes timeline files for execution details, whereas JLECmd handles Jump Lists for recent file access.',
+        'sources': ['https://github.com/AndrewRathbun/Awesome-KAPE', 'https://github.com/AndrewRathbun/Awesome-KAPE/blob/main/README.md', 'https://github.com/Digital-Forensics-Discord-Server/ArtifactParsers'],
+    },
     'XORSearch': {
         'scenario': 'An analyst reaches for XORSearch when searching for XOR, ROL, ROT, or SHIFT encoded strings in a binary file, particularly when suspecting malware obfuscation like hidden URLs; they may run it after extracting a suspicious file or before deeper analysis to decode potential hidden data, choosing it over similar tools due to its support for multiple encoding types and specific options like dictionary attacks for 32-bit keys.',
         'sources': ['https://blog.didierstevens.com/programs/xorsearch/'],
+    },
+    'aeskeyfind': {
+        'scenario': 'An analyst reaches for aeskeyfind when examining memory dumps or virtual machine snapshots to recover AES-128 keys, especially in cases where memory decay or corrupted key schedules may be present; they may pre-process dumps to filter irrelevant data and post-process results by validating discovered keys against known encryption usage, preferring it over similar tools due to its ability to handle reversed key schedules, InvMixColumn pre-applied entries, and entropy-based filtering of non-key blocks.',
+        'sources': ['https://github.com/SalpSec/aeskeyfind', 'https://github.com/makomk/aeskeyfind', 'https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main/reference/memory-forensics/aeskeyfind.md'],
+    },
+    'affinfo': {
+        'scenario': 'An analyst reaches for affinfo when examining an AFF file to validate its integrity or extract metadata, often after acquiring the file or before decrypting it with a passphrase; they choose it for its specific capabilities to verify hashes, list segments, and identify file structures, which are critical for forensic analysis.',
+        'sources': ['https://www.kali.org/tools/afflib/'],
     },
     'base64dump.py': {
         'scenario': 'An analyst reaches for base64dump.py when encountering malformed base64 or hexadecimal strings that require length adjustment or specific decoding, such as after initial detection using regular expressions. They may run it with options like -p (e.g., L4 or custom lambdas) to preprocess strings before decoding or -P to postprocess decoded data, as it allows handling of non-standard encodings and integrates built-in functions for tasks like UTF16-to-ASCII conversion, which other tools may not natively support.',
@@ -2007,9 +2035,29 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for capa after submitting a sample to CAPE for dynamic analysis, running it against the generated JSON report to extract capabilities, particularly when dealing with packed or obfuscated binaries where static analysis may fail. They may use it following unpacking or sandbox execution to bypass obfuscation limitations, preferring it over standalone static analysis tools due to its integration with dynamic reports and support for IDA Pro/Ghidra for enhanced feature extraction.',
         'sources': ['https://github.com/mandiant/capa', 'https://github.com/xuguowong/capa-SAST'],
     },
+    'cyberchef': {
+        'scenario': 'When an analyst needs to decrypt, decode, or transform data, they reach for CyberChef due to its versatile interface and client-side processing, which ensures no data is transmitted to third-party servers, making it preferable over tools that may not handle sensitive information as securely.',
+        'sources': ['https://github.com/martinmathurine/Cryptography-Decryption-CyberChef-Lab', 'https://www.it-connect.tech/cyberchef-a-web-application-for-decrypting-decoding-and-transforming-data/'],
+    },
+    'dc3dd': {
+        'scenario': 'An analyst reaches for dc3dd when encountering unreadable sectors during disk imaging, using cnt=, iskip=, and oskip= parameters before running it to handle errors, and prefers it for its robust error recovery features and ability to report progress upon interruption.',
+        'sources': ['https://www.kali.org/tools/dc3dd/'],
+    },
     'dcfldd': {
         'scenario': 'An analyst uses dcfldd when creating a verified forensic copy of a disk drive for investigation, ensuring write protection is enabled before imaging and verifying the image with hashing tools afterward, as it provides enhanced forensic features like progress tracking and error handling compared to standard dd or dc3dd.',
         'sources': ['https://dohost.us/index.php/2025/11/01/creating-a-forensic-image-of-the-disk-drive-dd-dc3dd-dcfldd/', 'https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/acquiring-disk-image-with-dd-and-dcfldd/SKILL.md'],
+    },
+    'evtxinfo': {
+        'scenario': "An analyst reaches for evtxinfo after extracting EVTX files from memory dumps using tools like volatility's dumpfiles, running it to inspect file headers and chunk metadata before using evtxdump to parse event data, as it provides structural insights without full log parsing.",
+        'sources': ['https://manpages.debian.org/unstable/libevtx-utils/evtxexport.1.en.html', 'https://www.rocheston.com/fire/', 'https://www.tophertimzen.com/resources/cs407/slides/week04_02-EventLogs.html'],
+    },
+    'ewfexport': {
+        'scenario': 'An analyst uses ewfexport when extracting raw data or converting EWF files to other formats, often after acquiring an EWF image and before performing further analysis on the raw data. They may run ewfdebug first to inspect the EWF structure, then use ewfexport to export data to raw format for tools requiring unprocessed disk images, as it supports multiple output formats and precise control over export parameters.',
+        'sources': ['https://github.com/libyal/libewf/blob/main/ewftools/ewfexport.c', 'https://www.aldeid.com/wiki/Libewf/ewfexport', 'https://www.kali.org/tools/libewf/'],
+    },
+    'floss': {
+        'scenario': 'An analyst reaches for FLOSS when examining an executable file containing obfuscated strings, as it automatically emulates decoding routines and extracts human-readable strings from memory differences; they may run it after initial static analysis to uncover hidden data, preferring it over manual emulation or other tools due to its automated comparison of memory states before and after decoding.',
+        'sources': ['https://cloud.google.com/blog/topics/threat-intelligence/automatically-extracting-obfuscated-strings'],
     },
     'fls': {
         'scenario': "An analyst reaches for fls when gathering temporal data from file systems to create a timeline, running it with the '-m' flag and '-r' to recursively collect all files across each partition in a disk image; they may adjust time skew with '-s' to align with other systems, preferring fls over older tools like 'grave-robber' because it streamlines the process by eliminating the need for 'ils' and integrates directly with mactime for timeline generation.",
@@ -2027,6 +2075,14 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for Hayabusa when generating fast forensics timelines from Windows event logs, either after collecting logs for offline analysis or during live-response investigations; they may run it before importing data into tools like Elastic Stack or Timesketch, as it consolidates events into structured formats and leverages Sigma rules for detection, offering speed and compatibility with enterprise-scale analysis platforms.',
         'sources': ['https://github.com/Yamato-Security/hayabusa'],
     },
+    'hivexsh': {
+        'scenario': 'An analyst reaches for hivexsh when examining pagefile.sys to extract and analyze carved registry hive fragments, often after initial string or artifact extraction, to process regf and hbin blocks for registry keys, command-line patterns, or credential indicators; they may use it in conjunction with RegRipper or Registry Explorer for deeper analysis, as it specifically handles registry data recovery from pagefile.sys fragments.',
+        'sources': ['https://www.pagefilesysparser.com/en'],
+    },
+    'hydra': {
+        'scenario': 'When testing system security to identify weak or default credentials, an analyst uses Hydra after creating custom username/password lists, running it via command line for protocols like SSH, preferring it over similar tools for its cross-platform support and ability to validate security measures effectively.',
+        'sources': ['https://github.com/evarol/HYDRA', 'https://www.linkedin.com/pulse/unleashing-hydra-password-cracking-penetration-testing-tirthan-kiyada-oxzlf'],
+    },
     'inetsim': {
         'scenario': 'An analyst reaches for inetsim when setting up a simulated internet environment for malware analysis, running it before detonating a sample to intercept network traffic and avoid exposing real services. They configure it alongside tools like Wireshark and Fiddler, preferring it for its ability to mimic network responses and capture traffic without requiring actual internet connectivity.',
         'sources': ['https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md', 'https://seanthegeek.net/posts/beginning-malware-analysis/'],
@@ -2042,6 +2098,10 @@ RESEARCHED: dict[str, dict] = {
     'ngrep': {
         'scenario': 'An analyst reaches for ngrep when searching for specific patterns in network traffic, such as detecting "login" in Telnet sessions, using switches like -w, -i, and -t for precise matching and timestamps; they may run it alongside tcpdump to analyze captured packets, preferring it over tcpdump for its grep-style filtering and intuitive regular expression handling.',
         'sources': ['https://www.admin-magazine.com/Articles/Network-Grep'],
+    },
+    'nping': {
+        'scenario': 'An analyst reaches for nping when they need to send custom network packets for testing or forensic analysis, such as probing specific ports or crafting ICMP requests, often after identifying a target range or before verifying network behavior. They may choose it over similar tools due to its detailed target specification options, support for CIDR and octet ranges, and flexibility in packet crafting, as demonstrated in the examples and documentation.',
+        'sources': ['https://nmap.org/book/nping-man.html'],
     },
     'objdump': {
         'scenario': 'An analyst reaches for objdump when examining raw binary files like BIOS dumps or ELF binaries to inspect assembly code, section headers, or memory layouts, often after capturing memory or firmware data; they may use it alongside tools like ndisasm or Ghidra for deeper analysis, preferring objdump for its integration with ELF metadata and ability to display low-level code structures.',
@@ -2063,13 +2123,25 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for PhotoRec when recovering files from disk images, Encase EWF images, or physical devices like hard disks and USB keys, after ensuring proper permissions and device selection; they may run it following the creation of a disk image or after selecting the target partition, preferring it over similar tools for its support of encrypted file systems, RAID, and direct carving from unallocated space without relying on file system metadata.',
         'sources': ['https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step'],
     },
+    'rabin2': {
+        'scenario': 'An analyst reaches for rabin2 when examining binary files to extract structured information about ELF/PE/MZ/CLASS files, often after extracting them from disk images or PCAPs, as it provides detailed insights into binary structure and security features (e.g., `rabin2 -I` for security checks or `rabin2 -z` for strings) that may be more straightforward or comprehensive than alternatives like `readelf` or `checksec`.',
+        'sources': ['https://gist.github.com/52617365/95baed8b731c3effdad04b1d6ccf4831', 'https://github.com/Adamkadaban/CTFs'],
+    },
     'radare2': {
         'scenario': "An analyst reaches for radare2 when analyzing a binary to understand its structure, find exploits, or debug code, often running `radare2 <binary file>` to start, followed by `aaa` to analyze the binary's executable sections and calls. They may choose it for its detailed disassembly and navigation capabilities, as highlighted by the emphasis on commands like `aaa` and `afl` for exploring code flow and functions.",
         'sources': ['https://kindawingingit.medium.com/radare2-an-introduction-d6762dceeac5'],
     },
+    'rahash2': {
+        'scenario': 'An analyst reaches for rahash2 when examining filesystems to identify modified sections of large files, as it hashes each block individually, allowing comparison against known hashes to pinpoint changes. They may run it after obtaining a file from disk imaging or before performing deeper analysis to verify data integrity. They choose it over other hash tools because its block-based approach enables targeted modification detection without processing the entire file at once.',
+        'sources': ['https://gist.github.com/52617365/95baed8b731c3effdad04b1d6ccf4831', 'https://www.sentinelone.com/labs/automating-string-decryption-and-other-reverse-engineering-tasks-in-radare2-with-r2pipe/'],
+    },
     'readelf': {
         'scenario': "An analyst reaches for readelf when examining stripped binaries or analyzing ELF headers to identify architecture, sections, or security features like CET; they may run it after using strings or before deeper disassembly to understand the binary's structure and protections, preferring it over similar tools for its precise ELF-specific insights into headers, sections, and dynamic symbols.",
         'sources': ['https://hacktricks.wiki/en/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.html', 'https://intezer.com/blog/elf-malware-analysis-101-initial-analysis/', 'https://w00tsec.blogspot.com/2015/02/firmware-forensics-diffs-timelines-elfs.html'],
+    },
+    'scalpel': {
+        'scenario': 'When an analyst needs to recover files from a disk image or raw device without relying on filesystem structure, they use Scalpel after imaging the drive, as it is filesystem-independent and can extract files from multiple formats. They may choose it over similar tools like Foremost because it is a faster, rewritten version designed for both digital forensics and file recovery.',
+        'sources': ['https://www.kali.org/tools/scalpel/'],
     },
     'testdisk': {
         'scenario': 'An analyst reaches for TestDisk when recovering lost partitions or repairing filesystems on physical devices, running it with administrative or root privileges after ensuring access rights; they choose it over similar tools because it specifically handles partition recovery and filesystem repair, unlike PhotoRec, which focuses on file recovery from unallocated space.',

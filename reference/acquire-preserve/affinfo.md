@@ -14,6 +14,12 @@
 
 Print the metadata of an AFF forensic container: acquisition details, hashes and segment layout. The AFF equivalent of [`ewfinfo`](ewfinfo.md), and the fastest way to see what an .aff file claims about its own provenance.
 
+## When you'd reach for this
+
+An analyst reaches for affinfo when examining an AFF file to validate its integrity or extract metadata, often after acquiring the file or before decrypting it with a passphrase; they choose it for its specific capabilities to verify hashes, list segments, and identify file structures, which are critical for forensic analysis.
+
+**Sources:** <https://www.kali.org/tools/afflib/>
+
 ## Synopsis
 
 ```

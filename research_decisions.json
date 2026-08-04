@@ -166,5 +166,93 @@
   "file": {
     "verdict": "reject",
     "why": "true but says nothing an analyst does not already know: 'quickly identify file types' is the definition, not a scenario"
+  },
+  "SBECmd": {
+    "verdict": "accept",
+    "why": "names the two hives ShellBags actually live in and puts it after mounting the image"
+  },
+  "PECmd": {
+    "verdict": "accept",
+    "why": "prefetch collection then parsing -- a real sequence, correctly ordered"
+  },
+  "floss": {
+    "verdict": "accept",
+    "why": "states the differential against strings: it emulates the decoding routine rather than reading literals"
+  },
+  "nping": {
+    "verdict": "accept",
+    "why": "crafting probes rather than scanning, which is the distinction from nmap"
+  },
+  "rabin2": {
+    "verdict": "accept",
+    "why": "structured header extraction after pulling a binary out of an image or pcap"
+  },
+  "SumECmd": {
+    "verdict": "accept",
+    "why": "carries a precondition nobody guesses -- repair the corrupted UAL database with esentutl /p first"
+  },
+  "rahash2": {
+    "verdict": "accept",
+    "why": "the real reason to choose it: per-block hashing pinpoints which section of a large file changed"
+  },
+  "affinfo": {
+    "verdict": "accept",
+    "why": "validating an AFF container before trusting what comes out of it"
+  },
+  "RecentFileCacheParser": {
+    "verdict": "accept",
+    "why": "names the artefact exactly and where it sits in collection"
+  },
+  "WxTCmd": {
+    "verdict": "accept",
+    "why": "ActivitiesCache.db for execution times and user activity, correctly placed"
+  },
+  "aeskeyfind": {
+    "verdict": "accept",
+    "why": "names the failure mode that matters: memory decay and corrupted key schedules"
+  },
+  "ewfexport": {
+    "verdict": "accept",
+    "why": "EWF to raw before tools that cannot read the container"
+  },
+  "dc3dd": {
+    "verdict": "accept",
+    "why": "unreadable sectors are the situation, and it names the parameters that handle them"
+  },
+  "hivexsh": {
+    "verdict": "accept",
+    "why": "carved registry fragments out of pagefile.sys is a specific, real, non-obvious job"
+  },
+  "scalpel": {
+    "verdict": "accept",
+    "why": "filesystem-independent carving after imaging -- the differential against recovery that needs an intact filesystem. Score 0 but the content is right, which is why score is not the gate"
+  },
+  "evtxinfo": {
+    "verdict": "accept",
+    "why": "positioned after volatility dumpfiles and before evtxexport, which is a genuine chain"
+  },
+  "cyberchef": {
+    "verdict": "accept",
+    "why": "client-side processing means evidence never leaves the machine -- a property that actually matters when handling a sample"
+  },
+  "hydra": {
+    "verdict": "accept",
+    "why": "names the precondition (custom lists built first) and the protocols, consistent with accepting other offensive tooling the kit ships"
+  },
+  "7zr": {
+    "verdict": "reject",
+    "why": "describes vulnerability management -- inventorying 7-Zip binaries to check a CVE -- which is a different job from analysing evidence"
+  },
+  "7z": {
+    "verdict": "reject",
+    "why": "'encountering compressed files' is not a scenario, and 'identified through log monitoring' does not connect to anything an analyst would do next"
+  },
+  "appcompat": {
+    "verdict": "reject",
+    "why": "describes opening appcompat.txt in Notepad after an application crash. That is application troubleshooting, and it is not the AppCompat forensic artefact the guide means"
+  },
+  "md5sum": {
+    "verdict": "reject",
+    "why": "thin: running it alongside sha256sum to cross-check is not a reason to reach for either"
   }
 }

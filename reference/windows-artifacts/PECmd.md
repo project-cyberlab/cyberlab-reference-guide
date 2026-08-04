@@ -14,6 +14,12 @@
 
 Parse Windows Prefetch files into evidence of what executed, when, how often, and which files each run touched.
 
+## When you'd reach for this
+
+An analyst reaches for PECmd when processing Windows Prefetch files to extract execution details, often running it after collecting .pf files from a system or before exporting data for further analysis; they may use it over similar tools due to its structured output options like JSON or CSV, and its specific focus on Windows Prefetch parsing.
+
+**Sources:** <https://github.com/EricZimmerman/PECmd>
+
 ## Synopsis
 
 ```

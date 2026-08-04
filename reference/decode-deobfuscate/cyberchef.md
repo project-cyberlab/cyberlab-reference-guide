@@ -14,6 +14,12 @@
 
 Decode and otherwise analyze data using this browser app.
 
+## When you'd reach for this
+
+When an analyst needs to decrypt, decode, or transform data, they reach for CyberChef due to its versatile interface and client-side processing, which ensures no data is transmitted to third-party servers, making it preferable over tools that may not handle sensitive information as securely.
+
+**Sources:** <https://github.com/martinmathurine/Cryptography-Decryption-CyberChef-Lab> · <https://www.it-connect.tech/cyberchef-a-web-application-for-decrypting-decoding-and-transforming-data/>
+
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

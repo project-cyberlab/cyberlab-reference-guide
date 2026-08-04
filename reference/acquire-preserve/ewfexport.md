@@ -13,6 +13,12 @@
 
 Convert an EWF/E01 image to raw, or to another EWF format, including extracting a subset of it.
 
+## When you'd reach for this
+
+An analyst uses ewfexport when extracting raw data or converting EWF files to other formats, often after acquiring an EWF image and before performing further analysis on the raw data. They may run ewfdebug first to inspect the EWF structure, then use ewfexport to export data to raw format for tools requiring unprocessed disk images, as it supports multiple output formats and precise control over export parameters.
+
+**Sources:** <https://github.com/libyal/libewf/blob/main/ewftools/ewfexport.c> · <https://www.aldeid.com/wiki/Libewf/ewfexport> · <https://www.kali.org/tools/libewf/>
+
 ## Synopsis
 
 ```

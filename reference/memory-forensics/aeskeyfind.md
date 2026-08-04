@@ -14,6 +14,12 @@
 
 Find 128-bit and 256-bit AES keys in a memory image.
 
+## When you'd reach for this
+
+An analyst reaches for aeskeyfind when examining memory dumps or virtual machine snapshots to recover AES-128 keys, especially in cases where memory decay or corrupted key schedules may be present; they may pre-process dumps to filter irrelevant data and post-process results by validating discovered keys against known encryption usage, preferring it over similar tools due to its ability to handle reversed key schedules, InvMixColumn pre-applied entries, and entropy-based filtering of non-key blocks.
+
+**Sources:** <https://github.com/SalpSec/aeskeyfind> · <https://github.com/makomk/aeskeyfind> · <https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main/reference/memory-forensics/aeskeyfind.md>
+
 ## Synopsis
 
 ```

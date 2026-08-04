@@ -13,6 +13,12 @@
 
 Craft and send arbitrary network packets, and report what comes back. Unlike `ping` it will build TCP, UDP, ICMP or raw ARP probes with chosen flags and payloads, which makes it the tool for asking a firewall or an IDS a precise question about what it permits.
 
+## When you'd reach for this
+
+An analyst reaches for nping when they need to send custom network packets for testing or forensic analysis, such as probing specific ports or crafting ICMP requests, often after identifying a target range or before verifying network behavior. They may choose it over similar tools due to its detailed target specification options, support for CIDR and octet ranges, and flexibility in packet crafting, as demonstrated in the examples and documentation.
+
+**Sources:** <https://nmap.org/book/nping-man.html>
+
 ## Synopsis
 
 ```
