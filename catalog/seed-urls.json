@@ -35,5 +35,48 @@
     "https://docsislab.wordpress.com/packet-capture/wireshark-command-line/",
     "https://www.wireshark.org/docs/man-pages/dumpcap.html",
     "https://www.wireshark.org/docs/wsug_html_chunked/AppTools.html"
+  ],
+  "EvtxECmd": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "MFTECmd": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "PECmd": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "RECmd": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "AmcacheParser": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.amcacheparser.com/en/blog/amcacheparser-complete-guide",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "SrumECmd": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "AppCompatCacheParser": [
+    "https://ericzimmerman.github.io/",
+    "https://ridgelinecyber.com/resources/kape-ez-tools/",
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
   ]
 }
