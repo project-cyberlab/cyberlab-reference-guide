@@ -1995,6 +1995,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They would run it after collecting and consolidating all temporal data, as it is specifically designed to handle the body file format and create a chronological view, which is critical for event reconstruction. The passages do not explicitly compare it to similar tools, but emphasize its role in merging and sorting data from multiple sources into a unified timeline.',
         'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],
     },
+    'pdfid': {
+        'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats, such as those containing JavaScript or obfuscation, before conducting deeper analysis with a parser; they may run it initially to screen files for suspicious content, preferring it over more complex parsers due to its simplicity and reduced risk of exploitation.',
+        'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
+    },
     'radare2': {
         'scenario': "An analyst reaches for radare2 when analyzing a binary to understand its structure, find exploits, or debug code, often running `radare2 <binary file>` to start, followed by `aaa` to analyze the binary's executable sections and calls. They may choose it for its detailed disassembly and navigation capabilities, as highlighted by the emphasis on commands like `aaa` and `afl` for exploring code flow and functions.",
         'sources': ['https://kindawingingit.medium.com/radare2-an-introduction-d6762dceeac5'],
