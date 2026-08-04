@@ -268,8 +268,40 @@ def check_direction(note: str, subject: str,
     return "ok", "ordering corroborated"
 
 
+def misattributed(note: str, tool: str, flag: str | None) -> str | None:
+    """The other tool this note hangs the flag on, if it does.
+
+    The model writes from the passage it was handed, and passages show
+    several tools at once. So it produced "use the -m flag with fls" on the
+    ils page and again on mactime, and for diec -t it described `docker build
+    -t` after reading a Dockerfile. Each is fluent, grounded in a real
+    passage, and about the wrong program. For a junior analyst that is worse
+    than silence: the flag often exists on both tools and means something
+    different on each.
+
+    Written as its own function because the check embedded in gate() could be
+    read, compiled and still not fire, and a rule that cannot be tested in
+    isolation cannot be trusted to be protecting anything.
+    """
+    if not flag:
+        return None
+    low = note.lower()
+    for other in _known_tools():
+        if other.lower() == tool.lower():
+            continue
+        if other.lower() not in low:
+            continue
+        for pat in (rf"{re.escape(flag.lower())}[^.;]{{0,40}}with[^.;]{{0,15}}{re.escape(other.lower())}",
+                    rf"{re.escape(other.lower())}[^.;]{{0,15}}{re.escape(flag.lower())}",
+                    rf"with[^.;]{{0,10}}{re.escape(other.lower())}"):
+            if re.search(pat, low):
+                return other
+    return None
+
+
 def gate(note: str, evidence: list[dict], tool: str,
-         real_flags: set[str] | None) -> tuple[bool, str]:
+         real_flags: set[str] | None,
+         flag: str | None = None) -> tuple[bool, str]:
     """Mechanical checks only. No model gets a vote here."""
     note = " ".join(note.split())
     if not note or note.startswith("__ERROR__"):
@@ -293,6 +325,19 @@ def gate(note: str, evidence: list[dict], tool: str,
         overlap = len(nw & pool) / len(nw)
         if overlap < 0.45:
             return False, f"not grounded in the sources ({overlap:.0%} overlap)"
+
+    # A flag note must be about the tool whose flag it is.
+    #
+    # The model writes from the passage it was given, and passages often show
+    # several tools. So it produced "use the -m flag with fls" on the ils
+    # page, the same on mactime, and for diec -t it described docker build -t
+    # after reading a Dockerfile. Each is fluent, grounded in a real passage
+    # and about the wrong program -- which for a junior analyst is worse than
+    # silence, because the flag exists on both tools and means different
+    # things.
+    bad = misattributed(note, tool, flag)
+    if bad:
+        return False, f"attributes {flag} to {bad}, not to {tool}"
 
     # An ordering claim is a claim, not prose. Two of the first six notes
     # this loop produced had the workflow backwards while passing every
@@ -360,7 +405,7 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
     #
     # A tool-level note that names a flag is making a claim about that flag,
     # and it gets checked like any other.
-    ok, why = gate(note, ev, tool, capture_flags(tool))
+    ok, why = gate(note, ev, tool, capture_flags(tool), flag)
 
     # Blind verification, only for notes the mechanical gate approved. The
     # gate sees the note and the evidence together and is therefore prone to

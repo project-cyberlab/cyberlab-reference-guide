@@ -26,7 +26,7 @@ pinfo.py [-h] [--troubles] [-V] [--logfile FILENAME]
 
 ## Options
 
-All 20 options parsed from the captured help text. The final column is filled in by review.
+All 20 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -45,7 +45,7 @@ All 20 options parsed from the captured help text. The final column is filled in
 | `--output-format` | FORMAT | Format of the output, the default is: text. Supported options: json, markdown, text. |  |
 | `--hash` | TYPE | Type of hash to output in file_hashes report. Supported options: md5, sha1, sha256 |  |
 | `--report` | TYPE | Report on specific information. Supported options: browser_search, chrome_extension, environment_variables, file_hashes, list, none, windows_services, winevt_providers |  |
-| `--sections` | SECTIONS_LIST | List of sections to output. This is a comma separated list where each entry is the name of a section. Use " --sections list" to list the available sections and " --sections all" to show all available  |  |
+| `--sections` | SECTIONS_LIST | List of sections to output. This is a comma separated list where each entry is the name of a section. Use " --sections list" to list the available sections and " --sections all" to show all available  | An analyst would use the --sections flag with pinfo.py to verify which file paths were included in the timeline processing based on the filter file's specifications. |
 | `-v` | — | Print verbose output. |  |
 | `--verbose` | — | Print verbose output. |  |
 | `-w` | OUTPUTFILE | Output filename. |  |
