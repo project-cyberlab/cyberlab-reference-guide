@@ -78,5 +78,33 @@
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
     "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
     "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+  ],
+  "bulk_extractor": [
+    "https://cybersectools.com/tools/bulkextractor",
+    "https://github.com/simsong/bulk_extractor/wiki",
+    "https://www.kali.org/tools/bulk-extractor/"
+  ],
+  "binwalk": [
+    "https://github.com/ReFirmLabs/binwalk/wiki/Usage",
+    "https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk"
+  ],
+  "exiftool": [
+    "https://exiftool.org/examples.html",
+    "https://grapefruitcat.medium.com/a-quick-dive-into-some-reverse-engineering-tools-for-malware-analysis-0f5248254d09"
+  ],
+  "ssdeep": [
+    "https://github.com/marcurdy/dfir-toolset/blob/master/ToolsOfTheGame.md",
+    "https://ssdeep-project.github.io/ssdeep/usage.html"
+  ],
+  "yara": [
+    "https://github.com/marcurdy/dfir-toolset/blob/master/ToolsOfTheGame.md",
+    "https://yara.readthedocs.io/en/stable/writingrules.html"
+  ],
+  "clamscan": [
+    "https://docs.clamav.net/manual/Usage/Scanning.html",
+    "https://github.com/marcurdy/dfir-toolset/blob/master/ToolsOfTheGame.md"
+  ],
+  "foremost": [
+    "https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk"
   ]
 }
