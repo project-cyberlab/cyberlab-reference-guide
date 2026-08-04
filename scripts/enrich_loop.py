@@ -102,8 +102,32 @@ STOP = {"the", "a", "an", "of", "to", "and", "or", "in", "on", "for", "with",
         "analyst", "junior", "forensic", "tool", "flag", "reach", "reaches"}
 
 
+def _stem(w: str) -> str:
+    """Crude suffix stripping, enough to match a plural to its singular.
+
+    Grounding was measured by exact word overlap, so a note saying "disk
+    images" against a source saying "disk image" scored the plural as
+    ungrounded. Every grounding failure clustered at 37-45% against a 45%
+    threshold, and inspecting one showed the missing words were devices,
+    drives, filesystems, images -- all present in the sources in the
+    singular -- plus ordinary verb forms like ensuring and focuses.
+
+    The threshold was not too strict. The measurement was wrong, and lowering
+    the bar to compensate would have weakened the one check that stops a model
+    writing from memory instead of from the page.
+    """
+    # "es" overshoots: devices -> devic while device stays device,
+    # so the plural still failed to match its own singular. Plain "s"
+    # handles both.
+    for suf in ("ing", "ies", "ed", "s"):
+        if w.endswith(suf) and len(w) - len(suf) >= 3:
+            base = w[: -len(suf)]
+            return base + "y" if suf == "ies" else base
+    return w
+
+
 def words(s: str) -> set[str]:
-    return {w for w in re.findall(r"[a-z0-9]+", s.lower())
+    return {_stem(w) for w in re.findall(r"[a-z0-9]+", s.lower())
             if w not in STOP and len(w) > 2}
 
 
