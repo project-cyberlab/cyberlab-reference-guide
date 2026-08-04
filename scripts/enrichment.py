@@ -2003,6 +2003,18 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for foremost when recovering lost files from disk images or drives, often after creating an image with tools like dd; they may run it with command line switches to specify file types, as shown in the example using -t and -i, and choose it for its reliability in data carving based on file headers, footers, and internal structures.',
         'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
     },
+    'foremost': {
+        'scenario': 'An analyst reaches for foremost when recovering lost files from disk images or drives, often after creating an image with tools like dd, and before analyzing recovered data; they may choose it over similar tools due to its use of built-in file type definitions for faster and more reliable recovery based on headers, footers, and internal data structures.',
+        'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
+    },
+    'foremost': {
+        'scenario': 'An analyst reaches for foremost when recovering lost files from disk images or drives, often running it after acquiring an image with tools like dd, and using command line switches to specify file types; they may choose it over similar tools due to its reliability and speed from built-in file type recognition.',
+        'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
+    },
+    'foremost': {
+        'scenario': 'When an analyst needs to recover files from disk images or drives using data carving, they use foremost after creating an image with tools like dd, running commands like -t doc,jpg,pdf,xls -i image.dd, preferring it for its reliable built-in file type recognition and direct image processing capabilities.',
+        'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
+    },
     'frida': {
         'scenario': 'An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.',
         'sources': ['https://bananamafia.dev/post/r2frida-1/', 'https://github.com/dweinstein/awesome-frida'],
@@ -2027,6 +2039,14 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for mactime after gathering temporal data from file systems and other sources into a body file using tools like fls, to sort and merge all temporal data into a single timeline; they would run fls first to collect data and use mactime afterward because it efficiently combines and organizes the information for event reconstruction, which is critical for forensic analysis.',
         'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],
     },
+    'mactime': {
+        'scenario': "An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They may run it after ensuring all temporal data is consolidated into the body file format, as it efficiently organizes events chronologically, which is critical for reconstructing timelines. They might prefer it over similar tools because it integrates directly with TSK's data format and handles merging multiple data sources into a coherent timeline.",
+        'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],
+    },
+    'mactime': {
+        'scenario': "An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They may run it after ensuring all temporal data is consolidated into the body file format, as it efficiently organizes events chronologically, which is critical for reconstructing timelines. They might prefer it over similar tools because it integrates directly with TSK's data format and handles merging multiple data sources into a coherent timeline.",
+        'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],
+    },
     'pdfid': {
         'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats, such as those containing JavaScript or obfuscation, before conducting deeper analysis with a parser; they may run it initially to screen files for suspicious content, preferring it over more complex parsers due to its simplicity and reduced risk of exploitation.',
         'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
@@ -2049,6 +2069,10 @@ RESEARCHED: dict[str, dict] = {
     },
     'pdfid': {
         'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats, such as those containing JavaScript or malicious actions, before conducting deeper analysis with a parser; they may run it initially to screen files for suspicious keywords, preferring it over more complex parsers due to its simplicity and reduced risk of exploitation.',
+        'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
+    },
+    'pdfid': {
+        'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats like embedded JavaScript or obfuscation, often running it before deeper analysis with a parser; they choose it over more complex tools because its simplicity reduces the risk of exploitation during initial screening.',
         'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
     },
     'radare2': {

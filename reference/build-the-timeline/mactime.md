@@ -16,7 +16,7 @@ Turn a TSK body file into a human-readable chronological timeline.
 
 ## When you'd reach for this
 
-An analyst reaches for mactime after gathering temporal data from file systems and other sources into a body file using tools like fls, to sort and merge all temporal data into a single timeline; they would run fls first to collect data and use mactime afterward because it efficiently combines and organizes the information for event reconstruction, which is critical for forensic analysis.
+An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They may run it after ensuring all temporal data is consolidated into the body file format, as it efficiently organizes events chronologically, which is critical for reconstructing timelines. They might prefer it over similar tools because it integrates directly with TSK's data format and handles merging multiple data sources into a coherent timeline.
 
 **Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Timelines>
 

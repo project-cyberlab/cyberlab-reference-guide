@@ -16,7 +16,7 @@ Carve files out of an image or raw data by header and footer signatures.
 
 ## When you'd reach for this
 
-An analyst reaches for foremost when recovering lost files from disk images or drives, often after creating an image with tools like dd; they may run it with command line switches to specify file types, as shown in the example using -t and -i, and choose it for its reliability in data carving based on file headers, footers, and internal structures.
+When an analyst needs to recover files from disk images or drives using data carving, they use foremost after creating an image with tools like dd, running commands like -t doc,jpg,pdf,xls -i image.dd, preferring it for its reliable built-in file type recognition and direct image processing capabilities.
 
 **Sources:** <http://foremost.sourceforge.net/> · <https://www.kali.org/tools/foremost/>
 
