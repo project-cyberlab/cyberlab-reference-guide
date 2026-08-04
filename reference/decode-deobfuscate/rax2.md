@@ -6,7 +6,7 @@
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | Decode, decrypt or transform encoded data |
 | **Version** | rax2 6.1.9 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/rax2.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/rax2.help.txt) |
 | **Documentation** | <https://www.radare.org/n/radare2.html> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

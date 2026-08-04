@@ -6,7 +6,7 @@
 | **Kit** | Base OS — present on every Linux image |
 | **Capability** | Verify evidence integrity with hashes |
 | **Version** | sha256sum (GNU coreutils) 9.1 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/sha256sum.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/sha256sum.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

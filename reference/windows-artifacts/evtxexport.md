@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | SIFT Workstation (libyal) |
 | **Capability** | Parse Windows event logs |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/evtxexport.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/evtxexport.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

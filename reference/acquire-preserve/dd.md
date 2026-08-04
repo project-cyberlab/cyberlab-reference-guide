@@ -6,7 +6,7 @@
 | **Kit** | Base OS — present on every Linux image |
 | **Capability** | Image a disk, volume or device |
 | **Version** | dd (coreutils) 9.1 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/dd.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/dd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

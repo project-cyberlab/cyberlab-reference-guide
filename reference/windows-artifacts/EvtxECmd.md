@@ -6,7 +6,7 @@
 | **Kit** | FLARE-VM / SIFT (Eric Zimmerman tools) |
 | **Capability** | Parse Windows event logs |
 | **Version** | 2026.5.0 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/EvtxECmd.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/EvtxECmd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

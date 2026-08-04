@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | Recover encryption keys from memory |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-03 — [raw help output](../../capture/cyberlab-aio/help/aeskeyfind.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/aeskeyfind.help.txt) |
 | **Documentation** | <https://citp.princeton.edu/our-work/memory/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
