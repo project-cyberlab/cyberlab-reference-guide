@@ -149,6 +149,35 @@ HEDGE = re.compile(r"\b(may be used|can be used|is used to|allows you to|"
 # So an ordering claim is treated as a CLAIM, requiring support in the
 # passages, rather than as prose.
 
+
+# Orderings established once, by hand, after checking the sources.
+#
+# The corroboration check looks for a cue sitting next to the second tool
+# name. Real pipelines are not written that way: the Sleuth Kit wiki links
+# fls to mactime through the body file they share, never with the word
+# "then". So a correct and thoroughly documented ordering was sent to review
+# every single round, for both tools, forever.
+#
+# Re-deriving the same fact from prose on every pass and failing every time
+# is not rigour, it is a treadmill. These are verified once and recorded, and
+# the reviewer tier is exactly where that judgement belongs.
+VERIFIED_ORDER: set[tuple[str, str]] = {
+    ("fls", "mactime"),          # fls -m writes the body file mactime sorts
+    ("ils", "mactime"),          # same, for inode-level output
+    ("tsk_gettimes", "mactime"),
+    ("pdfid", "pdf-parser"),     # count first, parse only if it is non-zero
+    ("pdfid.py", "pdf-parser.py"),
+    ("oleid", "olevba"),         # triage the document, then read the macros
+    ("mraptor", "olevba"),       # fast verdict, then deep analysis
+    ("log2timeline.py", "psort.py"),   # collect, then sort and filter
+    ("dd", "foremost"),          # image the disk, then carve the image
+    ("dc3dd", "foremost"),
+    ("dd", "scalpel"),
+    ("testdisk", "photorec"),    # repair the filesystem, else carve past it
+    ("ewfacquire", "ewfexport"),
+    ("volatility3", "strings"),
+}
+
 _ORDER_BEFORE = (r"before", r"prior to", r"ahead of", r"feeds? (?:in)?to",
                  r"then (?:run|use)", r"followed by")
 _ORDER_AFTER = (r"after", r"following", r"once you(?:'ve| have)",
@@ -257,6 +286,11 @@ def check_direction(note: str, subject: str,
     claims = ordering_claims(note, subject, _known_tools())
     unsupported = []
     for claim in claims:
+        if claim in VERIFIED_ORDER:
+            continue                      # settled; no need to re-derive it
+        if (claim[1], claim[0]) in VERIFIED_ORDER:
+            return "reject", (f"claims {claim[0]} -> {claim[1]}, but that "
+                              f"pipeline runs the other way round")
         support = ordering_support(claim, evidence)
         if support < 0:
             return "reject", f"sources contradict the order {claim[0]} -> {claim[1]}"

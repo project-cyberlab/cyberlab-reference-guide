@@ -418,5 +418,9 @@
   "diec -t": {
     "verdict": "reject",
     "why": "describes docker build -t after reading a Dockerfile; diec's -t is not about tagging images"
+  },
+  "binwalk": {
+    "verdict": "accept",
+    "why": "names the real trigger (a firmware dump pulled off a device) and what it yields -- embedded files, compressed blobs, keys -- which is the map you need before deciding what to extract"
   }
 }

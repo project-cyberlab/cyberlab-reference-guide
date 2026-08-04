@@ -2031,6 +2031,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for base64dump.py when encountering malformed base64 or hexadecimal strings that require length adjustment or specific decoding, such as after initial detection using regular expressions. They may run it with options like -p (e.g., L4 or custom lambdas) to preprocess strings before decoding or -P to postprocess decoded data, as it allows handling of non-standard encodings and integrates built-in functions for tasks like UTF16-to-ASCII conversion, which other tools may not natively support.',
         'sources': ['https://github.com/DidierStevens/DidierStevensSuite/blob/master/base64dump.py'],
     },
+    'binwalk': {
+        'scenario': 'An analyst reaches for binwalk when examining firmware images to identify embedded files, compressed data, or cryptographic keys, often after obtaining a firmware dump from a device; they may run it before deeper analysis to map contents or after extracting files for further inspection, preferring it for its entropy analysis and custom signature capabilities over tools lacking these specific features.',
+        'sources': ['https://github.com/ReFirmLabs/binwalk/wiki/Usage', 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk'],
+    },
     'capa': {
         'scenario': 'An analyst reaches for capa after submitting a sample to CAPE for dynamic analysis, running it against the generated JSON report to extract capabilities, particularly when dealing with packed or obfuscated binaries where static analysis may fail. They may use it following unpacking or sandbox execution to bypass obfuscation limitations, preferring it over standalone static analysis tools due to its integration with dynamic reports and support for IDA Pro/Ghidra for enhanced feature extraction.',
         'sources': ['https://github.com/mandiant/capa', 'https://github.com/xuguowong/capa-SAST'],

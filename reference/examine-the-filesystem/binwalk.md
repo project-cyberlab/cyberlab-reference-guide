@@ -14,6 +14,12 @@
 
 Find and extract embedded files and filesystems inside a binary blob or firmware image.
 
+## When you'd reach for this
+
+An analyst reaches for binwalk when examining firmware images to identify embedded files, compressed data, or cryptographic keys, often after obtaining a firmware dump from a device; they may run it before deeper analysis to map contents or after extracting files for further inspection, preferring it for its entropy analysis and custom signature capabilities over tools lacking these specific features.
+
+**Sources:** <https://github.com/ReFirmLabs/binwalk/wiki/Usage> · <https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk>
+
 ## Synopsis
 
 ```
