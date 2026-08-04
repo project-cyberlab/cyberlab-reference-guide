@@ -562,6 +562,23 @@ def main() -> int:
             except Exception:
                 old = []
             new[:0] = old
+            # Deduplicate on (tool, flag), keeping the best-evidenced attempt.
+            #
+            # Rounds revisit tools deliberately -- a later pass has better
+            # seeds and a warmer cache -- but appending every attempt meant
+            # fls -s appeared six times and the file reported 95 flag notes
+            # when it held roughly a third that many distinct ones. Inflated
+            # counts are worse than useless: they make the loop look more
+            # productive than it is, which is the number I would have used to
+            # decide it was working.
+            best: dict[tuple, dict] = {}
+            for rec in new:
+                key = (rec.get("tool"), rec.get("flag"))
+                cur = best.get(key)
+                if cur is None or (rec.get("top_score", -99) >
+                                   cur.get("top_score", -99)):
+                    best[key] = rec
+            new[:] = list(best.values())
     OUT.write_text(json.dumps(results, indent=2), encoding="utf-8")
     MISSES.write_text(json.dumps(misses, indent=2), encoding="utf-8")
     print(f"\nkept {kept}, not kept {len(misses)}")
