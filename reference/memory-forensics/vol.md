@@ -13,6 +13,12 @@
 
 Extract and analyse artifacts from a memory image using Volatility 3 plugins.
 
+## When you'd reach for this
+
+An analyst reaches for vol when examining memory dumps to detect malicious activity, such as unusual processes or command-line arguments; they may first run plugins like `windows.pslist` or `windows.pstree` to establish context before using `windows.cmdline` or `windows.handles` for deeper analysis, as the tool's use of symbol tables ensures accurate parsing of memory structures over guesswork.
+
+**Sources:** <https://hivesecurity.gitlab.io/blog/memory-forensics-volatility-attack-detect/> · <https://www.dfirhive.com/post/windows-memory-and-process-analysis-volatility3-walkthrough>
+
 ## Synopsis
 
 ```

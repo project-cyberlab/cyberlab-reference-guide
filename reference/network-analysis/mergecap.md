@@ -15,6 +15,12 @@
 
 Capture and analyze network traffic with this sniffer.
 
+## When you'd reach for this
+
+An analyst reaches for mergecap when merging multiple pcap files captured sequentially into a single file, often running it after capturing or before analysis to consolidate data; they choose it over append mode to maintain correct timestamps and avoid misordering packets, as demonstrated in the documentation.
+
+**Sources:** <https://osqa-ask.wireshark.org/questions/31113/wireshark-merging-pcap-files/> · <https://osqa-ask.wireshark.org/questions/39951/how-to-simultaneously-filter-and-merge-several-pcap-files/> · <https://wiki.wireshark.org/Tools>
+
 ## Synopsis
 
 ```

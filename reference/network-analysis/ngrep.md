@@ -15,6 +15,12 @@
 
 Grep packet payloads, live or from a capture, with BPF filtering — pattern matching on the wire.
 
+## When you'd reach for this
+
+An analyst reaches for ngrep when searching for specific patterns in network traffic, such as detecting "login" in Telnet sessions, using switches like -w, -i, and -t for precise matching and timestamps; they may run it alongside tcpdump to analyze captured packets, preferring it over tcpdump for its grep-style filtering and intuitive regular expression handling.
+
+**Sources:** <https://www.admin-magazine.com/Articles/Network-Grep>
+
 ## Synopsis
 
 ```

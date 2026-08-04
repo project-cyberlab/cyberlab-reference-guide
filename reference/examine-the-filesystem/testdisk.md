@@ -14,6 +14,12 @@
 
 Christophe GRENIER <grenier@cgsecurity.org>
 
+## When you'd reach for this
+
+An analyst reaches for TestDisk when recovering lost partitions or repairing filesystems on physical devices, running it with administrative or root privileges after ensuring access rights; they choose it over similar tools because it specifically handles partition recovery and filesystem repair, unlike PhotoRec, which focuses on file recovery from unallocated space.
+
+**Sources:** <https://www.cgsecurity.org/wiki/PhotoRec> · <https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step>
+
 ## Synopsis
 
 ```

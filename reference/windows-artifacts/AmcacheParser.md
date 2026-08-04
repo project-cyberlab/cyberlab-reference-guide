@@ -14,6 +14,12 @@
 
 Parse Amcache.hve — the record of programs present on a host, with SHA-1 hashes, including binaries that have since been deleted.
 
+## When you'd reach for this
+
+An analyst reaches for AmcacheParser after manually examining the AmCache hive with Registry Explorer or when needing structured CSV output for timeline analysis, as it automates extraction of AmCache data into a CSV file, which is more efficient than manual methods or RegRipper’s plugin-based reports. They may run it following the extraction of the Amcache.hve file and before analyzing results in Timeline Explorer, prioritizing its automation and compatibility with further analysis tools.
+
+**Sources:** <https://www.mennovanveenendaal.com/posts/The-Windows-AmCache-and-ShimCache-Artifacts/>
+
 ## Synopsis
 
 ```

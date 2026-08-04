@@ -78,5 +78,93 @@
   "pdf-parser.py": {
     "verdict": "reject",
     "why": "same hedged vagueness rejected on pdf-parser: 'after initial checks' never names the trigger, which is a non-zero pdfid count"
+  },
+  "capa": {
+    "verdict": "accept",
+    "why": "correct workflow position: run against the JSON report after CAPE dynamic analysis, and it names the packed/obfuscated case"
+  },
+  "XORSearch": {
+    "verdict": "accept",
+    "why": "names the trigger an analyst can recognise -- suspecting XOR/ROL/ROT obfuscation hiding URLs in a binary"
+  },
+  "ngrep": {
+    "verdict": "accept",
+    "why": "concrete: matching a pattern like 'login' in live Telnet traffic rather than an abstract description of grep-for-packets"
+  },
+  "fls": {
+    "verdict": "accept",
+    "why": "correct: -m together with -r to walk every partition when gathering temporal data for a timeline"
+  },
+  "JLECmd": {
+    "verdict": "accept",
+    "why": "names the artefact precisely -- automaticDestinations-ms jump lists and their embedded shell items"
+  },
+  "objdump": {
+    "verdict": "accept",
+    "why": "names the situation: inspecting assembly, section headers or memory layout of a BIOS dump or ELF after capture"
+  },
+  "readelf": {
+    "verdict": "accept",
+    "why": "stripped binaries and ELF headers, positioned after strings -- a real place in a triage sequence"
+  },
+  "AppCompatCacheParser": {
+    "verdict": "accept",
+    "why": "the best workflow note in this batch: ShimCache for historical execution, after UserAssist and before AmCache"
+  },
+  "RBCmd": {
+    "verdict": "accept",
+    "why": "names the $I and $R pair and what they yield -- deletion time, original path, size"
+  },
+  "oledump.py": {
+    "verdict": "accept",
+    "why": "OLE containers and embedded VBA, with the password-protected zip case that trips people up"
+  },
+  "dcfldd": {
+    "verdict": "accept",
+    "why": "carries a real gotcha: write protection enabled before imaging, hash verification after"
+  },
+  "AmcacheParser": {
+    "verdict": "accept",
+    "why": "gives the choice honestly -- Registry Explorer by hand, or this when you need CSV for a timeline"
+  },
+  "inetsim": {
+    "verdict": "accept",
+    "why": "excellent trigger: stand it up BEFORE detonating a sample, so the malware talks to a simulation instead of the real internet"
+  },
+  "mergecap": {
+    "verdict": "accept",
+    "why": "merging sequentially captured pcaps into one before analysis is exactly when you reach for it"
+  },
+  "photorec": {
+    "verdict": "accept",
+    "why": "consistent with the earlier accepted note and adds the EWF and physical-device cases"
+  },
+  "testdisk": {
+    "verdict": "accept",
+    "why": "names the privilege requirement, which is a real stumbling block"
+  },
+  "pdfid.py": {
+    "verdict": "accept",
+    "why": "correct ordering: triage before committing to a full parser"
+  },
+  "base64dump.py": {
+    "verdict": "accept",
+    "why": "names the trigger -- malformed base64 or hex found by a regex sweep that needs length adjustment to decode"
+  },
+  "vol": {
+    "verdict": "accept",
+    "why": "names the first plugins to run, which is the thing a junior analyst does not know"
+  },
+  "curl": {
+    "verdict": "reject",
+    "why": "describes web application pentesting -- BOLA, mass assignment -- which is not what this guide covers, and curl was already removed from scope as a general-purpose utility"
+  },
+  "grep": {
+    "verdict": "reject",
+    "why": "grep was deliberately removed from scope as a base OS utility; nobody opens a forensics reference to learn grep"
+  },
+  "file": {
+    "verdict": "reject",
+    "why": "true but says nothing an analyst does not already know: 'quickly identify file types' is the definition, not a scenario"
   }
 }

@@ -14,6 +14,12 @@
 
 Christophe GRENIER <grenier@cgsecurity.org>
 
+## When you'd reach for this
+
+An analyst reaches for PhotoRec when recovering files from disk images, Encase EWF images, or physical devices like hard disks and USB keys, after ensuring proper permissions and device selection; they may run it following the creation of a disk image or after selecting the target partition, preferring it over similar tools for its support of encrypted file systems, RAID, and direct carving from unallocated space without relying on file system metadata.
+
+**Sources:** <https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step>
+
 ## Synopsis
 
 ```

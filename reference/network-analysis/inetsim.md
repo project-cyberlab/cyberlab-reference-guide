@@ -15,6 +15,12 @@
 
 Emulate common network services and interact with malware.
 
+## When you'd reach for this
+
+An analyst reaches for inetsim when setting up a simulated internet environment for malware analysis, running it before detonating a sample to intercept network traffic and avoid exposing real services. They configure it alongside tools like Wireshark and Fiddler, preferring it for its ability to mimic network responses and capture traffic without requiring actual internet connectivity.
+
+**Sources:** <https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md> · <https://seanthegeek.net/posts/beginning-malware-analysis/>
+
 ## Synopsis
 
 ```

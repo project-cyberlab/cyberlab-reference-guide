@@ -14,6 +14,12 @@
 
 Parse the Application Compatibility Cache (Shimcache) out of the SYSTEM registry hive. Windows records an executable here when the shim engine examines it, which happens for programs that were run and for some that were merely present — so it is evidence of existence and interest, not proof of execution.
 
+## When you'd reach for this
+
+An analyst reaches for AppCompatCacheParser when examining ShimCache for historical execution evidence, often after checking UserAssist or before parsing AmCache, as it converts the registry's AppCompatCache into a readable CSV, providing file names, sizes, and timestamps that manual analysis cannot easily extract. They may prefer it over AmCacheParser when focusing on ShimCache-specific data rather than AmCache's more detailed but differently structured entries.
+
+**Sources:** <https://hackers-arise.com/digital-forensics-registry-analysis-for-beginners-part-3-evidence-of-execution/> · <https://hivesecurity.gitlab.io/blog/dfir-incident-response-complete-guide-2026/> · <https://nullsec.us/windows-10-11-appcompatcache-deep-dive/>
+
 ## Synopsis
 
 ```
