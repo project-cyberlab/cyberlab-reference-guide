@@ -32,7 +32,7 @@ scalpel [-b] [-c <config file>] [-d] [-h|V] [-i <file>]
 
 ## Options
 
-All 17 options parsed from the captured help text; 3 reviewed with usage guidance.
+All 17 options parsed from the captured help text. The final column is filled in by review.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -40,16 +40,16 @@ All 17 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `-c` | — | Choose configuration file. |  |
 | `-d` | — | Generate header/footer database; will bypass certain optimizations and discover all footers, so performance suffers. Doesn't affect the set of files carved. **EXPERIMENTAL** |  |
 | `-h` | — | Print this help message and exit. |  |
-| `-i` | — | Read names of disk images from specified file. | An analyst would use the -i flag when the names of disk images are listed in a separate file that needs to be read by scalpel. |
+| `-i` | — | Read names of disk images from specified file. |  |
 | `-m` | — | Generate/update carve coverage blockmap file. The first 32bit unsigned int in the file identifies the block size. Thereafter each 32bit unsigned int entry in the blockmap file corresponds to one block |  |
 | `-n` | — | Don't add extensions to extracted files. |  |
 | `-o` | — | Set output directory for carved files. |  |
 | `-O` | — | Don't organize carved files by type. Default is to organize carved files into subdirectories. |  |
 | `-p` | — | Perform image file preview; audit log indicates which files would have been carved, but no files are actually carved. |  |
-| `-q` | — | Carve only when header is cluster-aligned. | An analyst would use the -q flag when generating or updating a carve coverage blockmap file to specify the cluster size for the blockmap. |
+| `-q` | — | Carve only when header is cluster-aligned. |  |
 | `-r` | — | Find only first of overlapping headers/footers [foremost 0.69 compat mode]. |  |
 | `-s` | — | Skip n bytes in each disk image before carving. |  |
-| `-t` | — | Set directory for coverage blockmap. **EXPERIMENTAL** | An analyst would use the -t flag when generating or updating a carve coverage blockmap file. |
+| `-t` | — | Set directory for coverage blockmap. **EXPERIMENTAL** |  |
 | `-u` | — | Use carve coverage blockmap when carving. Carve only sections of the image whose entries in the blockmap are 0. These areas are treated as contiguous regions. **EXPERIMENTAL** |  |
 | `-V` | — | Print copyright information and exit. |  |
 | `-v` | — | Verbose mode. |  |

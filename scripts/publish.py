@@ -73,7 +73,19 @@ def load_kept() -> list[dict]:
             # same way as for tool notes.
             key = f"{r['tool']} {r['flag']}"
             d = decisions.get(key)
-            if d and d.get("verdict") != "accept":
+            # Require an explicit accept, exactly as tool notes do.
+            #
+            # This published on the ABSENCE of a verdict, which is backwards
+            # and shipped a fabrication within one iteration: `diec -t` went
+            # live saying it tags a Docker image, because the model had read a
+            # Dockerfile and described `docker build -t`. Silence is not
+            # consent. It is the precise mechanism that put 44 modules of
+            # invented flags into the previous project, reproduced here by me
+            # in a single commit.
+            if not d:
+                unreviewed.append(key)
+                continue
+            if d.get("verdict") != "accept":
                 continue
             note = " ".join((r.get("note") or "").split())
             if len(note) < 30 or not r.get("citations"):

@@ -254,5 +254,169 @@
   "md5sum": {
     "verdict": "reject",
     "why": "thin: running it alongside sha256sum to cross-check is not a reason to reach for either"
+  },
+  "fls -r": {
+    "verdict": "accept",
+    "why": "names a situation for -r grounded in the cited passage"
+  },
+  "fls -o": {
+    "verdict": "accept",
+    "why": "names a situation for -o grounded in the cited passage"
+  },
+  "fls -f": {
+    "verdict": "accept",
+    "why": "names a situation for -f grounded in the cited passage"
+  },
+  "fls -s": {
+    "verdict": "accept",
+    "why": "names a situation for -s grounded in the cited passage"
+  },
+  "RecentFileCacheParser --json": {
+    "verdict": "reject",
+    "why": "restates the flag: 'save output as JSON' is the definition"
+  },
+  "bulk_extractor -o": {
+    "verdict": "accept",
+    "why": "names a situation for -o grounded in the cited passage"
+  },
+  "bulk_extractor -R": {
+    "verdict": "accept",
+    "why": "names a situation for -R grounded in the cited passage"
+  },
+  "dumpcap -w": {
+    "verdict": "accept",
+    "why": "names a situation for -w grounded in the cited passage"
+  },
+  "MFTECmd -f": {
+    "verdict": "accept",
+    "why": "names a situation for -f grounded in the cited passage"
+  },
+  "MFTECmd --csvf": {
+    "verdict": "accept",
+    "why": "names a situation for --csvf grounded in the cited passage"
+  },
+  "PECmd -f": {
+    "verdict": "accept",
+    "why": "names a situation for -f grounded in the cited passage"
+  },
+  "PECmd --csv": {
+    "verdict": "accept",
+    "why": "names a situation for --csv grounded in the cited passage"
+  },
+  "PECmd -d": {
+    "verdict": "reject",
+    "why": "attributes -d to prefetch rather than PECmd"
+  },
+  "PECmd --csvf": {
+    "verdict": "reject",
+    "why": "conflates --csvf with generating a timeline view; --csvf only names the output file"
+  },
+  "PECmd -k": {
+    "verdict": "accept",
+    "why": "names a situation for -k grounded in the cited passage"
+  },
+  "WxTCmd -f": {
+    "verdict": "accept",
+    "why": "names a situation for -f grounded in the cited passage"
+  },
+  "WxTCmd --csv": {
+    "verdict": "accept",
+    "why": "names a situation for --csv grounded in the cited passage"
+  },
+  "pinfo.py --sections": {
+    "verdict": "reject",
+    "why": "scored -1 on passage quality and reads as a guess about filter files"
+  },
+  "pdf-parser.py -f": {
+    "verdict": "reject",
+    "why": "same as pdf-parser -f"
+  },
+  "foremost -t": {
+    "verdict": "accept",
+    "why": "names a situation for -t grounded in the cited passage"
+  },
+  "foremost -i": {
+    "verdict": "accept",
+    "why": "names a situation for -i grounded in the cited passage"
+  },
+  "foremost -q": {
+    "verdict": "reject",
+    "why": "describes the mechanism (512-byte boundaries) but never says when speed matters more than completeness"
+  },
+  "olevba -z": {
+    "verdict": "accept",
+    "why": "names a situation for -z grounded in the cited passage"
+  },
+  "olevba -r": {
+    "verdict": "accept",
+    "why": "names a situation for -r grounded in the cited passage"
+  },
+  "olevba --reveal": {
+    "verdict": "accept",
+    "why": "names a situation for --reveal grounded in the cited passage"
+  },
+  "olevba -d": {
+    "verdict": "accept",
+    "why": "names a situation for -d grounded in the cited passage"
+  },
+  "fls -m": {
+    "verdict": "accept",
+    "why": "names a situation for -m grounded in the cited passage"
+  },
+  "olevba --decode": {
+    "verdict": "accept",
+    "why": "names a situation for --decode grounded in the cited passage"
+  },
+  "scalpel -i": {
+    "verdict": "reject",
+    "why": "restates the synopsis: 'names of disk images are listed in a separate file' is what it does, not when you would want that"
+  },
+  "foremost -o": {
+    "verdict": "reject",
+    "why": "'specify a custom output directory' is the definition, not a scenario"
+  },
+  "scalpel -t": {
+    "verdict": "reject",
+    "why": "scalpel -t and -q both claim to build a carve coverage blockmap; they cannot both be right and neither is verified"
+  },
+  "scalpel -q": {
+    "verdict": "reject",
+    "why": "same conflicting claim as scalpel -t"
+  },
+  "mactime -m": {
+    "verdict": "reject",
+    "why": "attributes -m to fls rather than mactime"
+  },
+  "mactime -b": {
+    "verdict": "accept",
+    "why": "names a situation for -b grounded in the cited passage"
+  },
+  "mactime -z": {
+    "verdict": "accept",
+    "why": "names a situation for -z grounded in the cited passage"
+  },
+  "mactime -d": {
+    "verdict": "reject",
+    "why": "attributes -d to comm rather than mactime"
+  },
+  "mactime -i": {
+    "verdict": "accept",
+    "why": "names a situation for -i grounded in the cited passage"
+  },
+  "ils -m": {
+    "verdict": "reject",
+    "why": "attributes -m to fls rather than ils"
+  },
+  "olevba -f": {
+    "verdict": "reject",
+    "why": "attributes -f to arch rather than olevba"
+  },
+  "pdf-parser -f": {
+    "verdict": "reject",
+    "why": "names no trigger; 'to extract embedded content' is the definition"
+  },
+  "diec -t": {
+    "verdict": "reject",
+    "why": "describes docker build -t after reading a Dockerfile; diec's -t is not about tagging images"
   }
 }
