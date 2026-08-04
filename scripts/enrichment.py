@@ -1983,6 +1983,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for foremost when recovering lost files from disk images or drives, using command line switches to specify built-in file types or configuration files for headers and footers; they may run it after creating an image with tools like dd, and choose it over similar tools due to its reliability and speed from using internal data structures of file formats.',
         'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
     },
+    'foremost': {
+        'scenario': 'An analyst reaches for foremost when recovering files from disk images or drives, often after creating an image with tools like dd; they may run it with command-line switches to specify file types, as shown in the example using -t and -i, and choose it for its reliability in data carving through built-in file type recognition.',
+        'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
+    },
     'frida': {
         'scenario': 'An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.',
         'sources': ['https://bananamafia.dev/post/r2frida-1/', 'https://github.com/dweinstein/awesome-frida'],
@@ -1997,6 +2001,18 @@ RESEARCHED: dict[str, dict] = {
     },
     'pdfid': {
         'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats, such as those containing JavaScript or obfuscation, before conducting deeper analysis with a parser; they may run it initially to screen files for suspicious content, preferring it over more complex parsers due to its simplicity and reduced risk of exploitation.',
+        'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
+    },
+    'pdfid': {
+        'scenario': 'An analyst reaches for pdfid when triaging PDF files to quickly identify potential malicious content, such as JavaScript or obfuscated names, before deeper analysis; they may run it prior to using a full PDF parser due to its simplicity and reduced risk of exploitation compared to more complex tools.',
+        'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
+    },
+    'pdfid': {
+        'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats, such as those containing JavaScript or malicious actions, before conducting deeper analysis with a parser; they may run it initially to screen files for suspicious keywords, preferring it over more complex parsers due to its simplicity and reduced risk of exploitation.',
+        'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
+    },
+    'pdfid': {
+        'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats like embedded JavaScript or obfuscation, often running it before deeper analysis with a parser; they choose it over similar tools due to its simplicity and focused keyword scanning, which reduces risk compared to full parsers.',
         'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
     },
     'radare2': {
