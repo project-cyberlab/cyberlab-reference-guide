@@ -199,6 +199,10 @@ def trust(url: str) -> int:
 SEARCH_INTERVAL = 4.0
 _last_search = [0.0]
 _empty_streak = [0]
+_search_down_until = [0.0]
+# How long to stop searching once the engines are judged down. They
+# suspend for minutes to an hour, and CAPTCHA blocks can outlast that.
+SEARCH_DOWN_FOR = 1800
 
 
 def _pace() -> None:
@@ -230,6 +234,8 @@ def search(query: str, limit: int = 10) -> list[dict]:
     exists" manufactures exactly the false conclusion this project is built
     to avoid, and it does it silently and at scale.
     """
+    if time.time() < _search_down_until[0]:
+        return []          # circuit open: no request, no wait, no false miss
     _pace()
     results = _search_once(query)
     if not results:
@@ -247,11 +253,23 @@ def search(query: str, limit: int = 10) -> list[dict]:
         # exists. That is the one verdict this project may not produce, so
         # the loop stops and waits instead of running blind.
         if _empty_streak[0] >= 3:
-            wait = min(300, 45 * (_empty_streak[0] - 2))
-            print(f"    [search] {_empty_streak[0]} empty results in a row; "
-                  f"upstream engines look suspended. Waiting {wait}s rather "
-                  f"than recording false misses.", flush=True)
-            time.sleep(wait)
+            # Circuit breaker, not a sleep-per-query.
+            #
+            # Sleeping on every query meant that with search down the loop
+            # spent NINE HOURS alternating five-minute naps with failed
+            # requests, producing nothing. Worse, it kept emitting output the
+            # whole time, so a watchdog measuring "is the log growing?" saw a
+            # perfectly healthy loop. Liveness is not productivity.
+            #
+            # Once search is judged down it stays marked down for a while and
+            # every query short-circuits instantly. The loop then runs on
+            # seeds and cached pages, which need no search at all, instead of
+            # queueing behind an engine that is CAPTCHA-blocking us.
+            _search_down_until[0] = time.time() + SEARCH_DOWN_FOR
+            print(f"    [search] {_empty_streak[0]} empty in a row -- upstream "
+                  f"engines are suspended. Skipping search for "
+                  f"{SEARCH_DOWN_FOR // 60} minutes and working from seeds and "
+                  f"cache instead.", flush=True)
         return []
     _empty_streak[0] = 0
     out = []
