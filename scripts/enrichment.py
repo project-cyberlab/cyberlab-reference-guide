@@ -2136,8 +2136,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://github.com/Yamato-Security/hayabusa'],
     },
     'hivexsh': {
-        'scenario': 'An analyst reaches for hivexsh when examining pagefile.sys to extract and analyze carved registry hive fragments, often after initial string or artifact extraction, to process regf and hbin blocks for registry keys, command-line patterns, or credential indicators; they may use it in conjunction with RegRipper or Registry Explorer for deeper analysis, as it specifically handles registry data recovery from pagefile.sys fragments.',
-        'sources': ['https://www.pagefilesysparser.com/en'],
+        'scenario': 'When an analyst needs to examine Windows Registry hive files, they use hivexsh after obtaining the hive file (e.g., via virt-cat or guestfish) to navigate and inspect its keys and subkeys, as it is specifically designed for this task and provides interactive shell commands for structured exploration.',
+        'sources': ['https://libguestfs.org/hivexsh.1.html', 'https://manpages.ubuntu.com/manpages/xenial/man1/hivexsh.1.html'],
     },
     'hydra': {
         'scenario': 'When testing system security to identify weak or default credentials, an analyst uses Hydra after creating custom username/password lists, running it via command line for protocols like SSH, preferring it over similar tools for its cross-platform support and ability to validate security measures effectively.',
