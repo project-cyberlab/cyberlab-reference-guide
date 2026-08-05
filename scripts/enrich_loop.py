@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from collections import Counter
 import sys
 import time
 from datetime import datetime
@@ -40,6 +41,8 @@ ROOT = HERE.parent
 OUT = ROOT / "research_output.json"
 MISSES = ROOT / "research_misses.json"
 REVIEW = ROOT / "research_review.json"
+# The append-only history of every verdict. run_forever mirrors here.
+LIVE_LOG = ROOT / "research_live.log"
 
 # Both GPUs. Measured: 9-14B models answer this as well as 32B and twice as
 # fast, because compressing one retrieved paragraph is near-trivial work.
@@ -676,6 +679,31 @@ def already_done() -> set[str]:
     return done
 
 
+def attempt_counts() -> Counter:
+    """How many times each tool has actually been attempted, from the log.
+
+    Not from the three record files. Those deduplicate on (tool, flag) and
+    keep the best-evidenced attempt, which is right for reporting and makes
+    them useless for counting: a tool ground eight times appears at most once
+    per file. That deduplication is exactly why the repeat-grinding was
+    invisible in the JSON while the log showed scalpel rejected eight times
+    with the same reason.
+
+    The log is append-only and every verdict lands in it, so it is the only
+    complete record of what was attempted.
+    """
+    n: Counter = Counter()
+    try:
+        txt = LIVE_LOG.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return n
+    for tool, _whole, flag in re.findall(
+            r"(?:KEPT|MISS|REJECTED|REVIEW)\s+(\S+)(\s+(-{1,2}\S+))?\s\s", txt):
+        if not flag:
+            n[tool] += 1
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tool")
@@ -708,8 +736,28 @@ def main() -> int:
             # Returning nothing here made run_forever spin: enrich_loop exited
             # in under a second, the runner immediately started another round,
             # and it did that 5,600 times while appearing healthy.
-            print("all tools attempted; starting another pass over them")
-            tools = tools_needing_work(a.auto, set())
+            # Least-attempted first, not the top of the list again.
+            #
+            # This restart used to call tools_needing_work(a.auto, set()),
+            # which returns the first N in NEIGHBOURS order -- the same
+            # thirty tools on every pass, forever. Measured over 462
+            # recorded verdicts: 121 distinct targets, 341 repeat attempts,
+            # 74% of all output. pdfid, pdf-parser, pdf-parser.py, pdfid.py,
+            # photorec, testdisk, foremost and scalpel -- the first eight
+            # entries of NEIGHBOURS -- had been attempted eight times each,
+            # and scalpel returned exactly the same rejection all eight
+            # times. Meanwhile the tail of the pool was never reached at
+            # all, which is why seeding tools kept producing nothing: the
+            # seeds were fine and the tools were never picked again.
+            #
+            # Rounds completed, verdicts accumulated and the log grew the
+            # whole time. Same shape as every other failure here: a fallback
+            # that looks like progress while covering the same ground.
+            counts = attempt_counts()
+            order = {t: i for i, t in enumerate(tools_needing_work(10 ** 6, set()))}
+            tools = sorted(order, key=lambda t: (counts.get(t, 0), order[t]))[:a.auto]
+            print(f"all tools attempted; next pass takes the least-attempted "
+                  f"{len(tools)} (lowest count {min(counts.get(t, 0) for t in tools) if tools else 0})")
         print(f"auto-selected {len(tools)} tools: {', '.join(tools[:10])}"
               f"{' ...' if len(tools) > 10 else ''}")
     if not tools:
