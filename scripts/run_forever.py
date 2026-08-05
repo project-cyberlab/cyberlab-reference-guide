@@ -30,6 +30,10 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 STOP = ROOT / "STOP"
 LOG = ROOT / "research_runlog.jsonl"
+# Stable path for the human-readable stream. Rotating this per
+# restart orphaned three watchdogs, each of which then reported a
+# healthy loop as dead.
+LIVE = ROOT / "research_live.log"
 
 BATCH = 25
 
@@ -58,6 +62,8 @@ def run(cmd: list[str], timeout: int) -> str:
     try:
         for line in proc.stdout:              # type: ignore[union-attr]
             print(line.rstrip(), flush=True)
+            with LIVE.open("a", encoding="utf-8") as _fh:
+                _fh.write(line)
             lines.append(line)
             if time.time() > deadline:
                 proc.kill()
