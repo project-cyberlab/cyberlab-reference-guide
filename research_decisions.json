@@ -422,5 +422,13 @@
   "binwalk": {
     "verdict": "accept",
     "why": "names the real trigger (a firmware dump pulled off a device) and what it yields -- embedded files, compressed blobs, keys -- which is the map you need before deciding what to extract"
+  },
+  "binwalk -E": {
+    "verdict": "accept",
+    "why": "entropy is the right reason to reach for it -- a flat high-entropy region is encrypted or compressed, which decides what you do next"
+  },
+  "binwalk -e": {
+    "verdict": "accept",
+    "why": "automatic extraction of embedded filesystems is the whole point of binwalk on a firmware dump"
   }
 }

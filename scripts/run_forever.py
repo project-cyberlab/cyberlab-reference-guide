@@ -83,6 +83,21 @@ def counts() -> dict:
     return out
 
 
+def search_is_up() -> bool:
+    """Is the search backend actually answering?
+
+    A miss recorded while every upstream engine was suspended is not evidence
+    of anything, and retrying it while they are still suspended just
+    reproduces the same non-answer. Ask before requeueing.
+    """
+    try:
+        sys.path.insert(0, str(HERE))
+        import sources
+        return bool(sources._search_once("forensics timeline"))
+    except Exception:
+        return False
+
+
 def retry_unfair_misses() -> int:
     """Re-queue misses caused by the search being throttled, not by absence.
 
@@ -129,7 +144,14 @@ def main() -> int:
 
         # Every few rounds, give the unfairly-missed tools another go rather
         # than only ever reaching for untouched ones.
-        requeued = retry_unfair_misses() if rnd % 3 == 0 else 0
+        # Requeue when search RECOVERS, not on a round counter.
+        #
+        # Every third round was the wrong trigger: during the outage it kept
+        # returning misses to a queue that could not serve them, so they
+        # missed again for the same reason and came back round. The signal
+        # that matters is search working again, because that is the moment
+        # those verdicts become retryable rather than merely unfair.
+        requeued = retry_unfair_misses() if search_is_up() else 0
 
         print(f"\n=== round {rnd} at {started} "
               f"(requeued {requeued} throttled misses) ===", flush=True)
