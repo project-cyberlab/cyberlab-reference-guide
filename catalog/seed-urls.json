@@ -630,5 +630,23 @@
     "https://www.mankier.com/1/sigtool",
     "https://docs.clamav.net/manual/Usage/SignatureManagement.html",
     "https://man.archlinux.org/man/extra/clamav/sigtool.1.en"
+  ],
+  "dd": [
+    "https://www.forensicfocus.com/articles/linux-dd-basics/",
+    "https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html"
+  ],
+  "dcfldd": [
+    "https://www.mankier.com/1/dcfldd",
+    "https://commandmasters.com/commands/dcfldd-common/",
+    "https://dfir.blog/imaging-using-dcfldd/",
+    "https://linuxcommandlibrary.com/man/dcfldd",
+    "https://braincraze.net/dcfldd-a-comprehensive-guide-and-usage-examples/"
+  ],
+  "md5sum": [
+    "https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/",
+    "https://phoenixnap.com/kb/md5sum-linux",
+    "https://www.howtoforge.com/linux-md5sum-command/",
+    "https://commandmasters.com/commands/md5sum-common/",
+    "https://kb.hosting.com/docs/working-with-file-checksums"
   ]
 }

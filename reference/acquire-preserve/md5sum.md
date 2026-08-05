@@ -20,6 +20,23 @@ Compute or verify MD5 checksums. Still everywhere in DFIR for matching files aga
 md5sum [OPTION]... [FILE]...
 ```
 
+## Common invocations
+
+```
+# Generate MD5 checksum to verify file integrity
+md5sum ravi.pdf
+# Verify file integrity using hash
+md5sum file1.txt
+# Verify files match stored checksums
+md5sum -c files.md5
+# Verify file integrity by comparing MD5 checksum with expected value
+md5sum -b [filename]
+# Generate MD5 checksum for file integrity verification
+md5sum -t [filename]
+# Verify multiple files' integrity with stored hashes
+md5sum --check hashes
+```
+
 ## Options
 
 All 17 options parsed from the captured help text. The final column is filled in by review.

@@ -133,6 +133,62 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://christiant.io/clamav-guide',
         },
     ],
+    'dc3dd': [
+        {
+            'task': 'Verify data integrity during forensic imaging',
+            'cmd': 'dc3dd if=/var/log/messages of=/tmp/dc3dd hash=sha512',
+            'src': 'https://www.kali.org/tools/dc3dd/',
+        },
+    ],
+    'dcfldd': [
+        {
+            'task': 'Overwrite disk with pattern to erase data securely',
+            'cmd': 'dcfldd pattern="00FFAACC" of=/dev/sda',
+            'src': 'https://braincraze.net/dcfldd-a-comprehensive-guide-and-usage-examples/',
+        },
+        {
+            'task': 'Clone disk to image file for forensic analysis',
+            'cmd': 'dcfldd if=/dev/sda of=/path/to/output.img',
+            'src': 'https://braincraze.net/dcfldd-a-comprehensive-guide-and-usage-examples/',
+        },
+        {
+            'task': 'Create zero-filled test file for analysis',
+            'cmd': 'dcfldd if=/dev/zero of=test bs=50M count=2',
+            'src': 'https://www.mankier.com/1/dcfldd',
+        },
+        {
+            'task': 'Create a 100MB zero-filled test file',
+            'cmd': 'dcfldd if=/dev/zero of=test bs=1M count=100',
+            'src': 'https://www.mankier.com/1/dcfldd',
+        },
+        {
+            'task': 'Create a zero-filled test file for forensic analysis or data testing',
+            'cmd': 'dcfldd if=/dev/zero of=test bs=100M count=1',
+            'src': 'https://www.mankier.com/1/dcfldd',
+        },
+        {
+            'task': 'Create forensic disk image',
+            'cmd': 'dcfldd if=[/dev/sda] of=[disk.img] statusinterval=[256]',
+            'src': 'https://linuxcommandlibrary.com/man/dcfldd',
+        },
+    ],
+    'dd': [
+        {
+            'task': 'Clone hard disk from source to target',
+            'cmd': 'dd if=/dev/sda of=/dev/sdb',
+            'src': 'https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html',
+        },
+        {
+            'task': 'Restore disk image to target partition',
+            'cmd': 'dd if=hdadisk.img of=/dev/sdb3',
+            'src': 'https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html',
+        },
+        {
+            'task': 'Wipe hard disk by overwriting with zeros',
+            'cmd': 'dd if=/dev/zero of=/dev/hda bs=4K conv=noerror,sync',
+            'src': 'https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html',
+        },
+    ],
     'editcap': [
         {
             'task': 'Remove duplicate packets from capture file',
@@ -296,6 +352,38 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Generate timeline of file events within specific date range',
             'cmd': 'mactime -b body.txt -d -z UTC 2026-01-14..2026-01-15 > incident_timeline.csv',
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
+    'md5sum': [
+        {
+            'task': 'Generate MD5 checksum to verify file integrity',
+            'cmd': 'md5sum ravi.pdf',
+            'src': 'https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/',
+        },
+        {
+            'task': 'Verify file integrity using hash',
+            'cmd': 'md5sum file1.txt',
+            'src': 'https://www.howtoforge.com/linux-md5sum-command/',
+        },
+        {
+            'task': 'Verify files match stored checksums',
+            'cmd': 'md5sum -c files.md5',
+            'src': 'https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/',
+        },
+        {
+            'task': 'Verify file integrity by comparing MD5 checksum with expected value',
+            'cmd': 'md5sum -b [filename]',
+            'src': 'https://phoenixnap.com/kb/md5sum-linux',
+        },
+        {
+            'task': 'Generate MD5 checksum for file integrity verification',
+            'cmd': 'md5sum -t [filename]',
+            'src': 'https://phoenixnap.com/kb/md5sum-linux',
+        },
+        {
+            'task': "Verify multiple files' integrity with stored hashes",
+            'cmd': 'md5sum --check hashes',
+            'src': 'https://www.howtoforge.com/linux-md5sum-command/',
         },
     ],
     'mergecap': [

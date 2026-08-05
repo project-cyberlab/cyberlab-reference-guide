@@ -25,6 +25,10 @@ KEEP = [
     # A Windows drive root, not a line continuation. Testing for a bare
     # trailing backslash dropped this whole, valid command.
     ("clamscan", "clamscan.exe --recursive C:" + chr(92)),
+    ("dd", "dd if=/dev/sda of=/dev/sdb"),
+    ("dd", "dd if=/dev/zero of=/dev/hda bs=4K conv=noerror,sync"),
+    ("dcfldd", 'dcfldd pattern="00FFAACC" of=/dev/sda'),
+    ("md5sum", "md5sum -c files.md5"),
 ]
 
 DROP = [
@@ -51,6 +55,18 @@ DROP = [
     ("ewfinfo", "ewfinfo 20140608"),
     # A prose parenthetical standing in for the arguments.
     ("mergecap", "mergecap -F (different options)"),
+    # Truncated dd commands, where the device name was markup the text
+    # extraction dropped. Both were captioned as wipes -- "Securely erase
+    # drive data", "Wipe drive data with zeros". Half a destructive command
+    # under a confident caption is the worst thing this guide could print.
+    ("dd", "dd if=/dev/"),
+    ("dd", "dd if=/dev/zero of=/dev/"),
+    # Spacing mangled by the same extraction.
+    ("dd", "dd if = /dev /sda2 of=~/hdadisk.img"),
+    # Truncated mid-line, not only at the end.
+    ("dd", "dd if=/home/u/linux_image.dd of=/dev/ conv=notrunc,noerror"),
+    # A page title, where the giveaway is the proper noun after the bar.
+    ("md5sum", "md5sum Linux Command (10 Examples) | phoenixNAP KB"),
     # A line continuation: the command is cut off, and half a command that
     # looks whole is worse than none.
     ("evtxexport", "evtxexport -p p1/ -s p1/config/SYSTEM " + chr(92)),

@@ -234,6 +234,37 @@ def candidate_lines(text: str, tool: str,
         # (different options)" is a sentence about the flag, not a command.
         if re.search(r"\((?:[a-z]+\s+){1,4}[a-z]+\)", line):
             continue
+        # In a shell pipe the right-hand side is another command, so it
+        # starts with a lowercase program name. A title reads
+        # "md5sum Linux Command (10 Examples) | phoenixNAP KB", where what
+        # follows the bar is a proper noun and the line is a page heading.
+        if " | " in line:
+            after = line.split(" | ", 1)[1].lstrip()
+            # Testing only that the first token was lowercase was not enough:
+            # "md5sum Linux Command (10 Examples) | phoenixNAP KB" begins its
+            # right-hand side with a lowercase letter. The giveaway is the
+            # capitalised word after it -- a program's arguments are rarely
+            # proper nouns, and a page title is made of them.
+            if (not re.match(r"[a-z][\w.-]*(?:\s|$)", after)
+                    or any(w[:1].isupper() for w in after.split())):
+                continue
+        # An operand with nothing after it: `dd if=/dev/`, `dd if=/dev/zero
+        # of=/dev/`. These came out of pages where the device name was markup
+        # that the text extraction dropped, and they were captioned
+        # "Securely erase drive data" and "Wipe drive data with zeros". Half
+        # a dd wipe command under a confident destructive caption is the
+        # worst thing this guide could print, so an operand must have a
+        # value and the value must not end at a path separator.
+        if (re.search(r"\b\w+=\s*(?:$|\s)", line)
+                # A bare /dev/ with no device after it, anywhere in the line
+                # -- `dd if=img.dd of=/dev/ conv=notrunc` slipped through a
+                # rule that only looked at the end of the line.
+                or re.search(r"=/dev/(?=\s|$)", line)
+                or re.search(r"=\S*/\s*$", line)):
+            continue
+        # Spacing mangled by the same extraction: `dd if = /dev /sda2`.
+        if re.search(r"\b\w+\s+=\s|\s=\s+\S", line):
+            continue
         # A line continuation means the command is cut off here. Publishing
         # half of it is worse than publishing none: it looks complete.
         #

@@ -26,6 +26,23 @@ An analyst uses dcfldd when creating a verified forensic copy of a disk drive fo
 dcfldd [OPTION]...
 ```
 
+## Common invocations
+
+```
+# Overwrite disk with pattern to erase data securely
+dcfldd pattern="00FFAACC" of=/dev/sda
+# Clone disk to image file for forensic analysis
+dcfldd if=/dev/sda of=/path/to/output.img
+# Create zero-filled test file for analysis
+dcfldd if=/dev/zero of=test bs=50M count=2
+# Create a 100MB zero-filled test file
+dcfldd if=/dev/zero of=test bs=1M count=100
+# Create a zero-filled test file for forensic analysis or data testing
+dcfldd if=/dev/zero of=test bs=100M count=1
+# Create forensic disk image
+dcfldd if=[/dev/sda] of=[disk.img] statusinterval=[256]
+```
+
 ## Options
 
 All 2 options parsed from the captured help text. The final column is filled in by review.

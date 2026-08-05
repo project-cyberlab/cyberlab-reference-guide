@@ -26,6 +26,13 @@ An analyst reaches for dc3dd when encountering unreadable sectors during disk im
 ------
 ```
 
+## Common invocations
+
+```
+# Verify data integrity during forensic imaging
+dc3dd if=/var/log/messages of=/tmp/dc3dd hash=sha512
+```
+
 ## Options
 
 All 3 options parsed from the captured help text. The final column is filled in by review.
