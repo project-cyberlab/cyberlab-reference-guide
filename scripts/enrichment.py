@@ -2019,6 +2019,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': "An analyst reaches for AppCompatCacheParser when examining ShimCache for historical execution evidence, often after checking UserAssist or before parsing AmCache, as it converts the registry's AppCompatCache into a readable CSV, providing file names, sizes, and timestamps that manual analysis cannot easily extract. They may prefer it over AmCacheParser when focusing on ShimCache-specific data rather than AmCache's more detailed but differently structured entries.",
         'sources': ['https://hackers-arise.com/digital-forensics-registry-analysis-for-beginners-part-3-evidence-of-execution/', 'https://hivesecurity.gitlab.io/blog/dfir-incident-response-complete-guide-2026/', 'https://nullsec.us/windows-10-11-appcompatcache-deep-dive/'],
     },
+    'EvtxECmd': {
+        'scenario': 'An analyst reaches for EvtxECmd during the "PARSE" phase of the DFIR workflow to convert event logs into standardized CSV, XML, or JSON formats, often after collecting logs with KAPE and before analyzing them in Timeline Explorer, as it supports custom maps, locked file handling, and produces structured output essential for correlation and triage.',
+        'sources': ['https://ericzimmerman.github.io/', 'https://ridgelinecyber.com/resources/kape-ez-tools/'],
+    },
     'JLECmd': {
         'scenario': 'An analyst reaches for JLECmd when parsing individual Jump Lists or extracting shell item data from .automaticDestinations-ms files, often after obtaining the files through forensic imaging or before analyzing the extracted .lnk files with other tools like LNK Tool. They may choose JLECmd over JumpList Explorer (JLE) when command-line processing is required, though JLE is preferred for its graphical interface.',
         'sources': ['https://www.cyberengage.org/post/jump-list-analysis-tool-jlecmd-exe'],
@@ -2038,6 +2042,10 @@ RESEARCHED: dict[str, dict] = {
     'SBECmd': {
         'scenario': 'An analyst reaches for SBECmd when processing mounted forensic images to extract ShellBags data from NTUSER.DAT and UsrClass.dat files, often running it after mounting the image and before manual analysis or generating reports, as it automates parsing and outputs structured CSV files, making it preferable for large-scale investigations over manual tools.',
         'sources': ['https://cyber5w.com/blog/windows-shell-items-analysis', 'https://www.cyberengage.org/post/shell-bags-analysis-tool-sbecmd-exe-or-shellbagsexplorer-gui-version-very-important-artifact'],
+    },
+    'SrumECmd': {
+        'scenario': 'An analyst reaches for SrumECmd during incident response after checking logs, processes, file changes, and persistence mechanisms to analyze data egress volume per application by processing SRUDB.dat and SOFTWARE hive data, as it specifically addresses network and application-based data movement insights not covered by other tools in the triage sequence.',
+        'sources': ['https://ericzimmerman.github.io/', 'https://ridgelinecyber.com/resources/kape-ez-tools/', 'https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/'],
     },
     'SumECmd': {
         'scenario': 'An analyst reaches for SumECmd after repairing corrupted UAL database files with Esentutl.exe /p to parse the Windows User Access Log (UAL) and generate CSV files correlating role access timestamps, GUIDs, and role names, as it specifically handles UAL logs that retain historical authentication data longer than typical event logs. They may use it alongside EDR telemetry and Security event logs to investigate suspicious activity, such as anomalous logins or appliance connections, due to its focus on UAL artifacts.',
@@ -2111,6 +2119,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.',
         'sources': ['https://bananamafia.dev/post/r2frida-1/', 'https://github.com/dweinstein/awesome-frida'],
     },
+    'frida-trace': {
+        'scenario': "An analyst reaches for frida-trace when tracing and modifying application behavior dynamically, such as during reverse engineering or security testing, often after copying frida-server to a remote device and before interacting with the target app's methods. They may choose it over similar tools because it allows real-time modification of method outputs and provides detailed tracing capabilities, as demonstrated by altering return values or inspecting method parameters during execution.",
+        'sources': ['https://frida.re/docs/frida-trace/', 'https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/'],
+    },
     'hashcat': {
         'scenario': 'An analyst reaches for hashcat when dealing with hashes like MD5, using wordlists such as rockyou.txt for brute-force or combination attacks, and runs it after identifying the hash type and preparing input files; they choose it over similar tools due to its GPU-accelerated cracking capabilities and support for advanced attack modes like mask attacks, as demonstrated in the examples.',
         'sources': ['https://github.com/IPIRATEXAPTAIN/htb-academy/blob/main/CrackingPasswordsWithHashcat.md', 'https://hashcat.net/wiki/doku.php?id=frequently_asked_questions'],
@@ -2155,6 +2167,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for objdump when examining raw binary files like BIOS dumps or ELF binaries to inspect assembly code, section headers, or memory layouts, often after capturing memory or firmware data; they may use it alongside tools like ndisasm or Ghidra for deeper analysis, preferring objdump for its integration with ELF metadata and ability to display low-level code structures.',
         'sources': ['https://can-ozkan.medium.com/learning-elf-the-foundation-of-linux-binary-analysis-c4f1f8df83e4', 'https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md', 'https://hacktricks.wiki/en/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.html'],
     },
+    'olebrowse': {
+        'scenario': 'An analyst reaches for olebrowse when they need to interactively explore the structure of an OLE file, such as viewing or extracting individual data streams from MS Office documents, as it provides a simple GUI interface for this purpose. They may use it alongside tools like oledir or olemap for structural analysis, but prefer olebrowse for its visual inspection capabilities over command-line alternatives.',
+        'sources': ['https://github.com/decalage2/oletools/wiki', 'https://github.com/decalage2/oletools/wiki/olevba'],
+    },
     'oledump.py': {
         'scenario': 'An analyst reaches for oledump.py when examining OLE files (e.g., .xls) for embedded VBA macros or obfuscated content, often after extracting a file from a password-protected zip (using the password "infected") to avoid manual extraction. They may run it with options like -m to list streams, -v to decompress macros, or plugins like plugin_http_heuristics.py to extract URLs, preferring it over similar tools due to its ability to analyze zipped files in-place and integrate with YARA for rule-based scanning.',
         'sources': ['https://blog.didierstevens.com/programs/oledump-py/'],
@@ -2187,9 +2203,29 @@ RESEARCHED: dict[str, dict] = {
         'scenario': "An analyst reaches for readelf when examining stripped binaries or analyzing ELF headers to identify architecture, sections, or security features like CET; they may run it after using strings or before deeper disassembly to understand the binary's structure and protections, preferring it over similar tools for its precise ELF-specific insights into headers, sections, and dynamic symbols.",
         'sources': ['https://hacktricks.wiki/en/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.html', 'https://intezer.com/blog/elf-malware-analysis-101-initial-analysis/', 'https://w00tsec.blogspot.com/2015/02/firmware-forensics-diffs-timelines-elfs.html'],
     },
+    'regripper': {
+        'scenario': 'An analyst reaches for RegRipper when examining registry hive files to quickly extract and decode data using pre-canned plugins, often after extracting the hive from a forensic image or system; they may run it alongside manual registry analysis to validate findings, as it automates complex data extraction tasks like decoding ROT-13 or translating binary values, which would be time-consuming manually.',
+        'sources': ['https://www.sans.org/blog/regripper-ripping-registries-with-ease'],
+    },
+    'reordercap': {
+        'scenario': 'An analyst uses reordercap when packets in a capture file are out of chronological order, running it after capturing or extracting the file to reorder packets by timestamp; they avoid using the same input and output file to prevent malformation, and prefer it over manual sorting or other tools because it automatically detects file formats and compression.',
+        'sources': ['https://manpages.debian.org/testing/wireshark-common/reordercap.1.en.html', 'https://tshark.dev/edit/reordercap/'],
+    },
     'scalpel': {
         'scenario': 'When an analyst needs to recover files from a disk image or raw device without relying on filesystem structure, they use Scalpel after imaging the drive, as it is filesystem-independent and can extract files from multiple formats. They may choose it over similar tools like Foremost because it is a faster, rewritten version designed for both digital forensics and file recovery.',
         'sources': ['https://www.kali.org/tools/scalpel/'],
+    },
+    'ssdeep': {
+        'scenario': 'An analyst reaches for ssdeep when comparing files for similarity rather than exact matches, running commands like -r to generate fuzzy hashes and -x or -k to compare signatures, as it is a mainstream tool used by NIST and can detect partial overlaps between files.',
+        'sources': ['https://dfir.science/2017/07/How-To-Fuzzy-Hashing-with-SSDEEP-(similarity-matching).html', 'https://ssdeep-project.github.io/ssdeep/usage.html'],
+    },
+    'tcpflow': {
+        'scenario': 'An analyst reaches for tcpflow after capturing network traffic with tools like tcpdump, when they need to reconstruct and analyze TCP data streams in files for easier forensic examination; they may run tcpflow on stored pcap files to extract and organize data, preferring it over Wireshark for its ability to save reconstructed flows into conventional files, simplifying further analysis with standard tools.',
+        'sources': ['https://forensics.wiki/tcpflow/', 'https://www.systutorials.com/docs/linux/man/1-tcpflow/'],
+    },
+    'tcpxtract': {
+        'scenario': 'When an analyst needs to extract files from network traffic, they use tcpxtract on pcap capture files or live traffic, as it supports 26 file formats and allows custom configurations via its config file. They may run it after capturing traffic with tools that generate pcap files, preferring it over similar tools due to its flexibility in adding new formats and reliance on file signatures for accurate extraction.',
+        'sources': ['https://www.freshports.org/net/tcpxtract/'],
     },
     'testdisk': {
         'scenario': 'An analyst reaches for TestDisk when recovering lost partitions or repairing filesystems on physical devices, running it with administrative or root privileges after ensuring access rights; they choose it over similar tools because it specifically handles partition recovery and filesystem repair, unlike PhotoRec, which focuses on file recovery from unallocated space.',
@@ -2203,6 +2239,18 @@ RESEARCHED: dict[str, dict] = {
         'scenario': "An analyst reaches for vol when examining memory dumps to detect malicious activity, such as unusual processes or command-line arguments; they may first run plugins like `windows.pslist` or `windows.pstree` to establish context before using `windows.cmdline` or `windows.handles` for deeper analysis, as the tool's use of symbol tables ensures accurate parsing of memory structures over guesswork.",
         'sources': ['https://hivesecurity.gitlab.io/blog/memory-forensics-volatility-attack-detect/', 'https://www.dfirhive.com/post/windows-memory-and-process-analysis-volatility3-walkthrough'],
     },
+    'volshell': {
+        'scenario': 'An analyst reaches for volshell when they need to interactively run plugins or execute custom scripts on a memory image, often after loading the image to extract or analyze specific data. They may use it to generate TreeGrid objects for structured data access or run snippets via rs for quick tasks, preferring it over writing full plugins due to its flexibility and direct framework access.',
+        'sources': ['https://github.com/volatilityfoundation/volatility3/blob/develop/doc/source/volshell.rst', 'https://volatility3.readthedocs.io/en/latest/volshell.html'],
+    },
+    'xortool': {
+        'scenario': 'An analyst reaches for xortool when dealing with XOR-encrypted data, particularly when the key length is unknown or longer than default limits, and runs it after initial attempts to guess the key fail, using flags like -m, -l, or -c to refine results; they choose it over similar tools because it automates key-length analysis, filters plaintexts by character sets (e.g., Base64), and handles multi-byte keys with adjustable parameters.',
+        'sources': ['https://github.com/hellman/xortool', 'https://github.com/hellman/xortool/blob/master/README.md', 'https://www.doyler.net/security-not-included/basic-xortool-usage'],
+    },
+    'yara': {
+        'scenario': 'An analyst reaches for YARA when they need to detect specific malware or file patterns using Boolean conditions and tags, running it after collecting files from an incident or system, as it allows efficient filtering and organization of rules through metadata and tags.',
+        'sources': ['https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/mastering-yara-rules-a-complete-guide-with-use-cases-syntax-and-real-world-examples/', 'https://www.picussecurity.com/resource/glossary/what-is-a-yara-rule', 'https://yara.readthedocs.io/en/stable/writingrules.html'],
+    },
 }
 
 RESEARCHED_FLAGS: dict[str, dict] = {
@@ -2215,9 +2263,22 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-f': 'An analyst would use the -f flag when examining a specific prefetch file to extract detailed execution information, such as timestamps and context about a suspicious executable like Mimikatz.',
         '-k': 'An analyst would use the -k flag when performing one-off analysis to quickly highlight and identify known-bad folders or files by searching for specific keywords in the output.',
     },
+    'RECmd': {
+        '--csv': 'An analyst would use the --csv flag when batch-processing registry hives against the community ruleset to generate structured CSV output for forensic analysis of persistence mechanisms, user activity, and system configuration details.',
+        '--csvf': 'An analyst would use the --csvf flag when processing registry hives with RECmd to generate a CSV output file for further analysis or documentation during a forensic investigation.',
+        '-d': 'An analyst would use the -d flag with RECmd when batch-processing hives against a community ruleset to extract forensic values like RunOnce persistence or user activity from the registry.',
+        '-f': 'An analyst would use the -f flag when processing a single registry hive file against a specific rule file to extract forensic artifacts.',
+    },
+    'SrumECmd': {
+        '-f': 'An analyst would use the -f flag with SrumECmd when extracting per-app network usage data from the SRUDB.dat file to investigate network activity over the last 30-60 days.',
+    },
     'WxTCmd': {
         '--csv': 'An analyst would use the --csv flag with WxTCmd when parsing the Windows 10 Timeline database to export the results into a CSV file for structured analysis of application execution times and user activity.',
         '-f': 'An analyst would use the -f flag with WxTCmd when processing the Windows 10 Timeline database file (ActivitiesCache.db) to extract and save application usage data as a CSV for forensic analysis.',
+    },
+    'aeskeyfind': {
+        '-t': 'An analyst would use the -t flag when examining a memory image with potential bit errors due to memory decay, allowing the tool to tolerate a specified number of discrepancies in candidate key schedules to improve the chances of recovering valid AES keys.',
+        '-v': 'An analyst would use the -v flag when examining memory images to obtain detailed verbose output, including extended keys and constraints on the rows of the key schedule, to aid in forensic analysis.',
     },
     'binwalk': {
         '-E': 'An analyst would use the -E flag when analyzing entropy to detect encrypted or compressed sections within a firmware image.',
@@ -2227,8 +2288,32 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-R': 'An analyst would use the -R flag when needing to recursively scan and extract buried evidence from compressed files like ZIP, GZIP, or PDF archives.',
         '-o': 'An analyst would use the -o flag when they need to specify a custom output directory to save the extracted artifacts generated by bulk_extractor.',
     },
+    'capinfos': {
+        '-T': 'An analyst would use the -T flag when generating a table-style report to organize and export capture file information in a structured format, such as for importing into spreadsheet applications or further analysis.',
+        '-n': 'An analyst would use the -n flag when examining a capture file to determine the number of resolved IPv4 and IPv6 addresses present.',
+    },
+    'chainsaw': {
+        '--json': 'An analyst would use the --json flag when they need to output search or analysis results in a structured, machine-readable JSON format for further processing or integration with other tools.',
+        '--mapping': 'An analyst would use the --mapping flag when applying third-party detection rules to event logs, as the mapping file specifies which log fields to use for rule matching.',
+        '-i': 'An analyst would use the -i flag when searching for a string in event logs where the case of the letters in the pattern may vary, such as when looking for "mimikatz" in logs where it might appear as "MIMIKATZ" or "mimikatz".',
+        '-s': 'An analyst would use the -s flag when incorporating Sigma rules into the hunting process to apply third-party detection logic during log analysis.',
+        '-t': 'An analyst would use the -t flag when searching for specific event log entries by defining precise tau expressions, such as identifying events by their System EventID in EVTX files.',
+    },
+    'clamscan': {
+        '--exclude-dir': 'An analyst would use the --exclude-dir flag when scanning a system to skip over directories like /proc, /sys, and /dev that contain non-file system data and are not relevant to virus scanning.',
+        '--infected': 'An analyst would use the --infected flag when scanning directories or files to quickly identify and isolate only the infected items without displaying clean files, as demonstrated in the examples of showing infected files during recursive scans or automated upload checks.',
+        '--max-filesize': 'An analyst would use the --max-filesize flag when scanning directories containing large files to skip scanning files exceeding a specified size, such as 100MB, to avoid unnecessary processing.',
+        '--recursive': 'An analyst would use the --recursive flag when scanning a directory and needing to include all subdirectories to ensure every file is checked.',
+    },
     'dumpcap': {
         '-w': 'An analyst would use the -w flag when capturing network traffic to disk for later analysis, particularly when managing large volumes of data through ring buffers, size-based file rotation, or time-based segmentation to ensure efficient storage and focused investigation.',
+    },
+    'evtxexport': {
+        '-S': 'An analyst would use the -S flag when exporting event logs from a mounted volume and needing to include the SOFTWARE registry file to resolve software-specific information referenced in the event data.',
+        '-f': 'An analyst would use the -f flag when exporting event records from an EVTX file in a specific format, such as XML, to ensure the data is structured for analysis or integration with other tools.',
+        '-p': 'An analyst would use the -p flag when specifying the path to a mounted file system or volume containing Windows event logs and registry files for extraction.',
+        '-r': 'An analyst would use the -r flag when specifying the directory containing the SYSTEM and SOFTWARE registry files to properly parse event log data from a mounted Windows volume.',
+        '-s': 'An analyst would use the -s flag when specifying the path to the SYSTEM registry file to export event log data that requires registry information for proper interpretation.',
     },
     'fls': {
         '-d': 'An analyst would use the -d flag with fls when examining a disk image to identify and list deleted files by their inode numbers for potential recovery.',
@@ -2243,16 +2328,47 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-i': 'An analyst would use the `-i` flag when processing a disk image file, such as one generated by `dd`, to specify the input file for forensic carving.',
         '-t': 'An analyst would use the -t flag when specifying particular file types to recover from a disk image during a forensic investigation.',
     },
+    'frida': {
+        '-N': 'When an analyst needs to inject a script into a specific Android application to modify its behavior, such as bypassing validation or decrypting a flag, they would use the -N flag to target the application by name.',
+        '-U': 'When an analyst needs to attach Frida to a target application running on a connected Android device via USB to intercept logs, decrypt data, or hook methods during dynamic instrumentation.',
+        '-f': 'An analyst would use the -f flag when needing to inject a script at the start of a target process to bypass security mechanisms like SSL pinning or anti-root protection as the application launches.',
+        '-l': "An analyst would use the -l flag when injecting a JavaScript script to modify an application's behavior, such as decrypting obfuscated strings or bypassing security mechanisms like SSL pinning.",
+    },
     'fsstat': {
         '-o': "An analyst would use the -o flag with fsstat when examining the file system's data structures, such as the $MFT in NTFS, after determining the correct offset from the partition layout using mmls.",
     },
+    'hashcat': {
+        '--show': 'An analyst would use the --show flag to display previously cracked hashes stored in the potfile when verifying results or avoiding redundant cracking efforts.',
+        '-a': 'An analyst would use the -a flag when performing a combination attack to generate password combinations from two separate wordlists.',
+        '-m': 'An analyst would use the -m flag when specifying the hash type (e.g., MD5, SHA-256) to ensure Hashcat correctly interprets the hash format during cracking attempts.',
+        '-r': 'An analyst would use the -r flag when applying custom or built-in rule sets to a wordlist to generate password variations during cracking attacks, as demonstrated in the examples involving rules/best64.rule and modifying rules to append specific strings like years to passwords.',
+        '-w': 'An analyst would use the -w flag when optimizing Hashcat performance on a dedicated cracking rig with a GPU not driving a display, specifically setting -w 4 for maximum workload intensity.',
+    },
     'istat': {
         '-o': "An analyst would use the -o flag with istat when examining metadata of a specific inode to retrieve detailed information about a file's properties and timestamps from a disk image or partition.",
+    },
+    'john': {
+        '--format': 'An analyst would use the --format flag when cracking hashes from specific sources like NTDS.dit or /etc/shadow, or when the hash type requires a specific format identifier such as NT or raw-md5 to ensure John the Ripper correctly interprets the hash structure.',
+        '--incremental': 'An analyst would use the --incremental flag when the wordlist has been exhausted and the hash remains uncracked, particularly for short passwords (5-7 characters) where incremental brute-force is feasible.',
+        '--rules': 'An analyst would use the --rules flag when applying word mangling rules to a wordlist to generate variations of passwords for cracking, as demonstrated in examples like "john --wordlist=all.lst --rules mypasswd" and similar commands in the documentation.',
+        '--show': 'An analyst would use the --show flag after successfully cracking passwords to display the cracked credentials in a human-readable format for review or documentation.',
+        '--wordlist': 'An analyst would use the --wordlist flag when attempting to crack password hashes by feeding John the Ripper a file of potential passwords, such as the rockyou.txt wordlist, to compare against the target hash file.',
+    },
+    'log2timeline.py': {
+        '--file-filter': 'An analyst would use the --file-filter flag when processing a full disk image directly to specify individual files or paths for analysis, avoiding the need to create a separate triage collection.',
+        '--logfile': 'An analyst would use the --logfile flag when they need to redirect all log messages from log2timeline.py to a file for detailed debugging or record-keeping during processing.',
+        '--partitions': 'An analyst would use the --partitions flag when processing a disk image with multiple partitions and needing to specify a particular partition number to avoid interactive prompts during the analysis.',
+        '--storage-file': 'An analyst would use the --storage-file flag when processing a storage media image to specify the output file where the extracted timeline events will be stored.',
+        '--timezone': "When analyzing loose files, a triage collection, or when the system's time zone cannot be auto-detected, an analyst would use the --timezone flag to explicitly specify the source system's time zone.",
     },
     'mactime': {
         '-b': 'An analyst would use the -b flag when processing a body file to generate a timeline of file activity based on timestamps extracted from the file system.',
         '-i': 'An analyst would use the -i flag when creating an index summary file to import into a spreadsheet for graphing suspicious behavior, such as when analyzing file activity hits per day or hour.',
         '-z': 'An analyst would use the -z flag when the time zone of the data in the body file differs from their local time zone to ensure accurate timestamp interpretation in the timeline.',
+    },
+    'mergecap': {
+        '-F': 'An analyst would use the -F flag when they need to specify a particular output format for the merged capture file, such as when the default pcapng format is not suitable or when compatibility with specific tools requires a different format.',
+        '-w': 'An analyst would use the -w flag with mergecap when they need to aggregate and consolidate multiple packet capture files into a single output file for further analysis or sharing with a colleague.',
     },
     'mmls': {
         '-o': "An analyst would use the -o flag when analyzing an embedded filesystem by specifying its sector offset, obtained from mmls output, to correctly reference files within a partition that isn't the primary boot volume.",
@@ -2274,9 +2390,50 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'regipy-dump': {
         '-t': 'An analyst would use the -t flag when they need to output a timeline of the registry hive data instead of a JSON file.',
     },
+    'regripper': {
+        '-f': 'An analyst would use the -f flag when specifying the type of registry hive file being parsed, such as system, sam, or ntuser, to ensure RegRipper applies the correct plugin configurations during analysis.',
+        '-l': 'An analyst would use the -l flag when they need to list all available plugins to determine which ones to apply during registry analysis.',
+        '-p': 'An analyst would use the -p flag when they need to execute a specific plugin module on a registry hive file, such as extracting user-assist data from an NTUSER.DAT file.',
+    },
+    'reordercap': {
+        '-n': 'An analyst would use the -n flag when verifying if a pcap file is already in chronological order to avoid unnecessary processing and output file creation.',
+    },
+    'sigtool': {
+        '--hex-dump': "An analyst would use the --hex-dump flag when needing to generate a hexadecimal representation of a file's contents for detailed forensic examination or signature creation.",
+    },
+    'ssdeep': {
+        '-b': 'An analyst would use the -b flag when processing multiple files from different directories to generate fuzzy hashes based only on filenames, ignoring directory paths.',
+        '-d': 'An analyst would use the -d flag when comparing multiple files across directories to identify similar or duplicate documents, such as eliminating redundant Microsoft Word files in folders like Incoming, Outgoing, and Trash.',
+        '-m': 'An analyst would use the -m flag when comparing files against a precomputed fuzzy hash signature or database to identify matches, such as verifying if a file corresponds to a known hash stored in a file like sig.txt or fuzzy.db.',
+        '-s': 'An analyst would use the -s flag when creating a database of fuzzy hashes for later comparison to detect similarities between files, even if they have been slightly modified.',
+    },
+    'tcpflow': {
+        '-C': 'An analyst would use the -C flag when they need to view flow data in the console without the display of source/destination headers.',
+        '-o': 'An analyst would use the -o flag when they need to specify a particular directory to store the transcript files generated by tcpflow during packet analysis.',
+        '-r': 'An analyst would use the -r flag when processing a pcap file to automatically decode and save TCP flows, such as extracting HTTP responses or reconstructing data from network captures.',
+    },
+    'tcpxtract': {
+        '-o': 'An analyst would use the -o flag when performing a live capture from a network interface to specify the output directory for extracted files.',
+    },
+    'tshark': {
+        '-q': 'An analyst would use the -q flag when running tshark with the -z option to generate specific statistics, as shown in examples like "tshark -q -z io,stat,5,ip.addr==255.255.255.255" and "tshark -q -z conv.',
+    },
     'upx': {
         '-d': 'An analyst would use the `-d` flag with UPX when encountering a malware sample packed with UPX to automatically unpack it into its original executable form.',
         '-o': 'An analyst would use the -o flag when unpacking a UPX-packed sample to specify the output file name for the unpacked executable, as demonstrated in the example command.',
+    },
+    'xlmdeobfuscator': {
+        '--no-indent': 'An analyst would use the --no-indent flag when they need to extract deobfuscated macros from an Excel document without any formatting indentation to simplify analysis or processing.',
+        '--output-formula-format': 'An analyst would use the --output-formula-format flag when they need to deobfuscate macros in Excel documents and want the output to display only the integer-formula representation without any indentation or additional formatting.',
+        '-x': 'An analyst would use the -x flag when they need to extract macros from Excel documents without performing any deobfuscation.',
+    },
+    'xortool': {
+        '-p': "An analyst would use the -p flag when they have a known plaintext segment to aid in decrypting XOR-encrypted data, as demonstrated in examples where it's paired with encrypted files and brute-force options.",
+        '-t': 'When analyzing a Base64-encoded XORed message to filter plaintexts to only those containing valid Base64 characters.',
+        '-x': 'An analyst would use the -x flag when processing a hex-encoded file, such as when decrypting data that has been represented in hexadecimal format.',
+    },
+    'yara': {
+        '-v': 'An analyst would use the -v flag when validating the syntax of a YARA rule to ensure it is correctly formatted before testing it against files.',
     },
 }
 

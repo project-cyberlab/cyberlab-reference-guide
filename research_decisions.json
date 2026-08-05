@@ -510,5 +510,337 @@
   "mraptor --zip": {
     "verdict": "accept",
     "why": "Accurate. --zip supplies the password for an archive, and the scenario is the everyday one: malware samples are routinely distributed in ZIPs with the password 'infected' precisely so they are not executed by accident, and mraptor has to be told it. Thin on stating that the flag carries the password, but the trigger is right and it is what the column asks for. Both citations external."
+  },
+  "log2timeline.py --storage-file": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "log2timeline.py --logfile": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "log2timeline.py --timezone": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "log2timeline.py --file-filter": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "log2timeline.py --partitions": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tshark -q": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "capinfos": {
+    "verdict": "reject",
+    "why": "Describes the output formatting ('tab-delimited or CSV tables') instead of the question capinfos answers -- how many packets, over what timespan, in what encapsulation. A reader learns the flags exist and not why they would open the tool. Also carries filler ('they use it over similar tools because it directly handles pcap files')."
+  },
+  "capinfos -T": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "capinfos -n": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "mergecap -w": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "mergecap -F": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "chainsaw --json": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "chainsaw --mapping": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "chainsaw -s": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "chainsaw -t": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "chainsaw -i": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "evtxexport -r": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "evtxexport -p": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "evtxexport -S": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "evtxexport -f": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "evtxexport -s": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "evtxexport -c": {
+    "verdict": "reject",
+    "why": "Writes the tool's own format as 'EVT X'. The content is right -- a codepage for ASCII strings other than windows-1252 -- but the mangled name would be published verbatim. Re-research rather than hand-patch, so the fix comes from the source like everything else."
+  },
+  "yara": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "yara -v": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "clamscan --remove": {
+    "verdict": "reject",
+    "why": "What made this note worth having was the caution against general use, and that clause was attached to a reference to 'the passages', so strip_meta removed it. What survives -- 'when monitoring an upload/downloads directory' -- is true and thin, and for a flag that DELETES FILES a thin answer is the wrong one to ship. Re-research."
+  },
+  "clamscan --exclude-dir": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "clamscan --infected": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "clamscan --recursive": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "clamscan --max-filesize": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "ssdeep": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "ssdeep -s": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "ssdeep -d": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "ssdeep -m": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "ssdeep -b": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "hashcat -m": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "hashcat -a": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "hashcat -r": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "hashcat -w": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "hashcat --show": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "john --wordlist": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "john --rules": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "john --show": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "john --format": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "john --incremental": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "frida -U": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "frida -f": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "frida -N": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "frida -l": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "EvtxECmd": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "RECmd --csv": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "RECmd --csvf": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "RECmd -d": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "RECmd -f": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "RECmd --bn": {
+    "verdict": "reject",
+    "why": "Reuses the same sentence as --csv and -d ('batch-processing hives against a community ruleset') and never says what --bn itself does, which is name the batch file to run. Three flags with one indistinguishable answer is worse than a blank cell, because the reader cannot tell them apart and believes they can."
+  },
+  "SrumECmd": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "SrumECmd -f": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "aeskeyfind -v": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "aeskeyfind -t": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "frida-trace": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "regripper": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "regripper -l": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "regripper -p": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "regripper -f": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "reordercap": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "reordercap -n": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "sigtool --hex-dump": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tcpflow": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tcpflow -C": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tcpflow -o": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tcpflow -r": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tcpxtract": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "tcpxtract -o": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "volshell": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xlmdeobfuscator -x": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xlmdeobfuscator --no-indent": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xlmdeobfuscator --output-formula-format": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xortool": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xortool -f": {
+    "verdict": "reject",
+    "why": "Claims the same behaviour as -t (filtering candidate plaintexts by charset) without distinguishing them. One of the two is wrong and the note gives no way to tell which, so neither can be trusted. -t is kept because its scenario names the concrete case; this one is re-researched."
+  },
+  "xortool -t": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xortool -x": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "xortool -p": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "nmap": {
+    "verdict": "reject",
+    "why": "Generalises one retrieved passage into the whole tool: 'reaches for nmap when targeting MS SQL servers on nonstandard ports'. That is a single example from one walkthrough presented as the reason nmap exists. A junior analyst reading it would come away with a badly wrong idea of when to run a port scanner."
+  },
+  "olebrowse": {
+    "verdict": "accept",
+    "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
   }
 }

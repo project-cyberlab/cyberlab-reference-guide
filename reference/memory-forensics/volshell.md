@@ -13,6 +13,12 @@
 
 An interactive Python shell over a memory image, with Volatility's object model loaded — for questions no plugin answers.
 
+## When you'd reach for this
+
+An analyst reaches for volshell when they need to interactively run plugins or execute custom scripts on a memory image, often after loading the image to extract or analyze specific data. They may use it to generate TreeGrid objects for structured data access or run snippets via rs for quick tasks, preferring it over writing full plugins due to its flexibility and direct framework access.
+
+**Sources:** <https://github.com/volatilityfoundation/volatility3/blob/develop/doc/source/volshell.rst> · <https://volatility3.readthedocs.io/en/latest/volshell.html>
+
 ## Synopsis
 
 ```

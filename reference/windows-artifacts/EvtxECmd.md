@@ -14,6 +14,12 @@
 
 Parse Windows event logs into a normalised, filterable CSV, mapping the useful fields out of the XML payload.
 
+## When you'd reach for this
+
+An analyst reaches for EvtxECmd during the "PARSE" phase of the DFIR workflow to convert event logs into standardized CSV, XML, or JSON formats, often after collecting logs with KAPE and before analyzing them in Timeline Explorer, as it supports custom maps, locked file handling, and produces structured output essential for correlation and triage.
+
+**Sources:** <https://ericzimmerman.github.io/> · <https://ridgelinecyber.com/resources/kape-ez-tools/>
+
 ## Synopsis
 
 ```

@@ -29,7 +29,7 @@ frida [options] target
 
 ## Options
 
-All 66 options parsed from the captured help text. The final column is filled in by review.
+All 66 options parsed from the captured help text; 4 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -37,8 +37,8 @@ All 66 options parsed from the captured help text. The final column is filled in
 | `--help` | — | show this help message and exit |  |
 | `-D` | ID | connect to device with the given ID |  |
 | `--device` | ID | connect to device with the given ID |  |
-| `-U` | — | connect to USB device |  |
-| `--usb` | — | connect to USB device |  |
+| `-U` | — | connect to USB device | When an analyst needs to attach Frida to a target application running on a connected Android device via USB to intercept logs, decrypt data, or hook methods during dynamic instrumentation. |
+| `--usb` | — | connect to USB device | When an analyst needs to attach Frida to a target application running on a connected Android device via USB to intercept logs, decrypt data, or hook methods during dynamic instrumentation. |
 | `-R` | — | connect to remote frida-server |  |
 | `--remote` | — | connect to remote frida-server |  |
 | `-H` | HOST | connect to remote frida-server on HOST |  |
@@ -50,14 +50,14 @@ All 66 options parsed from the captured help text. The final column is filled in
 | `--device-option` | option | override a backend-specific option, such as “control- endpoint=(string)localabstract:/my-frida-server” (supported types are: string, bool, int) |  |
 | `--p2p` | — | establish a peer-to-peer connection with target |  |
 | `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p |  |
-| `-f` | TARGET | spawn FILE |  |
-| `--file` | TARGET | spawn FILE |  |
+| `-f` | TARGET | spawn FILE | An analyst would use the -f flag when needing to inject a script at the start of a target process to bypass security mechanisms like SSL pinning or anti-root protection as the application launches. |
+| `--file` | TARGET | spawn FILE | An analyst would use the -f flag when needing to inject a script at the start of a target process to bypass security mechanisms like SSL pinning or anti-root protection as the application launches. |
 | `-F` | — | attach to frontmost application |  |
 | `--attach-frontmost` | — | attach to frontmost application |  |
 | `-n` | NAME | attach to NAME |  |
 | `--attach-name` | NAME | attach to NAME |  |
-| `-N` | IDENTIFIER | attach to IDENTIFIER |  |
-| `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER |  |
+| `-N` | IDENTIFIER | attach to IDENTIFIER | When an analyst needs to inject a script into a specific Android application to modify its behavior, such as bypassing validation or decrypting a flag, they would use the -N flag to target the application by name. |
+| `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER | When an analyst needs to inject a script into a specific Android application to modify its behavior, such as bypassing validation or decrypting a flag, they would use the -N flag to target the application by name. |
 | `-p` | PID | attach to PID |  |
 | `--attach-pid` | PID | attach to PID |  |
 | `-W` | PATTERN | await spawn matching PATTERN |  |
@@ -76,8 +76,8 @@ All 66 options parsed from the captured help text. The final column is filled in
 | `-O` | FILE | text file containing additional command line options |  |
 | `--options-file` | FILE | text file containing additional command line options |  |
 | `--version` | — | show program's version number and exit |  |
-| `-l` | SCRIPT | load SCRIPT |  |
-| `--load` | SCRIPT | load SCRIPT |  |
+| `-l` | SCRIPT | load SCRIPT | An analyst would use the -l flag when injecting a JavaScript script to modify an application's behavior, such as decrypting obfuscated strings or bypassing security mechanisms like SSL pinning. |
+| `--load` | SCRIPT | load SCRIPT | An analyst would use the -l flag when injecting a JavaScript script to modify an application's behavior, such as decrypting obfuscated strings or bypassing security mechanisms like SSL pinning. |
 | `-P` | PARAMETERS_JSON | parameters as JSON, same as Gadget |  |
 | `--parameters` | PARAMETERS_JSON | parameters as JSON, same as Gadget |  |
 | `-C` | USER_CMODULE | load CMODULE |  |

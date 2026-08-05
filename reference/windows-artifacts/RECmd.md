@@ -22,17 +22,17 @@ RECmd [options]
 
 ## Options
 
-All 33 options parsed from the captured help text. The final column is filled in by review.
+All 33 options parsed from the captured help text; 4 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-f` | f | Hive to search. -f or -d is required |  |
-| `-d` | d | Directory to look for hives (recursively). -f or -d is required |  |
+| `-f` | f | Hive to search. -f or -d is required | An analyst would use the -f flag when processing a single registry hive file against a specific rule file to extract forensic artifacts. |
+| `-d` | d | Directory to look for hives (recursively). -f or -d is required | An analyst would use the -d flag with RECmd when batch-processing hives against a community ruleset to extract forensic values like RunOnce persistence or user activity from the registry. |
 | `--kn` | kn | Display details for key name. Includes subkeys and values |  |
 | `--vn` | vn | Value name. Only this value will be dumped |  |
 | `--bn` | bn | Use settings from supplied file to find keys/values. See included sample file for examples |  |
-| `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes |  |
-| `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name |  |
+| `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes | An analyst would use the --csv flag when batch-processing registry hives against the community ruleset to generate structured CSV output for forensic analysis of persistence mechanisms, user activity, and system configuration details. |
+| `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name | An analyst would use the --csvf flag when processing registry hives with RECmd to generate a CSV output file for further analysis or documentation during a forensic investigation. |
 | `--saveTo` | saveTo | Saves --vn value data in binary form to file. Expects path to a FILE |  |
 | `--json` | json | Directory to save JSON formatted results to. Be sure to include the full path in double quotes |  |
 | `--jsonf` | jsonf | File name to save JSON formatted results to. When present, overrides default name |  |

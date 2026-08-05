@@ -28,14 +28,14 @@ hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
 
 ## Options
 
-All 143 options parsed from the captured help text. The final column is filled in by review.
+All 143 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-m` | — | \| Num \| Hash-type, references below (otherwise autodetect) \| -m 1000 |  |
-| `--hash-type` | — | \| Num \| Hash-type, references below (otherwise autodetect) \| -m 1000 |  |
-| `-a` | — | \| Num \| Attack-mode, see references below \| -a 3 |  |
-| `--attack-mode` | — | \| Num \| Attack-mode, see references below \| -a 3 |  |
+| `-m` | — | \| Num \| Hash-type, references below (otherwise autodetect) \| -m 1000 | An analyst would use the -m flag when specifying the hash type (e.g., MD5, SHA-256) to ensure Hashcat correctly interprets the hash format during cracking attempts. |
+| `--hash-type` | — | \| Num \| Hash-type, references below (otherwise autodetect) \| -m 1000 | An analyst would use the -m flag when specifying the hash type (e.g., MD5, SHA-256) to ensure Hashcat correctly interprets the hash format during cracking attempts. |
+| `-a` | — | \| Num \| Attack-mode, see references below \| -a 3 | An analyst would use the -a flag when performing a combination attack to generate password combinations from two separate wordlists. |
+| `--attack-mode` | — | \| Num \| Attack-mode, see references below \| -a 3 | An analyst would use the -a flag when performing a combination attack to generate password combinations from two separate wordlists. |
 | `-V` | — | \| \| Print version \| |  |
 | `--version` | — | \| \| Print version \| |  |
 | `-h` | — | \| \| Print help \| |  |
@@ -72,7 +72,7 @@ All 143 options parsed from the captured help text. The final column is filled i
 | `-p` | — | \| Char \| Separator char for hashlists and outfile \| -p : |  |
 | `--separator` | — | \| Char \| Separator char for hashlists and outfile \| -p : |  |
 | `--stdout` | — | \| \| Do not crack a hash, instead print candidates only \| |  |
-| `--show` | — | \| \| Compare hashlist with potfile; show cracked hashes \| |  |
+| `--show` | — | \| \| Compare hashlist with potfile; show cracked hashes \| | An analyst would use the --show flag to display previously cracked hashes stored in the potfile when verifying results or avoiding redundant cracking efforts. |
 | `--left` | — | \| \| Compare hashlist with potfile; show uncracked hashes \| |  |
 | `--username` | — | \| \| Enable ignoring of usernames in hashfile \| |  |
 | `--remove` | — | \| \| Enable removal of hashes once they are cracked \| |  |
@@ -120,8 +120,8 @@ All 143 options parsed from the captured help text. The final column is filled i
 | `--optimized-kernel-enable` | — | \| \| Enable optimized kernels (limits password length) \| |  |
 | `-M` | — | \| \| Disable multiply kernel-accel with processor count \| |  |
 | `--multiply-accel-disable` | — | \| \| Disable multiply kernel-accel with processor count \| |  |
-| `-w` | — | \| Num \| Enable a specific workload profile, see pool below \| -w 3 |  |
-| `--workload-profile` | — | \| Num \| Enable a specific workload profile, see pool below \| -w 3 |  |
+| `-w` | — | \| Num \| Enable a specific workload profile, see pool below \| -w 3 | An analyst would use the -w flag when optimizing Hashcat performance on a dedicated cracking rig with a GPU not driving a display, specifically setting -w 4 for maximum workload intensity. |
+| `--workload-profile` | — | \| Num \| Enable a specific workload profile, see pool below \| -w 3 | An analyst would use the -w flag when optimizing Hashcat performance on a dedicated cracking rig with a GPU not driving a display, specifically setting -w 4 for maximum workload intensity. |
 | `-n` | — | \| Num \| Manual workload tuning, set outerloop step size to X \| -n 64 |  |
 | `--kernel-accel` | — | \| Num \| Manual workload tuning, set outerloop step size to X \| -n 64 |  |
 | `-u` | — | \| Num \| Manual workload tuning, set innerloop step size to X \| -u 256 |  |
@@ -142,8 +142,8 @@ All 143 options parsed from the captured help text. The final column is filled i
 | `--rule-left` | — | \| Rule \| Single rule applied to each word from left wordlist \| -j 'c' |  |
 | `-k` | — | \| Rule \| Single rule applied to each word from right wordlist \| -k '^-' |  |
 | `--rule-right` | — | \| Rule \| Single rule applied to each word from right wordlist \| -k '^-' |  |
-| `-r` | — | \| File \| Multiple rules applied to each word from wordlists \| -r rules/best64.rule |  |
-| `--rules-file` | — | \| File \| Multiple rules applied to each word from wordlists \| -r rules/best64.rule |  |
+| `-r` | — | \| File \| Multiple rules applied to each word from wordlists \| -r rules/best64.rule | An analyst would use the -r flag when applying custom or built-in rule sets to a wordlist to generate password variations during cracking attacks, as demonstrated in the examples involving rules/best64.rule and modifying rules to append specific strings like years to passwords. |
+| `--rules-file` | — | \| File \| Multiple rules applied to each word from wordlists \| -r rules/best64.rule | An analyst would use the -r flag when applying custom or built-in rule sets to a wordlist to generate password variations during cracking attacks, as demonstrated in the examples involving rules/best64.rule and modifying rules to append specific strings like years to passwords. |
 | `-g` | — | \| Num \| Generate X random rules \| -g 10000 |  |
 | `--generate-rules` | — | \| Num \| Generate X random rules \| -g 10000 |  |
 | `--generate-rules-func-min` | — | \| Num \| Force min X functions per rule \| |  |

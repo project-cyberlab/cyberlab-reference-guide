@@ -15,6 +15,12 @@
 
 Trace the execution of a process to analyze its behavior.
 
+## When you'd reach for this
+
+An analyst reaches for frida-trace when tracing and modifying application behavior dynamically, such as during reverse engineering or security testing, often after copying frida-server to a remote device and before interacting with the target app's methods. They may choose it over similar tools because it allows real-time modification of method outputs and provides detailed tracing capabilities, as demonstrated by altering return values or inspecting method parameters during execution.
+
+**Sources:** <https://frida.re/docs/frida-trace/> · <https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/>
+
 ## Synopsis
 
 ```

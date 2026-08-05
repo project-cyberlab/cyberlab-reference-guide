@@ -17,7 +17,7 @@ Inspect and build ClamAV signature databases: unpack a .cvd, list its signatures
 
 ## Options
 
-All 35 options parsed from the captured help text. The final column is filled in by review.
+All 35 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -28,7 +28,7 @@ All 35 options parsed from the captured help text. The final column is filled in
 | `--quiet` | — | Be quiet, output only error messages |  |
 | `--debug` | — | Enable debug messages |  |
 | `--stdout` | — | Write to stdout instead of stderr. Does not affect 'debug' messages. |  |
-| `--hex-dump` | — | Convert data from stdin to a hex string and print it on stdout |  |
+| `--hex-dump` | — | Convert data from stdin to a hex string and print it on stdout | An analyst would use the --hex-dump flag when needing to generate a hexadecimal representation of a file's contents for detailed forensic examination or signature creation. |
 | `--md5` | FILES | Generate MD5 checksum from stdin or MD5 sigs for FILES |  |
 | `--sha1` | FILES | Generate SHA1 checksum from stdin or SHA1 sigs for FILES |  |
 | `--sha256` | FILES | Generate SHA256 checksum from stdin or SHA256 sigs for FILES |  |

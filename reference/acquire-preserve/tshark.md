@@ -22,7 +22,7 @@ tshark [options] ...
 
 ## Options
 
-All 75 options parsed from the captured help text; 19 reviewed with usage guidance.
+All 75 options parsed from the captured help text; 20 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -79,7 +79,7 @@ All 75 options parsed from the captured help text; 19 reviewed with usage guidan
 | `-J` | protocolfilter | top level protocol filter if -T ek\|pdml\|json selected (e.g. "http tcp", filter which expands all child nodes) |  |
 | `-e` | field | field to print if -Tfields selected (e.g. tcp.port, _ws.col.Info) this option can be repeated to print multiple fields | Which field to print, repeatable. Only meaningful with `-T fields`, and the ordering is the column ordering. |
 | `-l` | — | flush standard output after each packet |  |
-| `-q` | — | be more quiet on stdout (e.g. when using statistics) |  |
+| `-q` | — | be more quiet on stdout (e.g. when using statistics) | An analyst would use the -q flag when running tshark with the -z option to generate specific statistics, as shown in examples like "tshark -q -z io,stat,5,ip.addr==255.255.255.255" and "tshark -q -z conv. |
 | `-Q` | — | only log true errors to stderr (quieter than -q) |  |
 | `-g` | — | enable group read access on the output file(s) |  |
 | `-W` | n | Save extra information in the file, if supported. n = write network address resolution information |  |

@@ -20,6 +20,13 @@ Stream the raw contents of an AFF container to stdout, so tools that cannot read
 affcat [options] infile [... more infiles]
 ```
 
+## Common invocations
+
+```
+# Output contents of AFF disk image files
+affcat version 3.7.22
+```
+
 ## Options
 
 All 7 options parsed from the captured help text. The final column is filled in by review.

@@ -27,7 +27,7 @@ log2timeline.py [-h] [--troubles] [-V] [--artifact_definitions PATH]
 
 ## Options
 
-All 100 options parsed from the captured help text; 8 reviewed with usage guidance.
+All 100 options parsed from the captured help text; 13 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -55,7 +55,7 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `-f` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
 | `--filter-file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
 | `--filter_file` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
-| `--file-filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
+| `--file-filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | An analyst would use the --file-filter flag when processing a full disk image directly to specify individual files or paths for analysis, avoiding the need to create a separate triage collection. |
 | `--file_filter` | FILE_FILTER | List of files to include for targeted collection of files to parse, one line per file path, setup is /path\|file - where each element can contain either a variable set in the preprocessing stage or a  | Use a file filter to limit what gets processed. |
 | `--hasher_file_size_limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. |  |
 | `--hasher-file-size-limit` | SIZE | Define the maximum file size in bytes that hashers should process. Any larger file will be skipped. A size of 0 represents no limit. |  |
@@ -63,8 +63,8 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--parsers` | PARSER_FILTER_EXPRESSION | Define which presets, parsers and/or plugins to use, or show possible values. The expression is a comma separated string where each element is a preset, parser or plugin name. Each element can be prep | Restrict to specific parsers. A targeted run is minutes instead of hours. |
 | `--yara_rules` | PATH | Path to a file containing Yara rules definitions. |  |
 | `--yara-rules` | PATH | Path to a file containing Yara rules definitions. |  |
-| `--partitions` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb |  |
-| `--partition` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb |  |
+| `--partitions` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb | An analyst would use the --partitions flag when processing a disk image with multiple partitions and needing to specify a particular partition number to avoid interactive prompts during the analysis. |
+| `--partition` | PARTITIONS | Define partitions to be processed. A range of partitions can be defined as: "3..5". Multiple partitions can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be comb | An analyst would use the --partitions flag when processing a disk image with multiple partitions and needing to specify a particular partition number to avoid interactive prompts during the analysis. |
 | `--volumes` | VOLUMES | Define volumes to be processed. A range of volumes can be defined as: "3..5". Multiple volumes can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be combined as:  |  |
 | `--volume` | VOLUMES | Define volumes to be processed. A range of volumes can be defined as: "3..5". Multiple volumes can be defined as: "1,3,5" (a list of comma separated values). Ranges and lists can also be combined as:  |  |
 | `--codepage` | CODEPAGE | The preferred codepage, which is used for decoding single-byte or multi-byte character extracted strings. |  |
@@ -73,7 +73,7 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--no-extract-winevt-resources` | — | Do not extract Windows EventLog resources such as event message template strings. By default Windows EventLog resources will be extracted when a Windows EventLog parser is enabled. |  |
 | `-z` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
 | `--zone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
-| `--timezone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | Time zone of the source machine. |
+| `--timezone` | TIME_ZONE | preferred time zone of extracted date and time values that are stored without a time zone indicator. The time zone is determined based on the source data where possible otherwise it will default to UT | When analyzing loose files, a triage collection, or when the system's time zone cannot be auto-detected, an analyst would use the --timezone flag to explicitly specify the source system's time zone. |
 | `--no_vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. |  |
 | `--no-vss` | — | Do not scan for Volume Shadow Snapshots (VSS). This means that Volume Shadow Snapshots (VSS) are not processed. WARNING: this option is deprecated use --vss_stores=none instead. |  |
 | `--vss_only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. |  |
@@ -91,9 +91,9 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--use-markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" |  |
 | `--no_dependencies_check` | — | Disable the dependencies check. |  |
 | `--no-dependencies-check` | — | Disable the dependencies check. |  |
-| `--logfile` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
-| `--log_file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
-| `--log-file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
+| `--logfile` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". | An analyst would use the --logfile flag when they need to redirect all log messages from log2timeline.py to a file for detailed debugging or record-keeping during processing. |
+| `--log_file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". | An analyst would use the --logfile flag when they need to redirect all log messages from log2timeline.py to a file for detailed debugging or record-keeping during processing. |
+| `--log-file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "log2timeline- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". | An analyst would use the --logfile flag when they need to redirect all log messages from log2timeline.py to a file for detailed debugging or record-keeping during processing. |
 | `--status_view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | Change progress display; `none` for clean logs. |
 | `--status-view` | TYPE | The processing status view mode: "file", "linear", "none" or "window". | Change progress display; `none` for clean logs. |
 | `--status_view_file` | PATH | The name of the status view file. |  |
@@ -126,7 +126,7 @@ All 100 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--profiling_sample_rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). |  |
 | `--profiling-sample-rate` | SAMPLE_RATE | Profiling sample rate (defaults to a sample every 1000 files). |  |
 | `--storage_file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | Where the .plaso output goes. |
-| `--storage-file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | Where the .plaso output goes. |
+| `--storage-file` | PATH | The path of the storage file. If not specified, one will be made in the form <timestamp>-<source>.plaso | An analyst would use the --storage-file flag when processing a storage media image to specify the output file where the extracted timeline events will be stored. |
 | `--storage_format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite |  |
 | `--storage-format` | FORMAT | Format of the storage file, the default is: sqlite. Supported options: sqlite |  |
 | `--task_storage_format` | FORMAT | Format for task storage, the default is: sqlite. Supported options: redis, sqlite |  |

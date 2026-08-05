@@ -15,6 +15,12 @@
 
 Compute Context Triggered Piecewise Hashes (CTPH), also known as fuzzy hashes.
 
+## When you'd reach for this
+
+An analyst reaches for ssdeep when comparing files for similarity rather than exact matches, running commands like -r to generate fuzzy hashes and -x or -k to compare signatures, as it is a mainstream tool used by NIST and can detect partial overlaps between files.
+
+**Sources:** <https://dfir.science/2017/07/How-To-Fuzzy-Hashing-with-SSDEEP-(similarity-matching).html> · <https://ssdeep-project.github.io/ssdeep/usage.html>
+
 ## Synopsis
 
 ```

@@ -15,6 +15,12 @@
 
 Recover the key length and key of an XOR-encrypted file by frequency analysis.
 
+## When you'd reach for this
+
+An analyst reaches for xortool when dealing with XOR-encrypted data, particularly when the key length is unknown or longer than default limits, and runs it after initial attempts to guess the key fail, using flags like -m, -l, or -c to refine results; they choose it over similar tools because it automates key-length analysis, filters plaintexts by character sets (e.g., Base64), and handles multi-byte keys with adjustable parameters.
+
+**Sources:** <https://github.com/hellman/xortool> · <https://github.com/hellman/xortool/blob/master/README.md> · <https://www.doyler.net/security-not-included/basic-xortool-usage>
+
 ## Synopsis
 
 ```
@@ -27,12 +33,12 @@ xortool --version
 
 ## Options
 
-All 20 options parsed from the captured help text; 4 reviewed with usage guidance.
+All 20 options parsed from the captured help text; 6 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-x` | — | input is hex-encoded str |  |
-| `--hex` | — | input is hex-encoded str |  |
+| `-x` | — | input is hex-encoded str | An analyst would use the -x flag when processing a hex-encoded file, such as when decrypting data that has been represented in hexadecimal format. |
+| `--hex` | — | input is hex-encoded str | An analyst would use the -x flag when processing a hex-encoded file, such as when decrypting data that has been represented in hexadecimal format. |
 | `-l` | LEN | length of the key | Fix the key length when you already know it. |
 | `--key-length` | LEN | length of the key | Fix the key length when you already know it. |
 | `-m` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
@@ -45,8 +51,8 @@ All 20 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `--brute-printable` | — | same as -b but will only check printable chars |  |
 | `-f` | — | filter outputs based on the charset |  |
 | `--filter-output` | — | filter outputs based on the charset |  |
-| `-p` | PLAIN | use known plaintext for decoding |  |
-| `--known-plaintext` | PLAIN | use known plaintext for decoding |  |
+| `-p` | PLAIN | use known plaintext for decoding | An analyst would use the -p flag when they have a known plaintext segment to aid in decrypting XOR-encrypted data, as demonstrated in examples where it's paired with encrypted files and brute-force options. |
+| `--known-plaintext` | PLAIN | use known plaintext for decoding | An analyst would use the -p flag when they have a known plaintext segment to aid in decrypting XOR-encrypted data, as demonstrated in examples where it's paired with encrypted files and brute-force options. |
 | `-r` | PERCENT | threshold validity percentage [default: 95] |  |
 | `--threshold` | PERCENT | threshold validity percentage [default: 95] |  |
 | `-h` | — | show this help |  |

@@ -28,11 +28,11 @@ aeskeyfind [OPTION]... MEMORY-IMAGE
 
 ## Options
 
-All 3 options parsed from the captured help text. The final column is filled in by review.
+All 3 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-v` | — | verbose output -- prints the extended keys and the constraints on the rows of the key schedule |  |
+| `-v` | — | verbose output -- prints the extended keys and the constraints on the rows of the key schedule | An analyst would use the -v flag when examining memory images to obtain detailed verbose output, including extended keys and constraints on the rows of the key schedule, to aid in forensic analysis. |
 | `-q` | — | don't display a progress bar |  |
 | `-h` | — | displays this help message |  |
 

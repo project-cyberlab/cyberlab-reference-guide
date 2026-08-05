@@ -8,6 +8,58 @@ script. Hand-written invocations belong in ENRICHMENT, which wins.
 from __future__ import annotations
 
 INVOCATIONS: dict[str, list[dict]] = {
+    'affcat': [
+        {
+            'task': 'Output contents of AFF disk image files',
+            'cmd': 'affcat version 3.7.22',
+            'src': 'https://www.kali.org/tools/afflib/',
+        },
+    ],
+    'affconvert': [
+        {
+            'task': 'Convert files between RAW and AFF formats',
+            'cmd': 'affconvert version 3.7.22',
+            'src': 'https://www.kali.org/tools/afflib/',
+        },
+    ],
+    'affinfo': [
+        {
+            'task': 'Display AFF file metadata and hash validation results',
+            'cmd': 'affinfo version 3.7.22',
+            'src': 'https://www.kali.org/tools/afflib/',
+        },
+    ],
+    'bdeinfo': [
+        {
+            'task': 'Retrieve BitLocker encryption details from a drive',
+            'cmd': 'bdeinfo -p Password /dev/sda1',
+            'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/bdeinfo.1.html',
+        },
+        {
+            'task': 'Extract BitLocker encryption details from disk image',
+            'cmd': 'bdeinfo -o $((512*128)) image.dd',
+            'src': 'https://www.aldeid.com/wiki/Category:Encryption/Bitlocker',
+        },
+        {
+            'task': 'Extract BitLocker volume details including recovery key and encryption method',
+            'cmd': 'bdeinfo -o $((512*2048)) ~/xmount_pount/Bitlocker_physisch_test.dd',
+            'src': 'https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html',
+        },
+    ],
+    'dc3dd': [
+        {
+            'task': 'Create forensic image of log file and verify integrity',
+            'cmd': 'dc3dd 7.2.646 started at 2018-12-01 13:37:20 -0500',
+            'src': 'https://www.kali.org/tools/dc3dd/',
+        },
+    ],
+    'dumpcap': [
+        {
+            'task': 'Display dumpcap tool help information',
+            'cmd': 'dumpcap -h',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
     'icat': [
         {
             'task': 'Extract file content from disk image using inode',

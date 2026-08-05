@@ -13,6 +13,12 @@
 
 Run plugins against a Windows registry hive and print what each finds. The plugins encode where the interesting keys live and how to interpret them, so it answers 'what is in this hive that matters?' without you memorising key paths.
 
+## When you'd reach for this
+
+An analyst reaches for RegRipper when examining registry hive files to quickly extract and decode data using pre-canned plugins, often after extracting the hive from a forensic image or system; they may run it alongside manual registry analysis to validate findings, as it automates complex data extraction tasks like decoding ROT-13 or translating binary values, which would be time-consuming manually.
+
+**Sources:** <https://www.sans.org/blog/regripper-ripping-registries-with-ease>
+
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._
