@@ -27,6 +27,19 @@ An analyst reaches for mergecap when merging multiple pcap files captured sequen
 mergecap [options] -w <outfile>|- <infile> [<infile> ...]
 ```
 
+## Common invocations
+
+```
+# Merge multiple pcap files into a single capture file
+mergecap *.pcap -w merged.pcapng
+# Merge two network capture files into a single unified pcap file
+mergecap -w compare.pcap a.pcap b-shifted.pcap
+# Merge capture files into single output file
+mergecap -a -w outoforder.pcap download-good.pcap
+# Merge split capture files into a single consolidated file
+mergecap -w allineone.cap dbadsplit.pcap-00001 dbadsplit.pcap-00002
+```
+
 ## Options
 
 All 7 options parsed from the captured help text. The final column is filled in by review.

@@ -21,6 +21,23 @@ Capture and analyze network traffic with this sniffer.
 capinfos [options] <infile> ...
 ```
 
+## Common invocations
+
+```
+# Generate tab-delimited report with pcap file metadata
+capinfos -TtEc *.pcap
+# Check duplicate packets in capture file
+capinfos -c dupes.pcap
+# Check capture file for duplicate packets
+capinfos -c nodups.pcap
+# Generate detailed capture file analysis report
+capinfos mycapture.pcap
+# Generate tabular report of capture file details
+capinfos -T mycapture.pcap
+# Generate tab report with pcap file metadata
+capinfos -T -t -E -c *.pcap
+```
+
 ## Options
 
 All 4 options parsed from the captured help text. The final column is filled in by review.

@@ -23,10 +23,16 @@ chainsaw [OPTIONS] <COMMAND>
 ## Common invocations
 
 ```
-# Detect missing log records and time gaps
+# Detect missing log entries and time gaps
 ./chainsaw analyse gaps ./Logs/
-# Search EVTX logs for mimikatz activity
+# Search event logs for mimikatz indicators in attack samples
 ./chainsaw search mimikatz -i evtx_attack_samples/
+# Searching EVTX logs for specific event IDs
+./chainsaw search -t 'Event.System.EventID: =4104' evtx_attack_samples/
+# Detect threats in event logs using Sigma rules
+./chainsaw hunt EVTX-ATTACK-SAMPLES/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml
+# Detect attacks in EVTX logs with Sigma rules
+./chainsaw hunt evtx_attack_samples/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml
 ```
 
 ## Options

@@ -223,7 +223,24 @@ def candidate_lines(text: str, tool: str,
 
         if len(line.split()) < 2:
             continue
+        # The tool's name repeated by a split that ran the heading into the
+        # command: "evtxexport evtxexport -p c/ ...". Running it would try to
+        # open the tool's own name as a file.
+        line = re.sub(r"^(" + re.escape(tool) + r")\s+\1(?=\s)", r"\1", line)
+
         if SELF.match(line) or SYNOPSIS.search(line) or TITLE.search(line):
+            continue
+        # A prose parenthetical standing in for arguments -- "mergecap -F
+        # (different options)" is a sentence about the flag, not a command.
+        if re.search(r"\((?:[a-z]+\s+){1,4}[a-z]+\)", line):
+            continue
+        # A line continuation means the command is cut off here. Publishing
+        # half of it is worse than publishing none: it looks complete.
+        #
+        # The space before the backslash matters. Testing for a trailing
+        # backslash alone dropped `clamscan.exe --recursive C:\`, where the
+        # backslash is a Windows drive root and the command is whole.
+        if re.search(r"\s\\$", line.rstrip() + ""):
             continue
         # Every flag the command uses must exist on the real binary.
         if real_flags:

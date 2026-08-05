@@ -33,15 +33,17 @@ ngrep <-hNXViwqpevxlDtTRM> <-IO pcap_dump> <-n num> <-d dev> <-A num>
 ## Common invocations
 
 ```
-# Monitor SMTP traffic on all network interfaces
+# Monitor SMTP traffic across all network interfaces
 ngrep -d any port 25
-# Capture HTTP traffic details line by line
+# Monitor HTTP traffic with line-based packet display on port 80
 ngrep -W byline port 80
-# Search for specific strings in network traffic data
+# Search PCAP for specific string occurrences in packets
 ngrep -w 'm' -I /tmp/dns.dump
-# Search for HTTP traffic in a packet capture file
+# Search DNS dump for ns3 entries with timestamps and replay packets
+ngrep -tD ns3 -I /tmp/dns.dump
+# Search network dump for traffic on specific port
 ngrep -I /tmp/dns.dump port 80
-# Capture error messages in network syslog traffic
+# Monitor network syslog traffic for error occurrences
 ngrep -d any 'error' port syslog
 ```
 

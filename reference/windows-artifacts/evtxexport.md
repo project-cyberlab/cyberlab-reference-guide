@@ -29,6 +29,17 @@ evtxexport [ -c codepage ] [ -f format ] [ -l log_file ]
 [ -hTvV ] source
 ```
 
+## Common invocations
+
+```
+# Export Windows event log entries for analysis
+evtxexport -p c/ -r c/Windows/System32/config/ c/Windows/System32/winevt/Logs/Apllication.Evtx
+# Export event logs to XML format from file
+evtxexport -f xml p1/Windows/System32/winevt/Logs/Application.evtx
+# Extract Windows event logs from mounted volume
+evtxexport -p p1/ -r p1/Windows/System32/config/ p1/Windows/System32/winevt/Logs/System.evtx
+```
+
 ## Options
 
 All 13 options parsed from the captured help text; 5 reviewed with usage guidance.

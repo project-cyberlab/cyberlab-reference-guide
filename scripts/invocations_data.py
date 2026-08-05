@@ -42,33 +42,124 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk',
         },
     ],
+    'capinfos': [
+        {
+            'task': 'Generate tab-delimited report with pcap file metadata',
+            'cmd': 'capinfos -TtEc *.pcap',
+            'src': 'https://www.wireshark.org/docs/man-pages/capinfos.html',
+        },
+        {
+            'task': 'Check duplicate packets in capture file',
+            'cmd': 'capinfos -c dupes.pcap',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Check capture file for duplicate packets',
+            'cmd': 'capinfos -c nodups.pcap',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Generate detailed capture file analysis report',
+            'cmd': 'capinfos mycapture.pcap',
+            'src': 'https://www.wireshark.org/docs/man-pages/capinfos.html',
+        },
+        {
+            'task': 'Generate tabular report of capture file details',
+            'cmd': 'capinfos -T mycapture.pcap',
+            'src': 'https://www.wireshark.org/docs/man-pages/capinfos.html',
+        },
+        {
+            'task': 'Generate tab report with pcap file metadata',
+            'cmd': 'capinfos -T -t -E -c *.pcap',
+            'src': 'https://www.wireshark.org/docs/man-pages/capinfos.html',
+        },
+    ],
     'chainsaw': [
         {
-            'task': 'Detect missing log records and time gaps',
+            'task': 'Detect missing log entries and time gaps',
             'cmd': './chainsaw analyse gaps ./Logs/',
             'src': 'https://github.com/WithSecureLabs/chainsaw',
         },
         {
-            'task': 'Search EVTX logs for mimikatz activity',
+            'task': 'Search event logs for mimikatz indicators in attack samples',
             'cmd': './chainsaw search mimikatz -i evtx_attack_samples/',
+            'src': 'https://github.com/WithSecureLabs/chainsaw',
+        },
+        {
+            'task': 'Searching EVTX logs for specific event IDs',
+            'cmd': "./chainsaw search -t 'Event.System.EventID: =4104' evtx_attack_samples/",
+            'src': 'https://github.com/WithSecureLabs/chainsaw',
+        },
+        {
+            'task': 'Detect threats in event logs using Sigma rules',
+            'cmd': './chainsaw hunt EVTX-ATTACK-SAMPLES/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml',
+            'src': 'https://github.com/WithSecureLabs/chainsaw',
+        },
+        {
+            'task': 'Detect attacks in EVTX logs with Sigma rules',
+            'cmd': './chainsaw hunt evtx_attack_samples/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml',
             'src': 'https://github.com/WithSecureLabs/chainsaw',
         },
     ],
     'clamscan': [
         {
-            'task': 'Scan entire directory tree for malware',
+            'task': 'Scan directory and subdirectories for malware',
             'cmd': 'clamscan --recursive .',
             'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
         },
         {
-            'task': 'Full system malware scan recursively',
+            'task': 'Full system malware scan',
             'cmd': 'clamscan --recursive /',
             'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
         },
         {
-            'task': 'Detect malware across entire system',
+            'task': 'Scan entire system for malware detection',
             'cmd': 'clamscan.exe --recursive C:\\',
             'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
+        },
+        {
+            'task': 'Scan directory for malware detection',
+            'cmd': 'clamscan ~/Downloads/malware/',
+            'src': 'https://christiant.io/clamav-guide',
+        },
+        {
+            'task': 'Scan directory to detect malware',
+            'cmd': 'clamscan -r ~/Downloads/malware/',
+            'src': 'https://christiant.io/clamav-guide',
+        },
+        {
+            'task': 'Scan malware directory for infected files',
+            'cmd': 'clamscan -i -r ~/Downloads/malware/',
+            'src': 'https://christiant.io/clamav-guide',
+        },
+    ],
+    'editcap': [
+        {
+            'task': 'Remove duplicate packets from capture file',
+            'cmd': 'editcap -d dupes.pcap nodups.pcap',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Split capture into 200-packet segments',
+            'cmd': 'editcap -c 200 dbad.pcap dbadsplit.pcap',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
+    'evtxexport': [
+        {
+            'task': 'Export Windows event log entries for analysis',
+            'cmd': 'evtxexport -p c/ -r c/Windows/System32/config/ c/Windows/System32/winevt/Logs/Apllication.Evtx',
+            'src': 'https://manpages.debian.org/unstable/libevtx-utils/evtxexport.1.en.html',
+        },
+        {
+            'task': 'Export event logs to XML format from file',
+            'cmd': 'evtxexport -f xml p1/Windows/System32/winevt/Logs/Application.evtx',
+            'src': 'https://github.com/libyal/libevtx/wiki/Tools',
+        },
+        {
+            'task': 'Extract Windows event logs from mounted volume',
+            'cmd': 'evtxexport -p p1/ -r p1/Windows/System32/config/ p1/Windows/System32/winevt/Logs/System.evtx',
+            'src': 'https://github.com/libyal/libevtx/wiki/Tools',
         },
     ],
     'ewfacquire': [
@@ -170,17 +261,22 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'icat': [
         {
-            'task': 'Extract file content from disk image using inode',
+            'task': 'Extract file content by inode from disk image',
             'cmd': 'icat image.dd <inode> > file_recovered',
             'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
         },
         {
-            'task': 'Recover file content by inode from disk image',
+            'task': 'Extract file content by inode to recover deleted data',
             'cmd': 'icat image.dd 1234 > recovered_file.txt',
             'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
         },
         {
-            'task': 'Recover deleted file from evidence image',
+            'task': 'Generate MD5 hash of extracted file data',
+            'cmd': 'icat -o 2048 "$EVIDENCE" 12345 | md5sum',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+        {
+            'task': 'Recover file from evidence by inode',
             'cmd': 'icat -r -o 2048 "$EVIDENCE" 54321 > recovered_file.bin',
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
@@ -202,29 +298,56 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
+    'mergecap': [
+        {
+            'task': 'Merge multiple pcap files into a single capture file',
+            'cmd': 'mergecap *.pcap -w merged.pcapng',
+            'src': 'https://tshark.dev/edit/mergecap/',
+        },
+        {
+            'task': 'Merge two network capture files into a single unified pcap file',
+            'cmd': 'mergecap -w compare.pcap a.pcap b-shifted.pcap',
+            'src': 'https://www.wireshark.org/docs/man-pages/mergecap.html',
+        },
+        {
+            'task': 'Merge capture files into single output file',
+            'cmd': 'mergecap -a -w outoforder.pcap download-good.pcap',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Merge split capture files into a single consolidated file',
+            'cmd': 'mergecap -w allineone.cap dbadsplit.pcap-00001 dbadsplit.pcap-00002',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
     'ngrep': [
         {
-            'task': 'Monitor SMTP traffic on all network interfaces',
+            'task': 'Monitor SMTP traffic across all network interfaces',
             'cmd': 'ngrep -d any port 25',
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
         {
-            'task': 'Capture HTTP traffic details line by line',
+            'task': 'Monitor HTTP traffic with line-based packet display on port 80',
             'cmd': 'ngrep -W byline port 80',
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
         {
-            'task': 'Search for specific strings in network traffic data',
+            'task': 'Search PCAP for specific string occurrences in packets',
             'cmd': "ngrep -w 'm' -I /tmp/dns.dump",
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
         {
-            'task': 'Search for HTTP traffic in a packet capture file',
+            'task': 'Search DNS dump for ns3 entries with timestamps and replay packets',
+            'cmd': 'ngrep -tD ns3 -I /tmp/dns.dump',
+            'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
+        },
+        {
+            'task': 'Search network dump for traffic on specific port',
             'cmd': 'ngrep -I /tmp/dns.dump port 80',
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
         {
-            'task': 'Capture error messages in network syslog traffic',
+            'task': 'Monitor network syslog traffic for error occurrences',
             'cmd': "ngrep -d any 'error' port syslog",
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
@@ -316,13 +439,18 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'tcpflow': [
         {
-            'task': 'Decode TCP flows from pcap to extract HTTP data and files',
+            'task': 'Extract and decode TCP flows from a pcap capture for analysis',
             'cmd': 'tcpflow -r eth0.pcap',
             'src': 'https://blog.rootshell.be/2009/04/15/forensics-reconstructing-data-from-pcap-files/',
         },
         {
-            'task': 'Reconstruct network flows from multiple pcap files into output directory',
+            'task': 'Reconstruct TCP sessions from multiple pcap files',
             'cmd': 'tcpflow -o out -a -l *.pcap',
+            'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
+        },
+        {
+            'task': 'Reconstruct network flows from pcap for analysis',
+            'cmd': 'tcpflow -a -o outdir -Fk -r packets.pcap',
             'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
         },
     ],

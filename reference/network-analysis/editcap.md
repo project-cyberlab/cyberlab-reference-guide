@@ -21,6 +21,15 @@ Cut, split, deduplicate and convert capture files — the tool that makes an unm
 editcap [options] ... <infile> <outfile> [ <packet#>[-<packet#>] ... ]
 ```
 
+## Common invocations
+
+```
+# Remove duplicate packets from capture file
+editcap -d dupes.pcap nodups.pcap
+# Split capture into 200-packet segments
+editcap -c 200 dbad.pcap dbadsplit.pcap
+```
+
 ## Options
 
 All 25 options parsed from the captured help text; 21 reviewed with usage guidance.

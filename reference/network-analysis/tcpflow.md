@@ -34,10 +34,12 @@ tcpflow [-aBcCDhIpsvVZ] [-b max_bytes] [-d debug_level]
 ## Common invocations
 
 ```
-# Decode TCP flows from pcap to extract HTTP data and files
+# Extract and decode TCP flows from a pcap capture for analysis
 tcpflow -r eth0.pcap
-# Reconstruct network flows from multiple pcap files into output directory
+# Reconstruct TCP sessions from multiple pcap files
 tcpflow -o out -a -l *.pcap
+# Reconstruct network flows from pcap for analysis
+tcpflow -a -o outdir -Fk -r packets.pcap
 ```
 
 ## Options

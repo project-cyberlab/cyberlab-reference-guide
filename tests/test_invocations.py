@@ -22,6 +22,9 @@ KEEP = [
     ("tcpflow", "tcpflow -e scan_http -o outdir host sundown"),
     ("tcpflow", "tcpflow -a -o outdir -Fk -r packets.pcap"),
     ("fls", "fls -rp -o 2048 image.dd"),
+    # A Windows drive root, not a line continuation. Testing for a bare
+    # trailing backslash dropped this whole, valid command.
+    ("clamscan", "clamscan.exe --recursive C:" + chr(92)),
 ]
 
 DROP = [
@@ -46,6 +49,19 @@ DROP = [
     ("dc3dd", "dc3dd 7.2.646 started at 2018-12-01 13:37:20 -0500"),
     ("affcat", "affcat version 3.7.22"),
     ("ewfinfo", "ewfinfo 20140608"),
+    # A prose parenthetical standing in for the arguments.
+    ("mergecap", "mergecap -F (different options)"),
+    # A line continuation: the command is cut off, and half a command that
+    # looks whole is worse than none.
+    ("evtxexport", "evtxexport -p p1/ -s p1/config/SYSTEM " + chr(92)),
+]
+
+# Repaired rather than dropped: a split ran the heading into the command and
+# doubled the tool's name. Running it would open the tool's name as a file.
+REPAIR = [
+    ("evtxexport",
+     "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
+     "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),
 ]
 
 ok = []
@@ -63,6 +79,10 @@ for tool, line in KEEP:
 for tool, line in DROP:
     got = inv.candidate_lines(line, tool)
     check('drop  %-52s' % line[:52], not got)
+
+for tool, line, want in REPAIR:
+    got = inv.candidate_lines(line, tool)
+    check('fix   %-52s' % line[:52], got and got[0] == want)
 
 # Entities must be decoded, not merely tolerated -- a command containing
 # &quot; does not run when pasted.
