@@ -155,6 +155,62 @@ HEDGE = re.compile(r"\b(may be used|can be used|is used to|allows you to|"
                    r"if desired|various|etc\.|in summary|note that)\b", re.I)
 
 
+# The model talking about its own inputs instead of the tool.
+#
+# "The passages do not explicitly compare it to similar tools." "...as the
+# passages caution against its general use." "...as described in the
+# passages." The model is handed retrieved passages and sometimes writes
+# about them rather than from them, and the result reads as an answer while
+# telling the analyst nothing: a junior analyst has never seen these
+# passages and never will.
+#
+# Two such notes are live in the guide right now (mactime, evtxexport),
+# which is how this was found -- by reading published output rather than by
+# any counter moving.
+#
+# Deliberately NOT matching a bare "source" or "context". Those are ordinary
+# forensic words: "the source system's time zone", "preparing the source and
+# destination media". Both were false positives on the first draft of this
+# pattern, and rejecting them would have thrown away two correct notes.
+META = re.compile(
+    r"\b(?:the|these|those|above|given|provided|supplied)\s+"
+    r"(?:passages?|excerpts?|snippets?)\b"
+    r"|\bpassages?\s+(?:show|shows|state|states|caution|cautions|indicate|"
+    r"indicates|mention|mentions|do not|does not)\b"
+    r"|\bin the context of the walkthrough\b", re.I)
+
+
+def strip_meta(note: str) -> str:
+    """Drop whole sentences that talk about the retrieved passages.
+
+    Removing the sentence rather than rejecting the note, because the leak
+    is almost always one trailing clause bolted onto guidance that is
+    otherwise correct and cited. Rejecting would discard the good part to
+    punish the scaffolding.
+
+    Mechanical, not a rewrite. Asking a model to fix its own note reopens
+    exactly the door this project closed: text that no longer corresponds to
+    any retrieved passage. Cutting a sentence cannot invent anything.
+    """
+    kept: list[str] = []
+    for part in re.split(r"(?<=[.!?])\s+", note.strip()):
+        m = META.search(part)
+        if not m:
+            kept.append(part)
+            continue
+        # Usually the leak is a trailing clause bolted onto real guidance --
+        # "...when monitoring a downloads directory, as the passages caution
+        # against its general use." Cutting at the comma keeps the answer and
+        # loses only the aside. Dropping the whole sentence would have thrown
+        # away the guidance to punish the clause, which is what the first
+        # version of this did to clamscan --remove and yara.
+        cut = part.rfind(",", 0, m.start())
+        trimmed = part[:cut].strip() if cut > 0 else ""
+        if len(trimmed) >= 40 and not META.search(trimmed):
+            kept.append(trimmed.rstrip(",;: ") + ".")
+    return " ".join(kept).strip()
+
+
 # ------------------------------------------------- the directionality check
 #
 # The failure this exists for: a local model produced six fluent, grounded,
@@ -486,6 +542,11 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
         tool=tool, flag=flag or "", passages=render(ev))
     t0 = time.time()
     note = ask(base, model, prompt)
+    # Cut any sentence that talks about the retrieved passages before
+    # anything judges or stores the note, so what the gate sees is exactly
+    # what would be published. See strip_meta().
+    if not note.startswith("__ERROR__"):
+        note = strip_meta(note)
     # Check invented flags on EVERY note, not only flag-level ones.
     #
     # This passed `None` for tool-level notes, which disabled the check that

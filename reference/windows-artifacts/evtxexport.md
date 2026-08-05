@@ -13,6 +13,12 @@
 
 Use evtxexport to export items stored in a Windows XML Event Viewer
 
+## When you'd reach for this
+
+An analyst reaches for evtxexport when exporting event records from an XML Event Log (.evtx) file, often after mounting a volume or image to access logs, as it supports exporting full event messages requiring SYSTEM and SOFTWARE registry files; they may use it after mounting a QEMU VM image and before analyzing event data in text or XML format, preferring it over similar tools for its ability to handle multi-language resources and full message exports.
+
+**Sources:** <https://github.com/libyal/libevtx/wiki/Tools>
+
 ## Synopsis
 
 ```

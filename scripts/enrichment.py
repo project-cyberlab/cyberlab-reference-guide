@@ -2072,13 +2072,17 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst uses dcfldd when creating a verified forensic copy of a disk drive for investigation, ensuring write protection is enabled before imaging and verifying the image with hashing tools afterward, as it provides enhanced forensic features like progress tracking and error handling compared to standard dd or dc3dd.',
         'sources': ['https://dohost.us/index.php/2025/11/01/creating-a-forensic-image-of-the-disk-drive-dd-dc3dd-dcfldd/', 'https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/acquiring-disk-image-with-dd-and-dcfldd/SKILL.md'],
     },
+    'evtxexport': {
+        'scenario': 'An analyst reaches for evtxexport when exporting event records from an XML Event Log (.evtx) file, often after mounting a volume or image to access logs, as it supports exporting full event messages requiring SYSTEM and SOFTWARE registry files; they may use it after mounting a QEMU VM image and before analyzing event data in text or XML format, preferring it over similar tools for its ability to handle multi-language resources and full message exports.',
+        'sources': ['https://github.com/libyal/libevtx/wiki/Tools'],
+    },
     'evtxinfo': {
         'scenario': "An analyst reaches for evtxinfo after extracting EVTX files from memory dumps using tools like volatility's dumpfiles, running it to inspect file headers and chunk metadata before using evtxdump to parse event data, as it provides structural insights without full log parsing.",
         'sources': ['https://manpages.debian.org/unstable/libevtx-utils/evtxexport.1.en.html', 'https://www.rocheston.com/fire/', 'https://www.tophertimzen.com/resources/cs407/slides/week04_02-EventLogs.html'],
     },
     'ewfexport': {
-        'scenario': 'An analyst uses ewfexport when extracting raw data or converting EWF files to other formats, often after acquiring an EWF image and before performing further analysis on the raw data. They may run ewfdebug first to inspect the EWF structure, then use ewfexport to export data to raw format for tools requiring unprocessed disk images, as it supports multiple output formats and precise control over export parameters.',
-        'sources': ['https://github.com/libyal/libewf/blob/main/ewftools/ewfexport.c', 'https://www.aldeid.com/wiki/Libewf/ewfexport', 'https://www.kali.org/tools/libewf/'],
+        'scenario': 'An analyst reaches for ewfexport when they need to extract specific data from an EWF image, such as a partition or converting an E01 to another format, often after acquiring the image with ewfacquire; they may use it before further analysis to isolate relevant data, preferring it over other tools due to its flexibility in specifying byte ranges and output formats.',
+        'sources': ['https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a', 'https://forensics.wiki/libewf/'],
     },
     'floss': {
         'scenario': 'An analyst reaches for FLOSS when examining an executable file containing obfuscated strings, as it automatically emulates decoding routines and extracts human-readable strings from memory differences; they may run it after initial static analysis to uncover hidden data, preferring it over manual emulation or other tools due to its automated comparison of memory states before and after decoding.',
@@ -2095,6 +2099,10 @@ RESEARCHED: dict[str, dict] = {
     'frida': {
         'scenario': 'An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.',
         'sources': ['https://bananamafia.dev/post/r2frida-1/', 'https://github.com/dweinstein/awesome-frida'],
+    },
+    'hashcat': {
+        'scenario': 'An analyst reaches for hashcat when dealing with hashes like MD5, using wordlists such as rockyou.txt for brute-force or combination attacks, and runs it after identifying the hash type and preparing input files; they choose it over similar tools due to its GPU-accelerated cracking capabilities and support for advanced attack modes like mask attacks, as demonstrated in the examples.',
+        'sources': ['https://github.com/IPIRATEXAPTAIN/htb-academy/blob/main/CrackingPasswordsWithHashcat.md', 'https://hashcat.net/wiki/doku.php?id=frequently_asked_questions'],
     },
     'hayabusa': {
         'scenario': 'An analyst reaches for Hayabusa when generating fast forensics timelines from Windows event logs, either after collecting logs for offline analysis or during live-response investigations; they may run it before importing data into tools like Elastic Stack or Timesketch, as it consolidates events into structured formats and leverages Sigma rules for detection, offering speed and compatibility with enterprise-scale analysis platforms.',
@@ -2113,7 +2121,7 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md', 'https://seanthegeek.net/posts/beginning-malware-analysis/'],
     },
     'mactime': {
-        'scenario': 'An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They would run it after collecting and consolidating all temporal data, as it is specifically designed to handle the body file format and create a chronological view, which is critical for event reconstruction. The passages do not explicitly compare it to similar tools, but emphasize its role in merging and sorting data from multiple sources into a unified timeline.',
+        'scenario': 'An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They would run it after collecting and consolidating all temporal data, as it is specifically designed to handle the body file format and create a chronological view, which is critical for event reconstruction.',
         'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],
     },
     'mergecap': {

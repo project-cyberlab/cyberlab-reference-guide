@@ -14,6 +14,12 @@
 
 Recover passwords from hashes using GPU-accelerated guessing — dictionary, rule-mutated, mask and brute-force attacks across several hundred hash types. In DFIR it is usually pointed at credentials recovered from a host to establish what an attacker could have reused elsewhere.
 
+## When you'd reach for this
+
+An analyst reaches for hashcat when dealing with hashes like MD5, using wordlists such as rockyou.txt for brute-force or combination attacks, and runs it after identifying the hash type and preparing input files; they choose it over similar tools due to its GPU-accelerated cracking capabilities and support for advanced attack modes like mask attacks, as demonstrated in the examples.
+
+**Sources:** <https://github.com/IPIRATEXAPTAIN/htb-academy/blob/main/CrackingPasswordsWithHashcat.md> · <https://hashcat.net/wiki/doku.php?id=frequently_asked_questions>
+
 ## Synopsis
 
 ```
