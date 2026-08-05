@@ -594,7 +594,21 @@ def tools_needing_work(limit: int, skip: set[str]) -> list[str]:
                   for c in cmds}
     except Exception:
         mapped = set()
-    pool = (have & mapped) or have
+
+    # Drop what the guide has already decided not to document.
+    #
+    # OUT_OF_SCOPE excludes curl, grep, less, stat and wget from page
+    # generation, but they remained in the taxonomy, so the loop kept
+    # researching them and I kept rejecting the results by hand -- curl came
+    # back describing web application pentesting, grep came back describing
+    # grep. That is manual work created by an inconsistency between two lists
+    # that should agree, and budget spent on tools with nowhere to put an
+    # answer.
+    try:
+        from generate_pages import OUT_OF_SCOPE
+    except Exception:
+        OUT_OF_SCOPE = set()
+    pool = ((have & mapped) or have) - OUT_OF_SCOPE
 
     ordered = [t for t in NEIGHBOURS if t in pool and t not in skip]
     if len(ordered) < limit:

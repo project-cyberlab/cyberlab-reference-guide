@@ -356,5 +356,47 @@
   "affsign": [
     "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
+  ],
+  "frida-ps": [
+    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
+    "https://frida.re/docs/frida-ps/",
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
+    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
+    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+  ],
+  "frida-ls-devices": [
+    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
+    "https://frida.re/docs/frida-ps/",
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
+    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
+    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+  ],
+  "frida-trace": [
+    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
+    "https://frida.re/docs/frida-ps/",
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
+    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
+    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+  ],
+  "frida-discover": [
+    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
+    "https://frida.re/docs/frida-ps/",
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
+    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
+    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+  ],
+  "frida-kill": [
+    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
+    "https://frida.re/docs/frida-ps/",
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
+    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
+    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+  ],
+  "frida": [
+    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
+    "https://frida.re/docs/frida-ps/",
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
+    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
+    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
   ]
 }
