@@ -679,6 +679,56 @@ def already_done() -> set[str]:
     return done
 
 
+def flush(results: list[dict], review: list[dict], misses: list[dict],
+          replace: bool = False) -> None:
+    """Persist all three buckets, merged with what is already on disk.
+
+    Called after every tool rather than once at the end of the run. A round
+    covers thirty tools and their flags and takes upwards of forty minutes,
+    and until this existed none of it reached disk until the last one
+    finished: a round forty-two minutes in held twenty-four verified KEPT
+    notes in memory alone, with the record files still showing the state from
+    before it started. Any crash, restart or kill discarded the lot, and the
+    log would still show KEPT for every one of them.
+
+    REVIEW was worse than fragile: it was read, merged, deduplicated and then
+    never written at all. research_review.json did not exist, and every note
+    a mechanical check could not settle -- sixty-five of them, including
+    everything the option_owner guard deliberately routed to review rather
+    than reject -- was silently dropped. The bucket meant for the judgements
+    most needing a human was the one bucket that threw them away.
+
+    Merging on every call is what makes it safe to call repeatedly: each
+    write reconciles against the file, so the result is the same whether it
+    ran once or thirty times.
+    """
+    for f, new in ((OUT, results), (REVIEW, review), (MISSES, misses)):
+        merged = list(new)
+        if not replace:
+            try:
+                merged = json.loads(f.read_text(encoding="utf-8")) + merged
+            except Exception:
+                pass
+            # Deduplicate on (tool, flag), keeping the best-evidenced attempt.
+            #
+            # Rounds revisit tools deliberately -- a later pass has better
+            # seeds and a warmer cache -- but appending every attempt meant
+            # fls -s appeared six times and the file reported 95 flag notes
+            # when it held roughly a third that many distinct ones. Inflated
+            # counts are worse than useless: they make the loop look more
+            # productive than it is, which is the number I would have used to
+            # decide it was working.
+            best: dict[tuple, dict] = {}
+            for rec in merged:
+                key = (rec.get("tool"), rec.get("flag"))
+                cur = best.get(key)
+                if cur is None or (rec.get("top_score", -99) >
+                                   cur.get("top_score", -99)):
+                    best[key] = rec
+            merged = list(best.values())
+        f.write_text(json.dumps(merged, indent=2), encoding="utf-8")
+
+
 def attempt_counts() -> Counter:
     """How many times each tool has actually been attempted, from the log.
 
@@ -789,32 +839,7 @@ def main() -> int:
                 misses.append(rec)
                 print(f"{ts}  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}", flush=True)
 
-    if not a.replace:
-        for f, new in ((OUT, results), (REVIEW, review), (MISSES, misses)):
-            try:
-                old = json.loads(f.read_text(encoding="utf-8"))
-            except Exception:
-                old = []
-            new[:0] = old
-            # Deduplicate on (tool, flag), keeping the best-evidenced attempt.
-            #
-            # Rounds revisit tools deliberately -- a later pass has better
-            # seeds and a warmer cache -- but appending every attempt meant
-            # fls -s appeared six times and the file reported 95 flag notes
-            # when it held roughly a third that many distinct ones. Inflated
-            # counts are worse than useless: they make the loop look more
-            # productive than it is, which is the number I would have used to
-            # decide it was working.
-            best: dict[tuple, dict] = {}
-            for rec in new:
-                key = (rec.get("tool"), rec.get("flag"))
-                cur = best.get(key)
-                if cur is None or (rec.get("top_score", -99) >
-                                   cur.get("top_score", -99)):
-                    best[key] = rec
-            new[:] = list(best.values())
-    OUT.write_text(json.dumps(results, indent=2), encoding="utf-8")
-    MISSES.write_text(json.dumps(misses, indent=2), encoding="utf-8")
+    flush(results, review, misses, a.replace)
     print(f"\nkept {kept}, not kept {len(misses)}")
     print(f"  -> {OUT.name} (the build does not read this)")
     print(f"  -> {REVIEW.name} (claims a mechanical check cannot settle)")
