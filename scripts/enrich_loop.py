@@ -542,6 +542,24 @@ def rank_flags(tool: str, limit: int) -> list[str]:
     real = capture_flags(tool) or set()
     if not real:
         return []
+
+    # Skip flags that already have an answer.
+    #
+    # Measured: 42 of 54 flag notes produced so far -- 78% -- were for flags
+    # that already carried hand-written guidance, and the hand-written version
+    # was better every time. "Decompress, the only flag you normally want in
+    # analysis" beats a sentence about automatically unpacking a sample, and
+    # "Partition offset in sectors, from mmls" beats a paragraph around it.
+    #
+    # So the loop was spending most of its flag budget, and most of the review
+    # time, re-answering solved questions -- while 2,300 cells sat empty. The
+    # empty ones are the entire point.
+    try:
+        from enrichment import ENRICHMENT
+        answered = set((ENRICHMENT.get(tool) or {}).get("when", {}))
+    except Exception:
+        answered = set()
+    real = real - answered
     corpus = sources.corpus_for(tool)
     text = " ".join(p["text"] for p in corpus)
     counts: dict[str, int] = {}

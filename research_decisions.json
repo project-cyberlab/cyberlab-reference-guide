@@ -462,5 +462,29 @@
   "upx": {
     "verdict": "accept",
     "why": "names the recognisable trigger -- .UPX0/.UPX1 section names -- and the one-command action that follows, which is exactly what a junior analyst needs before deciding whether to unpack manually"
+  },
+  "upx -d": {
+    "verdict": "accept",
+    "why": "matches the accepted tool note: once .UPX0/.UPX1 sections identify the packer, -d is the one command that undoes it"
+  },
+  "fls -d": {
+    "verdict": "accept",
+    "why": "deleted entries by inode is the reason to narrow the listing -- they are the ones worth recovering"
+  },
+  "istat -o": {
+    "verdict": "accept",
+    "why": "names the precondition: without the partition offset from mmls you are reading the wrong part of the image"
+  },
+  "fsstat -o": {
+    "verdict": "accept",
+    "why": "same precondition, and it completes the mmls-then-fsstat sequence the sources describe"
+  },
+  "mmls -o": {
+    "verdict": "accept",
+    "why": "nested volumes are a real case: an offset to reach a volume system embedded inside another"
+  },
+  "fls -l": {
+    "verdict": "reject",
+    "why": "credits -l with 'including deleted ones', which is not what the flag does -- fls lists deleted entries by default and -l only adds the metadata columns. Ends with 'as shown in the example command and script', which points at the source instead of saying anything"
   }
 }
