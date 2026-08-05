@@ -8,27 +8,6 @@ script. Hand-written invocations belong in ENRICHMENT, which wins.
 from __future__ import annotations
 
 INVOCATIONS: dict[str, list[dict]] = {
-    'affcat': [
-        {
-            'task': 'Output contents of AFF disk image files',
-            'cmd': 'affcat version 3.7.22',
-            'src': 'https://www.kali.org/tools/afflib/',
-        },
-    ],
-    'affconvert': [
-        {
-            'task': 'Convert files between RAW and AFF formats',
-            'cmd': 'affconvert version 3.7.22',
-            'src': 'https://www.kali.org/tools/afflib/',
-        },
-    ],
-    'affinfo': [
-        {
-            'task': 'Display AFF file metadata and hash validation results',
-            'cmd': 'affinfo version 3.7.22',
-            'src': 'https://www.kali.org/tools/afflib/',
-        },
-    ],
     'bdeinfo': [
         {
             'task': 'Retrieve BitLocker encryption details from a drive',
@@ -46,18 +25,101 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html',
         },
     ],
-    'dc3dd': [
-        {
-            'task': 'Create forensic image of log file and verify integrity',
-            'cmd': 'dc3dd 7.2.646 started at 2018-12-01 13:37:20 -0500',
-            'src': 'https://www.kali.org/tools/dc3dd/',
-        },
-    ],
     'dumpcap': [
         {
             'task': 'Display dumpcap tool help information',
             'cmd': 'dumpcap -h',
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
+    'ewfacquire': [
+        {
+            'task': 'Create EWF image from device or file',
+            'cmd': 'ewfacquire /dev/sda',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Convert RAW to EWF or image a device',
+            'cmd': 'ewfacquire myfile.raw',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Convert split optical disc RAW to EWF image',
+            'cmd': 'ewfacquire -T optical.cue optical.iso',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Convert RAW image to EWF format',
+            'cmd': 'ewfacquire -c best -m fixed -t myfile -S 1T -u [-q] myfile.raw',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+    ],
+    'ewfexport': [
+        {
+            'task': 'Convert EWF image to RAW or another EWF format',
+            'cmd': 'ewfexport image.E01',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Export files from logical EWF image',
+            'cmd': 'ewfexport image.L01',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+    ],
+    'ewfinfo': [
+        {
+            'task': 'Check EWF image details post-acquisition',
+            'cmd': 'ewfinfo /Cases/001/001_2017_USB_Gold.E01',
+            'src': 'https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html',
+        },
+    ],
+    'ewfmount': [
+        {
+            'task': 'Mount EWF image to a folder for forensic analysis',
+            'cmd': 'ewfmount image.E01 <folder>',
+            'src': 'https://kb.offsec.nl/tools/forensics/ewf-tools/',
+        },
+        {
+            'task': 'Mount EWF image to access its file system',
+            'cmd': 'ewfmount image.E01 mount_point',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Mount logical image to access files',
+            'cmd': 'ewfmount -f files image.L01 mount_point',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Mount EWF image to access disk as physical device',
+            'cmd': 'ewfmount /Cases/001/001_2017_USB_Gold.E01 /mnt/ewf',
+            'src': 'https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html',
+        },
+        {
+            'task': 'Mount EWF image to a folder for file system access',
+            'cmd': 'ewfmount image.E01 <folder>',
+            'src': 'https://hanifi.ca/tools/forensics/ewf-tools/',
+        },
+    ],
+    'ewfverify': [
+        {
+            'task': 'Verify EWF image integrity and validity',
+            'cmd': 'ewfverify image.E01',
+            'src': 'https://forensics.wiki/libewf/',
+        },
+        {
+            'task': 'Verify EWF file integrity against original data',
+            'cmd': 'ewfverify floppy.E01',
+            'src': 'https://www.mankier.com/1/ewfverify',
+        },
+        {
+            'task': 'Verify data integrity of E01 file against stored hash',
+            'cmd': 'ewfverify -f files logical.E01',
+            'src': 'https://www.mankier.com/1/ewfverify',
+        },
+        {
+            'task': 'Verify EWF image integrity after acquisition',
+            'cmd': 'ewfverify /Cases/001/001_2017_USB_Gold.E01',
+            'src': 'https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html',
         },
     ],
     'icat': [

@@ -20,13 +20,6 @@ Convert between AFF and raw images in either direction. The usual reason is a to
 affconvert [options] file1 [... files]
 ```
 
-## Common invocations
-
-```
-# Convert files between RAW and AFF formats
-affconvert version 3.7.22
-```
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

@@ -24,6 +24,19 @@ ewfacquire [ -A codepage ] [ -b number_of_sectors ]
 [ -m media_type ] [ -M media_flags ] [ -N notes ]
 ```
 
+## Common invocations
+
+```
+# Create EWF image from device or file
+ewfacquire /dev/sda
+# Convert RAW to EWF or image a device
+ewfacquire myfile.raw
+# Convert split optical disc RAW to EWF image
+ewfacquire -T optical.cue optical.iso
+# Convert RAW image to EWF format
+ewfacquire -c best -m fixed -t myfile -S 1T -u [-q] myfile.raw
+```
+
 ## Options
 
 All 32 options parsed from the captured help text; 30 reviewed with usage guidance.

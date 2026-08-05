@@ -20,6 +20,13 @@ ewfinfo [ -A codepage ] [ -d date_format ] [ -f format ]
 [ -ehimvVx ] ewf_files
 ```
 
+## Common invocations
+
+```
+# Check EWF image details post-acquisition
+ewfinfo /Cases/001/001_2017_USB_Gold.E01
+```
+
 ## Options
 
 All 9 options parsed from the captured help text; 7 reviewed with usage guidance.

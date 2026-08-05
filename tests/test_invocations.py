@@ -39,6 +39,13 @@ DROP = [
     ("ngrep", "sudo apt install ngrep"),
     # bare invocation teaches nothing
     ("fls", "fls"),
+    # The tool's own OUTPUT. Both of these were extracted and then captioned
+    # with confident nonsense -- "Create forensic image of log file and
+    # verify integrity" for a startup banner -- which is exactly the
+    # authoritative-looking fake command this project exists to avoid.
+    ("dc3dd", "dc3dd 7.2.646 started at 2018-12-01 13:37:20 -0500"),
+    ("affcat", "affcat version 3.7.22"),
+    ("ewfinfo", "ewfinfo 20140608"),
 ]
 
 ok = []
@@ -61,6 +68,14 @@ for tool, line in DROP:
 # &quot; does not run when pasted.
 got = inv.candidate_lines('mactime -b &quot;body.txt&quot; -d', 'mactime')
 check('html entities decoded', got and '&quot;' not in got[0] and '"' in got[0])
+
+# Hex entities too, not just the named ones -- a hand-written table handled
+# &quot; and missed &#x3C;, so a command shipped with the entity still in it.
+got = inv.candidate_lines(
+    'ewfmount image.E01 &#x3C;folder> " title="Copy code" aria-label="Copy"',
+    'ewfmount')
+check('hex entity decoded, markup stripped',
+      got and got[0] == 'ewfmount image.E01 <folder>')
 
 # A trailing gloss is cut, the command kept.
 got = inv.candidate_lines('icat image.dd 1234 > out.bin  →  extract by inode',

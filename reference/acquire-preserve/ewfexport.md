@@ -29,6 +29,15 @@ ewfexport [ -A codepage ] [ -b number_of_sectors ]
 [ -S segment_file_size ] [ -t target ] [ -hqsuvVwx ] ewf_files
 ```
 
+## Common invocations
+
+```
+# Convert EWF image to RAW or another EWF format
+ewfexport image.E01
+# Export files from logical EWF image
+ewfexport image.L01
+```
+
 ## Options
 
 All 19 options parsed from the captured help text; 17 reviewed with usage guidance.

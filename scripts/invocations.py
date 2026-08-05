@@ -19,6 +19,7 @@ and that goes through the same gate as every other note.
     python scripts/invocations.py --audit
 """
 from __future__ import annotations
+import html
 import re
 import sys
 from pathlib import Path
@@ -58,10 +59,14 @@ def candidate_lines(text: str, tool: str) -> list[str]:
     for raw in text.splitlines():
         # Pages are fetched as HTML-derived text and quoting survives as
         # entities. A command copied with &quot; in it does not run.
-        line = (raw.replace("&quot;", '"').replace("&#39;", "'")
-                   .replace("&amp;", "&").replace("&lt;", "<")
-                   .replace("&gt;", ">").replace("&#8212;", "--")
-                   .replace("&nbsp;", " "))
+        #
+        # html.unescape rather than a hand-written table: the table handled
+        # &quot; and &lt; and missed the hex form, so `ewfmount image.E01
+        # &#x3C;folder>` was extracted with the entity still in it.
+        line = html.unescape(raw).replace("\xa0", " ")
+        # Markup that survived the text extraction, dragging the tail of a
+        # copy-to-clipboard button along with the command.
+        line = re.split(r'"\s+(?:title|class|aria-\w+|data-\w+)=', line)[0]
         line = LEAD.sub("", line.strip())
         if not line or len(line) > 160:
             continue
@@ -85,6 +90,23 @@ def candidate_lines(text: str, tool: str) -> list[str]:
         # A shell prompt spliced into a heading: "tcpflow TCP flow recorder
         # root@kali:~# tcpflow -h". The prompt is the giveaway.
         if re.search(r"\S+@\S+:~?[^\s]*[#$]", line):
+            continue
+
+        # The tool's own OUTPUT, which begins with its name and therefore
+        # looks exactly like an invocation.
+        #
+        #   dc3dd 7.2.646 started at 2018-12-01 13:37:20 -0500
+        #   affcat version 3.7.22
+        #
+        # Both were extracted and then captioned with confident nonsense --
+        # "Create forensic image of log file and verify integrity" for a
+        # startup banner. That is the precise failure this project exists to
+        # prevent: an authoritative-looking line a reader pastes into a
+        # terminal. Caught by reading the generated output, not by any check.
+        if re.match(re.escape(tool) + r"\s+(?:v(?:ersion)?\s*)?\d+[\d.]*\b",
+                    line, re.I):
+            continue
+        if re.search(r"\b(?:started at|version)\s+\d", line, re.I):
             continue
         # A table row: "tcpflow | Kali Linux Tools".
         if re.search(r"\|\s*[A-Z][a-z]+(\s+[A-Z][a-z]+)+\s*$", line):

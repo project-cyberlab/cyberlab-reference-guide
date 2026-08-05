@@ -20,6 +20,17 @@ bdeinfo [ -k keys ] [ -o offset ] [ -p password ]
 [ -r password ] [ -s filename ] [ -hvV ] source
 ```
 
+## Common invocations
+
+```
+# Retrieve BitLocker encryption details from a drive
+bdeinfo -p Password /dev/sda1
+# Extract BitLocker encryption details from disk image
+bdeinfo -o $((512*128)) image.dd
+# Extract BitLocker volume details including recovery key and encryption method
+bdeinfo -o $((512*2048)) ~/xmount_pount/Bitlocker_physisch_test.dd
+```
+
 ## Options
 
 All 8 options parsed from the captured help text. The final column is filled in by review.

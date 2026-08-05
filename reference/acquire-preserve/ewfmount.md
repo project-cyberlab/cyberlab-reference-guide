@@ -19,6 +19,21 @@ Use ewfmount to mount an Expert Witness Compression Format (EWF) image file
 ewfmount [ -f format ] [ -X extended_options ] [ -hvV ] image mount_point
 ```
 
+## Common invocations
+
+```
+# Mount EWF image to a folder for forensic analysis
+ewfmount image.E01 <folder>
+# Mount EWF image to access its file system
+ewfmount image.E01 mount_point
+# Mount logical image to access files
+ewfmount -f files image.L01 mount_point
+# Mount EWF image to access disk as physical device
+ewfmount /Cases/001/001_2017_USB_Gold.E01 /mnt/ewf
+# Mount EWF image to a folder for file system access
+ewfmount image.E01 <folder>
+```
+
 ## Options
 
 All 5 options parsed from the captured help text. The final column is filled in by review.

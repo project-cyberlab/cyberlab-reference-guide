@@ -20,6 +20,13 @@ Capture packets to a file. It does nothing else — which is the point.
 dumpcap [options] ...
 ```
 
+## Common invocations
+
+```
+# Display dumpcap tool help information
+dumpcap -h
+```
+
 ## Options
 
 All 48 options parsed from the captured help text; 19 reviewed with usage guidance.

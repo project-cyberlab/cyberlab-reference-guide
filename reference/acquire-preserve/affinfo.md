@@ -31,13 +31,6 @@ affinfo [options] infile
 -s segment =   Just print information about 'segment'.
 ```
 
-## Common invocations
-
-```
-# Display AFF file metadata and hash validation results
-affinfo version 3.7.22
-```
-
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._
