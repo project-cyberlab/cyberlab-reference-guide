@@ -473,5 +473,14 @@
     "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
     "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "aeskeyfind": [
+    "https://github.com/makomk/aeskeyfind",
+    "https://medium.com/@Frogjump/aeskeyfind-in-kali-linux-72ba6a8ea2fd",
+    "https://www.kali.org/tools/aeskeyfind/",
+    "https://www.siberoloji.com/aeskeyfind-in-kali-linux-advanced-memory-forensics/"
+  ],
+  "rsakeyfind": [
+    "https://www.jaiminton.com/cheatsheet/DFIR/"
   ]
 }
