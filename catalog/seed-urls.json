@@ -594,5 +594,41 @@
   "oletimes": [
     "https://github.com/decalage2/oletools/wiki/oletimes",
     "https://decalage.info/python/oletools/"
+  ],
+  "pyxswf": [
+    "https://github.com/decalage2/oletools/wiki/pyxswf",
+    "https://github.com/decalage2/oletools/blob/master/oletools/doc/pyxswf.md",
+    "https://www.decalage.info/python/pyxswf",
+    "https://www.aldeid.com/wiki/Python-oletools/pyxswf"
+  ],
+  "xlmdeobfuscator": [
+    "https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md",
+    "https://github.com/dissectmalware/xlmmacrodeobfuscator"
+  ],
+  "olemeta": [
+    "https://github.com/decalage2/oletools/wiki/olemeta",
+    "https://github.com/decalage2/oletools/blob/master/oletools/doc/olemeta.md",
+    "https://www.decalage.info/python/olemeta",
+    "https://www.redsecuretech.co.uk/blog/post/olevba-oletools-guide-practical-examples-and-exercises/871"
+  ],
+  "ngrep": [
+    "https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md",
+    "https://ngrep.sourceforge.net/usage.html",
+    "https://www.systutorials.com/docs/linux/man/8-ngrep/",
+    "https://www.binarytides.com/search-network-traffic-ngrep-tutorial/",
+    "https://netbeez.net/blog/linux-analyze-network-ngrep/"
+  ],
+  "radiff2": [
+    "https://book.rada.re/tools/radiff2/binary_diffing.html",
+    "https://www.mankier.com/1/radiff2",
+    "https://github.com/radareorg/radare2/blob/master/man/radiff2.1",
+    "https://r2wiki.readthedocs.io/en/latest/tools/radiff2/",
+    "https://radareorg.github.io/blog/posts/binary-diffing/"
+  ],
+  "sigtool": [
+    "https://manpages.debian.org/testing/clamav/sigtool.1.en.html",
+    "https://www.mankier.com/1/sigtool",
+    "https://docs.clamav.net/manual/Usage/SignatureManagement.html",
+    "https://man.archlinux.org/man/extra/clamav/sigtool.1.en"
   ]
 }
