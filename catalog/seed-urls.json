@@ -39,48 +39,40 @@
   "EvtxECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
   ],
   "MFTECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
   ],
   "PECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
   ],
   "RECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
   ],
   "AmcacheParser": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
     "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.amcacheparser.com/en/blog/amcacheparser-complete-guide",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://www.amcacheparser.com/en/blog/amcacheparser-complete-guide"
   ],
   "SrumECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
   ],
   "AppCompatCacheParser": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.dfir.training/dfirtools-cat/eric-zimmerman-tools"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
   ],
   "bulk_extractor": [
-    "https://cybersectools.com/tools/bulkextractor",
     "https://github.com/simsong/bulk_extractor/wiki",
     "https://www.kali.org/tools/bulk-extractor/"
   ],
@@ -89,7 +81,6 @@
     "https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk"
   ],
   "exiftool": [
-    "https://exiftool.org/examples.html",
     "https://grapefruitcat.medium.com/a-quick-dive-into-some-reverse-engineering-tools-for-malware-analysis-0f5248254d09"
   ],
   "ssdeep": [
@@ -101,10 +92,10 @@
     "https://yara.readthedocs.io/en/stable/writingrules.html"
   ],
   "clamscan": [
-    "https://docs.clamav.net/manual/Usage/Scanning.html",
-    "https://github.com/marcurdy/dfir-toolset/blob/master/ToolsOfTheGame.md"
+    "https://docs.clamav.net/manual/Usage/Scanning.html"
   ],
   "foremost": [
+    "https://manpages.debian.org/unstable/foremost/foremost.1.en.html",
     "https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk"
   ],
   "log2timeline.py": [
@@ -115,15 +106,13 @@
   ],
   "psort.py": [
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
-    "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
     "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
     "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
   ],
   "pinfo.py": [
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
     "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
-    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
-    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
+    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines"
   ],
   "chainsaw": [
     "https://github.com/WithSecureLabs/chainsaw",
@@ -139,79 +128,66 @@
   "regfexport": [
     "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
     "https://github.com/libyal/libregf",
+    "https://github.com/libyal/libregf/wiki/Tools",
+    "https://manpages.debian.org/unstable/libregf-utils/regfexport.1.en.html",
     "https://miloserdov.org/?p=5448",
     "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
   ],
   "regfinfo": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libregf",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://manpages.debian.org/unstable/libregf-utils/regfinfo.1.en.html"
   ],
   "regfmount": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libregf",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://miloserdov.org/?p=5448"
   ],
   "esedbexport": [
     "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
     "https://github.com/libyal/libesedb",
+    "https://github.com/libyal/libesedb/wiki/Tools",
+    "https://manpages.debian.org/unstable/libesedb-utils/esedbexport.1.en.html",
     "https://miloserdov.org/?p=5448",
     "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
   ],
   "esedbinfo": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libesedb",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://manpages.debian.org/unstable/libesedb-utils/esedbinfo.1.en.html"
   ],
   "evtxexport": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libevtx",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://github.com/libyal/libevtx/wiki/Tools",
+    "https://manpages.debian.org/unstable/libevtx-utils/evtxexport.1.en.html",
+    "https://manpages.ubuntu.com/manpages/xenial/man1/evtxexport.1.html"
   ],
   "evtxinfo": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libevtx",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://github.com/libyal/libevtx/wiki/Tools",
+    "https://manpages.debian.org/unstable/libevtx-utils/evtxinfo.1.en.html"
   ],
   "pffexport": [
-    "https://github.com/libyal/libpff"
+    "https://command-not-found.com/pffexport"
   ],
   "pffinfo": [
-    "https://github.com/libyal/libpff"
+    "https://github.com/libyal/libpff",
+    "https://github.com/libyal/libpff/wiki/Tools",
+    "https://manpages.debian.org/unstable/libpff-utils/pffinfo.1.en.html"
   ],
   "regipy-dump": [
-    "https://github.com/mkorman90/regipy",
-    "https://medium.com/dfir-dudes/regipy-automating-registry-forensics-with-python-b170a1e2b474"
+    "https://github.com/mkorman90/regipy"
   ],
   "regipy-diff": [
-    "https://github.com/mkorman90/regipy",
-    "https://medium.com/dfir-dudes/regipy-automating-registry-forensics-with-python-b170a1e2b474"
+    "https://github.com/mkorman90/regipy"
   ],
   "regipy-plugins-run": [
-    "https://github.com/mkorman90/regipy",
-    "https://medium.com/dfir-dudes/regipy-automating-registry-forensics-with-python-b170a1e2b474"
+    "https://github.com/mkorman90/regipy"
   ],
   "regipy-plugins-list": [
-    "https://github.com/mkorman90/regipy"
+    "https://github.com/mkorman90/regipy",
+    "https://github.com/mkorman90/regipy/blob/master/README.md"
   ],
   "regipy-parse-header": [
     "https://github.com/mkorman90/regipy"
   ],
   "reglookup": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://miloserdov.org/?p=5448",
     "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/",
     "https://www.kali.org/tools/reglookup/"
   ],
   "rip.pl": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/",
-    "https://www.kali.org/tools/regripper/"
+    "https://github.com/keydet89/RegRipper3.0"
   ]
 }
