@@ -44,6 +44,30 @@ FILES = {"kept": ROOT / "research_output.json",
          "miss": ROOT / "research_misses.json"}
 REPORT = ROOT / "research_assessment.md"
 
+
+# Proposals already tested against the recorded verdicts and disproven.
+#
+# The assessor has recommended a minimum passage-score threshold at least
+# twice, and the record refutes it both times: a score>=5 rule would discard
+# 34 of 81 accepted notes -- 42% -- to remove 62% of the rejects. scalpel,
+# binwalk, evtxinfo, aeskeyfind, hivexsh, dc3dd and foremost all scored 0-2
+# and are all correct.
+#
+# Without this the assessor cannot learn, because it sees one round's
+# diagnostics and never the history of what those diagnostics led to. It will
+# keep proposing the same plausible fix forever, and each time it costs a
+# round to re-disprove.
+DISPROVEN = """- A minimum passage-score threshold (4.7, 5.0, or any value). Passage score
+  measures RETRIEVAL quality, not correctness. Tested twice: a score>=5 cut
+  would discard 42% of accepted notes, including scalpel, binwalk, evtxinfo
+  and foremost, all of which are correct.
+- Excluding output-file flags (-o, --output, --csv). Measured: they are
+  accepted at 62%, every other flag at 63%. Indistinguishable.
+- Relaxing the grounding threshold below 45%. The problem there was never the
+  threshold; the measurement was counting plurals as ungrounded, and stemming
+  fixed it.
+"""
+
 ASSESSOR = ("l3e7-3090", "http://192.168.1.253:11434", "qwen3:30b-a3b-instruct-2507-q4_K_M")
 
 PROMPT = """You are reviewing the performance of an automated research \
@@ -54,6 +78,10 @@ tool in use, and turn them into one grounded, cited note saying WHEN a junior \
 analyst would reach for it. Notes that are ungrounded, that merely restate the \
 tool's own help text, or that state a workflow order the sources do not \
 support are rejected.
+
+Some changes have already been tried and DISPROVEN against the recorded review decisions. Do not propose these again:
+
+{rejected}
 
 Here are the measured diagnostics from the last run:
 
@@ -160,7 +188,7 @@ def main() -> int:
     print(diagnostics)
 
     print("\n--- asking the assessor what to change ---")
-    suggestion = ask(PROMPT.format(diagnostics=diagnostics))
+    suggestion = ask(PROMPT.format(diagnostics=diagnostics, rejected=DISPROVEN))
     print(suggestion)
 
     REPORT.write_text(
