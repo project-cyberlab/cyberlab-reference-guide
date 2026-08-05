@@ -11,7 +11,11 @@
 # Health is measured in VERDICTS, never in log lines. A loop emitting backoff
 # messages every five minutes grows its log indefinitely while producing
 # nothing, and an earlier watchdog called that healthy for nine hours.
-LOG="${1:-/c/Users/m808b/dev/cyberlab-reference-guide/research_live.log}"
+# No argument. The stable path is the whole point: this script was written
+# because per-run logs orphaned a watchdog on every restart, and then I
+# passed loop7.log and loop8.log explicitly anyway and orphaned two more.
+# Removing the parameter removes the mistake.
+LOG=/c/Users/m808b/dev/cyberlab-reference-guide/research_live.log
 prev=0
 barren=0
 while true; do
