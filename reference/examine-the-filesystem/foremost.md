@@ -20,6 +20,13 @@ An analyst reaches for foremost when recovering lost files from disk images or d
 
 **Sources:** <http://foremost.sourceforge.net/> · <https://www.kali.org/tools/foremost/>
 
+## Common invocations
+
+```
+# Carve JPEGs, PDFs, DOCs, XLS from disk image
+foremost -t doc,jpg,pdf,xls -i image.dd
+```
+
 ## Options
 
 All 11 options parsed from the captured help text; 8 reviewed with usage guidance.

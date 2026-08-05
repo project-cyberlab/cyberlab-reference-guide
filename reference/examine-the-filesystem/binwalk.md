@@ -26,6 +26,17 @@ An analyst reaches for binwalk when examining firmware images to identify embedd
 binwalk [OPTIONS] [FILE1] [FILE2] [FILE3] ...
 ```
 
+## Common invocations
+
+```
+# Scan firmware for embedded files and file systems
+binwalk firmware.bin
+# Extract embedded files from firmware image
+binwalk -e firmware.bin
+# Detect encrypted or compressed sections via entropy analysis
+binwalk -E firmware.bin
+```
+
 ## Options
 
 All 102 options parsed from the captured help text; 8 reviewed with usage guidance.

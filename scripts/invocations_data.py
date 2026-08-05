@@ -25,6 +25,52 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html',
         },
     ],
+    'binwalk': [
+        {
+            'task': 'Scan firmware for embedded files and file systems',
+            'cmd': 'binwalk firmware.bin',
+            'src': 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk',
+        },
+        {
+            'task': 'Extract embedded files from firmware image',
+            'cmd': 'binwalk -e firmware.bin',
+            'src': 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk',
+        },
+        {
+            'task': 'Detect encrypted or compressed sections via entropy analysis',
+            'cmd': 'binwalk -E firmware.bin',
+            'src': 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk',
+        },
+    ],
+    'chainsaw': [
+        {
+            'task': 'Detect missing log records and time gaps',
+            'cmd': './chainsaw analyse gaps ./Logs/',
+            'src': 'https://github.com/WithSecureLabs/chainsaw',
+        },
+        {
+            'task': 'Search EVTX logs for mimikatz activity',
+            'cmd': './chainsaw search mimikatz -i evtx_attack_samples/',
+            'src': 'https://github.com/WithSecureLabs/chainsaw',
+        },
+    ],
+    'clamscan': [
+        {
+            'task': 'Scan entire directory tree for malware',
+            'cmd': 'clamscan --recursive .',
+            'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
+        },
+        {
+            'task': 'Full system malware scan recursively',
+            'cmd': 'clamscan --recursive /',
+            'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
+        },
+        {
+            'task': 'Detect malware across entire system',
+            'cmd': 'clamscan.exe --recursive C:\\',
+            'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
+        },
+    ],
     'ewfacquire': [
         {
             'task': 'Create EWF image from device or file',
@@ -115,6 +161,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html',
         },
     ],
+    'foremost': [
+        {
+            'task': 'Carve JPEGs, PDFs, DOCs, XLS from disk image',
+            'cmd': 'foremost -t doc,jpg,pdf,xls -i image.dd',
+            'src': 'https://www.kali.org/tools/foremost/',
+        },
+    ],
     'icat': [
         {
             'task': 'Extract file content from disk image using inode',
@@ -125,11 +178,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Recover file content by inode from disk image',
             'cmd': 'icat image.dd 1234 > recovered_file.txt',
             'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
-        },
-        {
-            'task': 'Extract file data from evidence and compute MD5 hash',
-            'cmd': 'icat -o 2048 "$EVIDENCE" 12345 | md5sum',
-            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
         {
             'task': 'Recover deleted file from evidence image',
@@ -171,11 +219,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
         {
-            'task': 'Search for specific data patterns in network capture files',
-            'cmd': 'ngrep -tD ns3 -I /tmp/dns.dump',
-            'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
-        },
-        {
             'task': 'Search for HTTP traffic in a packet capture file',
             'cmd': 'ngrep -I /tmp/dns.dump port 80',
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
@@ -186,16 +229,89 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
     ],
+    'oleid': [
+        {
+            'task': 'Analyze OLE files for macros, encryption, and embedded objects',
+            'cmd': 'oleid <file>',
+            'src': 'https://github.com/decalage2/oletools/wiki/oleid',
+        },
+    ],
+    'olevba': [
+        {
+            'task': 'Analyze VBA macros in documents for malicious code',
+            'cmd': 'olevba file.doc',
+            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
+        },
+        {
+            'task': 'Scan VBA source code for obfuscated strings and malicious content',
+            'cmd': 'olevba source_code.vba',
+            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
+        },
+        {
+            'task': 'Decode obfuscated strings in VBA macro for analysis',
+            'cmd': 'olevba file.doc --decode',
+            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
+        },
+        {
+            'task': 'Analyze document macros by revealing deobfuscated VBA code',
+            'cmd': 'olevba file.doc --reveal',
+            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
+        },
+        {
+            'task': 'Analyze VBA macros in multiple files for malware detection',
+            'cmd': 'olevba "MalwareZoo/VBA/*"',
+            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
+        },
+    ],
+    'photorec': [
+        {
+            'task': 'Recover files from raw disk image',
+            'cmd': 'photorec image.dd to carve a raw disk image',
+            'src': 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step',
+        },
+        {
+            'task': 'Recover files from Encase EWF image',
+            'cmd': 'photorec image.E01 to recover files from an Encase EWF image',
+            'src': 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step',
+        },
+    ],
     'sigtool': [
         {
             'task': 'Identify false positive virus signature in database',
             'cmd': 'sigtool --unpack=FILE',
             'src': 'https://docs.clamav.net/manual/Usage/SignatureManagement.html',
         },
+    ],
+    'ssdeep': [
         {
-            'task': 'Identify virus signature causing false positive detection',
-            'cmd': 'sigtool --find="Win.Test.EICAR"',
-            'src': 'https://docs.clamav.net/manual/Usage/SignatureManagement.html',
+            'task': 'Generate file hashes recursively for directory tree',
+            'cmd': 'ssdeep -r *',
+            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
+        },
+        {
+            'task': 'Compare signature files to detect overlapping entries',
+            'cmd': 'ssdeep -r /etc >list1.txt',
+            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
+        },
+        {
+            'task': 'Compare signature files to find matching or similar entries',
+            'cmd': 'ssdeep -r /usr >list2.txt',
+            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
+        },
+        {
+            'task': 'Detect source code reuse by comparing file similarities',
+            'cmd': 'ssdeep -b foo.txt >hashes.txt',
+            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
+        },
+        {
+            'task': 'Detect file similarities using fuzzy hash matching',
+            'cmd': 'ssdeep -b -m hashes.txt bar.txt',
+            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
+        },
+        {
+            'task': 'Check if file matches known signature for identification',
+            'cmd': 'ssdeep -b -m sig.txt partial.avi',
+            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
         },
     ],
     'tcpflow': [
@@ -209,20 +325,17 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'tcpflow -o out -a -l *.pcap',
             'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
         },
+    ],
+    'testdisk': [
         {
-            'task': 'Analyze network traffic by reconstructing flows from pcap file',
-            'cmd': 'tcpflow -a -o outdir -Fk -r packets.pcap',
-            'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
+            'task': 'Recover partitions and repair filesystems from disk images',
+            'cmd': 'testdisk image.dd to work on a raw disk image',
+            'src': 'https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step',
         },
         {
-            'task': 'Extract HTTP attachments from network traffic',
-            'cmd': 'tcpflow -e scan_http -o outdir host sundown',
-            'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
-        },
-        {
-            'task': 'Capture traffic between hosts and generate MD5 hashes for analysis',
-            'cmd': 'tcpflow -X report.xml -e scan_md5 -o outdir -Fk host helios and \\( hot or ace \\)',
-            'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
+            'task': 'Recover files from Encase EWF image',
+            'cmd': 'testdisk image.E01 to recover files from an Encase EWF image',
+            'src': 'https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step',
         },
     ],
     'tshark': [

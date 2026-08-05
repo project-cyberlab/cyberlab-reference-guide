@@ -20,6 +20,15 @@ Hunt through Windows event logs with Sigma rules and built-in detection logic, a
 chainsaw [OPTIONS] <COMMAND>
 ```
 
+## Common invocations
+
+```
+# Detect missing log records and time gaps
+./chainsaw analyse gaps ./Logs/
+# Search EVTX logs for mimikatz activity
+./chainsaw search mimikatz -i evtx_attack_samples/
+```
+
 ## Options
 
 All 6 options parsed from the captured help text; 2 reviewed with usage guidance.

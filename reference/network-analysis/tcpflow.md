@@ -38,12 +38,6 @@ tcpflow [-aBcCDhIpsvVZ] [-b max_bytes] [-d debug_level]
 tcpflow -r eth0.pcap
 # Reconstruct network flows from multiple pcap files into output directory
 tcpflow -o out -a -l *.pcap
-# Analyze network traffic by reconstructing flows from pcap file
-tcpflow -a -o outdir -Fk -r packets.pcap
-# Extract HTTP attachments from network traffic
-tcpflow -e scan_http -o outdir host sundown
-# Capture traffic between hosts and generate MD5 hashes for analysis
-tcpflow -X report.xml -e scan_md5 -o outdir -Fk host helios and \( hot or ace \)
 ```
 
 ## Options

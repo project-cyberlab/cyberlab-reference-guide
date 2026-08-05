@@ -85,7 +85,9 @@ def describe(tool: str, cmd: str, context: str, worker) -> str | None:
 
 
 def for_tool(tool: str, worker, limit: int = 6) -> list[dict]:
-    found = invocations.invocations_for(tool, limit=limit)
+    # The captured help text is ground truth for what the binary accepts.
+    found = invocations.invocations_for(
+        tool, limit=limit, real_flags=enrich_loop.capture_flags(tool))
     if not found:
         return []
     pages = {p.get("url"): (p.get("text") or "") for p in sources.corpus_for(tool)}

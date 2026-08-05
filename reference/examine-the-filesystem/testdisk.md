@@ -28,6 +28,15 @@ testdisk /list  [/log]   [file.dd|file.e01|device]
 testdisk /version
 ```
 
+## Common invocations
+
+```
+# Recover partitions and repair filesystems from disk images
+testdisk image.dd to work on a raw disk image
+# Recover files from Encase EWF image
+testdisk image.E01 to recover files from an Encase EWF image
+```
+
 ## Options
 
 All 3 options parsed from the captured help text. The final column is filled in by review.

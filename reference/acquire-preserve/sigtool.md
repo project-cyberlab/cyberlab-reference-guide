@@ -20,8 +20,6 @@ Inspect and build ClamAV signature databases: unpack a .cvd, list its signatures
 ```
 # Identify false positive virus signature in database
 sigtool --unpack=FILE
-# Identify virus signature causing false positive detection
-sigtool --find="Win.Test.EICAR"
 ```
 
 ## Options

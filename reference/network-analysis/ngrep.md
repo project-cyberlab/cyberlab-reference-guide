@@ -39,8 +39,6 @@ ngrep -d any port 25
 ngrep -W byline port 80
 # Search for specific strings in network traffic data
 ngrep -w 'm' -I /tmp/dns.dump
-# Search for specific data patterns in network capture files
-ngrep -tD ns3 -I /tmp/dns.dump
 # Search for HTTP traffic in a packet capture file
 ngrep -I /tmp/dns.dump port 80
 # Capture error messages in network syslog traffic

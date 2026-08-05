@@ -97,8 +97,49 @@ def split_prompts(line: str, tool: str) -> list[str]:
     return out
 
 
-def candidate_lines(text: str, tool: str) -> list[str]:
-    """Lines from this page that are invocations of the tool."""
+# A usage synopsis, which names the tool and lists what it accepts and is
+# not a command anyone runs:
+#   foremost [-v|-V|-h|-T|-Q|-q|-a|-w-d] [-t <type>] [-s <blocks>]
+#   clamscan [options] [file/directory/-]
+SYNOPSIS = re.compile(r"\[[^\]]*\|[^\]]*\]|\[options?\]|\[file/|\.{3}\]"
+                      r"|\[-\w\|", re.I)
+
+# A page title that happens to lead with the tool name:
+#   olevba · decalage2/oletools Wiki · GitHub
+#
+# Middot only. Including " | " here caught `icat -o 2048 "$EVIDENCE" 12345 |
+# md5sum` -- a shell pipe, not a title separator. Pipe-separated headings are
+# already handled by the table-row rule below, which requires capitalised
+# words after the bar.
+TITLE = re.compile(r"\s·\s")
+
+
+def _expand(flag: str) -> set[str]:
+    """A flag token as the set of options it actually uses.
+
+    Two forms the captured help text never lists literally:
+    clustered short flags, where `-Fk` is `-F` and `-k`, and long flags
+    carrying a value, where `--find="x"` is `--find`. Comparing the raw token
+    dropped `tcpflow -a -o outdir -Fk -r packets.pcap` and `ngrep -tD ns3`,
+    both of which are real.
+    """
+    flag = flag.split("=")[0]
+    if flag.startswith("--") or len(flag) <= 2:
+        return {flag}
+    return {flag} | {"-" + c for c in flag[1:]}
+
+
+def candidate_lines(text: str, tool: str,
+                    real_flags: set[str] | None = None) -> list[str]:
+    """Lines from this page that are invocations of the tool.
+
+    real_flags, when given, is the set of options captured from the actual
+    binary's help output. A command using anything else is dropped however
+    real the page it came from looked -- `clamscan --memory` was extracted
+    from a live page and clamscan has no --memory. Extraction guarantees
+    somebody wrote the line down; it guarantees nothing about whether it
+    runs, and this guide gets pasted into terminals.
+    """
     out = []
     lines = []
     for ln in text.splitlines():
@@ -182,8 +223,16 @@ def candidate_lines(text: str, tool: str) -> list[str]:
 
         if len(line.split()) < 2:
             continue
-        if SELF.match(line):
+        if SELF.match(line) or SYNOPSIS.search(line) or TITLE.search(line):
             continue
+        # Every flag the command uses must exist on the real binary.
+        if real_flags:
+            # Only the part before a pipe: "icat -o 2048 img 12 | md5sum"
+            # runs a second program whose flags are not this tool's.
+            head = line.split("|")[0]
+            used = re.findall(r"(?<![\w-])(-{1,2}[A-Za-z][\w-]*)", head)
+            if any(not (_expand(f) & real_flags) for f in used):
+                continue
         # Smart quotes come from prose-formatted pages and do not run in a
         # shell: tshark -R “!arp && !bootp” was extracted verbatim.
         if re.search(r"[‘’“”]", line):
@@ -196,11 +245,12 @@ def candidate_lines(text: str, tool: str) -> list[str]:
     return out
 
 
-def invocations_for(tool: str, limit: int = 8) -> list[dict]:
+def invocations_for(tool: str, limit: int = 8,
+                    real_flags: set[str] | None = None) -> list[dict]:
     """Distinct real invocations, commonest shape first, each with a source."""
     seen: dict[str, dict] = {}
     for page in sources.corpus_for(tool):
-        for line in candidate_lines(page.get("text") or "", tool):
+        for line in candidate_lines(page.get("text") or "", tool, real_flags):
             key = re.sub(r"\s+", " ", line)
             rec = seen.get(key)
             if rec:

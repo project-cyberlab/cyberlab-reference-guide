@@ -27,6 +27,15 @@ photorec [/log] [/debug] [/d recup_dir] [file.dd|file.e01|device]
 photorec /version
 ```
 
+## Common invocations
+
+```
+# Recover files from raw disk image
+photorec image.dd to carve a raw disk image
+# Recover files from Encase EWF image
+photorec image.E01 to recover files from an Encase EWF image
+```
+
 ## Options
 
 All 2 options parsed from the captured help text. The final column is filled in by review.
