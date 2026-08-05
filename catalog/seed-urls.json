@@ -525,5 +525,41 @@
     "https://github.com/decalage2/oletools/blob/master/oletools/doc/mraptor.md",
     "https://github.com/decalage2/oletools/wiki/mraptor",
     "https://github.com/decalage2/oletools/blob/master/oletools/mraptor.py"
+  ],
+  "hivexsh": [
+    "https://libguestfs.org/hivexsh.1.html",
+    "https://manpages.ubuntu.com/manpages/xenial/man1/hivexsh.1.html",
+    "https://man.archlinux.org/man/hivexsh.1.en",
+    "https://www.kali.org/tools/hivex/"
+  ],
+  "tcpxtract": [
+    "https://tcpxtract.sourceforge.net/",
+    "https://www.freshports.org/net/tcpxtract/",
+    "https://tzyluen.github.io/post/extract-files-from-captured-network-traffic-pcap-2/"
+  ],
+  "oledir": [
+    "https://github.com/decalage2/oletools/wiki/oledir",
+    "https://decalage.info/python/oletools/",
+    "https://github.com/decalage2/oletools"
+  ],
+  "vshadowinfo": [
+    "https://github.com/libyal/libvshadow/blob/main/manuals/vshadowinfo.1",
+    "https://manpages.debian.org/testing/libvshadow-utils/vshadowinfo.1.en.html",
+    "https://manpages.ubuntu.com/manpages/bionic/man1/vshadowinfo.1.html",
+    "https://bromiley.medium.com/windows-wednesday-volume-shadow-copies-d20b60997c22"
+  ],
+  "rafind2": [
+    "https://book.rada.re/tools/rafind2/intro.html",
+    "https://www.mankier.com/1/rafind2",
+    "https://manpages.debian.org/testing/radare2/rafind2.1.en.html",
+    "https://github.com/radareorg/radare2/blob/master/man/rafind2.1",
+    "https://r2wiki.readthedocs.io/en/latest/tools/rafind2/"
+  ],
+  "bdeinfo": [
+    "https://manpages.ubuntu.com/manpages/bionic/man1/bdeinfo.1.html",
+    "https://github.com/libyal/libbde/blob/main/manuals/bdeinfo.1",
+    "https://manpages.debian.org/testing/libbde-utils/bdeinfo.1.en.html",
+    "https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html",
+    "https://www.aldeid.com/wiki/Category:Encryption/Bitlocker"
   ]
 }
