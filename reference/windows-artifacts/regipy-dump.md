@@ -21,15 +21,15 @@ regipy-dump [OPTIONS] HIVE_PATH
 
 ## Options
 
-All 18 options parsed from the captured help text. The final column is filled in by review.
+All 18 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-o` | FILE | — |  |
 | `-p` | TEXT | A registry path to start iterating from |  |
 | `--registry-path` | TEXT | A registry path to start iterating from |  |
-| `-t` | — | Create a CSV timeline instead |  |
-| `--timeline` | — | Create a CSV timeline instead |  |
+| `-t` | — | Create a CSV timeline instead | An analyst would use the -t flag when they need to output a timeline of the registry hive data instead of a JSON file. |
+| `--timeline` | — | Create a CSV timeline instead | An analyst would use the -t flag when they need to output a timeline of the registry hive data instead of a JSON file. |
 | `-l` | TEXT | Specify a hive type, if it could not be identified for some reason |  |
 | `--hive-type` | TEXT | Specify a hive type, if it could not be identified for some reason |  |
 | `-r` | TEXT | The path from which the partial hive actually starts, for example: -t ntuser -r "/Software" would mean this is actually a HKCU hive, starting from HKCU/Software |  |

@@ -438,5 +438,21 @@
   "numbers-to-string.py": {
     "verdict": "accept",
     "why": "the trigger is right: numeric sequences pulled from a file that need turning back into text, which is how malicious scripts hide strings from a search"
+  },
+  "regipy-dump -t": {
+    "verdict": "accept",
+    "why": "a real choice rather than plumbing: timeline output instead of a raw dump, which decides whether the result drops into a timeline tool or needs reshaping first"
+  },
+  "regipy-diff -o": {
+    "verdict": "accept",
+    "why": "names CSV specifically, which is the point -- a hive diff is only useful once it is in something you can sort and filter"
+  },
+  "regipy-dump -o": {
+    "verdict": "reject",
+    "why": "'save the output to a specified location' is the definition of the flag restated, with no situation attached"
+  },
+  "regipy-plugins-run -o": {
+    "verdict": "reject",
+    "why": "same as regipy-dump -o: restates what the flag does and never says when the choice matters"
   }
 }

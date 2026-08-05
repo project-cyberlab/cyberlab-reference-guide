@@ -21,11 +21,11 @@ regipy-diff [OPTIONS] FIRST_HIVE_PATH SECOND_HIVE_PATH
 
 ## Options
 
-All 4 options parsed from the captured help text. The final column is filled in by review.
+All 4 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-o` | FILE | — |  |
+| `-o` | FILE | — | An analyst would use the -o flag when comparing registry hives to save the resulting differences to a CSV file for further analysis or documentation. |
 | `-v` | — | Verbosity |  |
 | `--verbose` | — | Verbosity |  |
 | `--help` | — | Show this message and exit. |  |

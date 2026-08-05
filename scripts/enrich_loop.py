@@ -509,6 +509,21 @@ def work_one(tool: str, flag: str | None, worker) -> dict:
 # the guide feel auto-populated in the first place.
 _NOT_WORTH_IT = {"--help", "-h", "--version", "-V", "--usage", "-?"}
 
+# Tested and rejected: excluding output-file flags (-o, --output, --csv, --json)
+# on the theory that they are plumbing which can only restate itself.
+#
+# Measured across every reviewed flag note: output-ish flags were accepted 62%
+# of the time, everything else 63%. Indistinguishable. The good ones say
+# something real -- regipy-dump -t chooses timeline output over a raw dump,
+# which decides whether the result drops straight into a timeline tool, and
+# regipy-diff -o names CSV because a hive diff is only useful once you can
+# sort it. The bad ones restate the flag, exactly as bad notes about any other
+# flag do.
+#
+# The lesson is about the shape of the note, not the shape of the flag, and
+# the gate already tests for that. Left here so the plausible-sounding
+# exclusion does not get added again on instinct.
+
 
 def rank_flags(tool: str, limit: int) -> list[str]:
     """The flags worth researching, most-used first.

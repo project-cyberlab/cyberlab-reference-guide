@@ -2213,6 +2213,12 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-r': 'An analyst would use the -r flag when scanning a directory structure to recursively process all .doc and .xls files in subfolders.',
         '-z': 'An analyst would use the -z flag when scanning encrypted documents stored in a Zip archive that require a password to access their contents.',
     },
+    'regipy-diff': {
+        '-o': 'An analyst would use the -o flag when comparing registry hives to save the resulting differences to a CSV file for further analysis or documentation.',
+    },
+    'regipy-dump': {
+        '-t': 'An analyst would use the -t flag when they need to output a timeline of the registry hive data instead of a JSON file.',
+    },
 }
 
 for _cmd, _fl in RESEARCHED_FLAGS.items():
