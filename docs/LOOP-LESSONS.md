@@ -170,3 +170,44 @@ mechanically, and use the model for judgement rather than for content.** For a
 documentation, its author's writing, and published analyst workflows — fetched
 through the existing allowlisted retrieval module, liveness-checked, cited on
 the page, and cached.
+
+## Proximity is not ownership
+
+`passages_using` requires the tool's name within ±200 characters of the flag,
+which is what separates a real invocation from a stray hyphen. It does not ask
+whether the tool *owns* the option being described, and on sibling tools those
+come apart. scalpel is a fork of foremost and names foremost in its own man
+page, so a scalpel option block passes the proximity test on a foremost query.
+The loop duly reported that `foremost -b` carves files whose footers are
+missing — scalpel's `-b`; foremost's sets the block size — and that `foremost
+-s` skips bytes, where scalpel skips bytes and foremost skips blocks.
+
+`misattributed()` cannot catch this. It looks for another tool's name in the
+note, and this failure works by *dropping* the attribution and keeping the
+semantics. There is nothing in the note to find.
+
+So `option_owner()` checks the evidence rather than the claim: for each place
+the flag appears, find the nearest preceding synopsis and ask whose it is.
+Replayed over all 154 recorded flag records it fires ten times and reproduces
+both misattributions that had been caught by hand — `mactime -m` and `ils -m`,
+each lifted from an `fls` synopsis.
+
+Two outcomes, because the faults differ. A flag the tool does not have is a
+fabrication and is rejected. A flag it does have, documented here from someone
+else's synopsis, may well be right and cannot be settled from this evidence —
+that goes to review. `mmls -o` is the case that forced the distinction.
+
+## Do not read your own output back as evidence
+
+`rax2` shipped citing exactly one source: this guide's own `rax2.md`. Search
+had indexed the repository, so the loop was retrieving pages it had written
+earlier and treating them as corroboration. A claim then supports itself one
+generation later, and the citation makes it look sourced.
+
+The whole design rests on retrieval from outside. Nothing external is learned
+by reading your own output. `project-cyberlab` is now in `DENY`.
+
+The recurring shape, again: every stage has a plausible near-miss that produces
+no error. Seeded-but-unmatched, reviewed-but-unpublished, committed-but-not-
+running, answered-but-duplicate, and now cited-but-self-cited. Each looks
+exactly like success from the step before it.
