@@ -15,6 +15,15 @@
 
 Inspect and build ClamAV signature databases: unpack a .cvd, list its signatures, or generate a new one from a sample. The bridge between 'ClamAV detects this' and 'here is exactly which signature fired and why'.
 
+## Common invocations
+
+```
+# Identify false positive virus signature in database
+sigtool --unpack=FILE
+# Identify virus signature causing false positive detection
+sigtool --find="Win.Test.EICAR"
+```
+
 ## Options
 
 All 35 options parsed from the captured help text; 1 reviewed with usage guidance.

@@ -20,6 +20,21 @@ Wireshark's command line: capture, filter, dissect and export packet data, inclu
 tshark [options] ...
 ```
 
+## Common invocations
+
+```
+# Exclude ARP traffic during capture
+tshark -f !arp
+# Generate protocol hierarchy statistics for network traffic analysis
+tshark -z io,phs
+# Capture 100 packets excluding ARP traffic for analysis
+tshark -c 100 -f !arp
+# Generate TCP conversation statistics
+tshark -q -z conv,tcp
+# Capture 100 packets for network analysis
+tshark -c 100 -n -w 100pkts.pcap
+```
+
 ## Options
 
 All 75 options parsed from the captured help text; 20 reviewed with usage guidance.

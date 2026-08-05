@@ -25,13 +25,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html',
         },
     ],
-    'dumpcap': [
-        {
-            'task': 'Display dumpcap tool help information',
-            'cmd': 'dumpcap -h',
-            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
-        },
-    ],
     'ewfacquire': [
         {
             'task': 'Create EWF image from device or file',
@@ -193,6 +186,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
     ],
+    'sigtool': [
+        {
+            'task': 'Identify false positive virus signature in database',
+            'cmd': 'sigtool --unpack=FILE',
+            'src': 'https://docs.clamav.net/manual/Usage/SignatureManagement.html',
+        },
+        {
+            'task': 'Identify virus signature causing false positive detection',
+            'cmd': 'sigtool --find="Win.Test.EICAR"',
+            'src': 'https://docs.clamav.net/manual/Usage/SignatureManagement.html',
+        },
+    ],
     'tcpflow': [
         {
             'task': 'Decode TCP flows from pcap to extract HTTP data and files',
@@ -218,6 +223,33 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Capture traffic between hosts and generate MD5 hashes for analysis',
             'cmd': 'tcpflow -X report.xml -e scan_md5 -o outdir -Fk host helios and \\( hot or ace \\)',
             'src': 'https://www.systutorials.com/docs/linux/man/1-tcpflow/',
+        },
+    ],
+    'tshark': [
+        {
+            'task': 'Exclude ARP traffic during capture',
+            'cmd': 'tshark -f !arp',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Generate protocol hierarchy statistics for network traffic analysis',
+            'cmd': 'tshark -z io,phs',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Capture 100 packets excluding ARP traffic for analysis',
+            'cmd': 'tshark -c 100 -f !arp',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Generate TCP conversation statistics',
+            'cmd': 'tshark -q -z conv,tcp',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+        {
+            'task': 'Capture 100 packets for network analysis',
+            'cmd': 'tshark -c 100 -n -w 100pkts.pcap',
+            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
         },
     ],
 }

@@ -53,10 +53,68 @@ SUBSTANCE = re.compile(r"(?<![\w-])-{1,2}[A-Za-z]|[<>]|\|\s*\w+\s|/\S+"
                        r"|\S+\.[A-Za-z0-9]{2,4}(?:\s|$)|\{\{")
 
 
+# A shell prompt, anywhere in a line: "$ ", "# ", "PS C:\>" or the full
+# "[user@localhost /workdir]$ " form.
+# Note the prompt characters: $ and #, and PS...> for PowerShell -- but NOT
+# a bare ">". A lone > is a redirect far more often than a prompt, and
+# including it split "mactime -b body.txt -d > timeline.csv" at the redirect
+# and returned the command twice.
+PROMPT = re.compile(r"(?:\[[^\]\n]{1,60}\]\s*)?(?:[a-z0-9_.-]+@[\w.-]+"
+                    r"(?::[^\s$#]*)?)?\s*(?:[$#]|PS[^>\n]{0,40}>)\s+")
+
+# An invocation that only asks the tool to describe itself. Real, and it
+# teaches a reader nothing they cannot get by running the tool, so it is not
+# worth a row -- and the captioner will confidently invent a purpose for it
+# ("Identify signatures causing false positives" for `sigtool --help`).
+SELF = re.compile(r"^\S+\s+(?:-h|-\?|-V|--help|--version|--usage)\s*$")
+
+# Where a command stops when a page has run it together with its output.
+# The output of the tools this guide covers is overwhelmingly of a shape
+# arguments never take: a comma-and-colon record, a table rule, a second
+# prompt, or the tool announcing itself again.
+END = re.compile(r"\s{2,}|\S+,\d[\d.]*--|\|{2,}|[-=]{4,}"
+                 r"|\[[^\]\n]{1,60}\]\s*[$#]")
+
+
+def split_prompts(line: str, tool: str) -> list[str]:
+    """Commands buried mid-line after a shell prompt.
+
+    Pages converted from HTML routinely arrive with a whole session on one
+    line: "[user@localhost /workdir]$ ssdeep -l config.h INSTALL ...". Only
+    looking at the start of a line found nothing on those pages, which is
+    why ssdeep, dd, md5sum, sha256sum and rahash2 all came back with zero
+    invocations while their documentation was full of them.
+    """
+    out = []
+    for seg in PROMPT.split(line):
+        if not seg:
+            continue
+        seg = seg.strip()
+        if not re.match(re.escape(tool) + r"(?:\.\w+)?\s", seg):
+            continue
+        # Cut at the first thing that reads as output rather than argument.
+        out.append(END.split(seg)[0].strip())
+    return out
+
+
 def candidate_lines(text: str, tool: str) -> list[str]:
     """Lines from this page that are invocations of the tool."""
     out = []
-    for raw in text.splitlines():
+    lines = []
+    for ln in text.splitlines():
+        lines.append(ln)
+        # A line carrying a shell prompt can hold one or several commands;
+        # pull each out and judge it on its own like any other candidate.
+        #
+        # No length condition. The first version required the line to be over
+        # 120 characters, on the assumption that this only happened when a
+        # whole session had been collapsed onto one line. The ssdeep page
+        # puts "[user@localhost /workdir]$ ssdeep -l config.h INSTALL
+        # m4/libtool.m4" on a line of 69, so the guard blocked exactly the
+        # case it was written for and the extractor still reported zero.
+        if PROMPT.search(ln):
+            lines.extend(split_prompts(html.unescape(ln), tool))
+    for raw in lines:
         # Pages are fetched as HTML-derived text and quoting survives as
         # entities. A command copied with &quot; in it does not run.
         #
@@ -124,10 +182,17 @@ def candidate_lines(text: str, tool: str) -> list[str]:
 
         if len(line.split()) < 2:
             continue
+        if SELF.match(line):
+            continue
+        # Smart quotes come from prose-formatted pages and do not run in a
+        # shell: tshark -R “!arp && !bootp” was extracted verbatim.
+        if re.search(r"[‘’“”]", line):
+            continue
         rest = line.split(None, 1)[1]
         if PROSE.search(rest) or not SUBSTANCE.search(rest):
             continue
-        out.append(line)
+        if line not in out:          # a line and its prompt-split twin
+            out.append(line)
     return out
 
 
