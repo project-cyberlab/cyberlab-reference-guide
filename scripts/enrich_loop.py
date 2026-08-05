@@ -839,6 +839,15 @@ def main() -> int:
                 misses.append(rec)
                 print(f"{ts}  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}", flush=True)
 
+        # Persist after each tool, not at the end of the run. See flush().
+        #
+        # The lists keep accumulating rather than being cleared. Clearing
+        # would be the obvious way to avoid rewriting the same records, and
+        # it breaks --replace: that mode does not merge with the file, so
+        # each flush would overwrite it with only the latest tool's work.
+        # Rewriting a few hundred small records costs nothing.
+        flush(results, review, misses, a.replace)
+
     flush(results, review, misses, a.replace)
     print(f"\nkept {kept}, not kept {len(misses)}")
     print(f"  -> {OUT.name} (the build does not read this)")
