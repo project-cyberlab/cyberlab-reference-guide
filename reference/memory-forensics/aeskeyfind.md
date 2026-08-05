@@ -16,9 +16,9 @@ Find 128-bit and 256-bit AES keys in a memory image.
 
 ## When you'd reach for this
 
-An analyst reaches for aeskeyfind when examining memory dumps or virtual machine snapshots to recover AES-128 keys, especially in cases where memory decay or corrupted key schedules may be present; they may pre-process dumps to filter irrelevant data and post-process results by validating discovered keys against known encryption usage, preferring it over similar tools due to its ability to handle reversed key schedules, InvMixColumn pre-applied entries, and entropy-based filtering of non-key blocks.
+An analyst reaches for aeskeyfind after creating a memory dump using a tool like Volatility to recover AES keys from the dump, as it is specifically designed to locate 128-bit and 256-bit AES keys in memory images; they would run it after the dump is created and before exporting the keys, preferring it over similar tools due to its focus on AES key recovery from memory dumps.
 
-**Sources:** <https://github.com/SalpSec/aeskeyfind> · <https://github.com/makomk/aeskeyfind> · <https://www.siberoloji.com/aeskeyfind-kali-linux-advanced-memory-forensics-aes-key-recovery/>
+**Sources:** <https://medium.com/@Frogjump/aeskeyfind-in-kali-linux-72ba6a8ea2fd>
 
 ## Synopsis
 

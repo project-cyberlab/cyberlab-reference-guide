@@ -17,9 +17,9 @@ Trace the execution of a process to analyze its behavior.
 
 ## When you'd reach for this
 
-An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.
+An analyst reaches for Frida when dynamically modifying a running mobile application's behavior, such as bypassing SSL pinning or decrypting obfuscated data, often running commands like `frida -U -f` or `frida -U -p` before injecting scripts; they choose it over similar tools because it allows real-time interaction and modification of processes without requiring source code access.
 
-**Sources:** <https://bananamafia.dev/post/r2frida-1/> · <https://github.com/dweinstein/awesome-frida>
+**Sources:** <https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/>
 
 ## Synopsis
 

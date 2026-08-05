@@ -2060,8 +2060,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://blog.didierstevens.com/programs/xorsearch/'],
     },
     'aeskeyfind': {
-        'scenario': 'An analyst reaches for aeskeyfind when examining memory dumps or virtual machine snapshots to recover AES-128 keys, especially in cases where memory decay or corrupted key schedules may be present; they may pre-process dumps to filter irrelevant data and post-process results by validating discovered keys against known encryption usage, preferring it over similar tools due to its ability to handle reversed key schedules, InvMixColumn pre-applied entries, and entropy-based filtering of non-key blocks.',
-        'sources': ['https://github.com/SalpSec/aeskeyfind', 'https://github.com/makomk/aeskeyfind', 'https://www.siberoloji.com/aeskeyfind-kali-linux-advanced-memory-forensics-aes-key-recovery/'],
+        'scenario': 'An analyst reaches for aeskeyfind after creating a memory dump using a tool like Volatility to recover AES keys from the dump, as it is specifically designed to locate 128-bit and 256-bit AES keys in memory images; they would run it after the dump is created and before exporting the keys, preferring it over similar tools due to its focus on AES key recovery from memory dumps.',
+        'sources': ['https://medium.com/@Frogjump/aeskeyfind-in-kali-linux-72ba6a8ea2fd'],
     },
     'affinfo': {
         'scenario': 'An analyst reaches for affinfo when examining an AFF file to validate its integrity or extract metadata, often after acquiring the file or before decrypting it with a passphrase; they choose it for its specific capabilities to verify hashes, list segments, and identify file structures, which are critical for forensic analysis.',
@@ -2120,8 +2120,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['http://foremost.sourceforge.net/', 'https://www.kali.org/tools/foremost/'],
     },
     'frida': {
-        'scenario': 'An analyst reaches for Frida when bypassing root detection in Android apps, setting up the Frida server via adb push and running frida-ls-devices to confirm device connections before hooking into methods like onCreate(); they prefer it over similar tools because newer versions avoid bugs that prevent hooking early lifecycle functions, ensuring reliable interception of critical app behaviors.',
-        'sources': ['https://bananamafia.dev/post/r2frida-1/', 'https://github.com/dweinstein/awesome-frida'],
+        'scenario': "An analyst reaches for Frida when dynamically modifying a running mobile application's behavior, such as bypassing SSL pinning or decrypting obfuscated data, often running commands like `frida -U -f` or `frida -U -p` before injecting scripts; they choose it over similar tools because it allows real-time interaction and modification of processes without requiring source code access.",
+        'sources': ['https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/'],
     },
     'frida-trace': {
         'scenario': "An analyst reaches for frida-trace when tracing and modifying application behavior dynamically, such as during reverse engineering or security testing, often after copying frida-server to a remote device and before interacting with the target app's methods. They may choose it over similar tools because it allows real-time modification of method outputs and provides detailed tracing capabilities, as demonstrated by altering return values or inspecting method parameters during execution.",
