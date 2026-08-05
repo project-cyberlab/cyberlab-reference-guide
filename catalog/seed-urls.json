@@ -482,5 +482,15 @@
   ],
   "rsakeyfind": [
     "https://www.jaiminton.com/cheatsheet/DFIR/"
+  ],
+  "capa": [
+    "https://github.com/mandiant/capa",
+    "https://mandiant.github.io/capa/",
+    "https://stillu.cc/infosec/2020/07/19/closer-look-at-capa/",
+    "https://www.govindhtech.com/flare-capa-identifies-malware-capabilities/"
+  ],
+  "floss": [
+    "https://github.com/FireEye/flare-floss",
+    "https://pypi.org/project/flare-floss/"
   ]
 }
