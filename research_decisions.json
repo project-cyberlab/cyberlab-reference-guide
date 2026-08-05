@@ -458,5 +458,9 @@
   "foremost -v": {
     "verdict": "reject",
     "why": "'detailed logging of all messages to the screen' is the flag restated; it never says when the extra output changes what you do"
+  },
+  "upx": {
+    "verdict": "accept",
+    "why": "names the recognisable trigger -- .UPX0/.UPX1 section names -- and the one-command action that follows, which is exactly what a junior analyst needs before deciding whether to unpack manually"
   }
 }

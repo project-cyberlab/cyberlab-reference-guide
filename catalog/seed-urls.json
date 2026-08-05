@@ -280,5 +280,81 @@
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "ewfverify": [
+    "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
+    "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
+    "https://forensics.wiki/libewf/",
+    "https://hanifi.ca/tools/forensics/ewf-tools/",
+    "https://kb.offsec.nl/tools/forensics/ewf-tools/",
+    "https://www.mankier.com/1/ewfverify"
+  ],
+  "ewfexport": [
+    "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
+    "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
+    "https://forensics.wiki/libewf/",
+    "https://hanifi.ca/tools/forensics/ewf-tools/",
+    "https://kb.offsec.nl/tools/forensics/ewf-tools/"
+  ],
+  "ewfinfo": [
+    "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
+    "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
+    "https://forensics.wiki/libewf/",
+    "https://hanifi.ca/tools/forensics/ewf-tools/",
+    "https://kb.offsec.nl/tools/forensics/ewf-tools/"
+  ],
+  "ewfmount": [
+    "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
+    "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
+    "https://forensics.wiki/libewf/",
+    "https://hanifi.ca/tools/forensics/ewf-tools/",
+    "https://kb.offsec.nl/tools/forensics/ewf-tools/"
+  ],
+  "ewfacquire": [
+    "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
+    "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
+    "https://forensics.wiki/libewf/",
+    "https://hanifi.ca/tools/forensics/ewf-tools/",
+    "https://kb.offsec.nl/tools/forensics/ewf-tools/"
+  ],
+  "affcat": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affconvert": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affinfo": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affcompare": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affcrypto": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affstats": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affverify": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affsegment": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affix": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
+  ],
+  "affsign": [
+    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
+    "https://www.kali.org/tools/afflib/"
   ]
 }

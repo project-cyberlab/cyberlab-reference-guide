@@ -2159,6 +2159,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for TestDisk when recovering lost partitions or repairing filesystems on physical devices, running it with administrative or root privileges after ensuring access rights; they choose it over similar tools because it specifically handles partition recovery and filesystem repair, unlike PhotoRec, which focuses on file recovery from unallocated space.',
         'sources': ['https://www.cgsecurity.org/wiki/PhotoRec', 'https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step'],
     },
+    'upx': {
+        'scenario': 'An analyst reaches for UPX when encountering a sample with .UPX0/.UPX1 sections, running `upx -d` to quickly unpack it before analyzing the decrypted code, as it is straightforward and automated compared to manual unpacking or tools like Unipacker that require emulation for more complex packers.',
+        'sources': ['https://inventivehq.com/blog/malware-unpacking-guide'],
+    },
     'vol': {
         'scenario': "An analyst reaches for vol when examining memory dumps to detect malicious activity, such as unusual processes or command-line arguments; they may first run plugins like `windows.pslist` or `windows.pstree` to establish context before using `windows.cmdline` or `windows.handles` for deeper analysis, as the tool's use of symbol tables ensures accurate parsing of memory structures over guesswork.",
         'sources': ['https://hivesecurity.gitlab.io/blog/memory-forensics-volatility-attack-detect/', 'https://www.dfirhive.com/post/windows-memory-and-process-analysis-volatility3-walkthrough'],
