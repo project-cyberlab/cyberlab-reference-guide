@@ -135,5 +135,83 @@
   ],
   "mactime": [
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html"
+  ],
+  "regfexport": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libregf",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "regfinfo": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libregf",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "regfmount": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libregf",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "esedbexport": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libesedb",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "esedbinfo": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libesedb",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "evtxexport": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libevtx",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "evtxinfo": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://github.com/libyal/libevtx",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+  ],
+  "pffexport": [
+    "https://github.com/libyal/libpff"
+  ],
+  "pffinfo": [
+    "https://github.com/libyal/libpff"
+  ],
+  "regipy-dump": [
+    "https://github.com/mkorman90/regipy",
+    "https://medium.com/dfir-dudes/regipy-automating-registry-forensics-with-python-b170a1e2b474"
+  ],
+  "regipy-diff": [
+    "https://github.com/mkorman90/regipy",
+    "https://medium.com/dfir-dudes/regipy-automating-registry-forensics-with-python-b170a1e2b474"
+  ],
+  "regipy-plugins-run": [
+    "https://github.com/mkorman90/regipy",
+    "https://medium.com/dfir-dudes/regipy-automating-registry-forensics-with-python-b170a1e2b474"
+  ],
+  "regipy-plugins-list": [
+    "https://github.com/mkorman90/regipy"
+  ],
+  "regipy-parse-header": [
+    "https://github.com/mkorman90/regipy"
+  ],
+  "reglookup": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/",
+    "https://www.kali.org/tools/reglookup/"
+  ],
+  "rip.pl": [
+    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
+    "https://miloserdov.org/?p=5448",
+    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/",
+    "https://www.kali.org/tools/regripper/"
   ]
 }

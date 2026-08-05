@@ -430,5 +430,13 @@
   "binwalk -e": {
     "verdict": "accept",
     "why": "automatic extraction of embedded filesystems is the whole point of binwalk on a firmware dump"
+  },
+  "rax2": {
+    "verdict": "accept",
+    "why": "names the position (after pulling raw data out of a memory dump or capture, before reading obfuscated shellcode) and the conversions that matter"
+  },
+  "numbers-to-string.py": {
+    "verdict": "accept",
+    "why": "the trigger is right: numeric sequences pulled from a file that need turning back into text, which is how malicious scripts hide strings from a search"
   }
 }

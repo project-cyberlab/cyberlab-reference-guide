@@ -2107,6 +2107,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for nping when they need to send custom network packets for testing or forensic analysis, such as probing specific ports or crafting ICMP requests, often after identifying a target range or before verifying network behavior. They may choose it over similar tools due to its detailed target specification options, support for CIDR and octet ranges, and flexibility in packet crafting, as demonstrated in the examples and documentation.',
         'sources': ['https://nmap.org/book/nping-man.html'],
     },
+    'numbers-to-string.py': {
+        'scenario': 'An analyst reaches for numbers-to-string.py when processing files containing numeric sequences that need conversion to readable strings, such as ASCII or custom-encoded data; they may run it after extracting numbers from a file or before analyzing the resulting text, and they choose it over similar tools due to its support for custom translation tables, statistical analysis, and binary output handling as described in the documentation.',
+        'sources': ['https://github.com/DidierStevens/DidierStevensSuite/blob/master/numbers-to-string.py'],
+    },
     'objdump': {
         'scenario': 'An analyst reaches for objdump when examining raw binary files like BIOS dumps or ELF binaries to inspect assembly code, section headers, or memory layouts, often after capturing memory or firmware data; they may use it alongside tools like ndisasm or Ghidra for deeper analysis, preferring objdump for its integration with ELF metadata and ability to display low-level code structures.',
         'sources': ['https://can-ozkan.medium.com/learning-elf-the-foundation-of-linux-binary-analysis-c4f1f8df83e4', 'https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md', 'https://hacktricks.wiki/en/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.html'],
@@ -2138,6 +2142,10 @@ RESEARCHED: dict[str, dict] = {
     'rahash2': {
         'scenario': 'An analyst reaches for rahash2 when examining filesystems to identify modified sections of large files, as it hashes each block individually, allowing comparison against known hashes to pinpoint changes. They may run it after obtaining a file from disk imaging or before performing deeper analysis to verify data integrity. They choose it over other hash tools because its block-based approach enables targeted modification detection without processing the entire file at once.',
         'sources': ['https://gist.github.com/52617365/95baed8b731c3effdad04b1d6ccf4831', 'https://www.sentinelone.com/labs/automating-string-decryption-and-other-reverse-engineering-tasks-in-radare2-with-r2pipe/'],
+    },
+    'rax2': {
+        'scenario': 'An analyst reaches for rax2 when converting between numeric bases, decoding base64, or handling hex/IP conversions, often after extracting raw data from memory dumps or network traffic; they might run it before analyzing obfuscated shellcode or after extracting strings from a binary, preferring it over similar tools for its specific flags like -D, -i, and -C that streamline forensic tasks.',
+        'sources': ['https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main/reference/decode-deobfuscate/rax2.md'],
     },
     'readelf': {
         'scenario': "An analyst reaches for readelf when examining stripped binaries or analyzing ELF headers to identify architecture, sections, or security features like CET; they may run it after using strings or before deeper disassembly to understand the binary's structure and protections, preferring it over similar tools for its precise ELF-specific insights into headers, sections, and dynamic symbols.",
