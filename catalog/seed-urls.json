@@ -183,5 +183,13 @@
   ],
   "rip.pl": [
     "https://github.com/keydet89/RegRipper3.0"
+  ],
+  "upx": [
+    "https://inventivehq.com/blog/malware-unpacking-guide",
+    "https://malware.news/t/the-basics-of-packed-malware-manually-unpacking-upx-executables/35961",
+    "https://medium.com/@ankyrockstar26/unpacking-a-upx-malware-dca2cdd1a8de"
+  ],
+  "strings": [
+    "https://inventivehq.com/blog/malware-unpacking-guide"
   ]
 }
