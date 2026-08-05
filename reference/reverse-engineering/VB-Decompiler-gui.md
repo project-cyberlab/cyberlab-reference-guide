@@ -14,6 +14,16 @@
 
 Recover source-level structure from Visual Basic executables. P-code binaries decompile close to the original; native-compiled ones yield disassembly with the VB runtime calls identified.
 
+## When you'd reach for this
+
+Reach for VB Decompiler when the sample is **Visual Basic 6** or **VB.NET / C#**. VB6 is the case that catches people out, because it compiles two different ways and what comes back depends entirely on which: P-code recovers a large share of the original logic, while native-compiled VB6 leaves you much closer to ordinary disassembly. Establish which you have before judging the tool.
+
+Expect a partial reconstruction rather than compilable source. The vendor quotes roughly 85% logic restoration for P-code and around 95% for .NET. That is enough to read intent, which is usually the question, and not enough to rebuild the program.
+
+For .NET specifically, dnSpy is the better first stop because of its debugger. VB Decompiler earns its place on the VB6 samples dnSpy cannot open at all.
+
+**Sources:** <https://www.vb-decompiler.org/products.htm> · <https://www.vb-decompiler.org/faq.htm>
+
 ## Controls
 
 The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/VB-Decompiler/VB-Decompiler.tree.txt`](../../capture/gui/VB-Decompiler/VB-Decompiler.tree.txt).

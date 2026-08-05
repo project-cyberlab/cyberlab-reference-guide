@@ -13,6 +13,14 @@
 
 Reconstruct Delphi programs: identify the runtime library, recover form definitions and name the event handlers. Delphi binaries are mostly runtime code, so separating the author's few hundred lines from the library's tens of thousands is the difference between a tractable job and an intractable one.
 
+## When you'd reach for this
+
+Reach for IDR when the sample is **Delphi**. Delphi binaries are large and mostly runtime library, so a general disassembler buries the author's few thousand lines inside hundreds of thousands of lines of framework code. IDR knows the runtime library and can tell the two apart, which is the difference between a tractable job and an intractable one.
+
+The form viewer is the reason to open it rather than a generic tool. Delphi stores its visual forms inside the binary together with the event handlers wired to each control, so you can go from *the button labelled Install* straight to the routine that runs when it is clicked. On a Delphi dropper that is often the shortest path to the payload.
+
+**Sources:** <https://gitbook.seguranca-informatica.pt/tools-1/decompilers>
+
 ## Controls
 
 The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/idr/idr.tree.txt`](../../capture/gui/idr/idr.tree.txt).

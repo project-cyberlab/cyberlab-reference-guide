@@ -17,6 +17,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gui_scenarios import SCENARIOS as GUI_SCENARIOS  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 CAP = ROOT / "capture" / "gui"
 REF = ROOT / "reference"
@@ -447,6 +450,22 @@ def build(tool: str, data: dict, cap: str, blurb: str, has_png: bool) -> str:
               "[Kit tool list](../../catalog/KIT-TOOLS.md)", ""]
 
     L += ["## Purpose", "", blurb + ".", ""]
+
+    # "When you'd reach for this" -- the same section the CLI pages carry, for
+    # the same reason. A control inventory tells a reader how to drive the
+    # window; it never tells them why this window rather than the one beside
+    # it, and for the decompilers that comparison IS the decision.
+    #
+    # Hand-written in scripts/gui_scenarios.py, cited, and kept out of this
+    # file so the boundary between captured fact and human judgement stays
+    # visible.
+    rec = GUI_SCENARIOS.get(tool)
+    if rec:
+        L += ["## When you'd reach for this", "", rec["scenario"], ""]
+        srcs = rec.get("sources") or []
+        if srcs:
+            L.append("**Sources:** " + " · ".join(f"<{u}>" for u in srcs[:3]))
+            L.append("")
 
     if has_png:
         L += ["## Window", "",

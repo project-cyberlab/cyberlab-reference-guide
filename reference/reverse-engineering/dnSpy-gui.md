@@ -14,6 +14,16 @@
 
 Decompile, browse and debug .NET assemblies. It reconstructs readable C# from IL, so a managed sample is usually faster to understand here than in a disassembler, and it can attach a debugger to the running assembly when static reading stalls.
 
+## When you'd reach for this
+
+Reach for dnSpy when the sample is **managed .NET** — a PE carrying a CLR header, which `die` or CFF Explorer reports in seconds. It decompiles IL back to near-original C#, so a .NET dropper often reads almost like the developer's source rather than like disassembly.
+
+What makes it beat a static decompiler on live malware is the built-in debugger. You can attach to a running process, set breakpoints and step through code that only exists after unpacking, and you can edit an assembly and save it back — which is how an anti-debug check or a licence test gets neutered so the next stage will run.
+
+It is the wrong tool for unmanaged native code. No CLR header means nothing here applies, and you want a native disassembler instead.
+
+**Sources:** <https://dnspy.org/> · <https://www.cybereason.com/blog/research/.net-malware-dropper>
+
 ## Controls
 
 The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/dnSpy/dnSpy.tree.txt`](../../capture/gui/dnSpy/dnSpy.tree.txt).

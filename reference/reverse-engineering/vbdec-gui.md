@@ -13,6 +13,14 @@
 
 Decompile VB5 and VB6 binaries, recovering forms, controls and event handlers. Those names usually survive compilation and describe what the program was written to do.
 
+## When you'd reach for this
+
+The command-line companion for the same Visual Basic targets as VB Decompiler. Reach for it when you are processing a set of samples rather than opening one, or scripting extraction into a pipeline; use the window when you are reading a single sample and want to navigate it.
+
+The format caveat is identical: VB6 P-code reconstructs well, native-compiled VB6 much less so, and knowing which you have is the first question rather than an afterthought.
+
+**Sources:** <https://www.vb-decompiler.org/products.htm>
+
 ## Controls
 
 The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/vbdec/vbdec.tree.txt`](../../capture/gui/vbdec/vbdec.tree.txt).

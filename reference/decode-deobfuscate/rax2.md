@@ -15,6 +15,12 @@
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
 
+## When you'd reach for this
+
+An analyst reaches for rax2 when converting between numeric bases, decoding base64, or handling hex/IP conversions, often after extracting raw data from memory dumps or network traffic; they might run it before analyzing obfuscated shellcode or after extracting strings from a binary, preferring it over similar tools for its specific flags like -D, -i, and -C that streamline forensic tasks.
+
+**Sources:** <https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main/reference/decode-deobfuscate/rax2.md>
+
 ## Synopsis
 
 ```
