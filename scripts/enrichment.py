@@ -2088,8 +2088,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://www.kali.org/tools/dc3dd/'],
     },
     'dcfldd': {
-        'scenario': 'An analyst uses dcfldd when creating a verified forensic copy of a disk drive for investigation, ensuring write protection is enabled before imaging and verifying the image with hashing tools afterward, as it provides enhanced forensic features like progress tracking and error handling compared to standard dd or dc3dd.',
-        'sources': ['https://dohost.us/index.php/2025/11/01/creating-a-forensic-image-of-the-disk-drive-dd-dc3dd-dcfldd/', 'https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/acquiring-disk-image-with-dd-and-dcfldd/SKILL.md'],
+        'scenario': "An analyst reaches for dcfldd when imaging a drive to create a forensic copy, ensuring the source device's permissions are restricted with chmod before use to prevent accidental writes; they run it with hash=md5,sha1 and hashlog to verify data integrity, preferring it over dd due to its safety features like multiple output paths and explicit write-blocking warnings.",
+        'sources': ['https://dfir.blog/imaging-using-dcfldd/', 'https://www.mankier.com/1/dcfldd'],
     },
     'editcap': {
         'scenario': "An analyst reaches for editcap when they need to remove duplicate packets or split a capture file into smaller segments, often running capinfos first to assess the file's structure, as it directly handles format editing and packet manipulation tasks that other tools like mergecap or tshark do not explicitly address.",
