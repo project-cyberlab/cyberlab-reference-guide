@@ -398,5 +398,80 @@
     "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
     "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
     "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+  ],
+  "oledump.py": [
+    "https://blog.didierstevens.com/programs/oledump-py/",
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "pcodedmp": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://exploitreversing.com/2021/11/02/malicious-document-analysis-example-1/",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "msoffcrypto-tool": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "msoffcrypto-crack.py": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "base64dump.py": [
+    "https://blog.didierstevens.com/programs/base64dump-py/",
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "olefile": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "ezhexviewer": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "olevba": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "oleid": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "rtfobj": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "rtfdump.py": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+  ],
+  "emldump.py": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://isc.sans.edu/diary/24498",
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
   ]
 }
