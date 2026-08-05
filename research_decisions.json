@@ -502,5 +502,13 @@
   "rax2": {
     "verdict": "reject",
     "why": "Published on a single citation: this guide's own rax2.md. Search had indexed the repo, so the loop read its own earlier output back as evidence. Nothing external is learned that way. project-cyberlab is now in DENY; rax2 needs researching again from outside sources."
+  },
+  "mraptor -r": {
+    "verdict": "accept",
+    "why": "Correct and the right scenario for it. mraptor -r finds files recursively in subdirectories, and the case that matters is triaging a directory of collected samples in one pass rather than a file at a time. Grounded in the oletools wiki and the tool's own source, all three citations external."
+  },
+  "mraptor --zip": {
+    "verdict": "accept",
+    "why": "Accurate. --zip supplies the password for an archive, and the scenario is the everyday one: malware samples are routinely distributed in ZIPs with the password 'infected' precisely so they are not executed by accident, and mraptor has to be told it. Thin on stating that the flag carries the password, but the trigger is right and it is what the column asks for. Both citations external."
   }
 }

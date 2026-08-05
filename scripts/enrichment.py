@@ -2238,6 +2238,10 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'mmls': {
         '-o': "An analyst would use the -o flag when analyzing an embedded filesystem by specifying its sector offset, obtained from mmls output, to correctly reference files within a partition that isn't the primary boot volume.",
     },
+    'mraptor': {
+        '--zip': 'When an analyst needs to scan a file contained within a password-protected ZIP archive, such as "malicious_file.xls" with the password "infected".',
+        '-r': 'An analyst would use the -r flag when scanning multiple files across subdirectories to check for suspicious macro behaviors recursively.',
+    },
     'olevba': {
         '--decode': 'An analyst would use the --decode flag when examining a document to reveal obfuscated strings by displaying them in decoded form.',
         '--reveal': "An analyst would use the --reveal flag when examining a file to deobfuscate and display the macro source code's VBA strings in a readable format.",
