@@ -42,11 +42,11 @@ mergecap -w allineone.cap dbadsplit.pcap-00001 dbadsplit.pcap-00002
 
 ## Options
 
-All 7 options parsed from the captured help text. The final column is filled in by review.
+All 7 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | — | concatenate rather than merge files. default is to merge based on frame timestamps. |  |
+| `-a` | — | concatenate rather than merge files. default is to merge based on frame timestamps. | An analyst would use the -a flag when they need to concatenate input files in the order they are provided, without reordering packets based on timestamps. |
 | `-s` | snaplen | truncate packets to <snaplen> bytes of data. |  |
 | `-h` | — | display this help and exit. |  |
 | `--help` | — | display this help and exit. |  |

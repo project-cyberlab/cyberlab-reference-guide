@@ -2091,6 +2091,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst uses dcfldd when creating a verified forensic copy of a disk drive for investigation, ensuring write protection is enabled before imaging and verifying the image with hashing tools afterward, as it provides enhanced forensic features like progress tracking and error handling compared to standard dd or dc3dd.',
         'sources': ['https://dohost.us/index.php/2025/11/01/creating-a-forensic-image-of-the-disk-drive-dd-dc3dd-dcfldd/', 'https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/acquiring-disk-image-with-dd-and-dcfldd/SKILL.md'],
     },
+    'editcap': {
+        'scenario': "An analyst reaches for editcap when they need to remove duplicate packets or split a capture file into smaller segments, often running capinfos first to assess the file's structure, as it directly handles format editing and packet manipulation tasks that other tools like mergecap or tshark do not explicitly address.",
+        'sources': ['https://docsislab.wordpress.com/packet-capture/wireshark-command-line/', 'https://wiki.wireshark.org/Tools'],
+    },
     'evtxexport': {
         'scenario': 'An analyst reaches for evtxexport when exporting event records from an XML Event Log (.evtx) file, often after mounting a volume or image to access logs, as it supports exporting full event messages requiring SYSTEM and SOFTWARE registry files; they may use it after mounting a QEMU VM image and before analyzing event data in text or XML format, preferring it over similar tools for its ability to handle multi-language resources and full message exports.',
         'sources': ['https://github.com/libyal/libevtx/wiki/Tools'],
@@ -2296,6 +2300,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '--json': 'An analyst would use the --json flag when they need to output search or analysis results in a structured, machine-readable JSON format for further processing or integration with other tools.',
         '--mapping': 'An analyst would use the --mapping flag when applying third-party detection rules to event logs, as the mapping file specifies which log fields to use for rule matching.',
         '-i': 'An analyst would use the -i flag when searching for a string in event logs where the case of the letters in the pattern may vary, such as when looking for "mimikatz" in logs where it might appear as "MIMIKATZ" or "mimikatz".',
+        '-r': 'An analyst would use the -r flag when they need to include additional custom or third-party rules alongside Sigma rules to enhance detection logic during a hunt through event logs.',
         '-s': 'An analyst would use the -s flag when incorporating Sigma rules into the hunting process to apply third-party detection logic during log analysis.',
         '-t': 'An analyst would use the -t flag when searching for specific event log entries by defining precise tau expressions, such as identifying events by their System EventID in EVTX files.',
     },
@@ -2306,6 +2311,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '--recursive': 'An analyst would use the --recursive flag when scanning a directory and needing to include all subdirectories to ensure every file is checked.',
     },
     'dumpcap': {
+        '--autostop': 'An analyst would use the --autostop flag when they need to automatically halt packet capture after a specified duration, upon reaching a certain number of files, or when a capture file reaches a defined size limit.',
         '-w': 'An analyst would use the -w flag when capturing network traffic to disk for later analysis, particularly when managing large volumes of data through ring buffers, size-based file rotation, or time-based segmentation to ensure efficient storage and focused investigation.',
     },
     'evtxexport': {
@@ -2368,6 +2374,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'mergecap': {
         '-F': 'An analyst would use the -F flag when they need to specify a particular output format for the merged capture file, such as when the default pcapng format is not suitable or when compatibility with specific tools requires a different format.',
+        '-a': 'An analyst would use the -a flag when they need to concatenate input files in the order they are provided, without reordering packets based on timestamps.',
         '-w': 'An analyst would use the -w flag with mergecap when they need to aggregate and consolidate multiple packet capture files into a single output file for further analysis or sharing with a colleague.',
     },
     'mmls': {
@@ -2397,6 +2404,13 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'reordercap': {
         '-n': 'An analyst would use the -n flag when verifying if a pcap file is already in chronological order to avoid unnecessary processing and output file creation.',
+    },
+    'rip.pl': {
+        '-c': 'An analyst would use the -c flag when exporting the list of available plugins to a CSV file for reference purposes.',
+        '-f': 'An analyst would use the -f flag when specifying the type of registry hive file being parsed, such as system, sam, or security, to ensure RegRipper processes the correct hive structure.',
+        '-l': 'An analyst would use the -l flag when needing to list all available plugins to determine which ones can be applied to a specific registry hive during an investigation.',
+        '-p': "An analyst would use the -p flag when extracting specific registry data, such as details about folders viewed through the 'shellbags' plugin, from a Registry file like UsrClass.dat.",
+        '-r': 'An analyst would use the -r flag when processing a specific registry hive file to extract and analyze data during a forensic investigation.',
     },
     'sigtool': {
         '--hex-dump': "An analyst would use the --hex-dump flag when needing to generate a hexadecimal representation of a file's contents for detailed forensic examination or signature creation.",

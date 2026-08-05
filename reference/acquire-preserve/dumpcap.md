@@ -22,7 +22,7 @@ dumpcap [options] ...
 
 ## Options
 
-All 48 options parsed from the captured help text; 19 reviewed with usage guidance.
+All 48 options parsed from the captured help text; 20 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -51,7 +51,7 @@ All 48 options parsed from the captured help text; 19 reviewed with usage guidan
 | `-M` | — | for -D, -L, and -S, produce machine-readable output | Machine-readable output for `-D`, `-L` and `-S`. |
 | `-c` | packet count | stop after n packets (def: infinite) | Stop after N packets. |
 | `-a` | autostop cond | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM kB files:NUM - stop after NUM files packets:NUM - stop after NUM packets | Autostop condition — duration, filesize or files. |
-| `--autostop` | autostop cond | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM kB files:NUM - stop after NUM files packets:NUM - stop after NUM packets | Autostop condition — duration, filesize or files. |
+| `--autostop` | autostop cond | duration:NUM - stop after NUM seconds filesize:NUM - stop this file after NUM kB files:NUM - stop after NUM files packets:NUM - stop after NUM packets | An analyst would use the --autostop flag when they need to automatically halt packet capture after a specified duration, upon reaching a certain number of files, or when a capture file reaches a defined size limit. |
 | `-w` | filename | name of file to save (def: tempfile) | Output file. Without it, dumpcap writes to a temporary file and tells you where, which is rarely what you meant. |
 | `-g` | — | enable group read access on the output file(s) |  |
 | `-b` | ringbuffer opt | duration:NUM - switch to next file after NUM secs filesize:NUM - switch to next file after NUM kB files:NUM - ringbuffer: replace after NUM files packets:NUM - ringbuffer: replace after NUM packets in | Ring buffer: roll to a new file on duration, filesize or count. The difference between a capture that runs overnight and one that fills the disk at 3am. |

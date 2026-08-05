@@ -842,5 +842,49 @@
   "olebrowse": {
     "verdict": "accept",
     "why": "Reviewed in batch: states a concrete trigger, matches the flag captured from the real binary, and is grounded in the cited external sources. Flags spot-checked against capture_flags for evtxexport, capinfos, chainsaw, RECmd and ssdeep, all of which exist as documented."
+  },
+  "rip.pl -r": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "rip.pl -l": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "rip.pl -c": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "rip.pl -p": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "rip.pl -f": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "volatility3": {
+    "verdict": "reject",
+    "why": "Anchors the scenario on SETUP rather than on an investigative trigger. An analyst does not reach for this tool 'after setting up a virtual environment' or 'after cloning the Sigma rules repository' -- those are things you do once, and the column asks what is true about the CASE that makes you open this tool. Installation belongs on the page's install line, not in the when column. Re-research for the analytic trigger."
+  },
+  "editcap": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "mergecap -a": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "dumpcap --autostop": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "chainsaw": {
+    "verdict": "reject",
+    "why": "Anchors the scenario on SETUP rather than on an investigative trigger. An analyst does not reach for this tool 'after setting up a virtual environment' or 'after cloning the Sigma rules repository' -- those are things you do once, and the column asks what is true about the CASE that makes you open this tool. Installation belongs on the page's install line, not in the when column. Re-research for the analytic trigger."
+  },
+  "chainsaw -r": {
+    "verdict": "accept",
+    "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
   }
 }

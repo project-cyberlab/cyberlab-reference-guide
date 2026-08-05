@@ -15,6 +15,12 @@
 
 Cut, split, deduplicate and convert capture files — the tool that makes an unmanageable pcap workable before analysis starts.
 
+## When you'd reach for this
+
+An analyst reaches for editcap when they need to remove duplicate packets or split a capture file into smaller segments, often running capinfos first to assess the file's structure, as it directly handles format editing and packet manipulation tasks that other tools like mergecap or tshark do not explicitly address.
+
+**Sources:** <https://docsislab.wordpress.com/packet-capture/wireshark-command-line/> · <https://wiki.wireshark.org/Tools>
+
 ## Synopsis
 
 ```
