@@ -2021,7 +2021,7 @@ RESEARCHED: dict[str, dict] = {
     },
     'aeskeyfind': {
         'scenario': 'An analyst reaches for aeskeyfind when examining memory dumps or virtual machine snapshots to recover AES-128 keys, especially in cases where memory decay or corrupted key schedules may be present; they may pre-process dumps to filter irrelevant data and post-process results by validating discovered keys against known encryption usage, preferring it over similar tools due to its ability to handle reversed key schedules, InvMixColumn pre-applied entries, and entropy-based filtering of non-key blocks.',
-        'sources': ['https://github.com/SalpSec/aeskeyfind', 'https://github.com/makomk/aeskeyfind', 'https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main/reference/memory-forensics/aeskeyfind.md'],
+        'sources': ['https://github.com/SalpSec/aeskeyfind', 'https://github.com/makomk/aeskeyfind', 'https://www.siberoloji.com/aeskeyfind-kali-linux-advanced-memory-forensics-aes-key-recovery/'],
     },
     'affinfo': {
         'scenario': 'An analyst reaches for affinfo when examining an AFF file to validate its integrity or extract metadata, often after acquiring the file or before decrypting it with a passphrase; they choose it for its specific capabilities to verify hashes, list segments, and identify file structures, which are critical for forensic analysis.',
@@ -2143,10 +2143,6 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for rahash2 when examining filesystems to identify modified sections of large files, as it hashes each block individually, allowing comparison against known hashes to pinpoint changes. They may run it after obtaining a file from disk imaging or before performing deeper analysis to verify data integrity. They choose it over other hash tools because its block-based approach enables targeted modification detection without processing the entire file at once.',
         'sources': ['https://gist.github.com/52617365/95baed8b731c3effdad04b1d6ccf4831', 'https://www.sentinelone.com/labs/automating-string-decryption-and-other-reverse-engineering-tasks-in-radare2-with-r2pipe/'],
     },
-    'rax2': {
-        'scenario': 'An analyst reaches for rax2 when converting between numeric bases, decoding base64, or handling hex/IP conversions, often after extracting raw data from memory dumps or network traffic; they might run it before analyzing obfuscated shellcode or after extracting strings from a binary, preferring it over similar tools for its specific flags like -D, -i, and -C that streamline forensic tasks.',
-        'sources': ['https://github.com/project-cyberlab/cyberlab-reference-guide/blob/main/reference/decode-deobfuscate/rax2.md'],
-    },
     'readelf': {
         'scenario': "An analyst reaches for readelf when examining stripped binaries or analyzing ELF headers to identify architecture, sections, or security features like CET; they may run it after using strings or before deeper disassembly to understand the binary's structure and protections, preferring it over similar tools for its precise ELF-specific insights into headers, sections, and dynamic symbols.",
         'sources': ['https://hacktricks.wiki/en/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.html', 'https://intezer.com/blog/elf-malware-analysis-101-initial-analysis/', 'https://w00tsec.blogspot.com/2015/02/firmware-forensics-diffs-timelines-elfs.html'],
@@ -2199,6 +2195,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-f': 'An analyst would use the -f flag when specifying the file system type for non-Windows partitions, such as OpenBSD, to ensure fls correctly interprets the directory structure and file metadata.',
         '-m': "An analyst would use the '-m' flag with 'fls' when gathering allocated file data from each partition of a disk image to create a timeline, as described in the TSK documentation.",
         '-o': 'An analyst would use the -o flag when specifying the starting sector offset of a partition in a disk image to process that specific partition with fls.',
+        '-p': 'An analyst would use the -p flag with fls when generating timelines to list files with full paths.',
         '-r': "An analyst would use the '-r' flag with 'fls' when recursively gathering all files from a file system to create a comprehensive timeline of file system activity, as required for processing each partition in a disk image.",
         '-s': "An analyst would use the '-s' flag with 'fls' when adjusting the system's time skew to align timestamps in the body file with those of other servers.",
     },
@@ -2235,6 +2232,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'upx': {
         '-d': 'An analyst would use the `-d` flag with UPX when encountering a malware sample packed with UPX to automatically unpack it into its original executable form.',
+        '-o': 'An analyst would use the -o flag when unpacking a UPX-packed sample to specify the output file name for the unpacked executable, as demonstrated in the example command.',
     },
 }
 

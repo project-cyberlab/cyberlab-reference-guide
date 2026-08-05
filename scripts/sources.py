@@ -59,6 +59,13 @@ DENY = (
     "w3schools", "geeksforgeeks", "tutorialspoint", "javatpoint",
     "chegg.com", "coursehero", "scribd", "quizlet", "studocu",
     "linuxhint", "codegrepper", "stackoverflow.com/jobs",
+    # This guide itself. Search indexed the repo, so the loop began citing
+    # pages it had written as evidence for the next ones -- a claim
+    # corroborating itself one generation later, with the citation making it
+    # look sourced. Two notes shipped this way (rax2, aeskeyfind). The whole
+    # design rests on retrieval from outside, and nothing external is
+    # learned by reading your own output.
+    "project-cyberlab", "cyberlab-reference-guide",
 )
 
 
@@ -394,6 +401,73 @@ def passages_using(text: str, token: str, window: int = 700,
         scored.append((score_passage(chunk), chunk))
     scored.sort(key=lambda p: -p[0])
     return scored[:limit]
+
+
+# A synopsis line is a binary name followed by its options: "scalpel [-b]",
+# "fls -r -p -o 2048". Whatever binary opens the line owns every option after
+# it until the next one does.
+_SYNOPSIS = re.compile(r"(?<![\w./-])([a-z][a-z0-9_.+-]{1,20})\s+(?=\[?-[A-Za-z])")
+
+
+# Tools whose catalogue name is not the name on the command line. Kept
+# explicit rather than inferred: regripper and rip are the same program and
+# no string comparison will ever say so, while foremost and forensics are
+# unrelated and a fuzzy match would happily pair them.
+ALIASES = {"rip": "regripper", "ripxp": "regripper",
+           "vol": "volatility", "vol.py": "volatility",
+           "tshark": "tshark", "bulk_extractor": "bulk-extractor"}
+
+
+def _binary(name: str) -> str:
+    """A tool's name as it appears on a command line, canonicalised.
+
+    pdf-parser is documented, invoked and synopsised as pdf-parser.py, and
+    regripper as rip.pl. Comparing raw strings made a tool foreign to itself
+    and flagged its own man page as somebody else's.
+    """
+    n = re.sub(r"\.(?:py|pl|exe|sh|rb)$", "", name.lower())
+    return ALIASES.get(n, n)
+
+
+def option_owner(passage: str, flag: str, tool: str,
+                 known: set[str], reach: int = 400) -> str | None:
+    """The OTHER binary whose synopsis governs this flag here, if any.
+
+    The proximity check in passages_using asks whether the tool is mentioned
+    nearby, and that is not the same question as whether the tool owns the
+    option being described. scalpel is a fork of foremost and its man page
+    names foremost in the prose, so a scalpel option block passes the
+    proximity test on a foremost query -- and the loop duly reported that
+    `foremost -b` carves files whose footers are missing. That is scalpel's
+    -b. foremost's -b sets the block size. Both notes were fluent, grounded
+    in a real passage, and about the wrong program.
+
+    misattributed() cannot see this, because the note never names scalpel.
+    It borrows the semantics and drops the attribution, which is precisely
+    the shape that is hardest to catch by reading the note alone.
+
+    So this looks at the evidence instead of the claim: for each place the
+    flag appears, find the nearest preceding synopsis and ask who it belongs
+    to. If the subject tool owns none of them and some other tool owns one,
+    the passage is documenting somebody else's option.
+
+    Returns None when no synopsis governs the flag at all -- absence of
+    ownership is not evidence of foreign ownership, and treating it as such
+    would reject every ordinary prose mention.
+    """
+    owners: list[str] = []
+    subject = _binary(tool)
+    bare = {_binary(k) for k in known}
+    for m in re.finditer(re.escape(flag) + r"(?![\w-])", passage):
+        window = passage[max(0, m.start() - reach):m.start()]
+        for s in reversed(list(_SYNOPSIS.finditer(window))):
+            name = _binary(s.group(1))
+            if name == subject:
+                return None          # the tool owns an occurrence: keep it
+            if name in bare:
+                owners.append(name)
+                break
+    return owners[0] if owners else None
 
 
 # Pages that are certainly worth reading for a tool, regardless of what any

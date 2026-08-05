@@ -398,6 +398,36 @@ def gate(note: str, evidence: list[dict], tool: str,
     if bad:
         return False, f"attributes {flag} to {bad}, not to {tool}"
 
+    # ...and the quieter form of the same fault, where the note borrows
+    # another tool's option semantics without ever naming it.
+    #
+    # scalpel is a fork of foremost and names it in its own man page, so a
+    # scalpel option block passes the proximity test on a foremost query.
+    # The loop reported that `foremost -b` carves files whose footers are
+    # missing -- true of scalpel's -b; foremost's -b sets the block size.
+    # Nothing in the note gives that away, so the check has to look at where
+    # the evidence came from rather than at what the note says.
+    #
+    # Two outcomes, because the two failures are different. A flag the tool
+    # does not have is a fabrication and is rejected. A flag it does have,
+    # documented here from someone else's synopsis, is a note that may well
+    # be right and cannot be confirmed from this evidence -- that is a human
+    # judgement, so it goes to review. Replayed over 154 recorded flag
+    # records this fires 11 times, reproducing both hand-caught
+    # misattributions (mactime -m, ils -m, each lifted from an fls synopsis)
+    # and costing one accepted note, which it sends to review rather than
+    # discards.
+    if flag and evidence:
+        owners = [sources.option_owner(e["passage"], flag, tool, _known_tools())
+                  for e in evidence]
+        foreign = next((o for o in owners if o), None)
+        if foreign and not any(o is None for o in owners):
+            if real_flags and flag not in real_flags:
+                return False, (f"every passage documents {flag} under "
+                               f"{foreign}'s synopsis, and {tool} has no {flag}")
+            return False, ("NEEDS-REVIEW: evidence for " + flag + " comes from "
+                           f"{foreign}'s synopsis, not {tool}'s")
+
     # An ordering claim is a claim, not prose. Two of the first six notes
     # this loop produced had the workflow backwards while passing every
     # other check.

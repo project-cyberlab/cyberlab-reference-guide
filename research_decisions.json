@@ -431,10 +431,6 @@
     "verdict": "accept",
     "why": "automatic extraction of embedded filesystems is the whole point of binwalk on a firmware dump"
   },
-  "rax2": {
-    "verdict": "accept",
-    "why": "names the position (after pulling raw data out of a memory dump or capture, before reading obfuscated shellcode) and the conversions that matter"
-  },
   "numbers-to-string.py": {
     "verdict": "accept",
     "why": "the trigger is right: numeric sequences pulled from a file that need turning back into text, which is how malicious scripts hide strings from a search"
@@ -486,5 +482,25 @@
   "fls -l": {
     "verdict": "reject",
     "why": "credits -l with 'including deleted ones', which is not what the flag does -- fls lists deleted entries by default and -l only adds the metadata columns. Ends with 'as shown in the example command and script', which points at the source instead of saying anything"
+  },
+  "foremost -b": {
+    "verdict": "reject",
+    "why": "scalpel's -b, not foremost's. The passage sits under a 'scalpel [-b] [-c <config file>]' synopsis; scalpel -b carves files whose footers are missing, while foremost -b sets the block size (default 512). The note never names scalpel, so misattributed() could not see it -- this is the case option_owner() was written for."
+  },
+  "foremost -s": {
+    "verdict": "reject",
+    "why": "Same contamination, subtler. scalpel -s skips BYTES; foremost -s skips BLOCKS. The note said bytes, which is scalpel's semantics read off scalpel's option block."
+  },
+  "upx -o": {
+    "verdict": "accept",
+    "why": "Correct and useful. upx -o names the output file when unpacking, which is the right habit: it keeps the packed original intact instead of overwriting the sample being analysed. Evidence shows the real invocation 'upx -d malware.exe -o unpacked.exe'."
+  },
+  "fls -p": {
+    "verdict": "accept",
+    "why": "Correct. fls -p prints full paths, which is what makes recursive output usable in a timeline rather than a tree of bare names. Evidence is a real fls invocation ('fls -r -p -o 2048'), governed by fls's own synopsis."
+  },
+  "rax2": {
+    "verdict": "reject",
+    "why": "Published on a single citation: this guide's own rax2.md. Search had indexed the repo, so the loop read its own earlier output back as evidence. Nothing external is learned that way. project-cyberlab is now in DENY; rax2 needs researching again from outside sources."
   }
 }
