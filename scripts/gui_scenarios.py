@@ -99,3 +99,8 @@ SCENARIOS: dict[str, dict] = {
         ],
     },
 }
+
+
+# The rest, split into a second file only to keep each readable.
+from gui_scenarios_more import SCENARIOS as _MORE  # noqa: E402
+SCENARIOS.update(_MORE)

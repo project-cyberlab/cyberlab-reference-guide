@@ -13,6 +13,16 @@
 
 Enumerate the effective permissions across a directory tree or registry branch and show them in one list. Sorting by permission surfaces the outlier — the world-writable path that does not belong.
 
+## When you'd reach for this
+
+Reach for AccessEnum when the question is *who can write where*. It walks a directory tree or registry branch and lists the effective permissions on each, which is the practical way to find a weak ACL without checking paths one at a time.
+
+Sorting by permission is the point: the outlier surfaces immediately - the world-writable directory under Program Files that lets an unprivileged user replace a binary a service runs as SYSTEM. That is a privilege-escalation path and a persistence mechanism at once, so it matters when hunting and when hardening.
+
+It reports what the permissions *are*. Whether they are wrong is your judgement, not the tool's.
+
+**Sources:** <https://learn.microsoft.com/en-us/sysinternals/downloads/accessenum>
+
 ## Controls
 
 The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/AccessEnum/AccessEnum.tree.txt`](../../capture/gui/AccessEnum/AccessEnum.tree.txt).

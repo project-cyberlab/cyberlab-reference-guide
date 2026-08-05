@@ -13,6 +13,14 @@
 
 Try cryptographic and encoding operations against a sample interactively: XOR, block ciphers, hashes and conversions, with entropy and pattern views to judge whether a result is plausible plaintext. Built for the guess-and-check work of recovering a malware configuration blob.
 
+## When you'd reach for this
+
+Reach for CryptoTester when you have a blob you believe is encoded or encrypted - a configuration block, a C2 address, part of a dropper - and you are working out how. It applies XOR, block ciphers, hashes and conversions interactively and shows entropy alongside, so you can judge whether a candidate result is plausible plaintext rather than guessing.
+
+It is built for guess-and-check, which is the honest shape of this work: you rarely know the scheme in advance. Once you do, scripting the transform is faster and repeatable - this is the tool for the part before that.
+
+**Sources:** <https://www.nextron-systems.com/cryptotester/>
+
 ## Controls
 
 The parts of this window you will actually touch, read from the application's own accessibility tree rather than from a screenshot. The full node list is in [`capture/gui/CryptoTester/CryptoTester.tree.txt`](../../capture/gui/CryptoTester/CryptoTester.tree.txt).
