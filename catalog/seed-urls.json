@@ -126,12 +126,8 @@
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html"
   ],
   "regfexport": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libregf",
-    "https://github.com/libyal/libregf/wiki/Tools",
-    "https://manpages.debian.org/unstable/libregf-utils/regfexport.1.en.html",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://github.com/libyal/libregf/blob/main/regftools/regfexport.c",
+    "https://github.com/libyal/libregf/issues/1"
   ],
   "regfinfo": [
     "https://manpages.debian.org/unstable/libregf-utils/regfinfo.1.en.html"
@@ -140,14 +136,12 @@
     "https://miloserdov.org/?p=5448"
   ],
   "esedbexport": [
-    "https://dfir.ru/2020/10/03/exporting-registry-hives-from-a-live-system/",
-    "https://github.com/libyal/libesedb",
-    "https://github.com/libyal/libesedb/wiki/Tools",
-    "https://manpages.debian.org/unstable/libesedb-utils/esedbexport.1.en.html",
-    "https://miloserdov.org/?p=5448",
-    "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/"
+    "https://github.com/4k4xs4pH1r3/libesedb-utils/blob/master/libesedb.md",
+    "https://github.com/libyal/libesedb/blob/main/esedbtools/esedbexport.c",
+    "https://github.com/security-dockerfiles/esedbexport"
   ],
   "esedbinfo": [
+    "https://github.com/4k4xs4pH1r3/libesedb-utils/blob/master/libesedb.md",
     "https://manpages.debian.org/unstable/libesedb-utils/esedbinfo.1.en.html"
   ],
   "evtxexport": [
