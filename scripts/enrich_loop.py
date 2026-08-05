@@ -27,6 +27,7 @@ import json
 import re
 import sys
 import time
+from datetime import datetime
 import urllib.request
 from pathlib import Path
 
@@ -647,16 +648,21 @@ def main() -> int:
         for flag in jobs:
             rec = work_one(tool, flag, worker)
             label = f"{tool}{' ' + flag if flag else ''}"
+            # Timestamp every verdict. Without one there is no way to tell
+            # whether a line came from the round in flight or from a round
+            # that started before the last fix, and a pass can outlive
+            # several code changes. That ambiguity cost real time.
+            ts = datetime.now().strftime("%H:%M:%S")
             if rec["status"] == "kept":
                 kept += 1
                 results.append(rec)
-                print(f"  KEPT     {label:28s} {rec['note'][:88]}", flush=True)
+                print(f"{ts}  KEPT     {label:28s} {rec['note'][:80]}", flush=True)
             elif rec["status"] == "review":
                 review.append(rec)
-                print(f"  REVIEW   {label:28s} {rec['why'][:60]}", flush=True)
+                print(f"{ts}  REVIEW   {label:28s} {rec['why'][:60]}", flush=True)
             else:
                 misses.append(rec)
-                print(f"  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}", flush=True)
+                print(f"{ts}  {rec['status'].upper():8s} {label:28s} {rec['why'][:60]}", flush=True)
 
     if not a.replace:
         for f, new in ((OUT, results), (REVIEW, review), (MISSES, misses)):

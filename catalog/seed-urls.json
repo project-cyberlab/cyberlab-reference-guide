@@ -106,5 +106,34 @@
   ],
   "foremost": [
     "https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk"
+  ],
+  "log2timeline.py": [
+    "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
+    "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
+    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
+    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
+  ],
+  "psort.py": [
+    "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
+    "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
+    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
+    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
+  ],
+  "pinfo.py": [
+    "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
+    "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
+    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
+    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
+  ],
+  "chainsaw": [
+    "https://github.com/WithSecureLabs/chainsaw",
+    "https://www.gopher.security/news/mastering-forensic-timelines-tools-and-techniques-for-dfir"
+  ],
+  "hayabusa": [
+    "https://github.com/Yamato-Security/hayabusa",
+    "https://www.gopher.security/news/mastering-forensic-timelines-tools-and-techniques-for-dfir"
+  ],
+  "mactime": [
+    "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html"
   ]
 }
