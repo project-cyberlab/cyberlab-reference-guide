@@ -21,6 +21,19 @@ Extract the contents of a file by inode, including deleted files.
 icat [-hrRsvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] image [images] inum[-typ[-id]]
 ```
 
+## Common invocations
+
+```
+# Extract file content from disk image using inode
+icat image.dd <inode> > file_recovered
+# Recover file content by inode from disk image
+icat image.dd 1234 > recovered_file.txt
+# Extract file data from evidence and compute MD5 hash
+icat -o 2048 "$EVIDENCE" 12345 | md5sum
+# Recover deleted file from evidence image
+icat -r -o 2048 "$EVIDENCE" 54321 > recovered_file.bin
+```
+
 ## Options
 
 All 14 options parsed from the captured help text; 8 reviewed with usage guidance.

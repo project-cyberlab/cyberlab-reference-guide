@@ -30,6 +30,23 @@ ngrep <-hNXViwqpevxlDtTRM> <-IO pcap_dump> <-n num> <-d dev> <-A num>
 <match expression> <bpf filter>
 ```
 
+## Common invocations
+
+```
+# Monitor SMTP traffic on all network interfaces
+ngrep -d any port 25
+# Capture HTTP traffic details line by line
+ngrep -W byline port 80
+# Search for specific strings in network traffic data
+ngrep -w 'm' -I /tmp/dns.dump
+# Search for specific data patterns in network capture files
+ngrep -tD ns3 -I /tmp/dns.dump
+# Search for HTTP traffic in a packet capture file
+ngrep -I /tmp/dns.dump port 80
+# Capture error messages in network syslog traffic
+ngrep -d any 'error' port syslog
+```
+
 ## Options
 
 All 29 options parsed from the captured help text; 27 reviewed with usage guidance.

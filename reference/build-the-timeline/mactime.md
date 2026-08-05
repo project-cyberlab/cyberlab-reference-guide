@@ -20,6 +20,17 @@ An analyst reaches for mactime after gathering temporal data from file systems, 
 
 **Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Timelines>
 
+## Common invocations
+
+```
+# Generate timeline of file events from MAC time data
+mactime -b body.txt -d > timeline.csv
+# Generate timeline with file paths and timestamps
+mactime -b "$OUTPUT/body.txt" -d -z UTC > "$OUTPUT/timeline.csv"
+# Generate timeline of file events within specific date range
+mactime -b body.txt -d -z UTC 2026-01-14..2026-01-15 > incident_timeline.csv
+```
+
 ## Options
 
 All 9 options parsed from the captured help text; 8 reviewed with usage guidance.
