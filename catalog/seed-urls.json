@@ -187,7 +187,11 @@
     "https://www.kali.org/tools/reglookup/"
   ],
   "rip.pl": [
-    "https://github.com/keydet89/RegRipper3.0"
+    "https://fwhibbit.es/en/windows-registry-prepare-the-coffeemaker",
+    "https://github.com/keydet89/RegRipper3.0",
+    "https://github.com/keydet89/RegRipper3.0/blob/master/rip.pl",
+    "https://linuxconfig.org/how-to-install-regripper-registry-data-extraction-tool-on-linux",
+    "https://www.sans.org/blog/regripper-ripping-registries-with-ease"
   ],
   "upx": [
     "https://inventivehq.com/blog/malware-unpacking-guide",
@@ -492,5 +496,16 @@
   "floss": [
     "https://github.com/FireEye/flare-floss",
     "https://pypi.org/project/flare-floss/"
+  ],
+  "reordercap": [
+    "https://manpages.debian.org/testing/wireshark-common/reordercap.1.en.html",
+    "https://tshark.dev/edit/reordercap/",
+    "https://www.wireshark.org/docs/man-pages/reordercap.html",
+    "https://www.wireshark.org/docs/wsug_html_chunked/AppToolsreordercap.html"
+  ],
+  "regripper": [
+    "https://fwhibbit.es/en/windows-registry-prepare-the-coffeemaker",
+    "https://linuxconfig.org/how-to-install-regripper-registry-data-extraction-tool-on-linux",
+    "https://www.sans.org/blog/regripper-ripping-registries-with-ease"
   ]
 }

@@ -6,7 +6,7 @@
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | List files and directories, including deleted ones; Recover deleted or lost files |
 | **Version** | The Sleuth Kit ver 4.11.1 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/tsk_recover.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-05 — [raw help output](../../capture/cyberlab-aio/help/tsk_recover.help.txt) |
 | **Documentation** | <https://www.sleuthkit.org/sleuthkit> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

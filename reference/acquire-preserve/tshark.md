@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | REMnux · Kali Linux · FLARE-VM · SIFT Workstation |
 | **Capability** | Capture live network traffic; Read and filter packet captures |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/tshark.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-05 — [raw help output](../../capture/cyberlab-aio/help/tshark.help.txt) |
 | **Documentation** | <https://www.wireshark.org> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

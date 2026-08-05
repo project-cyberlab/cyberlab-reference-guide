@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | Build a filesystem MAC-time timeline |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-04 — [raw help output](../../capture/cyberlab-aio/help/mactime.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-05 — [raw help output](../../capture/cyberlab-aio/help/mactime.help.txt) |
 | **Documentation** | <https://www.sleuthkit.org/sleuthkit> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
