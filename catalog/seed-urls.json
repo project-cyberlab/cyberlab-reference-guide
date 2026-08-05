@@ -123,7 +123,12 @@
     "https://www.gopher.security/news/mastering-forensic-timelines-tools-and-techniques-for-dfir"
   ],
   "mactime": [
-    "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html"
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ],
   "regfexport": [
     "https://github.com/libyal/libregf/blob/main/regftools/regfexport.c",
@@ -191,5 +196,89 @@
   ],
   "strings": [
     "https://inventivehq.com/blog/malware-unpacking-guide"
+  ],
+  "mmls": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "fsstat": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "fls": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "icat": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "istat": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "ils": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "blkls": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "ffind": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "ifind": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "tsk_recover": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "tsk_gettimes": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "img_stat": [
+    "https://1337skills.com/cheatsheets/sleuthkit/",
+    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
+    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
+    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ]
 }

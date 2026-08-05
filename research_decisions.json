@@ -454,5 +454,9 @@
   "regipy-plugins-run -o": {
     "verdict": "reject",
     "why": "same as regipy-dump -o: restates what the flag does and never says when the choice matters"
+  },
+  "foremost -v": {
+    "verdict": "reject",
+    "why": "'detailed logging of all messages to the screen' is the flag restated; it never says when the extra output changes what you do"
   }
 }
