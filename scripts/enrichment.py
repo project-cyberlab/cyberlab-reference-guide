@@ -2160,8 +2160,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://libguestfs.org/hivexsh.1.html', 'https://manpages.ubuntu.com/manpages/xenial/man1/hivexsh.1.html'],
     },
     'hydra': {
-        'scenario': 'When testing system security to identify weak or default credentials, an analyst uses Hydra after creating custom username/password lists, running it via command line for protocols like SSH, preferring it over similar tools for its cross-platform support and ability to validate security measures effectively.',
-        'sources': ['https://github.com/evarol/HYDRA', 'https://www.linkedin.com/pulse/unleashing-hydra-password-cracking-penetration-testing-tirthan-kiyada-oxzlf'],
+        'scenario': 'An analyst reaches for Hydra after enumeration and gathering web-form details from tools like Burp Suite, running it for online brute-force attacks on SSH or web forms; they choose it over similar tools like John the Ripper because Hydra operates online, making it suitable for live targets requiring real-time credential testing.',
+        'sources': ['https://crackerfrank.hashnode.dev/cracking-passwords-with-hydra-a-tryhackme-walkthrough', 'https://hackproofhacks.com/blog/password-cracking-with-hydra-hacking-series/', 'https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/'],
     },
     'inetsim': {
         'scenario': 'An analyst reaches for inetsim when setting up a simulated internet environment for malware analysis, running it before detonating a sample to intercept network traffic and avoid exposing real services. They configure it alongside tools like Wireshark and Fiddler, preferring it for its ability to mimic network responses and capture traffic without requiring actual internet connectivity.',

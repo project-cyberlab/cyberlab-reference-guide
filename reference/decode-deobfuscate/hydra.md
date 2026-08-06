@@ -16,9 +16,9 @@ Test credentials against a network service across many protocols. In an authoris
 
 ## When you'd reach for this
 
-When testing system security to identify weak or default credentials, an analyst uses Hydra after creating custom username/password lists, running it via command line for protocols like SSH, preferring it over similar tools for its cross-platform support and ability to validate security measures effectively.
+An analyst reaches for Hydra after enumeration and gathering web-form details from tools like Burp Suite, running it for online brute-force attacks on SSH or web forms; they choose it over similar tools like John the Ripper because Hydra operates online, making it suitable for live targets requiring real-time credential testing.
 
-**Sources:** <https://github.com/evarol/HYDRA> · <https://www.linkedin.com/pulse/unleashing-hydra-password-cracking-penetration-testing-tirthan-kiyada-oxzlf>
+**Sources:** <https://crackerfrank.hashnode.dev/cracking-passwords-with-hydra-a-tryhackme-walkthrough> · <https://hackproofhacks.com/blog/password-cracking-with-hydra-hacking-series/> · <https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/>
 
 ## Options
 
