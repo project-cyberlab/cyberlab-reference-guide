@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | SIFT Workstation (regipy) |
 | **Capability** | Parse registry hives |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-05 — [raw help output](../../capture/cyberlab-aio/help/regipy-diff.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-06 — [raw help output](../../capture/cyberlab-aio/help/regipy-diff.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
