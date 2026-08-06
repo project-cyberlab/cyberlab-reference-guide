@@ -2171,6 +2171,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': "An analyst reaches for John when attempting to crack password hashes, often after preparing a larger wordlist and configuring the tool's settings, as it supports multiple modes like single crack, wordlist with rules, and incremental cracking for thoroughness. They may run `john --show` afterward to display cracked passwords, preferring John over similar tools due to its flexibility in using custom charsets, filters, and incremental modes tailored to specific password patterns.",
         'sources': ['https://www.openwall.com/john/doc/EXAMPLES.shtml'],
     },
+    'log2timeline.py': {
+        'scenario': 'An analyst reaches for log2timeline.py when creating a forensic timeline from disk images or directories, as it extracts timestamps into a Plaso storage file, often preceding psort.py for filtering and sorting. They may use it after acquiring evidence and before analysis, preferring it for its ability to detect partitions and VSS, and for supporting targeted extraction via filter files.',
+        'sources': ['https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html', 'https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines'],
+    },
     'mactime': {
         'scenario': 'An analyst reaches for mactime after gathering temporal data from file systems, logs, and other sources into a body file using tools like fls, to sort and merge the data into a single timeline. They would run it after collecting and consolidating all temporal data, as it is specifically designed to handle the body file format and create a chronological view, which is critical for event reconstruction.',
         'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Timelines'],

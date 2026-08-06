@@ -14,6 +14,12 @@
 
 Extract timestamped events from evidence into a Plaso storage file, the first half of a super-timeline.
 
+## When you'd reach for this
+
+An analyst reaches for log2timeline.py when creating a forensic timeline from disk images or directories, as it extracts timestamps into a Plaso storage file, often preceding psort.py for filtering and sorting. They may use it after acquiring evidence and before analysis, preferring it for its ability to detect partitions and VSS, and for supporting targeted extraction via filter files.
+
+**Sources:** <https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html> · <https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines>
+
 ## Synopsis
 
 ```
