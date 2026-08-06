@@ -36,11 +36,11 @@ ewfmount image.E01 <folder>
 
 ## Options
 
-All 5 options parsed from the captured help text. The final column is filled in by review.
+All 5 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-f` | — | specify the input format, options: raw (default), files (restricted to logical volume files) |  |
+| `-f` | — | specify the input format, options: raw (default), files (restricted to logical volume files) | An analyst would use the -f flag when mounting a logical evidence file (such as a L01 or Lx01 file) to access metadata about loose files or directories rather than a disk image. |
 | `-h` | — | shows this help |  |
 | `-v` | — | verbose output to stderr, while ewfmount will remain running in the foreground |  |
 | `-V` | — | print version |  |

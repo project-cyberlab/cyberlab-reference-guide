@@ -29,7 +29,7 @@ frida [options] target
 
 ## Options
 
-All 66 options parsed from the captured help text; 4 reviewed with usage guidance.
+All 66 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -51,7 +51,7 @@ All 66 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `--p2p` | — | establish a peer-to-peer connection with target |  |
 | `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p |  |
 | `-f` | TARGET | spawn FILE | An analyst would use the -f flag when needing to inject a script at the start of a target process to bypass security mechanisms like SSL pinning or anti-root protection as the application launches. |
-| `--file` | TARGET | spawn FILE | An analyst would use the -f flag when needing to inject a script at the start of a target process to bypass security mechanisms like SSL pinning or anti-root protection as the application launches. |
+| `--file` | TARGET | spawn FILE | When an analyst needs to specify the executable file for Frida to monitor and unpack during runtime analysis. |
 | `-F` | — | attach to frontmost application |  |
 | `--attach-frontmost` | — | attach to frontmost application |  |
 | `-n` | NAME | attach to NAME |  |

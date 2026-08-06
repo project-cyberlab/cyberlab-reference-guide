@@ -39,22 +39,22 @@ md5sum --check hashes
 
 ## Options
 
-All 17 options parsed from the captured help text. The final column is filled in by review.
+All 17 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-b` | — | read in binary mode |  |
 | `--binary` | — | read in binary mode |  |
-| `-c` | — | read checksums from the FILEs and check them |  |
-| `--check` | — | read checksums from the FILEs and check them |  |
-| `--tag` | — | create a BSD-style checksum |  |
+| `-c` | — | read checksums from the FILEs and check them | An analyst would use the --check flag when verifying if files have changed by comparing their current state to stored hash values, such as after modifying a file or during automated integrity checks. |
+| `--check` | — | read checksums from the FILEs and check them | An analyst would use the --check flag when verifying if files have changed by comparing their current state to stored hash values, such as after modifying a file or during automated integrity checks. |
+| `--tag` | — | create a BSD-style checksum | An analyst would use the --tag flag when they need to display the MD5 hash in BSD-style format, as demonstrated in the examples where it formats the output as "MD5 (filename) = hashvalue". |
 | `-t` | — | read in text mode (default) |  |
 | `--text` | — | read in text mode (default) |  |
 | `-z` | — | end each output line with NUL, not newline, and disable file name escaping |  |
 | `--zero` | — | end each output line with NUL, not newline, and disable file name escaping |  |
-| `--ignore-missing` | — | don't fail or report status for missing files |  |
-| `--quiet` | — | don't print OK for each successfully verified file |  |
-| `--status` | — | don't output anything, status code shows success |  |
+| `--ignore-missing` | — | don't fail or report status for missing files | An analyst would use the --ignore-missing flag when verifying checksums of files that may be intentionally absent, to avoid warnings about missing files and focus on verification failures. |
+| `--quiet` | — | don't print OK for each successfully verified file | An analyst would use the --quiet flag when checking multiple files to display only the modified files, filtering out unchanged ones during verification. |
+| `--status` | — | don't output anything, status code shows success | An analyst would use the --status flag when running md5sum in a script to check file integrity and need the command to return a status code (0 for no changes, 1 for mismatches) without producing any output. |
 | `--strict` | — | exit non-zero for improperly formatted checksum lines |  |
 | `-w` | — | warn about improperly formatted checksum lines |  |
 | `--warn` | — | warn about improperly formatted checksum lines |  |

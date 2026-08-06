@@ -27,7 +27,7 @@ log2timeline.py [-h] [--troubles] [-V] [--artifact_definitions PATH]
 
 ## Options
 
-All 100 options parsed from the captured help text; 13 reviewed with usage guidance.
+All 100 options parsed from the captured help text; 15 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -80,13 +80,13 @@ All 100 options parsed from the captured help text; 13 reviewed with usage guida
 | `--vss-only` | — | Do not process the current volume if Volume Shadow Snapshots (VSS) have been selected. |  |
 | `--vss_stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | Also process Volume Shadow Copies — often where the pre-attack state survives. |
 | `--vss-stores` | VSS_STORES | Define Volume Shadow Snapshots (VSS) (or stores) that need to be processed. A range of snapshots can be defined as: "3..5". Multiple snapshots can be defined as: "1,3,5" (a list of comma separated val | Also process Volume Shadow Copies — often where the pre-attack state survives. |
-| `-d` | — | Enable debug output. |  |
-| `--debug` | — | Enable debug output. |  |
+| `-d` | — | Enable debug output. | An analyst would use the -d flag when coupled with --logfile to obtain more detailed debug information during the processing of a storage media image. |
+| `--debug` | — | Enable debug output. | An analyst would use the -d flag when coupled with --logfile to obtain more detailed debug information during the processing of a storage media image. |
 | `-q` | — | Disable informational output. |  |
 | `--quiet` | — | Disable informational output. |  |
 | `-u` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
 | `--unattended` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
-| `--info` | — | Print out information about supported plugins and parsers. |  |
+| `--info` | — | Print out information about supported plugins and parsers. | An analyst would use the --info flag when they need to check the list of supported plugins, parsers, and output modules available in log2timeline.py. |
 | `--use_markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" |  |
 | `--use-markdown` | — | Output lists in Markdown format use in combination with "--hashers list", "--parsers list" or "--timezone list" |  |
 | `--no_dependencies_check` | — | Disable the dependencies check. |  |

@@ -33,7 +33,7 @@ xortool --version
 
 ## Options
 
-All 20 options parsed from the captured help text; 6 reviewed with usage guidance.
+All 20 options parsed from the captured help text; 9 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -44,17 +44,17 @@ All 20 options parsed from the captured help text; 6 reviewed with usage guidanc
 | `-m` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
 | `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
 | `-c` | CHAR | most frequent char (one char or hex code) | Give the most frequent character of the plaintext — usually `20` (space) for text, `00` for binaries. This is the flag that makes or breaks the attack. |
-| `--char` | CHAR | most frequent char (one char or hex code) | Give the most frequent character of the plaintext — usually `20` (space) for text, `00` for binaries. This is the flag that makes or breaks the attack. |
+| `--char` | CHAR | most frequent char (one char or hex code) | An analyst would use the --char flag when they have prior knowledge or suspicion about the most frequent character in the plaintext, aiding xortool in accurately guessing the XOR key. |
 | `-b` | — | brute force all possible most frequent chars | Brute-force the most frequent character rather than guessing. |
 | `--brute-chars` | — | brute force all possible most frequent chars | Brute-force the most frequent character rather than guessing. |
-| `-o` | — | same as -b but will only check printable chars |  |
-| `--brute-printable` | — | same as -b but will only check printable chars |  |
+| `-o` | — | same as -b but will only check printable chars | An analyst would use the -o flag when brute-forcing possible keys by checking only printable characters to guess the most frequent byte in XOR-encrypted data. |
+| `--brute-printable` | — | same as -b but will only check printable chars | An analyst would use the -o flag when brute-forcing possible keys by checking only printable characters to guess the most frequent byte in XOR-encrypted data. |
 | `-f` | — | filter outputs based on the charset |  |
 | `--filter-output` | — | filter outputs based on the charset |  |
 | `-p` | PLAIN | use known plaintext for decoding | An analyst would use the -p flag when they have a known plaintext segment to aid in decrypting XOR-encrypted data, as demonstrated in examples where it's paired with encrypted files and brute-force options. |
 | `--known-plaintext` | PLAIN | use known plaintext for decoding | An analyst would use the -p flag when they have a known plaintext segment to aid in decrypting XOR-encrypted data, as demonstrated in examples where it's paired with encrypted files and brute-force options. |
-| `-r` | PERCENT | threshold validity percentage [default: 95] |  |
-| `--threshold` | PERCENT | threshold validity percentage [default: 95] |  |
+| `-r` | PERCENT | threshold validity percentage [default: 95] | An analyst would use the -r flag when adjusting the threshold validity percentage for determining the likelihood of correct key guesses during XOR analysis. |
+| `--threshold` | PERCENT | threshold validity percentage [default: 95] | An analyst would use the -r flag when adjusting the threshold validity percentage for determining the likelihood of correct key guesses during XOR analysis. |
 | `-h` | — | show this help |  |
 | `--help` | — | show this help |  |
 

@@ -27,11 +27,11 @@ evtxinfo [ -c codepage ] [ -hvV ] source
 
 ## Options
 
-All 4 options parsed from the captured help text. The final column is filled in by review.
+All 4 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 |  |
+| `-c` | — | codepage of ASCII strings, options: ascii, windows-874, windows-932, windows-936, windows-949, windows-950, windows-1250, windows-1251, windows-1252 (default), windows-1253, windows-1254, windows-1255 | An analyst would use the -c flag when the ASCII strings in the EVTX file are encoded using a codepage different from the default (windows-1252). |
 | `-h` | — | shows this help |  |
 | `-v` | — | verbose output to stderr |  |
 | `-V` | — | print version |  |

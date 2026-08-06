@@ -13,6 +13,12 @@
 
 Use regfmount to mount a Windows NT Registry File (REGF)
 
+## When you'd reach for this
+
+An analyst reaches for regfmount when examining Windows registry hive files to explore their structure and contents, often after extracting the hive from a disk image or virtual machine; they may run commands like `ls` and `cat` on the mounted directory to inspect keys and values, preferring it over similar tools for its ability to present registry data as a navigable file system with editable text files.
+
+**Sources:** <https://miloserdov.org/?p=5448>
+
 ## Synopsis
 
 ```

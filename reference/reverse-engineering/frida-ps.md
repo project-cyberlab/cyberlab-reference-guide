@@ -15,6 +15,12 @@
 
 Trace the execution of a process to analyze its behavior.
 
+## When you'd reach for this
+
+An analyst reaches for frida-ps when they need to list processes on a remote device, such as after connecting via USB or identifying a specific device ID using frida-ls-devices, to inspect running or installed applications. They may run it before attaching to a target process for further analysis or scripting. They choose it over similar tools because it is explicitly designed for listing processes, a foundational step when interacting with remote systems, as highlighted in the documentation.
+
+**Sources:** <https://frida.re/docs/frida-ps/> · <https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/>
+
 ## Synopsis
 
 ```
@@ -23,16 +29,16 @@ frida-ps [options]
 
 ## Options
 
-All 28 options parsed from the captured help text. The final column is filled in by review.
+All 28 options parsed from the captured help text; 2 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-h` | — | show this help message and exit |  |
 | `--help` | — | show this help message and exit |  |
-| `-D` | ID | connect to device with the given ID |  |
-| `--device` | ID | connect to device with the given ID |  |
-| `-U` | — | connect to USB device |  |
-| `--usb` | — | connect to USB device |  |
+| `-D` | ID | connect to device with the given ID | An analyst would use the -D flag when they need to list processes on a specific device by its ID, such as when targeting a particular connected device during a mobile pentest. |
+| `--device` | ID | connect to device with the given ID | An analyst would use the -D flag when they need to list processes on a specific device by its ID, such as when targeting a particular connected device during a mobile pentest. |
+| `-U` | — | connect to USB device | An analyst would use the -U flag when connecting to a device via USB to list its running processes or installed applications during a mobile forensic investigation. |
+| `--usb` | — | connect to USB device | An analyst would use the -U flag when connecting to a device via USB to list its running processes or installed applications during a mobile forensic investigation. |
 | `-R` | — | connect to remote frida-server |  |
 | `--remote` | — | connect to remote frida-server |  |
 | `-H` | HOST | connect to remote frida-server on HOST |  |

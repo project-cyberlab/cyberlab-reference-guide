@@ -29,7 +29,7 @@ frida-trace [options] target
 
 ## Options
 
-All 82 options parsed from the captured help text. The final column is filled in by review.
+All 82 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -37,8 +37,8 @@ All 82 options parsed from the captured help text. The final column is filled in
 | `--help` | — | show this help message and exit |  |
 | `-D` | ID | connect to device with the given ID |  |
 | `--device` | ID | connect to device with the given ID |  |
-| `-U` | — | connect to USB device |  |
-| `--usb` | — | connect to USB device |  |
+| `-U` | — | connect to USB device | An analyst would use the -U flag when tracing an application running on a remote Android device connected via USB from their host machine. |
+| `--usb` | — | connect to USB device | An analyst would use the -U flag when tracing an application running on a remote Android device connected via USB from their host machine. |
 | `-R` | — | connect to remote frida-server |  |
 | `--remote` | — | connect to remote frida-server |  |
 | `-H` | HOST | connect to remote frida-server on HOST |  |
@@ -56,8 +56,8 @@ All 82 options parsed from the captured help text. The final column is filled in
 | `--attach-frontmost` | — | attach to frontmost application |  |
 | `-n` | NAME | attach to NAME |  |
 | `--attach-name` | NAME | attach to NAME |  |
-| `-N` | IDENTIFIER | attach to IDENTIFIER |  |
-| `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER |  |
+| `-N` | IDENTIFIER | attach to IDENTIFIER | When the target application is already running and the analyst needs to trace functions using its identifier. |
+| `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER | When the target application is already running and the analyst needs to trace functions using its identifier. |
 | `-p` | PID | attach to PID |  |
 | `--attach-pid` | PID | attach to PID |  |
 | `-W` | PATTERN | await spawn matching PATTERN |  |
@@ -80,8 +80,8 @@ All 82 options parsed from the captured help text. The final column is filled in
 | `--include-module` | MODULE | include MODULE |  |
 | `-X` | MODULE | exclude MODULE |  |
 | `--exclude-module` | MODULE | exclude MODULE |  |
-| `-i` | FUNCTION | include [MODULE!]FUNCTION |  |
-| `--include` | FUNCTION | include [MODULE!]FUNCTION |  |
+| `-i` | FUNCTION | include [MODULE!]FUNCTION | An analyst would use the -i flag when they need to trace specific functions or modules, such as monitoring particular API calls or methods in a target process. |
+| `--include` | FUNCTION | include [MODULE!]FUNCTION | An analyst would use the -i flag when they need to trace specific functions or modules, such as monitoring particular API calls or methods in a target process. |
 | `-x` | FUNCTION | exclude [MODULE!]FUNCTION |  |
 | `--exclude` | FUNCTION | exclude [MODULE!]FUNCTION |  |
 | `-T` | INCLUDE_IMPORTS | include program's imports |  |

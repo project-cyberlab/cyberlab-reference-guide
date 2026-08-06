@@ -28,13 +28,13 @@ AppCompatCacheParser [options]
 
 ## Options
 
-All 13 options parsed from the captured help text. The final column is filled in by review.
+All 13 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-f` | f | Full path to SYSTEM hive to process. If this option is not specified, the live Registry will be used |  |
 | `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes |  |
-| `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name |  |
+| `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name | An analyst would use the --csvf flag when parsing the ShimCache from the SYSTEM hive to generate a CSV-formatted output file for further analysis. |
 | `-c` | c | The ControlSet to parse. Default is to extract all control sets [default: -1] |  |
 | `-t` | — | Sorts last modified timestamps in descending order |  |
 | `--dt` | dt | The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for options [default: yyyy-MM-dd HH:mm:ss] |  |

@@ -22,7 +22,7 @@ nmap [Scan Type(s)] [Options] {target specification}
 
 ## Options
 
-All 66 options parsed from the captured help text; 24 reviewed with usage guidance.
+All 66 options parsed from the captured help text; 26 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -45,9 +45,9 @@ All 66 options parsed from the captured help text; 24 reviewed with usage guidan
 | `--version-trace` | — | Show detailed version scan activity (for debugging) |  |
 | `--script` | Lua scripts | <Lua scripts> is a comma separated list of directories, script-files or script-categories | Run NSE scripts. The category matters — `vuln` and `exploit` scripts actively test, and `exploit` can change the target. |
 | `--script-args` | n1=v1,[n2=v2,...] | provide arguments to scripts | Arguments for those scripts. |
-| `--script-args-file` | filename | provide NSE script args in a file |  |
+| `--script-args-file` | filename | provide NSE script args in a file | An analyst would use the --script-args-file flag when they need to specify multiple script arguments in a file rather than on the command line, allowing for easier management of complex or repeated argument sets. |
 | `--script-trace` | — | Show all data sent and received |  |
-| `--script-updatedb` | — | Update the script database. |  |
+| `--script-updatedb` | — | Update the script database. | An analyst would use the --script-updatedb flag when they have added, removed, or modified the categories of NSE scripts in the default scripts directory, requiring the script database to be updated. |
 | `--script-help` | Lua scripts | Show help about scripts. <Lua scripts> is a comma-separated list of script-files or script-categories. | Explain what a script does before running it, which is worth doing for anything outside `safe`. |
 | `-O` | — | Enable OS detection | OS fingerprint from the TCP/IP stack. A guess with a confidence, not a fact. |
 | `--osscan-limit` | — | Limit OS detection to promising targets |  |

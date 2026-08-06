@@ -13,6 +13,12 @@
 
 Use esedbexport to export items stored in an Extensible Storage Engine (ESE)
 
+## When you'd reach for this
+
+When analyzing EDB files from applications like Active Directory, an analyst uses esedbexport after mounting the file via Docker, as shown in the example command, to extract structured data from the database. They might run it after obtaining the EDB file through imaging or extraction tools, and choose it because it is specifically designed for ESE databases, as indicated by the documentation's mention of its use in Windows Mail, Exchange, and Active Directory.
+
+**Sources:** <https://github.com/4k4xs4pH1r3/libesedb-utils/blob/master/libesedb.md> · <https://github.com/security-dockerfiles/esedbexport>
+
 ## Synopsis
 
 ```

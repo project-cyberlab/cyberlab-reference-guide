@@ -28,7 +28,7 @@ int        ->  bin              ;  rax2 b30
 
 ## Options
 
-All 30 options parsed from the captured help text. The final column is filled in by review.
+All 30 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -37,8 +37,8 @@ All 30 options parsed from the captured help text. The final column is filled in
 | `-c` | — | output in C string ; rax2 -c 0x1234 # \x34\x12\x00\x00 |  |
 | `-C` | — | dump as C byte array ; rax2 -C < bytes |  |
 | `-d` | — | force integer ; rax2 -d 3 -> 3 instead of 0x3 |  |
-| `-e` | — | swap endianness ; rax2 -e 0x33 |  |
-| `-D` | — | base64 decode ; rax2 -D "aGVsbG8=" |  |
+| `-e` | — | swap endianness ; rax2 -e 0x33 | An analyst would use the -e flag when converting between different endianness representations, such as swapping byte order in hexadecimal values during data analysis. |
+| `-D` | — | base64 decode ; rax2 -D "aGVsbG8=" | An analyst would use the -D flag when decoding a base64 encoded string to retrieve its original binary or textual content. |
 | `-E` | — | base64 encode ; rax2 -E "hello" |  |
 | `-f` | — | floating point ; rax2 -f 6.3+2.1 |  |
 | `-F` | — | stdin slurp code hex ; rax2 -F < shellcode.[c/py/js] |  |
@@ -47,13 +47,13 @@ All 30 options parsed from the captured help text. The final column is filled in
 | `-i` | — | IP address <-> LONG ; rax2 -i 3530468537 |  |
 | `-j` | — | json format output ; rax2 -j 0x1234 # same as r2 -c '?j 0x1234' |  |
 | `-k` | — | keep base ; rax2 -k 33+3 -> 36 |  |
-| `-K` | — | randomart ; rax2 -K 0x34 1020304050 |  |
+| `-K` | — | randomart ; rax2 -K 0x34 1020304050 | An analyst would use the -K flag when generating a randomart visualization of binary data, such as for creating a visual representation of a hash or hexadecimal value in a forensic report. |
 | `-n` | — | newline ; append newline to output (for -E/-D/-r/..) |  |
 | `-o` | — | octalstr -> raw ; rax2 -o \162 \62 # r2 |  |
 | `-q` | — | quiet mode ; rax2 -qC < /etc/hosts # be quiet |  |
 | `-r` | — | r2 style output ; rax2 -r 0x1234 # same as r2 -c '? 0x1234' |  |
-| `-s` | — | hexstr -> raw ; rax2 -s 43 4a 50 |  |
-| `-S` | — | raw -> hexstr ; rax2 -S < /bin/ls > ls.hex |  |
+| `-s` | — | hexstr -> raw ; rax2 -s 43 4a 50 | An analyst would use the -s flag when converting a hexadecimal string into its corresponding raw byte representation for further analysis or processing. |
+| `-S` | — | raw -> hexstr ; rax2 -S < /bin/ls > ls.hex | An analyst would use the -S flag when converting raw binary data into a hexadecimal string representation for analysis or documentation. |
 | `-t` | — | tstamp -> str ; rax2 -t 1234567890 |  |
 | `-u` | — | units ; rax2 -u 389289238 # 317.0M |  |
 | `-v` | — | version ; rax2 -v |  |

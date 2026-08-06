@@ -24,7 +24,7 @@ sigtool --unpack=FILE
 
 ## Options
 
-All 35 options parsed from the captured help text; 1 reviewed with usage guidance.
+All 35 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -53,8 +53,8 @@ All 35 options parsed from the captured help text; 1 reviewed with usage guidanc
 | `--hybrid` | — | Create a hybrid (standard and bytecode) database file |  |
 | `--print-certs` | FILE | Print Authenticode details from a PE |  |
 | `--server` | ADDR | ClamAV Signing Service address |  |
-| `--datadir` | DIR | Use DIR as default database directory |  |
-| `--unpack` | FILE | -u FILE Unpack a CVD/CLD file |  |
+| `--datadir` | DIR | Use DIR as default database directory | An analyst would use --datadir when they need to specify a non-default directory as the default database location for all sigtool operations. |
+| `--unpack` | FILE | -u FILE Unpack a CVD/CLD file | An analyst would use the --unpack flag when investigating a potential false positive by unpacking the virus signature database to locate and examine the specific signature causing the detection. |
 | `--unpack-current` | SHORTNAME | Unpack local CVD/CLD into cwd |  |
 | `--list-sigs` | FILE (optional) | -l[FILE] List signature names |  |
 | `--find-sigs` | REGEX | -fREGEX Find signatures matching REGEX |  |

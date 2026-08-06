@@ -14,6 +14,12 @@
 
 Print or check SHA256 (256-bit) checksums.
 
+## When you'd reach for this
+
+An analyst uses sha256sum to verify file integrity after detecting content changes, running it after appending data to confirm checksum mismatches, and preferring it over MD5/SHA-1 for stronger tamper protection and over sha512sum for a balance between security and efficiency.
+
+**Sources:** <https://penguin-gym-linux.com/en/articles/tutorials/checksum-md5-sha256>
+
 ## Synopsis
 
 ```

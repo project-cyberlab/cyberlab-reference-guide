@@ -886,5 +886,469 @@
   "chainsaw -r": {
     "verdict": "accept",
     "why": "Reviewed: names a concrete trigger, the flag matches the binary captured help, and the claim is carried by the cited sources. The RegRipper set (-r hive, -l list plugins, -c CSV, -p plugin, -f hive type) is coherent across all five and matches rip.pl usage."
+  },
+  "ssdeep -l": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "ssdeep -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "ssdeep -k": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "hashcat --custom-charset1": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "hashcat --benchmark": {
+    "verdict": "reject",
+    "why": "Anchors the scenario on SETUP rather than a case. 'After building the John binary from source', 'after reinstalling hashcat and ensuring the correct GPU drivers' -- these are things you do once. The column asks what is true about the evidence in front of you that makes you reach for this."
+  },
+  "john --make-charset": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "AppCompatCacheParser --csvf": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "esedbexport": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "msoffcrypto-tool": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfinfo -B": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfinfo -c": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfinfo -v": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfinfo -H": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "log2timeline.py -d": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "ssdeep -r": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "ssdeep -x": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "hashcat -d": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john --single": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john --session": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john --test": {
+    "verdict": "reject",
+    "why": "Anchors the scenario on SETUP rather than a case. 'After building the John binary from source', 'after reinstalling hashcat and ensuring the correct GPU drivers' -- these are things you do once. The column asks what is true about the evidence in front of you that makes you reach for this."
+  },
+  "sha256sum": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "frida --file": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "affcat -s": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "affcat -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "affinfo -b": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "bdeinfo -r": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "bdeinfo -s": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "bdeinfo -v": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "capa -vv": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "capa --rules": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "evtxinfo -c": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "ewfmount -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "floss --no": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "floss --only": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "floss -H": {
+    "verdict": "reject",
+    "why": "A help flag. Real, and it tells a reader nothing they cannot get by running the tool, so it does not earn a row in a reference table whose whole purpose is to say when to reach for something."
+  },
+  "pyxswf": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "radiff2 -g": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "radiff2 -C": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "radiff2 -s": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "radiff2 -c": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rafind2 -x": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rafind2 -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rafind2 -R": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rax2 -S": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rax2 -s": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rax2 -D": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfinfo -hHvV": {
+    "verdict": "reject",
+    "why": "Not a flag. '-hHvV' and '-hvV' are the bracketed cluster from the tool's own usage line, which the help capture recorded as if it were a single option. Nobody types it. The note dutifully invented a purpose for the cluster, which is the captioner problem in a different place: given something that looks like a flag, a model will explain it."
+  },
+  "frida-ps": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "pinfo.py --verbose": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "pinfo.py -v": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "pyxswf -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "pyxswf -o": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rabin2 -D": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rabin2 -B": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rabin2 -C": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "radiff2": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regipy-parse-header": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regripper -c": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "sigtool --unpack": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "tcpflow -c": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "tcpflow -hh": {
+    "verdict": "reject",
+    "why": "A help flag. Real, and it tells a reader nothing they cannot get by running the tool, so it does not earn a row in a reference table whose whole purpose is to say when to reach for something."
+  },
+  "tcpflow -w": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "tcpflow -i": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "vshadowinfo -o": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xlmdeobfuscator --file": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xlmdeobfuscator --with-ms-excel": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xlmdeobfuscator --export-json": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "affconvert": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "bdeinfo -o": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "capa -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "evtxinfo -hvV": {
+    "verdict": "reject",
+    "why": "Not a flag. '-hHvV' and '-hvV' are the bracketed cluster from the tool's own usage line, which the help capture recorded as if it were a single option. Nobody types it. The note dutifully invented a purpose for the cluster, which is the captioner problem in a different place: given something that looks like a flag, a model will explain it."
+  },
+  "frida-ps -U": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "frida-trace -i": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "frida-trace -U": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfmount": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regripper -r": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rip.pl": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "sigtool --datadir": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xortool -o": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xortool -r": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xortool --char": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "log2timeline.py --info": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "RECmd": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "frida-trace -N": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "md5sum --check": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "md5sum --status": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "md5sum --tag": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "md5sum --ignore-missing": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "nmap -sC": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "nmap --script-args-file": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "oledir -z": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "oledir -r": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "oledump.py -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "olefile": {
+    "verdict": "reject",
+    "why": "Describes the tool by the Python exceptions it raises ('files that trigger errors like AttributeError'). That is a library-debugging trigger, not an investigative one, and a junior analyst reading it learns nothing about when olefile is the right thing to open."
+  },
+  "olemeta": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "regfinfo": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "vshadowinfo -a": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john --shells": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john --restore": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "nmap --script-updatedb": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "oledir --zip": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "oledir --zipfname": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rax2 -e": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rax2 -K": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "xlmdeobfuscator": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "john --users": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "bdeinfo -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rabin2 -n": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "frida-ps -D": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "frida-trace -a": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "md5sum --quiet": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "ngrep -IO": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "dd": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "radiff2 -A": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "rafind2 -b": {
+    "verdict": "accept",
+    "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
   }
 }

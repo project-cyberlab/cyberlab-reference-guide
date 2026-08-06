@@ -26,7 +26,7 @@ pinfo.py [-h] [--troubles] [-V] [--logfile FILENAME]
 
 ## Options
 
-All 20 options parsed from the captured help text. The final column is filled in by review.
+All 20 options parsed from the captured help text; 2 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -46,8 +46,8 @@ All 20 options parsed from the captured help text. The final column is filled in
 | `--hash` | TYPE | Type of hash to output in file_hashes report. Supported options: md5, sha1, sha256 |  |
 | `--report` | TYPE | Report on specific information. Supported options: browser_search, chrome_extension, environment_variables, file_hashes, list, none, windows_services, winevt_providers |  |
 | `--sections` | SECTIONS_LIST | List of sections to output. This is a comma separated list where each entry is the name of a section. Use " --sections list" to list the available sections and " --sections all" to show all available  |  |
-| `-v` | — | Print verbose output. |  |
-| `--verbose` | — | Print verbose output. |  |
+| `-v` | — | Print verbose output. | An analyst would use the -v flag when troubleshooting processing issues, validating the integrity of a storage file, or verifying the completeness of artifact extraction after creating a Plaso storage file. |
+| `--verbose` | — | Print verbose output. | An analyst would use the --verbose flag when troubleshooting or performing thorough validation of the collection process, or immediately after storage file creation to verify successful artifact extraction and document provenance. |
 | `-w` | OUTPUTFILE | Output filename. |  |
 | `--write` | OUTPUTFILE | Output filename. |  |
 

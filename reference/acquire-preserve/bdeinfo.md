@@ -33,17 +33,17 @@ bdeinfo -o $((512*2048)) ~/xmount_pount/Bitlocker_physisch_test.dd
 
 ## Options
 
-All 8 options parsed from the captured help text. The final column is filled in by review.
+All 8 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-h` | — | shows this help |  |
 | `-k` | — | the full volume encryption key and tweak key formatted in base16 and separated by a : character e.g. FVEK:TWEAK |  |
-| `-o` | — | specify the volume offset in bytes |  |
-| `-p` | — | specify the password/passphrase |  |
-| `-r` | — | specify the recovery password |  |
-| `-s` | — | specify the file containing the startup key. typically this file has the extension .BEK |  |
-| `-v` | — | verbose output to stderr |  |
+| `-o` | — | specify the volume offset in bytes | An analyst would use the -o flag with bdeinfo when specifying the correct byte offset for a BitLocker-encrypted volume in a disk image, after confirming the volume's presence through hexdump analysis or partition layout checks. |
+| `-p` | — | specify the password/passphrase | An analyst would use the -p flag when providing a password to access a BitLocker-encrypted volume during forensic examination. |
+| `-r` | — | specify the recovery password | An analyst would use the -r flag when providing a recovery password to access a BitLocker Drive Encrypted volume. |
+| `-s` | — | specify the file containing the startup key. typically this file has the extension .BEK | An analyst would use the -s flag when providing a file containing a startup key to unlock a BitLocker-encrypted volume. |
+| `-v` | — | verbose output to stderr | An analyst would use the -v flag when they need detailed error, verbose, or debug output during the analysis of a BitLocker Drive Encrypted volume. |
 | `-V` | — | print version |  |
 
 ## Gotchas

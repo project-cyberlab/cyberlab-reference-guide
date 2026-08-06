@@ -14,6 +14,12 @@
 
 Copy data block by block, without interpreting it. In forensics this is the plain-raw imaging tool: it will read a whole device including unallocated space, but it has no hashing, no error recovery and no metadata. Prefer [`dc3dd`](dc3dd.md), [`dcfldd`](dcfldd.md) or [`ewfacquire`](ewfacquire.md) for evidence; reach for `dd` when you need a byte range and nothing else.
 
+## When you'd reach for this
+
+An analyst reaches for dd when copying data between drives or sanitizing a drive, ensuring the syntax is correct before execution and using a write blocker to prevent accidental data loss; they may run it after verifying the source and target devices to avoid overwriting evidence, preferring dd for its direct, low-level data handling and reliability in forensic imaging tasks.
+
+**Sources:** <https://www.forensicfocus.com/articles/linux-dd-basics/>
+
 ## Synopsis
 
 ```

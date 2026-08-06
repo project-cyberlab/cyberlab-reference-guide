@@ -14,6 +14,12 @@
 
 Query and export Windows registry hives from the command line, using batch files of plugin definitions to pull known-interesting keys in one pass. The batch approach is the point: it turns 'check the usual persistence locations' into one reproducible command.
 
+## When you'd reach for this
+
+An analyst reaches for RECmd during incident triage after checking event logs, file system changes, and amcache data to investigate persistence mechanisms like Run keys, services, or tasks; they use it alongside tools like EvtxECmd and MFTECmd to build a timeline of suspicious activity, as RECmd specifically targets registry artifacts for persistence analysis.
+
+**Sources:** <https://ridgelinecyber.com/resources/kape-ez-tools/> · <https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/>
+
 ## Synopsis
 
 ```

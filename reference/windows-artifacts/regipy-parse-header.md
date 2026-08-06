@@ -13,6 +13,12 @@
 
 Print a hive's header — sequence numbers, timestamp and whether it was cleanly unmounted. A dirty hive means transaction logs still hold recent changes, so this is the check that tells you whether you are reading the whole story.
 
+## When you'd reach for this
+
+An analyst reaches for regipy-parse-header when examining the header of a registry hive file to quickly retrieve metadata such as sequence numbers and modification times, often running it before deeper analysis of the hive's contents. They may choose it because the Rust backend significantly reduces parsing time compared to the default Python parser, though the Python version remains the default if the Rust backend is not installed.
+
+**Sources:** <https://github.com/mkorman90/regipy>
+
 ## Synopsis
 
 ```

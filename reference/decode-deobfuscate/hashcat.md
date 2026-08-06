@@ -28,7 +28,7 @@ hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
 
 ## Options
 
-All 143 options parsed from the captured help text; 5 reviewed with usage guidance.
+All 143 options parsed from the captured help text; 7 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -112,8 +112,8 @@ All 143 options parsed from the captured help text; 5 reviewed with usage guidan
 | `--backend-ignore-opencl` | — | \| \| Do not try to open OpenCL interface on startup \| |  |
 | `-I` | — | \| \| Show system/evironment/backend API info \| -I or -II |  |
 | `--backend-info` | — | \| \| Show system/evironment/backend API info \| -I or -II |  |
-| `-d` | — | \| Str \| Backend devices to use, separated with commas \| -d 1 |  |
-| `--backend-devices` | — | \| Str \| Backend devices to use, separated with commas \| -d 1 |  |
+| `-d` | — | \| Str \| Backend devices to use, separated with commas \| -d 1 | An analyst would use the -d flag when specifying a particular GPU device in a multi-GPU setup where hashcat encounters mapping errors due to identical or similarly identified devices, requiring manual selection to bypass temperature or fan control issues. |
+| `--backend-devices` | — | \| Str \| Backend devices to use, separated with commas \| -d 1 | An analyst would use the -d flag when specifying a particular GPU device in a multi-GPU setup where hashcat encounters mapping errors due to identical or similarly identified devices, requiring manual selection to bypass temperature or fan control issues. |
 | `-D` | — | \| Str \| OpenCL device-types to use, separated with commas \| -D 1 |  |
 | `--opencl-device-types` | — | \| Str \| OpenCL device-types to use, separated with commas \| -D 1 |  |
 | `-O` | — | \| \| Enable optimized kernels (limits password length) \| |  |
@@ -150,8 +150,8 @@ All 143 options parsed from the captured help text; 5 reviewed with usage guidan
 | `--generate-rules-func-max` | — | \| Num \| Force max X functions per rule \| |  |
 | `--generate-rules-func-sel` | — | \| Str \| Pool of rule operators valid for random rule engine \| --generate-rules-func-sel=ioTlc |  |
 | `--generate-rules-seed` | — | \| Num \| Force RNG seed set to X \| |  |
-| `-1` | — | \| CS \| User-defined charset ?1 \| -1 ?l?d?u |  |
-| `--custom-charset1` | — | \| CS \| User-defined charset ?1 \| -1 ?l?d?u |  |
+| `-1` | — | \| CS \| User-defined charset ?1 \| -1 ?l?d?u | An analyst would use the --custom-charset1 flag when defining a custom character set (e.g., ?l?d) to reference in a mask with ?1, such as in a hashcat mask file line like "?l?d,?l?l?l?l?1" to specify a combination of lowercase letters and digits for password cracking. |
+| `--custom-charset1` | — | \| CS \| User-defined charset ?1 \| -1 ?l?d?u | An analyst would use the --custom-charset1 flag when defining a custom character set (e.g., ?l?d) to reference in a mask with ?1, such as in a hashcat mask file line like "?l?d,?l?l?l?l?1" to specify a combination of lowercase letters and digits for password cracking. |
 | `-2` | — | \| CS \| User-defined charset ?2 \| -2 ?l?d?s |  |
 | `--custom-charset2` | — | \| CS \| User-defined charset ?2 \| -2 ?l?d?s |  |
 | `-3` | — | \| CS \| User-defined charset ?3 \| |  |

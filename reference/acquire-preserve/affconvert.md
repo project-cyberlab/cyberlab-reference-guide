@@ -14,6 +14,12 @@
 
 Convert between AFF and raw images in either direction. The usual reason is a tool that only reads one of them; keep the original, because converting to raw discards the metadata and hashes AFF was carrying.
 
+## When you'd reach for this
+
+When an analyst needs to convert files between RAW and AFF formats, they use affconvert, often after acquiring raw data or before processing with other AFF tools, as it directly handles format conversion unlike affcopy which focuses on reordering and recompression.
+
+**Sources:** <https://www.kali.org/tools/afflib/>
+
 ## Synopsis
 
 ```

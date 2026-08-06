@@ -21,13 +21,13 @@ vshadowinfo [ -o offset ] [ -ahvV ] source
 
 ## Options
 
-All 5 options parsed from the captured help text. The final column is filled in by review.
+All 5 options parsed from the captured help text; 2 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | — | shows allocation information |  |
+| `-a` | — | shows allocation information | An analyst would use the -a flag when examining allocation information related to a Volume Shadow Snapshot (VSS) volume. |
 | `-h` | — | shows this help |  |
-| `-o` | — | specify the volume offset in bytes |  |
+| `-o` | — | specify the volume offset in bytes | An analyst would use the -o flag when needing to specify a non-default volume offset in bytes to access a particular section of a VSS volume that isn't starting at the beginning of the source file or device. |
 | `-v` | — | verbose output to stderr |  |
 | `-V` | — | print version |  |
 
