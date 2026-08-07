@@ -6,7 +6,7 @@
 | **Kit** | SIFT / Security Onion (Sigma-based log hunting) |
 | **Capability** | Parse Windows event logs |
 | **Version** | error: unexpected argument '--version' found |
-| **Captured from** | `cyberlab-aio` via `help` on 2026-08-06 — [raw help output](../../capture/cyberlab-aio/help/hayabusa.help.txt) |
+| **Captured from** | `cyberlab-aio` via `help` on 2026-08-07 — [raw help output](../../capture/cyberlab-aio/help/hayabusa.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

@@ -6,7 +6,7 @@
 | **Kit** | Base OS — present on every Linux image |
 | **Capability** | Search raw data for a pattern; Extract strings, including obfuscated ones |
 | **Version** | GNU strings (GNU Binutils for Debian) 2.40 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-06 — [raw help output](../../capture/cyberlab-aio/help/strings.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-07 — [raw help output](../../capture/cyberlab-aio/help/strings.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

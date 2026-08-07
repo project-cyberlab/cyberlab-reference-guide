@@ -6,7 +6,7 @@
 | **Kit** | REMnux |
 | **Capability** | Analyse shellcode; Break simple obfuscation |
 | **Version** | 1.1.0 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-06 — [raw help output](../../capture/cyberlab-aio/help/xortool.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-07 — [raw help output](../../capture/cyberlab-aio/help/xortool.help.txt) |
 | **Documentation** | <https://github.com/hellman/xortool> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
