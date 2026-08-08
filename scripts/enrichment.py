@@ -2092,8 +2092,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://github.com/martinmathurine/Cryptography-Decryption-CyberChef-Lab', 'https://www.it-connect.tech/cyberchef-a-web-application-for-decrypting-decoding-and-transforming-data/'],
     },
     'dc3dd': {
-        'scenario': 'An analyst reaches for dc3dd when encountering unreadable sectors during disk imaging, using cnt=, iskip=, and oskip= parameters before running it to handle errors, and prefers it for its robust error recovery features and ability to report progress upon interruption.',
-        'sources': ['https://www.kali.org/tools/dc3dd/'],
+        'scenario': 'An analyst reaches for dc3dd when imaging a disk with inline hash verification required, such as during forensic acquisition of a test device or system they own, ensuring the image matches the source through SHA-256 hashing logged in the acquisition file. They may run it after confirming authorization and before handing the image to another analyst, preferring it over similar tools for its detailed logging of hash, byte count, and completion status, which is critical for chain of custody and integrity verification.',
+        'sources': ['https://github.com/plaintext-security/plaintext-labs/blob/main/forensics/02-acquisition-imaging/lab.md', 'https://www.kali.org/tools/dc3dd/'],
     },
     'dcfldd': {
         'scenario': "An analyst reaches for dcfldd when imaging a drive to create a forensic copy, ensuring the source device's permissions are restricted with chmod before use to prevent accidental writes; they run it with hash=md5,sha1 and hashlog to verify data integrity, preferring it over dd due to its safety features like multiple output paths and explicit write-blocking warnings.",
@@ -2224,8 +2224,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://blog.didierstevens.com/programs/pdf-tools/'],
     },
     'photorec': {
-        'scenario': 'An analyst reaches for PhotoRec when recovering files from disk images, Encase EWF images, or physical devices like hard disks and USB keys, after ensuring proper permissions and device selection; they may run it following the creation of a disk image or after selecting the target partition, preferring it over similar tools for its support of encrypted file systems, RAID, and direct carving from unallocated space without relying on file system metadata.',
-        'sources': ['https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step'],
+        'scenario': 'An analyst reaches for PhotoRec when recovering deleted files from damaged or unbootable disks, disk images, or encrypted partitions, often after using TestDisk to repair partition tables; they run it with parameters like `/log` for logging or specifying raw devices for speed, preferring it over similar tools for its robust support of fragmented file recovery and diverse image formats like .dd, .E01, and split files.',
+        'sources': ['https://docslib.org/doc/9154809/photorec-step-by-step', 'https://oneuptime.com/blog/post/2026-01-15-recover-deleted-files-testdisk-ubuntu/view', 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step'],
     },
     'pyxswf': {
         'scenario': 'An analyst reaches for pyxswf when examining files like MS Office documents or RTF files suspected of containing embedded Flash (SWF) objects, particularly when SWF streams are fragmented within OLE structures or encoded in hexadecimal within RTF; they may run it after initial file inspection to extract SWF content for further analysis, preferring it over similar tools due to its specific handling of OLE fragmentation and RTF hex-encoded SWF extraction.',

@@ -16,9 +16,9 @@ Christophe GRENIER <grenier@cgsecurity.org>
 
 ## When you'd reach for this
 
-An analyst reaches for PhotoRec when recovering files from disk images, Encase EWF images, or physical devices like hard disks and USB keys, after ensuring proper permissions and device selection; they may run it following the creation of a disk image or after selecting the target partition, preferring it over similar tools for its support of encrypted file systems, RAID, and direct carving from unallocated space without relying on file system metadata.
+An analyst reaches for PhotoRec when recovering deleted files from damaged or unbootable disks, disk images, or encrypted partitions, often after using TestDisk to repair partition tables; they run it with parameters like `/log` for logging or specifying raw devices for speed, preferring it over similar tools for its robust support of fragmented file recovery and diverse image formats like .dd, .E01, and split files.
 
-**Sources:** <https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step>
+**Sources:** <https://docslib.org/doc/9154809/photorec-step-by-step> · <https://oneuptime.com/blog/post/2026-01-15-recover-deleted-files-testdisk-ubuntu/view> · <https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step>
 
 ## Synopsis
 

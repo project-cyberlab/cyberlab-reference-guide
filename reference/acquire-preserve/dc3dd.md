@@ -16,9 +16,9 @@ dc3dd [OPTION 1] [OPTION 2] ... [OPTION N]
 
 ## When you'd reach for this
 
-An analyst reaches for dc3dd when encountering unreadable sectors during disk imaging, using cnt=, iskip=, and oskip= parameters before running it to handle errors, and prefers it for its robust error recovery features and ability to report progress upon interruption.
+An analyst reaches for dc3dd when imaging a disk with inline hash verification required, such as during forensic acquisition of a test device or system they own, ensuring the image matches the source through SHA-256 hashing logged in the acquisition file. They may run it after confirming authorization and before handing the image to another analyst, preferring it over similar tools for its detailed logging of hash, byte count, and completion status, which is critical for chain of custody and integrity verification.
 
-**Sources:** <https://www.kali.org/tools/dc3dd/>
+**Sources:** <https://github.com/plaintext-security/plaintext-labs/blob/main/forensics/02-acquisition-imaging/lab.md> · <https://www.kali.org/tools/dc3dd/>
 
 ## Synopsis
 
