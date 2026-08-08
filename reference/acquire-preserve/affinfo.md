@@ -6,7 +6,7 @@
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Inspect or mount a forensic image container |
 | **Version** | affinfo version 3.7.20 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-07 — [raw help output](../../capture/cyberlab-aio/help/affinfo.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-08 — [raw help output](../../capture/cyberlab-aio/help/affinfo.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

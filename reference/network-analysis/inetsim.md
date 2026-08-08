@@ -6,7 +6,7 @@
 | **Kit** | REMnux · Kali Linux |
 | **Capability** | Simulate network services for detonation |
 | **Version** | INetSim 1.3.2 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-07 — [raw help output](../../capture/cyberlab-aio/help/inetsim.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-08 — [raw help output](../../capture/cyberlab-aio/help/inetsim.help.txt) |
 | **Documentation** | <https://www.inetsim.org/> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
