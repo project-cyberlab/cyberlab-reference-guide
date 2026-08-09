@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | SIFT Workstation (libyal) |
 | **Capability** | Parse ESE / SRUM / Amcache databases |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-08 — [raw help output](../../capture/cyberlab-aio/help/esedbinfo.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/esedbinfo.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

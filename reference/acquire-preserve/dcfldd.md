@@ -6,7 +6,7 @@
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Image a disk, volume or device |
 | **Version** | dcfldd (dcfldd) 1.9 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-08 — [raw help output](../../capture/cyberlab-aio/help/dcfldd.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/dcfldd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

@@ -6,7 +6,7 @@
 | **Kit** | Kali Linux |
 | **Capability** | Crack passwords and hashes |
 | **Version** | v6.2.6 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-08 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

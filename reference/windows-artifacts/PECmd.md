@@ -6,7 +6,7 @@
 | **Kit** | FLARE-VM / SIFT (Eric Zimmerman tools) |
 | **Capability** | Parse execution and persistence artifacts |
 | **Version** | 2026.5.0 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-08 — [raw help output](../../capture/cyberlab-aio/help/PECmd.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/PECmd.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
