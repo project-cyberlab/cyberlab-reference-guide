@@ -26,12 +26,8 @@ ewfverify [ -A codepage ] [ -d digest_type ] [ -f format ]
 ```
 # Verify EWF image integrity and validity
 ewfverify image.E01
-# Verify EWF file integrity against original data
-ewfverify floppy.E01
 # Verify data integrity of E01 file against stored hash
 ewfverify -f files logical.E01
-# Verify EWF image integrity after acquisition
-ewfverify /Cases/001/001_2017_USB_Gold.E01
 ```
 
 ## Options

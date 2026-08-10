@@ -2196,8 +2196,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://crackerfrank.hashnode.dev/cracking-passwords-with-hydra-a-tryhackme-walkthrough', 'https://hackproofhacks.com/blog/password-cracking-with-hydra-hacking-series/', 'https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/'],
     },
     'inetsim': {
-        'scenario': 'An analyst reaches for inetsim when setting up a simulated internet environment for malware analysis, running it before detonating a sample to intercept network traffic and avoid exposing real services. They configure it alongside tools like Wireshark and Fiddler, preferring it for its ability to mimic network responses and capture traffic without requiring actual internet connectivity.',
-        'sources': ['https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md', 'https://seanthegeek.net/posts/beginning-malware-analysis/'],
+        'scenario': 'An analyst reaches for inetsim when setting up a malware analysis lab with VirtualBox and Burp, particularly when encountering installation issues like the "apt-key is deprecated" error, which the documentation addresses with specific keyring setup commands. They may run it after resolving dependencies and configuring the lab environment to simulate network services for analyzing C2 traffic.',
+        'sources': ['https://blog.christophetd.fr/malware-analysis-lab-with-virtualbox-inetsim-and-burp/'],
     },
     'john': {
         'scenario': "An analyst reaches for John when attempting to crack password hashes, often after preparing a larger wordlist and configuring the tool's settings, as it supports multiple modes like single crack, wordlist with rules, and incremental cracking for thoroughness. They may run `john --show` afterward to display cracked passwords, preferring John over similar tools due to its flexibility in using custom charsets, filters, and incremental modes tailored to specific password patterns.",
@@ -2274,6 +2274,10 @@ RESEARCHED: dict[str, dict] = {
     'pyxswf': {
         'scenario': 'An analyst reaches for pyxswf when examining files like MS Office documents or RTF files suspected of containing embedded Flash (SWF) objects, particularly when SWF streams are fragmented within OLE structures or encoded in hexadecimal within RTF; they may run it after initial file inspection to extract SWF content for further analysis, preferring it over similar tools due to its specific handling of OLE fragmentation and RTF hex-encoded SWF extraction.',
         'sources': ['https://github.com/decalage2/oletools/wiki', 'https://github.com/decalage2/oletools/wiki/oleid', 'https://github.com/decalage2/oletools/wiki/olevba'],
+    },
+    'r2': {
+        'scenario': 'An analyst reaches for r2 when examining stripped or complex binaries to analyze code structure, often running commands like `aa` or `aaa` to identify symbols, entry points, and function trees, as it provides detailed opcode-level insights and customizable analysis loops via its API or scripts, which may offer more precision than default tools.',
+        'sources': ['https://book.rada.re/analysis/code_analysis.html', 'https://r2wiki.readthedocs.io/en/latest/tools/radare2/'],
     },
     'rabin2': {
         'scenario': 'An analyst reaches for rabin2 when examining binary files to extract structured information about ELF/PE/MZ/CLASS files, often after extracting them from disk images or PCAPs, as it provides detailed insights into binary structure and security features (e.g., `rabin2 -I` for security checks or `rabin2 -z` for strings) that may be more straightforward or comprehensive than alternatives like `readelf` or `checksec`.',

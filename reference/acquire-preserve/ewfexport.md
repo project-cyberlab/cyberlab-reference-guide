@@ -34,8 +34,6 @@ ewfexport [ -A codepage ] [ -b number_of_sectors ]
 ```
 # Convert EWF image to RAW or another EWF format
 ewfexport image.E01
-# Export files from logical EWF image
-ewfexport image.L01
 ```
 
 ## Options

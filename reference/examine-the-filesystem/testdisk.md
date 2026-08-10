@@ -33,8 +33,6 @@ testdisk /version
 ```
 # Recover partitions and repair filesystems from disk images
 testdisk image.dd to work on a raw disk image
-# Recover files from Encase EWF image
-testdisk image.E01 to recover files from an Encase EWF image
 ```
 
 ## Options

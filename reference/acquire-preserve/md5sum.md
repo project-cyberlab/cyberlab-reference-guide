@@ -25,8 +25,6 @@ md5sum [OPTION]... [FILE]...
 ```
 # Generate MD5 checksum to verify file integrity
 md5sum ravi.pdf
-# Verify file integrity using hash
-md5sum file1.txt
 # Verify files match stored checksums
 md5sum -c files.md5
 # Verify file integrity by comparing MD5 checksum with expected value

@@ -33,8 +33,6 @@ bdeinfo [ -k keys ] [ -o offset ] [ -p password ]
 bdeinfo -p Password /dev/sda1
 # Extract BitLocker encryption details from disk image
 bdeinfo -o $((512*128)) image.dd
-# Extract BitLocker volume details including recovery key and encryption method
-bdeinfo -o $((512*2048)) ~/xmount_pount/Bitlocker_physisch_test.dd
 ```
 
 ## Options

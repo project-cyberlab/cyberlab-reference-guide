@@ -31,8 +31,6 @@ chainsaw [OPTIONS] <COMMAND>
 ./chainsaw search -t 'Event.System.EventID: =4104' evtx_attack_samples/
 # Detect threats in event logs using Sigma rules
 ./chainsaw hunt EVTX-ATTACK-SAMPLES/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml
-# Detect attacks in EVTX logs with Sigma rules
-./chainsaw hunt evtx_attack_samples/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml
 ```
 
 ## Options

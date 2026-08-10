@@ -8,6 +8,28 @@ script. Hand-written invocations belong in ENRICHMENT, which wins.
 from __future__ import annotations
 
 INVOCATIONS: dict[str, list[dict]] = {
+    '7za': [
+        {
+            'task': 'Create password-protected archive with text files',
+            'cmd': '7za a pw.7z *.txt -pSECRET',
+            'src': 'https://thedeveloperblog.com/7-zip-examples',
+        },
+        {
+            'task': 'Add Z files to 7z archive',
+            'cmd': '7za.exe a archive.7z Z*.* -ssc',
+            'src': 'https://thedeveloperblog.com/7-zip-examples',
+        },
+        {
+            'task': 'Restore backup from 7z archive containing tar file',
+            'cmd': '7za x -so tecmint_files.tar.7z | tar xf -',
+            'src': 'https://www.tecmint.com/7zip-command-examples-in-linux/',
+        },
+        {
+            'task': 'Create password-protected archive to secure sensitive data',
+            'cmd': '7za a -p{password_here} tecmint_secrets.tar.7z',
+            'src': 'https://www.tecmint.com/7zip-command-examples-in-linux/',
+        },
+    ],
     'bdeinfo': [
         {
             'task': 'Retrieve BitLocker encryption details from a drive',
@@ -18,11 +40,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Extract BitLocker encryption details from disk image',
             'cmd': 'bdeinfo -o $((512*128)) image.dd',
             'src': 'https://www.aldeid.com/wiki/Category:Encryption/Bitlocker',
-        },
-        {
-            'task': 'Extract BitLocker volume details including recovery key and encryption method',
-            'cmd': 'bdeinfo -o $((512*2048)) ~/xmount_pount/Bitlocker_physisch_test.dd',
-            'src': 'https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html',
         },
     ],
     'binwalk': [
@@ -51,11 +68,6 @@ INVOCATIONS: dict[str, list[dict]] = {
         {
             'task': 'Check duplicate packets in capture file',
             'cmd': 'capinfos -c dupes.pcap',
-            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
-        },
-        {
-            'task': 'Check capture file for duplicate packets',
-            'cmd': 'capinfos -c nodups.pcap',
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
         },
         {
@@ -95,26 +107,11 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': './chainsaw hunt EVTX-ATTACK-SAMPLES/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml',
             'src': 'https://github.com/WithSecureLabs/chainsaw',
         },
-        {
-            'task': 'Detect attacks in EVTX logs with Sigma rules',
-            'cmd': './chainsaw hunt evtx_attack_samples/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml',
-            'src': 'https://github.com/WithSecureLabs/chainsaw',
-        },
     ],
     'clamscan': [
         {
             'task': 'Scan directory and subdirectories for malware',
             'cmd': 'clamscan --recursive .',
-            'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
-        },
-        {
-            'task': 'Full system malware scan',
-            'cmd': 'clamscan --recursive /',
-            'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
-        },
-        {
-            'task': 'Scan entire system for malware detection',
-            'cmd': 'clamscan.exe --recursive C:\\',
             'src': 'https://docs.clamav.net/manual/Usage/Scanning.html',
         },
         {
@@ -147,40 +144,15 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://braincraze.net/dcfldd-a-comprehensive-guide-and-usage-examples/',
         },
         {
-            'task': 'Clone disk to image file for forensic analysis',
-            'cmd': 'dcfldd if=/dev/sda of=/path/to/output.img',
-            'src': 'https://braincraze.net/dcfldd-a-comprehensive-guide-and-usage-examples/',
-        },
-        {
             'task': 'Create zero-filled test file for analysis',
             'cmd': 'dcfldd if=/dev/zero of=test bs=50M count=2',
             'src': 'https://www.mankier.com/1/dcfldd',
-        },
-        {
-            'task': 'Create a 100MB zero-filled test file',
-            'cmd': 'dcfldd if=/dev/zero of=test bs=1M count=100',
-            'src': 'https://www.mankier.com/1/dcfldd',
-        },
-        {
-            'task': 'Create a zero-filled test file for forensic analysis or data testing',
-            'cmd': 'dcfldd if=/dev/zero of=test bs=100M count=1',
-            'src': 'https://www.mankier.com/1/dcfldd',
-        },
-        {
-            'task': 'Create forensic disk image',
-            'cmd': 'dcfldd if=[/dev/sda] of=[disk.img] statusinterval=[256]',
-            'src': 'https://linuxcommandlibrary.com/man/dcfldd',
         },
     ],
     'dd': [
         {
             'task': 'Clone hard disk from source to target',
             'cmd': 'dd if=/dev/sda of=/dev/sdb',
-            'src': 'https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html',
-        },
-        {
-            'task': 'Restore disk image to target partition',
-            'cmd': 'dd if=hdadisk.img of=/dev/sdb3',
             'src': 'https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html',
         },
         {
@@ -212,21 +184,11 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'evtxexport -f xml p1/Windows/System32/winevt/Logs/Application.evtx',
             'src': 'https://github.com/libyal/libevtx/wiki/Tools',
         },
-        {
-            'task': 'Extract Windows event logs from mounted volume',
-            'cmd': 'evtxexport -p p1/ -r p1/Windows/System32/config/ p1/Windows/System32/winevt/Logs/System.evtx',
-            'src': 'https://github.com/libyal/libevtx/wiki/Tools',
-        },
     ],
     'ewfacquire': [
         {
             'task': 'Create EWF image from device or file',
             'cmd': 'ewfacquire /dev/sda',
-            'src': 'https://forensics.wiki/libewf/',
-        },
-        {
-            'task': 'Convert RAW to EWF or image a device',
-            'cmd': 'ewfacquire myfile.raw',
             'src': 'https://forensics.wiki/libewf/',
         },
         {
@@ -246,11 +208,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'ewfexport image.E01',
             'src': 'https://forensics.wiki/libewf/',
         },
-        {
-            'task': 'Export files from logical EWF image',
-            'cmd': 'ewfexport image.L01',
-            'src': 'https://forensics.wiki/libewf/',
-        },
     ],
     'ewfinfo': [
         {
@@ -266,24 +223,9 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://kb.offsec.nl/tools/forensics/ewf-tools/',
         },
         {
-            'task': 'Mount EWF image to access its file system',
-            'cmd': 'ewfmount image.E01 mount_point',
-            'src': 'https://forensics.wiki/libewf/',
-        },
-        {
             'task': 'Mount logical image to access files',
             'cmd': 'ewfmount -f files image.L01 mount_point',
             'src': 'https://forensics.wiki/libewf/',
-        },
-        {
-            'task': 'Mount EWF image to access disk as physical device',
-            'cmd': 'ewfmount /Cases/001/001_2017_USB_Gold.E01 /mnt/ewf',
-            'src': 'https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html',
-        },
-        {
-            'task': 'Mount EWF image to a folder for file system access',
-            'cmd': 'ewfmount image.E01 <folder>',
-            'src': 'https://hanifi.ca/tools/forensics/ewf-tools/',
         },
     ],
     'ewfverify': [
@@ -293,19 +235,41 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://forensics.wiki/libewf/',
         },
         {
-            'task': 'Verify EWF file integrity against original data',
-            'cmd': 'ewfverify floppy.E01',
-            'src': 'https://www.mankier.com/1/ewfverify',
-        },
-        {
             'task': 'Verify data integrity of E01 file against stored hash',
             'cmd': 'ewfverify -f files logical.E01',
             'src': 'https://www.mankier.com/1/ewfverify',
         },
+    ],
+    'file': [
         {
-            'task': 'Verify EWF image integrity after acquisition',
-            'cmd': 'ewfverify /Cases/001/001_2017_USB_Gold.E01',
-            'src': 'https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html',
+            'task': 'Identify file type and format',
+            'cmd': 'file app.py',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view',
+        },
+        {
+            'task': 'Identify file MIME type for scripting or automation',
+            'cmd': 'file -i script.py',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view',
+        },
+        {
+            'task': 'Identify file types and their MIME information',
+            'cmd': 'file -b document.pdf',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view',
+        },
+        {
+            'task': 'Identify file type and MIME for analysis',
+            'cmd': 'file -b -i photo.jpg',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view',
+        },
+        {
+            'task': 'Process a list of files to identify their types',
+            'cmd': 'file -f filelist.txt',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view',
+        },
+        {
+            'task': 'Identify the actual file type of a symbolic link target',
+            'cmd': 'file -L /usr/bin/python',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view',
         },
     ],
     'foremost': [
@@ -315,15 +279,27 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.kali.org/tools/foremost/',
         },
     ],
+    'freshclam': [
+        {
+            'task': 'Maintain up-to-date virus databases with regular checks',
+            'cmd': 'freshclam -d -c 2',
+            'src': 'https://manpages.ubuntu.com/manpages/trusty/man1/freshclam.1.html',
+        },
+        {
+            'task': 'Update virus database automatically',
+            'cmd': 'freshclam --quiet',
+            'src': 'https://codelucky.com/freshclam-command-linux/',
+        },
+        {
+            'task': 'Update ClamAV virus database locally',
+            'cmd': 'freshclam --datadir=.',
+            'src': 'https://manpages.ubuntu.com/manpages/trusty/man1/freshclam.1.html',
+        },
+    ],
     'icat': [
         {
             'task': 'Extract file content by inode from disk image',
             'cmd': 'icat image.dd <inode> > file_recovered',
-            'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
-        },
-        {
-            'task': 'Extract file content by inode to recover deleted data',
-            'cmd': 'icat image.dd 1234 > recovered_file.txt',
             'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
         },
         {
@@ -348,22 +324,12 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'mactime -b "$OUTPUT/body.txt" -d -z UTC > "$OUTPUT/timeline.csv"',
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
-        {
-            'task': 'Generate timeline of file events within specific date range',
-            'cmd': 'mactime -b body.txt -d -z UTC 2026-01-14..2026-01-15 > incident_timeline.csv',
-            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
-        },
     ],
     'md5sum': [
         {
             'task': 'Generate MD5 checksum to verify file integrity',
             'cmd': 'md5sum ravi.pdf',
             'src': 'https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/',
-        },
-        {
-            'task': 'Verify file integrity using hash',
-            'cmd': 'md5sum file1.txt',
-            'src': 'https://www.howtoforge.com/linux-md5sum-command/',
         },
         {
             'task': 'Verify files match stored checksums',
@@ -402,11 +368,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'mergecap -a -w outoforder.pcap download-good.pcap',
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
         },
-        {
-            'task': 'Merge split capture files into a single consolidated file',
-            'cmd': 'mergecap -w allineone.cap dbadsplit.pcap-00001 dbadsplit.pcap-00002',
-            'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
-        },
     ],
     'ngrep': [
         {
@@ -434,10 +395,37 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'ngrep -I /tmp/dns.dump port 80',
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
+    ],
+    'nping': [
         {
-            'task': 'Monitor network syslog traffic for error occurrences',
-            'cmd': "ngrep -d any 'error' port syslog",
-            'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
+            'task': 'Test host reachability and open ports',
+            'cmd': 'nping scanme.nmap.org',
+            'src': 'https://nmap.org/book/nping-man.html',
+        },
+        {
+            'task': 'Test target port responsiveness with two rounds',
+            'cmd': 'nping --tcp -c 2 1.1.1.1 -p 100-102',
+            'src': 'https://nmap.org/book/nping-man.html',
+        },
+        {
+            'task': 'Testing network connectivity via echo server',
+            'cmd': 'nping --echo-server "public" -e wlan0 -vvv',
+            'src': 'https://nmap.org/book/nping-man.html',
+        },
+        {
+            'task': 'Test network host with custom TCP packet parameters',
+            'cmd': 'nping --tcp -p 80 --flags rst --ttl 2 192.168.1.1',
+            'src': 'https://nmap.org/book/nping-man.html',
+        },
+        {
+            'task': 'Send ICMP time-exceeded packets to test network path',
+            'cmd': 'nping --icmp --icmp-type time --delay 500ms 192.168.254.254',
+            'src': 'https://nmap.org/book/nping-man.html',
+        },
+        {
+            'task': 'Test TCP port responsiveness across multiple hosts with delays',
+            'cmd': 'nping --tcp -c 1 --delay 500ms 1.1.1.1 2.2.2.2 3.3.3.3 -p 137-139',
+            'src': 'https://nmap.org/book/nping-man.html',
         },
     ],
     'objdump': [
@@ -486,11 +474,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/decalage2/oletools/wiki/olevba',
         },
         {
-            'task': 'Scan VBA source code for obfuscated strings and malicious content',
-            'cmd': 'olevba source_code.vba',
-            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
-        },
-        {
             'task': 'Decode obfuscated strings in VBA macro for analysis',
             'cmd': 'olevba file.doc --decode',
             'src': 'https://github.com/decalage2/oletools/wiki/olevba',
@@ -500,21 +483,11 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'olevba file.doc --reveal',
             'src': 'https://github.com/decalage2/oletools/wiki/olevba',
         },
-        {
-            'task': 'Analyze VBA macros in multiple files for malware detection',
-            'cmd': 'olevba "MalwareZoo/VBA/*"',
-            'src': 'https://github.com/decalage2/oletools/wiki/olevba',
-        },
     ],
     'openssl': [
         {
             'task': 'Verify certificate validity and trust chain',
             'cmd': 'openssl verify cert.pem',
-            'src': 'https://www.madboa.com/geek/openssl/',
-        },
-        {
-            'task': 'Verify certificate validity and trust chain',
-            'cmd': 'openssl verify remote.site.pem',
             'src': 'https://www.madboa.com/geek/openssl/',
         },
     ],
@@ -524,10 +497,32 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': 'photorec image.dd to carve a raw disk image',
             'src': 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step',
         },
+    ],
+    'r2': [
         {
-            'task': 'Recover files from Encase EWF image',
-            'cmd': 'photorec image.E01 to recover files from an Encase EWF image',
-            'src': 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step',
+            'task': 'Spawn and debug a program',
+            'cmd': 'r2 -d ls',
+            'src': 'https://book.rada.re/first_steps/commandline_flags.html',
+        },
+        {
+            'task': 'Load existing project file',
+            'cmd': 'r2 -p test',
+            'src': 'https://book.rada.re/first_steps/commandline_flags.html',
+        },
+        {
+            'task': 'Analyze raw binary dump for carving',
+            'cmd': 'r2 -n dump.bin',
+            'src': 'https://hexmos.com/freedevtools/c/cmd/r2/',
+        },
+        {
+            'task': 'Resize files to original size for carving analysis',
+            'cmd': 'r2 -wnqc"r $sz" $a',
+            'src': 'https://hexmos.com/freedevtools/c/cmd/r2/',
+        },
+        {
+            'task': 'Analyze FAT binary file structure and contents',
+            'cmd': 'r2 -a ppc -b 32 ls.fat',
+            'src': 'https://book.rada.re/first_steps/commandline_flags.html',
         },
     ],
     'rahash2': [
@@ -583,11 +578,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'cmd': "rasm2 -a x86 -b 32 -d '90'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
         },
-        {
-            'task': 'Disassemble machine code into assembly instructions',
-            'cmd': "rasm2 -a x86 -b 32 'mov eax, 33'",
-            'src': 'https://www.mankier.com/1/rasm2',
-        },
     ],
     'ssdeep': [
         {
@@ -601,11 +591,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
         },
         {
-            'task': 'Compare signature files to find matching or similar entries',
-            'cmd': 'ssdeep -r /usr >list2.txt',
-            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
-        },
-        {
             'task': 'Detect source code reuse by comparing file similarities',
             'cmd': 'ssdeep -b foo.txt >hashes.txt',
             'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
@@ -613,11 +598,6 @@ INVOCATIONS: dict[str, list[dict]] = {
         {
             'task': 'Detect file similarities using fuzzy hash matching',
             'cmd': 'ssdeep -b -m hashes.txt bar.txt',
-            'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
-        },
-        {
-            'task': 'Check if file matches known signature for identification',
-            'cmd': 'ssdeep -b -m sig.txt partial.avi',
             'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
         },
     ],
@@ -642,11 +622,6 @@ INVOCATIONS: dict[str, list[dict]] = {
         {
             'task': 'Recover partitions and repair filesystems from disk images',
             'cmd': 'testdisk image.dd to work on a raw disk image',
-            'src': 'https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step',
-        },
-        {
-            'task': 'Recover files from Encase EWF image',
-            'cmd': 'testdisk image.E01 to recover files from an Encase EWF image',
             'src': 'https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step',
         },
     ],

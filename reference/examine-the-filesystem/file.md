@@ -21,6 +21,23 @@ Identify a file's type from its contents rather than its name, using magic signa
 file [OPTION...] [FILE...]
 ```
 
+## Common invocations
+
+```
+# Identify file type and format
+file app.py
+# Identify file MIME type for scripting or automation
+file -i script.py
+# Identify file types and their MIME information
+file -b document.pdf
+# Identify file type and MIME for analysis
+file -b -i photo.jpg
+# Process a list of files to identify their types
+file -f filelist.txt
+# Identify the actual file type of a symbolic link target
+file -L /usr/bin/python
+```
+
 ## Options
 
 All 54 options parsed from the captured help text; 20 reviewed with usage guidance.

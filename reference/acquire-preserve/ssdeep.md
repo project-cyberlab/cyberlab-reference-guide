@@ -34,14 +34,10 @@ ssdeep [-m file] [-k file] [-dpgvrsblcxa] [-t val] [-h|-V] [FILES]
 ssdeep -r *
 # Compare signature files to detect overlapping entries
 ssdeep -r /etc >list1.txt
-# Compare signature files to find matching or similar entries
-ssdeep -r /usr >list2.txt
 # Detect source code reuse by comparing file similarities
 ssdeep -b foo.txt >hashes.txt
 # Detect file similarities using fuzzy hash matching
 ssdeep -b -m hashes.txt bar.txt
-# Check if file matches known signature for identification
-ssdeep -b -m sig.txt partial.avi
 ```
 
 ## Options

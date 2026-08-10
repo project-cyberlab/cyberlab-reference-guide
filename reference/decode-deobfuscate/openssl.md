@@ -18,8 +18,6 @@ The general-purpose crypto toolkit: inspect certificates, compute digests, encry
 ```
 # Verify certificate validity and trust chain
 openssl verify cert.pem
-# Verify certificate validity and trust chain
-openssl verify remote.site.pem
 ```
 
 ## Options

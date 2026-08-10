@@ -29,8 +29,6 @@ ewfacquire [ -A codepage ] [ -b number_of_sectors ]
 ```
 # Create EWF image from device or file
 ewfacquire /dev/sda
-# Convert RAW to EWF or image a device
-ewfacquire myfile.raw
 # Convert split optical disc RAW to EWF image
 ewfacquire -T optical.cue optical.iso
 # Convert RAW image to EWF format

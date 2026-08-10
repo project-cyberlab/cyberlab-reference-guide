@@ -36,8 +36,6 @@ mergecap *.pcap -w merged.pcapng
 mergecap -w compare.pcap a.pcap b-shifted.pcap
 # Merge capture files into single output file
 mergecap -a -w outoforder.pcap download-good.pcap
-# Merge split capture files into a single consolidated file
-mergecap -w allineone.cap dbadsplit.pcap-00001 dbadsplit.pcap-00002
 ```
 
 ## Options

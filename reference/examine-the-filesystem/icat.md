@@ -26,8 +26,6 @@ icat [-hrRsvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] imag
 ```
 # Extract file content by inode from disk image
 icat image.dd <inode> > file_recovered
-# Extract file content by inode to recover deleted data
-icat image.dd 1234 > recovered_file.txt
 # Generate MD5 hash of extracted file data
 icat -o 2048 "$EVIDENCE" 12345 | md5sum
 # Recover file from evidence by inode

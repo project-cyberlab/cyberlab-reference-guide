@@ -43,8 +43,6 @@ ngrep -w 'm' -I /tmp/dns.dump
 ngrep -tD ns3 -I /tmp/dns.dump
 # Search network dump for traffic on specific port
 ngrep -I /tmp/dns.dump port 80
-# Monitor network syslog traffic for error occurrences
-ngrep -d any 'error' port syslog
 ```
 
 ## Options

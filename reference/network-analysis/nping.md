@@ -25,6 +25,23 @@ An analyst reaches for nping when they need to send custom network packets for t
 nping [Probe mode] [Options] {target specification}
 ```
 
+## Common invocations
+
+```
+# Test host reachability and open ports
+nping scanme.nmap.org
+# Test target port responsiveness with two rounds
+nping --tcp -c 2 1.1.1.1 -p 100-102
+# Testing network connectivity via echo server
+nping --echo-server "public" -e wlan0 -vvv
+# Test network host with custom TCP packet parameters
+nping --tcp -p 80 --flags rst --ttl 2 192.168.1.1
+# Send ICMP time-exceeded packets to test network path
+nping --icmp --icmp-type time --delay 500ms 192.168.254.254
+# Test TCP port responsiveness across multiple hosts with delays
+nping --tcp -c 1 --delay 500ms 1.1.1.1 2.2.2.2 3.3.3.3 -p 137-139
+```
+
 ## Options
 
 All 85 options parsed from the captured help text. The final column is filled in by review.

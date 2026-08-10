@@ -28,8 +28,6 @@ capinfos [options] <infile> ...
 capinfos -TtEc *.pcap
 # Check duplicate packets in capture file
 capinfos -c dupes.pcap
-# Check capture file for duplicate packets
-capinfos -c nodups.pcap
 # Generate detailed capture file analysis report
 capinfos mycapture.pcap
 # Generate tabular report of capture file details

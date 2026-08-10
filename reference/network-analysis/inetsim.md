@@ -17,9 +17,9 @@ Emulate common network services and interact with malware.
 
 ## When you'd reach for this
 
-An analyst reaches for inetsim when setting up a simulated internet environment for malware analysis, running it before detonating a sample to intercept network traffic and avoid exposing real services. They configure it alongside tools like Wireshark and Fiddler, preferring it for its ability to mimic network responses and capture traffic without requiring actual internet connectivity.
+An analyst reaches for inetsim when setting up a malware analysis lab with VirtualBox and Burp, particularly when encountering installation issues like the "apt-key is deprecated" error, which the documentation addresses with specific keyring setup commands. They may run it after resolving dependencies and configuring the lab environment to simulate network services for analyzing C2 traffic.
 
-**Sources:** <https://github.com/gl0bal01/intel-codex/blob/main/Security/Analysis/sop-malware-analysis.md> · <https://seanthegeek.net/posts/beginning-malware-analysis/>
+**Sources:** <https://blog.christophetd.fr/malware-analysis-lab-with-virtualbox-inetsim-and-burp/>
 
 ## Synopsis
 

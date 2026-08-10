@@ -1,8 +1,4 @@
 {
-  "7za": {
-    "attempts": 85,
-    "seeds": 0
-  },
   "cyberchef": {
     "attempts": 85,
     "seeds": 0
@@ -11,56 +7,12 @@
     "attempts": 85,
     "seeds": 4
   },
-  "file": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "freshclam": {
-    "attempts": 85,
-    "seeds": 0
-  },
   "img_stat": {
     "attempts": 85,
     "seeds": 5
   },
-  "inetsim": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "nping": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "ntfs-3g": {
-    "attempts": 85,
-    "seeds": 0
-  },
   "numbers-to-string.py": {
     "attempts": 85,
-    "seeds": 0
-  },
-  "objdump": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "openssl": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "r2": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "rahash2": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "rasm2": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "readelf": {
-    "attempts": 84,
     "seeds": 0
   },
   "readelf.py": {
@@ -74,21 +26,5 @@
   "tsk_gettimes": {
     "attempts": 85,
     "seeds": 5
-  },
-  "vdbbin": {
-    "attempts": 196,
-    "seeds": 0
-  },
-  "vivbin": {
-    "attempts": 196,
-    "seeds": 0
-  },
-  "xxd": {
-    "attempts": 196,
-    "seeds": 0
-  },
-  "yarac": {
-    "attempts": 196,
-    "seeds": 0
   }
 }

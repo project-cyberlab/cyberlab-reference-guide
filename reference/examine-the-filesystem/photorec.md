@@ -32,8 +32,6 @@ photorec /version
 ```
 # Recover files from raw disk image
 photorec image.dd to carve a raw disk image
-# Recover files from Encase EWF image
-photorec image.E01 to recover files from an Encase EWF image
 ```
 
 ## Options

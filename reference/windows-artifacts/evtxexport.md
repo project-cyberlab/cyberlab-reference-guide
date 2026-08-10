@@ -36,8 +36,6 @@ evtxexport [ -c codepage ] [ -f format ] [ -l log_file ]
 evtxexport -p c/ -r c/Windows/System32/config/ c/Windows/System32/winevt/Logs/Apllication.Evtx
 # Export event logs to XML format from file
 evtxexport -f xml p1/Windows/System32/winevt/Logs/Application.evtx
-# Extract Windows event logs from mounted volume
-evtxexport -p p1/ -r p1/Windows/System32/config/ p1/Windows/System32/winevt/Logs/System.evtx
 ```
 
 ## Options

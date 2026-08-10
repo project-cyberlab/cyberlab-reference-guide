@@ -35,8 +35,6 @@ rasm2 -L
 rasm2 -a java 'nop'
 # Disassemble hex bytes into assembly instructions
 rasm2 -a x86 -b 32 -d '90'
-# Disassemble machine code into assembly instructions
-rasm2 -a x86 -b 32 'mov eax, 33'
 ```
 
 ## Options

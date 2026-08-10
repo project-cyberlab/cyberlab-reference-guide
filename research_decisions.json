@@ -1658,5 +1658,13 @@
   "mergecap -I": {
     "verdict": "accept",
     "why": "Correct and a real trap. mergecap -I sets how Interface Description Blocks are merged, and getting it wrong silently duplicates interfaces in the output rather than failing, so a merged capture looks fine and misattributes packets. Both citations external (tshark.dev, the Wireshark man page)."
+  },
+  "freshclam": {
+    "verdict": "reject",
+    "why": "Setup and troubleshooting, not a case. \"After installation\", \"when encountering errors like missing shared libraries\", \"may run sudo ldconfig beforehand\" -- none of that is a property of the evidence in front of the analyst. The real trigger for freshclam is that clamscan is only as good as its last database update, so you run it before a scan you intend to trust. Re-research for that."
+  },
+  "r2": {
+    "verdict": "accept",
+    "why": "A real analytic trigger: a stripped or complex binary where the symbols are gone and you need aa/aaa to recover function boundaries and entry points before anything else is readable. Names what is true about the sample rather than about the toolchain. Both citations external (the radare2 book and r2wiki)."
   }
 }

@@ -32,8 +32,6 @@ or:  dd OPTION
 ```
 # Clone hard disk from source to target
 dd if=/dev/sda of=/dev/sdb
-# Restore disk image to target partition
-dd if=hdadisk.img of=/dev/sdb3
 # Wipe hard disk by overwriting with zeros
 dd if=/dev/zero of=/dev/hda bs=4K conv=noerror,sync
 ```

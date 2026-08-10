@@ -336,7 +336,31 @@ def invocations_for(tool: str, limit: int = 8,
             seen[key] = {"command": key, "count": 1, "url": page.get("url", ""),
                          "flags": sorted(set(re.findall(r"(?<![\w-])(-{1,2}[A-Za-z][\w-]*)", key)))}
     ranked = sorted(seen.values(), key=lambda r: (-r["count"], len(r["command"])))
-    return ranked[:limit]
+
+    # One row per command SHAPE, not per command.
+    #
+    # `file` returned six invocations -- file app.py, file run.sh, file
+    # data.zip, file /bin/bash, file photo.jpg, file image.png -- every one
+    # of them real, every one captioned "identify file type", and together
+    # they teach exactly what the first one teaches. Six rows of padding on
+    # a page whose whole value is being short.
+    #
+    # Shape is the tool plus the set of flags it uses plus how many operands
+    # follow. Different flags mean a different lesson and survive; different
+    # filenames do not.
+    out, shapes = [], set()
+    for rec in ranked:
+        parts = rec["command"].split()
+        flags = frozenset(f.split("=")[0] for f in parts[1:] if f.startswith("-"))
+        operands = sum(1 for p in parts[1:] if not p.startswith("-"))
+        shape = (flags, min(operands, 3))
+        if shape in shapes:
+            continue
+        shapes.add(shape)
+        out.append(rec)
+        if len(out) >= limit:
+            break
+    return out
 
 
 def main() -> int:

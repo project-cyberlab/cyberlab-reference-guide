@@ -27,8 +27,6 @@ An analyst reaches for mactime after gathering temporal data from file systems, 
 mactime -b body.txt -d > timeline.csv
 # Generate timeline with file paths and timestamps
 mactime -b "$OUTPUT/body.txt" -d -z UTC > "$OUTPUT/timeline.csv"
-# Generate timeline of file events within specific date range
-mactime -b body.txt -d -z UTC 2026-01-14..2026-01-15 > incident_timeline.csv
 ```
 
 ## Options
