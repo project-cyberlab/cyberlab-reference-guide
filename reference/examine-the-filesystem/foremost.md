@@ -29,13 +29,13 @@ foremost -t doc,jpg,pdf,xls -i image.dd
 
 ## Options
 
-All 11 options parsed from the captured help text; 8 reviewed with usage guidance.
+All 11 options parsed from the captured help text; 9 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-V` | — | - display copyright information and exit |  |
 | `-t` | — | - specify file type. (-t jpeg,pdf ...) | Restrict carving to given types (`jpg`, `pdf`, `all`). Narrowing this is the difference between a usable result and 40,000 files. |
-| `-d` | — | - turn on indirect block detection (for UNIX file-systems) |  |
+| `-d` | — | - turn on indirect block detection (for UNIX file-systems) | An analyst would use the -d flag when examining UNIX file systems to enable indirect block detection for more thorough file recovery. |
 | `-i` | — | - specify input file (default is stdin) | Input file or device to carve from. |
 | `-a` | — | - Write all headers, perform no error detection (corrupted files) | Write all headers found, even without a valid footer. |
 | `-w` | — | - Only write the audit file, do not write any detected files to the disk | Write the audit file only, carving nothing — a cheap dry run. |

@@ -790,6 +790,68 @@ def flush(results: list[dict], review: list[dict], misses: list[dict],
         f.write_text(json.dumps(merged, indent=2), encoding="utf-8")
 
 
+BARREN = ROOT / "research_barren.json"
+
+
+def barren_tools() -> dict[str, int]:
+    """Tools that have never produced anything, and the seed count when so.
+
+    Left to itself the rotation is fair, and fairness is the problem: a tool
+    with no corpus misses every round and its attempt count rises in step
+    with everyone else's, so it is picked again forever. vdbbin, vivbin, xxd
+    and yarac had each been attempted 196 times without once producing a
+    note, and 23 such tools were consuming 19% of every attempt the loop
+    made.
+
+    Skipping them is only safe because the skip is tied to the seed count.
+    This project is not allowed to conclude a tool has no sources -- and it
+    is not concluding that here. It is recording that the sources it
+    currently has yield nothing, and the moment the tool is seeded the count
+    changes and the tool becomes eligible again on its own.
+
+    Note what is NOT used as the trigger: a run of misses alone. A tool can
+    miss because search was suspended, which says nothing about the tool.
+    The condition is a long run of attempts where every single one missed.
+    """
+    try:
+        return json.loads(BARREN.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def seed_counts() -> dict[str, int]:
+    try:
+        seeds = json.loads((ROOT / "catalog" / "seed-urls.json")
+                           .read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return {k: len(v) for k, v in seeds.items() if not k.startswith("_")}
+
+
+def refresh_barren(min_attempts: int = 8) -> dict[str, int]:
+    """Recompute the barren list from the log, and write it."""
+    outcomes: dict[str, list[str]] = {}
+    try:
+        txt = LIVE_LOG.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return {}
+    for verdict, tool in re.findall(
+            r"(KEPT|MISS|REJECTED|REVIEW)\s+(\S+)\s\s", txt):
+        outcomes.setdefault(tool, []).append(verdict)
+    seeds = seed_counts()
+    out = {t: seeds.get(t, 0) for t, v in outcomes.items()
+           if len(v) >= min_attempts and all(x == "MISS" for x in v)}
+    BARREN.write_text(json.dumps(out, indent=2, sort_keys=True),
+                      encoding="utf-8")
+    return out
+
+
+def still_barren() -> set[str]:
+    """Barren tools whose seed set has not grown since they were recorded."""
+    seeds = seed_counts()
+    return {t for t, n in barren_tools().items() if seeds.get(t, 0) <= n}
+
+
 def attempt_counts() -> Counter:
     """How many times each tool has actually been attempted, from the log.
 
@@ -865,8 +927,15 @@ def main() -> int:
             # whole time. Same shape as every other failure here: a fallback
             # that looks like progress while covering the same ground.
             counts = attempt_counts()
-            order = {t: i for i, t in enumerate(tools_needing_work(10 ** 6, set()))}
+            refresh_barren()
+            skip = still_barren()
+            order = {t: i for i, t in enumerate(
+                tools_needing_work(10 ** 6, set())) if t not in skip}
             tools = sorted(order, key=lambda t: (counts.get(t, 0), order[t]))[:a.auto]
+            if skip:
+                print(f"skipping {len(skip)} tools that have never produced a "
+                      f"note from their current sources; seeding any of them "
+                      f"makes it eligible again", flush=True)
             print(f"all tools attempted; next pass takes the least-attempted "
                   f"{len(tools)} (lowest count {min(counts.get(t, 0) for t in tools) if tools else 0})")
         print(f"auto-selected {len(tools)} tools: {', '.join(tools[:10])}"

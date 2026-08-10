@@ -29,7 +29,7 @@ frida [options] target
 
 ## Options
 
-All 66 options parsed from the captured help text; 5 reviewed with usage guidance.
+All 66 options parsed from the captured help text; 6 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -58,8 +58,8 @@ All 66 options parsed from the captured help text; 5 reviewed with usage guidanc
 | `--attach-name` | NAME | attach to NAME |  |
 | `-N` | IDENTIFIER | attach to IDENTIFIER | When an analyst needs to inject a script into a specific Android application to modify its behavior, such as bypassing validation or decrypting a flag, they would use the -N flag to target the application by name. |
 | `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER | When an analyst needs to inject a script into a specific Android application to modify its behavior, such as bypassing validation or decrypting a flag, they would use the -N flag to target the application by name. |
-| `-p` | PID | attach to PID |  |
-| `--attach-pid` | PID | attach to PID |  |
+| `-p` | PID | attach to PID | When an analyst needs to inject a JS script into an already running target process on a USB-connected device by specifying its process ID (PID) instead of launching the application anew. |
+| `--attach-pid` | PID | attach to PID | When an analyst needs to inject a JS script into an already running target process on a USB-connected device by specifying its process ID (PID) instead of launching the application anew. |
 | `-W` | PATTERN | await spawn matching PATTERN |  |
 | `--await` | PATTERN | await spawn matching PATTERN |  |
 | `--stdio` | inherit,pipe | stdio behavior when spawning (defaults to “inherit”) |  |

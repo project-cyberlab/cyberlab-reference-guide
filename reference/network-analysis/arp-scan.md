@@ -14,6 +14,12 @@
 
 Target hosts must be specified on the command line unless the --file or
 
+## When you'd reach for this
+
+An analyst reaches for arp-scan when they need to verify the presence of a system with known IP and MAC addresses on a LAN, often running it first with a broadcast to determine the MAC address and then again targeting the specific MAC address for a quieter scan. They may use it after identifying a host via broadcast or before confirming its presence without alerting other network stations, as targeting a specific MAC avoids broadcasting to all devices.
+
+**Sources:** <https://github.com/royhills/arp-scan/wiki/arp-scan-User-Guide>
+
 ## Synopsis
 
 ```

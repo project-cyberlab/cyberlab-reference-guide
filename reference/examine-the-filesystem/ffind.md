@@ -15,6 +15,12 @@
 
 Find the file name that points at a given inode — the reverse of a directory lookup.
 
+## When you'd reach for this
+
+An analyst reaches for ffind when searching for files based on string content or file signatures within a disk image, often after creating an image with tools like dd, as it efficiently locates files without requiring prior knowledge of inode numbers, making it preferable to manual searches or tools like fls for metadata-based queries.
+
+**Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Body-file> · <https://github.com/sleuthkit/sleuthkit/wiki/Timelines> · <https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg>
+
 ## Synopsis
 
 ```

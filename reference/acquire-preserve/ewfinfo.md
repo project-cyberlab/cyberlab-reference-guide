@@ -13,6 +13,12 @@
 
 Show the metadata, hashes and acquisition details recorded inside an EWF/E01 image.
 
+## When you'd reach for this
+
+When an analyst is working with an E01 file, they run ewfinfo first to extract and save metadata such as imaging date and tool used, which is crucial for documentation and evidence reference. They may use ewfmount before accessing the raw image, and prefer ewfinfo over other tools because it specifically captures the metadata stored within the EWF wrapper.
+
+**Sources:** <https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a> · <https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html>
+
 ## Synopsis
 
 ```

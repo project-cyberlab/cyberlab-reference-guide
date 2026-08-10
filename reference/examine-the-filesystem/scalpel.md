@@ -32,12 +32,12 @@ scalpel [-b] [-c <config file>] [-d] [-h|V] [-i <file>]
 
 ## Options
 
-All 17 options parsed from the captured help text. The final column is filled in by review.
+All 17 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-b` | — | Carve files even if defined footers aren't discovered within maximum carve size for file type [foremost 0.69 compat mode]. |  |
-| `-c` | — | Choose configuration file. |  |
+| `-c` | — | Choose configuration file. | An analyst would use the -c flag when they need to specify a custom configuration file to define or modify the header/footer database used for file carving. |
 | `-d` | — | Generate header/footer database; will bypass certain optimizations and discover all footers, so performance suffers. Doesn't affect the set of files carved. **EXPERIMENTAL** |  |
 | `-h` | — | Print this help message and exit. |  |
 | `-i` | — | Read names of disk images from specified file. |  |

@@ -14,6 +14,12 @@
 
 Stream the raw contents of an AFF container to stdout, so tools that cannot read AFF can be fed the image through a pipe rather than a full conversion to raw.
 
+## When you'd reach for this
+
+An analyst reaches for affcat when examining AFF files to extract or verify specific segments, pages, or sectors of a disk image, often after acquiring or recovering data, as it allows precise control over output with options like -s, -p, -S, and -b, making it preferable for targeted forensic analysis over broader tools like affverify or affstats.
+
+**Sources:** <https://www.kali.org/tools/afflib/>
+
 ## Synopsis
 
 ```

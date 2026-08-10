@@ -13,6 +13,12 @@
 
 Run regipy's plugins over a hive and emit structured results. The Python counterpart to RegRipper, and the easier one to embed in a pipeline because the output is JSON rather than formatted text.
 
+## When you'd reach for this
+
+An analyst reaches for regipy-plugins-run after dumping a registry hive to disk, as it automatically detects the hive type and executes relevant plugins for analysis, offering efficiency over manual plugin selection or alternative tools that lack automatic hive-type detection.
+
+**Sources:** <https://github.com/mkorman90/regipy>
+
 ## Synopsis
 
 ```

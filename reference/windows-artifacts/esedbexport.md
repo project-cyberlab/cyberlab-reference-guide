@@ -28,7 +28,7 @@ esedbexport [ -c codepage ] [ -l logfile ] [ -m mode ] [ -t target ]
 
 ## Options
 
-All 8 options parsed from the captured help text. The final column is filled in by review.
+All 8 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -36,7 +36,7 @@ All 8 options parsed from the captured help text. The final column is filled in 
 | `-h` | — | shows this help |  |
 | `-l` | — | logs information about the exported items |  |
 | `-m` | — | export mode, option: all, tables (default) 'all' exports all the tables or a single specified table with indexes, 'tables' exports all the tables or a single specified table |  |
-| `-t` | — | specify the basename of the target directory to export to (default is the source filename) esedbexport will add the suffix .export to the basename |  |
+| `-t` | — | specify the basename of the target directory to export to (default is the source filename) esedbexport will add the suffix .export to the basename | An analyst would use the -t flag when extracting data from the NTDS (Active Directory) database file (ntds.dit) using the esedbexport tool in a Docker container. |
 | `-T` | — | exports only a specific table |  |
 | `-v` | — | verbose output to stderr |  |
 | `-V` | — | print version |  |

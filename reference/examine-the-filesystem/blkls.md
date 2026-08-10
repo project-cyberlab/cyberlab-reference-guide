@@ -15,6 +15,12 @@
 
 Extract filesystem blocks — by default the unallocated ones, which is the input a carver wants.
 
+## When you'd reach for this
+
+An analyst uses blkls when recovering files from unallocated space after inodes are overwritten, running it after failed inode-based recovery attempts to extract raw unallocated data, then using carving tools like foremost or photorec on the output; they choose it over similar tools because it directly extracts unallocated space for carving when traditional file system metadata is unavailable.
+
+**Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Body-file> · <https://github.com/sleuthkit/sleuthkit/wiki/Timelines> · <https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view>
+
 ## Synopsis
 
 ```

@@ -15,6 +15,12 @@
 
 Bulk-export files from an image to a directory.
 
+## When you'd reach for this
+
+When an analyst needs to recover files from a disk image, they use tsk_recover after ensuring sufficient storage space in the destination folder. They run it following the creation of the image, as it is specifically designed for recovering files from disk images.
+
+**Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Body-file> · <https://github.com/sleuthkit/sleuthkit/wiki/Timelines> · <https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg>
+
 ## Synopsis
 
 ```

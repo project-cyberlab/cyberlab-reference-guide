@@ -39,7 +39,7 @@ md5sum --check hashes
 
 ## Options
 
-All 17 options parsed from the captured help text; 5 reviewed with usage guidance.
+All 17 options parsed from the captured help text; 8 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -55,9 +55,9 @@ All 17 options parsed from the captured help text; 5 reviewed with usage guidanc
 | `--ignore-missing` | — | don't fail or report status for missing files | An analyst would use the --ignore-missing flag when verifying checksums of files that may be intentionally absent, to avoid warnings about missing files and focus on verification failures. |
 | `--quiet` | — | don't print OK for each successfully verified file | An analyst would use the --quiet flag when checking multiple files to display only the modified files, filtering out unchanged ones during verification. |
 | `--status` | — | don't output anything, status code shows success | An analyst would use the --status flag when running md5sum in a script to check file integrity and need the command to return a status code (0 for no changes, 1 for mismatches) without producing any output. |
-| `--strict` | — | exit non-zero for improperly formatted checksum lines |  |
-| `-w` | — | warn about improperly formatted checksum lines |  |
-| `--warn` | — | warn about improperly formatted checksum lines |  |
+| `--strict` | — | exit non-zero for improperly formatted checksum lines | An analyst would use the --strict flag when verifying checksum files to ensure they are properly formatted and to have the tool exit with a non-zero status if any hash lines are invalid. |
+| `-w` | — | warn about improperly formatted checksum lines | An analyst would use the -w flag when verifying a hash file to identify which line contains an improperly formatted MD5 checksum. |
+| `--warn` | — | warn about improperly formatted checksum lines | An analyst would use the --warn flag when verifying hash values in a checksum file to detect and alert on improperly formatted or incorrect hash entries during validation. |
 | `--help` | — | display this help and exit |  |
 | `--version` | — | output version information and exit |  |
 

@@ -28,12 +28,12 @@ AppCompatCacheParser [options]
 
 ## Options
 
-All 13 options parsed from the captured help text; 1 reviewed with usage guidance.
+All 13 options parsed from the captured help text; 2 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-f` | f | Full path to SYSTEM hive to process. If this option is not specified, the live Registry will be used |  |
-| `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes |  |
+| `--csv` | csv | Directory to save CSV formatted results to. Be sure to include the full path in double quotes | An analyst would use the --csv flag when parsing the ShimCache from the SYSTEM hive to generate CSV output for analyzing execution evidence, such as identifying unusual or first-time executions. |
 | `--csvf` | csvf | File name to save CSV formatted results to. When present, overrides default name | An analyst would use the --csvf flag when parsing the ShimCache from the SYSTEM hive to generate a CSV-formatted output file for further analysis. |
 | `-c` | c | The ControlSet to parse. Default is to extract all control sets [default: -1] |  |
 | `-t` | — | Sorts last modified timestamps in descending order |  |

@@ -29,7 +29,7 @@ frida-trace [options] target
 
 ## Options
 
-All 82 options parsed from the captured help text; 3 reviewed with usage guidance.
+All 82 options parsed from the captured help text; 8 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -50,16 +50,16 @@ All 82 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `--device-option` | option | override a backend-specific option, such as “control- endpoint=(string)localabstract:/my-frida-server” (supported types are: string, bool, int) |  |
 | `--p2p` | — | establish a peer-to-peer connection with target |  |
 | `--stun-server` | ADDRESS | set STUN server ADDRESS to use with --p2p |  |
-| `-f` | TARGET | spawn FILE |  |
-| `--file` | TARGET | spawn FILE |  |
+| `-f` | TARGET | spawn FILE | An analyst would use the -f flag when launching a specific application on a mobile device to trace its API calls, such as monitoring crypto functions in Snapchat or Java methods in YouTube. |
+| `--file` | TARGET | spawn FILE | An analyst would use the -f flag when launching a specific application on a mobile device to trace its API calls, such as monitoring crypto functions in Snapchat or Java methods in YouTube. |
 | `-F` | — | attach to frontmost application |  |
 | `--attach-frontmost` | — | attach to frontmost application |  |
 | `-n` | NAME | attach to NAME |  |
 | `--attach-name` | NAME | attach to NAME |  |
 | `-N` | IDENTIFIER | attach to IDENTIFIER | When the target application is already running and the analyst needs to trace functions using its identifier. |
 | `--attach-identifier` | IDENTIFIER | attach to IDENTIFIER | When the target application is already running and the analyst needs to trace functions using its identifier. |
-| `-p` | PID | attach to PID |  |
-| `--attach-pid` | PID | attach to PID |  |
+| `-p` | PID | attach to PID | An analyst would use the -p flag when tracing functions in a specific process by its process ID, such as monitoring a Windows application's memory-related calls in msvcrt.dll. |
+| `--attach-pid` | PID | attach to PID | An analyst would use the -p flag when tracing functions in a specific process by its process ID, such as monitoring a Windows application's memory-related calls in msvcrt.dll. |
 | `-W` | PATTERN | await spawn matching PATTERN |  |
 | `--await` | PATTERN | await spawn matching PATTERN |  |
 | `--stdio` | inherit,pipe | stdio behavior when spawning (defaults to “inherit”) |  |
@@ -76,14 +76,14 @@ All 82 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `-O` | FILE | text file containing additional command line options |  |
 | `--options-file` | FILE | text file containing additional command line options |  |
 | `--version` | — | show program's version number and exit |  |
-| `-I` | MODULE | include MODULE |  |
-| `--include-module` | MODULE | include MODULE |  |
+| `-I` | MODULE | include MODULE | An analyst would use the -I flag when they need to trace all functions within a specific module, such as to broadly monitor activity in a particular library without specifying individual functions. |
+| `--include-module` | MODULE | include MODULE | An analyst would use the -I flag when they need to trace all functions within a specific module, such as to broadly monitor activity in a particular library without specifying individual functions. |
 | `-X` | MODULE | exclude MODULE |  |
 | `--exclude-module` | MODULE | exclude MODULE |  |
 | `-i` | FUNCTION | include [MODULE!]FUNCTION | An analyst would use the -i flag when they need to trace specific functions or modules, such as monitoring particular API calls or methods in a target process. |
 | `--include` | FUNCTION | include [MODULE!]FUNCTION | An analyst would use the -i flag when they need to trace specific functions or modules, such as monitoring particular API calls or methods in a target process. |
-| `-x` | FUNCTION | exclude [MODULE!]FUNCTION |  |
-| `--exclude` | FUNCTION | exclude [MODULE!]FUNCTION |  |
+| `-x` | FUNCTION | exclude [MODULE!]FUNCTION | An analyst would use the -x flag when they need to exclude specific functions from being traced after including an entire module or a set of functions matching a pattern. |
+| `--exclude` | FUNCTION | exclude [MODULE!]FUNCTION | An analyst would use the -x flag when they need to exclude specific functions from being traced after including an entire module or a set of functions matching a pattern. |
 | `-T` | INCLUDE_IMPORTS | include program's imports |  |
 | `--include-imports` | INCLUDE_IMPORTS | include program's imports |  |
 | `-t` | MODULE | include MODULE imports |  |
@@ -108,8 +108,8 @@ All 82 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `--decorate` | — | add module name to generated onEnter log statement |  |
 | `-S` | PATH | path to JavaScript file used to initialize the session |  |
 | `--init-session` | PATH | path to JavaScript file used to initialize the session |  |
-| `-P` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' |  |
-| `--parameters` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' |  |
+| `-P` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' | An analyst would use the `-P` flag when tracing multiple functions and needing to dynamically control handler behavior, such as conditionally printing the process ID based on a JSON parameter passed via the command line. |
+| `--parameters` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' | An analyst would use the `-P` flag when tracing multiple functions and needing to dynamically control handler behavior, such as conditionally printing the process ID based on a JSON parameter passed via the command line. |
 | `-o` | OUTPUT | dump messages to file |  |
 | `--output` | OUTPUT | dump messages to file |  |
 | `--ui-host` | UI_HOST | the host to serve the UI on (default localhost) |  |

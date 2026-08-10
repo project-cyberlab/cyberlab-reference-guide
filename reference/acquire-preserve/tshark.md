@@ -14,6 +14,12 @@
 
 Wireshark's command line: capture, filter, dissect and export packet data, including fields for a timeline.
 
+## When you'd reach for this
+
+An analyst reaches for tshark when capturing or analyzing network traffic from the command line, often after setting up capture filters (e.g., `tshark -f !arp`) or before generating statistics (e.g., `tshark -z io,stat`). They may prefer it over GUI tools for scripting, automation, or when working with large captures that require efficient, non-interactive processing.
+
+**Sources:** <https://docsislab.wordpress.com/packet-capture/wireshark-command-line/> · <https://www.wireshark.org/docs/wsug_html_chunked/AppTools.html>
+
 ## Synopsis
 
 ```

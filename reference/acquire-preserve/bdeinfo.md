@@ -13,6 +13,12 @@
 
 Use bdeinfo to determine information about a BitLocker Drive
 
+## When you'd reach for this
+
+An analyst reaches for bdeinfo after confirming a partition is BitLocker encrypted using hex dumps and tools like fls, which cannot recognize BitLocker; they run it to extract volume details like the recovery key and encryption algorithm, preferring it over SleuthKit because SleuthKit does not support BitLocker.
+
+**Sources:** <https://bebinary4n6.blogspot.com/2020/01/how-to-handle-bitlocker-encrypted.html> · <https://www.aldeid.com/wiki/Category:Encryption/Bitlocker>
+
 ## Synopsis
 
 ```

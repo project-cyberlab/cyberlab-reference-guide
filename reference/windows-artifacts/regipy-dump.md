@@ -13,6 +13,12 @@
 
 Dump a registry hive to JSON with regipy, so the contents can be searched, diffed or fed into other tooling rather than read key by key.
 
+## When you'd reach for this
+
+An analyst reaches for regipy-dump when they need to extract and analyze the contents of a registry hive, often after ensuring the hive is clean or applying transaction logs, and before running plugins or comparisons; they may use it to generate a JSON or timeline output for further examination, as it handles checksum validation and transaction logs during parsing.
+
+**Sources:** <https://github.com/mkorman90/regipy>
+
 ## Synopsis
 
 ```

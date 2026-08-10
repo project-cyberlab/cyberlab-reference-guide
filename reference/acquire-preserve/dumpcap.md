@@ -14,6 +14,12 @@
 
 Capture packets to a file. It does nothing else — which is the point.
 
+## When you'd reach for this
+
+An analyst reaches for dumpcap when capturing live network traffic with specific conditions like duration, file size, or packet count, often using options like -a or -b to automate stopping or file rotation; they may run it alongside tshark for analysis or use capinfos afterward to inspect capture files, preferring it over similar tools for its dedicated capture capabilities and precise control over capture parameters.
+
+**Sources:** <https://docsislab.wordpress.com/packet-capture/wireshark-command-line/> · <https://www.wireshark.org/docs/man-pages/dumpcap.html>
+
 ## Synopsis
 
 ```

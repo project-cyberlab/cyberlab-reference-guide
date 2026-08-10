@@ -28,7 +28,7 @@ hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
 
 ## Options
 
-All 143 options parsed from the captured help text; 7 reviewed with usage guidance.
+All 143 options parsed from the captured help text; 8 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -144,8 +144,8 @@ All 143 options parsed from the captured help text; 7 reviewed with usage guidan
 | `--rule-right` | — | \| Rule \| Single rule applied to each word from right wordlist \| -k '^-' |  |
 | `-r` | — | \| File \| Multiple rules applied to each word from wordlists \| -r rules/best64.rule | An analyst would use the -r flag when applying custom or built-in rule sets to a wordlist to generate password variations during cracking attacks, as demonstrated in the examples involving rules/best64.rule and modifying rules to append specific strings like years to passwords. |
 | `--rules-file` | — | \| File \| Multiple rules applied to each word from wordlists \| -r rules/best64.rule | An analyst would use the -r flag when applying custom or built-in rule sets to a wordlist to generate password variations during cracking attacks, as demonstrated in the examples involving rules/best64.rule and modifying rules to append specific strings like years to passwords. |
-| `-g` | — | \| Num \| Generate X random rules \| -g 10000 |  |
-| `--generate-rules` | — | \| Num \| Generate X random rules \| -g 10000 |  |
+| `-g` | — | \| Num \| Generate X random rules \| -g 10000 | An analyst would use the -g flag when encountering errors related to excessive rule usage, such as clEnqueueCopyBuffer() -30 or cuStreamSynchronize() 702, to reduce the number of rules and resolve the issue. |
+| `--generate-rules` | — | \| Num \| Generate X random rules \| -g 10000 | An analyst would use the -g flag when encountering errors related to excessive rule usage, such as clEnqueueCopyBuffer() -30 or cuStreamSynchronize() 702, to reduce the number of rules and resolve the issue. |
 | `--generate-rules-func-min` | — | \| Num \| Force min X functions per rule \| |  |
 | `--generate-rules-func-max` | — | \| Num \| Force max X functions per rule \| |  |
 | `--generate-rules-func-sel` | — | \| Str \| Pool of rule operators valid for random rule engine \| --generate-rules-func-sel=ioTlc |  |

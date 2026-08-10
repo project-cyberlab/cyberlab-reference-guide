@@ -1350,5 +1350,309 @@
   "rafind2 -b": {
     "verdict": "accept",
     "why": "Reviewed in the 116-note backlog. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Coherent families checked against each other rather than one at a time: the radare2 set (rax2/rabin2/rafind2/radiff2), the libyal info tools (regfinfo/evtxinfo/bdeinfo/vshadowinfo/affinfo), the john and hashcat cracking flags, and the oledir/pyxswf zip handling."
+  },
+  "affinfo -a": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "esedbinfo -hvV": {
+    "verdict": "reject",
+    "why": "Not a flag. '-hvV' and '-ahvV' are the bracketed cluster from the libyal usage line, stored by the help capture as one option. Nobody types them. Same class as regfinfo -hHvV and evtxinfo -hvV, already rejected -- the capture keeps producing these and the model keeps inventing a purpose for each, so the fix belongs in the capture rather than in repeated rejections."
+  },
+  "frida-trace -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "nmap --script-trace": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "pyxswf -x": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rabin2 -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "radiff2 -t": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "radiff2 -u": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "radiff2 -O": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "radiff2 -a": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rax2 -F": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "regipy-dump": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "tcpflow -X": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "tcpflow -l": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "xortool --hex": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "foremost -d": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "mraptor -z": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "msodde -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "msodde -a": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "frida-trace -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "frida-trace -I": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "frida-trace -P": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "md5sum --warn": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "md5sum --strict": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "md5sum -w": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "nmap --datadir": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rabin2 -K": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rax2 -b": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "tcpflow -R": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "msodde": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "dumpcap": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "john --stdout": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "john --external": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "john --groups": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "nmap -iR": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rax2 -k": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rabin2 -m": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "mergecap -v": {
+    "verdict": "reject",
+    "why": "A version flag. 'Print the full version information of mergecap' is true and belongs nowhere in a column that asks when to reach for a tool. Same class as the help flags already rejected."
+  },
+  "hashcat -g": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "capa --quiet": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "frida-trace -x": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "xortool --key-length": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "affcat -S": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "esedbinfo -v": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "ewfinfo": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "msodde -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "affcat": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "pdf-parser.py -w": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "scalpel -c": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "capa --color": {
+    "verdict": "reject",
+    "why": "Controls ANSI colour in the output. Real, and it changes nothing about when or why an analyst runs capa. A reference column with finite room should not spend a row on terminal formatting."
+  },
+  "esedbinfo": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "xortool --max-keylen": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "john --status": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "oletimes": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "msodde -l": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "msodde -d": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "mmls": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "tshark": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "oledir -f": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "regipy-plugins-run": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "esedbexport -t": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "blkls": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "ffind": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "fls -b": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "bdeinfo": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rafind2": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "tsk_recover": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "evtxexport -v": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "rafind2 -a": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "sigtool": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "AppCompatCacheParser --csv": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "pdf-parser -w": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "arp-scan": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "vshadowinfo -ahvV": {
+    "verdict": "reject",
+    "why": "Not a flag. '-hvV' and '-ahvV' are the bracketed cluster from the libyal usage line, stored by the help capture as one option. Nobody types them. Same class as regfinfo -hHvV and evtxinfo -hvV, already rejected -- the capture keeps producing these and the model keeps inventing a purpose for each, so the fix belongs in the capture rather than in repeated rejections."
+  },
+  "frida -p": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "evtxexport -l": {
+    "verdict": "accept",
+    "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
   }
 }

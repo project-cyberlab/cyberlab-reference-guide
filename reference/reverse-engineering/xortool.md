@@ -33,16 +33,16 @@ xortool --version
 
 ## Options
 
-All 20 options parsed from the captured help text; 9 reviewed with usage guidance.
+All 20 options parsed from the captured help text; 12 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-x` | — | input is hex-encoded str | An analyst would use the -x flag when processing a hex-encoded file, such as when decrypting data that has been represented in hexadecimal format. |
-| `--hex` | — | input is hex-encoded str | An analyst would use the -x flag when processing a hex-encoded file, such as when decrypting data that has been represented in hexadecimal format. |
+| `--hex` | — | input is hex-encoded str | An analyst would use the --hex flag when the input data is hex-encoded, as indicated by the tool's option description. |
 | `-l` | LEN | length of the key | Fix the key length when you already know it. |
-| `--key-length` | LEN | length of the key | Fix the key length when you already know it. |
+| `--key-length` | LEN | length of the key | An analyst would use the --key-length flag when they have prior knowledge or suspicion about the specific length of the XOR key used in the encrypted data. |
 | `-m` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
-| `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] | Maximum key length to consider. |
+| `--max-keylen` | MAX-LEN | maximum key length to probe [default: 65] | When analyzing XOR-encrypted data and the key length is unknown but needs to be limited to a specific maximum for efficiency or based on prior knowledge. |
 | `-c` | CHAR | most frequent char (one char or hex code) | Give the most frequent character of the plaintext — usually `20` (space) for text, `00` for binaries. This is the flag that makes or breaks the attack. |
 | `--char` | CHAR | most frequent char (one char or hex code) | An analyst would use the --char flag when they have prior knowledge or suspicion about the most frequent character in the plaintext, aiding xortool in accurately guessing the XOR key. |
 | `-b` | — | brute force all possible most frequent chars | Brute-force the most frequent character rather than guessing. |

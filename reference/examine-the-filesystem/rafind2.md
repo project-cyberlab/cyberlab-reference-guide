@@ -15,6 +15,12 @@
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
 
+## When you'd reach for this
+
+When an analyst needs to search for specific strings, hex patterns, or zero-terminated strings within a binary file, they use rafind2 to quickly locate offsets, then feed those results to radare2 for contextual analysis. They choose it over similar tools because it provides minimal, precise output that integrates seamlessly with radare2 commands for deeper inspection, and supports efficient workflows like counting results or displaying hex dumps.
+
+**Sources:** <https://book.rada.re/tools/rafind2/intro.html>
+
 ## Synopsis
 
 ```

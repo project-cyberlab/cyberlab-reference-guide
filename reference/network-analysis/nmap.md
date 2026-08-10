@@ -22,7 +22,7 @@ nmap [Scan Type(s)] [Options] {target specification}
 
 ## Options
 
-All 66 options parsed from the captured help text; 26 reviewed with usage guidance.
+All 66 options parsed from the captured help text; 28 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -46,7 +46,7 @@ All 66 options parsed from the captured help text; 26 reviewed with usage guidan
 | `--script` | Lua scripts | <Lua scripts> is a comma separated list of directories, script-files or script-categories | Run NSE scripts. The category matters — `vuln` and `exploit` scripts actively test, and `exploit` can change the target. |
 | `--script-args` | n1=v1,[n2=v2,...] | provide arguments to scripts | Arguments for those scripts. |
 | `--script-args-file` | filename | provide NSE script args in a file | An analyst would use the --script-args-file flag when they need to specify multiple script arguments in a file rather than on the command line, allowing for easier management of complex or repeated argument sets. |
-| `--script-trace` | — | Show all data sent and received |  |
+| `--script-trace` | — | Show all data sent and received | An analyst would use the --script-trace flag when executing specific scripts to monitor and analyze all incoming and outgoing communication between the scripts and the target system, such as when troubleshooting script behavior or inspecting detailed protocol interactions. |
 | `--script-updatedb` | — | Update the script database. | An analyst would use the --script-updatedb flag when they have added, removed, or modified the categories of NSE scripts in the default scripts directory, requiring the script database to be updated. |
 | `--script-help` | Lua scripts | Show help about scripts. <Lua scripts> is a comma-separated list of script-files or script-categories. | Explain what a script does before running it, which is worth doing for anything outside `safe`. |
 | `-O` | — | Enable OS detection | OS fingerprint from the TCP/IP stack. A guess with a confidence, not a fact. |
@@ -87,7 +87,7 @@ All 66 options parsed from the captured help text; 26 reviewed with usage guidan
 | `--no-stylesheet` | — | Prevent associating of XSL stylesheet w/XML output |  |
 | `-6` | — | Enable IPv6 scanning | Scan IPv6. Hosts frequently expose more on v6 than v4 because the firewall rules were never mirrored. |
 | `-A` | — | Enable OS detection, version detection, script scanning, and traceroute | Aggressive: version, OS, scripts and traceroute together. Convenient and unmistakably noisy. |
-| `--datadir` | dirname | Specify custom Nmap data file location |  |
+| `--datadir` | dirname | Specify custom Nmap data file location | An analyst would use the --datadir flag when needing to specify a custom location for Nmap data files, such as when scripts or configuration files are stored outside the default directories. |
 | `--privileged` | — | Assume that the user is fully privileged |  |
 | `--unprivileged` | — | Assume the user lacks raw socket privileges |  |
 | `-V` | — | Print version number |  |

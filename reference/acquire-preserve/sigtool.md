@@ -15,6 +15,12 @@
 
 Inspect and build ClamAV signature databases: unpack a .cvd, list its signatures, or generate a new one from a sample. The bridge between 'ClamAV detects this' and 'here is exactly which signature fired and why'.
 
+## When you'd reach for this
+
+An analyst reaches for sigtool when investigating false positives detected by ClamAV, running it after obtaining a signature name from scan reports or logs to unpack the database and search for the specific signature; they use it over other methods because it directly facilitates identifying and analyzing signatures linked to false positives.
+
+**Sources:** <https://docs.clamav.net/manual/Usage/SignatureManagement.html>
+
 ## Common invocations
 
 ```

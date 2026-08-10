@@ -15,6 +15,12 @@
 
 Display the partition layout of a disk image, including unallocated gaps.
 
+## When you'd reach for this
+
+An analyst reaches for mmls after verifying the integrity of a disk image using hashing commands like md5sum to obtain details about the partition layout, which is critical before proceeding with further analysis. They run it to confirm the image is a physical disk copy rather than a logical one, ensuring accurate partition information for subsequent steps like fsstat. They choose mmls over similar tools because it specifically provides partition layout details necessary for forensic examination.
+
+**Sources:** <https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg>
+
 ## Common invocations
 
 ```
