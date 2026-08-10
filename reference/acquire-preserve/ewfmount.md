@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Inspect or mount a forensic image container |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/ewfmount.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/ewfmount.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

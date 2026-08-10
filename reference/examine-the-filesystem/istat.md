@@ -6,7 +6,7 @@
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | Inspect metadata for one file or inode |
 | **Version** | The Sleuth Kit ver 4.11.1 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/istat.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/istat.help.txt) |
 | **Documentation** | <https://www.sleuthkit.org/sleuthkit> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

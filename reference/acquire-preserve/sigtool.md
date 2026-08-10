@@ -6,7 +6,7 @@
 | **Kit** | REMnux · SIFT Workstation |
 | **Capability** | Verify evidence integrity with hashes; Scan with signatures for known-bad |
 | **Version** | ClamAV 1.4.3 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/sigtool.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/sigtool.help.txt) |
 | **Documentation** | <https://www.clamav.net> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)

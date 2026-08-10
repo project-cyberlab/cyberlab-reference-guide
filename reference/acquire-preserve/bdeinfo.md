@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | SIFT Workstation (libyal) |
 | **Capability** | Inspect or mount a forensic image container |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-09 — [raw help output](../../capture/cyberlab-aio/help/bdeinfo.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/bdeinfo.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
