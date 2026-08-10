@@ -55,7 +55,8 @@ found = e.refresh_barren()
 check('a tool that only ever missed is recorded', 'vdbbin' in found)
 check('a tool that ever produced a note is not', 'fls' not in found)
 check('too few attempts is not enough', 'rare' not in found)
-check('recorded with its seed count', found.get('vdbbin') == 0)
+check('recorded with its seed count',
+      (found.get('vdbbin') or {}).get('seeds') == 0)
 check('skipped while unseeded', 'vdbbin' in e.still_barren())
 
 # The escape hatch: seeding it makes it eligible again, with no other action.
@@ -64,10 +65,21 @@ check('seeding makes it eligible again', 'vdbbin' not in e.still_barren())
 
 # And if it is seeded, misses again, and is re-recorded at the higher count,
 # it stays skipped until seeded FURTHER -- not permanently.
+# Refreshing must NOT re-trap it. The log still holds every miss from
+# before the seeds existed, so recomputing over all history would mark it
+# barren again at the new seed count and it could never earn a KEPT,
+# because it would never be selected. Seeding has to actually buy a run.
 e.refresh_barren()
-check('re-recorded at the new seed count',
-      e.barren_tools().get('vdbbin') == 1)
-check('skipped again at that count', 'vdbbin' in e.still_barren())
+check('seeding is not undone by the next refresh',
+      'vdbbin' not in e.still_barren())
+
+# Once it HAS had its fresh run and still only missed, it is set aside
+# again -- at the higher seed count, so more seeds free it once more.
+extra = ['00:00:00  MISS     vdbbin                       no passages'] * 10
+e.LIVE_LOG.write_text('\n'.join(lines + extra), encoding='utf-8')
+e.refresh_barren()
+check('re-recorded after a fresh run that also missed',
+      'vdbbin' in e.still_barren())
 write_seeds({'vdbbin': ['https://example.com/a', 'https://example.com/b']})
 check('more seeds frees it once more', 'vdbbin' not in e.still_barren())
 

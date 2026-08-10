@@ -1,25 +1,94 @@
 {
-  "7za": 2,
-  "cyberchef": 0,
-  "ezhexviewer": 4,
-  "file": 3,
-  "freshclam": 4,
-  "img_stat": 5,
-  "inetsim": 5,
-  "nping": 5,
-  "ntfs-3g": 3,
-  "numbers-to-string.py": 0,
-  "objdump": 4,
-  "openssl": 4,
-  "r2": 4,
-  "rahash2": 5,
-  "rasm2": 5,
-  "readelf": 4,
-  "readelf.py": 0,
-  "strings": 1,
-  "tsk_gettimes": 5,
-  "vdbbin": 2,
-  "vivbin": 3,
-  "xxd": 4,
-  "yarac": 5
+  "7za": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "cyberchef": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "ezhexviewer": {
+    "attempts": 85,
+    "seeds": 4
+  },
+  "file": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "freshclam": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "img_stat": {
+    "attempts": 85,
+    "seeds": 5
+  },
+  "inetsim": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "nping": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "ntfs-3g": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "numbers-to-string.py": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "objdump": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "openssl": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "r2": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "rahash2": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "rasm2": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "readelf": {
+    "attempts": 84,
+    "seeds": 0
+  },
+  "readelf.py": {
+    "attempts": 84,
+    "seeds": 0
+  },
+  "strings": {
+    "attempts": 84,
+    "seeds": 1
+  },
+  "tsk_gettimes": {
+    "attempts": 85,
+    "seeds": 5
+  },
+  "vdbbin": {
+    "attempts": 196,
+    "seeds": 0
+  },
+  "vivbin": {
+    "attempts": 196,
+    "seeds": 0
+  },
+  "xxd": {
+    "attempts": 196,
+    "seeds": 0
+  },
+  "yarac": {
+    "attempts": 196,
+    "seeds": 0
+  }
 }

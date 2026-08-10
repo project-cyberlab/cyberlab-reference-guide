@@ -839,8 +839,21 @@ def refresh_barren(min_attempts: int = 8) -> dict[str, int]:
             r"(KEPT|MISS|REJECTED|REVIEW)\s+(\S+)\s\s", txt):
         outcomes.setdefault(tool, []).append(verdict)
     seeds = seed_counts()
-    out = {t: seeds.get(t, 0) for t, v in outcomes.items()
-           if len(v) >= min_attempts and all(x == "MISS" for x in v)}
+    prev = barren_tools()
+    out: dict[str, int] = {}
+    for tool, v in outcomes.items():
+        if len(v) < min_attempts or not all(x == "MISS" for x in v):
+            continue
+        old = prev.get(tool)
+        if isinstance(old, dict) and seeds.get(tool, 0) > old.get("seeds", 0):
+            # Freed by seeding and not yet given a fresh run. Re-recording
+            # it here would re-trap it immediately: the log still holds every
+            # miss from before the seeds existed, so the tool would look
+            # barren forever and could never earn a KEPT because it would
+            # never be selected. Seeding must actually buy an attempt.
+            if len(v) - old.get("attempts", 0) < min_attempts:
+                continue
+        out[tool] = {"seeds": seeds.get(tool, 0), "attempts": len(v)}
     BARREN.write_text(json.dumps(out, indent=2, sort_keys=True),
                       encoding="utf-8")
     return out
@@ -849,7 +862,12 @@ def refresh_barren(min_attempts: int = 8) -> dict[str, int]:
 def still_barren() -> set[str]:
     """Barren tools whose seed set has not grown since they were recorded."""
     seeds = seed_counts()
-    return {t for t, n in barren_tools().items() if seeds.get(t, 0) <= n}
+    out = set()
+    for t, rec in barren_tools().items():
+        n = rec.get("seeds", 0) if isinstance(rec, dict) else rec
+        if seeds.get(t, 0) <= n:
+            out.add(t)
+    return out
 
 
 def attempt_counts() -> Counter:
