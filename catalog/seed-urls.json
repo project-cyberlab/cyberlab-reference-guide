@@ -648,5 +648,99 @@
     "https://www.howtoforge.com/linux-md5sum-command/",
     "https://commandmasters.com/commands/md5sum-common/",
     "https://kb.hosting.com/docs/working-with-file-checksums"
+  ],
+  "7za": [
+    "https://www.tecmint.com/7zip-command-examples-in-linux/",
+    "https://thedeveloperblog.com/7-zip-examples"
+  ],
+  "objdump": [
+    "https://www.thegeekstuff.com/2012/09/objdump-examples/",
+    "https://johannst.github.io/notes/binary/objdump.html",
+    "https://linux.wiki/docs/commands/development/objdump/",
+    "https://isa.com.gh/2019/08/introduction-to-linux-malware-analysis-part-2-object-file-and-executable-binary-file/"
+  ],
+  "rahash2": [
+    "https://github.com/radareorg/radare2/blob/master/man/rahash2.1",
+    "https://www.mankier.com/1/rahash2",
+    "https://book.rada.re/tools/rahash2/rahash_tool.html",
+    "https://r2wiki.readthedocs.io/en/latest/tools/rahash2/",
+    "https://manpages.opensuse.org/Tumbleweed/radare2/rahash2.1.en.html"
+  ],
+  "rasm2": [
+    "https://book.rada.re/tools/rasm2/intro.html",
+    "https://www.mankier.com/1/rasm2",
+    "https://manpages.ubuntu.com/manpages/bionic/man1/rasm2.1.html",
+    "https://r2wiki.readthedocs.io/en/latest/tools/rasm2/",
+    "https://book.rada.re/tools/rasm2/disassemble.html"
+  ],
+  "readelf": [
+    "https://johannst.github.io/notes/binary/readelf.html",
+    "https://www.geeksforgeeks.org/readelf-command-in-linux-with-examples/",
+    "https://sourceware.org/binutils/docs/binutils/readelf.html",
+    "https://man.archlinux.org/man/readelf.1.en"
+  ],
+  "xxd": [
+    "https://manpages.ubuntu.com/manpages/jammy/man1/xxd.1.html",
+    "https://www.commandinline.com/xxd-command-cheat-sheet/",
+    "https://www.linuxjournal.com/content/doing-reverse-hex-dump",
+    "https://commandlinux.com/man-page/man1/xxd/"
+  ],
+  "file": [
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-the-file-command-to-identify-file-types-on-ubuntu/view",
+    "https://www.geeksforgeeks.org/working-with-magic-numbers-in-linux/",
+    "https://library.mosse-institute.com/articles/2022/04/file-magic-numbers-the-easy-way-to-identify-file-extensions/file-magic-numbers-the-easy-way-to-identify-file-extensions.html"
+  ],
+  "nping": [
+    "https://nmap.org/book/nping-man.html",
+    "https://manpages.debian.org/testing/nmap/nping.1.en.html",
+    "https://man7.org/linux/man-pages/man1/nping.1.html",
+    "https://commandmasters.com/commands/nping-common/",
+    "https://netbeez.net/blog/how-to-use-nping/"
+  ],
+  "ntfs-3g": [
+    "https://phoenixnap.com/kb/mount-ntfs-linux",
+    "https://dfirmadness.com/mounting-case001-e01-files/",
+    "https://commandlinux.com/man-page/man8/mount_ntfs/"
+  ],
+  "openssl": [
+    "https://www.baeldung.com/linux/openssl-command-examples",
+    "https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/",
+    "https://www.golinuxcloud.com/openssl-cheatsheet/",
+    "https://www.madboa.com/geek/openssl/"
+  ],
+  "freshclam": [
+    "https://www.mankier.com/1/freshclam",
+    "https://manpages.ubuntu.com/manpages/trusty/man1/freshclam.1.html",
+    "https://docs.clamav.net/manual/Usage/SignatureManagement.html",
+    "https://codelucky.com/freshclam-command-linux/"
+  ],
+  "vdbbin": [
+    "https://github.com/vivisect/vivisect/blob/341de16fd0b322c2304b1866593bbb622a19101b/README.md",
+    "https://vivisect.readthedocs.io/en/stable/vivisect/quickstart.html"
+  ],
+  "vivbin": [
+    "https://github.com/vivisect/vivisect/blob/341de16fd0b322c2304b1866593bbb622a19101b/README.md",
+    "https://vivisect.readthedocs.io/en/stable/vivisect/quickstart.html",
+    "https://vivisect.readthedocs.io/en/latest/vivisect/devguides/gettingstarted.html"
+  ],
+  "yarac": [
+    "https://www.systutorials.com/docs/linux/man/1-yarac/",
+    "https://manpages.ubuntu.com/manpages/xenial/man1/yarac.1.html",
+    "https://www.mankier.com/1/yarac",
+    "https://yara.readthedocs.io/en/stable/commandline.html",
+    "https://www.commands.sh/yarac"
+  ],
+  "inetsim": [
+    "https://www.inetsim.org/about.html",
+    "https://github.com/CommodoreAlex/Malware-Analysis-and-Reverse-Engineering/blob/main/inetsim.md",
+    "https://blog.christophetd.fr/malware-analysis-lab-with-virtualbox-inetsim-and-burp/",
+    "https://1337skills.com/cheatsheets/inetsim/",
+    "https://www.briancarr.org/post/adventures-with-inetsim"
+  ],
+  "r2": [
+    "https://book.rada.re/first_steps/commandline_flags.html",
+    "https://r2wiki.readthedocs.io/en/latest/tools/radare2/",
+    "https://hexmos.com/freedevtools/c/cmd/r2/",
+    "https://book.rada.re/analysis/code_analysis.html"
   ]
 }
