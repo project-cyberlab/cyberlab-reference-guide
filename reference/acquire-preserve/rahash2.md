@@ -27,6 +27,21 @@ An analyst reaches for rahash2 when examining filesystems to identify modified s
 rahash2 [-BehjkLqRrvX] [-b S] [-a A] [-c H] [-E A] [-s S] [-f O] [-t O] [file] ...
 ```
 
+## Common invocations
+
+```
+# Verify file integrity by comparing CRC32 hash to expected value
+rahash2 -qqa crc32 /bin/ls 63212007
+# Encrypt string with rotation cipher and show output
+rahash2 -S 12333 -E ror -s hello
+# Compute and verify file hashes for integrity checks
+rahash2 -L
+# List loaded cryptographic plugins
+rahash2 -L | grep ^c
+# Calculate multiple hash values for a file
+rahash2 -a all /bin/ls
+```
+
 ## Options
 
 All 23 options parsed from the captured help text. The final column is filled in by review.

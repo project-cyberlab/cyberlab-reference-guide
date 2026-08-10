@@ -67,6 +67,12 @@ DROP = [
     ("dd", "dd if=/home/u/linux_image.dd of=/dev/ conv=notrunc,noerror"),
     # A page title, where the giveaway is the proper noun after the bar.
     ("md5sum", "md5sum Linux Command (10 Examples) | phoenixNAP KB"),
+    # Man-page notation rather than a command: bracketed options, and the
+    # optional-suffix and placeholder-operand forms manuals use.
+    ("readelf", "readelf [opts] <elf>"),
+    ("xxd", "xxd -h[elp]"),
+    ("xxd", "xxd -s +seek"),
+    ("xxd", "xxd -s seek ,"),
     # A line continuation: the command is cut off, and half a command that
     # looks whole is worse than none.
     ("evtxexport", "evtxexport -p p1/ -s p1/config/SYSTEM " + chr(92)),
@@ -75,6 +81,15 @@ DROP = [
 # Repaired rather than dropped: a split ran the heading into the command and
 # doubled the tool's name. Running it would open the tool's name as a file.
 REPAIR = [
+    # Prose and shell noise the text extraction glued onto the end.
+    ("rasm2", "rasm2 -a x86 -b 32 'mov eax, 33' Disassemble opcode:",
+     "rasm2 -a x86 -b 32 'mov eax, 33'"),
+    ("rahash2", "rahash2 -S 12333 -E ror -s hello && echo Cell{",
+     "rahash2 -S 12333 -E ror -s hello"),
+    # A real command that names one argument generically. NOT a synopsis --
+    # this guide does the same with {{path/to/image.dd}}.
+    ("ewfmount", "ewfmount image.E01 <folder>",
+     "ewfmount image.E01 <folder>"),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),
@@ -84,6 +99,10 @@ ok = []
 
 
 def check(name, cond):
+    # bool(), because `got and got[0] == want` yields the empty LIST when
+    # got is empty, and summing those at the end raised TypeError -- the
+    # test harness crashed instead of reporting the failure it had found.
+    cond = bool(cond)
     ok.append(cond)
     print(('PASS  ' if cond else 'FAIL  ') + name)
 

@@ -21,13 +21,6 @@ An analyst reaches for sigtool when investigating false positives detected by Cl
 
 **Sources:** <https://docs.clamav.net/manual/Usage/SignatureManagement.html>
 
-## Common invocations
-
-```
-# Identify false positive virus signature in database
-sigtool --unpack=FILE
-```
-
 ## Options
 
 All 35 options parsed from the captured help text; 3 reviewed with usage guidance.

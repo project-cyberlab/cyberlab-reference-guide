@@ -2598,6 +2598,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'mergecap': {
         '-F': 'An analyst would use the -F flag when they need to specify a particular output format for the merged capture file, such as when the default pcapng format is not suitable or when compatibility with specific tools requires a different format.',
+        '-I': 'When merging multiple capture files that have compatible Interface Description Blocks (IDBs) to ensure they are merged correctly rather than duplicated.',
         '-a': 'An analyst would use the -a flag when they need to concatenate input files in the order they are provided, without reordering packets based on timestamps.',
         '-w': 'An analyst would use the -w flag with mergecap when they need to aggregate and consolidate multiple packet capture files into a single output file for further analysis or sharing with a colleague.',
     },

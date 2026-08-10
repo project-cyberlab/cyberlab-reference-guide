@@ -1654,5 +1654,9 @@
   "evtxexport -l": {
     "verdict": "accept",
     "why": "Reviewed in the 76-note backlog after five days of unattended running. States a concrete trigger, the flag matches the captured help of the real binary, and the claim is carried by the cited sources. Checked in families: the radare2 tools (rax2/rabin2/rafind2/radiff2), the oletools DDE set (msodde -a/-d/-f/-l/-p), the frida-trace attach flags (-f/-p/-i/-I/-P/-x), the md5sum verification flags (--warn/--strict/-w), and the TSK recovery tools (blkls/ffind/tsk_recover/fls -b)."
+  },
+  "mergecap -I": {
+    "verdict": "accept",
+    "why": "Correct and a real trap. mergecap -I sets how Interface Description Blocks are merged, and getting it wrong silently duplicates interfaces in the output rather than failing, so a merged capture looks fine and misattributes packets. Both citations external (tshark.dev, the Wireshark man page)."
   }
 }

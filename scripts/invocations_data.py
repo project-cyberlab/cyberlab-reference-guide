@@ -440,6 +440,38 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md',
         },
     ],
+    'objdump': [
+        {
+            'task': 'Display objdump version and supported formats',
+            'cmd': 'objdump -v -i',
+            'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
+        },
+        {
+            'task': 'Display overall file header details',
+            'cmd': 'objdump -f factorial',
+            'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
+        },
+        {
+            'task': 'Display object file format specific header details',
+            'cmd': 'objdump -p factorial',
+            'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
+        },
+        {
+            'task': 'Display section headers of an object file',
+            'cmd': 'objdump -h factorial',
+            'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
+        },
+        {
+            'task': 'Display all headers and metadata from object file',
+            'cmd': 'objdump -x factorial',
+            'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
+        },
+        {
+            'task': 'Disassemble executable sections to inspect machine code instructions',
+            'cmd': 'objdump -d factorial',
+            'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
+        },
+    ],
     'oleid': [
         {
             'task': 'Analyze OLE files for macros, encryption, and embedded objects',
@@ -474,6 +506,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/decalage2/oletools/wiki/olevba',
         },
     ],
+    'openssl': [
+        {
+            'task': 'Verify certificate validity and trust chain',
+            'cmd': 'openssl verify cert.pem',
+            'src': 'https://www.madboa.com/geek/openssl/',
+        },
+        {
+            'task': 'Verify certificate validity and trust chain',
+            'cmd': 'openssl verify remote.site.pem',
+            'src': 'https://www.madboa.com/geek/openssl/',
+        },
+    ],
     'photorec': [
         {
             'task': 'Recover files from raw disk image',
@@ -486,11 +530,63 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step',
         },
     ],
-    'sigtool': [
+    'rahash2': [
         {
-            'task': 'Identify false positive virus signature in database',
-            'cmd': 'sigtool --unpack=FILE',
-            'src': 'https://docs.clamav.net/manual/Usage/SignatureManagement.html',
+            'task': 'Verify file integrity by comparing CRC32 hash to expected value',
+            'cmd': 'rahash2 -qqa crc32 /bin/ls 63212007',
+            'src': 'https://github.com/radareorg/radare2/blob/master/man/rahash2.1',
+        },
+        {
+            'task': 'Encrypt string with rotation cipher and show output',
+            'cmd': 'rahash2 -S 12333 -E ror -s hello',
+            'src': 'https://github.com/radareorg/radare2/blob/master/man/rahash2.1',
+        },
+        {
+            'task': 'Compute and verify file hashes for integrity checks',
+            'cmd': 'rahash2 -L',
+            'src': 'https://manpages.opensuse.org/Tumbleweed/radare2/rahash2.1.en.html',
+        },
+        {
+            'task': 'List loaded cryptographic plugins',
+            'cmd': 'rahash2 -L | grep ^c',
+            'src': 'https://www.mankier.com/1/rahash2',
+        },
+        {
+            'task': 'Calculate multiple hash values for a file',
+            'cmd': 'rahash2 -a all /bin/ls',
+            'src': 'https://book.rada.re/tools/rahash2/rahash_tool.html',
+        },
+    ],
+    'rasm2': [
+        {
+            'task': 'Assemble x86 assembly instruction into machine code opcodes',
+            'cmd': "rasm2 -a x86 -b 32 'mov eax, 33'",
+            'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/rasm2.1.html',
+        },
+        {
+            'task': 'Disassemble hex bytes into assembly instructions',
+            'cmd': 'rasm2 -d 90',
+            'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/rasm2.1.html',
+        },
+        {
+            'task': 'List plugins for supported architectures',
+            'cmd': 'rasm2 -L',
+            'src': 'https://book.rada.re/tools/rasm2/intro.html',
+        },
+        {
+            'task': 'Assemble assembly instructions to machine code',
+            'cmd': "rasm2 -a java 'nop'",
+            'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
+        },
+        {
+            'task': 'Disassemble hex bytes into assembly instructions',
+            'cmd': "rasm2 -a x86 -b 32 -d '90'",
+            'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
+        },
+        {
+            'task': 'Disassemble machine code into assembly instructions',
+            'cmd': "rasm2 -a x86 -b 32 'mov eax, 33'",
+            'src': 'https://www.mankier.com/1/rasm2',
         },
     ],
     'ssdeep': [
@@ -579,6 +675,23 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Capture 100 packets for network analysis',
             'cmd': 'tshark -c 100 -n -w 100pkts.pcap',
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
+    'xxd': [
+        {
+            'task': 'Recover original data from hex dump by reversing it',
+            'cmd': 'xxd -r',
+            'src': 'https://commandlinux.com/man-page/man1/xxd/',
+        },
+        {
+            'task': 'Recover original data from hexdump',
+            'cmd': 'xxd -r -i',
+            'src': 'https://commandlinux.com/man-page/man1/xxd/',
+        },
+        {
+            'task': 'Inspect binary files with hex dump',
+            'cmd': 'xxd file.bin',
+            'src': 'https://www.commandinline.com/xxd-command-cheat-sheet/',
         },
     ],
 }

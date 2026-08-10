@@ -13,6 +13,15 @@
 
 The general-purpose crypto toolkit: inspect certificates, compute digests, encrypt and decrypt, and speak TLS to a service. In analysis it is most often used to read a certificate a sample presented, or to decrypt a blob once the key is known.
 
+## Common invocations
+
+```
+# Verify certificate validity and trust chain
+openssl verify cert.pem
+# Verify certificate validity and trust chain
+openssl verify remote.site.pem
+```
+
 ## Options
 
 _No option definitions could be parsed from this tool's help output. It may be subcommand-driven or have no flags; needs manual review._

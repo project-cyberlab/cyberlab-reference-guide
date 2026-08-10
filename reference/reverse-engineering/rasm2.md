@@ -22,6 +22,23 @@ rasm2 [-ACdDehHLBvw] [-a arch] [-b bits] [-s addr] [-S syntax]
 [-f file] [-o file] [-F fil:ter] [-i skip] [-l len] 'code'|hex|0101b|-
 ```
 
+## Common invocations
+
+```
+# Assemble x86 assembly instruction into machine code opcodes
+rasm2 -a x86 -b 32 'mov eax, 33'
+# Disassemble hex bytes into assembly instructions
+rasm2 -d 90
+# List plugins for supported architectures
+rasm2 -L
+# Assemble assembly instructions to machine code
+rasm2 -a java 'nop'
+# Disassemble hex bytes into assembly instructions
+rasm2 -a x86 -b 32 -d '90'
+# Disassemble machine code into assembly instructions
+rasm2 -a x86 -b 32 'mov eax, 33'
+```
+
 ## Options
 
 All 25 options parsed from the captured help text. The final column is filled in by review.

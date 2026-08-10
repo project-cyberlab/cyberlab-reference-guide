@@ -101,8 +101,22 @@ def split_prompts(line: str, tool: str) -> list[str]:
 # not a command anyone runs:
 #   foremost [-v|-V|-h|-T|-Q|-q|-a|-w-d] [-t <type>] [-s <blocks>]
 #   clamscan [options] [file/directory/-]
-SYNOPSIS = re.compile(r"\[[^\]]*\|[^\]]*\]|\[options?\]|\[file/|\.{3}\]"
-                      r"|\[-\w\|", re.I)
+SYNOPSIS = re.compile(r"\[[^\]]*\|[^\]]*\]|\[opt(?:ion)?s?\]|\[file/|\.{3}\]"
+                      # Deliberately NOT matching a bare <placeholder>. A
+                      # synopsis is given away by its bracketed options, and
+                      # `ewfmount image.E01 <folder>` is a real command that
+                      # names one argument generically -- the same thing this
+                      # guide does with {{path/to/image.dd}}.
+                      r"|\[-\w\|"
+                      # A man page's optional-suffix notation: -h[elp],
+                      # -s[eek]. Real in a manual, not runnable.
+                      r"|-\w\[[a-z]+\]", re.I)
+
+# A man page's placeholder operands, which read as arguments but are not:
+#   xxd -s +seek        xxd -s seek ,
+PLACEHOLDER = re.compile(r"(?<![\w-])[+]?(?:seek|offset|len|infile|outfile|"
+                         r"cols|groupsize|file|dir|path|name|addr|size)"
+                         r"\s*,?\s*$", re.I)
 
 # A page title that happens to lead with the tool name:
 #   olevba · decalage2/oletools Wiki · GitHub
@@ -228,7 +242,22 @@ def candidate_lines(text: str, tool: str,
         # open the tool's own name as a file.
         line = re.sub(r"^(" + re.escape(tool) + r")\s+\1(?=\s)", r"\1", line)
 
+        # Prose glued onto the end of a command by the text extraction:
+        #   rasm2 -a x86 -b 32 'mov eax, 33' Disassemble opcode:
+        # The colon after a capitalised word is the giveaway -- it is the
+        # heading of the next example, not part of this one.
+        line = re.sub(r"\s+[A-Z][a-z]+(?:\s+\w+){0,3}\s*:\s*$", "", line)
+        # ...and shell noise the same extraction dragged along:
+        #   rahash2 -S 12333 -E ror -s hello && echo Cell{
+        line = re.split(r"\s+&&\s+echo\s", line)[0].strip()
+
         if SELF.match(line) or SYNOPSIS.search(line) or TITLE.search(line):
+            continue
+        if PLACEHOLDER.search(line):
+            continue
+        # An unbalanced brace or bracket means the line was cut out of
+        # something larger and is not a command on its own.
+        if line.count("{") != line.count("}") or line.count("[") != line.count("]"):
             continue
         # A prose parenthetical standing in for arguments -- "mergecap -F
         # (different options)" is a sentence about the flag, not a command.

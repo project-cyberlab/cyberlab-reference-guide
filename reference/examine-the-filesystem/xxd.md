@@ -21,6 +21,17 @@ or
 xxd -r [-s [-]offset] [-c cols] [-ps] [infile [outfile]]
 ```
 
+## Common invocations
+
+```
+# Recover original data from hex dump by reversing it
+xxd -r
+# Recover original data from hexdump
+xxd -r -i
+# Inspect binary files with hex dump
+xxd file.bin
+```
+
 ## Options
 
 All 16 options parsed from the captured help text. The final column is filled in by review.
