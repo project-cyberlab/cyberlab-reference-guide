@@ -2563,6 +2563,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-U': 'An analyst would use the -U flag when connecting to a device via USB to list its running processes or installed applications during a mobile forensic investigation.',
     },
     'frida-trace': {
+        '--decorate': 'An analyst would use the --decorate flag when tracing functions that exist in multiple modules to distinguish their logs by adding the module name to the trace output.',
         '-I': 'An analyst would use the -I flag when they need to trace all functions within a specific module, such as to broadly monitor activity in a particular library without specifying individual functions.',
         '-N': 'When the target application is already running and the analyst needs to trace functions using its identifier.',
         '-O': "An analyst would use the -O flag when dealing with a large number of command line options that exceed the operating system's maximum command line length, allowing them to pass options via text files.",
@@ -2828,6 +2829,10 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-d': 'An analyst would use the -d flag when needing to generate a comprehensive header/footer database to ensure all footers are discovered, even though it sacrifices performance.',
         '-o': 'An analyst would use the -o flag with scalpel when specifying the output directory for extracted files from a disk image or device file during data carving.',
     },
+    'sha256sum': {
+        '--check': 'An analyst would use the --check flag when verifying the integrity of files against a known checksum file to identify discrepancies or failed validations without unnecessary output.',
+        '-b': 'An analyst would use the `-b` flag when verifying files across different systems or handling files with mixed line endings to ensure consistent binary-mode hashing.',
+    },
     'sigtool': {
         '--datadir': 'An analyst would use --datadir when they need to specify a non-default directory as the default database location for all sigtool operations.',
         '--hex-dump': "An analyst would use the --hex-dump flag when needing to generate a hexadecimal representation of a file's contents for detailed forensic examination or signature creation.",
@@ -2845,6 +2850,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-x': 'An analyst would use the -x flag when comparing multiple sets of generated fuzzy hash signatures against each other to identify potential matches or overlaps between files, such as comparing system directory hashes with known malware hashes.',
     },
     'strings': {
+        '--radix': 'An analyst would use the --radix flag when they need to print the memory location of each string in the file, such as to analyze the positions of strings within a binary executable.',
         '-a': 'An analyst would use the -a flag when they need to scan the entire file, including metadata, to ensure no readable text is missed, especially if vital information like error messages is suspected to be outside the main data section.',
         '-d': 'An analyst would use the -d flag when examining a binary file to extract only the strings from its data sections, ignoring other sections like debugging symbols or metadata.',
         '-f': 'An analyst would use the -f flag when processing multiple files to trace which file a particular string originated from.',

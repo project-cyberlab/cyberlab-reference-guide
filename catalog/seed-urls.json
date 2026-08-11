@@ -901,5 +901,14 @@
   "srch_strings": [
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "bdemount": [
+    "https://github.com/libyal/libbde/wiki/Mounting",
+    "https://manpages.ubuntu.com/manpages/bionic/man1/bdemount.1.html"
+  ],
+  "vshadowmount": [
+    "https://github.com/libyal/libvshadow/wiki/Mounting",
+    "https://andreafortuna.org/2018/10/01/accessing-volume-shadow-copies-within-a-forensic-image/",
+    "http://windowsir.blogspot.com/2018/09/accessing-volume-shadows-revisited.html"
   ]
 }

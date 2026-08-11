@@ -39,7 +39,7 @@ strings -d executable_file
 
 ## Options
 
-All 14 options parsed from the captured help text; 6 reviewed with usage guidance.
+All 14 options parsed from the captured help text; 7 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -50,7 +50,7 @@ All 14 options parsed from the captured help text; 6 reviewed with usage guidanc
 | `-n` | number | Locate & print any sequence of at least <number> | Minimum length. Default 4 is noisy; 8–10 cuts most false hits. |
 | `--bytes` | number | displayable characters. (The default is 4). |  |
 | `-t` | o,d,x | Print the location of the string in base 8, 10 or 16 | An analyst would use the -t flag when they need to determine the exact location of strings within a binary file for further investigation or correlation with other data. |
-| `--radix` | o,d,x | Print the location of the string in base 8, 10 or 16 | An analyst would use the -t flag when they need to determine the exact location of strings within a binary file for further investigation or correlation with other data. |
+| `--radix` | o,d,x | Print the location of the string in base 8, 10 or 16 | An analyst would use the --radix flag when they need to print the memory location of each string in the file, such as to analyze the positions of strings within a binary executable. |
 | `-o` | — | An alias for --radix=o | Print the byte offset of each string — lets you seek back to it. |
 | `-T` | — | Specify the binary file format |  |
 | `--target` | BFDNAME | Specify the binary file format |  |

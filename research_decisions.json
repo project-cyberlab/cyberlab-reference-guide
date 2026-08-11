@@ -2022,5 +2022,25 @@
   "freshclam --log": {
     "verdict": "accept",
     "why": "Checked against the captured help line. freshclam --daemon matches \"Run in daemon mode\" and --log matches \"Log into FILE\", and both notes give a reason rather than restating: a daemon for unattended currency, a log for the record of what was downloaded when. The tsk_gettimes tool note places it correctly -- after imaging, before mactime."
+  },
+  "strings -T": {
+    "verdict": "reject",
+    "why": "Wrong flag entirely, in the way that is hardest to spot: -T and -t x are one keystroke apart and do unrelated things. The captured help says \"-T --target=<BFDNAME> Specify the binary file format\"; the note says -T displays the hexadecimal offset of each string, which is -t x (--radix). A reader would type -T expecting offsets and get a format-override error or silence. Second catch by the help-line check in two rounds."
+  },
+  "frida-trace --decorate": {
+    "verdict": "accept",
+    "why": "Checked line by line against the captured help. strings --radix matches \"Print the location of the string in base 8, 10 or 16\"; sha256sum --check matches \"read checksums from the FILEs and check them\" and -b matches \"read in binary mode\" with a real reason given for it; frida-trace --decorate matches \"add module name to generated onEnter log statement\" and says why that matters -- the same function in several modules."
+  },
+  "sha256sum --check": {
+    "verdict": "accept",
+    "why": "Checked line by line against the captured help. strings --radix matches \"Print the location of the string in base 8, 10 or 16\"; sha256sum --check matches \"read checksums from the FILEs and check them\" and -b matches \"read in binary mode\" with a real reason given for it; frida-trace --decorate matches \"add module name to generated onEnter log statement\" and says why that matters -- the same function in several modules."
+  },
+  "sha256sum -b": {
+    "verdict": "accept",
+    "why": "Checked line by line against the captured help. strings --radix matches \"Print the location of the string in base 8, 10 or 16\"; sha256sum --check matches \"read checksums from the FILEs and check them\" and -b matches \"read in binary mode\" with a real reason given for it; frida-trace --decorate matches \"add module name to generated onEnter log statement\" and says why that matters -- the same function in several modules."
+  },
+  "strings --radix": {
+    "verdict": "accept",
+    "why": "Checked line by line against the captured help. strings --radix matches \"Print the location of the string in base 8, 10 or 16\"; sha256sum --check matches \"read checksums from the FILEs and check them\" and -b matches \"read in binary mode\" with a real reason given for it; frida-trace --decorate matches \"add module name to generated onEnter log statement\" and says why that matters -- the same function in several modules."
   }
 }

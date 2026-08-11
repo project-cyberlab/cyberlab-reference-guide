@@ -43,14 +43,14 @@ sha256sum -c checksums.sha256 --status
 
 ## Options
 
-All 17 options parsed from the captured help text. The final column is filled in by review.
+All 17 options parsed from the captured help text; 2 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-b` | — | read in binary mode |  |
-| `--binary` | — | read in binary mode |  |
-| `-c` | — | read checksums from the FILEs and check them |  |
-| `--check` | — | read checksums from the FILEs and check them |  |
+| `-b` | — | read in binary mode | An analyst would use the `-b` flag when verifying files across different systems or handling files with mixed line endings to ensure consistent binary-mode hashing. |
+| `--binary` | — | read in binary mode | An analyst would use the `-b` flag when verifying files across different systems or handling files with mixed line endings to ensure consistent binary-mode hashing. |
+| `-c` | — | read checksums from the FILEs and check them | An analyst would use the --check flag when verifying the integrity of files against a known checksum file to identify discrepancies or failed validations without unnecessary output. |
+| `--check` | — | read checksums from the FILEs and check them | An analyst would use the --check flag when verifying the integrity of files against a known checksum file to identify discrepancies or failed validations without unnecessary output. |
 | `--tag` | — | create a BSD-style checksum |  |
 | `-t` | — | read in text mode (default) |  |
 | `--text` | — | read in text mode (default) |  |

@@ -29,7 +29,7 @@ frida-trace [options] target
 
 ## Options
 
-All 82 options parsed from the captured help text; 10 reviewed with usage guidance.
+All 82 options parsed from the captured help text; 11 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -104,8 +104,8 @@ All 82 options parsed from the captured help text; 10 reviewed with usage guidan
 | `--include-debug-symbol` | DEBUG_SYMBOL | include DEBUG_SYMBOL |  |
 | `-q` | — | do not format output messages |  |
 | `--quiet` | — | do not format output messages |  |
-| `-d` | — | add module name to generated onEnter log statement |  |
-| `--decorate` | — | add module name to generated onEnter log statement |  |
+| `-d` | — | add module name to generated onEnter log statement | An analyst would use the --decorate flag when tracing functions that exist in multiple modules to distinguish their logs by adding the module name to the trace output. |
+| `--decorate` | — | add module name to generated onEnter log statement | An analyst would use the --decorate flag when tracing functions that exist in multiple modules to distinguish their logs by adding the module name to the trace output. |
 | `-S` | PATH | path to JavaScript file used to initialize the session | An analyst would use the -S flag when they need to initialize a frida-trace session by executing custom JavaScript code files to set up the environment, share functions, or add data to the global "state" object before tracing begins. |
 | `--init-session` | PATH | path to JavaScript file used to initialize the session | An analyst would use the -S flag when they need to initialize a frida-trace session by executing custom JavaScript code files to set up the environment, share functions, or add data to the global "state" object before tracing begins. |
 | `-P` | PARAMETERS_JSON | parameters as JSON, exposed as a global named 'parameters' | An analyst would use the `-P` flag when tracing multiple functions and needing to dynamically control handler behavior, such as conditionally printing the process ID based on a JSON parameter passed via the command line. |

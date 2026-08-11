@@ -25,6 +25,13 @@ An analyst reaches for esedbinfo when examining Extensible Storage Engine (ESE) 
 esedbinfo [ -hvV ] source
 ```
 
+## Common invocations
+
+```
+# Retrieve ESE database metadata and structure
+esedbinfo Windows.edb
+```
+
 ## Options
 
 All 3 options parsed from the captured help text; 1 reviewed with usage guidance.

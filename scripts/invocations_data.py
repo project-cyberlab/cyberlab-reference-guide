@@ -99,6 +99,28 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.aldeid.com/wiki/Category:Encryption/Bitlocker',
         },
     ],
+    'bdemount': [
+        {
+            'task': 'Mount BitLocker-encrypted partition with password',
+            'cmd': 'bdemount -p Password /dev/sda1',
+            'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/bdemount.1.html',
+        },
+        {
+            'task': 'Mount BitLocker-encrypted volume using recovery key',
+            'cmd': 'bdemount -r 599907-126192-034078-378543-435050-262383-683309-100661 /dev/sda2 /mnt/fuse',
+            'src': 'https://github.com/libyal/libbde/wiki/Mounting',
+        },
+        {
+            'task': 'Decrypt and mount BitLocker-encrypted volume from raw image',
+            'cmd': 'bdemount -r 599907-126192-034078-378543-435050-262383-683309-100661 -o 524288 image.raw x:',
+            'src': 'https://github.com/libyal/libbde/wiki/Mounting',
+        },
+        {
+            'task': 'Mount BDE volume from raw image for analysis',
+            'cmd': 'bdemount -X allow_root -r 599907-126192-034078-378543-435050-262383-683309-100661 image.raw /mnt/fuse',
+            'src': 'https://github.com/libyal/libbde/wiki/Mounting',
+        },
+    ],
     'binwalk': [
         {
             'task': 'Scan firmware for embedded files and file systems',
@@ -269,6 +291,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Split capture into 200-packet segments',
             'cmd': 'editcap -c 200 dbad.pcap dbadsplit.pcap',
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
+    'esedbinfo': [
+        {
+            'task': 'Retrieve ESE database metadata and structure',
+            'cmd': 'esedbinfo Windows.edb',
+            'src': 'https://manpages.debian.org/unstable/libesedb-utils/esedbinfo.1.en.html',
         },
     ],
     'evtxexport': [
@@ -987,6 +1016,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
+    'srch_strings': [
+        {
+            'task': 'Search evidence files for password-related strings',
+            'cmd': 'srch_strings -a -t d "$EVIDENCE" | grep -i "password"',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
     'ssdeep': [
         {
             'task': 'Generate file hashes recursively for directory tree',
@@ -1116,6 +1152,23 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Extract shadow copy metadata from disk image',
             'cmd': 'vshadowinfo -o <partition_byte_offset> disk.raw',
             'src': 'https://github.com/project-dfir/dfir-lab/blob/main/module-24-anti-forensics-vss/README.md',
+        },
+    ],
+    'vshadowmount': [
+        {
+            'task': 'Mount shadow volumes to access historical disk states',
+            'cmd': 'vshadowmount -o <partition_byte_offset> disk.raw /mnt/vss',
+            'src': 'https://github.com/project-dfir/dfir-lab/tree/main/module-24-anti-forensics-vss',
+        },
+        {
+            'task': 'Mount VSS volume to access shadow copy data',
+            'cmd': 'vshadowmount /dev/sda2 /mnt/fuse',
+            'src': 'https://github.com/libyal/libvshadow/wiki/Mounting',
+        },
+        {
+            'task': 'Mount VSS volume from raw image for access',
+            'cmd': 'vshadowmount -X allow_root image.raw /mnt/fuse',
+            'src': 'https://github.com/libyal/libvshadow/wiki/Mounting',
         },
     ],
     'xlmdeobfuscator': [
