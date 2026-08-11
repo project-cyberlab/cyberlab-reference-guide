@@ -124,6 +124,10 @@ REPAIR = [
      "hashcat -m 100 hashes.txt wordlist.txt"),
     ("EvtxECmd", "EvtxECmd.exe --sync # update 700+ community maps first",
      "EvtxECmd.exe --sync"),
+    # HTML tokenisation split the home shortcut from its path. Pasted as-is
+    # this runs against the home directory and an unrelated absolute path.
+    ("regipy-dump", "regipy-dump ~ /Documents/Evidence/NTUSER.DAT -o /tmp/o.json",
+     "regipy-dump ~/Documents/Evidence/NTUSER.DAT -o /tmp/o.json"),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),

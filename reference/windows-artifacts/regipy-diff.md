@@ -19,6 +19,13 @@ Diff two registry hives and report what changed between them. The artifact-level
 regipy-diff [OPTIONS] FIRST_HIVE_PATH SECOND_HIVE_PATH
 ```
 
+## Common invocations
+
+```
+# Compare registry hives to identify differences
+regipy-diff NTUSER.dat NTUSER_modified.dat -o /tmp/diff.csv
+```
+
 ## Options
 
 All 4 options parsed from the captured help text; 1 reviewed with usage guidance.

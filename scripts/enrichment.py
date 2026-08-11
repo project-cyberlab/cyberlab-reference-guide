@@ -2383,6 +2383,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for tshark when capturing or analyzing network traffic from the command line, often after setting up capture filters (e.g., `tshark -f !arp`) or before generating statistics (e.g., `tshark -z io,stat`). They may prefer it over GUI tools for scripting, automation, or when working with large captures that require efficient, non-interactive processing.',
         'sources': ['https://docsislab.wordpress.com/packet-capture/wireshark-command-line/', 'https://www.wireshark.org/docs/wsug_html_chunked/AppTools.html'],
     },
+    'tsk_gettimes': {
+        'scenario': 'An analyst uses tsk_gettimes after imaging a disk to extract metadata from all file systems, generating a body file for mactime to create a timeline. They may run it before using mactime to automate metadata collection from multiple file systems, choosing it over manual fls commands for efficiency.',
+        'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Body-file', 'https://github.com/sleuthkit/sleuthkit/wiki/Timelines', 'https://github.com/sleuthkit/sleuthkit/wiki/tsk_gettimes'],
+    },
     'tsk_recover': {
         'scenario': 'When an analyst needs to recover files from a disk image, they use tsk_recover after ensuring sufficient storage space in the destination folder. They run it following the creation of the image, as it is specifically designed for recovering files from disk images.',
         'sources': ['https://github.com/sleuthkit/sleuthkit/wiki/Body-file', 'https://github.com/sleuthkit/sleuthkit/wiki/Timelines', 'https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg'],
@@ -2539,7 +2543,9 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'freshclam': {
         '--checks': "An analyst would use the --checks flag to specify a custom number of daily database update checks when the default of 12 checks per day is insufficient for their system's needs.",
+        '--daemon': 'An analyst would use the --daemon flag when configuring freshclam to run continuously in the background to automatically check for and download virus database updates at regular intervals without manual intervention.',
         '--datadir': 'An analyst would use the --datadir flag when they need to install the new ClamAV database in a specific directory that is writable, already exists, and is an absolute path, rather than the default location.',
+        '--log': 'An analyst would use the --log flag when they need to direct the output of the freshclam update process to a specific file for record-keeping or troubleshooting.',
         '--quiet': 'An analyst would use the --quiet flag when automating ClamAV database updates via scripts or cron jobs to suppress output and check exit codes for success or failure without generating unnecessary log entries.',
         '-d': 'An analyst would use the -d flag when they need freshclam to run continuously in the background to periodically check for and download virus database updates without manual intervention.',
         '-v': 'An analyst would use the -v flag when needing detailed output to monitor the ClamAV database update process, such as verifying download progress and confirming successful updates.',

@@ -187,6 +187,11 @@ def candidate_lines(text: str, tool: str,
         # Markup that survived the text extraction, dragging the tail of a
         # copy-to-clipboard button along with the command.
         line = re.split(r'"\s+(?:title|class|aria-\w+|data-\w+)=', line)[0]
+        # "~ /Documents/Evidence/NTUSER.DAT" -- the HTML tokenisation split
+        # the home shortcut from its path. Pasted as-is the command reads two
+        # arguments, the home directory and an unrelated absolute path, and
+        # runs against the wrong thing rather than failing.
+        line = re.sub(r"(?<![\w~])~\s+/", "~/", line)
         line = LEAD.sub("", line.strip())
         if not line or len(line) > 160:
             continue

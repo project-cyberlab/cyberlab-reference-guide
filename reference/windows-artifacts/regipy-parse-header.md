@@ -25,6 +25,13 @@ An analyst reaches for regipy-parse-header when examining the header of a regist
 regipy-parse-header [OPTIONS] HIVE_PATH
 ```
 
+## Common invocations
+
+```
+# Parse and display Windows registry hive header metadata
+regipy-parse-header ~/Documents/TestEvidence/Registry/SYSTEM
+```
+
 ## Options
 
 All 3 options parsed from the captured help text. The final column is filled in by review.

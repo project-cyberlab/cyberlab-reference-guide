@@ -918,6 +918,34 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://codelucky.com/readelf-command-linux/',
         },
     ],
+    'regipy-diff': [
+        {
+            'task': 'Compare registry hives to identify differences',
+            'cmd': 'regipy-diff NTUSER.dat NTUSER_modified.dat -o /tmp/diff.csv',
+            'src': 'https://github.com/mkorman90/regipy',
+        },
+    ],
+    'regipy-dump': [
+        {
+            'task': 'Dump registry hive data to JSON for analysis',
+            'cmd': 'regipy-dump ~/Documents/TestEvidence/Registry/NTUSER-CCLEANER.DAT -o /tmp/output.json',
+            'src': 'https://github.com/mkorman90/regipy',
+        },
+    ],
+    'regipy-parse-header': [
+        {
+            'task': 'Parse and display Windows registry hive header metadata',
+            'cmd': 'regipy-parse-header ~/Documents/TestEvidence/Registry/SYSTEM',
+            'src': 'https://github.com/mkorman90/regipy',
+        },
+    ],
+    'regipy-plugins-run': [
+        {
+            'task': 'Analyze SYSTEM hive using plugins to extract relevant data',
+            'cmd': 'regipy-plugins-run ~/Documents/TestEvidence/Registry/SYSTEM -o /tmp/plugins_output.json',
+            'src': 'https://github.com/mkorman90/regipy',
+        },
+    ],
     'scalpel': [
         {
             'task': 'Extract embedded files from disk image',
@@ -1066,7 +1094,7 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'tsk_gettimes': [
         {
-            'task': 'Extract file timestamps from disk image',
+            'task': 'Collect time data from disk image for analysis',
             'cmd': 'tsk_gettimes ./image.dd > body.txt',
             'src': 'https://www.systutorials.com/docs/linux/man/1-tsk_gettimes/',
         },

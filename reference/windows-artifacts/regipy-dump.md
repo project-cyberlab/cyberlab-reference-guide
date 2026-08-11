@@ -25,6 +25,13 @@ An analyst reaches for regipy-dump when they need to extract and analyze the con
 regipy-dump [OPTIONS] HIVE_PATH
 ```
 
+## Common invocations
+
+```
+# Dump registry hive data to JSON for analysis
+regipy-dump ~/Documents/TestEvidence/Registry/NTUSER-CCLEANER.DAT -o /tmp/output.json
+```
+
 ## Options
 
 All 18 options parsed from the captured help text; 1 reviewed with usage guidance.

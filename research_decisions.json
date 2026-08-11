@@ -2006,5 +2006,21 @@
   "scalpel -d": {
     "verdict": "accept",
     "why": "Checked against the captured help line rather than from memory, after this round showed my recollection can be backwards. scalpel -d matches \"Generate header/footer database; will bypass certain optimizations\" including the performance trade-off; -o matches \"Set output directory for carved files\"."
+  },
+  "tsk_gettimes -m": {
+    "verdict": "reject",
+    "why": "Describes the TOOL, not the flag. The captured help says \"-m: Calculate MD5 hash in output (slow)\"; the note says -m is for extracting metadata from file systems to build a timeline, which is what tsk_gettimes does with or without it. A reader would set -m expecting it to be required for the timeline and get a slow run with an extra hash column. Caught on the first use of the help-line check added after radiff2 -n."
+  },
+  "tsk_gettimes": {
+    "verdict": "accept",
+    "why": "Checked against the captured help line. freshclam --daemon matches \"Run in daemon mode\" and --log matches \"Log into FILE\", and both notes give a reason rather than restating: a daemon for unattended currency, a log for the record of what was downloaded when. The tsk_gettimes tool note places it correctly -- after imaging, before mactime."
+  },
+  "freshclam --daemon": {
+    "verdict": "accept",
+    "why": "Checked against the captured help line. freshclam --daemon matches \"Run in daemon mode\" and --log matches \"Log into FILE\", and both notes give a reason rather than restating: a daemon for unattended currency, a log for the record of what was downloaded when. The tsk_gettimes tool note places it correctly -- after imaging, before mactime."
+  },
+  "freshclam --log": {
+    "verdict": "accept",
+    "why": "Checked against the captured help line. freshclam --daemon matches \"Run in daemon mode\" and --log matches \"Log into FILE\", and both notes give a reason rather than restating: a daemon for unattended currency, a log for the record of what was downloaded when. The tsk_gettimes tool note places it correctly -- after imaging, before mactime."
   }
 }

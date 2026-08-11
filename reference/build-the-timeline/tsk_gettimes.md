@@ -15,6 +15,12 @@
 
 Analyze disk images and recover files from them.
 
+## When you'd reach for this
+
+An analyst uses tsk_gettimes after imaging a disk to extract metadata from all file systems, generating a body file for mactime to create a timeline. They may run it before using mactime to automate metadata collection from multiple file systems, choosing it over manual fls commands for efficiency.
+
+**Sources:** <https://github.com/sleuthkit/sleuthkit/wiki/Body-file> · <https://github.com/sleuthkit/sleuthkit/wiki/Timelines> · <https://github.com/sleuthkit/sleuthkit/wiki/tsk_gettimes>
+
 ## Synopsis
 
 ```
@@ -24,7 +30,7 @@ tsk_gettimes [-vVm] [-i imgtype] [-b dev_sector_size] [-z zone] [-s seconds] ima
 ## Common invocations
 
 ```
-# Extract file timestamps from disk image
+# Collect time data from disk image for analysis
 tsk_gettimes ./image.dd > body.txt
 ```
 

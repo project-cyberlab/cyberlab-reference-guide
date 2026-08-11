@@ -25,6 +25,13 @@ An analyst reaches for regipy-plugins-run after dumping a registry hive to disk,
 regipy-plugins-run [OPTIONS] HIVE_PATH
 ```
 
+## Common invocations
+
+```
+# Analyze SYSTEM hive using plugins to extract relevant data
+regipy-plugins-run ~/Documents/TestEvidence/Registry/SYSTEM -o /tmp/plugins_output.json
+```
+
 ## Options
 
 All 11 options parsed from the captured help text. The final column is filled in by review.

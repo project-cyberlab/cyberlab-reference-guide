@@ -11,12 +11,6 @@
     "fp": "61fd65f11c39",
     "seeds": 4
   },
-  "img_stat": {
-    "attempts": 87,
-    "eligible": true,
-    "fp": "ed76ba184507",
-    "seeds": 7
-  },
   "numbers-to-string.py": {
     "attempts": 85,
     "eligible": true,

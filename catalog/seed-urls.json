@@ -194,20 +194,28 @@
     "https://manpages.debian.org/unstable/libpff-utils/pffinfo.1.en.html"
   ],
   "regipy-dump": [
-    "https://github.com/mkorman90/regipy"
+    "https://github.com/mkorman90/regipy",
+    "https://github.com/mkorman90/regipy/blob/master/README.md",
+    "https://libraries.io/pypi/regipy"
   ],
   "regipy-diff": [
-    "https://github.com/mkorman90/regipy"
+    "https://github.com/mkorman90/regipy",
+    "https://github.com/mkorman90/regipy/blob/master/README.md",
+    "https://libraries.io/pypi/regipy"
   ],
   "regipy-plugins-run": [
-    "https://github.com/mkorman90/regipy"
+    "https://github.com/mkorman90/regipy",
+    "https://github.com/mkorman90/regipy/blob/master/README.md",
+    "https://libraries.io/pypi/regipy"
   ],
   "regipy-plugins-list": [
     "https://github.com/mkorman90/regipy",
     "https://github.com/mkorman90/regipy/blob/master/README.md"
   ],
   "regipy-parse-header": [
-    "https://github.com/mkorman90/regipy"
+    "https://github.com/mkorman90/regipy",
+    "https://github.com/mkorman90/regipy/blob/master/README.md",
+    "https://libraries.io/pypi/regipy"
   ],
   "reglookup": [
     "https://www.cybertriage.com/blog/2026-guide-to-registry-forensics-tools/",
