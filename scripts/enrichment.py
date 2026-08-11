@@ -2024,8 +2024,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://hackers-arise.com/digital-forensics-registry-analysis-for-beginners-part-3-evidence-of-execution/', 'https://hivesecurity.gitlab.io/blog/dfir-incident-response-complete-guide-2026/', 'https://nullsec.us/windows-10-11-appcompatcache-deep-dive/'],
     },
     'EvtxECmd': {
-        'scenario': 'An analyst reaches for EvtxECmd during the "PARSE" phase of the DFIR workflow to convert event logs into standardized CSV, XML, or JSON formats, often after collecting logs with KAPE and before analyzing them in Timeline Explorer, as it supports custom maps, locked file handling, and produces structured output essential for correlation and triage.',
-        'sources': ['https://ericzimmerman.github.io/', 'https://ridgelinecyber.com/resources/kape-ez-tools/'],
+        'scenario': 'An analyst reaches for EvtxECmd when processing Windows Event Log (EVTX) files as part of a KAPE workflow, often after collecting event data or before generating actionable output through KAPE modules; they choose it because it is specifically integrated with KAPE and includes maps for structured EVTX analysis, which may offer more streamlined processing compared to standalone tools.',
+        'sources': ['https://ericzimmerman.github.io/', 'https://github.com/AndrewRathbun/Awesome-KAPE'],
     },
     'JLECmd': {
         'scenario': 'An analyst reaches for JLECmd when parsing individual Jump Lists or extracting shell item data from .automaticDestinations-ms files, often after obtaining the files through forensic imaging or before analyzing the extracted .lnk files with other tools like LNK Tool. They may choose JLECmd over JumpList Explorer (JLE) when command-line processing is required, though JLE is preferred for its graphical interface.',
@@ -2659,6 +2659,14 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '--script-updatedb': 'An analyst would use the --script-updatedb flag when they have added, removed, or modified the categories of NSE scripts in the default scripts directory, requiring the script database to be updated.',
         '-iR': "An analyst would use the -iR flag when they need to choose random targets for scanning, as indicated by the documentation's description of the option.",
         '-sC': 'An analyst would use the -sC flag when conducting a scan to automatically execute the most common NSE scripts for quick vulnerability and service enumeration without manually specifying individual scripts.',
+    },
+    'nping': {
+        '--dest-port': 'An analyst would use the --dest-port flag when testing connectivity to a specific service on a target host, such as verifying HTTPS availability on port 443.',
+        '--tcp': 'An analyst would use the --tcp flag when sending TCP packets to specific ports as part of network testing or scanning, such as in the example where it is used with --flags rst to send a reset packet to port 80.',
+        '-p': 'An analyst would use the -p flag when testing specific TCP ports on a target host, such as checking if a web server is listening on port 80.',
+    },
+    'ntfs-3g': {
+        '-o': 'An analyst would use the -o flag when mounting NTFS partitions from disk images to apply specific options like read-only access, show system files, handle stream interfaces, or specify sector-based offsets for proper forensic examination.',
     },
     'oledir': {
         '--zip': 'An analyst would use the --zip flag when processing a password-protected zip archive containing OLE files that need to be extracted and analyzed.',

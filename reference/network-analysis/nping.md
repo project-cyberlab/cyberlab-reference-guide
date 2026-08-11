@@ -44,19 +44,19 @@ nping --tcp -c 1 --delay 500ms 1.1.1.1 2.2.2.2 3.3.3.3 -p 137-139
 
 ## Options
 
-All 85 options parsed from the captured help text. The final column is filled in by review.
+All 85 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `--tcp-connect` | — | Unprivileged TCP connect probe mode. |  |
-| `--tcp` | — | TCP probe mode. |  |
+| `--tcp` | — | TCP probe mode. | An analyst would use the --tcp flag when sending TCP packets to specific ports as part of network testing or scanning, such as in the example where it is used with --flags rst to send a reset packet to port 80. |
 | `--udp` | — | UDP probe mode. |  |
 | `--icmp` | — | ICMP probe mode. |  |
 | `--arp` | — | ARP/RARP probe mode. |  |
 | `--tr` | — | Traceroute mode (can only be used with TCP/UDP/ICMP modes). |  |
 | `--traceroute` | — | Traceroute mode (can only be used with TCP/UDP/ICMP modes). |  |
-| `-p` | port spec | Set destination port(s). |  |
-| `--dest-port` | port spec | Set destination port(s). |  |
+| `-p` | port spec | Set destination port(s). | An analyst would use the -p flag when testing specific TCP ports on a target host, such as checking if a web server is listening on port 80. |
+| `--dest-port` | port spec | Set destination port(s). | An analyst would use the --dest-port flag when testing connectivity to a specific service on a target host, such as verifying HTTPS availability on port 443. |
 | `-g` | portnumber | Try to use a custom source port. |  |
 | `--source-port` | portnumber | Try to use a custom source port. |  |
 | `--seq` | seqnumber | Set sequence number. |  |

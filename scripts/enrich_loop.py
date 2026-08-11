@@ -387,6 +387,33 @@ def check_direction(note: str, subject: str,
     return "ok", "ordering corroborated"
 
 
+_FLAG_TOKEN = re.compile(r"(?<![\w-])(--?[A-Za-z][\w-]*)")
+
+
+def wrong_flag(note: str, flag: str | None) -> str | None:
+    """Another flag of the SAME tool that this note is really about.
+
+    Written as its own function for the same reason misattributed() was: a
+    check buried in gate() can be read, compiled, and never fire.
+
+    Replayed over every recorded flag note before being adopted. It fires
+    once, on nping -c, whose note describes --icmp throughout and never
+    mentions -c, and it costs no accepted note. A rule that cheap is worth
+    having even for one case, because the failure it catches is invisible --
+    the note is fluent, grounded, correctly cited and about the right tool.
+    """
+    if not flag:
+        return None
+    named = set(_FLAG_TOKEN.findall(note or ""))
+    if not named or flag in named:
+        return None
+    # -c and --count are the same option spelled two ways, and a note may
+    # legitimately use the long form. Only a genuinely different letter
+    # counts as a different flag.
+    other = [f for f in named if f.lstrip("-")[:1] != flag.lstrip("-")[:1]]
+    return other[0] if other else None
+
+
 def misattributed(note: str, tool: str, flag: str | None) -> str | None:
     """The other tool this note hangs the flag on, if it does.
 
@@ -457,6 +484,20 @@ def gate(note: str, evidence: list[dict], tool: str,
     bad = misattributed(note, tool, flag)
     if bad:
         return False, f"attributes {flag} to {bad}, not to {tool}"
+
+    # The same fault one level in: the right tool, the wrong flag.
+    #
+    # nping -c came back describing --icmp. misattributed() looks for other
+    # TOOLS and sees nothing wrong, because nothing is wrong at that level --
+    # the note is about nping. It is simply about a different option, and a
+    # reader would take the sentence as the meaning of -c.
+    #
+    # A cross-reference is fine and common: "-c together with -a" names both.
+    # What is rejected is naming ONLY some other flag.
+    other = wrong_flag(note, flag)
+    if other:
+        return False, (f"describes {other}, never {flag}; the scenario "
+                       f"belongs to a different option of the same tool")
 
     # ...and the quieter form of the same fault, where the note borrows
     # another tool's option semantics without ever naming it.

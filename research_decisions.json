@@ -1918,5 +1918,29 @@
   "hashcat -o": {
     "verdict": "accept",
     "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "md5sum --binary": {
+    "verdict": "reject",
+    "why": "Restates the definition: \"reading a file in binary mode instead of the default text mode\". No trigger, no case, nothing about the evidence. On Linux the distinction is a no-op anyway, so the honest note would say when it matters -- reading a file written on Windows -- and this one does not."
+  },
+  "nping -p": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The nping set names real ports and services (-p 80, --dest-port 443, --tcp with --flags rst) rather than describing packet generation in the abstract, and ntfs-3g -o gives the options that matter for evidence: ro, show_sys_files, offset."
+  },
+  "nping --tcp": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The nping set names real ports and services (-p 80, --dest-port 443, --tcp with --flags rst) rather than describing packet generation in the abstract, and ntfs-3g -o gives the options that matter for evidence: ro, show_sys_files, offset."
+  },
+  "nping -c": {
+    "verdict": "reject",
+    "why": "The note describes --icmp from end to end and never mentions -c. Right tool, real citation, fluent sentence, wrong option -- and a reader would take it as the meaning of -c, which is the packet count. This is the case wrong_flag() was written for, and replaying that rule over every recorded flag note showed it fires here and nowhere else."
+  },
+  "nping --dest-port": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The nping set names real ports and services (-p 80, --dest-port 443, --tcp with --flags rst) rather than describing packet generation in the abstract, and ntfs-3g -o gives the options that matter for evidence: ro, show_sys_files, offset."
+  },
+  "ntfs-3g -o": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The nping set names real ports and services (-p 80, --dest-port 443, --tcp with --flags rst) rather than describing packet generation in the abstract, and ntfs-3g -o gives the options that matter for evidence: ro, show_sys_files, offset."
   }
 }
