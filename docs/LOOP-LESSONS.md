@@ -211,3 +211,41 @@ The recurring shape, again: every stage has a plausible near-miss that produces
 no error. Seeded-but-unmatched, reviewed-but-unpublished, committed-but-not-
 running, answered-but-duplicate, and now cited-but-self-cited. Each looks
 exactly like success from the step before it.
+
+## The two columns want different sources
+
+A tool page has two things a reader needs, and they do not come from the
+same kind of page.
+
+The **when** column wants a walkthrough: someone narrating an investigation,
+saying what they reached for and why and what came before it. The **worked
+examples** want a man page, a tldr entry or a "ten practical examples"
+article: something that prints command lines.
+
+Neither genre supplies the other, and the seeding routine had been treating
+"has sources" as one question. Measured on three tools:
+
+    readelf       man pages only     19 passages,  0 usable commands
+    readelf       + cheat sheets     38 passages,  8 usable commands
+    strings       walkthroughs only  36 passages,  0 usable commands
+    strings       + command examples 42 passages,  8 usable commands
+
+readelf is the clearest case: nineteen passages of real evidence and not one
+command, because a man page prints `readelf [opts] <elf>` and that is
+notation, not an invocation. The extractor is right to reject it, and no
+amount of further man-page seeding would have helped.
+
+So seed for the gap you have. A tool with a note and no examples needs
+command pages; a tool with examples and no note needs somebody's write-up.
+
+## A page that fetches to nothing still costs a slot
+
+The corpus is capped, so a page returning fifteen characters does not merely
+add nothing -- it displaces a page that would have added something. strings
+fell from 36 passages and 2 usable commands to 24 and 0 between two runs,
+and the whole difference was a facebook.com result taking one of the ten
+slots.
+
+The cache already refused to store anything under 500 characters. The corpus
+now refuses to count it, and the social platforms are in DENY, because a
+search for a tool name reaches them and what comes back is a login wall.

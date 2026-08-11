@@ -20,6 +20,23 @@ Print sequences of printable characters found in a binary file.
 strings [option(s)] [file(s)]
 ```
 
+## Common invocations
+
+```
+# Extract human-readable strings from binary files for analysis
+strings /bin/ls
+# Extract hidden text from binary files for analysis
+strings -a firmware.bin
+# Extract human-readable strings from binary files for analysis
+strings -n 8 binary.exe
+# Extract readable strings from binary files for analysis
+strings $file > $file.txt
+# Extract human-readable strings from binary with hex offsets
+strings -tx /bin/ls | head
+# Extract data section strings from binary files
+strings -d executable_file
+```
+
 ## Options
 
 All 14 options parsed from the captured help text; 3 reviewed with usage guidance.

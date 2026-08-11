@@ -594,6 +594,33 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.mankier.com/1/rasm2',
         },
     ],
+    'readelf': [
+        {
+            'task': 'Display ELF file header metadata',
+            'cmd': 'readelf -h /bin/ls',
+            'src': 'https://codelucky.com/readelf-command-linux/',
+        },
+        {
+            'task': 'Examine ELF file section headers and their details',
+            'cmd': 'readelf -S /bin/ls',
+            'src': 'https://codelucky.com/readelf-command-linux/',
+        },
+        {
+            'task': 'Inspect symbol table entries in /bin/ls binary',
+            'cmd': 'readelf -s /bin/ls',
+            'src': 'https://codelucky.com/readelf-command-linux/',
+        },
+        {
+            'task': 'View program headers of /bin/ls executable',
+            'cmd': 'readelf -l /bin/ls',
+            'src': 'https://codelucky.com/readelf-command-linux/',
+        },
+        {
+            'task': 'Examine dynamic linking information in executable',
+            'cmd': 'readelf -d /bin/ls',
+            'src': 'https://codelucky.com/readelf-command-linux/',
+        },
+    ],
     'ssdeep': [
         {
             'task': 'Generate file hashes recursively for directory tree',
@@ -614,6 +641,38 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Detect file similarities using fuzzy hash matching',
             'cmd': 'ssdeep -b -m hashes.txt bar.txt',
             'src': 'https://ssdeep-project.github.io/ssdeep/usage.html',
+        },
+    ],
+    'strings': [
+        {
+            'task': 'Extract human-readable strings from binary files for analysis',
+            'cmd': 'strings /bin/ls',
+            'src': 'https://www.commandinline.com/strings-command-cheat-sheet/',
+        },
+        {
+            'task': 'Extract hidden text from binary files for analysis',
+            'cmd': 'strings -a firmware.bin',
+            'src': 'https://www.commandinline.com/strings-command-cheat-sheet/',
+        },
+        {
+            'task': 'Extract human-readable strings from binary files for analysis',
+            'cmd': 'strings -n 8 binary.exe',
+            'src': 'https://www.commandinline.com/strings-command-cheat-sheet/',
+        },
+        {
+            'task': 'Extract readable strings from binary files for analysis',
+            'cmd': 'strings $file > $file.txt',
+            'src': 'https://ioflood.com/blog/strings-linux-command/',
+        },
+        {
+            'task': 'Extract human-readable strings from binary with hex offsets',
+            'cmd': 'strings -tx /bin/ls | head',
+            'src': 'https://www.commandinline.com/strings-command-cheat-sheet/',
+        },
+        {
+            'task': 'Extract data section strings from binary files',
+            'cmd': 'strings -d executable_file',
+            'src': 'https://www.tutorialspoint.com/unix_commands/strings.htm',
         },
     ],
     'tcpflow': [
@@ -665,6 +724,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Capture 100 packets for network analysis',
             'cmd': 'tshark -c 100 -n -w 100pkts.pcap',
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
+        },
+    ],
+    'tsk_gettimes': [
+        {
+            'task': 'Extract file timestamps from disk image',
+            'cmd': 'tsk_gettimes ./image.dd > body.txt',
+            'src': 'https://www.systutorials.com/docs/linux/man/1-tsk_gettimes/',
         },
     ],
     'xxd': [

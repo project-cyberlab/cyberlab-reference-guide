@@ -66,7 +66,14 @@ PROMPT = re.compile(r"(?:\[[^\]\n]{1,60}\]\s*)?(?:[a-z0-9_.-]+@[\w.-]+"
 # teaches a reader nothing they cannot get by running the tool, so it is not
 # worth a row -- and the captioner will confidently invent a purpose for it
 # ("Identify signatures causing false positives" for `sigtool --help`).
-SELF = re.compile(r"^\S+\s+(?:-h|-\?|-V|--help|--version|--usage)\s*$")
+#
+# -v is included and lowercase deliberately. It is version on readelf and
+# verbose on most other tools, and the pattern does not have to know which:
+# a bare `tool -v` with nothing to act on teaches nothing either way. The
+# trailing $ is what makes that safe -- `readelf -h /bin/ls` names a file
+# and survives, while `readelf -v` alone does not. Captioned "Display notes
+# from binary file", which is neither of the things -v does.
+SELF = re.compile(r"^\S+\s+(?:-h|-v|-\?|-V|--help|--version|--usage)\s*$")
 
 # Where a command stops when a page has run it together with its output.
 # The output of the tools this guide covers is overwhelmingly of a shape

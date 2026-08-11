@@ -71,6 +71,10 @@ DROP = [
     # optional-suffix and placeholder-operand forms manuals use.
     ("readelf", "readelf [opts] <elf>"),
     ("xxd", "xxd -h[elp]"),
+    # A bare -v with nothing to act on: version on readelf, verbose
+    # elsewhere, and useless as a worked example either way. It was
+    # captioned "Display notes from binary file", which is neither.
+    ("readelf", "readelf -v"),
     ("xxd", "xxd -s +seek"),
     ("xxd", "xxd -s seek ,"),
     # A line continuation: the command is cut off, and half a command that

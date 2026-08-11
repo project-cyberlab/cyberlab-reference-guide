@@ -21,6 +21,13 @@ Analyze disk images and recover files from them.
 tsk_gettimes [-vVm] [-i imgtype] [-b dev_sector_size] [-z zone] [-s seconds] image [image]
 ```
 
+## Common invocations
+
+```
+# Extract file timestamps from disk image
+tsk_gettimes ./image.dd > body.txt
+```
+
 ## Options
 
 All 7 options parsed from the captured help text. The final column is filled in by review.
