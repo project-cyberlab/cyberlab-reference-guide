@@ -2256,8 +2256,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://blog.didierstevens.com/programs/oledump-py/'],
     },
     'olemeta': {
-        'scenario': 'The analyst uses **olemeta** when analyzing **OLE files** to extract **standard properties** present in the **OLE file**, and it is part of the **python-oletools** package. ### Summary: - **Tool**: `olemeta` - **Purpose**: Extract standard properties from OLE files. - **Part of**: `python-oletools` package. This is a concise and accurate summary of the information provided.',
-        'sources': ['https://github.com/decalage2/oletools/blob/master/oletools/doc/olemeta.md', 'https://www.redsecuretech.co.uk/blog/post/olevba-oletools-guide-practical-examples-and-exercises/871'],
+        'scenario': 'An analyst reaches for olemeta when examining OLE files (e.g., MS Office documents) to extract standard metadata properties, often as part of a broader OLE file analysis workflow. They may use it alongside tools like oledir or oletimes for structural or timestamp analysis, choosing olemeta specifically for its focused extraction of standard properties rather than malware-related features.',
+        'sources': ['https://cincan.io/blog/2019_12_19_oletools/', 'https://github.com/decalage2/oletools/blob/master/oletools/doc/olemeta.md'],
     },
     'oletimes': {
         'scenario': 'When analyzing OLE files for timestamps, an analyst uses oletimes to extract creation and modification timestamps of all streams and storages, as it provides precise timing data crucial for forensic timelines.',
