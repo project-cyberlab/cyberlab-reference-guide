@@ -23,6 +23,7 @@ anything into enrichment.py is a separate, deliberate act.
 """
 from __future__ import annotations
 import argparse
+import hashlib
 import json
 import re
 from collections import Counter
@@ -819,6 +820,26 @@ def barren_tools() -> dict[str, int]:
         return {}
 
 
+def seed_fp(tool: str) -> str:
+    """A fingerprint of the exact sources this tool currently has.
+
+    The barren record needs to answer "have its sources changed since we set
+    it aside", and a COUNT cannot: swapping one bad seed for a good one
+    leaves the count identical, and unrelated attempts accumulating in the
+    log made an attempt-count comparison drift until it re-trapped two tools
+    that had 29 and 30 passages between them.
+
+    Hashing the URLs answers the question directly and is immune to both.
+    """
+    try:
+        seeds = json.loads((ROOT / "catalog" / "seed-urls.json")
+                           .read_text(encoding="utf-8"))
+    except Exception:
+        return ""
+    urls = sorted(seeds.get(tool, ()))
+    return hashlib.sha1("\n".join(urls).encode()).hexdigest()[:12]
+
+
 def seed_counts() -> dict[str, int]:
     try:
         seeds = json.loads((ROOT / "catalog" / "seed-urls.json")
@@ -840,33 +861,63 @@ def refresh_barren(min_attempts: int = 8) -> dict[str, int]:
         outcomes.setdefault(tool, []).append(verdict)
     seeds = seed_counts()
     prev = barren_tools()
-    out: dict[str, int] = {}
+    out: dict[str, dict] = {}
     for tool, v in outcomes.items():
         if len(v) < min_attempts or not all(x == "MISS" for x in v):
             continue
-        old = prev.get(tool)
-        if isinstance(old, dict) and seeds.get(tool, 0) > old.get("seeds", 0):
-            # Freed by seeding and not yet given a fresh run. Re-recording
-            # it here would re-trap it immediately: the log still holds every
-            # miss from before the seeds existed, so the tool would look
-            # barren forever and could never earn a KEPT because it would
-            # never be selected. Seeding must actually buy an attempt.
+        old = prev.get(tool) if isinstance(prev.get(tool), dict) else None
+        fp = seed_fp(tool)
+        if old and old.get("fp") != fp:
+            # Its sources changed since it was set aside. Every line in the
+            # log predates the change, so none of it says anything about the
+            # new sources. Record the change and the attempt count AT the
+            # change, and leave the tool eligible.
+            #
+            # Two failures are being avoided at once here, and each is the
+            # other's mirror. Comparing attempt counts alone drifted, because
+            # attempts accumulate from unrelated rounds until the difference
+            # crosses the threshold -- that re-trapped rasm2 and rahash2
+            # while they held 29 and 30 passages. Comparing fingerprints
+            # alone never re-traps at all, because the stored fingerprint
+            # stays stale forever and the tool grinds on unbounded.
+            #
+            # The fingerprint says WHEN the sources changed; the counter,
+            # rebased at that moment, says how many real retries have
+            # happened since. Neither works without the other.
+            out[tool] = {"seeds": seeds.get(tool, 0), "attempts": len(v),
+                         "fp": fp, "eligible": True}
+            continue
+        if old and old.get("eligible"):
             if len(v) - old.get("attempts", 0) < min_attempts:
+                out[tool] = dict(old)      # still serving its retry window
                 continue
-        out[tool] = {"seeds": seeds.get(tool, 0), "attempts": len(v)}
+        out[tool] = {"seeds": seeds.get(tool, 0), "attempts": len(v),
+                     "fp": fp}
     BARREN.write_text(json.dumps(out, indent=2, sort_keys=True),
                       encoding="utf-8")
     return out
 
 
 def still_barren() -> set[str]:
-    """Barren tools whose seed set has not grown since they were recorded."""
+    """Barren tools whose sources have not changed since they were recorded.
+
+    Changed, not merely grown. Replacing a seed that yielded nothing with one
+    that might is exactly the intervention worth retrying for, and it leaves
+    the count where it was.
+    """
     seeds = seed_counts()
     out = set()
     for t, rec in barren_tools().items():
-        n = rec.get("seeds", 0) if isinstance(rec, dict) else rec
-        if seeds.get(t, 0) <= n:
-            out.add(t)
+        if not isinstance(rec, dict):
+            rec = {"seeds": rec}
+        if rec.get("eligible"):
+            continue                # inside its retry window after a reseed
+        fp = rec.get("fp")
+        if fp is not None:
+            if seed_fp(t) == fp:
+                out.add(t)
+        elif seeds.get(t, 0) <= rec.get("seeds", 0):
+            out.add(t)          # older records, before fingerprints existed
     return out
 
 
