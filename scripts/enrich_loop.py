@@ -765,7 +765,29 @@ def rank_flags(tool: str, limit: int) -> list[str]:
         if n:
             counts[f] = n
     ordered = sorted(counts, key=lambda f: (-counts[f], f))
-    return ordered[:limit]
+
+    # One spelling per option, within this round too.
+    #
+    # Excluding flags whose twin is already ANSWERED left the commoner case
+    # untouched: when neither spelling has an answer yet, both are eligible
+    # and both get attempted in the same round. Observed live -- md5sum -b
+    # and --binary, md5sum -t and --text, msoffcrypto-tool -t and --test --
+    # two attempts, two notes, one option, and a reviewer reading the same
+    # thing twice.
+    #
+    # The corpus ranking already says which spelling the world actually
+    # writes, so keep that one and drop its partner.
+    chosen: list[str] = []
+    taken: set[str] = set()
+    for f in ordered:
+        if f in taken:
+            continue
+        chosen.append(f)
+        taken.add(f)
+        t = _twin(tool, f)
+        if t:
+            taken.add(t)
+    return chosen[:limit]
 
 
 def tools_needing_work(limit: int, skip: set[str]) -> list[str]:

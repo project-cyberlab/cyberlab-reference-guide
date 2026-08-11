@@ -44,5 +44,18 @@ check('sha256sum --check is answered in the guide', '--check' in answered)
 expanded = answered | {t for f in answered if (t := e._twin('sha256sum', f))}
 check('-c excluded because --check is answered', '-c' in expanded)
 
+# Within a single round, only ONE spelling of an option may be selected.
+#
+# Excluding twins that were already ANSWERED left the commoner case open:
+# when neither spelling has an answer yet both are eligible, and the loop
+# was observed attempting md5sum -b and --binary, -t and --text, and
+# msoffcrypto-tool -t and --test in the same round -- two attempts and two
+# notes for one option, and a reviewer reading the same thing twice.
+ranked = e.rank_flags('md5sum', 12)
+both = [(f, t) for f in ranked if (t := e._twin('md5sum', f)) and t in ranked]
+check('no option selected under both spellings (%s)' % (both or 'none'),
+      not both)
+check('ranking still returns flags for md5sum', len(ranked) > 0)
+
 print('\n%d/%d passed' % (sum(ok), len(ok)))
 sys.exit(0 if all(ok) else 1)
