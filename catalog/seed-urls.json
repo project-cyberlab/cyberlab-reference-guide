@@ -330,7 +330,9 @@
     "https://www.systutorials.com/docs/linux/man/1-tsk_gettimes/",
     "http://www.sleuthkit.org/sleuthkit/man/tsk_gettimes.html",
     "https://www.mankier.com/1/tsk_gettimes",
-    "https://man.archlinux.org/man/tsk_gettimes.1.en"
+    "https://man.archlinux.org/man/tsk_gettimes.1.en",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "img_stat": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -854,5 +856,42 @@
   "olebrowse": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
     "https://www.kali.org/tools/oletools/"
+  ],
+  "blkcalc": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
+  ],
+  "blkstat": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "jls": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "jcat": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "sorter": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
+  ],
+  "sigfind": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "hfind": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+  ],
+  "srch_strings": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ]
 }

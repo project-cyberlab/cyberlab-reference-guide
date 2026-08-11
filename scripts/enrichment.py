@@ -2311,6 +2311,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for rahash2 when they need to compute hash values for files or text strings, often using the -s option for strings or -a all to apply multiple algorithms simultaneously; they may run it after acquiring evidence to verify integrity or before submitting files for analysis, preferring it over similar tools for its ability to handle multiple algorithms in one command and its integration with radare for further forensic processing.',
         'sources': ['https://book.rada.re/tools/rahash2/rahash_tool.html'],
     },
+    'rasm2': {
+        'scenario': "An analyst reaches for rasm2 when they need to disassemble binary or hex data into human-readable assembly instructions, such as converting a hex value like '90' to 'nop' or analyzing bytecode. They may use it after obtaining a binary file or hex dump, often in conjunction with radare2 commands like `pd` or `pD` for deeper analysis. They choose it for its direct integration with radare2 and ability to handle both hexpair and binary inputs efficiently.",
+        'sources': ['https://book.rada.re/tools/rasm2/disassemble.html'],
+    },
     'readelf': {
         'scenario': "An analyst reaches for readelf when examining stripped binaries or analyzing ELF headers to identify architecture, sections, or security features like CET; they may run it after using strings or before deeper disassembly to understand the binary's structure and protections, preferring it over similar tools for its precise ELF-specific insights into headers, sections, and dynamic symbols.",
         'sources': ['https://hacktricks.wiki/en/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.html', 'https://intezer.com/blog/elf-malware-analysis-101-initial-analysis/', 'https://w00tsec.blogspot.com/2015/02/firmware-forensics-diffs-timelines-elfs.html'],
@@ -2668,6 +2672,13 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'ntfs-3g': {
         '-o': 'An analyst would use the -o flag when mounting NTFS partitions from disk images to apply specific options like read-only access, show system files, handle stream interfaces, or specify sector-based offsets for proper forensic examination.',
     },
+    'objdump': {
+        '--disassemble': 'An analyst would use the --disassemble flag when examining a raw binary file or analyzing specific symbols in an ELF file to inspect their assembly code.',
+        '-EB': 'An analyst would use the -EB flag when disassembling a binary that uses big-endian byte ordering to ensure correct interpretation of the data.',
+        '-EL': 'An analyst would use the -EL flag when processing a binary file that uses little-endian byte order to ensure correct interpretation of its data.',
+        '-e': 'An analyst would use the -e flag when combining disassembly with debug information to analyze programs with debugging tags.',
+        '-i': 'An analyst would use the -i flag when needing to check the supported object formats and architectures by objdump.',
+    },
     'oledir': {
         '--zip': 'An analyst would use the --zip flag when processing a password-protected zip archive containing OLE files that need to be extracted and analyzed.',
         '--zipfname': 'An analyst would use the --zipfname flag when examining a zip archive to specify particular files within it for processing by oledir.',
@@ -2680,6 +2691,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-f': 'An analyst would use the -f flag when examining files like AutoCAD .dwg files to locate embedded OLE objects such as VBA macros by scanning for the OLE MAGIC sequence (D0CF11E0).',
         '-i': 'An analyst would use the -i flag when examining OLE files to display additional details about modules, such as their sizes and potential structure, aiding in the analysis of embedded components like VBA projects.',
         '-p': 'An analyst would use the -p flag when analyzing a malicious Office document to extract hidden data, such as URLs, by applying specific plugins like plugin_http_heuristics or plugin_dridex.',
+        '-q': "An analyst would use the -q flag when examining a file with the HTTP Heuristics plugin to filter out oledump's own output and focus on extracting URLs like http://???.???.???.??:8080/stat/lld.php.",
     },
     'olevba': {
         '--decode': 'An analyst would use the --decode flag when examining a document to reveal obfuscated strings by displaying them in decoded form.',
@@ -2711,11 +2723,14 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-x': 'An analyst would use the -x flag when extracting embedded SWF files from OLE or RTF documents to save them as MD5HASH.swf in the working directory for further analysis.',
     },
     'r2': {
+        '-B': 'An analyst would use the -B flag when mapping a binary at a specific address to align its symbols and flags with the physical address, such as when analyzing PIE binaries or raw firmwares.',
+        '-P': 'An analyst would use the -P flag when applying a pre-defined rapatch file to a binary and immediately quitting after the patch is applied.',
         '-a': 'An analyst would use the -a flag when specifying the target architecture for analysis, such as when dealing with a fat binary requiring a particular architecture like ppc.',
         '-b': "An analyst would use the -b flag when specifying the bitness (e.g., 32 or 64) of the target binary's architecture during analysis, such as when opening a fat binary with a specific sub-architecture.",
         '-c': 'An analyst would use the -c flag when needing to execute specific radare2 commands directly from the command line without entering the interactive mode, such as quickly extracting data or automating tasks in scripts.',
         '-d': 'An analyst would use the -d flag when debugging a program, attaching to a running process by its PID, or configuring radare2 to handle stdin input during debugging sessions.',
         '-e': 'An analyst would use the -e flag when setting specific configuration variables during radare2 startup, such as disabling color output or enabling cache settings for a binary analysis session.',
+        '-s': 'An analyst would use the -s flag when they need to immediately seek to a specific memory address in a binary to start analysis without loading the entire file first.',
     },
     'rabin2': {
         '-B': 'An analyst would use the -B flag when examining a PIE binary to override its base address for accurate symbol and section analysis.',

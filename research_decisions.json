@@ -1942,5 +1942,57 @@
   "ntfs-3g -o": {
     "verdict": "accept",
     "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The nping set names real ports and services (-p 80, --dest-port 443, --tcp with --flags rst) rather than describing packet generation in the abstract, and ntfs-3g -o gives the options that matter for evidence: ro, show_sys_files, offset."
+  },
+  "objdump -i": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "objdump -e": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "objdump --disassemble": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "objdump -EB": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "objdump -EL": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "oledump.py -q": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "pyxswf -d": {
+    "verdict": "reject",
+    "why": "Describes the wrong behaviour. The captured flag list pairs -c with --compress and -d with --decompress, so -d decompresses an embedded SWF; the note says it gives \"detailed analysis results\", which is what a reader would reasonably expect from -d and is not what it does. The flag is real, so the invented-flag guard passes it -- existence and meaning are different checks."
+  },
+  "r2 -i": {
+    "verdict": "reject",
+    "why": "Leads with a capability -i does not have. r2 -i runs a script file; the note opens with \"reading a binary from stdin\", which is a different thing entirely and is the first thing a reader would take away."
+  },
+  "r2 -s": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "r2 -B": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "r2 -P": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "radiff2 -n": {
+    "verdict": "reject",
+    "why": "Conflates two flags. radiff2 -c counts differences and -n prints bare addresses; the note asks for -n \"when counting the number of changes to obtain only the bare addresses\", which is both at once. wrong_flag() does not catch it because the note never names -c, it just describes it."
+  },
+  "rasm2": {
+    "verdict": "accept",
+    "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
   }
 }

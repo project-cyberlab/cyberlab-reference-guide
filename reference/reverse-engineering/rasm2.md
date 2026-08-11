@@ -15,6 +15,12 @@
 
 Examine binary files, including disassembling and debugging. Includes r2ai and decai plugins for LLM-powered analysis (API key or local Ollama required), plus the r2ghidra plugin for Ghidra decompilation via the pdg command.
 
+## When you'd reach for this
+
+An analyst reaches for rasm2 when they need to disassemble binary or hex data into human-readable assembly instructions, such as converting a hex value like '90' to 'nop' or analyzing bytecode. They may use it after obtaining a binary file or hex dump, often in conjunction with radare2 commands like `pd` or `pD` for deeper analysis. They choose it for its direct integration with radare2 and ability to handle both hexpair and binary inputs efficiently.
+
+**Sources:** <https://book.rada.re/tools/rasm2/disassemble.html>
+
 ## Synopsis
 
 ```

@@ -116,6 +116,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk',
         },
     ],
+    'blkcalc': [
+        {
+            'task': 'Map blkls address to original image location',
+            'cmd': 'blkcalc -u 10146 images/wd0e.dd',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+    ],
     'blkls': [
         {
             'task': 'Extract unallocated data fragments from image',
@@ -453,6 +460,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://pentesting.site/cheat-sheets/hashcat/',
         },
     ],
+    'hfind': [
+        {
+            'task': 'Verify file hashes against known database',
+            'cmd': 'hfind -i nsrl-md5 /usr/share/sleuthkit/NSRLFile.txt',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
     'icat': [
         {
             'task': 'Extract file content by inode from disk image',
@@ -490,6 +504,20 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Inspect inode metadata from disk image',
             'cmd': './istat -f linux-ext2 /root/able2/able2.part2.dd 2139 | less',
             'src': 'https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html',
+        },
+    ],
+    'jcat': [
+        {
+            'task': 'Extract text from specific disk sectors',
+            'cmd': 'jcat -o 2048 "$EVIDENCE" 100 | strings | head -30',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
+    'jls': [
+        {
+            'task': 'List file system journal entries from evidence',
+            'cmd': 'jls -o 2048 "$EVIDENCE"',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
     'log2timeline.py': [
@@ -922,6 +950,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Verify files match checksums for integrity',
             'cmd': 'sha256sum -c checksums.sha256 --status',
             'src': 'https://cheatdocs.org/sha256sum/',
+        },
+    ],
+    'sigfind': [
+        {
+            'task': 'Search evidence for files with AA55 signature',
+            'cmd': 'sigfind -o 510 -l AA55 "$EVIDENCE"',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
     'ssdeep': [
