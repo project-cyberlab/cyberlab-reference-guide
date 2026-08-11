@@ -15,24 +15,8 @@
     "attempts": 85,
     "seeds": 0
   },
-  "rahash2": {
-    "attempts": 85,
-    "seeds": 0
-  },
-  "rasm2": {
-    "attempts": 85,
-    "seeds": 0
-  },
   "readelf.py": {
     "attempts": 84,
     "seeds": 0
-  },
-  "strings": {
-    "attempts": 84,
-    "seeds": 1
-  },
-  "tsk_gettimes": {
-    "attempts": 85,
-    "seeds": 5
   }
 }

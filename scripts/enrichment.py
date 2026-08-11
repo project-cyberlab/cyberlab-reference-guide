@@ -2296,8 +2296,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://book.rada.re/tools/rafind2/intro.html'],
     },
     'rahash2': {
-        'scenario': 'An analyst reaches for rahash2 when examining filesystems to identify modified sections of large files, as it hashes each block individually, allowing comparison against known hashes to pinpoint changes. They may run it after obtaining a file from disk imaging or before performing deeper analysis to verify data integrity. They choose it over other hash tools because its block-based approach enables targeted modification detection without processing the entire file at once.',
-        'sources': ['https://gist.github.com/52617365/95baed8b731c3effdad04b1d6ccf4831', 'https://www.sentinelone.com/labs/automating-string-decryption-and-other-reverse-engineering-tasks-in-radare2-with-r2pipe/'],
+        'scenario': 'An analyst reaches for rahash2 when they need to compute hash values for files or text strings, often using the -s option for strings or -a all to apply multiple algorithms simultaneously; they may run it after acquiring evidence to verify integrity or before submitting files for analysis, preferring it over similar tools for its ability to handle multiple algorithms in one command and its integration with radare for further forensic processing.',
+        'sources': ['https://book.rada.re/tools/rahash2/rahash_tool.html'],
     },
     'readelf': {
         'scenario': "An analyst reaches for readelf when examining stripped binaries or analyzing ELF headers to identify architecture, sections, or security features like CET; they may run it after using strings or before deeper disassembly to understand the binary's structure and protections, preferring it over similar tools for its precise ELF-specific insights into headers, sections, and dynamic symbols.",

@@ -17,9 +17,9 @@ Examine binary files, including disassembling and debugging. Includes r2ai and d
 
 ## When you'd reach for this
 
-An analyst reaches for rahash2 when examining filesystems to identify modified sections of large files, as it hashes each block individually, allowing comparison against known hashes to pinpoint changes. They may run it after obtaining a file from disk imaging or before performing deeper analysis to verify data integrity. They choose it over other hash tools because its block-based approach enables targeted modification detection without processing the entire file at once.
+An analyst reaches for rahash2 when they need to compute hash values for files or text strings, often using the -s option for strings or -a all to apply multiple algorithms simultaneously; they may run it after acquiring evidence to verify integrity or before submitting files for analysis, preferring it over similar tools for its ability to handle multiple algorithms in one command and its integration with radare for further forensic processing.
 
-**Sources:** <https://gist.github.com/52617365/95baed8b731c3effdad04b1d6ccf4831> · <https://www.sentinelone.com/labs/automating-string-decryption-and-other-reverse-engineering-tasks-in-radare2-with-r2pipe/>
+**Sources:** <https://book.rada.re/tools/rahash2/rahash_tool.html>
 
 ## Synopsis
 
