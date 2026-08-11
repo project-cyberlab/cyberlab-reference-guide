@@ -875,21 +875,35 @@
   "blkstat": [
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities",
+    "https://github.com/sleuthkit/sleuthkit"
   ],
   "jls": [
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities"
   ],
   "jcat": [
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities"
   ],
   "sorter": [
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
-    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities",
+    "https://github.com/sleuthkit/sleuthkit"
   ],
   "sigfind": [
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
@@ -913,5 +927,20 @@
     "https://github.com/libyal/libvshadow/wiki/Mounting",
     "https://andreafortuna.org/2018/10/01/accessing-volume-shadow-copies-within-a-forensic-image/",
     "http://windowsir.blogspot.com/2018/09/accessing-volume-shadows-revisited.html"
+  ],
+  "tsk_loaddb": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities"
+  ],
+  "tsk_comparedir": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities"
+  ],
+  "mmcat": [
+    "https://github.com/sleuthkit/sleuthkit/wiki/TSK_Tool_Overview",
+    "https://wiki.sleuthkit.org/TSK-Tool-Overview/",
+    "https://deepwiki.com/sleuthkit/sleuthkit/5-tools-and-utilities"
   ]
 }

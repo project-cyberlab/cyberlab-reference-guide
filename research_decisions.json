@@ -2046,5 +2046,13 @@
   "pdf-parser -o": {
     "verdict": "reject",
     "why": "The scenario is real and the omission is dangerous. Captured help: \"-o OBJECT, --object=OBJECT\" -- it selects an indirect object by ID. Getting /O and /U out of the /Encrypt object is a genuine reason to reach for it, but the note never says -o takes an object NUMBER, and -o conventionally means output. A reader would type pdf-parser -o file.pdf expecting hashes and be confused by the result. Re-research keeping the scenario and adding what the flag actually takes."
+  },
+  "hashcat -b": {
+    "verdict": "accept",
+    "why": "Same OPTION as hashcat --benchmark, which was rejected -- the captured help shows \"-b, --benchmark  Run benchmark of selected hash-modes\". What was rejected there was the NOTE, whose trigger was \"after reinstalling hashcat and ensuring the correct GPU drivers\", which is setup. This one says why an analyst benchmarks a hash mode before starting: to find out whether the crack is feasible in the time available. That is a decision about the case, so the note stands and the earlier rejection also stands."
+  },
+  "hashcat --outfile-format": {
+    "verdict": "accept",
+    "why": "Matches the captured help, \"Outfile format to use, separated with commas\", and gives the reason: the default hash[:salt] form has to be reshaped before another tool will read it. That is a data format, not terminal formatting, so it is not the class rejected for capa --color."
   }
 }

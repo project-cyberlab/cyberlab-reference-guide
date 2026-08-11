@@ -2581,11 +2581,13 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'hashcat': {
         '--custom-charset1': 'An analyst would use the --custom-charset1 flag when defining a custom character set (e.g., ?l?d) to reference in a mask with ?1, such as in a hashcat mask file line like "?l?d,?l?l?l?l?1" to specify a combination of lowercase letters and digits for password cracking.',
+        '--outfile-format': 'An analyst would use the --outfile-format flag when they need to specify a custom output format for cracked hashes, such as saving results in plain text instead of the default hash[:salt] format.',
         '--session': 'An analyst would use the --session flag when resuming an interrupted hashcat session to continue cracking from the last checkpointed position.',
         '--show': 'An analyst would use the --show flag to display previously cracked hashes stored in the potfile when verifying results or avoiding redundant cracking efforts.',
         '--stdout': 'An analyst would use the --stdout flag when generating custom wordlists by specifying mask patterns to create targeted combinations of characters for cracking hashes.',
         '-D': 'An analyst would use the -D flag when they need to specify whether to use the CPU, GPU, or both for hash cracking based on available hardware resources.',
         '-a': 'An analyst would use the -a flag when performing a combination attack to generate password combinations from two separate wordlists.',
+        '-b': 'An analyst would use the -b flag when benchmarking a hash mode to estimate raw speed on their hardware before initiating a cracking job.',
         '-d': 'An analyst would use the -d flag when specifying a particular GPU device in a multi-GPU setup where hashcat encounters mapping errors due to identical or similarly identified devices, requiring manual selection to bypass temperature or fan control issues.',
         '-g': 'An analyst would use the -g flag when encountering errors related to excessive rule usage, such as clEnqueueCopyBuffer() -30 or cuStreamSynchronize() 702, to reduce the number of rules and resolve the issue.',
         '-m': 'An analyst would use the -m flag when specifying the hash type (e.g., MD5, SHA-256) to ensure Hashcat correctly interprets the hash format during cracking attempts.',

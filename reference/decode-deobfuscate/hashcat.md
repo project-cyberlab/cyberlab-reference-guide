@@ -45,7 +45,7 @@ hashcat -b
 
 ## Options
 
-All 143 options parsed from the captured help text; 12 reviewed with usage guidance.
+All 143 options parsed from the captured help text; 14 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -83,7 +83,7 @@ All 143 options parsed from the captured help text; 12 reviewed with usage guida
 | `--restore-file-path` | — | \| File \| Specific path to restore file \| --restore-file-path=x.restore |  |
 | `-o` | — | \| File \| Define outfile for recovered hash \| -o outfile.txt | An analyst would use the -o flag when they need to specify the output file path for storing cracked hashes, such as in the example where 'cracked.txt' is used. |
 | `--outfile` | — | \| File \| Define outfile for recovered hash \| -o outfile.txt | An analyst would use the -o flag when they need to specify the output file path for storing cracked hashes, such as in the example where 'cracked.txt' is used. |
-| `--outfile-format` | — | \| Str \| Outfile format to use, separated with commas \| --outfile-format=1,3 |  |
+| `--outfile-format` | — | \| Str \| Outfile format to use, separated with commas \| --outfile-format=1,3 | An analyst would use the --outfile-format flag when they need to specify a custom output format for cracked hashes, such as saving results in plain text instead of the default hash[:salt] format. |
 | `--outfile-autohex-disable` | — | \| \| Disable the use of $HEX[] in output plains \| |  |
 | `--outfile-check-timer` | — | \| Num \| Sets seconds between outfile checks to X \| --outfile-check-timer=30 |  |
 | `-p` | — | \| Char \| Separator char for hashlists and outfile \| -p : |  |
@@ -110,8 +110,8 @@ All 143 options parsed from the captured help text; 12 reviewed with usage guida
 | `--veracrypt-keyfiles` | — | \| File \| Keyfiles to use, separated with commas \| --veracrypt-keyf=x.txt |  |
 | `--veracrypt-pim-start` | — | \| Num \| VeraCrypt personal iterations multiplier start \| --veracrypt-pim-start=450 |  |
 | `--veracrypt-pim-stop` | — | \| Num \| VeraCrypt personal iterations multiplier stop \| --veracrypt-pim-stop=500 |  |
-| `-b` | — | \| \| Run benchmark of selected hash-modes \| |  |
-| `--benchmark` | — | \| \| Run benchmark of selected hash-modes \| |  |
+| `-b` | — | \| \| Run benchmark of selected hash-modes \| | An analyst would use the -b flag when benchmarking a hash mode to estimate raw speed on their hardware before initiating a cracking job. |
+| `--benchmark` | — | \| \| Run benchmark of selected hash-modes \| | An analyst would use the -b flag when benchmarking a hash mode to estimate raw speed on their hardware before initiating a cracking job. |
 | `--benchmark-all` | — | \| \| Run benchmark of all hash-modes (requires -b) \| |  |
 | `--speed-only` | — | \| \| Return expected speed of the attack, then quit \| |  |
 | `--progress-only` | — | \| \| Return ideal progress step size and time to process \| |  |

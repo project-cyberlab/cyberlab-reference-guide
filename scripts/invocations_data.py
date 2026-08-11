@@ -537,14 +537,14 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'jcat': [
         {
-            'task': 'Extract text from specific disk sectors',
+            'task': 'Extract text from unallocated space in evidence file',
             'cmd': 'jcat -o 2048 "$EVIDENCE" 100 | strings | head -30',
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
     'jls': [
         {
-            'task': 'List file system journal entries from evidence',
+            'task': 'List file system objects from evidence',
             'cmd': 'jls -o 2048 "$EVIDENCE"',
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
