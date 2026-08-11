@@ -2803,6 +2803,10 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-s': 'An analyst would use the -s flag when converting a hexadecimal string into its corresponding raw byte representation for further analysis or processing.',
         '-u': 'An analyst would use the -u flag when converting a numerical value to a human-readable unit format, such as converting 389289238 to 317.0M for easier interpretation of large numbers.',
     },
+    'readelf': {
+        '--arch-specific': "An analyst would use the --arch-specific flag when examining an ELF file that contains architecture-specific information, such as details unique to the file's target architecture.",
+        '--symbols': 'When an analyst is debugging or optimizing an ELF file and needs to understand how symbols (such as functions or variables) are used within the binary to aid in static analysis or match symbols to specific code definitions.',
+    },
     'regfinfo': {
         '-B': 'An analyst would use the -B flag when they need to output the key and value hierarchy of a REGF file as a bodyfile for further processing or analysis.',
         '-H': 'An analyst would use the -H flag when examining a Windows NT Registry File to display its key and value hierarchy for forensic analysis.',
@@ -2840,6 +2844,9 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'sha256sum': {
         '--check': 'An analyst would use the --check flag when verifying the integrity of files against a known checksum file to identify discrepancies or failed validations without unnecessary output.',
+        '--ignore-missing': 'An analyst would use the --ignore-missing flag when verifying checksums of files in an environment where some files may be temporarily absent or not yet present, allowing focus on files that fail integrity checks without noise from missing files.',
+        '--quiet': 'An analyst would use the --quiet flag when verifying checksums in operational environments to focus solely on errors or discrepancies without sifting through numerous "OK" messages, or to filter out missing files and highlight only failed integrity checks.',
+        '--tag': 'An analyst would use the --tag flag when generating BSD-style checksums for files to ensure compatibility with systems or tools expecting that specific format.',
         '-b': 'An analyst would use the `-b` flag when verifying files across different systems or handling files with mixed line endings to ensure consistent binary-mode hashing.',
     },
     'sigtool': {
@@ -2859,6 +2866,8 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-x': 'An analyst would use the -x flag when comparing multiple sets of generated fuzzy hash signatures against each other to identify potential matches or overlaps between files, such as comparing system directory hashes with known malware hashes.',
     },
     'strings': {
+        '--all': 'An analyst would use the --all flag when examining a binary file to ensure all sections, including metadata, are scanned for readable text that might otherwise be missed.',
+        '--bytes': 'An analyst would use the --bytes flag when they need to extract only longer strings from a file to filter out shorter, irrelevant text and focus on meaningful data like file paths or URLs.',
         '--radix': 'An analyst would use the --radix flag when they need to print the memory location of each string in the file, such as to analyze the positions of strings within a binary executable.',
         '-a': 'An analyst would use the -a flag when they need to scan the entire file, including metadata, to ensure no readable text is missed, especially if vital information like error messages is suspected to be outside the main data section.',
         '-d': 'An analyst would use the -d flag when examining a binary file to extract only the strings from its data sections, ignoring other sections like debugging symbols or metadata.',

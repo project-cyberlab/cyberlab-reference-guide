@@ -2086,5 +2086,37 @@
   "rax2 -u": {
     "verdict": "accept",
     "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "sha256sum -c": {
+    "verdict": "reject",
+    "why": "Not wrong -- redundant. sha256sum --check was accepted earlier, and generate_pages mirrors guidance across a short and long spelling sharing an identical captured description, so the -c row in the built table already carries that answer. Verified by reading the built page: -c and --check show the same sentence. The attempt was wasted because rank_flags excludes flags answered in ENRICHMENT and cannot see mirroring, which happens at render time."
+  },
+  "readelf --symbols": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "readelf --arch-specific": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "sha256sum --quiet": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "sha256sum --ignore-missing": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "sha256sum --tag": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "strings --all": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "strings --bytes": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
   }
 }

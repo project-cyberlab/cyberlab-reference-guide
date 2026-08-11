@@ -43,7 +43,7 @@ sha256sum -c checksums.sha256 --status
 
 ## Options
 
-All 17 options parsed from the captured help text; 2 reviewed with usage guidance.
+All 17 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -51,13 +51,13 @@ All 17 options parsed from the captured help text; 2 reviewed with usage guidanc
 | `--binary` | — | read in binary mode | An analyst would use the `-b` flag when verifying files across different systems or handling files with mixed line endings to ensure consistent binary-mode hashing. |
 | `-c` | — | read checksums from the FILEs and check them | An analyst would use the --check flag when verifying the integrity of files against a known checksum file to identify discrepancies or failed validations without unnecessary output. |
 | `--check` | — | read checksums from the FILEs and check them | An analyst would use the --check flag when verifying the integrity of files against a known checksum file to identify discrepancies or failed validations without unnecessary output. |
-| `--tag` | — | create a BSD-style checksum |  |
+| `--tag` | — | create a BSD-style checksum | An analyst would use the --tag flag when generating BSD-style checksums for files to ensure compatibility with systems or tools expecting that specific format. |
 | `-t` | — | read in text mode (default) |  |
 | `--text` | — | read in text mode (default) |  |
 | `-z` | — | end each output line with NUL, not newline, and disable file name escaping |  |
 | `--zero` | — | end each output line with NUL, not newline, and disable file name escaping |  |
-| `--ignore-missing` | — | don't fail or report status for missing files |  |
-| `--quiet` | — | don't print OK for each successfully verified file |  |
+| `--ignore-missing` | — | don't fail or report status for missing files | An analyst would use the --ignore-missing flag when verifying checksums of files in an environment where some files may be temporarily absent or not yet present, allowing focus on files that fail integrity checks without noise from missing files. |
+| `--quiet` | — | don't print OK for each successfully verified file | An analyst would use the --quiet flag when verifying checksums in operational environments to focus solely on errors or discrepancies without sifting through numerous "OK" messages, or to filter out missing files and highlight only failed integrity checks. |
 | `--status` | — | don't output anything, status code shows success |  |
 | `--strict` | — | exit non-zero for improperly formatted checksum lines |  |
 | `-w` | — | warn about improperly formatted checksum lines |  |

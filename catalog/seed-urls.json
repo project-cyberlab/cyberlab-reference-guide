@@ -150,11 +150,7 @@
     "https://www.gopher.security/news/mastering-forensic-timelines-tools-and-techniques-for-dfir"
   ],
   "mactime": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
-    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ],
   "regfexport": [
@@ -244,14 +240,12 @@
     "https://www.tutorialspoint.com/unix_commands/strings.htm"
   ],
   "mmls": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ],
   "fsstat": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
@@ -261,79 +255,52 @@
     "https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html"
   ],
   "fls": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ],
   "icat": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ],
   "istat": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
-    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
     "https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html"
   ],
   "ils": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
-    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
     "https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html"
   ],
   "blkls": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
-    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "ffind": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "ifind": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
   ],
   "tsk_recover": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "tsk_gettimes": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
-    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/tsk_gettimes",
     "https://github.com/sleuthkit/sleuthkit/wiki/Timelines",
     "https://www.systutorials.com/docs/linux/man/1-tsk_gettimes/",
@@ -344,16 +311,10 @@
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "img_stat": [
-    "https://1337skills.com/cheatsheets/sleuthkit/",
-    "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
-    "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
-    "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
     "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "ewfverify": [
-    "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
     "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
     "https://forensics.wiki/libewf/",
     "https://hanifi.ca/tools/forensics/ewf-tools/",
@@ -362,7 +323,6 @@
   ],
   "ewfexport": [
     "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
-    "https://dfir.science/2017/11/EWF-Tools-working-with-Expert-Witness-Files-in-Linux.html",
     "https://forensics.wiki/libewf/",
     "https://hanifi.ca/tools/forensics/ewf-tools/",
     "https://kb.offsec.nl/tools/forensics/ewf-tools/"
@@ -389,90 +349,68 @@
     "https://kb.offsec.nl/tools/forensics/ewf-tools/"
   ],
   "affcat": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/",
     "https://www.manpagez.com/man/1/affinfo/"
   ],
   "affconvert": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/",
     "https://www.manpagez.com/man/1/affinfo/",
     "https://manpages.debian.org/testing/afflib-tools/affconvert.1.en.html",
     "https://manpages.ubuntu.com/manpages/xenial/man1/affconvert.1.html"
   ],
   "affinfo": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/",
     "https://www.manpagez.com/man/1/affinfo/"
   ],
   "affcompare": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "affcrypto": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "affstats": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "affverify": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "affsegment": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "affix": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "affsign": [
-    "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
     "https://www.kali.org/tools/afflib/"
   ],
   "frida-ps": [
-    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
     "https://frida.re/docs/frida-ps/",
     "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
-    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
     "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
   ],
   "frida-ls-devices": [
-    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
     "https://frida.re/docs/frida-ps/",
     "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
-    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
     "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
   ],
   "frida-trace": [
     "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
     "https://frida.re/docs/frida-ps/",
     "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
-    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
     "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
   ],
   "frida-discover": [
-    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
     "https://frida.re/docs/frida-ps/",
-    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
-    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
-    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3"
   ],
   "frida-kill": [
-    "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
     "https://frida.re/docs/frida-ps/",
-    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
-    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
-    "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
+    "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3"
   ],
   "frida": [
     "https://abdelrahman-sherbini.github.io/abdelrahman.github.io/frida/frida.html",
     "https://frida.re/docs/frida-ps/",
     "https://medium.com/@jacksonfdam/getting-started-with-frida-1b4d91b43aa3",
-    "https://www.infosecinstitute.com/resources/malware-analysis/malware-instrumentation-with-frida/",
     "https://www.vaadata.com/en/blog/frida-the-tool-dedicated-to-mobile-application-security/"
   ],
   "oledump.py": [
@@ -480,75 +418,48 @@
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
     "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
     "https://videos.didierstevens.com/2021/06/20/oledump-cheat-sheet/",
     "https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py"
   ],
   "pcodedmp": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://exploitreversing.com/2021/11/02/malicious-document-analysis-example-1/",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
     "https://pcsxcetrasupport3.wordpress.com/2019/04/25/a-look-at-stomped-vba-code-and-the-p-code-in-a-word-document/"
   ],
   "msoffcrypto-tool": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
     "https://github.com/nolze/msoffcrypto-tool",
     "https://msoffcrypto-tool.readthedocs.io/"
   ],
   "msoffcrypto-crack.py": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
     "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7"
   ],
   "base64dump.py": [
-    "https://blog.didierstevens.com/programs/base64dump-py/",
-    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://blog.didierstevens.com/programs/base64dump-py/"
   ],
   "olefile": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
     "https://github.com/decalage2/oletools"
   ],
   "ezhexviewer": [
-    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office"
   ],
   "olevba": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7"
   ],
   "oleid": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7"
   ],
   "rtfobj": [
-    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office"
   ],
   "rtfdump.py": [
-    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
-    "https://isc.sans.edu/diary/24498",
-    "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office"
   ],
   "emldump.py": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
@@ -568,12 +479,10 @@
   "capa": [
     "https://github.com/mandiant/capa",
     "https://mandiant.github.io/capa/",
-    "https://stillu.cc/infosec/2020/07/19/closer-look-at-capa/",
-    "https://www.govindhtech.com/flare-capa-identifies-malware-capabilities/"
+    "https://stillu.cc/infosec/2020/07/19/closer-look-at-capa/"
   ],
   "floss": [
-    "https://github.com/FireEye/flare-floss",
-    "https://pypi.org/project/flare-floss/"
+    "https://github.com/FireEye/flare-floss"
   ],
   "reordercap": [
     "https://manpages.debian.org/testing/wireshark-common/reordercap.1.en.html",
