@@ -2042,5 +2042,9 @@
   "strings --radix": {
     "verdict": "accept",
     "why": "Checked line by line against the captured help. strings --radix matches \"Print the location of the string in base 8, 10 or 16\"; sha256sum --check matches \"read checksums from the FILEs and check them\" and -b matches \"read in binary mode\" with a real reason given for it; frida-trace --decorate matches \"add module name to generated onEnter log statement\" and says why that matters -- the same function in several modules."
+  },
+  "pdf-parser -o": {
+    "verdict": "reject",
+    "why": "The scenario is real and the omission is dangerous. Captured help: \"-o OBJECT, --object=OBJECT\" -- it selects an indirect object by ID. Getting /O and /U out of the /Encrypt object is a genuine reason to reach for it, but the note never says -o takes an object NUMBER, and -o conventionally means output. A reader would type pdf-parser -o file.pdf expecting hashes and be confused by the result. Re-research keeping the scenario and adding what the flag actually takes."
   }
 }

@@ -488,13 +488,16 @@
     "https://exploitreversing.com/2021/11/02/malicious-document-analysis-example-1/",
     "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
+    "https://pcsxcetrasupport3.wordpress.com/2019/04/25/a-look-at-stomped-vba-code-and-the-p-code-in-a-word-document/"
   ],
   "msoffcrypto-tool": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
     "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
+    "https://github.com/nolze/msoffcrypto-tool",
+    "https://msoffcrypto-tool.readthedocs.io/"
   ],
   "msoffcrypto-crack.py": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
