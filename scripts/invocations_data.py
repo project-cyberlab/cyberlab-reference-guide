@@ -71,6 +71,28 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
+    'bulk_extractor': [
+        {
+            'task': 'Carve NTFS MFT records from volume E',
+            'cmd': 'bulk_extractor -E ntfsmft -o output \\\\.\\E:',
+            'src': 'https://www.kazamiya.net/en/bulk_extractor-rec',
+        },
+        {
+            'task': 'Extract files from disk image to output directory',
+            'cmd': 'bulk_extractor -o bulk-out xp-laptop-2005-07-04-1430.img',
+            'src': 'https://www.kali.org/tools/bulk-extractor/',
+        },
+        {
+            'task': 'Extract gzip and utmp data from Linux disk image',
+            'cmd': 'bulk_extractor -x all -e gzip -e utmp -o output Linux.E01',
+            'src': 'https://www.kazamiya.net/en/bulk_extractor-rec',
+        },
+        {
+            'task': 'Carve contiguous JPEGs from disk image',
+            'cmd': 'bulk_extractor -o out_folder -S jpeg_carve_mode=2 /evidence/disk.img',
+            'src': 'https://hacktricks.wiki/en/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.html',
+        },
+    ],
     'capinfos': [
         {
             'task': 'Generate tab-delimited report with pcap file metadata',
@@ -342,6 +364,38 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
         },
     ],
+    'hashcat': [
+        {
+            'task': 'Restore a paused hash cracking session using saved state',
+            'cmd': 'hashcat --restore --session=my_session',
+            'src': 'https://pentesting.site/cheat-sheets/hashcat/',
+        },
+        {
+            'task': 'Coordinate distributed cracking to avoid redundant attempts',
+            'cmd': 'hashcat --brain-server',
+            'src': 'https://pentesting.site/cheat-sheets/hashcat/',
+        },
+        {
+            'task': 'Crack SHA1 hashes using a wordlist to recover passwords',
+            'cmd': 'hashcat -m 100 hashes.txt wordlist.txt',
+            'src': 'https://pentesting.site/cheat-sheets/hashcat/',
+        },
+        {
+            'task': 'Display backend info for performance tuning',
+            'cmd': 'hashcat --backend-info',
+            'src': 'https://pentesting.site/cheat-sheets/hashcat/',
+        },
+        {
+            'task': 'Display available OpenCL devices for selection',
+            'cmd': 'hashcat -I',
+            'src': 'https://pentesting.site/cheat-sheets/hashcat/',
+        },
+        {
+            'task': 'Test hardware performance for cracking speed',
+            'cmd': 'hashcat -b',
+            'src': 'https://pentesting.site/cheat-sheets/hashcat/',
+        },
+    ],
     'icat': [
         {
             'task': 'Extract file content by inode from disk image',
@@ -430,16 +484,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Verify files match stored checksums',
             'cmd': 'md5sum -c files.md5',
             'src': 'https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/',
-        },
-        {
-            'task': 'Verify file integrity by comparing MD5 checksum with expected value',
-            'cmd': 'md5sum -b [filename]',
-            'src': 'https://phoenixnap.com/kb/md5sum-linux',
-        },
-        {
-            'task': 'Generate MD5 checksum for file integrity verification',
-            'cmd': 'md5sum -t [filename]',
-            'src': 'https://phoenixnap.com/kb/md5sum-linux',
         },
         {
             'task': "Verify multiple files' integrity with stored hashes",
@@ -555,11 +599,11 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
     ],
-    'oleid': [
+    'oledir': [
         {
-            'task': 'Analyze OLE files for macros, encryption, and embedded objects',
-            'cmd': 'oleid <file>',
-            'src': 'https://github.com/decalage2/oletools/wiki/oleid',
+            'task': 'List embedded objects in OLE files',
+            'cmd': 'oledir file.doc',
+            'src': 'https://github.com/decalage2/oletools/wiki/oledir',
         },
     ],
     'olevba': [
@@ -768,6 +812,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Examine dynamic linking information in executable',
             'cmd': 'readelf -d /bin/ls',
             'src': 'https://codelucky.com/readelf-command-linux/',
+        },
+    ],
+    'scalpel': [
+        {
+            'task': 'Extract embedded files from disk image',
+            'cmd': 'scalpel file.img -o output',
+            'src': 'https://hacktricks.wiki/en/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.html',
         },
     ],
     'ssdeep': [

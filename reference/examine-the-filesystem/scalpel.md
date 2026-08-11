@@ -30,13 +30,20 @@ scalpel [-b] [-c <config file>] [-d] [-h|V] [-i <file>]
 <imgfile> [<imgfile>] ...
 ```
 
+## Common invocations
+
+```
+# Extract embedded files from disk image
+scalpel file.img -o output
+```
+
 ## Options
 
-All 17 options parsed from the captured help text; 1 reviewed with usage guidance.
+All 17 options parsed from the captured help text; 2 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-b` | — | Carve files even if defined footers aren't discovered within maximum carve size for file type [foremost 0.69 compat mode]. |  |
+| `-b` | — | Carve files even if defined footers aren't discovered within maximum carve size for file type [foremost 0.69 compat mode]. | An analyst would use the -b flag when carving files from a disk image if defined footers aren't discovered within the maximum carve size for a file type. |
 | `-c` | — | Choose configuration file. | An analyst would use the -c flag when they need to specify a custom configuration file to define or modify the header/footer database used for file carving. |
 | `-d` | — | Generate header/footer database; will bypass certain optimizations and discover all footers, so performance suffers. Doesn't affect the set of files carved. **EXPERIMENTAL** |  |
 | `-h` | — | Print this help message and exit. |  |

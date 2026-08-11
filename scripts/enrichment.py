@@ -2753,6 +2753,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-r': 'An analyst would use the -r flag when processing a specific registry hive file to extract and analyze data during a forensic investigation.',
     },
     'scalpel': {
+        '-b': "An analyst would use the -b flag when carving files from a disk image if defined footers aren't discovered within the maximum carve size for a file type.",
         '-c': 'An analyst would use the -c flag when they need to specify a custom configuration file to define or modify the header/footer database used for file carving.',
     },
     'sigtool': {

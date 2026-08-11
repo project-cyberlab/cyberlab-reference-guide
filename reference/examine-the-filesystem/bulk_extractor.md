@@ -21,6 +21,19 @@ Scan an image for features — email addresses, URLs, credit card numbers, EXIF,
 bulk_extractor [OPTION...] image_name
 ```
 
+## Common invocations
+
+```
+# Carve NTFS MFT records from volume E
+bulk_extractor -E ntfsmft -o output \\.\E:
+# Extract files from disk image to output directory
+bulk_extractor -o bulk-out xp-laptop-2005-07-04-1430.img
+# Extract gzip and utmp data from Linux disk image
+bulk_extractor -x all -e gzip -e utmp -o output Linux.E01
+# Carve contiguous JPEGs from disk image
+bulk_extractor -o out_folder -S jpeg_carve_mode=2 /evidence/disk.img
+```
+
 ## Options
 
 All 69 options parsed from the captured help text; 58 reviewed with usage guidance.

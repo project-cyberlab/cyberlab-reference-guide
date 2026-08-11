@@ -1794,5 +1794,9 @@
   "tcpflow -L": {
     "verdict": "accept",
     "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "scalpel -b": {
+    "verdict": "accept",
+    "why": "Correct, and it lands where it belongs. This is the same semantic that was rejected as foremost -b in an earlier round -- carve even when no footer is found within the maximum carve size -- which was scalpel s behaviour read off a scalpel synopsis while researching foremost. option_owner caught it there; here it is on the right tool with a scalpel citation."
   }
 }

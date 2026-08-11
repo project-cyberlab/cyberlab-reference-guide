@@ -76,6 +76,11 @@ DROP = [
     # captioned "Display notes from binary file", which is neither.
     ("readelf", "readelf -v"),
     ("xxd", "xxd -s +seek"),
+    # Every operand a placeholder: a synopsis whatever bracket style it
+    # uses. Distinct from `ewfmount image.E01 <folder>` in KEEP, which
+    # names a real file and generalises one argument.
+    ("olemeta", "olemeta <file>"),
+    ("hydra", "hydra [ options ] <target> <service>"),
     ("xxd", "xxd -s seek ,"),
     # A line continuation: the command is cut off, and half a command that
     # looks whole is worse than none.
@@ -102,6 +107,10 @@ REPAIR = [
     ("ffind",
      'ffind -o 2048 "$EVIDENCE" 12345 Scripting a Complete Analysis #!/bin/sh',
      'ffind -o 2048 "$EVIDENCE" 12345'),
+    # A cheat sheet's own inline caption, which would be pasted along with
+    # the command.
+    ("hashcat", "hashcat -m 100 hashes.txt wordlist.txt #SHA1",
+     "hashcat -m 100 hashes.txt wordlist.txt"),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),

@@ -27,10 +27,6 @@ md5sum [OPTION]... [FILE]...
 md5sum ravi.pdf
 # Verify files match stored checksums
 md5sum -c files.md5
-# Verify file integrity by comparing MD5 checksum with expected value
-md5sum -b [filename]
-# Generate MD5 checksum for file integrity verification
-md5sum -t [filename]
 # Verify multiple files' integrity with stored hashes
 md5sum --check hashes
 ```

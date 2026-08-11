@@ -26,6 +26,23 @@ An analyst reaches for hashcat when dealing with hashes like MD5, using wordlist
 hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
 ```
 
+## Common invocations
+
+```
+# Restore a paused hash cracking session using saved state
+hashcat --restore --session=my_session
+# Coordinate distributed cracking to avoid redundant attempts
+hashcat --brain-server
+# Crack SHA1 hashes using a wordlist to recover passwords
+hashcat -m 100 hashes.txt wordlist.txt
+# Display backend info for performance tuning
+hashcat --backend-info
+# Display available OpenCL devices for selection
+hashcat -I
+# Test hardware performance for cracking speed
+hashcat -b
+```
+
 ## Options
 
 All 143 options parsed from the captured help text; 8 reviewed with usage guidance.

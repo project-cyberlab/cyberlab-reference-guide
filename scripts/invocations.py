@@ -286,6 +286,26 @@ def candidate_lines(text: str, tool: str,
             continue
         if PLACEHOLDER.search(line):
             continue
+        # A trailing shell comment, which cheat sheets use to caption their
+        # own examples: `hashcat -m 100 hashes.txt wordlist.txt #SHA1`. The
+        # caption is generated separately, so the comment is noise here --
+        # and it would be pasted into a terminal along with the command.
+        line = re.split(r"\s+#(?=\S|\s*[A-Z])", line)[0].strip()
+        # Every operand a placeholder means this is a synopsis, whatever
+        # bracket style it uses: `olemeta <file>`, `hydra [ options ]
+        # <target> <service>`.
+        #
+        # Note the difference from `ewfmount image.E01 <folder>`, which is
+        # kept: that names a real file and generalises ONE argument, the way
+        # this guide does with {{path/to/image.dd}}. What marks a synopsis is
+        # that nothing in it is concrete.
+        operands = [w for w in line.split()[1:] if not w.startswith("-")]
+        # The lone-bracket alternatives matter: a spaced synopsis like
+        # "hydra [ options ] <target>" tokenises to [ , options , ] and
+        # none of those is a bracketed word on its own.
+        if operands and all(re.fullmatch(r"[<\[].*[>\]]|\||options?|[\[\]<>]",
+                                         w, re.I) for w in operands):
+            continue
         # An unbalanced brace or bracket means the line was cut out of
         # something larger and is not a command on its own.
         if line.count("{") != line.count("}") or line.count("[") != line.count("]"):

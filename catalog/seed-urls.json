@@ -74,7 +74,11 @@
   ],
   "bulk_extractor": [
     "https://github.com/simsong/bulk_extractor/wiki",
-    "https://www.kali.org/tools/bulk-extractor/"
+    "https://www.kali.org/tools/bulk-extractor/",
+    "https://05t3.github.io/posts/Data-Carving/",
+    "https://hacktricks.wiki/en/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.html",
+    "https://cybervie.com/file-carving-in-digital-forensics-best-tools-for-it/",
+    "https://www.kazamiya.net/en/bulk_extractor-rec"
   ],
   "binwalk": [
     "https://github.com/ReFirmLabs/binwalk/wiki/Usage",
@@ -578,7 +582,8 @@
   "oledir": [
     "https://github.com/decalage2/oletools/wiki/oledir",
     "https://decalage.info/python/oletools/",
-    "https://github.com/decalage2/oletools"
+    "https://github.com/decalage2/oletools",
+    "https://cincan.io/blog/2019_12_19_oletools/"
   ],
   "vshadowinfo": [
     "https://github.com/libyal/libvshadow/blob/main/manuals/vshadowinfo.1",
@@ -609,7 +614,8 @@
     "https://github.com/decalage2/oletools/wiki/oleobj",
     "https://github.com/decalage2/oletools/blob/master/oletools/doc/oleobj.html",
     "https://github.com/decalage2/oletools/blob/master/oletools/oleobj.py",
-    "https://decalage.info/python/oletools/"
+    "https://decalage.info/python/oletools/",
+    "https://cincan.io/blog/2019_12_19_oletools/"
   ],
   "tcpflow": [
     "https://www.kali.org/tools/tcpflow/",
@@ -631,7 +637,8 @@
   ],
   "oletimes": [
     "https://github.com/decalage2/oletools/wiki/oletimes",
-    "https://decalage.info/python/oletools/"
+    "https://decalage.info/python/oletools/",
+    "https://cincan.io/blog/2019_12_19_oletools/"
   ],
   "pyxswf": [
     "https://github.com/decalage2/oletools/wiki/pyxswf",
@@ -647,7 +654,8 @@
     "https://github.com/decalage2/oletools/wiki/olemeta",
     "https://github.com/decalage2/oletools/blob/master/oletools/doc/olemeta.md",
     "https://www.decalage.info/python/olemeta",
-    "https://www.redsecuretech.co.uk/blog/post/olevba-oletools-guide-practical-examples-and-exercises/871"
+    "https://www.redsecuretech.co.uk/blog/post/olevba-oletools-guide-practical-examples-and-exercises/871",
+    "https://cincan.io/blog/2019_12_19_oletools/"
   ],
   "ngrep": [
     "https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md",
@@ -789,5 +797,23 @@
     "https://blog.didierstevens.com/2008/10/30/pdf-parserpy/",
     "https://blog.didierstevens.com/programs/pdf-tools/",
     "https://www.netscylla.com/blog/2018/11/19/PDF-Analysis.html"
+  ],
+  "hashcat": [
+    "https://techearl.com/hashcat-cheat-sheet",
+    "https://pentesting.site/cheat-sheets/hashcat/",
+    "https://hackerdna.com/courses/cheat-sheets/hashcat-cheat-sheet"
+  ],
+  "hydra": [
+    "https://cheatdocs.org/hydra/",
+    "https://pentesting.site/cheat-sheets/hydra/",
+    "https://www.cybersecurityinstitute.in/blog/cracking-passwords-like-a-pro-hydra-john-the-ripper-and-hashcat"
+  ],
+  "john": [
+    "https://www.cybersecurityinstitute.in/blog/cracking-passwords-like-a-pro-hydra-john-the-ripper-and-hashcat"
+  ],
+  "scalpel": [
+    "https://05t3.github.io/posts/Data-Carving/",
+    "https://hacktricks.wiki/en/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.html",
+    "https://cybervie.com/file-carving-in-digital-forensics-best-tools-for-it/"
   ]
 }
