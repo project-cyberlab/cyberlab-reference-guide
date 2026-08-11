@@ -430,32 +430,32 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'objdump': [
         {
-            'task': 'Display objdump version and supported formats',
+            'task': 'Show objdump version and supported formats',
             'cmd': 'objdump -v -i',
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
         {
-            'task': 'Display overall file header details',
+            'task': "Inspect executable's overall file header metadata",
             'cmd': 'objdump -f factorial',
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
         {
-            'task': 'Display object file format specific header details',
+            'task': 'Display executable file header information for analysis',
             'cmd': 'objdump -p factorial',
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
         {
-            'task': 'Display section headers of an object file',
+            'task': 'Display section headers to analyze object file structure',
             'cmd': 'objdump -h factorial',
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
         {
-            'task': 'Display all headers and metadata from object file',
+            'task': 'Display all object file headers',
             'cmd': 'objdump -x factorial',
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
         {
-            'task': 'Disassemble executable sections to inspect machine code instructions',
+            'task': 'Analyze machine code instructions in executable sections',
             'cmd': 'objdump -d factorial',
             'src': 'https://www.thegeekstuff.com/2012/09/objdump-examples/',
         },
@@ -500,7 +500,7 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'r2': [
         {
-            'task': 'Spawn and debug a program',
+            'task': 'Debug the ls program to analyze execution and behavior',
             'cmd': 'r2 -d ls',
             'src': 'https://book.rada.re/first_steps/commandline_flags.html',
         },
@@ -510,18 +510,23 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://book.rada.re/first_steps/commandline_flags.html',
         },
         {
-            'task': 'Analyze raw binary dump for carving',
+            'task': 'Open raw binary for carving analysis',
             'cmd': 'r2 -n dump.bin',
             'src': 'https://hexmos.com/freedevtools/c/cmd/r2/',
         },
         {
-            'task': 'Resize files to original size for carving analysis',
+            'task': 'Carve binaries by resizing to original size',
             'cmd': 'r2 -wnqc"r $sz" $a',
             'src': 'https://hexmos.com/freedevtools/c/cmd/r2/',
         },
         {
-            'task': 'Analyze FAT binary file structure and contents',
+            'task': 'Analyze PowerPC 32-bit sub-binary within FAT file',
             'cmd': 'r2 -a ppc -b 32 ls.fat',
+            'src': 'https://book.rada.re/first_steps/commandline_flags.html',
+        },
+        {
+            'task': 'Apply script patches to target binary',
+            'cmd': 'r2 -i patch.r2 target.bin',
             'src': 'https://book.rada.re/first_steps/commandline_flags.html',
         },
     ],
@@ -554,12 +559,12 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'rasm2': [
         {
-            'task': 'Assemble x86 assembly instruction into machine code opcodes',
+            'task': 'Assemble x86 assembly code into machine code bytes',
             'cmd': "rasm2 -a x86 -b 32 'mov eax, 33'",
-            'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/rasm2.1.html',
+            'src': 'https://www.mankier.com/1/rasm2',
         },
         {
-            'task': 'Disassemble hex bytes into assembly instructions',
+            'task': 'Disassemble hex bytes into machine code instructions',
             'cmd': 'rasm2 -d 90',
             'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/rasm2.1.html',
         },
@@ -569,14 +574,19 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://book.rada.re/tools/rasm2/intro.html',
         },
         {
-            'task': 'Assemble assembly instructions to machine code',
+            'task': 'Disassemble machine code to human-readable assembly instructions',
             'cmd': "rasm2 -a java 'nop'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
         },
         {
-            'task': 'Disassemble hex bytes into assembly instructions',
+            'task': 'Disassemble hex into readable assembly instructions',
             'cmd': "rasm2 -a x86 -b 32 -d '90'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
+        },
+        {
+            'task': 'Disassemble machine code into assembly instructions',
+            'cmd': 'rasm2 -d 90 See Also radare2(1) Authors pancake <pancake@nopcode.org> Referenced By radare2(1) . September 5, 2024 Home Blog About',
+            'src': 'https://www.mankier.com/1/rasm2',
         },
     ],
     'ssdeep': [
@@ -654,7 +664,7 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'xxd': [
         {
-            'task': 'Recover original data from hex dump by reversing it',
+            'task': 'Convert hex dumps back to original binary data',
             'cmd': 'xxd -r',
             'src': 'https://commandlinux.com/man-page/man1/xxd/',
         },
@@ -664,8 +674,23 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://commandlinux.com/man-page/man1/xxd/',
         },
         {
-            'task': 'Inspect binary files with hex dump',
+            'task': 'Display binary file contents as hex for analysis',
             'cmd': 'xxd file.bin',
+            'src': 'https://www.commandinline.com/xxd-command-cheat-sheet/',
+        },
+        {
+            'task': 'Analyze binary data at bit level',
+            'cmd': 'xxd -b file.bin',
+            'src': 'https://www.commandinline.com/xxd-command-cheat-sheet/',
+        },
+        {
+            'task': 'Convert binary file to uppercase hexadecimal dump for analysis',
+            'cmd': 'xxd -u file.bin',
+            'src': 'https://www.commandinline.com/xxd-command-cheat-sheet/',
+        },
+        {
+            'task': 'Inspect binary file contents in detailed hex format',
+            'cmd': 'xxd -g 1 file.bin',
             'src': 'https://www.commandinline.com/xxd-command-cheat-sheet/',
         },
     ],

@@ -24,12 +24,18 @@ xxd -r [-s [-]offset] [-c cols] [-ps] [infile [outfile]]
 ## Common invocations
 
 ```
-# Recover original data from hex dump by reversing it
+# Convert hex dumps back to original binary data
 xxd -r
 # Recover original data from hexdump
 xxd -r -i
-# Inspect binary files with hex dump
+# Display binary file contents as hex for analysis
 xxd file.bin
+# Analyze binary data at bit level
+xxd -b file.bin
+# Convert binary file to uppercase hexadecimal dump for analysis
+xxd -u file.bin
+# Inspect binary file contents in detailed hex format
+xxd -g 1 file.bin
 ```
 
 ## Options
