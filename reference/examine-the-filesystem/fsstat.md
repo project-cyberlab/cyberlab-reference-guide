@@ -21,6 +21,19 @@ Report a filesystem's layout and parameters: type, block size, inode range, and 
 fsstat [-tvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] image
 ```
 
+## Common invocations
+
+```
+# Identify inode group for deleted file recovery
+fsstat images/hda1.dd
+# Analyze file system structure of evidence
+fsstat -o 2048 "$EVIDENCE"
+# Determine fragment ranges in disk image for file system analysis
+fsstat -t ufs images/wd0e.dd
+# Analyze file system metadata structure
+fsstat -o "$OFFSET" "$EVIDENCE" > "$OUTPUT/fsstat.txt"
+```
+
 ## Options
 
 All 10 options parsed from the captured help text; 9 reviewed with usage guidance.

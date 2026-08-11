@@ -12,22 +12,16 @@
     "seeds": 4
   },
   "img_stat": {
-    "attempts": 85,
+    "attempts": 87,
     "eligible": true,
-    "fp": "d01d7471f76a",
-    "seeds": 5
+    "fp": "ed76ba184507",
+    "seeds": 7
   },
   "numbers-to-string.py": {
     "attempts": 85,
     "eligible": true,
     "fp": "da39a3ee5e6b",
     "seeds": 0
-  },
-  "rasm2": {
-    "attempts": 86,
-    "eligible": true,
-    "fp": "9720c24a6265",
-    "seeds": 5
   },
   "readelf.py": {
     "attempts": 84,

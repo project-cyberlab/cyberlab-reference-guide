@@ -2543,7 +2543,9 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'frida-trace': {
         '-I': 'An analyst would use the -I flag when they need to trace all functions within a specific module, such as to broadly monitor activity in a particular library without specifying individual functions.',
         '-N': 'When the target application is already running and the analyst needs to trace functions using its identifier.',
+        '-O': "An analyst would use the -O flag when dealing with a large number of command line options that exceed the operating system's maximum command line length, allowing them to pass options via text files.",
         '-P': 'An analyst would use the `-P` flag when tracing multiple functions and needing to dynamically control handler behavior, such as conditionally printing the process ID based on a JSON parameter passed via the command line.',
+        '-S': 'An analyst would use the -S flag when they need to initialize a frida-trace session by executing custom JavaScript code files to set up the environment, share functions, or add data to the global "state" object before tracing begins.',
         '-U': 'An analyst would use the -U flag when tracing an application running on a remote Android device connected via USB from their host machine.',
         '-a': "An analyst would use the -a flag when tracing unexported functions in a module whose names are not available, requiring the use of an absolute offset to identify the function's entry point.",
         '-f': 'An analyst would use the -f flag when launching a specific application on a mobile device to trace its API calls, such as monitoring crypto functions in Snapchat or Java methods in YouTube.',
@@ -2769,8 +2771,15 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-s': 'An analyst would use the -s flag when creating a database of fuzzy hashes for later comparison to detect similarities between files, even if they have been slightly modified.',
         '-x': 'An analyst would use the -x flag when comparing multiple sets of generated fuzzy hash signatures against each other to identify potential matches or overlaps between files, such as comparing system directory hashes with known malware hashes.',
     },
+    'strings': {
+        '-a': 'An analyst would use the -a flag when they need to scan the entire file, including metadata, to ensure no readable text is missed, especially if vital information like error messages is suspected to be outside the main data section.',
+        '-d': 'An analyst would use the -d flag when examining a binary file to extract only the strings from its data sections, ignoring other sections like debugging symbols or metadata.',
+        '-f': 'An analyst would use the -f flag when processing multiple files to trace which file a particular string originated from.',
+        '-t': 'An analyst would use the -t flag when they need to determine the exact location of strings within a binary file for further investigation or correlation with other data.',
+    },
     'tcpflow': {
         '-C': 'An analyst would use the -C flag when they need to view flow data in the console without the display of source/destination headers.',
+        '-L': 'An analyst would use the -L flag when running multiple instances of tcpflow that output to the same standard output to prevent their outputs from overlapping and corrupting each other.',
         '-R': 'An analyst would use the -R flag when processing a pcap file captured with tcpdump -w to rebuild the flows.',
         '-X': 'An analyst would use the -X flag when generating a DFXML report to document every TCP connection and system details for forensic analysis.',
         '-c': 'An analyst would use the -c flag when they need to print the contents of packets to the console in real-time without storing any captured data to files.',

@@ -1766,5 +1766,33 @@
   "freshclam --checks": {
     "verdict": "accept",
     "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
+  },
+  "frida-trace -O": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "frida-trace -S": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "strings -a": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "strings -f": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "strings -t": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "strings -d": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
+  },
+  "tcpflow -L": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The strings set describes four distinct jobs rather than one restated -- -a scans the whole file including metadata, -f names which file a hit came from across a batch, -t gives the offset so a find can be correlated, -d limits to data sections. tcpflow -L is the concurrency case: several instances writing to one stdout."
   }
 }

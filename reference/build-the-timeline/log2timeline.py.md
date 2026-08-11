@@ -31,6 +31,21 @@ log2timeline.py [-h] [--troubles] [-V] [--artifact_definitions PATH]
 [--extract_winreg_binary] [--preferred_year YEAR]
 ```
 
+## Common invocations
+
+```
+# List available plugins and parser presets
+log2timeline.py --info
+# Generate timeline from source data
+log2timeline.py --storage-file OUTPUT INPUT
+# Generate Plaso storage file from raw disk image data
+log2timeline.py case_analysis.plaso /mnt/evidence/image.dd
+# Extract targeted file events from storage image
+log2timeline.py -f filter --storage-file timeline.plaso test.vhd
+# Generate timeline from VHD using Plaso storage
+log2timeline.py --logfile test.log --storage-file timeline.plaso test.vhd
+```
+
 ## Options
 
 All 100 options parsed from the captured help text; 15 reviewed with usage guidance.

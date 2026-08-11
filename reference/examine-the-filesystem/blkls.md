@@ -27,6 +27,15 @@ An analyst uses blkls when recovering files from unallocated space after inodes 
 blkls [-aAelvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] image [images] [start-stop]
 ```
 
+## Common invocations
+
+```
+# Extract unallocated data fragments from image
+blkls images/wd0e.dd > output/wd0e.blkls
+# Extract unallocated space data from evidence
+blkls -A -o 2048 "$EVIDENCE" > unallocated.raw
+```
+
 ## Options
 
 All 13 options parsed from the captured help text; 12 reviewed with usage guidance.

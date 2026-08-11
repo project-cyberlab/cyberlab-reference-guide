@@ -102,17 +102,24 @@
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
     "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
     "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
-    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
+    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations",
+    "https://nullsec.us/supertimeline-quick-reference/"
   ],
   "psort.py": [
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
     "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
-    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations"
+    "https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations",
+    "https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html",
+    "https://nullsec.us/supertimeline-quick-reference/",
+    "https://github.com/log2timeline/plaso/blob/main/docs/sources/user/Using-psort.md"
   ],
   "pinfo.py": [
     "https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html",
     "https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html",
-    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines"
+    "https://www.cyberforensicacademy.com/blog/log2timeline-guide-creating-forensic-timelines",
+    "https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html",
+    "https://nullsec.us/supertimeline-quick-reference/",
+    "https://github.com/log2timeline/plaso/blob/main/docs/sources/user/Using-psort.md"
   ],
   "chainsaw": [
     "https://github.com/WithSecureLabs/chainsaw",
@@ -219,7 +226,10 @@
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html"
   ],
   "fls": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -240,28 +250,38 @@
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html"
   ],
   "ils": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis",
+    "https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html"
   ],
   "blkls": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "ffind": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "ifind": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -275,7 +295,9 @@
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "tsk_gettimes": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -295,7 +317,9 @@
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/The_Sleuth_Kit_commands",
+    "https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis"
   ],
   "ewfverify": [
     "https://bromiley.medium.com/tooling-thursday-libewf-ec27b4564c2a",
@@ -420,7 +444,9 @@
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
     "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
+    "https://videos.didierstevens.com/2021/06/20/oledump-cheat-sheet/",
+    "https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py"
   ],
   "pcodedmp": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
@@ -758,5 +784,10 @@
     "https://r2wiki.readthedocs.io/en/latest/tools/radare2/",
     "https://hexmos.com/freedevtools/c/cmd/r2/",
     "https://book.rada.re/analysis/code_analysis.html"
+  ],
+  "pdf-parser": [
+    "https://blog.didierstevens.com/2008/10/30/pdf-parserpy/",
+    "https://blog.didierstevens.com/programs/pdf-tools/",
+    "https://www.netscylla.com/blog/2018/11/19/PDF-Analysis.html"
   ]
 }

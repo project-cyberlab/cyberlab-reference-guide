@@ -59,6 +59,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.hardbreak.wiki/hardware-hacking/basics/tools/software-tools/binwalk',
         },
     ],
+    'blkls': [
+        {
+            'task': 'Extract unallocated data fragments from image',
+            'cmd': 'blkls images/wd0e.dd > output/wd0e.blkls',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+        {
+            'task': 'Extract unallocated space data from evidence',
+            'cmd': 'blkls -A -o 2048 "$EVIDENCE" > unallocated.raw',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
     'capinfos': [
         {
             'task': 'Generate tab-delimited report with pcap file metadata',
@@ -240,6 +252,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.mankier.com/1/ewfverify',
         },
     ],
+    'ffind': [
+        {
+            'task': 'Find deleted files associated with inode 493',
+            'cmd': 'ffind -a images/wd0e.dd 493',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+        {
+            'task': 'Scripted analysis of evidence with ffind',
+            'cmd': 'ffind -o 2048 "$EVIDENCE" 12345',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
     'file': [
         {
             'task': 'Identify file type and format',
@@ -296,6 +320,28 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://manpages.ubuntu.com/manpages/trusty/man1/freshclam.1.html',
         },
     ],
+    'fsstat': [
+        {
+            'task': 'Identify inode group for deleted file recovery',
+            'cmd': 'fsstat images/hda1.dd',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+        {
+            'task': 'Analyze file system structure of evidence',
+            'cmd': 'fsstat -o 2048 "$EVIDENCE"',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+        {
+            'task': 'Determine fragment ranges in disk image for file system analysis',
+            'cmd': 'fsstat -t ufs images/wd0e.dd',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+        {
+            'task': 'Analyze file system metadata structure',
+            'cmd': 'fsstat -o "$OFFSET" "$EVIDENCE" > "$OUTPUT/fsstat.txt"',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
     'icat': [
         {
             'task': 'Extract file content by inode from disk image',
@@ -311,6 +357,55 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Recover file from evidence by inode',
             'cmd': 'icat -r -o 2048 "$EVIDENCE" 54321 > recovered_file.bin',
             'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+    ],
+    'istat': [
+        {
+            'task': 'Retrieve inode details to identify deleted files',
+            'cmd': 'istat images/wd0e.dd 493',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+        {
+            'task': 'Recover deleted directory entries via inode blocks',
+            'cmd': 'istat -b 2 images/hda9.dd 232',
+            'src': 'https://github.com/sleuthkit/sleuthkit/wiki/FS_Analysis',
+        },
+        {
+            'task': 'Analyze file system metadata of evidence',
+            'cmd': 'istat -o 2048 "$EVIDENCE" 12345',
+            'src': 'https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view',
+        },
+        {
+            'task': 'Inspect inode metadata from disk image',
+            'cmd': './istat -f linux-ext2 /root/able2/able2.part2.dd 2139 | less',
+            'src': 'https://cenif.gitbooks.io/forensic-guide-to-linux/content/x_advanced_forensic_tools/sleuthkit.html',
+        },
+    ],
+    'log2timeline.py': [
+        {
+            'task': 'List available plugins and parser presets',
+            'cmd': 'log2timeline.py --info',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html',
+        },
+        {
+            'task': 'Generate timeline from source data',
+            'cmd': 'log2timeline.py --storage-file OUTPUT INPUT',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html',
+        },
+        {
+            'task': 'Generate Plaso storage file from raw disk image data',
+            'cmd': 'log2timeline.py case_analysis.plaso /mnt/evidence/image.dd',
+            'src': 'https://www.exam-labs.com/blog/mastering-plaso-timeline-analysis-in-dfir-investigations',
+        },
+        {
+            'task': 'Extract targeted file events from storage image',
+            'cmd': 'log2timeline.py -f filter --storage-file timeline.plaso test.vhd',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html',
+        },
+        {
+            'task': 'Generate timeline from VHD using Plaso storage',
+            'cmd': 'log2timeline.py --logfile test.log --storage-file timeline.plaso test.vhd',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html',
         },
     ],
     'mactime': [
@@ -491,11 +586,65 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.madboa.com/geek/openssl/',
         },
     ],
+    'pdf-parser': [
+        {
+            'task': 'Extract malicious PDF content for analysis',
+            'cmd': 'pdf-parser.py -f -w malpdf.1 > mal.1',
+            'src': 'https://blog.didierstevens.com/programs/pdf-tools/',
+        },
+        {
+            'task': 'Search PDF for JavaScript to detect malware',
+            'cmd': 'pdf-parser.py –search javascript malware.pdf',
+            'src': 'https://blog.didierstevens.com/programs/pdf-tools/',
+        },
+        {
+            'task': 'Extract PDF encryption details for analysis',
+            'cmd': 'python pdf-parser.py -o 16 Project#1542292355.pdf',
+            'src': 'https://www.netscylla.com/blog/2018/11/19/PDF-Analysis.html',
+        },
+        {
+            'task': 'Extract encrypted URLs from PDF file',
+            'cmd': 'python pdf-parser.py -s /URI Project#1542292355.pdf',
+            'src': 'https://www.netscylla.com/blog/2018/11/19/PDF-Analysis.html',
+        },
+    ],
     'photorec': [
         {
             'task': 'Recover files from raw disk image',
             'cmd': 'photorec image.dd to carve a raw disk image',
             'src': 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step',
+        },
+    ],
+    'psort.py': [
+        {
+            'task': 'List available output modules for psort',
+            'cmd': 'psort.py -o list',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html',
+        },
+        {
+            'task': 'List available analysis plugins for psort',
+            'cmd': 'psort.py --analysis list',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html',
+        },
+        {
+            'task': 'List supported time zones for output formatting',
+            'cmd': 'psort.py --output-time-zone list',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html',
+        },
+        {
+            'task': 'Check parameters for VirusTotal analysis plugin',
+            'cmd': 'psort.py --analysis virustotal -h',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html',
+        },
+        {
+            'task': 'Filter timeline events using specified criteria',
+            'cmd': 'psort.py -q timeline.plaso FILTER',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html',
+        },
+        {
+            'task': 'Extract and sort event data from Plaso storage',
+            'cmd': 'psort.py -w test.log timeline.plaso',
+            'src': 'https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html',
         },
     ],
     'r2': [
@@ -731,6 +880,13 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Extract file timestamps from disk image',
             'cmd': 'tsk_gettimes ./image.dd > body.txt',
             'src': 'https://www.systutorials.com/docs/linux/man/1-tsk_gettimes/',
+        },
+    ],
+    'tsk_recover': [
+        {
+            'task': 'Recover deleted files from disk image',
+            'cmd': 'tsk_recover image.dd output_dir/',
+            'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
         },
     ],
     'xxd': [

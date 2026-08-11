@@ -27,6 +27,15 @@ An analyst reaches for ffind when searching for files based on string content or
 ffind [-aduvV] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] image [images] inode
 ```
 
+## Common invocations
+
+```
+# Find deleted files associated with inode 493
+ffind -a images/wd0e.dd 493
+# Scripted analysis of evidence with ffind
+ffind -o 2048 "$EVIDENCE" 12345
+```
+
 ## Options
 
 All 11 options parsed from the captured help text; 10 reviewed with usage guidance.

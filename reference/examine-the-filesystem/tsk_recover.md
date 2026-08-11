@@ -27,6 +27,13 @@ When an analyst needs to recover files from a disk image, they use tsk_recover a
 tsk_recover [-vVae] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o sector_offset] [-P pooltype] [-B pool_volume_block] [-d dir_inum] image [image] output_dir
 ```
 
+## Common invocations
+
+```
+# Recover deleted files from disk image
+tsk_recover image.dd output_dir/
+```
+
 ## Options
 
 All 11 options parsed from the captured help text; 6 reviewed with usage guidance.

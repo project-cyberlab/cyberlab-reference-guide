@@ -39,18 +39,18 @@ strings -d executable_file
 
 ## Options
 
-All 14 options parsed from the captured help text; 3 reviewed with usage guidance.
+All 14 options parsed from the captured help text; 6 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-d` | — | Only scan the data sections in the file |  |
-| `--data` | — | Only scan the data sections in the file |  |
-| `-f` | — | Print the name of the file before each string |  |
-| `--print-file-name` | — | Print the name of the file before each string |  |
+| `-d` | — | Only scan the data sections in the file | An analyst would use the -d flag when examining a binary file to extract only the strings from its data sections, ignoring other sections like debugging symbols or metadata. |
+| `--data` | — | Only scan the data sections in the file | An analyst would use the -d flag when examining a binary file to extract only the strings from its data sections, ignoring other sections like debugging symbols or metadata. |
+| `-f` | — | Print the name of the file before each string | An analyst would use the -f flag when processing multiple files to trace which file a particular string originated from. |
+| `--print-file-name` | — | Print the name of the file before each string | An analyst would use the -f flag when processing multiple files to trace which file a particular string originated from. |
 | `-n` | number | Locate & print any sequence of at least <number> | Minimum length. Default 4 is noisy; 8–10 cuts most false hits. |
 | `--bytes` | number | displayable characters. (The default is 4). |  |
-| `-t` | o,d,x | Print the location of the string in base 8, 10 or 16 |  |
-| `--radix` | o,d,x | Print the location of the string in base 8, 10 or 16 |  |
+| `-t` | o,d,x | Print the location of the string in base 8, 10 or 16 | An analyst would use the -t flag when they need to determine the exact location of strings within a binary file for further investigation or correlation with other data. |
+| `--radix` | o,d,x | Print the location of the string in base 8, 10 or 16 | An analyst would use the -t flag when they need to determine the exact location of strings within a binary file for further investigation or correlation with other data. |
 | `-o` | — | An alias for --radix=o | Print the byte offset of each string — lets you seek back to it. |
 | `-T` | — | Specify the binary file format |  |
 | `--target` | BFDNAME | Specify the binary file format |  |

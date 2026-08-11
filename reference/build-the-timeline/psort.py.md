@@ -25,6 +25,23 @@ psort.py [-h] [--troubles] [-V] [--analysis PLUGIN_LIST]
 [--status_view_interval SECONDS] [--slice DATE_TIME]
 ```
 
+## Common invocations
+
+```
+# List available output modules for psort
+psort.py -o list
+# List available analysis plugins for psort
+psort.py --analysis list
+# List supported time zones for output formatting
+psort.py --output-time-zone list
+# Check parameters for VirusTotal analysis plugin
+psort.py --analysis virustotal -h
+# Filter timeline events using specified criteria
+psort.py -q timeline.plaso FILTER
+# Extract and sort event data from Plaso storage
+psort.py -w test.log timeline.plaso
+```
+
 ## Options
 
 All 59 options parsed from the captured help text; 4 reviewed with usage guidance.

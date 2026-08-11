@@ -44,7 +44,7 @@ tcpflow -a -o outdir -Fk -r packets.pcap
 
 ## Options
 
-All 33 options parsed from the captured help text; 9 reviewed with usage guidance.
+All 33 options parsed from the captured help text; 10 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -58,7 +58,7 @@ All 33 options parsed from the captured help text; 9 reviewed with usage guidanc
 | `-I` | — | write for each flow another file *.findx to provide byte-indexed timestamps |  |
 | `-g` | — | output each flow in alternating colors (note change!) |  |
 | `-l` | — | treat non-flag arguments as input files rather than a pcap expression | An analyst would use the -l flag when processing multiple pcap files simultaneously with shell globbing, such as analyzing all capture files in a directory at once. |
-| `-L` | — | semlock - specifies that writes are locked using a named semaphore |  |
+| `-L` | — | semlock - specifies that writes are locked using a named semaphore | An analyst would use the -L flag when running multiple instances of tcpflow that output to the same standard output to prevent their outputs from overlapping and corrupting each other. |
 | `-p` | — | don't use promiscuous mode |  |
 | `-q` | — | quiet mode - do not print warnings |  |
 | `-r` | file | read packets from tcpdump pcap file (may be repeated) | An analyst would use the -r flag when processing a pcap file to automatically decode and save TCP flows, such as extracting HTTP responses or reconstructing data from network captures. |

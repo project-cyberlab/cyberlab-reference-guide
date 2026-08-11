@@ -262,9 +262,25 @@ def candidate_lines(text: str, tool: str,
                         r"Reporting Bugs|Description|Synopsis|Options|"
                         r"Examples?|Colophon|This page is part of)\b",
                         line)[0].strip()
+        # A shebang is never part of a command line. It appears because the
+        # extraction ran a heading and the script beneath it into the command
+        # above: `ffind -o 2048 "$EVIDENCE" 12345 Scripting a Complete
+        # Analysis #!/bin/bash`.
+        line = re.split(r"\s+#!", line)[0].strip()
+        # ...and the heading itself, which is the giveaway pattern of two
+        # capitalised words with at most a couple of small words between.
+        # Command arguments are paths, values and flags, not title case.
+        line = re.split(r"\s+[A-Z][a-z]+(?:\s+[a-z]{1,4})*\s+[A-Z][a-z]+",
+                        line)[0].strip()
         # ...and shell noise the same extraction dragged along:
         #   rahash2 -S 12333 -E ror -s hello && echo Cell{
         line = re.split(r"\s+&&\s+echo\s", line)[0].strip()
+
+        # The trims above can cut a line back to the bare tool name, which
+        # the earlier length check has already passed. Re-check here rather
+        # than let split() raise on a one-token line.
+        if len(line.split()) < 2:
+            continue
 
         if SELF.match(line) or SYNOPSIS.search(line) or TITLE.search(line):
             continue

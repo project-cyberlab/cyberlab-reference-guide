@@ -21,6 +21,19 @@ Show the full metadata for one inode: times, size, and the blocks it occupies.
 istat [-N num] [-f fstype] [-i imgtype] [-b dev_sector_size] [-o imgoffset] [-P pooltype] [-B pool_volume_block] [-z zone] [-s seconds] [-rvV] image inum
 ```
 
+## Common invocations
+
+```
+# Retrieve inode details to identify deleted files
+istat images/wd0e.dd 493
+# Recover deleted directory entries via inode blocks
+istat -b 2 images/hda9.dd 232
+# Analyze file system metadata of evidence
+istat -o 2048 "$EVIDENCE" 12345
+# Inspect inode metadata from disk image
+./istat -f linux-ext2 /root/able2/able2.part2.dd 2139 | less
+```
+
 ## Options
 
 All 14 options parsed from the captured help text; 5 reviewed with usage guidance.

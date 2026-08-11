@@ -98,6 +98,10 @@ REPAIR = [
     ("rasm2",
      "rasm2 -d 90 See Also radare2(1) Authors pancake <p@nopcode.org>",
      "rasm2 -d 90"),
+    # A section heading and the script beneath it run into the command.
+    ("ffind",
+     'ffind -o 2048 "$EVIDENCE" 12345 Scripting a Complete Analysis #!/bin/sh',
+     'ffind -o 2048 "$EVIDENCE" 12345'),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),
