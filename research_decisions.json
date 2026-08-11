@@ -1989,10 +1989,22 @@
   },
   "radiff2 -n": {
     "verdict": "reject",
-    "why": "Conflates two flags. radiff2 -c counts differences and -n prints bare addresses; the note asks for -n \"when counting the number of changes to obtain only the bare addresses\", which is both at once. wrong_flag() does not catch it because the note never names -c, it just describes it."
+    "why": "CORRECTED REASON. The original rejection said -c counts and -n prints bare addresses. That is backwards for this build: the captured help says \"-c [cmd] run given command on every RCore instance\" and \"-n count of changes\". So the note is RIGHT that -n counts changes, and wrong only in its trailing clause about obtaining bare addresses, which -n does not do. Still rejected, but re-research should keep the counting and drop the addresses -- not the other way round. Found by measuring the note against the captured help line, which scored 1.00 overlap and prompted the check."
   },
   "rasm2": {
     "verdict": "accept",
     "why": "Reviewed: trigger stated, flag confirmed present in the captured help, claim carried by the cited sources. objdump -EB/-EL are the endianness pair and read as one decision; r2 -s/-B/-P are seek, base address and rapatch, all distinct; oledump.py -q suppresses oledump own output so a plugin s findings stand alone."
+  },
+  "scalpel -v": {
+    "verdict": "reject",
+    "why": "No trigger. The captured help says only \"Verbose mode\", and the note says to use it \"when running the tool to extract files\" -- which is always, so it distinguishes nothing. Verbose flags earn a row only when the note says what the extra output is FOR."
+  },
+  "scalpel -o": {
+    "verdict": "accept",
+    "why": "Checked against the captured help line rather than from memory, after this round showed my recollection can be backwards. scalpel -d matches \"Generate header/footer database; will bypass certain optimizations\" including the performance trade-off; -o matches \"Set output directory for carved files\"."
+  },
+  "scalpel -d": {
+    "verdict": "accept",
+    "why": "Checked against the captured help line rather than from memory, after this round showed my recollection can be backwards. scalpel -d matches \"Generate header/footer database; will bypass certain optimizations\" including the performance trade-off; -o matches \"Set output directory for carved files\"."
   }
 }

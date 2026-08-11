@@ -66,6 +66,13 @@ DISPROVEN = """- A minimum passage-score threshold (4.7, 5.0, or any value). Pas
 - Relaxing the grounding threshold below 45%. The problem there was never the
   threshold; the measurement was counting plurals as ungrounded, and stemming
   fixed it.
+- Checking a flag note against the tool's own help line for that flag, to
+  catch notes that describe the wrong BEHAVIOUR. Measured over 371 accepted
+  flag notes: the median overlap is 0.33 and 88 accepted notes score exactly
+  0.00, because a help line is terse ("-d decompress") while a good note adds
+  the scenario the help never states. Meanwhile radiff2 -n, rejected by hand,
+  scored 1.00. The metric does not separate the two populations in either
+  direction.
 """
 
 ASSESSOR = ("l3e7-3090", "http://192.168.1.253:11434", "qwen3:30b-a3b-instruct-2507-q4_K_M")

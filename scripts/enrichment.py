@@ -2819,6 +2819,8 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'scalpel': {
         '-b': "An analyst would use the -b flag when carving files from a disk image if defined footers aren't discovered within the maximum carve size for a file type.",
         '-c': 'An analyst would use the -c flag when they need to specify a custom configuration file to define or modify the header/footer database used for file carving.',
+        '-d': 'An analyst would use the -d flag when needing to generate a comprehensive header/footer database to ensure all footers are discovered, even though it sacrifices performance.',
+        '-o': 'An analyst would use the -o flag with scalpel when specifying the output directory for extracted files from a disk image or device file during data carving.',
     },
     'sigtool': {
         '--datadir': 'An analyst would use --datadir when they need to specify a non-default directory as the default database location for all sigtool operations.',
