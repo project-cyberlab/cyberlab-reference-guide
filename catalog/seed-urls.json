@@ -202,7 +202,10 @@
     "https://inventivehq.com/blog/malware-unpacking-guide",
     "https://isc.sans.edu/diary/26966",
     "https://www.cyberengage.org/post/memory-forensics-using-strings-and-bstrings-a-comprehensive-guide",
-    "https://www.geeksforgeeks.org/ethical-hacking/string-extraction/"
+    "https://www.geeksforgeeks.org/ethical-hacking/string-extraction/",
+    "https://www.commandinline.com/strings-command-cheat-sheet/",
+    "https://ioflood.com/blog/strings-linux-command/",
+    "https://www.tutorialspoint.com/unix_commands/strings.htm"
   ],
   "mmls": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -281,7 +284,11 @@
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
     "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
     "https://github.com/sleuthkit/sleuthkit/wiki/tsk_gettimes",
-    "https://github.com/sleuthkit/sleuthkit/wiki/Timelines"
+    "https://github.com/sleuthkit/sleuthkit/wiki/Timelines",
+    "https://www.systutorials.com/docs/linux/man/1-tsk_gettimes/",
+    "http://www.sleuthkit.org/sleuthkit/man/tsk_gettimes.html",
+    "https://www.mankier.com/1/tsk_gettimes",
+    "https://man.archlinux.org/man/tsk_gettimes.1.en"
   ],
   "img_stat": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -682,7 +689,11 @@
     "https://johannst.github.io/notes/binary/readelf.html",
     "https://www.geeksforgeeks.org/readelf-command-in-linux-with-examples/",
     "https://sourceware.org/binutils/docs/binutils/readelf.html",
-    "https://man.archlinux.org/man/readelf.1.en"
+    "https://man.archlinux.org/man/readelf.1.en",
+    "https://www.cheat-sheets.org/project/tldr/command/readelf/os/linux/",
+    "https://allabouttesting.org/10-practical-examples-using-readelf-command/",
+    "https://commandmasters.com/commands/readelf-linux/",
+    "https://codelucky.com/readelf-command-linux/"
   ],
   "xxd": [
     "https://manpages.ubuntu.com/manpages/jammy/man1/xxd.1.html",

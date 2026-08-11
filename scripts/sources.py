@@ -66,7 +66,24 @@ DENY = (
     # design rests on retrieval from outside, and nothing external is
     # learned by reading your own output.
     "project-cyberlab", "cyberlab-reference-guide",
+    # Social platforms. A search for a tool name reaches them, and what
+    # comes back is a login wall: the facebook.com result in strings'
+    # corpus fetched to fifteen characters and still consumed one of the
+    # ten page slots.
+    "facebook.com", "twitter.com", "x.com/", "instagram.com",
+    "linkedin.com", "pinterest.", "tiktok.com",
 )
+
+# A page shorter than this is a login wall, a redirect notice or an error
+# page, and it is never worth one of the corpus's capped slots.
+#
+# The corpus holds at most max_pages, so an empty result does not merely
+# add nothing -- it displaces a page that would have added something.
+# strings dropped from 36 passages to 24 and from 2 usable commands to 0
+# between two runs, and the difference was a fifteen-character facebook
+# result taking a slot. The cache already refuses to store anything this
+# short; the corpus should refuse to count it.
+MIN_PAGE = 500
 
 
 # A search for a two-letter flag matches the whole internet. '"fls -s"
@@ -637,7 +654,7 @@ def corpus_for(tool: str, max_pages: int = 10) -> list[dict]:
                     continue
                 seen.add(hit["url"])
                 text = fetch_text(hit["url"])
-                if text:
+                if len(text or "") >= MIN_PAGE:
                     pages.append({"url": hit["url"], "title": hit["title"],
                                   "trust": hit["trust"], "text": text})
 

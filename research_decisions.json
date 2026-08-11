@@ -1742,5 +1742,29 @@
   "strings": {
     "verdict": "reject",
     "why": "Mixes two platforms in one workflow. The note frames it as examining suspicious ELF binaries in Linux malware analysis and then says to run it after confirming the file is unpacked with PEiD -- PEiD is a Windows PE packer identifier and does not read ELF at all. A junior analyst following that would go looking for a step that cannot exist. The real trigger for strings on an ELF is the same either way: read the printable runs for URLs, IPs, paths and command fragments before running anything."
+  },
+  "capa --tag": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
+  },
+  "freshclam --datadir": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
+  },
+  "freshclam -d": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
+  },
+  "freshclam -v": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
+  },
+  "freshclam --quiet": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
+  },
+  "freshclam --checks": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The freshclam set is operational rather than setup -- -d runs it as a daemon, --quiet suits cron where the exit code is the signal, --checks changes the daily cadence, --datadir puts the database somewhere writable. That is different from the rejected freshclam tool-level note, which anchored on installation and ldconfig."
   }
 }
