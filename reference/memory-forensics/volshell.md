@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | SIFT Workstation (Volatility 3) |
 | **Capability** | Analyse a memory image |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/volshell.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/volshell.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

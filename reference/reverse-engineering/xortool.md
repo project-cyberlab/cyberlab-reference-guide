@@ -6,7 +6,7 @@
 | **Kit** | REMnux |
 | **Capability** | Analyse shellcode; Break simple obfuscation |
 | **Version** | 1.1.0 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/xortool.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/xortool.help.txt) |
 | **Documentation** | <https://github.com/hellman/xortool> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -29,6 +29,21 @@ xortool [-x] [-l LEN] [-c CHAR | -b | -o] [-f] [-t CHARSET] [-p PLAIN] [-r PERCE
 xortool [-x] [-m MAX-LEN| -l LEN] [-c CHAR | -b | -o] [-f] [-t CHARSET] [-p PLAIN] [-r PERCENT] [FILE]
 xortool [-h | --help]
 xortool --version
+```
+
+## Common invocations
+
+```
+# Analyze XOR-encrypted files to find keys and determine key lengths
+xortool file.bin
+# Decrypt XOR-encrypted hex file using space character set analysis
+xortool -x -c ' ' file.hex
+# Analyze XOR-encrypted files to determine key lengths and recover plaintext
+xortool -l 11 -c 20 file.bin
+# Decrypt XOR-encrypted data with brute force and base64 charset
+xortool -b -f -l 23 -t base64 message.enc
+# Decrypt XOR-encrypted files using character frequency analysis
+xortool tool_xored -c 20
 ```
 
 ## Options

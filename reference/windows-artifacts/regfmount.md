@@ -5,7 +5,7 @@
 |---|---|
 | **Kit** | SIFT Workstation (libyal) |
 | **Capability** | Parse registry hives |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/regfmount.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/regfmount.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

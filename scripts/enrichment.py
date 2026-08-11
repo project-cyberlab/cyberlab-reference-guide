@@ -2279,6 +2279,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for PhotoRec when recovering deleted files from damaged or unbootable disks, disk images, or encrypted partitions, often after using TestDisk to repair partition tables; they run it with parameters like `/log` for logging or specifying raw devices for speed, preferring it over similar tools for its robust support of fragmented file recovery and diverse image formats like .dd, .E01, and split files.',
         'sources': ['https://docslib.org/doc/9154809/photorec-step-by-step', 'https://oneuptime.com/blog/post/2026-01-15-recover-deleted-files-testdisk-ubuntu/view', 'https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step'],
     },
+    'psort.py': {
+        'scenario': "An analyst reaches for psort.py after generating a plaso.dump file with log2timeline.py to create a timeline, filter events by tags, or extract time slices; they may run pinfo.py first to inspect the dump's contents, and choose psort over similar tools for its ability to handle complex time-based filtering and tag-based queries directly from the plaso data.",
+        'sources': ['https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html', 'https://github.com/log2timeline/plaso/blob/main/docs/sources/user/Using-psort.md', 'https://nullsec.us/supertimeline-quick-reference/'],
+    },
     'pyxswf': {
         'scenario': 'An analyst reaches for pyxswf when examining files like MS Office documents or RTF files suspected of containing embedded Flash (SWF) objects, particularly when SWF streams are fragmented within OLE structures or encoded in hexadecimal within RTF; they may run it after initial file inspection to extract SWF content for further analysis, preferring it over similar tools due to its specific handling of OLE fragmentation and RTF hex-encoded SWF extraction.',
         'sources': ['https://github.com/decalage2/oletools/wiki', 'https://github.com/decalage2/oletools/wiki/oleid', 'https://github.com/decalage2/oletools/wiki/olevba'],
@@ -2566,15 +2570,21 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'hashcat': {
         '--custom-charset1': 'An analyst would use the --custom-charset1 flag when defining a custom character set (e.g., ?l?d) to reference in a mask with ?1, such as in a hashcat mask file line like "?l?d,?l?l?l?l?1" to specify a combination of lowercase letters and digits for password cracking.',
+        '--session': 'An analyst would use the --session flag when resuming an interrupted hashcat session to continue cracking from the last checkpointed position.',
         '--show': 'An analyst would use the --show flag to display previously cracked hashes stored in the potfile when verifying results or avoiding redundant cracking efforts.',
+        '--stdout': 'An analyst would use the --stdout flag when generating custom wordlists by specifying mask patterns to create targeted combinations of characters for cracking hashes.',
+        '-D': 'An analyst would use the -D flag when they need to specify whether to use the CPU, GPU, or both for hash cracking based on available hardware resources.',
         '-a': 'An analyst would use the -a flag when performing a combination attack to generate password combinations from two separate wordlists.',
         '-d': 'An analyst would use the -d flag when specifying a particular GPU device in a multi-GPU setup where hashcat encounters mapping errors due to identical or similarly identified devices, requiring manual selection to bypass temperature or fan control issues.',
         '-g': 'An analyst would use the -g flag when encountering errors related to excessive rule usage, such as clEnqueueCopyBuffer() -30 or cuStreamSynchronize() 702, to reduce the number of rules and resolve the issue.',
         '-m': 'An analyst would use the -m flag when specifying the hash type (e.g., MD5, SHA-256) to ensure Hashcat correctly interprets the hash format during cracking attempts.',
+        '-o': "An analyst would use the -o flag when they need to specify the output file path for storing cracked hashes, such as in the example where 'cracked.txt' is used.",
         '-r': 'An analyst would use the -r flag when applying custom or built-in rule sets to a wordlist to generate password variations during cracking attacks, as demonstrated in the examples involving rules/best64.rule and modifying rules to append specific strings like years to passwords.',
         '-w': 'An analyst would use the -w flag when optimizing Hashcat performance on a dedicated cracking rig with a GPU not driving a display, specifically setting -w 4 for maximum workload intensity.',
     },
     'istat': {
+        '-b': "An analyst would use the -b flag when examining a deleted directory's inode with a size of 0 to force the display of block addresses and recover file names from the directory's data blocks.",
+        '-f': "An analyst would use the -f flag with istat when examining a deleted file's inode on an ext2 file system to retrieve detailed metadata and block information, as demonstrated with inode 2139 in the /root/able2/able2.part2.dd disk image.",
         '-o': "An analyst would use the -o flag with istat when examining metadata of a specific inode to retrieve detailed information about a file's properties and timestamps from a disk image or partition.",
     },
     'john': {
@@ -2679,6 +2689,13 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'pinfo.py': {
         '--verbose': 'An analyst would use the --verbose flag when troubleshooting or performing thorough validation of the collection process, or immediately after storage file creation to verify successful artifact extraction and document provenance.',
         '-v': 'An analyst would use the -v flag when troubleshooting processing issues, validating the integrity of a storage file, or verifying the completeness of artifact extraction after creating a Plaso storage file.',
+    },
+    'psort.py': {
+        '--data': 'An analyst would use the --data flag when they need to specify a custom location for filter files or databases, such as when using a non-default winevt-rc.db file.',
+        '--output-time-zone': 'An analyst would use the --output-time-zone flag when they need to adjust the time zone of the date and time values in the output events to match a specific location or requirement, rather than the default UTC.',
+        '--slicer': 'An analyst would use the --slicer flag when filtering specific events but also needing to include surrounding context to better understand the timeline or related activities.',
+        '-a': 'An analyst would use the -a flag when processing a storage media file or VSS store where duplicate entries need to be preserved for comprehensive analysis.',
+        '-d': 'An analyst would use the -d flag when psort encounters an unexpected exception during runtime to debug the issue by printing the traceback and dropping into pdb.',
     },
     'pyxswf': {
         '-f': 'An analyst would use the -f flag when examining an RTF file containing Flash objects embedded in hexadecimal format to extract and analyze the embedded SWF content.',

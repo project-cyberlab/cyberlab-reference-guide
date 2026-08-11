@@ -6,7 +6,7 @@
 | **Kit** | REMnux · Kali Linux · SIFT Workstation |
 | **Capability** | Inspect metadata for one file or inode |
 | **Version** | The Sleuth Kit ver 4.11.1 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/istat.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/istat.help.txt) |
 | **Documentation** | <https://www.sleuthkit.org/sleuthkit> |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
@@ -36,7 +36,7 @@ istat -o 2048 "$EVIDENCE" 12345
 
 ## Options
 
-All 14 options parsed from the captured help text; 5 reviewed with usage guidance.
+All 14 options parsed from the captured help text; 7 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -45,8 +45,8 @@ All 14 options parsed from the captured help text; 5 reviewed with usage guidanc
 | `-z` | zone | time zone of original machine (i.e. EST5EDT or GMT) | Set the time zone for the displayed timestamps. |
 | `-s` | seconds | Time skew of original machine (in seconds) | Apply a clock skew in seconds for a known-bad system clock. |
 | `-i` | imgtype | The format of the image file (use '-i list' for supported types) |  |
-| `-b` | dev_sector_size | The size (in bytes) of the device sectors |  |
-| `-f` | fstype | File system type (use '-f list' for supported types) |  |
+| `-b` | dev_sector_size | The size (in bytes) of the device sectors | An analyst would use the -b flag when examining a deleted directory's inode with a size of 0 to force the display of block addresses and recover file names from the directory's data blocks. |
+| `-f` | fstype | File system type (use '-f list' for supported types) | An analyst would use the -f flag with istat when examining a deleted file's inode on an ext2 file system to retrieve detailed metadata and block information, as demonstrated with inode 2139 in the /root/able2/able2.part2.dd disk image. |
 | `-o` | imgoffset | The offset of the file system in the image (in sectors) | Partition offset in sectors, from `mmls`. |
 | `-P` | pooltype | Pool container type (use '-p list' for supported types) |  |
 | `-B` | pool_volume_block | Starting block (for pool volumes only) |  |

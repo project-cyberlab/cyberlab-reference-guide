@@ -75,6 +75,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
         },
     ],
+    'affconvert': [
+        {
+            'task': 'Convert between raw disk images and AFF files',
+            'cmd': 'affconvert file1.raw',
+            'src': 'https://manpages.debian.org/testing/afflib-tools/affconvert.1.en.html',
+        },
+        {
+            'task': 'Convert between AFF and raw formats for data processing',
+            'cmd': 'affconvert file1.raw file2.raw file3.raw',
+            'src': 'https://manpages.debian.org/testing/afflib-tools/affconvert.1.en.html',
+        },
+    ],
     'bdeinfo': [
         {
             'task': 'Retrieve BitLocker encryption details from a drive',
@@ -1041,6 +1053,60 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Extract shadow copy metadata from disk image',
             'cmd': 'vshadowinfo -o <partition_byte_offset> disk.raw',
             'src': 'https://github.com/project-dfir/dfir-lab/blob/main/module-24-anti-forensics-vss/README.md',
+        },
+    ],
+    'xlmdeobfuscator': [
+        {
+            'task': 'Deobfuscate macros in Excel documents for analysis',
+            'cmd': 'xlmdeobfuscator --file document.xlsm',
+            'src': 'https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md',
+        },
+        {
+            'task': 'Extract macros from Excel document without deobfuscation',
+            'cmd': 'xlmdeobfuscator --file document.xlsm -x',
+            'src': 'https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md',
+        },
+        {
+            'task': 'Deobfuscate Excel macros using configuration file',
+            'cmd': 'xlmdeobfuscator --file document.xlsm -c default.config',
+            'src': 'https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md',
+        },
+        {
+            'task': 'Deobfuscate Excel macro code and export to JSON',
+            'cmd': 'xlmdeobfuscator --file document.xlsm --export-json result.json',
+            'src': 'https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md',
+        },
+        {
+            'task': 'Deobfuscate Excel macro code for analysis',
+            'cmd': 'xlmdeobfuscator --file document.xlsm --no-indent --output-formula-format "[[INT-FORMULA]]"',
+            'src': 'https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md',
+        },
+    ],
+    'xortool': [
+        {
+            'task': 'Analyze XOR-encrypted files to find keys and determine key lengths',
+            'cmd': 'xortool file.bin',
+            'src': 'https://github.com/hellman/xortool/blob/master/README.md',
+        },
+        {
+            'task': 'Decrypt XOR-encrypted hex file using space character set analysis',
+            'cmd': "xortool -x -c ' ' file.hex",
+            'src': 'https://github.com/hellman/xortool/blob/master/README.md',
+        },
+        {
+            'task': 'Analyze XOR-encrypted files to determine key lengths and recover plaintext',
+            'cmd': 'xortool -l 11 -c 20 file.bin',
+            'src': 'https://github.com/hellman/xortool/blob/master/README.md',
+        },
+        {
+            'task': 'Decrypt XOR-encrypted data with brute force and base64 charset',
+            'cmd': 'xortool -b -f -l 23 -t base64 message.enc',
+            'src': 'https://github.com/hellman/xortool/blob/master/README.md',
+        },
+        {
+            'task': 'Decrypt XOR-encrypted files using character frequency analysis',
+            'cmd': 'xortool tool_xored -c 20',
+            'src': 'https://github.com/hellman/xortool/blob/master/README.md',
         },
     ],
     'xxd': [

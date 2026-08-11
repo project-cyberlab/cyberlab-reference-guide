@@ -6,7 +6,7 @@
 | **Kit** | Kali Linux |
 | **Capability** | Crack passwords and hashes |
 | **Version** | v6.2.6 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/hashcat.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -45,7 +45,7 @@ hashcat -b
 
 ## Options
 
-All 143 options parsed from the captured help text; 8 reviewed with usage guidance.
+All 143 options parsed from the captured help text; 12 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -77,18 +77,18 @@ All 143 options parsed from the captured help text; 8 reviewed with usage guidan
 | `-t` | — | \| Num \| Threshold X when to stop accepting new markov-chains \| -t 50 |  |
 | `--markov-threshold` | — | \| Num \| Threshold X when to stop accepting new markov-chains \| -t 50 |  |
 | `--runtime` | — | \| Num \| Abort session after X seconds of runtime \| --runtime=10 |  |
-| `--session` | — | \| Str \| Define specific session name \| --session=mysession |  |
+| `--session` | — | \| Str \| Define specific session name \| --session=mysession | An analyst would use the --session flag when resuming an interrupted hashcat session to continue cracking from the last checkpointed position. |
 | `--restore` | — | \| \| Restore session from --session \| |  |
 | `--restore-disable` | — | \| \| Do not write restore file \| |  |
 | `--restore-file-path` | — | \| File \| Specific path to restore file \| --restore-file-path=x.restore |  |
-| `-o` | — | \| File \| Define outfile for recovered hash \| -o outfile.txt |  |
-| `--outfile` | — | \| File \| Define outfile for recovered hash \| -o outfile.txt |  |
+| `-o` | — | \| File \| Define outfile for recovered hash \| -o outfile.txt | An analyst would use the -o flag when they need to specify the output file path for storing cracked hashes, such as in the example where 'cracked.txt' is used. |
+| `--outfile` | — | \| File \| Define outfile for recovered hash \| -o outfile.txt | An analyst would use the -o flag when they need to specify the output file path for storing cracked hashes, such as in the example where 'cracked.txt' is used. |
 | `--outfile-format` | — | \| Str \| Outfile format to use, separated with commas \| --outfile-format=1,3 |  |
 | `--outfile-autohex-disable` | — | \| \| Disable the use of $HEX[] in output plains \| |  |
 | `--outfile-check-timer` | — | \| Num \| Sets seconds between outfile checks to X \| --outfile-check-timer=30 |  |
 | `-p` | — | \| Char \| Separator char for hashlists and outfile \| -p : |  |
 | `--separator` | — | \| Char \| Separator char for hashlists and outfile \| -p : |  |
-| `--stdout` | — | \| \| Do not crack a hash, instead print candidates only \| |  |
+| `--stdout` | — | \| \| Do not crack a hash, instead print candidates only \| | An analyst would use the --stdout flag when generating custom wordlists by specifying mask patterns to create targeted combinations of characters for cracking hashes. |
 | `--show` | — | \| \| Compare hashlist with potfile; show cracked hashes \| | An analyst would use the --show flag to display previously cracked hashes stored in the potfile when verifying results or avoiding redundant cracking efforts. |
 | `--left` | — | \| \| Compare hashlist with potfile; show uncracked hashes \| |  |
 | `--username` | — | \| \| Enable ignoring of usernames in hashfile \| |  |
@@ -131,8 +131,8 @@ All 143 options parsed from the captured help text; 8 reviewed with usage guidan
 | `--backend-info` | — | \| \| Show system/evironment/backend API info \| -I or -II |  |
 | `-d` | — | \| Str \| Backend devices to use, separated with commas \| -d 1 | An analyst would use the -d flag when specifying a particular GPU device in a multi-GPU setup where hashcat encounters mapping errors due to identical or similarly identified devices, requiring manual selection to bypass temperature or fan control issues. |
 | `--backend-devices` | — | \| Str \| Backend devices to use, separated with commas \| -d 1 | An analyst would use the -d flag when specifying a particular GPU device in a multi-GPU setup where hashcat encounters mapping errors due to identical or similarly identified devices, requiring manual selection to bypass temperature or fan control issues. |
-| `-D` | — | \| Str \| OpenCL device-types to use, separated with commas \| -D 1 |  |
-| `--opencl-device-types` | — | \| Str \| OpenCL device-types to use, separated with commas \| -D 1 |  |
+| `-D` | — | \| Str \| OpenCL device-types to use, separated with commas \| -D 1 | An analyst would use the -D flag when they need to specify whether to use the CPU, GPU, or both for hash cracking based on available hardware resources. |
+| `--opencl-device-types` | — | \| Str \| OpenCL device-types to use, separated with commas \| -D 1 | An analyst would use the -D flag when they need to specify whether to use the CPU, GPU, or both for hash cracking based on available hardware resources. |
 | `-O` | — | \| \| Enable optimized kernels (limits password length) \| |  |
 | `--optimized-kernel-enable` | — | \| \| Enable optimized kernels (limits password length) \| |  |
 | `-M` | — | \| \| Disable multiply kernel-accel with processor count \| |  |

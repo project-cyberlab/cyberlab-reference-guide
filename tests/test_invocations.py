@@ -29,6 +29,9 @@ KEEP = [
     ("dd", "dd if=/dev/zero of=/dev/hda bs=4K conv=noerror,sync"),
     ("dcfldd", 'dcfldd pattern="00FFAACC" of=/dev/sda'),
     ("md5sum", "md5sum -c files.md5"),
+    # One bracketed group, nested: a real command, not a synopsis.
+    ("xlmdeobfuscator",
+     'xlmdeobfuscator --file d.xlsm --output-formula-format "[[INT-FORMULA]]"'),
     # A # with no space before it is part of the filename, not a comment.
     ("pdf-parser", "pdf-parser.py -o 16 Project#1542292355.pdf"),
 ]
@@ -83,6 +86,9 @@ DROP = [
     # names a real file and generalises one argument.
     ("olemeta", "olemeta <file>"),
     ("hydra", "hydra [ options ] <target> <service>"),
+    # Two or more bracketed groups is a synopsis. The all-placeholder
+    # rule misses it because "[-m" and "MAX-LEN]" are separate tokens.
+    ("xortool", "xortool [-x] [-m MAX-LEN] [-f] [-t CHARSET] [FILE]"),
     # A tool listing, where the colon separates name from description.
     ("msodde",
      "msodde : to detect and extract DDE links from MS Office documents"),

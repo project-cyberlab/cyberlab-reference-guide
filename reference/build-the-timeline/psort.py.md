@@ -6,13 +6,19 @@
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Build a super-timeline from many artifact sources |
 | **Version** | plaso - psort version 20260512 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/psort.py.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/psort.py.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
 ## Purpose
 
 Filter, sort and output the events in a Plaso storage file.
+
+## When you'd reach for this
+
+An analyst reaches for psort.py after generating a plaso.dump file with log2timeline.py to create a timeline, filter events by tags, or extract time slices; they may run pinfo.py first to inspect the dump's contents, and choose psort over similar tools for its ability to handle complex time-based filtering and tag-based queries directly from the plaso data.
+
+**Sources:** <https://digitalinvestigator.blogspot.com/2026/07/super-timeline-analysis-with.html> · <https://github.com/log2timeline/plaso/blob/main/docs/sources/user/Using-psort.md> · <https://nullsec.us/supertimeline-quick-reference/>
 
 ## Synopsis
 
@@ -44,7 +50,7 @@ psort.py -w test.log timeline.plaso
 
 ## Options
 
-All 59 options parsed from the captured help text; 4 reviewed with usage guidance.
+All 59 options parsed from the captured help text; 9 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -65,8 +71,8 @@ All 59 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `--logfile` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "psort- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
 | `--log_file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "psort- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
 | `--log-file` | FILENAME | Path of the file in which to store log messages, by default this file will be named: "psort- YYYYMMDDThhmmss.log.gz". Note that the file will be gzip compressed if the extension is ".gz". |  |
-| `-d` | — | Enable debug output. |  |
-| `--debug` | — | Enable debug output. |  |
+| `-d` | — | Enable debug output. | An analyst would use the -d flag when psort encounters an unexpected exception during runtime to debug the issue by printing the traceback and dropping into pdb. |
+| `--debug` | — | Enable debug output. | An analyst would use the -d flag when psort encounters an unexpected exception during runtime to debug the issue by printing the traceback and dropping into pdb. |
 | `-q` | — | Disable informational output. | Quiet, for scripted runs. |
 | `--quiet` | — | Disable informational output. | Quiet, for scripted runs. |
 | `-u` | — | Enable unattended mode and do not ask the user for additional input when needed, but terminate with an error instead. |  |
@@ -80,11 +86,11 @@ All 59 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `--slice` | DATE_TIME | Date and time to create a time slice around. This parameter, if defined, will display all events that happened X minutes before and after the defined date, where X is controlled by the --slice_size op |  |
 | `--slice_size` | SLICE_SIZE | Defines the slice size. In the case of a regular time slice it defines the number of minutes the slice size should be. In the case of the --slicer it determines the number of events before and after a |  |
 | `--slice-size` | SLICE_SIZE | Defines the slice size. In the case of a regular time slice it defines the number of minutes the slice size should be. In the case of the --slicer it determines the number of events before and after a |  |
-| `--slicer` | — | Create a time slice around every filter match. This parameter, if defined will save all X events before and after a filter match has been made. X is defined by the --slice_size parameter. |  |
-| `--data` | PATH | Path to a directory containing the data files. |  |
-| `-a` | — | By default the psort removes duplicate entries from the output. This parameter changes that behavior so all events are included. |  |
-| `--include_all` | — | By default the psort removes duplicate entries from the output. This parameter changes that behavior so all events are included. |  |
-| `--include-all` | — | By default the psort removes duplicate entries from the output. This parameter changes that behavior so all events are included. |  |
+| `--slicer` | — | Create a time slice around every filter match. This parameter, if defined will save all X events before and after a filter match has been made. X is defined by the --slice_size parameter. | An analyst would use the --slicer flag when filtering specific events but also needing to include surrounding context to better understand the timeline or related activities. |
+| `--data` | PATH | Path to a directory containing the data files. | An analyst would use the --data flag when they need to specify a custom location for filter files or databases, such as when using a non-default winevt-rc.db file. |
+| `-a` | — | By default the psort removes duplicate entries from the output. This parameter changes that behavior so all events are included. | An analyst would use the -a flag when processing a storage media file or VSS store where duplicate entries need to be preserved for comprehensive analysis. |
+| `--include_all` | — | By default the psort removes duplicate entries from the output. This parameter changes that behavior so all events are included. | An analyst would use the -a flag when processing a storage media file or VSS store where duplicate entries need to be preserved for comprehensive analysis. |
+| `--include-all` | — | By default the psort removes duplicate entries from the output. This parameter changes that behavior so all events are included. | An analyst would use the -a flag when processing a storage media file or VSS store where duplicate entries need to be preserved for comprehensive analysis. |
 | `--language` | LANGUAGE_TAG | The preferred language, which is used for extracting and formatting Windows EventLog message strings. Use " --language list" to see a list of supported language tags. The en-US (LCID 0x0409) language  |  |
 | `--additional_fields` | ADDITIONAL_FIELDS | Defines additional fields to be included in the output besides the default fields. Multiple additional field names can be defined as a list of comma separated values. Output formats that support addit |  |
 | `--additional-fields` | ADDITIONAL_FIELDS | Defines additional fields to be included in the output besides the default fields. Multiple additional field names can be defined as a list of comma separated values. Output formats that support addit |  |
@@ -94,8 +100,8 @@ All 59 options parsed from the captured help text; 4 reviewed with usage guidanc
 | `--custom-formatter-definitions` | PATH | Path to a file containing custom event formatter definitions, which is a .yaml file. Custom event formatter definitions can be used to customize event messages and override the built-in event formatte |  |
 | `--dynamic_time` | — | Indicate that the output should use dynamic time. Output formats that support dynamic time are: dynamic |  |
 | `--dynamic-time` | — | Indicate that the output should use dynamic time. Output formats that support dynamic time are: dynamic |  |
-| `--output_time_zone` | TIME_ZONE | time zone of date and time values written to the output, if supported by the output format. Use "list" to see a list of available time zones. Output formats that support an output time zone are: dynam |  |
-| `--output-time-zone` | TIME_ZONE | time zone of date and time values written to the output, if supported by the output format. Use "list" to see a list of available time zones. Output formats that support an output time zone are: dynam |  |
+| `--output_time_zone` | TIME_ZONE | time zone of date and time values written to the output, if supported by the output format. Use "list" to see a list of available time zones. Output formats that support an output time zone are: dynam | An analyst would use the --output-time-zone flag when they need to adjust the time zone of the date and time values in the output events to match a specific location or requirement, rather than the default UTC. |
+| `--output-time-zone` | TIME_ZONE | time zone of date and time values written to the output, if supported by the output format. Use "list" to see a list of available time zones. Output formats that support an output time zone are: dynam | An analyst would use the --output-time-zone flag when they need to adjust the time zone of the date and time values in the output events to match a specific location or requirement, rather than the default UTC. |
 | `-o` | FORMAT | The output format. Use "-o list" to see a list of available output formats. | Output format — `l2tcsv`, `dynamic`, `json`, or a timeline tool. |
 | `--output_format` | FORMAT | The output format. Use "-o list" to see a list of available output formats. | Output format — `l2tcsv`, `dynamic`, `json`, or a timeline tool. |
 | `--output-format` | FORMAT | The output format. Use "-o list" to see a list of available output formats. | Output format — `l2tcsv`, `dynamic`, `json`, or a timeline tool. |

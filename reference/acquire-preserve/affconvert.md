@@ -6,7 +6,7 @@
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Image a disk, volume or device |
 | **Version** | affconvert version 3.7.20 |
-| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/affconvert.help.txt) |
+| **Captured from** | `cyberlab-aio` via `--help` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/affconvert.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 
@@ -24,6 +24,15 @@ When an analyst needs to convert files between RAW and AFF formats, they use aff
 
 ```
 affconvert [options] file1 [... files]
+```
+
+## Common invocations
+
+```
+# Convert between raw disk images and AFF files
+affconvert file1.raw
+# Convert between AFF and raw formats for data processing
+affconvert file1.raw file2.raw file3.raw
 ```
 
 ## Options

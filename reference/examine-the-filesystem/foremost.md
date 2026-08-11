@@ -6,7 +6,7 @@
 | **Kit** | Kali Linux · SIFT Workstation |
 | **Capability** | Carve files out of unstructured data; Extract files and payloads from traffic |
 | **Version** | 1.5.7 |
-| **Captured from** | `cyberlab-aio` via `-h` on 2026-08-10 — [raw help output](../../capture/cyberlab-aio/help/foremost.help.txt) |
+| **Captured from** | `cyberlab-aio` via `-h` on 2026-08-11 — [raw help output](../../capture/cyberlab-aio/help/foremost.help.txt) |
 
 [← Capability index](../INDEX.md) · [Kit tool list](../../catalog/KIT-TOOLS.md)
 

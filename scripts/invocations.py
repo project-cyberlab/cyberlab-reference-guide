@@ -293,6 +293,15 @@ def candidate_lines(text: str, tool: str,
             continue
         if PLACEHOLDER.search(line):
             continue
+        # Two or more bracketed groups is a synopsis listing what the tool
+        # accepts: `xortool [-x] [-m MAX-LEN] [-f] [-t CHARSET] [FILE]`.
+        #
+        # The all-placeholder rule misses this one because the groups split
+        # across whitespace -- "[-m" and "MAX-LEN]" are separate tokens and
+        # neither is a bracketed word. Counting the groups sees it whole. A
+        # real invocation carries at most one bracketed optional argument.
+        if len(re.findall(r"\[[^\]\n]{0,40}\]", line)) >= 2:
+            continue
         # A trailing shell comment, which cheat sheets use to caption their
         # own examples: `hashcat -m 100 hashes.txt wordlist.txt #SHA1`. The
         # caption is generated separately, so the comment is noise here --

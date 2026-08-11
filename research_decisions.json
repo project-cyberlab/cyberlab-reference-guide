@@ -1870,5 +1870,53 @@
   "rasm2 -D": {
     "verdict": "accept",
     "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "istat -f": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "istat -b": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "psort.py": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "psort.py --output-time-zone": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "psort.py --slicer": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "psort.py -a": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "psort.py --data": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "psort.py -d": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "hashcat -D": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "hashcat --session": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "hashcat --stdout": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
+  },
+  "hashcat -o": {
+    "verdict": "accept",
+    "why": "Reviewed by family. The psort set is coherent against its own workflow -- it follows log2timeline.py, --output-time-zone fixes the presentation, --slicer keeps context around a filter match, -a keeps duplicates, --data points at a non-default filter database. hashcat -D/-o/--session/--stdout are operational rather than setup, unlike --benchmark which was rejected. istat -b is the best of them: on a deleted directory inode reporting size 0, forcing block display is how the filenames are recovered."
   }
 }

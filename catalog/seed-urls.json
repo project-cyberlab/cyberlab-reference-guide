@@ -379,15 +379,20 @@
   ],
   "affcat": [
     "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
-    "https://www.kali.org/tools/afflib/"
+    "https://www.kali.org/tools/afflib/",
+    "https://www.manpagez.com/man/1/affinfo/"
   ],
   "affconvert": [
     "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
-    "https://www.kali.org/tools/afflib/"
+    "https://www.kali.org/tools/afflib/",
+    "https://www.manpagez.com/man/1/affinfo/",
+    "https://manpages.debian.org/testing/afflib-tools/affconvert.1.en.html",
+    "https://manpages.ubuntu.com/manpages/xenial/man1/affconvert.1.html"
   ],
   "affinfo": [
     "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
-    "https://www.kali.org/tools/afflib/"
+    "https://www.kali.org/tools/afflib/",
+    "https://www.manpagez.com/man/1/affinfo/"
   ],
   "affcompare": [
     "https://digitalcorpora.org/corpora/disk-images/format-conversion/",
@@ -498,7 +503,8 @@
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
     "https://isc.sans.edu/diary/24498",
     "https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7",
-    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf"
+    "https://zeltser.com/media/docs/analyzing-malicious-document-files.pdf",
+    "https://github.com/decalage2/oletools"
   ],
   "ezhexviewer": [
     "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
@@ -577,7 +583,8 @@
     "https://github.com/hellman/xortool/blob/master/README.md",
     "https://github.com/hellman/xortool",
     "https://www.aldeid.com/wiki/Xortool",
-    "https://www.doyler.net/security-not-included/basic-xortool-usage"
+    "https://www.doyler.net/security-not-included/basic-xortool-usage",
+    "https://docs.remnux.org/discover-the-tools/examine+static+properties/deobfuscation"
   ],
   "mraptor": [
     "https://github.com/decalage2/oletools/blob/master/oletools/doc/mraptor.md",
@@ -663,11 +670,14 @@
     "https://github.com/decalage2/oletools/wiki/pyxswf",
     "https://github.com/decalage2/oletools/blob/master/oletools/doc/pyxswf.md",
     "https://www.decalage.info/python/pyxswf",
-    "https://www.aldeid.com/wiki/Python-oletools/pyxswf"
+    "https://www.aldeid.com/wiki/Python-oletools/pyxswf",
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://www.kali.org/tools/oletools/"
   ],
   "xlmdeobfuscator": [
     "https://github.com/DissectMalware/XLMMacroDeobfuscator/blob/master/README.md",
-    "https://github.com/dissectmalware/xlmmacrodeobfuscator"
+    "https://github.com/dissectmalware/xlmmacrodeobfuscator",
+    "https://gist.github.com/JohnLaTwC/0f54ea5be52aacd19a2ef2d188a4e790"
   ],
   "olemeta": [
     "https://github.com/decalage2/oletools/wiki/olemeta",
@@ -840,5 +850,9 @@
     "https://commandmasters.com/commands/sha256sum-common/",
     "https://linuxize.com/post/sha256sum-and-md5sum-commands/",
     "https://linux.wiki/docs/commands/file-management/sha256sum/"
+  ],
+  "olebrowse": [
+    "https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office",
+    "https://www.kali.org/tools/oletools/"
   ]
 }
