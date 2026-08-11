@@ -30,16 +30,18 @@ rahash2 [-BehjkLqRrvX] [-b S] [-a A] [-c H] [-E A] [-s S] [-f O] [-t O] [file] .
 ## Common invocations
 
 ```
+# Encrypt string using rotation cipher with seed
+rahash2 -S 12333 -E ror -s hello
 # Verify file integrity by comparing CRC32 hash to expected value
 rahash2 -qqa crc32 /bin/ls 63212007
-# Encrypt string with rotation cipher and show output
-rahash2 -S 12333 -E ror -s hello
-# Compute and verify file hashes for integrity checks
+# Verify file integrity and encode data with plugins
 rahash2 -L
-# List loaded cryptographic plugins
+# List cryptographic plugins loaded
 rahash2 -L | grep ^c
-# Calculate multiple hash values for a file
+# Generate multiple hash values for a file's contents
 rahash2 -a all /bin/ls
+# Compute hash of file to verify integrity
+rahash2 -qqa md5 /bin/ls
 ```
 
 ## Options

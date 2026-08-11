@@ -25,18 +25,18 @@ rasm2 [-ACdDehHLBvw] [-a arch] [-b bits] [-s addr] [-S syntax]
 ## Common invocations
 
 ```
-# Assemble x86 assembly code into machine code bytes
+# Assemble x86 instruction into machine code bytes
 rasm2 -a x86 -b 32 'mov eax, 33'
-# Disassemble hex bytes into machine code instructions
+# Disassemble hex bytes into assembly instructions
 rasm2 -d 90
-# List plugins for supported architectures
+# List available architecture plugins for disassembly
 rasm2 -L
-# Disassemble machine code to human-readable assembly instructions
+# Convert between assembly instructions and hex representations
 rasm2 -a java 'nop'
-# Disassemble hex into readable assembly instructions
+# Disassemble hex bytes into assembly instructions
 rasm2 -a x86 -b 32 -d '90'
 # Disassemble machine code into assembly instructions
-rasm2 -d 90 See Also radare2(1) Authors pancake <pancake@nopcode.org> Referenced By radare2(1) . September 5, 2024 Home Blog About
+rasm2 -d 90
 ```
 
 ## Options

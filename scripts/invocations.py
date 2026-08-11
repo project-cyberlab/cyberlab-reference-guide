@@ -247,6 +247,14 @@ def candidate_lines(text: str, tool: str,
         # The colon after a capitalised word is the giveaway -- it is the
         # heading of the next example, not part of this one.
         line = re.sub(r"\s+[A-Z][a-z]+(?:\s+\w+){0,3}\s*:\s*$", "", line)
+        # A man page's own section headings, run into the command by the text
+        # extraction: "rasm2 -d 90 See Also radare2(1) Authors pancake
+        # <pancake@nopcode.org> Referenced By ...". Everything from the
+        # heading onward belongs to the page, not to the command.
+        line = re.split(r"\s+(?:See Also|Referenced By|Authors?|Copyright|"
+                        r"Reporting Bugs|Description|Synopsis|Options|"
+                        r"Examples?|Colophon|This page is part of)\b",
+                        line)[0].strip()
         # ...and shell noise the same extraction dragged along:
         #   rahash2 -S 12333 -E ror -s hello && echo Cell{
         line = re.split(r"\s+&&\s+echo\s", line)[0].strip()

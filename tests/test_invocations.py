@@ -90,6 +90,10 @@ REPAIR = [
     # this guide does the same with {{path/to/image.dd}}.
     ("ewfmount", "ewfmount image.E01 <folder>",
      "ewfmount image.E01 <folder>"),
+    # A man page's own section headings run into the command.
+    ("rasm2",
+     "rasm2 -d 90 See Also radare2(1) Authors pancake <p@nopcode.org>",
+     "rasm2 -d 90"),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),

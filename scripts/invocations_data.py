@@ -532,60 +532,65 @@ INVOCATIONS: dict[str, list[dict]] = {
     ],
     'rahash2': [
         {
+            'task': 'Encrypt string using rotation cipher with seed',
+            'cmd': 'rahash2 -S 12333 -E ror -s hello',
+            'src': 'https://github.com/radareorg/radare2/blob/master/man/rahash2.1',
+        },
+        {
             'task': 'Verify file integrity by comparing CRC32 hash to expected value',
             'cmd': 'rahash2 -qqa crc32 /bin/ls 63212007',
             'src': 'https://github.com/radareorg/radare2/blob/master/man/rahash2.1',
         },
         {
-            'task': 'Encrypt string with rotation cipher and show output',
-            'cmd': 'rahash2 -S 12333 -E ror -s hello',
-            'src': 'https://github.com/radareorg/radare2/blob/master/man/rahash2.1',
-        },
-        {
-            'task': 'Compute and verify file hashes for integrity checks',
+            'task': 'Verify file integrity and encode data with plugins',
             'cmd': 'rahash2 -L',
             'src': 'https://manpages.opensuse.org/Tumbleweed/radare2/rahash2.1.en.html',
         },
         {
-            'task': 'List loaded cryptographic plugins',
+            'task': 'List cryptographic plugins loaded',
             'cmd': 'rahash2 -L | grep ^c',
             'src': 'https://www.mankier.com/1/rahash2',
         },
         {
-            'task': 'Calculate multiple hash values for a file',
+            'task': "Generate multiple hash values for a file's contents",
             'cmd': 'rahash2 -a all /bin/ls',
             'src': 'https://book.rada.re/tools/rahash2/rahash_tool.html',
+        },
+        {
+            'task': 'Compute hash of file to verify integrity',
+            'cmd': 'rahash2 -qqa md5 /bin/ls',
+            'src': 'https://manpages.opensuse.org/Tumbleweed/radare2/rahash2.1.en.html',
         },
     ],
     'rasm2': [
         {
-            'task': 'Assemble x86 assembly code into machine code bytes',
+            'task': 'Assemble x86 instruction into machine code bytes',
             'cmd': "rasm2 -a x86 -b 32 'mov eax, 33'",
             'src': 'https://www.mankier.com/1/rasm2',
         },
         {
-            'task': 'Disassemble hex bytes into machine code instructions',
+            'task': 'Disassemble hex bytes into assembly instructions',
             'cmd': 'rasm2 -d 90',
             'src': 'https://manpages.ubuntu.com/manpages/bionic/man1/rasm2.1.html',
         },
         {
-            'task': 'List plugins for supported architectures',
+            'task': 'List available architecture plugins for disassembly',
             'cmd': 'rasm2 -L',
             'src': 'https://book.rada.re/tools/rasm2/intro.html',
         },
         {
-            'task': 'Disassemble machine code to human-readable assembly instructions',
+            'task': 'Convert between assembly instructions and hex representations',
             'cmd': "rasm2 -a java 'nop'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
         },
         {
-            'task': 'Disassemble hex into readable assembly instructions',
+            'task': 'Disassemble hex bytes into assembly instructions',
             'cmd': "rasm2 -a x86 -b 32 -d '90'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
         },
         {
             'task': 'Disassemble machine code into assembly instructions',
-            'cmd': 'rasm2 -d 90 See Also radare2(1) Authors pancake <pancake@nopcode.org> Referenced By radare2(1) . September 5, 2024 Home Blog About',
+            'cmd': 'rasm2 -d 90',
             'src': 'https://www.mankier.com/1/rasm2',
         },
     ],
