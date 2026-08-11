@@ -2011,6 +2011,10 @@ except Exception:
 # by hand -- rerun publish.py. Anything hand-written belongs in
 # ENRICHMENT above, which always wins over this block.
 RESEARCHED: dict[str, dict] = {
+    '7za': {
+        'scenario': 'An analyst reaches for 7za when needing to create or manipulate archives with precise control over case sensitivity, locked files, or exclusion of specific files, often running it after collecting digital evidence to securely compress and organize data. They may use switches like -ssc, -ssw, or -x! to tailor compression settings, preferring 7za over similar tools for its detailed command-line options that align with forensic requirements for accuracy and customization.',
+        'sources': ['https://thedeveloperblog.com/7-zip-examples', 'https://www.tecmint.com/7zip-command-examples-in-linux/'],
+    },
     'AmcacheParser': {
         'scenario': 'An analyst reaches for AmcacheParser after manually examining the AmCache hive with Registry Explorer or when needing structured CSV output for timeline analysis, as it automates extraction of AmCache data into a CSV file, which is more efficient than manual methods or RegRipper’s plugin-based reports. They may run it following the extraction of the Amcache.hve file and before analyzing results in Timeline Explorer, prioritizing its automation and compatibility with further analysis tools.',
         'sources': ['https://www.mennovanveenendaal.com/posts/The-Windows-AmCache-and-ShimCache-Artifacts/'],
@@ -2258,6 +2262,10 @@ RESEARCHED: dict[str, dict] = {
     'oletimes': {
         'scenario': 'When analyzing OLE files for timestamps, an analyst uses oletimes to extract creation and modification timestamps of all streams and storages, as it provides precise timing data crucial for forensic timelines.',
         'sources': ['https://decalage.info/python/oletools/', 'https://github.com/decalage2/oletools/wiki', 'https://github.com/decalage2/oletools/wiki/oleid'],
+    },
+    'openssl': {
+        'scenario': 'An analyst reaches for openssl when testing SSL/TLS connections to servers (e.g., using s_client to connect to ports like 993 or 995) or generating cryptographic digests (e.g., MD5 or SHA1) for file integrity checks. They may run these commands before verifying server configurations or after obtaining data for forensic analysis, as openssl provides direct command-line tools for these tasks without requiring additional software. They might prefer it over similar tools for its simplicity in quick tests or when specific functions like base64 encoding/decoding are needed.',
+        'sources': ['https://www.golinuxcloud.com/openssl-cheatsheet/', 'https://www.madboa.com/geek/openssl/'],
     },
     'pdfid': {
         'scenario': 'An analyst reaches for pdfid when triaging PDF documents to quickly identify potential threats, such as those containing JavaScript or obfuscation, before conducting deeper analysis with a parser; they may run it initially to screen files for suspicious content, preferring it over more complex parsers due to its simplicity and reduced risk of exploitation.',
@@ -2650,6 +2658,9 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-z': 'An analyst would use the -z flag when extracting OLE file entries from a password-protected ZIP archive to analyze its contents.',
     },
     'oledump.py': {
+        '--cut': "An analyst would use the --cut flag when they need to extract a specific section of a stream's content for focused analysis.",
+        '-f': 'An analyst would use the -f flag when examining files like AutoCAD .dwg files to locate embedded OLE objects such as VBA macros by scanning for the OLE MAGIC sequence (D0CF11E0).',
+        '-i': 'An analyst would use the -i flag when examining OLE files to display additional details about modules, such as their sizes and potential structure, aiding in the analysis of embedded components like VBA projects.',
         '-p': 'An analyst would use the -p flag when analyzing a malicious Office document to extract hidden data, such as URLs, by applying specific plugins like plugin_http_heuristics or plugin_dridex.',
     },
     'olevba': {

@@ -19,6 +19,15 @@ Use vshadowinfo to determine information about a Windows NT Volume Shadow
 vshadowinfo [ -o offset ] [ -ahvV ] source
 ```
 
+## Common invocations
+
+```
+# Display Volume Shadow Snapshot volume information
+vshadowinfo /dev/sda1
+# Extract shadow copy metadata from disk image
+vshadowinfo -o <partition_byte_offset> disk.raw
+```
+
 ## Options
 
 All 5 options parsed from the captured help text; 2 reviewed with usage guidance.

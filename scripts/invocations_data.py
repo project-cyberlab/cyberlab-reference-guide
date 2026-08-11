@@ -508,6 +508,30 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://docsislab.wordpress.com/packet-capture/wireshark-command-line/',
         },
     ],
+    'mraptor': [
+        {
+            'task': 'Analyze files for malicious macro content',
+            'cmd': 'mraptor file.doc',
+            'src': 'https://github.com/decalage2/oletools/blob/master/oletools/doc/mraptor.md',
+        },
+        {
+            'task': 'Scan zipped files for malicious macros',
+            'cmd': 'mraptor malicious_file.xls.zip -z infected',
+            'src': 'https://github.com/decalage2/oletools/blob/master/oletools/doc/mraptor.md',
+        },
+    ],
+    'msodde': [
+        {
+            'task': 'Detect malicious content in OLE documents',
+            'cmd': 'msodde file.doc',
+            'src': 'https://github.com/decalage2/oletools/wiki/msodde',
+        },
+        {
+            'task': 'Extract all fields from a Word document for analysis',
+            'cmd': 'msodde -a file.doc',
+            'src': 'https://github.com/decalage2/oletools/wiki/msodde',
+        },
+    ],
     'ngrep': [
         {
             'task': 'Monitor SMTP traffic across all network interfaces',
@@ -821,6 +845,33 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://hacktricks.wiki/en/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.html',
         },
     ],
+    'sha256sum': [
+        {
+            'task': 'Compute SHA256 hashes for multiple image files',
+            'cmd': 'sha256sum *.jpg',
+            'src': 'https://cheatdocs.org/sha256sum/',
+        },
+        {
+            'task': 'Verify file integrity using SHA256 checksums',
+            'cmd': 'sha256sum -c checksums.sha256',
+            'src': 'https://cheatdocs.org/sha256sum/',
+        },
+        {
+            'task': 'Create checksum file for integrity verification',
+            'cmd': 'sha256sum file.zip > checksums.sha256',
+            'src': 'https://cheatdocs.org/sha256sum/',
+        },
+        {
+            'task': 'Verify files match checksums',
+            'cmd': 'sha256sum -c checksums.sha256 --quiet',
+            'src': 'https://cheatdocs.org/sha256sum/',
+        },
+        {
+            'task': 'Verify files match checksums for integrity',
+            'cmd': 'sha256sum -c checksums.sha256 --status',
+            'src': 'https://cheatdocs.org/sha256sum/',
+        },
+    ],
     'ssdeep': [
         {
             'task': 'Generate file hashes recursively for directory tree',
@@ -938,6 +989,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Recover deleted files from disk image',
             'cmd': 'tsk_recover image.dd output_dir/',
             'src': 'https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/',
+        },
+    ],
+    'vshadowinfo': [
+        {
+            'task': 'Display Volume Shadow Snapshot volume information',
+            'cmd': 'vshadowinfo /dev/sda1',
+            'src': 'https://manpages.debian.org/testing/libvshadow-utils/vshadowinfo.1.en.html',
+        },
+        {
+            'task': 'Extract shadow copy metadata from disk image',
+            'cmd': 'vshadowinfo -o <partition_byte_offset> disk.raw',
+            'src': 'https://github.com/project-dfir/dfir-lab/blob/main/module-24-anti-forensics-vss/README.md',
         },
     ],
     'xxd': [

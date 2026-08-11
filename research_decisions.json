@@ -1798,5 +1798,33 @@
   "scalpel -b": {
     "verdict": "accept",
     "why": "Correct, and it lands where it belongs. This is the same semantic that was rejected as foremost -b in an earlier round -- carve even when no footer is found within the maximum carve size -- which was scalpel s behaviour read off a scalpel synopsis while researching foremost. option_owner caught it there; here it is on the right tool with a scalpel citation."
+  },
+  "hashcat --remove": {
+    "verdict": "reject",
+    "why": "Describes a defect rather than a use. The trigger given is \"when using legacy hashcat\", which is not a property of the case, and the sentence ends by saying the flag may not work -- the hash remaining in the list despite being cracked. The real scenario is straightforward: on a long run against a large hash file, --remove keeps the file shrinking so what is left is what is still outstanding. Re-research for that."
+  },
+  "7za": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The oledump.py set is specific and useful -- -f scans a non-OLE container such as a .dwg for the D0CF11E0 magic, -i reports module sizes, --cut extracts part of a stream. openssl names real triggers (s_client against 993/995, digests for integrity) rather than describing the toolkit."
+  },
+  "capa --verbose": {
+    "verdict": "reject",
+    "why": "Restates the flag rather than saying when to reach for it: \"enable verbose result documents to obtain more detailed analysis output\". That is the definition with \"when you need to\" in front of it, which is the exact defect this column exists to remove."
+  },
+  "oledump.py -f": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The oledump.py set is specific and useful -- -f scans a non-OLE container such as a .dwg for the D0CF11E0 magic, -i reports module sizes, --cut extracts part of a stream. openssl names real triggers (s_client against 993/995, digests for integrity) rather than describing the toolkit."
+  },
+  "oledump.py -i": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The oledump.py set is specific and useful -- -f scans a non-OLE container such as a .dwg for the D0CF11E0 magic, -i reports module sizes, --cut extracts part of a stream. openssl names real triggers (s_client against 993/995, digests for integrity) rather than describing the toolkit."
+  },
+  "oledump.py --cut": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The oledump.py set is specific and useful -- -f scans a non-OLE container such as a .dwg for the D0CF11E0 magic, -i reports module sizes, --cut extracts part of a stream. openssl names real triggers (s_client against 993/995, digests for integrity) rather than describing the toolkit."
+  },
+  "openssl": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The oledump.py set is specific and useful -- -f scans a non-OLE container such as a .dwg for the D0CF11E0 magic, -i reports module sizes, --cut extracts part of a stream. openssl names real triggers (s_client against 993/995, digests for integrity) rather than describing the toolkit."
   }
 }

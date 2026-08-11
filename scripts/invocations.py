@@ -282,6 +282,13 @@ def candidate_lines(text: str, tool: str,
         if len(line.split()) < 2:
             continue
 
+        # "msodde : to detect and extract DDE/DDEAUTO links from MS Office
+        # documents, RTF and CSV" -- a tool listing, where the colon
+        # separates the name from its description. A colon straight after
+        # the tool name is never an argument.
+        if re.match(re.escape(tool) + r"(?:\.\w+)?\s*:", line):
+            continue
+
         if SELF.match(line) or SYNOPSIS.search(line) or TITLE.search(line):
             continue
         if PLACEHOLDER.search(line):

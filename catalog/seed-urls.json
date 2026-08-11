@@ -154,7 +154,8 @@
   "esedbexport": [
     "https://github.com/4k4xs4pH1r3/libesedb-utils/blob/master/libesedb.md",
     "https://github.com/libyal/libesedb/blob/main/esedbtools/esedbexport.c",
-    "https://github.com/security-dockerfiles/esedbexport"
+    "https://github.com/security-dockerfiles/esedbexport",
+    "https://github.com/frankwxu/digital-forensics-lab"
   ],
   "esedbinfo": [
     "https://github.com/4k4xs4pH1r3/libesedb-utils/blob/master/libesedb.md",
@@ -589,7 +590,8 @@
     "https://github.com/libyal/libvshadow/blob/main/manuals/vshadowinfo.1",
     "https://manpages.debian.org/testing/libvshadow-utils/vshadowinfo.1.en.html",
     "https://manpages.ubuntu.com/manpages/bionic/man1/vshadowinfo.1.html",
-    "https://bromiley.medium.com/windows-wednesday-volume-shadow-copies-d20b60997c22"
+    "https://bromiley.medium.com/windows-wednesday-volume-shadow-copies-d20b60997c22",
+    "https://github.com/frankwxu/digital-forensics-lab"
   ],
   "rafind2": [
     "https://book.rada.re/tools/rafind2/intro.html",
@@ -815,5 +817,11 @@
     "https://05t3.github.io/posts/Data-Carving/",
     "https://hacktricks.wiki/en/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.html",
     "https://cybervie.com/file-carving-in-digital-forensics-best-tools-for-it/"
+  ],
+  "sha256sum": [
+    "https://cheatdocs.org/sha256sum/",
+    "https://commandmasters.com/commands/sha256sum-common/",
+    "https://linuxize.com/post/sha256sum-and-md5sum-commands/",
+    "https://linux.wiki/docs/commands/file-management/sha256sum/"
   ]
 }

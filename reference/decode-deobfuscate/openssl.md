@@ -13,6 +13,12 @@
 
 The general-purpose crypto toolkit: inspect certificates, compute digests, encrypt and decrypt, and speak TLS to a service. In analysis it is most often used to read a certificate a sample presented, or to decrypt a blob once the key is known.
 
+## When you'd reach for this
+
+An analyst reaches for openssl when testing SSL/TLS connections to servers (e.g., using s_client to connect to ports like 993 or 995) or generating cryptographic digests (e.g., MD5 or SHA1) for file integrity checks. They may run these commands before verifying server configurations or after obtaining data for forensic analysis, as openssl provides direct command-line tools for these tasks without requiring additional software. They might prefer it over similar tools for its simplicity in quick tests or when specific functions like base64 encoding/decoding are needed.
+
+**Sources:** <https://www.golinuxcloud.com/openssl-cheatsheet/> · <https://www.madboa.com/geek/openssl/>
+
 ## Common invocations
 
 ```

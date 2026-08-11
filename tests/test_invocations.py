@@ -81,6 +81,9 @@ DROP = [
     # names a real file and generalises one argument.
     ("olemeta", "olemeta <file>"),
     ("hydra", "hydra [ options ] <target> <service>"),
+    # A tool listing, where the colon separates name from description.
+    ("msodde",
+     "msodde : to detect and extract DDE links from MS Office documents"),
     ("xxd", "xxd -s seek ,"),
     # A line continuation: the command is cut off, and half a command that
     # looks whole is worse than none.

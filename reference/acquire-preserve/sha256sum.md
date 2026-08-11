@@ -26,6 +26,21 @@ An analyst uses sha256sum to verify file integrity after detecting content chang
 sha256sum [OPTION]... [FILE]...
 ```
 
+## Common invocations
+
+```
+# Compute SHA256 hashes for multiple image files
+sha256sum *.jpg
+# Verify file integrity using SHA256 checksums
+sha256sum -c checksums.sha256
+# Create checksum file for integrity verification
+sha256sum file.zip > checksums.sha256
+# Verify files match checksums
+sha256sum -c checksums.sha256 --quiet
+# Verify files match checksums for integrity
+sha256sum -c checksums.sha256 --status
+```
+
 ## Options
 
 All 17 options parsed from the captured help text. The final column is filled in by review.
