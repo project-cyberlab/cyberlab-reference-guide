@@ -646,6 +646,18 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://github.com/decalage2/oletools/wiki/msodde',
         },
     ],
+    'msoffcrypto-tool': [
+        {
+            'task': 'Check encryption status of document',
+            'cmd': 'msoffcrypto-tool document.doc --test -v',
+            'src': 'https://github.com/nolze/msoffcrypto-tool',
+        },
+        {
+            'task': 'Decrypt encrypted MS Office document with password',
+            'cmd': 'msoffcrypto-tool encrypted.docx decrypted.docx -p Passw0rd',
+            'src': 'https://github.com/nolze/msoffcrypto-tool',
+        },
+    ],
     'ngrep': [
         {
             'task': 'Monitor SMTP traffic across all network interfaces',
@@ -918,6 +930,38 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Disassemble hex bytes into assembly instructions',
             'cmd': "rasm2 -a x86 -b 32 -d '90'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
+        },
+    ],
+    'rax2': [
+        {
+            'task': 'Convert between number bases and encode/decode data',
+            'cmd': 'rax2 -E < /bin/ls > ls.b64',
+            'src': 'https://www.mankier.com/1/rax2',
+        },
+        {
+            'task': 'Convert data between numeric, hex, string, and base64 formats',
+            'cmd': 'rax2 -S AB',
+            'src': 'https://book.rada.re/tools/rax2/intro.html',
+        },
+        {
+            'task': 'Convert numeric values between endianness representations',
+            'cmd': 'rax2 -e 33',
+            'src': 'https://book.rada.re/tools/rax2/intro.html',
+        },
+        {
+            'task': 'Convert hexadecimal string to ASCII characters',
+            'cmd': 'rax2 -s 4142',
+            'src': 'https://book.rada.re/tools/rax2/intro.html',
+        },
+        {
+            'task': 'Convert between numeric, hex, string, and binary formats',
+            'cmd': 'rax2 -d "1<<8"',
+            'src': 'https://book.rada.re/tools/rax2/intro.html',
+        },
+        {
+            'task': 'Generate visual representation of key fingerprint for analysis',
+            'cmd': 'rax2 -K 90203010',
+            'src': 'https://book.rada.re/tools/rax2/intro.html',
         },
     ],
     'readelf': [

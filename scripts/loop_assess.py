@@ -66,6 +66,12 @@ DISPROVEN = """- A minimum passage-score threshold (4.7, 5.0, or any value). Pas
 - Relaxing the grounding threshold below 45%. The problem there was never the
   threshold; the measurement was counting plurals as ungrounded, and stemming
   fixed it.
+- Rejecting an extracted command that ENDS in a flag the captured help shows
+  taking a value, to catch truncations like "msoffcrypto-tool a.docx b.docx
+  -p". Measured over 227 stored invocations: 4 fire and 3 are false --
+  "freshclam --datadir=." already carries its value inline, and 7za -ssc and
+  xxd -r take none but match the help-line pattern. One real catch at a 3:1
+  false rate is worse than removing that record by hand.
 - Checking a flag note against the tool's own help line for that flag, to
   catch notes that describe the wrong BEHAVIOUR. Measured over 371 accepted
   flag notes: the median overlap is 0.33 and 88 accepted notes score exactly

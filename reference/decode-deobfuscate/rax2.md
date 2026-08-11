@@ -26,6 +26,23 @@ hex        ->  int              ;  rax2 0xa
 int        ->  bin              ;  rax2 b30
 ```
 
+## Common invocations
+
+```
+# Convert between number bases and encode/decode data
+rax2 -E < /bin/ls > ls.b64
+# Convert data between numeric, hex, string, and base64 formats
+rax2 -S AB
+# Convert numeric values between endianness representations
+rax2 -e 33
+# Convert hexadecimal string to ASCII characters
+rax2 -s 4142
+# Convert between numeric, hex, string, and binary formats
+rax2 -d "1<<8"
+# Generate visual representation of key fingerprint for analysis
+rax2 -K 90203010
+```
+
 ## Options
 
 All 30 options parsed from the captured help text; 8 reviewed with usage guidance.
