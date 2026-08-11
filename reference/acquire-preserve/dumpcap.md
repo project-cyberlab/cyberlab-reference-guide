@@ -16,9 +16,9 @@ Capture packets to a file. It does nothing else — which is the point.
 
 ## When you'd reach for this
 
-An analyst reaches for dumpcap when capturing live network traffic with specific conditions like duration, file size, or packet count, often using options like -a or -b to automate stopping or file rotation; they may run it alongside tshark for analysis or use capinfos afterward to inspect capture files, preferring it over similar tools for its dedicated capture capabilities and precise control over capture parameters.
+An analyst reaches for dumpcap when capturing network traffic for later analysis with tools like Wireshark, particularly when setting up automated monitoring or managing long-term data collection; they may run it before using Wireshark to process the captured .pcapng files, as it efficiently manages storage via ring buffers, overwriting old data to prevent disk overflow, which makes it preferable over tools lacking similar automated file management features.
 
-**Sources:** <https://docsislab.wordpress.com/packet-capture/wireshark-command-line/> · <https://www.wireshark.org/docs/man-pages/dumpcap.html>
+**Sources:** <https://commandmasters.com/commands/dumpcap-common/> · <https://www.wireshark.org/docs/man-pages/dumpcap.html>
 
 ## Synopsis
 
@@ -41,12 +41,12 @@ dumpcap --interface 1 -w path/to/output_file.pcapng --ring-buffer filesize:50000
 
 ## Options
 
-All 48 options parsed from the captured help text; 20 reviewed with usage guidance.
+All 48 options parsed from the captured help text; 22 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-i` | interface | name or idx of interface (def: first non-loopback), or for remote capturing, use one of these formats: rpcap://<host>/<interface> TCP@<host>:<port> | Interface to capture from. `-D` lists what is available. |
-| `--interface` | interface | name or idx of interface (def: first non-loopback), or for remote capturing, use one of these formats: rpcap://<host>/<interface> TCP@<host>:<port> | Interface to capture from. `-D` lists what is available. |
+| `--interface` | interface | name or idx of interface (def: first non-loopback), or for remote capturing, use one of these formats: rpcap://<host>/<interface> TCP@<host>:<port> | An analyst would use the --interface flag when setting up automated network monitoring or isolating traffic on a specific interface in a multi-interface environment to ensure accurate data capture and efficient storage management. |
 | `--ifname` | name | name to use in the capture file for a pipe from which we're capturing |  |
 | `--ifdescr` | description | description to use in the capture file for a pipe from which we're capturing |  |
 | `-f` | capture filter | packet filter in libpcap filter syntax | Capture filter in BPF syntax. Applied before writing, so anything it excludes is gone permanently. |
@@ -61,7 +61,7 @@ All 48 options parsed from the captured help text; 20 reviewed with usage guidan
 | `-y` | link type | link layer type (def: first appropriate) | Force the link-layer type. |
 | `--linktype` | link type | link layer type (def: first appropriate) | Force the link-layer type. |
 | `-D` | — | print list of interfaces and exit | List interfaces and exit. |
-| `--list-interfaces` | — | print list of interfaces and exit | List interfaces and exit. |
+| `--list-interfaces` | — | print list of interfaces and exit | An analyst would use the --list-interfaces flag when identifying available network interfaces on a system before starting a packet capture, particularly on devices with multiple interfaces like a laptop connected via Ethernet and Wi-Fi. |
 | `-L` | — | print list of link-layer types of iface and exit | List link-layer types for the chosen interface. |
 | `--list-data-link-types` | — | print list of link-layer types of iface and exit | List link-layer types for the chosen interface. |
 | `--list-time-stamp-types` | — | print list of timestamp types for iface and exit |  |

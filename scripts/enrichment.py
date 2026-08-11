@@ -2124,8 +2124,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://www.forensicfocus.com/articles/linux-dd-basics/'],
     },
     'dumpcap': {
-        'scenario': 'An analyst reaches for dumpcap when capturing live network traffic with specific conditions like duration, file size, or packet count, often using options like -a or -b to automate stopping or file rotation; they may run it alongside tshark for analysis or use capinfos afterward to inspect capture files, preferring it over similar tools for its dedicated capture capabilities and precise control over capture parameters.',
-        'sources': ['https://docsislab.wordpress.com/packet-capture/wireshark-command-line/', 'https://www.wireshark.org/docs/man-pages/dumpcap.html'],
+        'scenario': 'An analyst reaches for dumpcap when capturing network traffic for later analysis with tools like Wireshark, particularly when setting up automated monitoring or managing long-term data collection; they may run it before using Wireshark to process the captured .pcapng files, as it efficiently manages storage via ring buffers, overwriting old data to prevent disk overflow, which makes it preferable over tools lacking similar automated file management features.',
+        'sources': ['https://commandmasters.com/commands/dumpcap-common/', 'https://www.wireshark.org/docs/man-pages/dumpcap.html'],
     },
     'editcap': {
         'scenario': "An analyst reaches for editcap when they need to remove duplicate packets or split a capture file into smaller segments, often running capinfos first to assess the file's structure, as it directly handles format editing and packet manipulation tasks that other tools like mergecap or tshark do not explicitly address.",
@@ -2351,6 +2351,10 @@ RESEARCHED: dict[str, dict] = {
         'scenario': 'An analyst reaches for rip.pl when parsing Windows registry hives to extract forensic artifacts, often after extracting the hive files from a disk image or memory dump, and may list plugins first with perl rip.pl -l to determine which analysis to perform; they choose it because it is pre-installed on the SIFT workstation and supports a large number of plugins for detailed registry analysis.',
         'sources': ['https://fwhibbit.es/en/windows-registry-prepare-the-coffeemaker', 'https://linuxconfig.org/how-to-install-regripper-registry-data-extraction-tool-on-linux', 'https://www.sans.org/blog/regripper-ripping-registries-with-ease'],
     },
+    'rtfobj': {
+        'scenario': 'An analyst reaches for rtfobj when examining RTF files to extract embedded objects, as the tool is specifically designed for this purpose, distinguishing it from similar tools like oleobj, which handles OLE files. They may use it after initial file triage or alongside other oletools to analyze potential malicious content within RTF documents.',
+        'sources': ['https://github.com/decalage2/oletools/wiki', 'https://github.com/decalage2/oletools/wiki/oleid', 'https://github.com/decalage2/oletools/wiki/olevba'],
+    },
     'scalpel': {
         'scenario': 'When an analyst needs to recover files from a disk image or raw device without relying on filesystem structure, they use Scalpel after imaging the drive, as it is filesystem-independent and can extract files from multiple formats. They may choose it over similar tools like Foremost because it is a faster, rewritten version designed for both digital forensics and file recovery.',
         'sources': ['https://www.kali.org/tools/scalpel/'],
@@ -2499,6 +2503,8 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'dumpcap': {
         '--autostop': 'An analyst would use the --autostop flag when they need to automatically halt packet capture after a specified duration, upon reaching a certain number of files, or when a capture file reaches a defined size limit.',
+        '--interface': 'An analyst would use the --interface flag when setting up automated network monitoring or isolating traffic on a specific interface in a multi-interface environment to ensure accurate data capture and efficient storage management.',
+        '--list-interfaces': 'An analyst would use the --list-interfaces flag when identifying available network interfaces on a system before starting a packet capture, particularly on devices with multiple interfaces like a laptop connected via Ethernet and Wi-Fi.',
         '-w': 'An analyst would use the -w flag when capturing network traffic to disk for later analysis, particularly when managing large volumes of data through ring buffers, size-based file rotation, or time-based segmentation to ensure efficient storage and focused investigation.',
     },
     'esedbexport': {
@@ -2581,6 +2587,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'hashcat': {
         '--custom-charset1': 'An analyst would use the --custom-charset1 flag when defining a custom character set (e.g., ?l?d) to reference in a mask with ?1, such as in a hashcat mask file line like "?l?d,?l?l?l?l?1" to specify a combination of lowercase letters and digits for password cracking.',
+        '--hwmon-temp-abort': 'An analyst would use the --hwmon-temp-abort flag when cracking hashes on a GPU to automatically abort the process if the GPU temperature reaches 90°C, preventing overheating.',
         '--outfile-format': 'An analyst would use the --outfile-format flag when they need to specify a custom output format for cracked hashes, such as saving results in plain text instead of the default hash[:salt] format.',
         '--session': 'An analyst would use the --session flag when resuming an interrupted hashcat session to continue cracking from the last checkpointed position.',
         '--show': 'An analyst would use the --show flag to display previously cracked hashes stored in the potfile when verifying results or avoiding redundant cracking efforts.',
@@ -2722,6 +2729,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     'psort.py': {
         '--data': 'An analyst would use the --data flag when they need to specify a custom location for filter files or databases, such as when using a non-default winevt-rc.db file.',
         '--output-time-zone': 'An analyst would use the --output-time-zone flag when they need to adjust the time zone of the date and time values in the output events to match a specific location or requirement, rather than the default UTC.',
+        '--slice': 'An analyst would use the --slice flag when examining events around a specific timestamp of interest, such as to investigate activity occurring near a known incident time.',
         '--slicer': 'An analyst would use the --slicer flag when filtering specific events but also needing to include surrounding context to better understand the timeline or related activities.',
         '-a': 'An analyst would use the -a flag when processing a storage media file or VSS store where duplicate entries need to be preserved for comprehensive analysis.',
         '-d': 'An analyst would use the -d flag when psort encounters an unexpected exception during runtime to debug the issue by printing the traceback and dropping into pdb.',

@@ -45,7 +45,7 @@ hashcat -b
 
 ## Options
 
-All 143 options parsed from the captured help text; 14 reviewed with usage guidance.
+All 143 options parsed from the captured help text; 15 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -148,7 +148,7 @@ All 143 options parsed from the captured help text; 14 reviewed with usage guida
 | `--backend-vector-width` | — | \| Num \| Manually override backend vector-width to X \| --backend-vector=4 |  |
 | `--spin-damp` | — | \| Num \| Use CPU for device synchronization, in percent \| --spin-damp=10 |  |
 | `--hwmon-disable` | — | \| \| Disable temperature and fanspeed reads and triggers \| |  |
-| `--hwmon-temp-abort` | — | \| Num \| Abort if temperature reaches X degrees Celsius \| --hwmon-temp-abort=100 |  |
+| `--hwmon-temp-abort` | — | \| Num \| Abort if temperature reaches X degrees Celsius \| --hwmon-temp-abort=100 | An analyst would use the --hwmon-temp-abort flag when cracking hashes on a GPU to automatically abort the process if the GPU temperature reaches 90°C, preventing overheating. |
 | `--scrypt-tmto` | — | \| Num \| Manually override TMTO value for scrypt to X \| --scrypt-tmto=3 |  |
 | `-s` | — | \| Num \| Skip X words from the start \| -s 1000000 |  |
 | `--skip` | — | \| Num \| Skip X words from the start \| -s 1000000 |  |

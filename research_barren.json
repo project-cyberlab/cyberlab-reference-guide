@@ -6,10 +6,10 @@
     "seeds": 0
   },
   "ezhexviewer": {
-    "attempts": 85,
+    "attempts": 91,
     "eligible": true,
-    "fp": "61fd65f11c39",
-    "seeds": 4
+    "fp": "89addc8d6869",
+    "seeds": 1
   },
   "numbers-to-string.py": {
     "attempts": 85,

@@ -661,6 +661,45 @@ _NOT_WORTH_IT = {"--help", "-h", "--version", "-V", "--usage", "-?"}
 # exclusion does not get added again on instinct.
 
 
+# A short and long spelling declared together on one help line:
+#     -c, --check              read checksums from the FILEs and check them
+#     -i <interface>, --interface <interface>
+#     -D, --list-interfaces    print list of interfaces and exit
+#
+# Sharing a line is the tool's own statement that these are one option --
+# stronger evidence than two entries that happen to have the same wording.
+_PAIR = re.compile(r"(?<![\w-])(-[A-Za-z])\b[^,\n]{0,20},\s*(--[\w-]+)")
+
+
+def _twin(tool: str, flag: str) -> str | None:
+    """The other spelling of this option, if the help declares one."""
+    txt = _help_text(tool)
+    for m in _PAIR.finditer(txt):
+        short, long = m.group(1), m.group(2)
+        if flag == short:
+            return long
+        if flag == long:
+            return short
+    return None
+
+
+def _help_text(tool: str) -> str:
+    try:
+        cov = json.loads((ROOT / "capture" / "coverage.json")
+                         .read_text(encoding="utf-8"))
+    except Exception:
+        return ""
+    meta = cov["documented"].get(tool)
+    if not meta:
+        return ""
+    safe = re.sub(r"[^A-Za-z0-9._-]", "_", tool)
+    for name in (f"{tool}.help.txt", f"{safe}.help.txt"):
+        p = ROOT / "capture" / meta["image"] / "help" / name
+        if p.exists():
+            return p.read_text(encoding="utf-8", errors="replace")
+    return ""
+
+
 def rank_flags(tool: str, limit: int) -> list[str]:
     """The flags worth researching, most-used first.
 
@@ -695,6 +734,26 @@ def rank_flags(tool: str, limit: int) -> list[str]:
         answered = set((ENRICHMENT.get(tool) or {}).get("when", {}))
     except Exception:
         answered = set()
+
+    # ...and flags whose TWIN already has one.
+    #
+    # generate_pages mirrors guidance across a short and long spelling that
+    # share an identical captured description, because they are one option
+    # and whichever spelling a reader looks up should give them an answer.
+    # rank_flags could not see that -- the mirroring happens at render time
+    # -- so it kept researching --check while -c was answered and the row was
+    # already filled. sha256sum -c was one such attempt, published nothing
+    # new, and had to be rejected as redundant rather than wrong.
+    #
+    # Measured before adopting: the captured help holds 655 short/long pairs;
+    # 118 of 991 answered options have both spellings answered, and 49 of 706
+    # recorded flag attempts went to an option whose twin was already done.
+    # That is 7% of the flag budget spent on questions with an answer.
+    #
+    # This excludes on the basis of a MEASUREMENT -- does this option already
+    # have an answer -- not a judgement about whether a note is any good, so
+    # it cannot over-reject the way the classifiers in DISPROVEN did.
+    answered |= {t for f in answered if (t := _twin(tool, f))}
     real = real - answered
     corpus = sources.corpus_for(tool)
     text = " ".join(p["text"] for p in corpus)

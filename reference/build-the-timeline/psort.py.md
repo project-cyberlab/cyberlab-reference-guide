@@ -50,7 +50,7 @@ psort.py -w test.log timeline.plaso
 
 ## Options
 
-All 59 options parsed from the captured help text; 9 reviewed with usage guidance.
+All 59 options parsed from the captured help text; 10 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -83,7 +83,7 @@ All 59 options parsed from the captured help text; 9 reviewed with usage guidanc
 | `--status-view-file` | PATH | The name of the status view file. |  |
 | `--status_view_interval` | SECONDS | Number of seconds to update the status view. |  |
 | `--status-view-interval` | SECONDS | Number of seconds to update the status view. |  |
-| `--slice` | DATE_TIME | Date and time to create a time slice around. This parameter, if defined, will display all events that happened X minutes before and after the defined date, where X is controlled by the --slice_size op |  |
+| `--slice` | DATE_TIME | Date and time to create a time slice around. This parameter, if defined, will display all events that happened X minutes before and after the defined date, where X is controlled by the --slice_size op | An analyst would use the --slice flag when examining events around a specific timestamp of interest, such as to investigate activity occurring near a known incident time. |
 | `--slice_size` | SLICE_SIZE | Defines the slice size. In the case of a regular time slice it defines the number of minutes the slice size should be. In the case of the --slicer it determines the number of events before and after a |  |
 | `--slice-size` | SLICE_SIZE | Defines the slice size. In the case of a regular time slice it defines the number of minutes the slice size should be. In the case of the --slicer it determines the number of events before and after a |  |
 | `--slicer` | — | Create a time slice around every filter match. This parameter, if defined will save all X events before and after a filter match has been made. X is defined by the --slice_size parameter. | An analyst would use the --slicer flag when filtering specific events but also needing to include surrounding context to better understand the timeline or related activities. |

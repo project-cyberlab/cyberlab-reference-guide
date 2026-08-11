@@ -2118,5 +2118,25 @@
   "strings --bytes": {
     "verdict": "accept",
     "why": "Each matched to its captured help line. readelf --symbols \"An alias for --syms\", --arch-specific \"Display architecture specific information\"; sha256sum --quiet \"don t print OK for each successfully verified file\", --ignore-missing \"don t fail or report status for missing files\", --tag \"create a BSD-style checksum\"; strings --all \"Scan the entire file, not just the data section\", --bytes minimum length with a default of 4. All fill rows that were empty rather than duplicating a twin."
+  },
+  "rtfobj": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line: psort.py --slice \"[--slice DATE_TIME]\", dumpcap --interface \"-i <interface>\" and --list-interfaces \"print list of interfaces and exit\", hashcat --hwmon-temp-abort \"Abort if temperature reaches X degrees Celsius\". rtfobj opens with a tautology -- designed for this purpose -- but earns its place on the discriminator that follows: RTF rather than OLE, which is the choice against oleobj a reader actually faces."
+  },
+  "psort.py --slice": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line: psort.py --slice \"[--slice DATE_TIME]\", dumpcap --interface \"-i <interface>\" and --list-interfaces \"print list of interfaces and exit\", hashcat --hwmon-temp-abort \"Abort if temperature reaches X degrees Celsius\". rtfobj opens with a tautology -- designed for this purpose -- but earns its place on the discriminator that follows: RTF rather than OLE, which is the choice against oleobj a reader actually faces."
+  },
+  "dumpcap --interface": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line: psort.py --slice \"[--slice DATE_TIME]\", dumpcap --interface \"-i <interface>\" and --list-interfaces \"print list of interfaces and exit\", hashcat --hwmon-temp-abort \"Abort if temperature reaches X degrees Celsius\". rtfobj opens with a tautology -- designed for this purpose -- but earns its place on the discriminator that follows: RTF rather than OLE, which is the choice against oleobj a reader actually faces."
+  },
+  "dumpcap --list-interfaces": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line: psort.py --slice \"[--slice DATE_TIME]\", dumpcap --interface \"-i <interface>\" and --list-interfaces \"print list of interfaces and exit\", hashcat --hwmon-temp-abort \"Abort if temperature reaches X degrees Celsius\". rtfobj opens with a tautology -- designed for this purpose -- but earns its place on the discriminator that follows: RTF rather than OLE, which is the choice against oleobj a reader actually faces."
+  },
+  "hashcat --hwmon-temp-abort": {
+    "verdict": "accept",
+    "why": "Each matched to its captured help line: psort.py --slice \"[--slice DATE_TIME]\", dumpcap --interface \"-i <interface>\" and --list-interfaces \"print list of interfaces and exit\", hashcat --hwmon-temp-abort \"Abort if temperature reaches X degrees Celsius\". rtfobj opens with a tautology -- designed for this purpose -- but earns its place on the discriminator that follows: RTF rather than OLE, which is the choice against oleobj a reader actually faces."
   }
 }
