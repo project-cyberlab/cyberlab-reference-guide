@@ -29,6 +29,8 @@ KEEP = [
     ("dd", "dd if=/dev/zero of=/dev/hda bs=4K conv=noerror,sync"),
     ("dcfldd", 'dcfldd pattern="00FFAACC" of=/dev/sda'),
     ("md5sum", "md5sum -c files.md5"),
+    # A # with no space before it is part of the filename, not a comment.
+    ("pdf-parser", "pdf-parser.py -o 16 Project#1542292355.pdf"),
 ]
 
 DROP = [
@@ -114,6 +116,8 @@ REPAIR = [
     # the command.
     ("hashcat", "hashcat -m 100 hashes.txt wordlist.txt #SHA1",
      "hashcat -m 100 hashes.txt wordlist.txt"),
+    ("EvtxECmd", "EvtxECmd.exe --sync # update 700+ community maps first",
+     "EvtxECmd.exe --sync"),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),

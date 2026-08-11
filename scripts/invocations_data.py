@@ -30,6 +30,51 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://www.tecmint.com/7zip-command-examples-in-linux/',
         },
     ],
+    'AmcacheParser': [
+        {
+            'task': 'Extract execution data and SHA1 hashes from Amcache.hve for analysis',
+            'cmd': 'AmcacheParser.exe -f "<EV>\\Windows\\AppCompat\\Programs\\Amcache.hve" -i --csv "<OUT>\\Amcache" --csvf amcache.csv',
+            'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
+        },
+        {
+            'task': 'Extract application data from Amcache hive with whitelist filtering',
+            'cmd': 'AmcacheParser.exe -f "C:\\Temp\\amcache\\AmcacheWin10.hve" -w "c:\\temp\\whitelist.txt" --csv C:\\temp',
+            'src': 'https://github.com/EricZimmerman/AmcacheParser',
+        },
+    ],
+    'AppCompatCacheParser': [
+        {
+            'task': 'Extract ShimCache entries from SYSTEM hive for analysis',
+            'cmd': 'AppCompatCacheParser.exe -f "<EV>\\Windows\\System32\\config\\SYSTEM" --csv "<OUT>\\ShimCache" --csvf shimcache.csv',
+            'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
+        },
+    ],
+    'EvtxECmd': [
+        {
+            'task': 'Normalize event logs into structured CSV format',
+            'cmd': 'EvtxECmd.exe --sync',
+            'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
+        },
+        {
+            'task': 'Convert event logs to normalized CSV using community maps',
+            'cmd': 'EvtxECmd.exe -f "<EV>\\...\\Security.evtx" --csv "<OUT>\\EVTX" --csvf security.csv',
+            'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
+        },
+    ],
+    'RECmd': [
+        {
+            'task': 'Extract user activity data from registry hive',
+            'cmd': 'RECmd.exe -f "<EV>\\Users\\{user}\\NTUSER.DAT" --bn BatchExamples\\UserActivity.reb --csv "<OUT>\\Registry"',
+            'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
+        },
+    ],
+    'SrumECmd': [
+        {
+            'task': 'Extract app network usage from SRUM database',
+            'cmd': 'SrumECmd.exe -f "<EV>\\Windows\\System32\\sru\\SRUDB.dat" -r "<EV>\\Windows\\System32\\config\\SOFTWARE" --csv "<OUT>\\SRUM"',
+            'src': 'https://ridgelinecyber.com/resources/kape-ez-tools/',
+        },
+    ],
     'bdeinfo': [
         {
             'task': 'Retrieve BitLocker encryption details from a drive',
@@ -804,11 +849,6 @@ INVOCATIONS: dict[str, list[dict]] = {
             'task': 'Disassemble hex bytes into assembly instructions',
             'cmd': "rasm2 -a x86 -b 32 -d '90'",
             'src': 'https://book.rada.re/tools/rasm2/disassemble.html',
-        },
-        {
-            'task': 'Disassemble machine code into assembly instructions',
-            'cmd': 'rasm2 -d 90',
-            'src': 'https://www.mankier.com/1/rasm2',
         },
     ],
     'readelf': [

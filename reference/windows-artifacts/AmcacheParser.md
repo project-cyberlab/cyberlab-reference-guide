@@ -26,6 +26,15 @@ An analyst reaches for AmcacheParser after manually examining the AmCache hive w
 AmcacheParser [options]
 ```
 
+## Common invocations
+
+```
+# Extract execution data and SHA1 hashes from Amcache.hve for analysis
+AmcacheParser.exe -f "<EV>\Windows\AppCompat\Programs\Amcache.hve" -i --csv "<OUT>\Amcache" --csvf amcache.csv
+# Extract application data from Amcache hive with whitelist filtering
+AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.txt" --csv C:\temp
+```
+
 ## Options
 
 All 15 options parsed from the captured help text; 9 reviewed with usage guidance.

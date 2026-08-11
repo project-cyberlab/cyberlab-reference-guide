@@ -297,7 +297,13 @@ def candidate_lines(text: str, tool: str,
         # own examples: `hashcat -m 100 hashes.txt wordlist.txt #SHA1`. The
         # caption is generated separately, so the comment is noise here --
         # and it would be pasted into a terminal along with the command.
-        line = re.split(r"\s+#(?=\S|\s*[A-Z])", line)[0].strip()
+        #
+        # Any whitespace-preceded # starts a shell comment. The first draft
+        # required a non-space or a capital after it and so kept
+        # `EvtxECmd.exe --sync # update 700+ community maps first`. Nothing
+        # is lost by being general: a # inside an argument, as in
+        # Project#1542292355.pdf, has no space before it.
+        line = re.split(r"\s+#", line)[0].strip()
         # Every operand a placeholder means this is a synopsis, whatever
         # bracket style it uses: `olemeta <file>`, `hydra [ options ]
         # <target> <service>`.

@@ -1826,5 +1826,49 @@
   "openssl": {
     "verdict": "accept",
     "why": "Reviewed: concrete trigger, flag matches the captured help, carried by the cited sources. The oledump.py set is specific and useful -- -f scans a non-OLE container such as a .dwg for the D0CF11E0 magic, -i reports module sizes, --cut extracts part of a stream. openssl names real triggers (s_client against 993/995, digests for integrity) rather than describing the toolkit."
+  },
+  "r2 -a": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "r2 -e": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "r2 -d": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "r2 -c": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "r2 -b": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "rabin2 -X": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "radiff2 -S": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "rahash2 -I": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "rahash2 -t": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "rasm2 -i": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
+  },
+  "rasm2 -D": {
+    "verdict": "accept",
+    "why": "Reviewed as one family, which is where an inconsistency would show. The radare2 suite flags agree with each other and with the captured help: r2 -a/-b set architecture and bitness for a fat binary, -d attaches or launches under the debugger, -c runs commands without entering the shell, -e sets config at startup; rasm2 -i skips leading bytes such as a header, -D shows offset and opcode alongside the disassembly; rahash2 -I supplies an IV for CBC and -t bounds where hashing stops; radiff2 -S sorts the diff; rabin2 -X packages extracted contents."
   }
 }

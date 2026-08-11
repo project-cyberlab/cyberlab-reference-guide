@@ -35,13 +35,11 @@ rasm2 -L
 rasm2 -a java 'nop'
 # Disassemble hex bytes into assembly instructions
 rasm2 -a x86 -b 32 -d '90'
-# Disassemble machine code into assembly instructions
-rasm2 -d 90
 ```
 
 ## Options
 
-All 25 options parsed from the captured help text; 3 reviewed with usage guidance.
+All 25 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -52,12 +50,12 @@ All 25 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `-c` | cpu | select specific CPU (depends on arch) |  |
 | `-C` | — | output in C format |  |
 | `-d` | — | disassemble from hexpair bytes (-D show hexpairs) | An analyst would use the `-d` flag when converting hexadecimal opcodes into human-readable assembly instructions to analyze binary data. |
-| `-D` | — | disassemble from hexpair bytes (-D show hexpairs) | An analyst would use the `-d` flag when converting hexadecimal opcodes into human-readable assembly instructions to analyze binary data. |
+| `-D` | — | disassemble from hexpair bytes (-D show hexpairs) | An analyst would use the `-D` flag when needing to disassemble hexpair bytes while also viewing the corresponding offset and opcode bytes for detailed analysis. |
 | `-e` | — | use big endian instead of little endian |  |
 | `-E` | — | display ESIL expression (same input as in -d) |  |
 | `-f` | file | read data from file |  |
 | `-F` | parser | specify which parse filter use (see -LL) |  |
-| `-i` | len | ignore/skip N bytes of the input buffer |  |
+| `-i` | len | ignore/skip N bytes of the input buffer | An analyst would use the -i flag when they need to skip a specific number of bytes in the input buffer to bypass irrelevant data, such as file headers or padding, while disassembling a binary file. |
 | `-j` | — | output in json format |  |
 | `-k` | kernel | select operating system (linux, windows, darwin, android, ios, ..) |  |
 | `-l` | len | input/Output length |  |

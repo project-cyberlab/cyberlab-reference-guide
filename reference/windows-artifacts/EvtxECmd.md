@@ -26,6 +26,15 @@ An analyst reaches for EvtxECmd during the "PARSE" phase of the DFIR workflow to
 EvtxECmd [options]
 ```
 
+## Common invocations
+
+```
+# Normalize event logs into structured CSV format
+EvtxECmd.exe --sync
+# Convert event logs to normalized CSV using community maps
+EvtxECmd.exe -f "<EV>\...\Security.evtx" --csv "<OUT>\EVTX" --csvf security.csv
+```
+
 ## Options
 
 All 26 options parsed from the captured help text; 20 reviewed with usage guidance.

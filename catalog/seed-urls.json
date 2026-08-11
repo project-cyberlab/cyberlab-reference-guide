@@ -39,7 +39,10 @@
   "EvtxECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://notes.qazeer.io/dfir/tools/kape",
+    "https://github.com/EricZimmerman/KapeFiles/blob/master/Modules/Compound/!EZParser.mkape",
+    "https://github.com/AndrewRathbun/Awesome-KAPE"
   ],
   "MFTECmd": [
     "https://ericzimmerman.github.io/",
@@ -54,23 +57,35 @@
   "RECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://notes.qazeer.io/dfir/tools/kape",
+    "https://github.com/AndrewRathbun/Awesome-KAPE"
   ],
   "AmcacheParser": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
     "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
-    "https://www.amcacheparser.com/en/blog/amcacheparser-complete-guide"
+    "https://www.amcacheparser.com/en/blog/amcacheparser-complete-guide",
+    "https://notes.qazeer.io/dfir/tools/kape",
+    "https://github.com/EricZimmerman/KapeFiles/blob/master/Modules/Compound/!EZParser.mkape",
+    "https://github.com/AndrewRathbun/Awesome-KAPE",
+    "https://github.com/EricZimmerman/AmcacheParser"
   ],
   "SrumECmd": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://notes.qazeer.io/dfir/tools/kape",
+    "https://github.com/EricZimmerman/KapeFiles/blob/master/Modules/Compound/!EZParser.mkape",
+    "https://github.com/AndrewRathbun/Awesome-KAPE"
   ],
   "AppCompatCacheParser": [
     "https://ericzimmerman.github.io/",
     "https://ridgelinecyber.com/resources/kape-ez-tools/",
-    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/"
+    "https://ridgelinecyber.com/training/modules/free/ir01-toolkit-setup/03-eztools/",
+    "https://notes.qazeer.io/dfir/tools/kape",
+    "https://github.com/EricZimmerman/KapeFiles/blob/master/Modules/Compound/!EZParser.mkape",
+    "https://github.com/AndrewRathbun/Awesome-KAPE"
   ],
   "bulk_extractor": [
     "https://github.com/simsong/bulk_extractor/wiki",
@@ -573,7 +588,9 @@
     "https://libguestfs.org/hivexsh.1.html",
     "https://manpages.ubuntu.com/manpages/xenial/man1/hivexsh.1.html",
     "https://man.archlinux.org/man/hivexsh.1.en",
-    "https://www.kali.org/tools/hivex/"
+    "https://www.kali.org/tools/hivex/",
+    "https://github.com/libguestfs/hivex",
+    "https://www.systutorials.com/linux-manual-page-1-hivexsh/"
   ],
   "tcpxtract": [
     "https://tcpxtract.sourceforge.net/",

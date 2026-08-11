@@ -26,6 +26,13 @@ An analyst reaches for SrumECmd during incident response after checking logs, pr
 SrumECmd [options]
 ```
 
+## Common invocations
+
+```
+# Extract app network usage from SRUM database
+SrumECmd.exe -f "<EV>\Windows\System32\sru\SRUDB.dat" -r "<EV>\Windows\System32\config\SOFTWARE" --csv "<OUT>\SRUM"
+```
+
 ## Options
 
 All 11 options parsed from the captured help text; 1 reviewed with usage guidance.

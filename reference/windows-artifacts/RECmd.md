@@ -26,6 +26,13 @@ An analyst reaches for RECmd during incident triage after checking event logs, f
 RECmd [options]
 ```
 
+## Common invocations
+
+```
+# Extract user activity data from registry hive
+RECmd.exe -f "<EV>\Users\{user}\NTUSER.DAT" --bn BatchExamples\UserActivity.reb --csv "<OUT>\Registry"
+```
+
 ## Options
 
 All 33 options parsed from the captured help text; 4 reviewed with usage guidance.

@@ -46,7 +46,7 @@ rahash2 -qqa md5 /bin/ls
 
 ## Options
 
-All 23 options parsed from the captured help text; 3 reviewed with usage guidance.
+All 23 options parsed from the captured help text; 5 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -59,7 +59,7 @@ All 23 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `-D` | algo | decrypt. Use -S to set key and -I to set IV |  |
 | `-f` | from | start hashing at given address |  |
 | `-i` | num | repeat hash N iterations (f.ex: 3DES) |  |
-| `-I` | iv | use give initialization vector (IV) (hexa or s:string) |  |
+| `-I` | iv | use give initialization vector (IV) (hexa or s:string) | An analyst would use the -I flag when specifying a custom initialization vector (IV) for cryptographic operations such as encryption or decryption in algorithms that require it, like AES-CBC. |
 | `-j` | — | output in json |  |
 | `-J` | — | new simplified json output (same as -jj) |  |
 | `-S` | seed | use given seed (hexa or s:string) use ^ to prefix (key for -E) (- will slurp the key from stdin, the @ prefix points to a file | An analyst would use the -S flag when encrypting or decrypting data with a specific key or seed value, such as during symmetric encryption operations with plugins like AES-ECB or Blowfish. |
@@ -69,7 +69,7 @@ All 23 options parsed from the captured help text; 3 reviewed with usage guidanc
 | `-r` | — | output radare commands |  |
 | `-R` | — | output radare2 sdb commands (k file.<algo>=...) |  |
 | `-s` | string | hash this string instead of files |  |
-| `-t` | — | stop hashing at given address |  |
+| `-t` | — | stop hashing at given address | An analyst would use the -t flag when they need to stop hashing at a specific memory address to limit the hash calculation to a particular section of a file or data. |
 | `-x` | hexstr | hash this hexpair string instead of files |  |
 | `-X` | — | output in hexpairs instead of binary/plain |  |
 | `-v` | — | show version information |  |

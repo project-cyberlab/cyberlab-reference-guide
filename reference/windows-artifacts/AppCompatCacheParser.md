@@ -26,6 +26,13 @@ An analyst reaches for AppCompatCacheParser when examining ShimCache for histori
 AppCompatCacheParser [options]
 ```
 
+## Common invocations
+
+```
+# Extract ShimCache entries from SYSTEM hive for analysis
+AppCompatCacheParser.exe -f "<EV>\Windows\System32\config\SYSTEM" --csv "<OUT>\ShimCache" --csvf shimcache.csv
+```
+
 ## Options
 
 All 13 options parsed from the captured help text; 2 reviewed with usage guidance.
