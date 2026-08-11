@@ -199,7 +199,10 @@
     "https://medium.com/@ankyrockstar26/unpacking-a-upx-malware-dca2cdd1a8de"
   ],
   "strings": [
-    "https://inventivehq.com/blog/malware-unpacking-guide"
+    "https://inventivehq.com/blog/malware-unpacking-guide",
+    "https://isc.sans.edu/diary/26966",
+    "https://www.cyberengage.org/post/memory-forensics-using-strings-and-bstrings-a-comprehensive-guide",
+    "https://www.geeksforgeeks.org/ethical-hacking/string-extraction/"
   ],
   "mmls": [
     "https://1337skills.com/cheatsheets/sleuthkit/",
@@ -276,7 +279,9 @@
     "https://hackernoon.com/getting-started-with-digital-forensics-using-the-sleuth-kit-c34a3wkg",
     "https://medium.com/@mathewrean/sleuthkit-usage-guide-70c4808af153",
     "https://nicholasr512.github.io/Linux_and_Kali_Linux_Guide/Kali%20Tools/10%20-%20Digital%20Forensics/Sleuthkit/",
-    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view"
+    "https://oneuptime.com/blog/post/2026-03-02-how-to-use-sleuth-kit-for-file-system-forensics-on-ubuntu/view",
+    "https://github.com/sleuthkit/sleuthkit/wiki/tsk_gettimes",
+    "https://github.com/sleuthkit/sleuthkit/wiki/Timelines"
   ],
   "img_stat": [
     "https://1337skills.com/cheatsheets/sleuthkit/",

@@ -1666,5 +1666,45 @@
   "r2": {
     "verdict": "accept",
     "why": "A real analytic trigger: a stripped or complex binary where the symbols are gone and you need aa/aaa to recover function boundaries and entry points before anything else is readable. Names what is true about the sample rather than about the toolchain. Both citations external (the radare2 book and r2wiki)."
+  },
+  "vivbin -M": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "xxd": {
+    "verdict": "reject",
+    "why": "Describes the REVERSE operation as the reason to reach for the tool. xxd -r rebuilding a binary from a hex dump is a real and useful thing, and it is the second half of the job. An analyst opens xxd to LOOK at bytes -- to read a header, confirm a magic number, see what is actually at an offset. Leading with the reverse tells a junior analyst the tool is for something they will do far less often."
+  },
+  "xxd -r": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "xxd -s": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "xxd -i": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "xxd -l": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "xxd -g": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "yarac --no-warnings": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "yarac --fail-on-warnings": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The xxd set was checked together -- -r rebuild, -s offset, -l length, -i C array, -g grouping -- and they describe five genuinely different jobs rather than one job five ways. These are the first notes these tools have ever produced; they were seeded this session after 196 barren attempts."
+  },
+  "yarac --define": {
+    "verdict": "reject",
+    "why": "Attributes the flag to the wrong half of the toolchain. yarac COMPILES rules; --define supplies an external variable at COMPILE time. The note says \"during a scan\", which is yara. Same shape as the misattributions option_owner was built for, arriving through the note text rather than through the evidence."
   }
 }

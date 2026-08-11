@@ -15,6 +15,14 @@
     "attempts": 85,
     "seeds": 0
   },
+  "rahash2": {
+    "attempts": 85,
+    "seeds": 0
+  },
+  "rasm2": {
+    "attempts": 85,
+    "seeds": 0
+  },
   "readelf.py": {
     "attempts": 84,
     "seeds": 0

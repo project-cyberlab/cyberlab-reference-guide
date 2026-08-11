@@ -22,14 +22,14 @@ vivbin [options] <workspace|binaries...>
 
 ## Options
 
-All 34 options parsed from the captured help text. The final column is filled in by review.
+All 34 options parsed from the captured help text; 1 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-h` | — | show this help message and exit |  |
 | `--help` | — | show this help message and exit |  |
-| `-M` | MODNAME | run the file listed as an analysis module in non-gui mode and exit |  |
-| `--module` | MODNAME | run the file listed as an analysis module in non-gui mode and exit |  |
+| `-M` | MODNAME | run the file listed as an analysis module in non-gui mode and exit | An analyst would use the -M flag when running a command-line analysis module that modifies the VivWorkspace and requires saving changes to the workspace. |
+| `--module` | MODNAME | run the file listed as an analysis module in non-gui mode and exit | An analyst would use the -M flag when running a command-line analysis module that modifies the VivWorkspace and requires saving changes to the workspace. |
 | `-A` | — | Do *not* do an initial auto-analysis pass |  |
 | `--skip-analysis` | — | Do *not* do an initial auto-analysis pass |  |
 | `-B` | — | Do *not* start the gui, just load, analyze and save |  |

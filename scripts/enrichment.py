@@ -2770,6 +2770,9 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-d': 'An analyst would use the `-d` flag with UPX when encountering a malware sample packed with UPX to automatically unpack it into its original executable form.',
         '-o': 'An analyst would use the -o flag when unpacking a UPX-packed sample to specify the output file name for the unpacked executable, as demonstrated in the example command.',
     },
+    'vivbin': {
+        '-M': 'An analyst would use the -M flag when running a command-line analysis module that modifies the VivWorkspace and requires saving changes to the workspace.',
+    },
     'vshadowinfo': {
         '-a': 'An analyst would use the -a flag when examining allocation information related to a Volume Shadow Snapshot (VSS) volume.',
         '-o': "An analyst would use the -o flag when needing to specify a non-default volume offset in bytes to access a particular section of a VSS volume that isn't starting at the beginning of the source file or device.",
@@ -2793,8 +2796,19 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-t': 'When analyzing a Base64-encoded XORed message to filter plaintexts to only those containing valid Base64 characters.',
         '-x': 'An analyst would use the -x flag when processing a hex-encoded file, such as when decrypting data that has been represented in hexadecimal format.',
     },
+    'xxd': {
+        '-g': 'An analyst would use the -g flag when adjusting the number of bytes per group in a hex dump to improve readability or align with specific data formats, such as when working with little-endian structures.',
+        '-i': 'An analyst would use the -i flag when generating a C include file (array) from a binary file to embed the data into a program or for forensic analysis requiring textual representation of binary content.',
+        '-l': 'An analyst would use the -l flag when they need to examine a specific number of bytes from a file, such as inspecting the first 64 bytes of a binary to identify its header or a particular segment without processing the entire file.',
+        '-r': 'An analyst would use the -r flag with xxd when they need to reconstruct a binary file from a properly formatted hex dump that includes offsets and correct hexadecimal data.',
+        '-s': 'An analyst would use the -s flag when needing to start reading or writing from a specific byte offset within a file, such as examining data at a non-zero position or continuing from a previously processed section.',
+    },
     'yara': {
         '-v': 'An analyst would use the -v flag when validating the syntax of a YARA rule to ensure it is correctly formatted before testing it against files.',
+    },
+    'yarac': {
+        '--fail-on-warnings': 'An analyst would use the --fail-on-warnings flag when compiling YARA rules to ensure that no warnings are present, enforcing strict rule validation during the compilation process.',
+        '--no-warnings': 'An analyst would use the --no-warnings flag when compiling YARA rules into a binary to suppress warnings during compilation, allowing the process to proceed without interruptions when external variables or rule syntax may generate non-critical alerts.',
     },
 }
 

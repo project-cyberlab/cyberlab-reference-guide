@@ -40,7 +40,7 @@ xxd -g 1 file.bin
 
 ## Options
 
-All 16 options parsed from the captured help text. The final column is filled in by review.
+All 16 options parsed from the captured help text; 4 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -50,13 +50,13 @@ All 16 options parsed from the captured help text. The final column is filled in
 | `-c` | cols | format <cols> octets per line. Default 16 (-i: 12, -ps: 30). |  |
 | `-E` | — | show characters in EBCDIC. Default ASCII. |  |
 | `-e` | — | little-endian dump (incompatible with -ps,-i,-r). |  |
-| `-g` | bytes | number of octets per group in normal output. Default 2 (-e: 4). |  |
+| `-g` | bytes | number of octets per group in normal output. Default 2 (-e: 4). | An analyst would use the -g flag when adjusting the number of bytes per group in a hex dump to improve readability or align with specific data formats, such as when working with little-endian structures. |
 | `-h` | — | print this summary. |  |
-| `-i` | — | output in C include file style. |  |
-| `-l` | len | stop after <len> octets. |  |
+| `-i` | — | output in C include file style. | An analyst would use the -i flag when generating a C include file (array) from a binary file to embed the data into a program or for forensic analysis requiring textual representation of binary content. |
+| `-l` | len | stop after <len> octets. | An analyst would use the -l flag when they need to examine a specific number of bytes from a file, such as inspecting the first 64 bytes of a binary to identify its header or a particular segment without processing the entire file. |
 | `-n` | name | set the variable name used in C include output (-i). |  |
 | `-o` | off | add <off> to the displayed file position. |  |
-| `-r` | — | reverse operation: convert (or patch) hexdump into binary. |  |
+| `-r` | — | reverse operation: convert (or patch) hexdump into binary. | An analyst would use the -r flag with xxd when they need to reconstruct a binary file from a properly formatted hex dump that includes offsets and correct hexadecimal data. |
 | `-d` | — | show offset in decimal instead of hex. |  |
 | `-u` | — | use upper case hex letters. |  |
 | `-v` | — | show version: "xxd 2022-01-14 by Juergen Weigert et al.". |  |
