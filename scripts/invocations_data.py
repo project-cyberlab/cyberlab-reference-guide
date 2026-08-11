@@ -281,6 +281,28 @@ INVOCATIONS: dict[str, list[dict]] = {
             'src': 'https://dforensic.blogspot.com/2013/12/digital-forensicsforensic-imaging-with.html',
         },
     ],
+    'dumpcap': [
+        {
+            'task': 'Capture packets on specific network interface',
+            'cmd': 'dumpcap --interface 1',
+            'src': 'https://commandmasters.com/commands/dumpcap-common/',
+        },
+        {
+            'task': 'Display available network interfaces for packet capture',
+            'cmd': 'dumpcap --list-interfaces',
+            'src': 'https://commandmasters.com/commands/dumpcap-common/',
+        },
+        {
+            'task': 'Capture network traffic to a file for analysis',
+            'cmd': 'dumpcap --interface 1 -w path/to/output_file.pcapng',
+            'src': 'https://commandmasters.com/commands/dumpcap-common/',
+        },
+        {
+            'task': 'Save packets to file for analysis',
+            'cmd': 'dumpcap --interface 1 -w path/to/output_file.pcapng --ring-buffer filesize:500000 --ring-buffer files:10',
+            'src': 'https://commandmasters.com/commands/dumpcap-common/',
+        },
+    ],
     'editcap': [
         {
             'task': 'Remove duplicate packets from capture file',

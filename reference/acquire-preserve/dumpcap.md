@@ -26,6 +26,19 @@ An analyst reaches for dumpcap when capturing live network traffic with specific
 dumpcap [options] ...
 ```
 
+## Common invocations
+
+```
+# Capture packets on specific network interface
+dumpcap --interface 1
+# Display available network interfaces for packet capture
+dumpcap --list-interfaces
+# Capture network traffic to a file for analysis
+dumpcap --interface 1 -w path/to/output_file.pcapng
+# Save packets to file for analysis
+dumpcap --interface 1 -w path/to/output_file.pcapng --ring-buffer filesize:500000 --ring-buffer files:10
+```
+
 ## Options
 
 All 48 options parsed from the captured help text; 20 reviewed with usage guidance.

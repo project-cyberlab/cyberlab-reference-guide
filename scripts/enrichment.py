@@ -2739,6 +2739,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-c': 'An analyst would use the -c flag when needing to execute specific radare2 commands directly from the command line without entering the interactive mode, such as quickly extracting data or automating tasks in scripts.',
         '-d': 'An analyst would use the -d flag when debugging a program, attaching to a running process by its PID, or configuring radare2 to handle stdin input during debugging sessions.',
         '-e': 'An analyst would use the -e flag when setting specific configuration variables during radare2 startup, such as disabling color output or enabling cache settings for a binary analysis session.',
+        '-p': 'An analyst would use the -p flag when creating a project for the file being analyzed to organize and manage the analysis workflow.',
         '-s': 'An analyst would use the -s flag when they need to immediately seek to a specific memory address in a binary to start analysis without loading the entire file first.',
     },
     'rabin2': {
@@ -2772,17 +2773,22 @@ RESEARCHED_FLAGS: dict[str, dict] = {
     },
     'rahash2': {
         '-I': 'An analyst would use the -I flag when specifying a custom initialization vector (IV) for cryptographic operations such as encryption or decryption in algorithms that require it, like AES-CBC.',
+        '-L': 'An analyst would use the -L flag when they need to list all available hash, cryptographic, encoding, or charset plugins supported by rahash2.',
         '-S': 'An analyst would use the -S flag when encrypting or decrypting data with a specific key or seed value, such as during symmetric encryption operations with plugins like AES-ECB or Blowfish.',
         '-a': "An analyst would use the -a flag with the value 'all' when they need to compute multiple hash values for a file or string using all available algorithms known to rahash2.",
+        '-b': 'An analyst would use the -b flag when processing large files in blocks to avoid loading the entire file into memory, allowing efficient hashing of specific sections for comparison or modification detection.',
         '-c': "An analyst would use the -c flag when verifying if a file's computed hash matches a known hash to confirm its integrity or detect modifications.",
+        '-f': 'An analyst would use the -f flag when they need to calculate a hash for a specific portion of a file starting at a particular memory address, such as when examining a targeted section of a binary or disk image.',
         '-t': 'An analyst would use the -t flag when they need to stop hashing at a specific memory address to limit the hash calculation to a particular section of a file or data.',
     },
     'rasm2': {
         '-D': 'An analyst would use the `-D` flag when needing to disassemble hexpair bytes while also viewing the corresponding offset and opcode bytes for detailed analysis.',
+        '-F': 'An analyst would use the -F flag when applying specific input or output filters, such as converting assembly syntax or processing architecture-specific plugins during disassembly or assembly.',
         '-L': 'An analyst would use the -L flag when needing to list supported assembly plugins for a specific target architecture to determine which plugins are available for use with rasm2.',
         '-a': 'An analyst would use the -a flag when disassembling code for a specific architecture, such as x86 or Java, to ensure the correct instruction set is used.',
         '-b': 'An analyst would use the `-b` flag when specifying the bitness of the target architecture (e.g., 32 or 64) during disassembly to ensure accurate interpretation of machine code instructions.',
         '-d': 'An analyst would use the `-d` flag when converting hexadecimal opcodes into human-readable assembly instructions to analyze binary data.',
+        '-f': 'An analyst would use the `-f` flag when they need to read disassembly or assembly input from a file instead of providing hex pairs or assembly code directly as command-line arguments.',
         '-i': 'An analyst would use the -i flag when they need to skip a specific number of bytes in the input buffer to bypass irrelevant data, such as file headers or padding, while disassembling a binary file.',
         '-s': 'An analyst would use the -s flag when they need to specify the assembly syntax (intel or att) for disassembled output.',
     },
@@ -2795,6 +2801,7 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-e': 'An analyst would use the -e flag when converting between different endianness representations, such as swapping byte order in hexadecimal values during data analysis.',
         '-k': 'An analyst would use the -k flag when performing calculations or conversions that require retaining the original numeric base representation of the input values.',
         '-s': 'An analyst would use the -s flag when converting a hexadecimal string into its corresponding raw byte representation for further analysis or processing.',
+        '-u': 'An analyst would use the -u flag when converting a numerical value to a human-readable unit format, such as converting 389289238 to 317.0M for easier interpretation of large numbers.',
     },
     'regfinfo': {
         '-B': 'An analyst would use the -B flag when they need to output the key and value hierarchy of a REGF file as a bodyfile for further processing or analysis.',

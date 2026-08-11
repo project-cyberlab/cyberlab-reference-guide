@@ -46,18 +46,18 @@ rahash2 -qqa md5 /bin/ls
 
 ## Options
 
-All 23 options parsed from the captured help text; 5 reviewed with usage guidance.
+All 23 options parsed from the captured help text; 8 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
 | `-a` | algo | comma separated list of algorithms (default is 'sha256') | An analyst would use the -a flag with the value 'all' when they need to compute multiple hash values for a file or string using all available algorithms known to rahash2. |
-| `-b` | bsize | specify the size of the block (instead of full file) |  |
+| `-b` | bsize | specify the size of the block (instead of full file) | An analyst would use the -b flag when processing large files in blocks to avoid loading the entire file into memory, allowing efficient hashing of specific sections for comparison or modification detection. |
 | `-B` | — | show per-block hash |  |
 | `-c` | hash | compare with this hash | An analyst would use the -c flag when verifying if a file's computed hash matches a known hash to confirm its integrity or detect modifications. |
 | `-e` | — | swap endian (use little endian) |  |
 | `-E` | algo | encrypt. Use -S to set key and -I to set IV |  |
 | `-D` | algo | decrypt. Use -S to set key and -I to set IV |  |
-| `-f` | from | start hashing at given address |  |
+| `-f` | from | start hashing at given address | An analyst would use the -f flag when they need to calculate a hash for a specific portion of a file starting at a particular memory address, such as when examining a targeted section of a binary or disk image. |
 | `-i` | num | repeat hash N iterations (f.ex: 3DES) |  |
 | `-I` | iv | use give initialization vector (IV) (hexa or s:string) | An analyst would use the -I flag when specifying a custom initialization vector (IV) for cryptographic operations such as encryption or decryption in algorithms that require it, like AES-CBC. |
 | `-j` | — | output in json |  |
@@ -65,7 +65,7 @@ All 23 options parsed from the captured help text; 5 reviewed with usage guidanc
 | `-S` | seed | use given seed (hexa or s:string) use ^ to prefix (key for -E) (- will slurp the key from stdin, the @ prefix points to a file | An analyst would use the -S flag when encrypting or decrypting data with a specific key or seed value, such as during symmetric encryption operations with plugins like AES-ECB or Blowfish. |
 | `-k` | — | show hash using the openssh's randomkey algorithm |  |
 | `-q` | — | run in quiet mode (-qq to show only the hash) |  |
-| `-L` | — | list muta plugins (combines with -q, used by -a, -E and -D) |  |
+| `-L` | — | list muta plugins (combines with -q, used by -a, -E and -D) | An analyst would use the -L flag when they need to list all available hash, cryptographic, encoding, or charset plugins supported by rahash2. |
 | `-r` | — | output radare commands |  |
 | `-R` | — | output radare2 sdb commands (k file.<algo>=...) |  |
 | `-s` | string | hash this string instead of files |  |

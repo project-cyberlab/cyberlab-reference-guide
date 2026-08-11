@@ -128,6 +128,13 @@ REPAIR = [
     # this runs against the home directory and an unrelated absolute path.
     ("regipy-dump", "regipy-dump ~ /Documents/Evidence/NTUSER.DAT -o /tmp/o.json",
      "regipy-dump ~/Documents/Evidence/NTUSER.DAT -o /tmp/o.json"),
+    # A documentation label standing where a shell prompt would. A whole
+    # genre of "how to use X (with examples)" pages writes commands this
+    # way, and they were yielding nothing.
+    ("dumpcap",
+     "Capture packets on a specific interface (with examples) Code: dumpcap --interface 1",
+     "dumpcap --interface 1"),
+    ("fls", "Example: fls -r -o 2048 image.dd", "fls -r -o 2048 image.dd"),
     ("evtxexport",
      "evtxexport evtxexport -p c/ -r c/Windows/System32/config/ f.evtx",
      "evtxexport -p c/ -r c/Windows/System32/config/ f.evtx"),

@@ -83,6 +83,17 @@ END = re.compile(r"\s{2,}|\S+,\d[\d.]*--|\|{2,}|[-=]{4,}"
                  r"|\[[^\]\n]{1,60}\]\s*[$#]")
 
 
+# A documentation label standing where a shell prompt would: "Code: dumpcap
+# --interface 1", "Example: fls -r image.dd".
+#
+# Found by the seed audit rather than by reading output: commandmasters.com
+# mentions dumpcap 18 times and yielded zero commands, because every one of
+# them sits after "Code:" mid-line with no prompt to split on. That is a
+# whole genre -- the "how to use X (with examples)" pages this project keeps
+# seeding -- and it was silently producing nothing.
+LABEL = re.compile(r"(?:^|\s)(?:Code|Example|Command|Usage|Run|Syntax)\s*:\s*")
+
+
 def split_prompts(line: str, tool: str) -> list[str]:
     """Commands buried mid-line after a shell prompt.
 
@@ -93,7 +104,7 @@ def split_prompts(line: str, tool: str) -> list[str]:
     invocations while their documentation was full of them.
     """
     out = []
-    for seg in PROMPT.split(line):
+    for seg in PROMPT.split(LABEL.sub(" $ ", line)):
         if not seg:
             continue
         seg = seg.strip()
@@ -174,7 +185,12 @@ def candidate_lines(text: str, tool: str,
         # puts "[user@localhost /workdir]$ ssdeep -l config.h INSTALL
         # m4/libtool.m4" on a line of 69, so the guard blocked exactly the
         # case it was written for and the extractor still reported zero.
-        if PROMPT.search(ln):
+        # LABEL as well as PROMPT. split_prompts rewrites labels into
+        # prompts, so gating the call on PROMPT alone meant the rewrite
+        # never ran on the lines that needed it -- a guard placed before
+        # the transformation it guards, which is the third time that shape
+        # has cost something here.
+        if PROMPT.search(ln) or LABEL.search(ln):
             lines.extend(split_prompts(html.unescape(ln), tool))
     for raw in lines:
         # Pages are fetched as HTML-derived text and quoting survives as

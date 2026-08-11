@@ -45,7 +45,7 @@ rax2 -K 90203010
 
 ## Options
 
-All 30 options parsed from the captured help text; 8 reviewed with usage guidance.
+All 30 options parsed from the captured help text; 9 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -72,7 +72,7 @@ All 30 options parsed from the captured help text; 8 reviewed with usage guidanc
 | `-s` | — | hexstr -> raw ; rax2 -s 43 4a 50 | An analyst would use the -s flag when converting a hexadecimal string into its corresponding raw byte representation for further analysis or processing. |
 | `-S` | — | raw -> hexstr ; rax2 -S < /bin/ls > ls.hex | An analyst would use the -S flag when converting raw binary data into a hexadecimal string representation for analysis or documentation. |
 | `-t` | — | tstamp -> str ; rax2 -t 1234567890 |  |
-| `-u` | — | units ; rax2 -u 389289238 # 317.0M |  |
+| `-u` | — | units ; rax2 -u 389289238 # 317.0M | An analyst would use the -u flag when converting a numerical value to a human-readable unit format, such as converting 389289238 to 317.0M for easier interpretation of large numbers. |
 | `-v` | — | version ; rax2 -v |  |
 | `-w` | — | signed word ; rax2 -w 0xffff 0xffff_ffff '0xff&0xfffff' |  |
 | `-x` | — | output in hexpairs ; rax2 -x 0x1234 # 34120000 |  |

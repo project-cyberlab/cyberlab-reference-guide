@@ -45,7 +45,7 @@ rasm2 -a x86 -b 32 -d '90'
 
 ## Options
 
-All 25 options parsed from the captured help text; 5 reviewed with usage guidance.
+All 25 options parsed from the captured help text; 7 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
@@ -59,8 +59,8 @@ All 25 options parsed from the captured help text; 5 reviewed with usage guidanc
 | `-D` | — | disassemble from hexpair bytes (-D show hexpairs) | An analyst would use the `-D` flag when needing to disassemble hexpair bytes while also viewing the corresponding offset and opcode bytes for detailed analysis. |
 | `-e` | — | use big endian instead of little endian |  |
 | `-E` | — | display ESIL expression (same input as in -d) |  |
-| `-f` | file | read data from file |  |
-| `-F` | parser | specify which parse filter use (see -LL) |  |
+| `-f` | file | read data from file | An analyst would use the `-f` flag when they need to read disassembly or assembly input from a file instead of providing hex pairs or assembly code directly as command-line arguments. |
+| `-F` | parser | specify which parse filter use (see -LL) | An analyst would use the -F flag when applying specific input or output filters, such as converting assembly syntax or processing architecture-specific plugins during disassembly or assembly. |
 | `-i` | len | ignore/skip N bytes of the input buffer | An analyst would use the -i flag when they need to skip a specific number of bytes in the input buffer to bypass irrelevant data, such as file headers or padding, while disassembling a binary file. |
 | `-j` | — | output in json format |  |
 | `-k` | kernel | select operating system (linux, windows, darwin, android, ios, ..) |  |

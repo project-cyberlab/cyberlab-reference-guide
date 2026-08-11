@@ -2054,5 +2054,37 @@
   "hashcat --outfile-format": {
     "verdict": "accept",
     "why": "Matches the captured help, \"Outfile format to use, separated with commas\", and gives the reason: the default hash[:salt] form has to be reshaped before another tool will read it. That is a data format, not terminal formatting, so it is not the class rejected for capa --color."
+  },
+  "rasm2 -o": {
+    "verdict": "reject",
+    "why": "Wrong behaviour. Captured help: \"-o [file]  output file name (rasm2 -Bf a.asm -o a)\". The note says -o specifies the memory address offset for assembling an opcode, which is a different thing entirely -- a reader assembling shellcode at a load address would pass an address where a filename is expected and write a file named after the address. Fifth catch by the help-line check. Note that -o is now a repeat offender: pdf-parser -o failed the opposite way, being object-select while the note omitted that it takes a number."
+  },
+  "r2 -p": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "rahash2 -f": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "rahash2 -L": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "rahash2 -b": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "rasm2 -F": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "rasm2 -f": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
+  },
+  "rax2 -u": {
+    "verdict": "accept",
+    "why": "Each checked against its captured help line. rahash2 -f \"start hashing at given address\", -b \"specify the size of the block (instead of full file)\", -L \"list muta plugins\"; rasm2 -F \"specify which parse filter use\", -f \"read data from file\"; rax2 -u \"units\" with the help own example 389289238 -> 317.0M reproduced in the note; r2 -p \"use project\". All match."
   }
 }
