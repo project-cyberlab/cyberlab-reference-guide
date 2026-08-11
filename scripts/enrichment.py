@@ -2228,8 +2228,8 @@ RESEARCHED: dict[str, dict] = {
         'sources': ['https://github.com/decalage2/oletools/blob/master/oletools/msodde.py', 'https://github.com/decalage2/oletools/wiki/msodde'],
     },
     'msoffcrypto-tool': {
-        'scenario': 'An analyst reaches for msoffcrypto-tool when decrypting password-protected or encrypted Microsoft Office files, often after using Oletools to extract initial artifacts, as it specifically handles decryption with passwords, intermediate keys, or private keys generated for escrow, making it preferable over tools like SSView, which focuses on structured storage analysis rather than decryption.',
-        'sources': ['https://docs.remnux.org/discover-the-tools/analyze+documents/microsoft+office', 'https://medium.com/@m01z/dissecting-malicious-office-docs-a-quick-guide-3884732804e7'],
+        'scenario': 'When an analyst needs to decrypt an encrypted MS Office file or check its encryption status, they use msoffcrypto-tool, running the -t flag first to test encryption before decrypting with the -p flag; they choose it because it is a Python tool that can handle both decrypting and encrypting (though encryption is experimental).',
+        'sources': ['https://github.com/nolze/msoffcrypto-tool'],
     },
     'ngrep': {
         'scenario': 'An analyst reaches for ngrep when searching for specific patterns in network traffic, such as detecting "login" in Telnet sessions, using switches like -w, -i, and -t for precise matching and timestamps; they may run it alongside tcpdump to analyze captured packets, preferring it over tcpdump for its grep-style filtering and intuitive regular expression handling.',
