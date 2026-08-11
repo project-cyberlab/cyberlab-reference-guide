@@ -1706,5 +1706,41 @@
   "yarac --define": {
     "verdict": "reject",
     "why": "Attributes the flag to the wrong half of the toolchain. yarac COMPILES rules; --define supplies an external variable at COMPILE time. The note says \"during a scan\", which is yara. Same shape as the misattributions option_owner was built for, arriving through the note text rather than through the evidence."
+  },
+  "rahash2 -S": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rahash2 -a": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rahash2 -c": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rasm2 -a": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rasm2 -b": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rasm2 -L": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rasm2 -d": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "rasm2 -s": {
+    "verdict": "accept",
+    "why": "Reviewed: concrete trigger, flag matches the captured help, claim carried by the cited sources. The rasm2 set was checked together (-a architecture, -b bitness, -d disassemble, -s syntax, -L list plugins) and they describe one coherent workflow rather than one idea restated. These are the first notes rasm2 and rahash2 have ever produced -- both were set aside as barren and freed by the seed-fingerprint fix."
+  },
+  "strings": {
+    "verdict": "reject",
+    "why": "Mixes two platforms in one workflow. The note frames it as examining suspicious ELF binaries in Linux malware analysis and then says to run it after confirming the file is unpacked with PEiD -- PEiD is a Windows PE packer identifier and does not read ELF at all. A junior analyst following that would go looking for a step that cannot exist. The real trigger for strings on an ELF is the same either way: read the printable runs for URLs, IPs, paths and command fragments before running anything."
   }
 }

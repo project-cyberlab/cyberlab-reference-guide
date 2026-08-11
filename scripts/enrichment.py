@@ -2691,6 +2691,18 @@ RESEARCHED_FLAGS: dict[str, dict] = {
         '-f': 'An analyst would use the -f flag to start searching from a specific address when analyzing a binary file.',
         '-x': 'An analyst would use the -x flag when searching for specific hexadecimal patterns, such as "909090" or "41.42" with nibble masks, in files or directories to identify binary data matches.',
     },
+    'rahash2': {
+        '-S': 'An analyst would use the -S flag when encrypting or decrypting data with a specific key or seed value, such as during symmetric encryption operations with plugins like AES-ECB or Blowfish.',
+        '-a': "An analyst would use the -a flag with the value 'all' when they need to compute multiple hash values for a file or string using all available algorithms known to rahash2.",
+        '-c': "An analyst would use the -c flag when verifying if a file's computed hash matches a known hash to confirm its integrity or detect modifications.",
+    },
+    'rasm2': {
+        '-L': 'An analyst would use the -L flag when needing to list supported assembly plugins for a specific target architecture to determine which plugins are available for use with rasm2.',
+        '-a': 'An analyst would use the -a flag when disassembling code for a specific architecture, such as x86 or Java, to ensure the correct instruction set is used.',
+        '-b': 'An analyst would use the `-b` flag when specifying the bitness of the target architecture (e.g., 32 or 64) during disassembly to ensure accurate interpretation of machine code instructions.',
+        '-d': 'An analyst would use the `-d` flag when converting hexadecimal opcodes into human-readable assembly instructions to analyze binary data.',
+        '-s': 'An analyst would use the -s flag when they need to specify the assembly syntax (intel or att) for disassembled output.',
+    },
     'rax2': {
         '-D': 'An analyst would use the -D flag when decoding a base64 encoded string to retrieve its original binary or textual content.',
         '-F': 'An analyst would use the -F flag when processing hexadecimal data from standard input, such as converting shellcode from a file into another format for analysis.',

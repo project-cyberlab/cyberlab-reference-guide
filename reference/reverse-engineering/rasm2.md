@@ -41,18 +41,18 @@ rasm2 -d 90 See Also radare2(1) Authors pancake <pancake@nopcode.org> Referenced
 
 ## Options
 
-All 25 options parsed from the captured help text. The final column is filled in by review.
+All 25 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | arch | set architecture to assemble/disassemble (see -L) |  |
+| `-a` | arch | set architecture to assemble/disassemble (see -L) | An analyst would use the -a flag when disassembling code for a specific architecture, such as x86 or Java, to ensure the correct instruction set is used. |
 | `-A` | — | show Analysis information from given hexpairs |  |
-| `-b` | bits | set cpu register size (8, 16, 32, 64) (RASM2_BITS) |  |
+| `-b` | bits | set cpu register size (8, 16, 32, 64) (RASM2_BITS) | An analyst would use the `-b` flag when specifying the bitness of the target architecture (e.g., 32 or 64) during disassembly to ensure accurate interpretation of machine code instructions. |
 | `-B` | — | binary input/output (-l is mandatory for binary input) |  |
 | `-c` | cpu | select specific CPU (depends on arch) |  |
 | `-C` | — | output in C format |  |
-| `-d` | — | disassemble from hexpair bytes (-D show hexpairs) |  |
-| `-D` | — | disassemble from hexpair bytes (-D show hexpairs) |  |
+| `-d` | — | disassemble from hexpair bytes (-D show hexpairs) | An analyst would use the `-d` flag when converting hexadecimal opcodes into human-readable assembly instructions to analyze binary data. |
+| `-D` | — | disassemble from hexpair bytes (-D show hexpairs) | An analyst would use the `-d` flag when converting hexadecimal opcodes into human-readable assembly instructions to analyze binary data. |
 | `-e` | — | use big endian instead of little endian |  |
 | `-E` | — | display ESIL expression (same input as in -d) |  |
 | `-f` | file | read data from file |  |

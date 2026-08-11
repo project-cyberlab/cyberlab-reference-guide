@@ -44,14 +44,14 @@ rahash2 -a all /bin/ls
 
 ## Options
 
-All 23 options parsed from the captured help text. The final column is filled in by review.
+All 23 options parsed from the captured help text; 3 reviewed with usage guidance.
 
 | Flag | Argument | What it does | When you would use it |
 |---|---|---|---|
-| `-a` | algo | comma separated list of algorithms (default is 'sha256') |  |
+| `-a` | algo | comma separated list of algorithms (default is 'sha256') | An analyst would use the -a flag with the value 'all' when they need to compute multiple hash values for a file or string using all available algorithms known to rahash2. |
 | `-b` | bsize | specify the size of the block (instead of full file) |  |
 | `-B` | — | show per-block hash |  |
-| `-c` | hash | compare with this hash |  |
+| `-c` | hash | compare with this hash | An analyst would use the -c flag when verifying if a file's computed hash matches a known hash to confirm its integrity or detect modifications. |
 | `-e` | — | swap endian (use little endian) |  |
 | `-E` | algo | encrypt. Use -S to set key and -I to set IV |  |
 | `-D` | algo | decrypt. Use -S to set key and -I to set IV |  |
@@ -60,7 +60,7 @@ All 23 options parsed from the captured help text. The final column is filled in
 | `-I` | iv | use give initialization vector (IV) (hexa or s:string) |  |
 | `-j` | — | output in json |  |
 | `-J` | — | new simplified json output (same as -jj) |  |
-| `-S` | seed | use given seed (hexa or s:string) use ^ to prefix (key for -E) (- will slurp the key from stdin, the @ prefix points to a file |  |
+| `-S` | seed | use given seed (hexa or s:string) use ^ to prefix (key for -E) (- will slurp the key from stdin, the @ prefix points to a file | An analyst would use the -S flag when encrypting or decrypting data with a specific key or seed value, such as during symmetric encryption operations with plugins like AES-ECB or Blowfish. |
 | `-k` | — | show hash using the openssh's randomkey algorithm |  |
 | `-q` | — | run in quiet mode (-qq to show only the hash) |  |
 | `-L` | — | list muta plugins (combines with -q, used by -a, -E and -D) |  |
