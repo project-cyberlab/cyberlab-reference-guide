@@ -1,7 +1,6 @@
 {
   "cyberchef": {
-    "attempts": 85,
-    "eligible": true,
+    "attempts": 93,
     "fp": "da39a3ee5e6b",
     "seeds": 0
   },
@@ -18,8 +17,7 @@
     "seeds": 0
   },
   "readelf.py": {
-    "attempts": 84,
-    "eligible": true,
+    "attempts": 92,
     "fp": "da39a3ee5e6b",
     "seeds": 0
   }
